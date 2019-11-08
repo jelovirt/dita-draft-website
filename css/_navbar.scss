@@ -1,0 +1,28 @@
+// Sass partial to override Bootstrap default navbar styles
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
+  .navbar-brand {
+    padding-left: 0;
+  }
+}
+
+.navbar {
+  padding-bottom: 0;
+  padding-top: 0;
+
+  svg {
+    fill: darken($navbar-dark-color, 40%);
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    padding-bottom: $navbar-padding-y;
+    padding-top: $navbar-padding-y;
+
+    @include hover-focus {
+      background-color: $navbar-dark-link-hover-bg;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// Style DITA note elements w/ Bootstrap components
+
+// Apply `.alert` rule from `_alerts.scss`
+div.note,
+div.important,
+div.attention {
+  @extend .alert;
+  margin: 1em;
+
+  a {
+    @extend .alert-link;
+  }
+}
+
+// Import alert settings for note variants
+
+// Note = alert alert-info
+.note {
+  @extend .alert-info;
+  // Tip = alert alert-success
+  &.tip {
+    @extend .alert-success;
+  }
+}
+
+// Important = alert alert-warning
+.attention,
+.important {
+  @extend .alert-warning;
+}
+
+// Caution, Warning = alert alert-danger
+.caution,
+.warning {
+  @extend .alert-danger;
+}
+
+// Title styles
+
+// Common `.note__title` class for v2.2 and newer
+// Legacy `.*title` classes for backwards compatibility w/ v2.1 and earlier (removed in v2.4)
+.note__title,
+.notetitle,
+.tiptitle,
+.fastpathtitle,
+.restrictiontitle,
+.importanttitle,
+.remembertitle,
+.attentiontitle,
+.cautiontitle,
+.noticetitle,
+.dangertitle,
+.warningtitle,
+.othertitle {
+  font-weight: bold;
+}
