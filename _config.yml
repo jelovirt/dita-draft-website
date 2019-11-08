@@ -1,6 +1,6 @@
 title: DITA 2.0 draft
-description: DITA Open Toolkit is an open-source publishing engine for content authored in the Darwin Information Typing Architecture
-url: https://nervous-franklin-bfb551.netlify.com
+description: DITA 2.0 draft
+url: /
 baseurl: ''
 
 # https://jekyllrb.com/docs/configuration/options/
@@ -32,8 +32,7 @@ exclude:
 # Enable Octicons
 plugins:
   - jekyll-octicons
-
 # Force-include Netlify’s redirects file
 # https://www.netlify.com/docs/redirects
-include:
-  - _redirects
+# include:
+#   - _redirects
