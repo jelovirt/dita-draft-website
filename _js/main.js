@@ -19,8 +19,8 @@ if (indexAttr && window.history) {
         .append($.parseHTML(data))
         .find('nav')
       TocController($toc, index)
-      SearchController($toc, index)
-      HelpController()
+      // SearchController($toc, index)
+      // HelpController()
     }
   })
 }
