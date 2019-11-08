@@ -1,14 +1,14 @@
----
-# Keep this YAML front matter block to trigger Jekyll processing
-# See https://jekyllrb.com/docs/frontmatter for more information
-# For Prettier: https://github.com/prettier/prettier/issues/4390
----
+// ---
+// # Keep this YAML front matter block to trigger Jekyll processing
+// # See https://jekyllrb.com/docs/frontmatter for more information
+// # For Prettier: https://github.com/prettier/prettier/issues/4390
+// ---
 
 //## Override default brand colors
 $brand-primary:                 #1d365d;
 
 $theme-colors: (
-  "primary": $brand-primary,
+  "primary": $brand-primary
 );
 
 //** Global textual link color.

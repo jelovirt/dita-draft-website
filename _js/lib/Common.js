@@ -1,12 +1,9 @@
-import EditController from './EditController'
 import $ from 'jquery'
 import URI from 'urijs'
 
 function Common(index) {
   const CLASS_OPEN = 'expanded'
   const CLASS_CLOSED = 'collapsed'
-
-  const editController = EditController()
 
   const base = URI('.')
     .absoluteTo(index)
@@ -79,8 +76,6 @@ function Common(index) {
   function initializeMain() {
     addLinkHandlers()
     addAnchorLinks()
-    editController.createEditLink()
-    editController.createHistoryLink()
 
     function addLinkHandlers() {
       $main
