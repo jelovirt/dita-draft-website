@@ -8752,6 +8752,10 @@ kbd {
   opacity: 0.5;
 }
 
+.example {
+  opacity: 0.2;
+}
+
 .lq {
   color: #6c757d;
   font-size: 14px;
