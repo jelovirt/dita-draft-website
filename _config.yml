@@ -1,7 +1,7 @@
 title: DITA 2.0 draft
 description: DITA 2.0 draft
-url: /dita-draft-website/
-baseurl: ''
+# url: /dita-draft-website/
+baseurl: '/dita-draft-website'
 
 # https://jekyllrb.com/docs/configuration/options/
 safe: true
