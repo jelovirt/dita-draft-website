@@ -1,0 +1,98 @@
+---
+# Generated from DITA source
+layout: base
+title: "hazardstatement"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/ditaval-d.html">DITAVAL-reference domain element</a></li><li><a href="../../langRef/containers/hazard-d.html">Hazard-statement domain elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/consequence.html">consequence</a></li><li class="active"><a href="../../langRef/base/hazardstatement.html">hazardstatement</a></li><li><a href="../../langRef/base/hazardsymbol.html">hazardsymbol</a></li><li><a href="../../langRef/base/howtoavoid.html">howtoavoid</a></li><li><a href="../../langRef/base/messagepanel.html">messagepanel</a></li><li><a href="../../langRef/base/typeofhazard.html">typeofhazard</a></li></ul></li><li><a href="../../langRef/containers/hi-d.html">Highlighting domain elements</a></li><li><a href="../../langRef/containers/multimedia-domain.html">Multimedia domain elements</a></li><li><a href="../../langRef/containers/ut-d.html">Utilities domainelements</a></li></ul></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code></h1>
+
+
+<div class="body refbody"><p class="shortdesc"> The <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element
+contains hazard warning information. It is based on the regulations
+of ANSI Z535 and ISO 3864. It enables the author to select the type
+of hazard, add information about the specific hazard and how to avoid
+it, and add one or more safety symbols.</p>
+    <section class="section" id="hazardstatement__specialization-hierarchy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;consequence&gt;</code> element is specialized from
+          <code class="keyword markupname xmlelement">&lt;li&gt;</code>. It is defined in the hazard-statement domain module.</p>
+    </section>
+    <section class="section" id="hazardstatement__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <div class="sectiondiv">
+        <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> and <a class="xref" href="../attributes/specializationAttributes.html#specialization-atts__spectitle">spectitle</a>, and
+          the attributes defined below.</p>
+        <dl class="dl">
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@type</code></dt>
+            <dd class="dd">Describes the level of hazard. Safety hazard level definitions correspond to the
+              same values in the ANSI Z535 and the ISO 3864 standards. <span class="ph">Note that this differs from the <code class="keyword markupname xmlatt">@type</code>
+                                        attribute on many other DITA elements.</span> See
+            <a class="xref" href="../attributes/thetypeattribute.html" title="The type attribute is used on linking elements to describe the target of a cross-reference. It also is used on the note element to describe the note type, as well as on several other elements for varying purposes.">The type attribute</a> for detailed information on
+              supported values and processing implications. Available values are note, tip,
+              fastpath, restriction, important, remember, attention, caution, notice, danger,
+              warning, other, and <a class="xref" href="../attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">-dita-use-​conref-​target</a>.
+              </dd>
+          
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@othertype</code></dt>
+            <dd class="dd">Indicates an alternate note type, when the type is not available in the
+                <code class="keyword markupname xmlatt">@type</code> attribute value list. This value is used as the user-provided
+              note title when the <code class="keyword markupname xmlatt">@type</code> attribute value is set to
+              "other."</dd>
+          
+        </dl>
+      </div>
+    </section>
+<div class="example" id="hazardstatement__example"><h2 class="title sectiontitle">Example: Danger statement</h2><p class="p"> The following code sample indicates an imminently hazardous situation which, if not avoided,
+        will result in death or serious injury.</p>
+      <pre class="pre codeblock" id="hazardstatement__codeblock_E20D4F1784044B9986E2C0977F219A49"><code>&lt;hazardstatement <strong class="ph b">type="danger"</strong>&gt;
+  &lt;messagepanel&gt;
+    &lt;typeofhazard&gt;Rotating blade.&lt;/typeofhazard&gt;
+    &lt;consequence&gt;Moving parts can crush and cut.&lt;/consequence&gt;
+    &lt;howtoavoid&gt;Follow lockout procedure before servicing.&lt;/howtoavoid&gt;
+  &lt;/messagepanel&gt;
+  &lt;hazardsymbol href="rotatingblade.png"/&gt;
+&lt;/hazardstatement&gt;</code></pre></div>
+    <div class="example"><h2 class="title sectiontitle">Example: Warning statement</h2>
+      
+      <p class="p"> The following code sample indicates a potentially hazardous situation which, if not
+        avoided, could result in death or serious injury.  </p>
+      <pre class="pre codeblock" id="hazardstatement__codeblock_D7ED9BCFB8AF4CCC876EA9A9BB9E2979"><code>&lt;hazardstatement <strong class="ph b">type="warning"</strong>&gt;
+  &lt;messagepanel&gt;
+    &lt;typeofhazard&gt;Hot surfaces inside.&lt;/typeofhazard&gt;
+    &lt;consequence&gt;Contact might cause burn.&lt;/consequence&gt;
+    &lt;howtoavoid&gt;Wear protective gear before servicing internal parts.&lt;/howtoavoid&gt;
+  &lt;/messagepanel&gt;
+  &lt;hazardsymbol href="hotsurface.png"/&gt;
+&lt;/hazardstatement&gt;</code></pre>
+    </div>
+    <div class="example"><h2 class="title sectiontitle">Example: Caution statement</h2>
+      
+      <p class="p"> The following code sample indicates a potentially hazardous situation which, if not
+        avoided, might result in minor or moderate injury.  </p>
+      <pre class="pre codeblock" id="hazardstatement__codeblock_093F3B51F6A44C6187B89E16DE82435B"><code>&lt;hazardstatement <strong class="ph b">type="caution"</strong>&gt;
+  &lt;messagepanel&gt;
+    &lt;typeofhazard&gt;Lifting Hazard.&lt;/typeofhazard&gt;
+    &lt;consequence&gt;Might result in injury.&lt;/consequence&gt;
+    &lt;howtoavoid&gt;See safety manual for lifting instructions.&lt;/howtoavoid&gt;
+  &lt;/messagepanel&gt;
+  &lt;hazardsymbol href="heavy.png"/&gt;
+&lt;/hazardstatement&gt;</code></pre>
+    </div>
+    <div class="example"><h2 class="title sectiontitle">Notice statement</h2>
+      
+      <p class="p">The following code sample indicates a potential situation which, if not avoided, might
+        result in property damage or in an undesirable result or state. </p>
+      <pre class="pre codeblock" id="hazardstatement__codeblock_A15CC9A2F2A74F3583A357D11E904E30"><code>&lt;hazardstatement <strong class="ph b">type="notice"</strong>&gt;
+  &lt;messagepanel&gt;
+    &lt;typeofhazard&gt;Battery low&lt;/typeofhazard&gt;
+    &lt;howtoavoid&gt;Push and hold for charge state test.&lt;/howtoavoid&gt;
+  &lt;/messagepanel&gt;
+  &lt;hazardsymbol href="general.png"/&gt;
+&lt;/hazardstatement&gt;</code></pre>
+    </div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/hazard-d.html" title="The hazard statement domain contains the hazardstatement element, which can be used to provide information about product safety hazards. The domain can be included in any topic type or map. Hazard statements are used to inform readers about potential hazards, consequences, and avoidance strategies.">Hazard-statement domain elements</a></div></div></nav></article></main>

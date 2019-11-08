@@ -1,0 +1,49 @@
+---
+# Generated from DITA source
+layout: base
+title: "related-links"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/basic-topic-elements.html">Basic topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/abstract.html">abstract</a></li><li><a href="../../langRef/base/body.html">body</a></li><li><a href="../../langRef/base/bodydiv.html">bodydiv</a></li><li><a href="../../langRef/base/dita.html">dita</a></li><li><a href="../../langRef/base/navtitle.html">navtitle</a></li><li class="active"><a href="../../langRef/base/related-links.html">related-links</a></li><li><a href="../../langRef/base/searchtitle.html">searchtitle</a></li><li><a href="../../langRef/base/shortdesc.html">shortdesc</a></li><li><a href="../../langRef/base/title.html">title</a></li><li><a href="../../langRef/base/titlealts.html">titlealts</a></li><li><a href="../../langRef/base/topic.html">topic</a></li></ul></li><li><a href="../../langRef/containers/body-elements.html">Body elements</a></li><li><a href="../../langRef/containers/indexing-d.html">Indexing group elements</a></li><li><a href="../../langRef/containers/related-links-elements.html">Related links elements</a></li><li><a href="../../langRef/containers/table-elements.html">Table elements</a></li></ul></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;related-links&gt;</code></h1>
+
+
+<div class="body refbody"><p class="shortdesc">The related information links of a topic (<code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element)
+    are stored in a special section following the body of the topic.</p>
+    <section class="section" id="related-links__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
+      
+      <p class="p">After a topic is processed into its final output form, the related links usually are
+        displayed at the end of the topic, although some Web-based help systems might display them
+        in a separate navigation frame.</p>
+      <p class="p">Links specified within the <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element typically are
+        displayed together with links generated based on a map context.</p>
+      <p class="p">The following lists contains processing expectations for the
+          <code class="keyword markupname xmlelement">&lt;related-link&gt;</code> element:</p>
+      <ol class="ol">
+        <li class="li">Links within a <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element appear in the order defined,
+          while those outside of a <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> might be sorted and displayed
+          in a different order or location (based upon their role, target, importance, or other
+          qualifiers).</li>
+        <li class="li">PDF or print-oriented output typically ignores hierarchical links such as those with
+          roles of ancestor, parent, child, descendant, next, previous, or sibling, although this
+          behavior is not required.</li>
+      </ol>
+    </section>
+    <section class="section" id="related-links__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a>, <a class="xref" href="../attributes/linkRelationshipAttributes.html" title="The link relationship attribute group includes attributes whose values can be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">Link-relationship attribute group</a> (apart from <code class="keyword markupname xmlatt">@href</code>), and
+      <a class="xref" href="../attributes/theroleattribute.html" title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time.">The role and otherrole attributes</a>.</p>
+    </section>
+<div class="example" id="related-links__example"><h2 class="title sectiontitle">Example</h2><p class="p">The following
+indicates that the two external links are always applicable to this
+topic, regardless of how the topic is used.</p><pre class="pre codeblock"><code>&lt;related-links scope="external" format="html"&gt;
+  &lt;link href="http://www.example.org"&gt;
+    &lt;linktext&gt;Example 1&lt;/linktext&gt;
+  &lt;/link&gt;
+  &lt;link href="http://www.example.com"&gt;
+    &lt;linktext&gt;Example 2&lt;/linktext&gt;
+  &lt;/link&gt;
+&lt;/related-links&gt;</code></pre></div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-topic-elements.html" title="The generic topic structure is used for untyped topics.">Basic topic elements</a></div></div></nav></article></main>

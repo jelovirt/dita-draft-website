@@ -1,0 +1,60 @@
+---
+# Generated from DITA source
+layout: base
+title: "required-cleanup"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/legacy-conversion-elements.html">Legacy conversion elements</a><ul class="nav nav-list"><li class="active"><a href="../../langRef/base/required-cleanup.html">required-cleanup</a></li></ul></li><li><a href="../../langRef/containers/ditaval-elements.html">DITAVAL elements</a></li></ul></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code></h1>
+
+
+<div class="body refbody"><p class="shortdesc">A <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> element is used as a placeholder for migrated
+    elements that cannot be appropriately tagged without manual intervention.</p>
+    <section class="section" id="required-cleanup__usage-information"><h2 class="title sectiontitle">Usage information</h2>
+      
+      <p class="p">As the element name implies, the intent for authors is to clean up the contained material
+        and eventually remove the <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> element. Authors should
+        not insert this element into documents.</p>
+    </section>
+    <section class="section" id="required-cleanup__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
+      
+      <p class="p">Processors must strip this element from output by default. The content of
+          <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> is not considered to be verified data.</p>
+      <p class="p">Processor options might be provided to allow a draft view of migrated content in
+        context.</p>
+    </section>
+    <section class="section" id="required-cleanup__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <div class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> (with a modified definition of
+          <code class="keyword markupname xmlatt">@translate</code>, given below), and the attributes
+        defined below.<dl class="dl">
+
+<dt class="dt dlterm"><code class="keyword markupname xmlatt">@remap</code></dt>
+<dd class="dd">Provides information about the origins of the content of the
+                <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> element. This provides authors context for
+              determining how the migrated content should be tagged.</dd>
+
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@translate</code></dt>
+            <dd class="dd">Indicates whether the content of the element should be translated or not. The
+              default value for this element is "no"; setting to "yes" will override the default.
+              The <a class="xref" href="../attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">-dita-use-conref-target</a>
+              value is also available. The DITA architectural specification contains a list of each
+              OASIS DITA element and its common processing default for the translate value; because
+              this element uses an actual default, it will always be treated as
+                <code class="ph codeph">translate="no"</code> unless overridden as described.</dd>
+          
+        </dl></div>
+    </section>
+<div class="example" id="required-cleanup__example"><h2 class="title sectiontitle">Example</h2><p class="p">Presuming an original HTML document had contained some content within a
+          <code class="keyword markupname xmlelement">&lt;center&gt;</code> tag (for which there is no clear migrational equivalent in
+        DITA), the following might be the result that is valid within an XML editor, but which
+        requires an author to decide how to better tag or revise this original content:</p><pre class="pre codeblock"><code>&lt;section&gt;
+  &lt;title&gt;Some section title&lt;/title&gt;
+  &lt;required-cleanup remap="center"&gt;Some original content migrated
+  from a &amp;lt;center&gt; tag.&lt;/required-cleanup&gt;
+&lt;/section&gt;
+</code></pre></div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/legacy-conversion-elements.html" title="Conversion elements exist primarily to aid in the conversion of content to DITA.">Legacy conversion elements</a></div></div></nav></article></main>

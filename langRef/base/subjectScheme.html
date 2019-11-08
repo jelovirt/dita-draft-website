@@ -1,0 +1,100 @@
+---
+# Generated from DITA source
+layout: base
+title: "subjectScheme"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/subjectScheme.html">Subject scheme elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/attributedef.html">attributedef</a></li><li><a href="../../langRef/base/defaultSubject.html">defaultSubject</a></li><li><a href="../../langRef/base/elementdef.html">elementdef</a></li><li><a href="../../langRef/base/enumerationdef.html">enumerationdef</a></li><li><a href="../../langRef/base/hasInstance.html">hasInstance</a></li><li><a href="../../langRef/base/hasKind.html">hasKind</a></li><li><a href="../../langRef/base/hasNarrower.html">hasNarrower</a></li><li><a href="../../langRef/base/hasPart.html">hasPart</a></li><li><a href="../../langRef/base/hasRelated.html">hasRelated</a></li><li><a href="../../langRef/base/relatedSubjects.html">relatedSubjects</a></li><li><a href="../../langRef/base/schemeref.html">schemeref</a></li><li><a href="../../langRef/base/subjectdef.html">subjectdef</a></li><li><a href="../../langRef/base/subjectHead.html">subjectHead</a></li><li><a href="../../langRef/base/subjectHeadMeta.html">subjectHeadMeta</a></li><li><a href="../../langRef/base/subjectRel.html">subjectRel</a></li><li><a href="../../langRef/base/subjectRelTable.html">subjectRelTable</a></li><li><a href="../../langRef/base/subjectRelHeader.html">subjectRelHeader</a></li><li><a href="../../langRef/base/subjectRole.html">subjectRole</a></li><li class="active"><a href="../../langRef/base/subjectScheme.html">subjectScheme</a></li></ul></li><li><a href="../../langRef/containers/classify-d.html">Classification domain elements</a></li></ul></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;subjectScheme&gt;</code></h1>
+
+
+<div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;subjectScheme&gt;</code> element is a specialization of
+      <code class="keyword markupname xmlelement">&lt;map&gt;</code>; it defines taxonomic subjects and controlled values.</p>
+    <section class="section" id="subjectScheme__specialization-hierachy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;subjectScheme&gt;</code> element is specialized from
+          <code class="keyword markupname xmlelement">&lt;map&gt;</code>. It is defined in the subject scheme module.</p>
+    </section>
+    <section class="section"> </section>
+    <section class="section" id="subjectScheme__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> (with a narrowed definition of
+          <code class="keyword markupname xmlatt">@id</code>, given below), <a class="xref" href="../attributes/commonMapAttributes.html" title="This attribute group collects several attributes that are used on a variety of map elements. For a few elements, the group is modified slightly to remove an attribute such as toc or format; in those cases the element definition will clarify that the element does not use this full set. That is generally done in order to specify a default for one attribute, such as defaulting format to ditamap on the mapref element.">Attributes common to many map elements</a>
+        (with narrowed definitions of <code class="keyword markupname xmlatt">@processing-role</code> and <code class="keyword markupname xmlatt">@toc</code>,
+        given below), <a class="xref" href="../attributes/architecturalAttributes.html" title="The architectural attributes group includes a set of attributes defined for document level elements such as topic and map. These attributes are intended to provide information about the DITA namespace, what level of DITA is in use, and what vocabulary modules are in use.">Architectural attribute group</a>, and the attributes
+        defined below. This element also uses <code class="keyword markupname xmlatt">@type</code>, <code class="keyword markupname xmlatt">@scope</code>, and
+          <code class="keyword markupname xmlatt">@format</code> from <a class="xref" href="../attributes/linkRelationshipAttributes.html" title="The link relationship attribute group includes attributes whose values can be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">Link-relationship attribute group</a>.</p>
+      <dl class="dl">
+        
+                                                  <dt class="dt dlterm"><code class="keyword markupname xmlatt">@id</code></dt>
+                                                  <dd class="dd">Allows an ID to be specified for the map. Note
+                                                  that maps do not require IDs (unlike topics), and
+                                                  the map ID is not included in references to
+                                                  elements within a map. <span class="ph">This attribute is defined
+                                        with the XML Data Type ID.</span></dd>
+                                                
+        
+                                                  <dt class="dt dlterm"><code class="keyword markupname xmlatt">@anchorref</code></dt>
+                                                  <dd class="dd">Identifies a location within another map
+                                                  document where this map will be anchored.
+                                                  Resolution of the map is deferred until the final
+                                                  step in the delivery of any rendered content. For
+                                                  example,
+                                                  <code class="ph codeph">anchorref="map1.ditamap#a1"</code>
+                                                  allows the map with <code class="keyword markupname xmlatt">@anchorref</code> to
+                                                  be pulled into the location of the anchor point
+                                                  "a1" inside <span class="ph filepath">map1.ditamap</span> when
+                                                  <span class="ph filepath">map1.ditamap</span> is rendered for
+                                                  delivery.</dd>
+                                                
+        
+                                                <dt class="dt dlterm"><code class="keyword markupname xmlatt">@processing-role</code></dt>
+                                                <dd class="dd">Defines how the  the default value for
+                                                  <code class="keyword markupname xmlatt">@processing-role</code> is
+                                                  "resource-only". Otherwise, the definition matches
+                                                  the one found in <a class="xref" href="../../common/../langRef/attributes/commonMapAttributes.html" title="This attribute group collects several attributes that are used on a variety of map elements. For a few elements, the group is modified slightly to remove an attribute such as toc or format; in those cases the element definition will clarify that the element does not use this full set. That is generally done in order to specify a default for one attribute, such as defaulting format to ditamap on the mapref element.">Attributes common to many map elements</a>.</dd>
+                                        
+        
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@toc</code></dt>
+          <dd class="dd">For this element, the default value for <code class="keyword markupname xmlatt">@toc</code> is "no". Otherwise, the
+            definition matches the one found in <a class="xref" href="../attributes/commonMapAttributes.html" title="This attribute group collects several attributes that are used on a variety of map elements. For a few elements, the group is modified slightly to remove an attribute such as toc or format; in those cases the element definition will clarify that the element does not use this full set. That is generally done in order to specify a default for one attribute, such as defaulting format to ditamap on the mapref element.">Attributes common to many map elements</a>.</dd>
+        
+      </dl>
+    </section>
+    <div class="example" id="subjectScheme__example"><h2 class="title sectiontitle">Example</h2>
+      
+      <pre class="pre codeblock" id="subjectScheme__d114e40"><code>&lt;subjectScheme&gt;
+  &lt;!-- Pull in a scheme that defines unix OS values --&gt;
+  &lt;schemeref href="unixOS.ditamap"/&gt;
+  &lt;!-- Define new OS values that are merged with those in the unixOS scheme --&gt;
+  &lt;subjectdef keys="operating-systems"&gt;
+    &lt;subjectdef keys="linux"/&gt;
+    &lt;subjectdef keys="windows"/&gt;
+    &lt;subjectdef keys="zOS"/&gt;
+  &lt;/subjectdef&gt;
+  &lt;!-- Define application values --&gt;
+  &lt;subjectdef keys="applications"&gt;
+    &lt;subjectdef keys="apache-server" href="subject/apache.dita"/&gt;
+    &lt;subjectdef keys="my-sql"      href="subject/sql.dita"/&gt;
+  &lt;/subjectdef&gt;
+
+  &lt;!-- Define an enumeration of the platform attribute, equal to
+       each value in the OS subject. This makes the following values
+       valid for the platform attribute: linux, windows, zOS --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+  &lt;!-- Define an enumeration of the otherprops attribute, equal to
+       each value in the application subjects.
+       This makes the following values valid for the otherprops attribute:
+       apache-server, my-sql --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="otherprops"/&gt;
+    &lt;subjectdef keyref="applications"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</code></pre>
+    </div>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/subjectScheme.html" title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes, and specify relationships among taxonomic subjects.">Subject scheme elements</a></div></div></nav></article></main>

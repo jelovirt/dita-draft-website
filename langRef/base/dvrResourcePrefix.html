@@ -1,0 +1,61 @@
+---
+# Generated from DITA source
+layout: base
+title: "dvrResourcePrefix"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/ditaval-d.html">DITAVAL-reference domain element</a><ul class="nav nav-list"><li><a href="../../langRef/base/ditavalref.html">ditavalref</a></li><li><a href="../../langRef/base/ditavalmeta.html">ditavalmeta</a></li><li class="active"><a href="../../langRef/base/dvrResourcePrefix.html">dvrResourcePrefix</a></li><li><a href="../../langRef/base/dvrResourceSuffix.html">dvrResourceSuffix</a></li><li><a href="../../langRef/base/dvrKeyscopePrefix.html">dvrKeyscopePrefix</a></li><li><a href="../../langRef/base/dvrKeyscopeSuffix.html">dvrKeyscopeSuffix</a></li></ul></li><li><a href="../../langRef/containers/hazard-d.html">Hazard-statement domain elements</a></li><li><a href="../../langRef/containers/hi-d.html">Highlighting domain elements</a></li><li><a href="../../langRef/containers/multimedia-domain.html">Multimedia domain elements</a></li><li><a href="../../langRef/containers/ut-d.html">Utilities domainelements</a></li></ul></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code></h1>
+  
+  
+  <div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code> element specifies the prefix to use
+    when constructing the effective file names of the resources that are referenced from within the
+    map branch that is implied by the ancestor <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code>
+    element.</p>
+    <section class="section" id="dvrResourcePrefix__section-1">
+      <p class="p">For map branches that are implied by <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements, the
+        value of the <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code> element contributes to the
+        effective file names of resources that are referenced within the branch. The effective
+        resource file name starts with the value of the <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code>
+        element. <span class="ph">If <code class="keyword markupname xmlatt">@copy-to</code> is specified on a topic reference where <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code> or <code class="keyword markupname xmlelement">&lt;dvrResourceSuffix&gt;</code> based renaming is in effect, the prefixes or suffixes are applied to the resource name inside the <code class="keyword markupname xmlatt">@copy-to</code> attribute.</span></p>
+      <p class="p">Some resources are not eligible for renaming, such as those marked with
+          <code class="ph codeph">scope="external"</code>. Rules for which resources are eligible for renaming,
+        and what names are allowed as valid resource names, are the same as those for the
+          <code class="keyword markupname xmlatt">@copy-to</code> attribute defined in <a class="xref" href="../attributes/topicrefElementAttributes.html" title="The topicref element attributes group includes attributes that are defined for the topicref element. These attributes also are used on most or all specializations of the topicref element.">Topicref-element attributes group</a>.</p>
+    </section>
+    <section class="section" id="dvrResourcePrefix__specialization-hierachy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code> element is specialized from <a class="xref" href="data.html" title="Data is a generic component that represents metadata within a topic or map. Complex metadata is represented by nested data structures.">data</a>. It is defined in the DITAVALref domain module.</p>
+    </section>
+    <section class="section" id="dvrResourcePrefix__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> (except for <code class="keyword markupname xmlatt">@conkeyref</code>, which is removed for all elements in this domain)
+        and the attribute defined below.</p>
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@name</code></dt>
+          <dd class="dd">The name of the metadata item. For this element the default value is
+            "dvrResourcePrefix".</dd>
+        
+      </dl>
+    </section>
+    <div class="example" id="dvrResourcePrefix__example"><h2 class="title sectiontitle">Example</h2>
+      
+      <div class="p">If the <code class="keyword markupname xmlelement">&lt;dvrResourcePrefix&gt;</code> is specified in the following
+        way:<pre class="pre codeblock"><code>&lt;topicref href="branch-01.dita"&gt;
+  &lt;ditavalref href="condition-01.ditaval"&gt;
+    &lt;ditavalmeta&gt;
+      &lt;dvrResourcePrefix&gt;cond01-&lt;/dvrResourcePrefix&gt;
+    &lt;/ditavalmeta&gt;
+  &lt;/ditavalref&gt;
+  &lt;topicref href="topics/subtopic-01.dita"/&gt;
+&lt;/topicref&gt;</code></pre></div>
+      <p class="p">Then the effective file name of the resource <span class="ph filepath">subtopic-01.dita</span> is
+          <span class="ph filepath">cond01-subtopic-01.dita</span>, as though the <code class="keyword markupname xmlatt">@copy-to</code>
+        attribute had been specified with that value on the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>
+        element that references <span class="ph filepath">subtopic-01.dita</span>. <span class="ph">Similarly, the effective file name of resource <span class="ph filepath">branch-01.dita</span> is
+            <span class="ph filepath">cond01-branch-01.dita</span>.</span></p>
+    </div>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/ditaval-d.html" title="The DITAVAL reference domain is used to reference a DITAVAL file that contains conditions that apply only to a subset of a DITA map. It also can be used to replicate a subset of a DITA map for multiple audiences.">DITAVAL-reference domain element</a></div></div></nav></article></main>

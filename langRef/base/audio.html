@@ -1,0 +1,147 @@
+---
+# Generated from DITA source
+layout: base
+title: "audio"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/ditaval-d.html">DITAVAL-reference domain element</a></li><li><a href="../../langRef/containers/hazard-d.html">Hazard-statement domain elements</a></li><li><a href="../../langRef/containers/hi-d.html">Highlighting domain elements</a></li><li><a href="../../langRef/containers/multimedia-domain.html">Multimedia domain elements</a><ul class="nav nav-list"><li class="active"><a href="../../langRef/base/audio.html">audio</a></li><li><a href="../../langRef/base/media-autoplay.html">media-autoplay</a></li><li><a href="../../langRef/base/media-controls.html">media-controls</a></li><li><a href="../../langRef/base/media-loop.html">media-loop</a></li><li><a href="../../langRef/base/media-muted.html">media-muted</a></li><li><a href="../../langRef/base/media-source.html">media-source</a></li><li><a href="../../langRef/base/media-track.html">media-track</a></li><li><a href="../../langRef/base/video.html">video</a></li><li><a href="../../langRef/base/video-poster.html">video-poster</a></li></ul></li><li><a href="../../langRef/containers/ut-d.html">Utilities domainelements</a></li></ul></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;audio&gt;</code></h1>
+  
+  
+  <div class="body refbody"><p class="shortdesc">Audio is sound that the human ear is capable of
+    hearing.</p>
+    <section class="section"><h2 class="title sectiontitle">Usage information</h2>
+      
+      <div class="div">
+        <p class="p">The <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element is modeled on the HTML5
+            <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element.</p>
+        <p class="p">An audio resource can be referenced by <code class="keyword markupname xmlatt">@data</code>,
+          <code class="keyword markupname xmlatt">@datakeyref</code>, and nested <code class="keyword markupname xmlelement">&lt;media-source&gt;</code> elements.
+          Nested <code class="keyword markupname xmlelement">&lt;media-source&gt;</code> elements enable extensive configuration of
+          how the audio resource is presented.</p>
+        <p class="p">Behaviors such as auto-playing, looping, and muting are determined by child elements.
+          When not specified, the default behavior is determined by the user agent that is used to
+          present the media.</p>
+      </div>
+      <div class="div">
+        <p class="p">The audio component is modeled on the HTML5 <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element.</p>
+        <p class="p">An audio resource can be referenced by <code class="keyword markupname xmlatt">@data</code>,
+          <code class="keyword markupname xmlatt">@datakeyref</code>, and nested media-source components. Nested media-source
+          components enable extensive configuration of how the audio resource is presented.</p>
+        <p class="p">Behaviors such as auto-playing, looping, and muting are determined by child components.
+          When not specified, the default behavior is determined by the user agent that is used to
+          present the media.</p>
+      </div>
+      
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Rendering expectations</h2>
+      
+      <p class="p">When an audio resource cannot be rendered in a meaningful way, processors <dfn class="term RFC-2119">SHOULD</dfn> present the contents of the
+          <code class="keyword markupname xmlelement">&lt;fallback&gt;</code> element, if it is present.</p>
+    </section>
+    <section class="section" id="audio__specialization-hierarchy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element is specialized from
+          <code class="keyword markupname xmlelement">&lt;object&gt;</code>. It is defined in the multimedia-domain module.</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <div class="div">
+        <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> and the attributes defined below.</p>
+        <dl class="dl">
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@data</code></dt>
+            
+            <dd class="dd">Specifies the absolute or relative URI of the audio resource. If
+                <code class="keyword markupname xmlatt">@data</code> is specified, <code class="keyword markupname xmlatt">@type</code> should be specified
+              also.</dd>
+          
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@datakeyref</code></dt>
+            <dd class="dd">Provides a key reference to the audio resource. When specified and the key is
+              resolvable, the key-provided URI is used. If the key referenced by
+                <code class="keyword markupname xmlatt">@datakeyref</code> cannot be resolved, and <code class="keyword markupname xmlatt">@data</code> is
+              specified, that value provided by <code class="keyword markupname xmlatt">@data</code> is used as a fallback. If the
+              key referenced by <code class="keyword markupname xmlatt">@datakeyref</code> has no associated resource, only link
+              text, and the<code class="keyword markupname xmlelement">&lt; audio&gt;</code> element does not contain a
+                <code class="keyword markupname xmlelement">&lt;fallback&gt;</code> element, the link text becomes fallback
+              content.</dd>
+            <dd class="dd ddexpand">
+              
+            </dd>
+          
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@tabindex</code></dt>
+            <dd class="dd">Indicates whether the audio resource can be focused and where it participates in
+              sequential keyboard navigation. See <a class="xref" href="https://html.spec.whatwg.org/#the-tabindex-attribute" target="_blank"><code class="keyword markupname xmlatt">@tabindex</code></a> in the HTML specification (WHATWG
+              version).</dd>
+            <dd class="dd ddexpand"></dd>
+          
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@type</code></dt>
+            <dd class="dd">Indicates the MIME type for the audio resource. This attribute enables processors to
+              avoid loading unsuppported resources. If <code class="keyword markupname xmlatt">@type</code> is not specified and
+                <code class="keyword markupname xmlatt">@datakeyref</code> is specified, the effective type for the key named by
+              the <code class="keyword markupname xmlatt">@datakeyref</code> attribute is used as the value. If an explicit
+                <code class="keyword markupname xmlatt">@type</code> is not specified on either the <code class="keyword markupname xmlelement">&lt;audio&gt;</code>
+              element or key definition, processors can use other means, such the URI file
+              extension, to determine the effective MIME type of the audio resource.</dd>
+          
+        </dl>
+      </div>
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a>.</p>
+    </section>
+    <div class="example"><h2 class="title sectiontitle">Examples</h2>
+      
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>An <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element that uses direct addressing</figcaption>
+
+
+<p class="p">In the following code sample, an audio resource is referenced using direct addressing. The
+            <code class="keyword markupname xmlatt">@type</code> attribute specifies the MIME type of the audio resource. </p><pre class="pre codeblock"><code>&lt;audio data="message.mp3" type="audio/mp3"/&gt; </code></pre>
+</figure>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>An <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element that uses indirect addressing</figcaption>
+        
+        <p class="p">In the following code sample, the audio resource is addressed using a key reference:</p>
+        <pre class="pre codeblock"><code>&lt;audio datakeyref="message"/&gt;</code></pre>
+        <p class="p">Both the URI and the MIME type are specified on the key definition:</p>
+        <pre class="pre codeblock"><code>&lt;keydef keys="message" href="message.mp3" type="audio/mp3"/&gt;</code></pre>
+      </figure>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 3. </span>An <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element with multiple formats</figcaption>
+
+<p class="p">In the following code sample, <code class="keyword markupname xmlelement">&lt;media-source&gt;</code> elements are used to specify
+the different audio formats that are
+available.</p><pre class="pre codeblock"><code>&lt;audio&gt;
+  &lt;media-source value="message.mp3" type="audio/mp3"/&gt;
+  &lt;media-source value="message.wav" type="audio/wav"/&gt;
+&lt;/audio&gt;</code></pre>
+</figure>
+      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 4. </span>Example of a complex <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element</figcaption>
+
+
+<p class="p">The following code sample specifies an audio resource and defines multiple presentational
+          details; it also provides fallback behavior for when the audio resource cannot be
+          rendered.</p><pre class="pre codeblock"><code>&lt;audio&gt;
+  &lt;desc&gt;A sound file narrating the performance of this procedure.&lt;/desc&gt;
+  &lt;fallback&gt;The audio track walking through this procedure is not available.&lt;/fallback&gt;
+  
+  &lt;!--
+    When the following elements are used, they have a default value of "true";
+    setting value="true" and not specifying @value have the same effect.
+    To disable any of these settings, specify value="false". --&gt;
+
+  &lt;media-controls value="true"/&gt;
+  &lt;media-autoplay/&gt;
+  &lt;media-loop value="false"/&gt;
+  &lt;media-muted value="false"/&gt;
+
+
+  &lt;!-- Multiple formats, with URI and MIME type referenced using a key --&gt;
+  &lt;media-source keyref="walkthrough-mp3"/&gt;
+  &lt;media-source keyref="walkthrough-wav"/&gt;
+
+&lt;/audio&gt;</code></pre>
+</figure>
+    </div>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/multimedia-domain.html" title="The multimedia elements are used to reference audio or video content. The elements in this domain are modeled on the HTML5 audio and video elements.">Multimedia domain elements</a></div></div></nav></article></main>

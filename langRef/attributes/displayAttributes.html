@@ -1,0 +1,106 @@
+---
+# Generated from DITA source
+layout: base
+title: "Display attribute group"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a><ul class="nav nav-list"><li><a href="../../langRef/attributes/universalAttributes.html">Universal attribute group</a></li><li><a href="../../langRef/attributes/architecturalAttributes.html">Architectural attribute group</a></li><li><a href="../../langRef/attributes/commonMapAttributes.html">Attributes common to many map elements</a></li><li><a href="../../langRef/attributes/calsTableAttributes.html">Complex-table attribute group</a></li><li><a href="../../langRef/attributes/dataElementAttributes.html">Data-element attributes group</a></li><li><a href="../../langRef/attributes/dateAttributes.html">Date attributes group</a></li><li class="active"><a href="../../langRef/attributes/displayAttributes.html">Display attribute group</a></li><li><a href="../../langRef/attributes/linkRelationshipAttributes.html">Link-relationship attribute group</a></li><li><a href="../../langRef/attributes/commonAttributes.html">Other common attributes</a></li><li><a href="../../langRef/attributes/simpletableAttributes.html">Simpletable attribute group</a></li><li><a href="../../langRef/attributes/specializationAttributes.html">Specialization attributes group</a></li><li><a href="../../langRef/attributes/topicrefElementAttributes.html">Topicref-element attributes group</a></li><li><a href="../../langRef/attributes/complexattributedefinitions.html">Complex attribute definitions</a></li></ul></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Display attribute group</h1>
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">The display attribute group includes attributes whose values can be used for affecting
+  the display of many elements.</p>
+  <section class="section" id="display-atts__section-1">
+   <dl class="dl">
+    
+     <dt class="dt dlterm" id="display-atts__expanse"><code class="keyword markupname xmlatt">@expanse</code></dt>
+     <dd class="dd">Determines the horizontal placement of the element. Allowable values are: <dl class="dl">
+       
+        <dt class="dt dlterm">column </dt>
+        <dd class="dd">Aligns the element with the current column margin </dd>
+       
+       
+        <dt class="dt dlterm">page </dt>
+        <dd class="dd">Places the element on the left page margin for left-to-right presentation, or right page
+         margin for right-to-left presentation. </dd>
+       
+       
+        <dt class="dt dlterm">spread </dt>
+        <dd class="dd">Indicates that, if possible, the object should be rendered across a multi-page spread.
+         If the rendition target does not have anything corresponding to spreads then spread has the
+         same meaning as "page". </dd>
+       
+       
+        <dt class="dt dlterm">textline </dt>
+        <dd class="dd">Aligns the element with the left (for left to right presentation) or right (for right to
+         left presentation) margin of the current text line and takes indention into account. </dd>
+       
+       
+                                        <dt class="dt dlterm">-dita-use-conref-target </dt>
+                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
+                                
+      </dl><p class="p">In DITA tables, in place of the
+          <code class="keyword markupname xmlatt">@expanse</code> attribute used by other DITA elements, the
+          <code class="keyword markupname xmlatt">@pgwide</code> attribute is used in order to conform to the OASIS Exchange Table
+        Model. The <code class="keyword markupname xmlatt">@pgwide</code> attribute has a similar semantic
+        (<span class="keyword">1</span>=page width; <span class="keyword">0</span>=resize to galley or column). </p><p class="p">Some DITA processors or output formats might not be able to support all values.
+      </p></dd>
+    
+    
+     <dt class="dt dlterm" id="display-atts__frame"><code class="keyword markupname xmlatt">@frame</code></dt>
+     <dd class="dd">Specifies which portion of a border should surround the element. Allowable values are: <dl class="dl">
+       
+        <dt class="dt dlterm">all </dt>
+        <dd class="dd">Draw a box around the element </dd>
+       
+      </dl><dl class="dl">
+       
+        <dt class="dt dlterm">bottom </dt>
+        <dd class="dd">Draw a line after the element </dd>
+       
+      </dl><dl class="dl">
+       
+        <dt class="dt dlterm">none </dt>
+        <dd class="dd">Don't draw any lines around this element </dd>
+       
+      </dl><dl class="dl">
+       
+        <dt class="dt dlterm">sides </dt>
+        <dd class="dd">Draw a line at each side of the element </dd>
+       
+      </dl><dl class="dl">
+       
+        <dt class="dt dlterm">top </dt>
+        <dd class="dd">Draw a line before the element </dd>
+       
+       
+        <dt class="dt dlterm">topbot </dt>
+        <dd class="dd">Draw a line both before and after the element </dd>
+       
+       
+                                        <dt class="dt dlterm">-dita-use-conref-target </dt>
+                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
+                                
+      </dl><p class="p">Some DITA processors or output formats might not be able to support all values.
+      </p></dd>
+    
+    
+     <dt class="dt dlterm" id="display-atts__scale"><code class="keyword markupname xmlatt">@scale</code></dt>
+     <dd class="dd">Specifies a percentage, selected from an enumerated list, that is used to resize fonts in
+      relation to the normal text size. This attribute is primarily useful for print-oriented
+      display. <p class="p">The <code class="keyword markupname xmlatt">@scale</code> attribute provides an acknowledged style-based property
+       directly on DITA elements. For the <code class="keyword markupname xmlelement">&lt;table&gt;</code> and
+        <code class="keyword markupname xmlelement">&lt;fig&gt;</code> elements, the intent of the property is to allow authors to
+       adjust font sizes on the content of the containing element, primarily for print
+       accommodation. An <code class="keyword markupname xmlelement">&lt;image&gt;</code> in these contexts is to be scaled only by
+       its own direct scale property. If not specifically scaled, such an
+        <code class="keyword markupname xmlelement">&lt;image&gt;</code> is unchanged by the scale property of its parent
+        <code class="keyword markupname xmlelement">&lt;table&gt;</code> or <code class="keyword markupname xmlelement">&lt;fig&gt;</code>. </p><p class="p">Allowable values are
+       50, 60, 70, 80, 90, 100, 110, 120, 140, 160, 180, 200, and <a class="xref" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">-dita-use-conref-target</a>. Some DITA processors or
+       output formats might not be able to support all values. </p></dd>
+    
+   </dl>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/attributes/attributes.html" title="This section collects commonly used attributes, with common definitions. If an element uses a different definition, or narrows the scope of, an otherwise common attribute, it will be called out in the topic that defines the element.">Attributes</a></div></div></nav></article></main>

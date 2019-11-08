@@ -1,0 +1,45 @@
+---
+# Generated from DITA source
+layout: base
+title: "revised"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/prolog-elements.html">Prolog (metadata) elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/audience.html">audience</a></li><li><a href="../../langRef/base/author.html">author</a></li><li><a href="../../langRef/base/brand.html">brand</a></li><li><a href="../../langRef/base/category.html">category</a></li><li><a href="../../langRef/base/component.html">component</a></li><li><a href="../../langRef/base/copyrholder.html">copyrholder</a></li><li><a href="../../langRef/base/copyright.html">copyright</a></li><li><a href="../../langRef/base/copyryear.html">copyryear</a></li><li><a href="../../langRef/base/created.html">created</a></li><li><a href="../../langRef/base/critdates.html">critdates</a></li><li><a href="../../langRef/base/featnum.html">featnum</a></li><li><a href="../../langRef/base/keywords.html">keywords</a></li><li><a href="../../langRef/base/metadata.html">metadata</a></li><li><a href="../../langRef/base/othermeta.html">othermeta</a></li><li><a href="../../langRef/base/permissions.html">permissions</a></li><li><a href="../../langRef/base/platform.html">platform</a></li><li><a href="../../langRef/base/prodinfo.html">prodinfo</a></li><li><a href="../../langRef/base/prodname.html">prodname</a></li><li><a href="../../langRef/base/prognum.html">prognum</a></li><li><a href="../../langRef/base/prolog.html">prolog</a></li><li><a href="../../langRef/base/publisher.html">publisher</a></li><li><a href="../../langRef/base/resourceid.html">resourceid</a></li><li class="active"><a href="../../langRef/base/revised.html">revised</a></li><li><a href="../../langRef/base/series.html">series</a></li><li><a href="../../langRef/base/source.html">source</a></li><li><a href="../../langRef/base/vrmlist.html">vrmlist</a></li><li><a href="../../langRef/base/vrm.html">vrm</a></li></ul></li><li><a href="../../langRef/containers/specialization-elements.html">Specialization elements</a></li></ul></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;revised&gt;</code></h1>
+
+
+<div class="body refbody"><p class="shortdesc">Revision information is used to maintain tracking dates that are important in a
+    development cycle, such as the date of the last modification, the original availability date,
+    and the expiration date.</p>
+    <section class="section" id="revised__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a>, <a class="xref" href="../attributes/dateAttributes.html" title="The date attributes group includes attributes that take date values, and are defined on metadata elements that work with date information.">Date attributes group</a>, and the attribute defined below.</p>
+      <dl class="dl">
+        
+          <dt class="dt dlterm" id="revised__modified"><code class="keyword markupname xmlatt">@modified</code>
+            <span class="ph">(REQUIRED)</span></dt>
+          <dd class="dd">The last modification date, entered as YYYY-MM-DD, where YYYY is the year, MM is the
+            month from 01 to 12, and DD is the day from 01-31.</dd>
+        
+      </dl>
+    </section>
+<div class="example" id="revised__example"><h2 class="title sectiontitle">Example</h2>
+      
+      <p class="p">In the following example, an author specifies revision information within a topic.</p>
+      <pre class="pre codeblock"><code>&lt;prolog&gt;
+  &lt;critdates&gt;
+    &lt;created date="1999-01-01" golive="1999-02-15" expiry="9999-09-09"/&gt;
+    <strong class="ph b">&lt;revised modified="2003-03-03" golive="2002-02-03" expiry="9999-09-09"/&gt;</strong>
+ &lt;/critdates&gt;
+&lt;/prolog&gt;</code></pre>
+      <p class="p">The same information could be specified in a map.</p>
+      <pre class="pre codeblock"><code>&lt;topicmeta&gt;
+  &lt;critdates&gt;
+    &lt;created date="1999-01-01" golive="1999-02-15" expiry="9999-09-09"/&gt;
+    <strong class="ph b">&lt;revised modified="2003-03-03" golive="2002-02-03" expiry="9999-09-09"/&gt;</strong>
+ &lt;/critdates&gt;
+&lt;/topicmeta&gt;</code></pre>
+    </div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/prolog-elements.html" title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element.">Prolog (metadata) elements</a></div></div></nav></article></main>

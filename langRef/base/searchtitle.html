@@ -1,0 +1,54 @@
+---
+# Generated from DITA source
+layout: base
+title: "searchtitle"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/basic-topic-elements.html">Basic topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/abstract.html">abstract</a></li><li><a href="../../langRef/base/body.html">body</a></li><li><a href="../../langRef/base/bodydiv.html">bodydiv</a></li><li><a href="../../langRef/base/dita.html">dita</a></li><li><a href="../../langRef/base/navtitle.html">navtitle</a></li><li><a href="../../langRef/base/related-links.html">related-links</a></li><li class="active"><a href="../../langRef/base/searchtitle.html">searchtitle</a></li><li><a href="../../langRef/base/shortdesc.html">shortdesc</a></li><li><a href="../../langRef/base/title.html">title</a></li><li><a href="../../langRef/base/titlealts.html">titlealts</a></li><li><a href="../../langRef/base/topic.html">topic</a></li></ul></li><li><a href="../../langRef/containers/body-elements.html">Body elements</a></li><li><a href="../../langRef/containers/indexing-d.html">Indexing group elements</a></li><li><a href="../../langRef/containers/related-links-elements.html">Related links elements</a></li><li><a href="../../langRef/containers/table-elements.html">Table elements</a></li></ul></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code></h1>
+
+  
+<div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code> element is used to specify a title that
+      <span class="ph">is</span> displayed by search tools that locate the topic.</p>
+    <section class="section" id="searchtitle__usage-information"><h2 class="title sectiontitle">Usage information</h2>
+      
+      <p class="p">This is most useful when the topic has a title that makes sense in the context of a single
+        information set, but might be too general in a list of search results; for example, a topic
+        title of "Markup example" might make sense as part of a guide to DITA, but when found among
+        thousands of unrelated topics, a search title of "DITA markup example" is more useful.</p>
+    </section>
+    <section class="section" id="searchtitle__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
+      
+      <p class="p">When a topic is rendered as XHTML, the contents of the <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code>
+        will typically appear in the XHTML's title element, which used in the result summary
+        for many search engines. This element might not be supported for output formats that do not
+        support distinct search titles for topics.</p>
+    </section>
+    <section class="section" id="searchtitle__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+    <p class="p">The following attributes are available
+                                on this element: <a class="xref" href="../../common/../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a>.</p>
+    </section>
+<div class="example" id="searchtitle__example"><h2 class="title sectiontitle">Example</h2><p class="p">In the
+following example, the general title "Programming Example" is likely
+very useful in a set of information about XSLT basics; however, the
+same title is not helpful among a set of search results from the entire
+internet. In that case, "Example of basic programming in XSLT" will
+be much more helpful.</p><pre class="pre codeblock"><code>&lt;task id="progexample"&gt;
+ &lt;title&gt;Programming Example&lt;/title&gt;
+  &lt;titlealts&gt;&lt;searchtitle&gt;Example of basic
+             programming in XSLT&lt;/searchtitle&gt;&lt;/titlealts&gt;
+ &lt;taskbody&gt; . . . &lt;/taskbody&gt;
+&lt;/task&gt;</code></pre><div class="p">When <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code> is used in maps, the element provides a new search
+        title for the topic when used in a specific context. For example, the if the following map
+        includes information about programming in many languages, searches among that information
+        set will be most useful when they return "Example of programming in
+        XSLT":<pre class="pre codeblock"><code>&lt;topicref href="progexample.dita"&gt;
+  &lt;topicmeta&gt;
+    &lt;navtitle&gt;Programming example&lt;/navtitle&gt;
+    &lt;searchtitle&gt;Example of programming in XSLT&lt;/searchtitle&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</code></pre></div></div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-topic-elements.html" title="The generic topic structure is used for untyped topics.">Basic topic elements</a></div></div></nav></article></main>

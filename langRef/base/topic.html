@@ -1,0 +1,40 @@
+---
+# Generated from DITA source
+layout: base
+title: "topic"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/basic-topic-elements.html">Basic topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/abstract.html">abstract</a></li><li><a href="../../langRef/base/body.html">body</a></li><li><a href="../../langRef/base/bodydiv.html">bodydiv</a></li><li><a href="../../langRef/base/dita.html">dita</a></li><li><a href="../../langRef/base/navtitle.html">navtitle</a></li><li><a href="../../langRef/base/related-links.html">related-links</a></li><li><a href="../../langRef/base/searchtitle.html">searchtitle</a></li><li><a href="../../langRef/base/shortdesc.html">shortdesc</a></li><li><a href="../../langRef/base/title.html">title</a></li><li><a href="../../langRef/base/titlealts.html">titlealts</a></li><li class="active"><a href="../../langRef/base/topic.html">topic</a></li></ul></li><li><a href="../../langRef/containers/body-elements.html">Body elements</a></li><li><a href="../../langRef/containers/indexing-d.html">Indexing group elements</a></li><li><a href="../../langRef/containers/related-links-elements.html">Related links elements</a></li><li><a href="../../langRef/containers/table-elements.html">Table elements</a></li></ul></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;topic&gt;</code></h1>
+ 
+<div class="body refbody"><p class="shortdesc">A topic is a standalone unit of information.</p>
+  <section class="section"><h2 class="title sectiontitle">Attributes</h2>
+   
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> (with a narrowed definition of <code class="keyword markupname xmlatt">@id</code>, given
+        below) and <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/architecturalAttributes.html" title="The architectural attributes group includes a set of attributes defined for document level elements such as topic and map. These attributes are intended to provide information about the DITA namespace, what level of DITA is in use, and what vocabulary modules are in use.">Architectural attribute group</a>.</p>
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/architecturalAttributes.html" title="The architectural attributes group includes a set of attributes defined for document level elements such as topic and map. These attributes are intended to provide information about the DITA namespace, what level of DITA is in use, and what vocabulary modules are in use.">Architectural attribute group</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/localizationAttributes.html" title="The localization attribute group defines a set of common attributes that are related to translation and localization. These attributes are available on most DITA elements.">Localization attribute group</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__class"><code class="keyword markupname xmlatt">@class</code></a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__outputclass"><code class="keyword markupname xmlatt">@outputclass</code></a>, and the
+        attribute defined below.</p>
+      <dl class="dl">
+        
+          <dt class="dt dlterm" id="topic__d112e51"><code class="keyword markupname xmlatt">@id</code>
+            <span class="ph">(REQUIRED)</span></dt>
+          <dd class="dd">Provides an anchor point. This ID is usually required as part of the
+              <code class="keyword markupname xmlatt">@href</code> or <code class="keyword markupname xmlatt">@conref</code> syntax when cross referencing or
+            reusing content within the topic; it also enables <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>
+            elements in DITA maps to optionally reference a specific topic within a DITA document.
+              <span class="ph">This attribute is defined with the XML Data Type ID.</span></dd>
+        
+      </dl>
+  </section>
+<div class="example" id="topic__example"><h2 class="title sectiontitle">Example</h2>       
+   <p class="p">The following code sample shows the primary structural components of a topic: title, short
+        description, prolog, body, and related links.</p><pre class="pre codeblock"><code>&lt;topic id="topic"&gt;
+  &lt;title&gt;The basic structure of a topic&lt;/title&gt;
+  &lt;shortdesc/&gt;
+  &lt;prolog/&gt;
+  &lt;body/&gt;
+  &lt;related-links/&gt;
+&lt;/topic&gt;</code></pre></div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-topic-elements.html" title="The generic topic structure is used for untyped topics.">Basic topic elements</a></div></div></nav></article></main>

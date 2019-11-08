@@ -1,0 +1,65 @@
+---
+# Generated from DITA source
+layout: base
+title: "topicmeta"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/basic-map-elements.html">Basic map elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/map.html">map</a></li><li><a href="../../langRef/base/topicref.html">topicref</a></li><li class="active"><a href="../../langRef/base/topicmeta.html">topicmeta</a></li><li><a href="../../langRef/base/anchor.html">anchor</a></li><li><a href="../../langRef/base/navref.html">navref</a></li><li><a href="../../langRef/base/reltable.html">reltable</a></li><li><a href="../../langRef/base/relrow.html">relrow</a></li><li><a href="../../langRef/base/relcell.html">relcell</a></li><li><a href="../../langRef/base/relheader.html">relheader</a></li><li><a href="../../langRef/base/relcolspec.html">relcolspec</a></li><li><a href="../../langRef/base/ux-window.html">ux-window</a></li></ul></li><li><a href="../../langRef/containers/mapgroup-d.html">Map group elements</a></li></ul></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code></h1>
+  
+  
+  <div class="body refbody"><p class="shortdesc">Topic metadata is metadata that applies to a topic based on its context
+    in a map.</p>
+    <section class="section"><h2 class="title sectiontitle">Usage information</h2>
+      
+      <p class="p">The metadata specified in a <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element is
+        specific to a given context within a map. If a reference to a single resource appears more
+        than once in a map or set of maps, unique metadata can be specified in each instance. For
+        example, when the parent <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element results in a link,
+        elements within the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element can be used to provide
+        context-specific information about the link, such as link text, a short description, or a
+        navigation title. </p>
+      <p class="p">The metadata specified in a topicmeta component is specific to a given
+        context within a map. If a reference to a single resource appears more than once in a map or
+        set of maps, unique metadata can be specified in each instance. For example, when the parent
+        topic reference results in a link, components within the topicmeta component can be used to
+        provide context-specific information about the link, such as link text or a navigation
+        title. </p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <div class="div">
+        <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on most DITA elements. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class attribute.">Universal attribute group</a> and the attribute defined below.</p>
+        <dl class="dl">
+          
+            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@lockmeta</code></dt>
+            <dd class="dd">
+              <p class="p">Specifies whether the map metadata supplements or overrides the metadata that is
+                specified in the topic. When the <code class="keyword markupname xmlatt">@lockmeta</code> attribute is set to
+                  <span class="keyword">yes</span>, the topic metadata is overriden. Allowable values are
+                  <span class="keyword">yes</span>, <span class="keyword">no</span>, and <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">"-dita-use-conref-target"</a>.</p>
+            </dd>
+          
+        </dl>
+      </div>
+      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/localizationAttributes.html" title="The localization attribute group defines a set of common attributes that are related to translation and localization. These attributes are available on most DITA elements.">Localization attribute group</a> and <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__class"><code class="keyword markupname xmlatt">@class</code></a>.</p>
+    </section>
+    <div class="example" id="topicmeta__example"><h2 class="title sectiontitle">Example</h2>
+      
+      <p class="p">The following example shows how the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element can contain
+        a metadata element:</p>
+      <pre class="pre codeblock"><code>&lt;map&gt;
+  &lt;title&gt;Indexing elements&lt;/title&gt;        
+  &lt;topicref href=indexing.dita"&gt;
+    &lt;topicmeta&gt;
+      &lt;audience&gt;Indexing specialists&lt;/audience&gt;
+    &lt;/topicmeta&gt;
+    &lt;!-- Adding topic references --&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</code></pre>
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element indicates that the topic (and its child
+        topics) are of interest to the indexing specialists within the company.</p>
+    </div>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-map-elements.html" title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog.">Basic map elements</a></div></div><div class="linklist relinfo relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../archSpec/base/cascading-in-a-ditamap.html" title="Certain map-level attributes cascade throughout a map, which facilitates attribute and metadata management. When attributes cascade, they apply to the elements that are children of the element where the attributes were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy.">Cascading of metadata attributes in a DITA map</a></li></ul></div><div class="linklist relinfo relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../archSpec/base/reconciling-topic-and-map-metadata.html" title="The topicmeta element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent topicref element, any child topicref elements, and – if a direct child of the map element – on the map as a whole.">Reconciling topic and map metadata elements</a></li></ul></div></nav></article></main>

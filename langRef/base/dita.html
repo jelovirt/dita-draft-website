@@ -1,0 +1,35 @@
+---
+# Generated from DITA source
+layout: base
+title: "dita"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/basic-topic-elements.html">Basic topic elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/abstract.html">abstract</a></li><li><a href="../../langRef/base/body.html">body</a></li><li><a href="../../langRef/base/bodydiv.html">bodydiv</a></li><li class="active"><a href="../../langRef/base/dita.html">dita</a></li><li><a href="../../langRef/base/navtitle.html">navtitle</a></li><li><a href="../../langRef/base/related-links.html">related-links</a></li><li><a href="../../langRef/base/searchtitle.html">searchtitle</a></li><li><a href="../../langRef/base/shortdesc.html">shortdesc</a></li><li><a href="../../langRef/base/title.html">title</a></li><li><a href="../../langRef/base/titlealts.html">titlealts</a></li><li><a href="../../langRef/base/topic.html">topic</a></li></ul></li><li><a href="../../langRef/containers/body-elements.html">Body elements</a></li><li><a href="../../langRef/containers/indexing-d.html">Indexing group elements</a></li><li><a href="../../langRef/containers/related-links-elements.html">Related links elements</a></li><li><a href="../../langRef/containers/table-elements.html">Table elements</a></li></ul></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;dita&gt;</code></h1>
+
+<div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element provides a top-level container for multiple
+    topics when you create documents using the ditabase document type.</p>
+    <section class="section" id="dita__usage-information"><h2 class="title sectiontitle">Usage information</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element lets you create any sequence of topics, and the
+        ditabase document type lets you nest these topic types inside each other. The
+          <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element has no particular output implications; it simply
+        allows you to create multiple topics of different types at the same level in a single
+        document.</p>
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element cannot be specialized.</p>
+    </section>
+    <section class="section" id="dita__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <p class="p">The following attributes are available on this element: <code class="keyword markupname xmlatt">@xmlns:ditaarch</code> and
+          <code class="keyword markupname xmlatt">@DITAArchVersion</code> from <a class="xref" href="../attributes/architecturalAttributes.html" title="The architectural attributes group includes a set of attributes defined for document level elements such as topic and map. These attributes are intended to provide information about the DITA namespace, what level of DITA is in use, and what vocabulary modules are in use.">Architectural attribute group</a>, and <a class="xref" href="../attributes/localizationAttributes.html" title="The localization attribute group defines a set of common attributes that are related to translation and localization. These attributes are available on most DITA elements.">Localization attribute group</a>.</p>
+    </section>
+<div class="example" id="dita__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock"><code>&lt;dita&gt;
+  &lt;concept id="batintro"&gt;&lt;title&gt;Intro to bats&lt;/title&gt;&lt;conbody&gt;&lt;!-- ... --&gt;&lt;/conbody&gt;&lt;/concept&gt;
+  &lt;reference id="batparts"&gt;&lt;title&gt;Parts of bats&lt;/title&gt;&lt;refbody&gt;&lt;!-- ... --&gt;&lt;/refbody&gt;&lt;/reference&gt;
+  &lt;task id="batfeeding"&gt;&lt;title&gt;Feeding a bat&lt;/title&gt;&lt;taskbody&gt;&lt;!-- ... --&gt;&lt;/taskbody&gt;&lt;/task&gt;
+  &lt;task id="battraining"&gt;&lt;title&gt;Training a bat&lt;/title&gt;&lt;taskbody&gt;&lt;!-- ... --&gt;&lt;/taskbody&gt;&lt;/task&gt;
+  &lt;task id="batcleanup"&gt;&lt;title&gt;Cleaning a bat&lt;/title&gt;&lt;taskbody&gt;&lt;!-- ... --&gt;&lt;/taskbody&gt;&lt;/task&gt;
+&lt;/dita&gt;</code></pre></div>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-topic-elements.html" title="The generic topic structure is used for untyped topics.">Basic topic elements</a></div></div></nav></article></main>

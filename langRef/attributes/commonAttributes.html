@@ -1,0 +1,74 @@
+---
+# Generated from DITA source
+layout: base
+title: "Other common attributes"
+index: "../../toc.html"
+---
+
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a><ul class="nav nav-list"><li><a href="../../langRef/attributes/universalAttributes.html">Universal attribute group</a></li><li><a href="../../langRef/attributes/architecturalAttributes.html">Architectural attribute group</a></li><li><a href="../../langRef/attributes/commonMapAttributes.html">Attributes common to many map elements</a></li><li><a href="../../langRef/attributes/calsTableAttributes.html">Complex-table attribute group</a></li><li><a href="../../langRef/attributes/dataElementAttributes.html">Data-element attributes group</a></li><li><a href="../../langRef/attributes/dateAttributes.html">Date attributes group</a></li><li><a href="../../langRef/attributes/displayAttributes.html">Display attribute group</a></li><li><a href="../../langRef/attributes/linkRelationshipAttributes.html">Link-relationship attribute group</a></li><li class="active"><a href="../../langRef/attributes/commonAttributes.html">Other common attributes</a></li><li><a href="../../langRef/attributes/simpletableAttributes.html">Simpletable attribute group</a></li><li><a href="../../langRef/attributes/specializationAttributes.html">Specialization attributes group</a></li><li><a href="../../langRef/attributes/topicrefElementAttributes.html">Topicref-element attributes group</a></li><li><a href="../../langRef/attributes/complexattributedefinitions.html">Complex attribute definitions</a></li></ul></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Other common attributes</h1>
+ 
+  
+ <div class="body refbody"><p class="shortdesc">These common attributes are used across a wide variety of elements, with the common
+    definition included below. These attributes are not defined as a group, and many elements only
+    specify one or two from this list.</p>
+  <section class="section" id="common-atts__section-1">
+   <dl class="dl">
+        
+          <dt class="dt dlterm" id="common-atts__anchorref"><code class="keyword markupname xmlatt">@anchorref</code></dt>
+          <dd class="dd">Identifies a location within another map file where this map will be anchored at
+            runtime. Resolution of the map is deferred until the final step in the delivery of any
+            rendered content. For example, <code class="ph codeph">anchorref="map1.ditamap/a1"</code> causes this
+            map to be pulled into the location of the anchor point "a1" inside
+              <span class="ph filepath">map1.ditamap</span> when <span class="ph filepath">map1.ditamap</span> is rendered
+            for delivery. </dd>
+        
+        
+          <dt class="dt dlterm" id="common-atts__compact"><code class="keyword markupname xmlatt">@compact</code></dt>
+          <dd class="dd">Indicates close vertical spacing between list items. Expanded spacing is the
+            processing default. The output result of compact spacing depends on the processor or
+            browser. Allowable values are: <dl class="dl">
+              
+                <dt class="dt dlterm">yes </dt>
+                <dd class="dd">Indicates compact spacing. </dd>
+              
+              
+                <dt class="dt dlterm">no </dt>
+                <dd class="dd">Indicates expanded spacing. </dd>
+              
+              
+                                        <dt class="dt dlterm">-dita-use-conref-target </dt>
+                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
+                                
+            </dl></dd>
+        
+    
+     <dt class="dt dlterm" id="common-atts__keyref"><code class="keyword markupname xmlatt">@keyref</code></dt>
+     <dd class="dd"><span class="ph" id="common-atts__keyrefDescription"><code class="keyword markupname xmlatt">@keyref</code> provides a redirectable reference based
+              on a key defined within a map. See <a class="xref" href="thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information
+              on using this attribute. </span></dd>
+    
+        
+          <dt class="dt dlterm" id="common-atts__mapkeyref"><code class="keyword markupname xmlatt">@mapkeyref</code></dt>
+          <dd class="dd">Identifies the map, if any, from which the contained links or metadata are derived.
+            This value <span class="ph">might</span> be automatically generated by a process that creates the links
+            or metadata based on map context, as a way to identify which map the material came from.
+            If the <code class="keyword markupname xmlelement">&lt;linklist&gt;</code>, or <code class="keyword markupname xmlelement">&lt;linkpool&gt;</code>, or
+            metadata is manually created by an author, there is no need to use this attribute.
+              <span class="ph">Note that this attribute is not related to the <code class="keyword markupname xmlatt">@keyref</code> attribute,
+              and is not used for key based processing.</span>
+          </dd>
+        
+    
+     <dt class="dt dlterm" id="common-atts__xmlspace"><code class="keyword markupname xmlatt">@xml:space</code></dt>
+     <dd class="dd">This attribute is provided on <code class="keyword markupname xmlelement">&lt;pre&gt;</code>, <code class="keyword markupname xmlelement">&lt;lines&gt;</code>,
+            and on elements specialized from those. It ensures that parsers in editors and
+            transforms respect the white space, including line-end characters, that is part of the
+            data in those elements. It is intended to be part of the default properties of these
+            elements, and not for authors to change or delete. When defined, it has a fixed value of
+            "preserve".</dd>
+    
+   </dl>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/attributes/attributes.html" title="This section collects commonly used attributes, with common definitions. If an element uses a different definition, or narrows the scope of, an otherwise common attribute, it will be called out in the topic that defines the element.">Attributes</a></div></div></nav></article></main>
