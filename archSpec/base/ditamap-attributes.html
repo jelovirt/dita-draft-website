@@ -1,11 +1,16 @@
 ---
 # Generated from DITA source
 layout: base
-title: "DITA map attributes"
-index: "../../toc.html"
+title: 'DITA map attributes'
+description: 'DITA maps have unique attributes that are designed to control the
+	 way that relationships are interpreted for different output purposes. In
+	 addition, DITA maps share many metadata and linking attributes with DITA
+	 topics. 
+  '
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a><ul class="nav nav-list"><li><a href="../../archSpec/base/basic-concepts.html">Basic concepts</a></li><li><a href="../../archSpec/base/single-sourcing.html">Producing different deliverables from a single source</a></li><li><a href="../../archSpec/base/topicover.html">DITA topics</a></li><li><a href="../../archSpec/base/ditamaps.html">DITA maps</a><ul class="nav nav-list"><li><a href="../../archSpec/base/definition-of-ditamaps.html">Definition of DITA maps</a></li><li><a href="../../archSpec/base/purpose-of-ditamaps.html">Purpose of DITA maps</a></li><li><a href="../../archSpec/base/ditamap-elements.html">DITA map elements</a></li><li class="active"><a href="../../archSpec/base/ditamap-attributes.html">DITA map attributes</a></li><li><a href="../../archSpec/base/example-ditamaps.html">Examples of DITA maps</a></li></ul></li><li><a href="../../archSpec/base/dita-metadata.html">DITA metadata</a></li></ul></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"> 
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a><ul class="nav nav-list"><li><a href="../../archSpec/base/basic-concepts.html">Basic concepts</a></li><li><a href="../../archSpec/base/single-sourcing.html">Producing different deliverables from a single source</a></li><li><a href="../../archSpec/base/topicover.html">DITA topics</a></li><li><a href="../../archSpec/base/ditamaps.html">DITA maps</a><ul class="nav nav-list"><li><a href="../../archSpec/base/definition-of-ditamaps.html">Definition of DITA maps</a></li><li><a href="../../archSpec/base/purpose-of-ditamaps.html">Purpose of DITA maps</a></li><li class="active"><a href="../../archSpec/base/ditamap-attributes.html">DITA map attributes</a></li><li><a href="../../archSpec/base/example-ditamaps.html">Examples of DITA maps</a></li></ul></li><li><a href="../../archSpec/base/dita-metadata.html">DITA metadata</a></li></ul></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"> 
   <h1 class="title topictitle1" id="ariaid-title1"><span class="ph">DITA map attributes</span></h1> 
   
 	 
@@ -63,22 +68,26 @@ index: "../../toc.html"
 							participates in a relationship. The following values are valid:</p>
 						<dl class="dl">
 							
-								<dt class="dt dlterm">linking="none" </dt>
+								<dt class="dt dlterm"><code class="ph codeph">linking="none"</code>
+								</dt>
 								<dd class="dd">Specifies that the topic does not exist in the map for the
 									purposes of calculating links. </dd>
 							
 							
-								<dt class="dt dlterm">linking="sourceonly" </dt>
+								<dt class="dt dlterm"><code class="ph codeph">linking="sourceonly"</code>
+								</dt>
 								<dd class="dd">Specifies that the topic will link to its related topics but not
 									vice versa. </dd>
 							
 							
-								<dt class="dt dlterm">linking="targetonly" </dt>
+								<dt class="dt dlterm"><code class="ph codeph">linking="targetonly"</code>
+								</dt>
 								<dd class="dd">Specifies that the related topics will link to it but not vice
 									versa. </dd>
 							
 							
-								<dt class="dt dlterm">linking="normal" </dt>
+								<dt class="dt dlterm"><code class="ph codeph">linking="normal"</code>
+								</dt>
 								<dd class="dd">Default value. It specifies that linking will be reciprocal (the
 									topic will link to related topics, and they will link back to
 									it). </dd>
@@ -191,7 +200,7 @@ index: "../../toc.html"
 							attributes in a DITA map apply. The following values are specified:</p>
 						<dl class="dl">
                                 
-                                        <dt class="dt dlterm">cascade="merge"</dt>
+                                        <dt class="dt dlterm"><code class="ph codeph">cascade="merge"</code></dt>
                                         <dd class="dd">The metadata attributes cascade; the values of the
                                                 metadata attributes are additive. This is the
                                                 processing default for the <code class="keyword markupname xmlatt">@cascade</code>
@@ -199,7 +208,7 @@ index: "../../toc.html"
                                                 1.2 and earlier.</dd>
                                 
                                 
-                                        <dt class="dt dlterm">cascade="nomerge"</dt>
+                                        <dt class="dt dlterm"><code class="ph codeph">cascade="nomerge"</code></dt>
                                         <dd class="dd">The metadata attributes cascade; however, they are not
             additive for <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that specify a different value
             for a specific metadata attribute. If the cascading value for an attribute is already

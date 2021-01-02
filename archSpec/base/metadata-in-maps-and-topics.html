@@ -1,16 +1,19 @@
 ---
 # Generated from DITA source
 layout: base
-title: "Metadata in maps and topics"
-index: "../../toc.html"
+title: 'Metadata in maps and topics'
+description: 'Information about topics can be specified as metadata on the map, as attributes on the
+topicref element, or as metadata attributes or elements in the topic
+itself. By default, metadata in the map supplements or overrides metadata that is specified at the
+topic level.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a><ul class="nav nav-list"><li><a href="../../archSpec/base/basic-concepts.html">Basic concepts</a></li><li><a href="../../archSpec/base/single-sourcing.html">Producing different deliverables from a single source</a></li><li><a href="../../archSpec/base/topicover.html">DITA topics</a></li><li><a href="../../archSpec/base/ditamaps.html">DITA maps</a></li><li><a href="../../archSpec/base/dita-metadata.html">DITA metadata</a><ul class="nav nav-list"><li><a href="../../archSpec/base/metadata-elements.html">Metadata elements</a></li><li><a href="../../archSpec/base/metadata-attributes.html">Metadata attributes</a></li><li class="active"><a href="../../archSpec/base/metadata-in-maps-and-topics.html">Metadata in maps and topics</a></li><li><a href="../../archSpec/base/help-systems-and-other-user-assistance.html">Context hooks and window metadata for user assistance</a></li></ul></li></ul></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Metadata in maps and topics</h1>
   <div class="body conbody"><p class="shortdesc">Information about topics can be specified as metadata on the map, as attributes on the
-      <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, or as metadata attributes or elements in the topic
-    itself. By default, metadata in the map supplements or overrides metadata that is specified at
-    the topic level, unless the <code class="keyword markupname xmlatt">@lockmeta</code> attribute of the
-      <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element is set to "no".</p>
+<code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, or as metadata attributes or elements in the topic
+itself. By default, metadata in the map supplements or overrides metadata that is specified at the
+topic level.</p>
     <dl class="dl">
       
         <dt class="dt dlterm">DITA map: Metadata elements</dt>
@@ -43,10 +46,8 @@ index: "../../toc.html"
       
     </dl>
     <p class="p"> When the same metadata element or attribute is specified in both a map and a topic, by
-      default the value in the map takes precedence; the assumption here is that the author of the
-      map has more knowledge of the reusing context than the author of the topic. The
-        <code class="keyword markupname xmlatt">@lockmeta</code> attribute on the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element
-      controls whether map-specified values override values in the referenced topic.</p>
+default the value in the map takes precedence; the assumption here is that the author of the map has
+more knowledge of the reusing context than the author of the topic.</p>
     <p class="p">The <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element is an exception to the rule of how metadata
       specified by the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element cascades. The content of the
         <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element is used as a navigation title only if the

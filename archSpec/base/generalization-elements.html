@@ -1,8 +1,11 @@
 ---
 # Generated from DITA source
 layout: base
-title: "Element generalization"
-index: "../../toc.html"
+title: 'Element generalization'
+description: 'Elements are generalized by examining the class attribute. When a
+    generalization process detects that an element belongs to one of the modules that is being
+    generalized, the element is renamed to a more general form.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a><ul class="nav nav-list"><li><a href="../../archSpec/base/ditaspecialization.html">Overview of DITA extension facilities</a></li><li><a href="../../archSpec/base/configuration.html">Configuration</a></li><li><a href="../../archSpec/base/specialization.html">Specialization</a></li><li><a href="../../archSpec/base/generalization.html">Generalization</a><ul class="nav nav-list"><li><a href="../../archSpec/base/generalization-overview.html">Overview of generalization</a></li><li class="active"><a href="../../archSpec/base/generalization-elements.html">Element generalization</a></li><li><a href="../../archSpec/base/generalization-processor-expectations.html">Processor expectations when generalizing elements</a></li><li><a href="../../archSpec/base/generalization-attributes.html">Attribute generalization</a></li><li><a href="../../archSpec/base/generalization-w-cross-specialization-dependencies.html">Generalization with cross-specialization dependencies</a></li></ul></li><li><a href="../../archSpec/base/constraints.html">Constraints</a></li></ul></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -25,20 +28,5 @@ index: "../../toc.html"
         token or an intermediate token in the <code class="keyword markupname xmlatt">@class</code> attribute. A second
         generalization process could end up renaming the element again or could leave it alone,
         depending on the target module or document type.</span></p>
-<section class="section" id="generalize__generalization-and-conref"><h2 class="title sectiontitle">Generalization and conref</h2>
-
-<p class="p">To determine compatibility between a document instance and a target document type when resolving
-a conref reference, a generalization processor can use the <code class="keyword markupname xmlatt">@domains</code> and
-<code class="keyword markupname xmlatt">@class</code> attributes for the document instance and the <code class="keyword markupname xmlatt">@domains</code>
-attribute for the target document type to determine how to rename elements in the resolved instance.
-For each element type, a generalization processor:</p>
-<ul class="ul">
-<li class="li">Iterates over the <code class="keyword markupname xmlatt">@class</code> attribute from specific to general, inspecting the
-vocabulary modules.</li>
-<li class="li">Identifies the first vocabulary module that is both present in each document type, with a
-compatible set of constraints for that vocabulary module. If such a module is not found, the
-instance can only be generalized to a less constrained document type.</li>
-</ul>
-</section>
   </div>
 <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/generalization.html" title="Generalization is the process of reversing a specialization. It converts specialized elements or attributes into the original types from which they were derived.">Generalization</a></div></div></nav></article></main>

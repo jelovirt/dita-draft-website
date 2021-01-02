@@ -1,8 +1,11 @@
 ---
 # Generated from DITA source
 layout: base
-title: "URI-based (direct) addressing"
-index: "../../toc.html"
+title: 'URI-based (direct) addressing'
+description: 'Content reference and link relationships can be established from DITA elements by using
+    URI references. DITA uses URI references in href, conref, and
+    other attributes for all direct addressing of resources. '
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/id.html">ID attribute</a></li><li><a href="../../archSpec/base/dita-linking.html">DITA linking</a></li><li class="active"><a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a></li><li><a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a></li></ul></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -85,61 +88,62 @@ index: "../../toc.html"
       
       <p class="p">The following table shows the URI syntax for common use cases.</p>
       <table class="simpletable frame-all"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr class="sthead">
-          <th class="stentry" scope="col">Use case</th>
-          <th class="stentry" scope="col">Sample syntax</th>
+          <th class="stentry" scope="col" id="uri-based-addressing__example-uri-references__stentry__1">Use case</th>
+          <th class="stentry" scope="col" id="uri-based-addressing__example-uri-references__stentry__2">Sample syntax</th>
         </tr></thead><tbody><tr class="strow">
-          <td class="stentry">Reference a table in a topic at a network location</td>
-          <td class="stentry"><code class="ph codeph">"http://example.com/file.dita#topicID/tableID"</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a table in a topic at a network location</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"http://example.com/file.dita#topicID/tableID"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a section in a topic on a local file system</td>
-          <td class="stentry"><code class="ph codeph">"directory/file.dita#topicID/sectionID"</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a section in a topic on a local file system</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"directory/file.dita#topicID/sectionID"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a figure contained in the same XML document</td>
-          <td class="stentry"><code class="ph codeph">"#topicID/figureID"</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a figure contained in the same XML document</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"#topicID/figureID"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a figure contained in the same topic of an XML document</td>
-          <td class="stentry"><code class="ph codeph">"#./figureID"</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a figure contained in the same topic of an XML document</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"#./figureID"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference an element within a map</td>
-          <td class="stentry"><code class="ph codeph">"http://example.com/map.ditamap#elementID"</code> (and a value of
-            "ditamap" for the <code class="keyword markupname xmlatt">@format</code> attribute)</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference an element within a map</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"http://example.com/map.ditamap#elementID"</code> (and a value of
+              <span class="keyword">ditamap</span> for the <code class="keyword markupname xmlatt">@format</code> attribute)</td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a map element within the same map document</td>
-          <td class="stentry"><code class="ph codeph">"#elementID"</code> (and a value of "ditamap" for the
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a map element within the same map document</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"#elementID"</code> (and a value of <span class="keyword">ditamap</span> for the
               <code class="keyword markupname xmlatt">@format</code> attribute)</td>
         </tr><tr class="strow">
-          <td class="stentry">Reference an external Web site </td>
-          <td class="stentry"><code class="ph codeph">"http://www.example.com"</code>,
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference an external Web site </td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"http://www.example.com"</code>,
               <code class="ph codeph">"http://www.example.com#somefragment"</code> or any other valid
             URI</td>
         </tr><tr class="strow">
-          <td class="stentry">Reference an element within a local map</td>
-          <td class="stentry">
-            <code class="ph codeph">"filename.ditamap#elementid"</code> (and a value of "ditamap" for the
-              <code class="keyword markupname xmlatt">@format</code> attribute)</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference an element within a local map</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2">
+            <code class="ph codeph">"filename.ditamap#elementid"</code> (and a value of <span class="keyword">ditamap</span>
+            for the <code class="keyword markupname xmlatt">@format</code> attribute)</td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a local map </td>
-          <td class="stentry"><code class="ph codeph">"filename.ditamap"</code> (and a value of "ditamap" for the
-              <code class="keyword markupname xmlatt">@format</code> attribute)</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a local map </td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"filename.ditamap"</code> (and a value of <span class="keyword">ditamap</span>
+            for the <code class="keyword markupname xmlatt">@format</code> attribute)</td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a local topic </td>
-          <td class="stentry"> Reference a local topic <code class="ph codeph">"filename.dita"</code> or
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a local topic </td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"> Reference a local topic <code class="ph codeph">"filename.dita"</code> or
               "<code class="ph codeph">path/filename.dita"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a specific topic in a local document </td>
-          <td class="stentry"><code class="ph codeph">"filename.dita#topicid"</code> or
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a specific topic in a local document </td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"filename.dita#topicid"</code> or
               <code class="ph codeph">"path/filename.dita#topicid"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a specific topic in the same file</td>
-          <td class="stentry"><code class="ph codeph">"#topicid"</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a specific topic in the same file</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"#topicid"</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference  the same topic in the same XML document</td>
-          <td class="stentry"><code class="ph codeph">"#."</code></td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference  the same topic in the same XML document</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"#."</code></td>
         </tr><tr class="strow">
-          <td class="stentry">Reference a peer map for cross-deliverable linking</td>
-          <td class="stentry"><code class="ph codeph">"../book-b/book-b.ditamap"</code> (and a value of "ditamap" for the
-              <code class="keyword markupname xmlatt">@format</code> attribute, a value of "peer" for the <code class="keyword markupname xmlatt">@scope</code>
-            attribute, and a value for the <code class="keyword markupname xmlatt">@keyscope</code> attribute) </td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__1">Reference a peer map for cross-deliverable linking</td>
+          <td class="stentry" headers="uri-based-addressing__example-uri-references__stentry__2"><code class="ph codeph">"../book-b/book-b.ditamap"</code> (and a value of
+              <span class="keyword">ditamap</span> for the <code class="keyword markupname xmlatt">@format</code> attribute, a value of
+              <span class="keyword">peer</span> for the <code class="keyword markupname xmlatt">@scope</code> attribute, and a value for the
+              <code class="keyword markupname xmlatt">@keyscope</code> attribute) </td>
         </tr></tbody></table>
     </div>
   </div>

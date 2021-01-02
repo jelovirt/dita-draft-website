@@ -1,11 +1,13 @@
 ---
 # Generated from DITA source
 layout: base
-title: "no-topic-nesting"
-index: "../../toc.html"
+title: 'no-topic-nesting'
+description: 'The no-topic-nesting element is a placeholder in the DITA
+    architecture.'
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/prolog-elements.html">Prolog (metadata) elements</a></li><li><a href="../../langRef/containers/specialization-elements.html">Specialization elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/data.html">data</a></li><li><a href="../../langRef/base/data-about.html">data-about</a></li><li><a href="../../langRef/base/foreign.html">foreign</a></li><li><a href="../../langRef/base/itemgroup.html">itemgroup</a></li><li class="active"><a href="../../langRef/base/no-topic-nesting.html">no-topic-nesting</a></li><li><a href="../../langRef/base/state.html">state</a></li><li><a href="../../langRef/base/unknown.html">unknown</a></li></ul></li></ul></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code></h1>
 
 
@@ -13,9 +15,13 @@ index: "../../toc.html"
     architecture.</p>
     <section class="section" id="no-topic-nesting__usage-information"><h2 class="title sectiontitle">Usage information</h2>
       
-      <p class="p">It is not actually used by the default DITA document types; it is for use only when
-        creating a validly customized document type where the information designer wants to
-        eliminate the ability to nest topics. It is not intended for use by authors.</p>
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code> element  is not intended for use in DITA
+                source files.</p>
+            <p class="p">The <code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code> element is designed for use only when
+                configuring a document-type shell where the information designer wants to eliminate
+                the ability to nest topics. When a specialized topic is set up to allow topic
+                nesting, the <code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code> element can be used in a
+                shell as a way to disallow that nesting.</p>
     </section>
     <section class="section" id="no-topic-nesting__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
       
@@ -24,8 +30,20 @@ index: "../../toc.html"
     </section>
     <section class="section" id="no-topic-nesting__attributes"><h2 class="title sectiontitle">Attributes</h2>
       
-      <p class="p">The following attribute is available on this element: <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class">class (Not for use by authors)</a>.</p>
+      <p class="p">The following attribute is available on this element: <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class">class (not for use by authors)</a>.</p>
     </section>
-<div class="example" id="no-topic-nesting__example"><h2 class="title sectiontitle">Example</h2><p class="p"><em class="ph i">This element is not intended to be used in source files.</em></p></div>
+<div class="example" id="no-topic-nesting__example"><h2 class="title sectiontitle">Example</h2><p class="p"><em class="ph i">This element is not intended to be used in source files.</em></p>
+            <div class="p">In the "base topic" DTD document-type shell distributed by OASIS, the
+                    <code class="keyword markupname parameterentity">%topic-info-types;</code> entity is set to
+                    <code class="ph codeph">topic</code>, meaning that <code class="keyword markupname xmlelement">&lt;topic&gt;</code> elements can
+                nest other <code class="keyword markupname xmlelement">&lt;topic&gt;</code> elements. The following code sample shows
+                how <code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code> is used instead to disallow nesting.
+                <pre class="pre codeblock"><code>&lt;!ENTITY % topic-info-types
+              "no-topic-nesting"
+&gt;</code></pre></div>
+            <p class="p">In that shell, topics can no longer nest other topics. DTD grammar rules require that
+                some element be specified in this entity, so
+                    <code class="keyword markupname xmlelement">&lt;no-topic-nesting&gt;</code> is used as a placeholder to replace
+                any nested topics.</p></div>
 </div>
 <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/specialization-elements.html" title="Several DITA elements exist either for architectural reasons or for support of specialized markup yet to be designed. Although there is little need to use these elements unless you are directed to, some of them, such as state, can be used if your content makes use of these semantic distinctions. For example, a discussion of signals on a gate of an integrated logic circuit might use the state element to represent either on or off conditions of that gate.">Specialization elements</a></div></div></nav></article></main>

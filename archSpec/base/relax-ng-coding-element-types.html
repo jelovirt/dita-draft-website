@@ -1,8 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: "RELAX NG: Coding requirements for element type declarations"
-index: "../../toc.html"
+title: 'RELAX NG: Coding requirements for element type declarations'
+description: 'Structural and domain vocabulary modules have the same coding requirements for element
+    type declarations. Each RELAX NG vocabulary module consists of a single module file.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element type declarations</a></li><li><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-constraint-modules.html">RELAX NG: Coding requirements for constraint modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -86,8 +88,7 @@ index: "../../toc.html"
                 also used to help enable generation of DTD and XSD grammar files.</li>
             </ul><p class="p">The following example shows the declaration for the
                 <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element, including the definition for each
-              pattern described
-            above.</p><pre class="pre codeblock"><code>&lt;div&gt;
+              pattern described above.</p><pre class="pre codeblock"><code>&lt;div&gt;
   &lt;a:documentation&gt;LONG NAME: Topic Head&lt;/a:documentation&gt;
   &lt;define name="topichead.content"&gt;
     &lt;optional&gt;

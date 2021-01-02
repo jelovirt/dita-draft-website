@@ -1,55 +1,26 @@
 ---
 # Generated from DITA source
 layout: base
-title: "DTD: Coding requirements for element type declarations"
-index: "../../toc.html"
+title: 'DTD: Coding requirements for element type declarations'
+description: 'This topic covers general coding requirements for defining element types in both
+    structural and element-domain vocabulary modules.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Overview of coding requirements</a></li><li><a href="../../archSpec/base/dtd-coding-doctype-shell.html">DTD: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/dtd-coding-element-types.html">DTD: Coding requirements for element type declarations</a></li><li><a href="../../archSpec/base/dtd-coding-structural-modules.html">DTD: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/dtd-coding-element-domains.html">DTD: Coding requirements for element domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-attribute-domains.html">DTD: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-constraint-modules.html">DTD: Coding requirements for constraint modules</a></li></ul></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1">DTD: Coding requirements for element type declarations</h1>
   
   <div class="body conbody"><p class="shortdesc">This topic covers general coding requirements for defining element types in both
-    structural and element-domain vocabulary modules. In addition, it covers how to create the
-      <code class="keyword markupname xmlatt">@domains</code> attribute contribution for these modules.</p>
+    structural and element-domain vocabulary modules.</p>
     <p class="p">A vocabulary module that defines a structural or element domain specialization is composed of
       two files:</p>
     <ul class="ul">
       <li class="li">An entity declaration (<span class="ph filepath">.ent</span>) file, which declares the text entities
         that are used to integrate the vocabulary module into a document-type shell</li>
-      <li class="li">A definition module (<span class="ph filepath">.mod</span>) file, which declares the <span class="ph">element
-          names, content models, and attribute lists</span> for the element types that are defined in
-        the vocabulary module</li>
+      <li class="li">A definition module (<span class="ph filepath">.mod</span>) file, which declares the element names,
+        content models, and attribute lists for the element types that are defined in the vocabulary
+        module</li>
     </ul>
-    <section class="section" id="general-coding-requirements__domains-contribution"><h2 class="title sectiontitle"><code class="keyword markupname xmlatt">@domains</code> attribute contribution</h2>
-      
-      <p class="p">A domain declaration entity is used to construct the effective value of the
-          <code class="keyword markupname xmlatt">@domains</code> attribute for a map or topic type.</p>
-      <dl class="dl">
-        
-          <dt class="dt dlterm">Text entity name</dt>
-          <dd class="dd">
-            <p class="p">The name of the text entity is the structural type name or the domain abbreviation,
-              followed by a hyphen ("-") and the literal <code class="ph codeph">att</code>.</p>
-          </dd>
-        
-        
-          <dt class="dt dlterm">Text entity values</dt>
-          <dd class="dd">
-            <p class="p">The value of the text entity is the <code class="keyword markupname xmlatt">@domains</code> attribute contribution
-              for the current module. See <a class="xref" href="specialization-domains-attribute.html#domainsatt" title="The domains attribute enables processors to determine whether two elements or two documents use compatible domains. The attribute is declared on the root element for each topic or map type. Each structural, domain, and constraint module defines its ancestry as a parenthesized sequence of space-separated module names; the effective value of the domains attribute is composed of these parenthesized sequences.">domains attribute rules and syntax</a> for details on how to
-              construct this value.</p>
-          </dd>
-        
-      </dl>
-      <p class="p">For example, the <code class="keyword markupname xmlatt">@domains</code> attribute contributions for
-        the concept structural module and the highlighting domain module are are constructed as
-        follows.</p>
-      <ul class="ul">
-        <li class="li">
-          <code class="ph codeph">&lt;!ENTITY concept-att "(topic concept)"&gt;</code></li>
-        <li class="li"><code class="ph codeph">&lt;!ENTITY hi-d-att "(topic hi-d)"&gt;</code>.</li>
-      </ul>
-    </section>
     <section class="section" id="general-coding-requirements__element-definitions"><h2 class="title sectiontitle">Element definitions</h2>
       
       <p class="p">A structural or domain vocabulary module must contain a declaration for each element type

@@ -1,11 +1,15 @@
 ---
 # Generated from DITA source
 layout: base
-title: "enumerationdef"
-index: "../../toc.html"
+title: 'enumerationdef'
+description: 'The enumerationdef contains an enumeration definition. An
+        enumeration definition specifies an attribute, a set of controlled values (optional), and
+        the element to which the attribute and controlled values pair are bound
+        (optional).'
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a><ul class="nav nav-list"><li><a href="../../langRef/containers/subjectScheme.html">Subject scheme elements</a><ul class="nav nav-list"><li><a href="../../langRef/base/attributedef.html">attributedef</a></li><li><a href="../../langRef/base/defaultSubject.html">defaultSubject</a></li><li><a href="../../langRef/base/elementdef.html">elementdef</a></li><li class="active"><a href="../../langRef/base/enumerationdef.html">enumerationdef</a></li><li><a href="../../langRef/base/hasInstance.html">hasInstance</a></li><li><a href="../../langRef/base/hasKind.html">hasKind</a></li><li><a href="../../langRef/base/hasNarrower.html">hasNarrower</a></li><li><a href="../../langRef/base/hasPart.html">hasPart</a></li><li><a href="../../langRef/base/hasRelated.html">hasRelated</a></li><li><a href="../../langRef/base/relatedSubjects.html">relatedSubjects</a></li><li><a href="../../langRef/base/schemeref.html">schemeref</a></li><li><a href="../../langRef/base/subjectdef.html">subjectdef</a></li><li><a href="../../langRef/base/subjectHead.html">subjectHead</a></li><li><a href="../../langRef/base/subjectHeadMeta.html">subjectHeadMeta</a></li><li><a href="../../langRef/base/subjectRel.html">subjectRel</a></li><li><a href="../../langRef/base/subjectRelTable.html">subjectRelTable</a></li><li><a href="../../langRef/base/subjectRelHeader.html">subjectRelHeader</a></li><li><a href="../../langRef/base/subjectRole.html">subjectRole</a></li><li><a href="../../langRef/base/subjectScheme.html">subjectScheme</a></li></ul></li><li><a href="../../langRef/containers/classify-d.html">Classification domain elements</a></li></ul></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code></h1>
     
 
@@ -20,13 +24,12 @@ index: "../../toc.html"
                 
                     <dt class="dt dlterm">Bind a set of controlled values to an attribute</dt>
                     <dd class="dd">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element contains an
-                            <code class="keyword markupname xmlelement">&lt;attributedef&gt;</code> and an
+                            <code class="keyword markupname xmlelement">&lt;attributedef&gt;</code> and a
                             <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code> element, the set of controlled
-                        values bound to the attribute apply to all elements.</dd>
-                    <dd class="dd ddexpand">For example, when <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> contains only
-                            <code class="ph codeph">&lt;attributedef name="value"/&gt;</code>, the
-                            <code class="keyword markupname xmlatt">@value</code> attribute is limited to the specified enumeration
-                        for all elements.</dd>
+                        values bound to the attribute apply to all elements.<p class="p">For example, when <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> contains only
+                                <code class="ph codeph">&lt;attributedef name="value"/&gt;</code>, the
+                                <code class="keyword markupname xmlatt">@value</code> attribute is limited to the specified
+                            enumeration for all elements.</p></dd>
                 
                 
                     <dt class="dt dlterm">Limit a set of controlled values to a specific element and attribute
@@ -36,14 +39,14 @@ index: "../../toc.html"
                             <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code>, <strong class="ph b">and</strong> an
                             <code class="keyword markupname xmlelement">&lt;elementdef&gt;</code> element, the enumeration applies to
                         the specified attribute <strong class="ph b">only</strong> on the specified element. The
-                        enumeration does not apply to the attribute on other elements.</dd>
-                    <dd class="dd ddexpand">For example, when the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element
-                        contains both <code class="ph codeph">&lt;attributedef name="value"/&gt;</code> and
-                            <code class="ph codeph">&lt;elementdef name="lomDifficulty"/&gt;</code>, only the
-                            <code class="keyword markupname xmlatt">@value</code> attribute on the
-                            <code class="keyword markupname xmlelement">&lt;lomDifficulty&gt;</code> element is limited to the
-                        specified enumeration. The possible values for the <code class="keyword markupname xmlatt">@value</code>
-                        attribute on other elements are not affected.</dd>
+                        enumeration does not apply to the attribute on other elements.<p class="p">For example, when the
+                                <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element contains both
+                                <code class="ph codeph">&lt;attributedef name="type"/&gt;</code> and
+                                <code class="ph codeph">&lt;elementdef name="note"/&gt;</code>, only the
+                                <code class="keyword markupname xmlatt">@type</code> attribute on the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+                            element is limited to the specified enumeration. The possible values for
+                            the <code class="keyword markupname xmlatt">@type</code> attribute on other elements are not
+                            affected.</p></dd>
                 
                 
                     <dt class="dt dlterm">Specify that an attribute is not valid.</dt>
@@ -66,21 +69,21 @@ index: "../../toc.html"
         </section>
         <section class="section" id="enumerationdef__attributes"><h2 class="title sectiontitle">Attributes</h2>
             
-            <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/idAttributes.html" title="The ID attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">ID attribute group</a>, <code class="keyword markupname xmlatt">@status</code> and
-                    <code class="keyword markupname xmlatt">@base</code> from <a class="xref" href="../attributes/metadataAttributes.html" title="The metadata attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">Metadata attribute group</a>,
-                    <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass">outputclass</a>, and <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class">class (Not for use by authors)</a>.</p>
+            <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html#univ-atts__idatts">ID attributes</a>, <code class="keyword markupname xmlatt">@status</code> and
+                    <code class="keyword markupname xmlatt">@base</code> from <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts">Metadata attributes</a>,
+                    <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass">outputclass</a>, and <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class">class (not for use by authors)</a>.</p>
         </section>
         <div class="example"><h2 class="title sectiontitle">Example</h2>
             
             <p class="p">The following subject scheme map contains three enumeration definitions:</p>
             <ol class="ol">
-                <li class="li">The permissable values for the <code class="keyword markupname xmlatt">@audience</code> attribute on the
+                <li class="li">The permissible values for the <code class="keyword markupname xmlatt">@audience</code> attribute on the
                         <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> element are restricted to the subject
                     "values-audience-draft-comment". This means that the only allowed values are
-                    "spec-editors" and "tc-reviewers".</li>
-                <li class="li">The permissable values for <code class="keyword markupname xmlatt">@otherprops</code> are restricted to the
-                    subject "values-otherprops". This means that the only valid value for
-                        <code class="keyword markupname xmlatt">@otherprops</code> is "examples".</li>
+                        <span class="keyword">spec-editors</span> and <span class="keyword">tc-reviewers</span>.</li>
+                <li class="li">The permissible values for <code class="keyword markupname xmlatt">@otherprops</code> are restricted to the
+                    subject <span class="keyword">values-otherprops</span>. This means that the only valid
+                    value for <code class="keyword markupname xmlatt">@otherprops</code> is <span class="keyword">examples</span>.</li>
                 <li class="li">The enumeration for the <code class="keyword markupname xmlatt">@props</code> element is empty. No values are
                     valid.</li>
             </ol>
@@ -122,4 +125,4 @@ index: "../../toc.html"
 &lt;/subjectScheme&gt;</code></pre>
         </div>
 </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/subjectScheme.html" title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes, and specify relationships among taxonomic subjects.">Subject scheme elements</a></div></div></nav></article></main>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/subjectScheme.html" title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects.">Subject scheme elements</a></div></div></nav></article></main>

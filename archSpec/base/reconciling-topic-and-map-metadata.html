@@ -1,8 +1,13 @@
 ---
 # Generated from DITA source
 layout: base
-title: "Reconciling topic and map metadata elements"
-index: "../../toc.html"
+title: 'Reconciling topic and map metadata elements'
+description: 'The topicmeta element in maps contains numerous elements that
+  can be used to declare metadata. These metadata elements have an effect on the parent
+   topicref element, any child topicref elements,
+  and – if a direct child of the map element – on the map as a
+  whole.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dita-maps-and-their-usage.html">DITA maps and their usage</a></li><li><a href="../../archSpec/base/subject-scheme-maps-and-usage.html">Subject scheme maps and their usage</a></li><li><a href="../../archSpec/base/map-processing.html">Map cascading</a><ul class="nav nav-list"><li><a href="../../archSpec/base/cascading-in-a-ditamap.html">Cascading of metadata attributes in a DITA map</a></li><li class="active"><a href="../../archSpec/base/reconciling-topic-and-map-metadata.html">Reconciling topic and map metadata elements</a></li><li><a href="../../archSpec/base/map-to-map-cascading-of-metadata.html">Map-to-map cascading behaviors</a></li></ul></li><li><a href="../../archSpec/base/chunking.html">Chunking</a></li></ul></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -40,7 +45,7 @@ index: "../../toc.html"
        what effect, if any, an element has when specified at this level.</dd>
      
     </dl></div></section>
-<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Topicmeta elements and their properties</span></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title"><code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> elements and their properties</span></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
 <tr class="row valign-bottom">
 <th class="entry" id="reconciling-topic-and-map-metadata__entry__1">Element</th>
 <th class="entry" id="reconciling-topic-and-map-metadata__entry__2">How does it apply to the topic?</th>
@@ -85,14 +90,6 @@ element?</th>
 <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">No, unless specialized for a purpose that
 cascades</td>
 <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">No stated purpose, until the element is specialized</td>
-</tr>
-<tr class="row">
-<td class="entry" headers="reconciling-topic-and-map-metadata__entry__1"><code class="keyword markupname xmlelement">&lt;data-about&gt;</code></td>
-<td class="entry" headers="reconciling-topic-and-map-metadata__entry__2">Add the property to the specified target</td>
-<td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">No, unless specialized for a purpose that
-cascades</td>
-<td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">No stated purpose, until the element is
-specified</td>
 </tr>
 <tr class="row">
 <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1"><code class="keyword markupname xmlelement">&lt;foreign&gt;</code></td>
@@ -206,7 +203,7 @@ specified</td>
 	&lt;topicmeta&gt;
 		&lt;author&gt;Kristen James Eberlein&lt;/author&gt;
 		&lt;copyright&gt;
-			&lt;copyryear year="2009"/&gt;
+			&lt;copyryear year="2020"/&gt;
 			&lt;copyrholder&gt;OASIS&lt;/copyrholder&gt;
 		&lt;/copyright&gt;
 	&lt;/topicmeta&gt;
@@ -217,8 +214,8 @@ specified</td>
        &lt;/topicref&gt;
 &lt;/map&gt;</code></pre></div>
       <p class="p">The author and copyright information cascades to each of the DITA topics referenced in the
-        DITA map. When the DITA map is processed to XHTML, for example, each XHTML file contains the
+        DITA map. When the DITA map is processed to HTML5, for example, each HTML5 file contains the
         metadata information.</p>
     </div>
 </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/map-processing.html">Map cascading</a></div></div><div class="linklist relinfo relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../langRef/base/topicmeta.html" title="Topic metadata is metadata that applies to a topic based on its context in a map.">topicmeta</a></li></ul></div></nav></article></main>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/map-processing.html">Map cascading</a></div></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../langRef/base/topicmeta.html" title="Topic metadata is metadata that applies to a topic based on its context in a map.">topicmeta</a></li></ul></div></nav></article></main>

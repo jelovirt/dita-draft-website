@@ -1,8 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: "RELAX NG: Coding requirements for document-type shells"
-index: "../../toc.html"
+title: 'RELAX NG: Coding requirements for document-type shells'
+description: 'A document-type shell integrates one or more topic type or map type modules, zero or
+    more domain modules, and zero or more constraint modules.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element type declarations</a></li><li><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-constraint-modules.html">RELAX NG: Coding requirements for constraint modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -32,25 +34,24 @@ index: "../../toc.html"
         </dd>
       
       
-        <dt class="dt dlterm">DITA domains attribute</dt>
+        <dt class="dt dlterm">DITA <code class="keyword markupname xmlatt">@specializations</code> attribute</dt>
         <dd class="dd">
-          <p class="p">The document-type shell must list the domain or structural modules that are named as
-            dependencies in the <code class="keyword markupname xmlatt">@domains</code> attribute value. Unlike DTDs, a default
-            value for <code class="keyword markupname xmlatt">@domains</code> cannot automatically be constructed using RELAX NG
-            facilities. Instead, the values used to construct <code class="keyword markupname xmlatt">@domains</code> are taken
-            from each vocabulary and constraint module, in addition to any domains contributions
-            based on constraints implemented within the shell. </p>
+          <p class="p">The document-type shell must list the attribute domain modules that are named as
+            dependencies in the <code class="keyword markupname xmlatt">@specializations</code> attribute value. Unlike DTDs, a
+            default value for <code class="keyword markupname xmlatt">@specializations</code> cannot automatically be constructed
+            using RELAX NG facilities. Instead, the values used to construct
+              <code class="keyword markupname xmlatt">@specializations</code> are taken from each attribute module.</p>
           <div class="p">For
             example:<pre class="pre codeblock"><code>&lt;div&gt;
   &lt;a:documentation&gt;DOMAINS ATTRIBUTE&lt;/a:documentation&gt;
   &lt;define name="domains-att"&gt;
     &lt;optional&gt;
       &lt;attribute name="domains"
-                 a:defaultValue="(topic hazard-d)
-                                 (topic hi-d)
-                                 (topic indexing-d)
-                                 (topic ut-d)
-                                 a(props deliveryTarget)"
+                 a:defaultValue="@props/audience
+                                 @props/deliveryTarget
+                                 @props/platform
+                                 @props/product
+                                 @props/otherprops"
       /&gt;
     &lt;/optional&gt;
   &lt;/define&gt;
@@ -99,24 +100,17 @@ index: "../../toc.html"
         <dd class="dd">
           <p class="p">Domains can be constrained to disallow some extension elements without the use of a
             separate module file. This is done by overriding the base type pattern within the
-            reference to the domain module. In this case, the constraint represented by the pattern
-            redefinition still is declared in the <code class="keyword markupname xmlatt">@domains</code> attribute; the
-              <code class="keyword markupname xmlatt">@domains</code> contribution is documented in the document-type shell with
-            the constraint. There is not a designated section of the document-type shell for this
-            type of constraint; it can be placed either in <a class="xref" href="#concept_rrq_p45_dn__content-constraint">Content constraint integration</a> or <a class="xref" href="#concept_rrq_p45_dn__module-inclusion">Module inclusions</a>.</p>
+            reference to the domain module. There is not a designated section of the document-type
+            shell for this type of constraint; it can be placed either in <a class="xref" href="#concept_rrq_p45_dn__content-constraint">Content constraint integration</a> or <a class="xref" href="#concept_rrq_p45_dn__module-inclusion">Module inclusions</a>.</p>
           <p class="p">The following example demonstrates the portion of a document type
             shell that includes the highlight domain module while directly constraining that module
-            to remove the <code class="keyword markupname xmlelement">&lt;u&gt;</code> element. The
-              <code class="keyword markupname xmlelement">&lt;ditaarch:domainsContribution&gt;</code> element is used to document the
-              <code class="keyword markupname xmlatt">@domains</code> contribution for this constraint. </p>
+            to remove the <code class="keyword markupname xmlelement">&lt;u&gt;</code> element.</p>
           <pre class="pre codeblock"><code>
   &lt;div&gt;
     &lt;a:documentation&gt;MODULE INCLUSIONS&lt;/a:documentation&gt;
     &lt;include href="topicMod.rng"/&gt;
     &lt;include href="hazardstatementDomainMod.rng"/&gt;
     &lt;include href="highlightDomainMod.rng"&gt;
-      &lt;ditaarch:domainsContribution
-        &gt;(topic hi-d-noUnderline-c)&lt;/ditaarch:domainsContribution&gt;
       &lt;define name="u"&gt;
         &lt;notAllowed&gt;&lt;/notAllowed&gt;
       &lt;/define&gt;

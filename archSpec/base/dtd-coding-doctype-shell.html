@@ -1,8 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: "DTD: Coding requirements for document-type shells"
-index: "../../toc.html"
+title: 'DTD: Coding requirements for document-type shells'
+description: 'A DTD-based document-type shell is organized into sections; each section contains
+        entity declarations that follow specific coding rules.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Overview of coding requirements</a></li><li class="active"><a href="../../archSpec/base/dtd-coding-doctype-shell.html">DTD: Coding requirements for document-type shells</a></li><li><a href="../../archSpec/base/dtd-coding-element-types.html">DTD: Coding requirements for element type declarations</a></li><li><a href="../../archSpec/base/dtd-coding-structural-modules.html">DTD: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/dtd-coding-element-domains.html">DTD: Coding requirements for element domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-attribute-domains.html">DTD: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-constraint-modules.html">DTD: Coding requirements for constraint modules</a></li></ul></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -37,7 +39,7 @@ index: "../../toc.html"
                 <a class="xref" href="#shell-dtd-coding-reqs__topic-nesting-overrides">Topic nesting override</a>
             </li>
             <li class="li">
-                <a class="xref" href="#shell-dtd-coding-reqs__domains-attribute-override">Domains attribute override</a>
+                <a class="xref" href="#shell-dtd-coding-reqs__domains-attribute-override">Specializations attribute override</a>
             </li>
             <li class="li">
                 <a class="xref" href="#shell-dtd-coding-reqs__content-constraint-integration">Content constraint integration</a>
@@ -69,9 +71,8 @@ index: "../../toc.html"
                         <li class="li">Any additional structural modules that are used by the document type
                             shell</li>
                     </ul>
-                    <p class="p">Each parameter entity (<span class="ph filepath">.ent</span>) file contributes a domain
-                        token for structural topics or maps. The parameter entity is named
-                                <code class="ph codeph"><var class="keyword varname">type-name</var>-dec</code>. </p>
+                    <p class="p">The parameter entity is named
+                            <code class="ph codeph"><var class="keyword varname">type-name</var>-dec</code>. </p>
                     <div class="p">For example, a document-type shell that integrates the
                             <code class="keyword markupname xmlelement">&lt;concept&gt;</code> specialization would
                         include:<pre class="pre codeblock"><code>&lt;!ENTITY % concept-dec     
@@ -186,35 +187,20 @@ index: "../../toc.html"
                 </dd>
             
             
-                <dt class="dt dlterm" id="shell-dtd-coding-reqs__domains-attribute-override"> Domains attribute override </dt>
+                <dt class="dt dlterm" id="shell-dtd-coding-reqs__domains-attribute-override"> Specializations attribute override </dt>
                 <dd class="dd">
-                    <p class="p">This section sets the effective value of the <code class="keyword markupname xmlatt">@domains</code>
+                    <p class="p">This section sets the effective value of the <code class="keyword markupname xmlatt">@specializations</code>
                         attribute for the top-level document type that is configured by the document
                         type shell. It redefines the <code class="ph codeph">included-domains</code> entity to
-                        include the text entity for each domain, constraint, and structural
-                        specialization that is either included or reused in the document type
-                        shell.</p>
-                    <div class="p">In the following example,
-                        entities are included for both the troubleshooting specialization and the
-                        task specialization on which the troubleshooting specialization depends; for
-                        the highlighting and utilities element domains; for the
-                            <code class="ph codeph">newAtt-d</code> attribute domain, and for the
-                            <code class="ph codeph">noBasePre-c</code> constraint module:<pre class="pre codeblock"><code>&lt;!ENTITY included-domains
-    "&amp;troubleshooting-att;
-     &amp;task-att;
-     &amp;hi-d-att; 
-     &amp;ut-d-att; 
+                        include the text entity for each attribute domain that is either included or
+                        reused in the document type shell.</p>
+                    <div class="p">In the following example, entities are included for
+                        both the <code class="ph codeph">newAtt-d</code> and <code class="ph codeph">deliveryTarget-d</code>
+                        attribute domains:<pre class="pre codeblock"><code>&lt;!ENTITY included-domains
+    "&amp;deliveryTarget-d-att;
      &amp;newAtt-d-att;
-     &amp;noBasePre-c-ph;
    "
 &gt;</code></pre></div>
-                    <div class="note note note_note"><span class="note__title">Note:</span> Although parameter entities (entities that begin with "%") must be defined
-                        before they are referenced, text entities (entities that begin with "&amp;")
-                        can be referenced before they are defined. This allows the
-                            <code class="ph codeph">included-domains</code>
-                        entity to include the constraint entity, which is not
-                        defined until the constraint module is referenced later in the document type
-                        shell.</div>
                 </dd>
             
             

@@ -1,11 +1,17 @@
 ---
 # Generated from DITA source
 layout: base
-title: "Example: Constrain a domain module"
-index: "../../toc.html"
+title: 'Example: Constrain a domain module'
+description: 'In this scenario, an information architect wants to use only a subset of the elements
+    defined in the highlighting domain. She wants to use b and
+      i, but not line-through,
+      overline, sup, sup,
+      tt, or u. She wants to integrate this
+    constraint into the document-type shell for task.'
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a><ul class="nav nav-list"><li><a href="../../archSpec/base/ditaspecialization.html">Overview of DITA extension facilities</a></li><li><a href="../../archSpec/base/configuration.html">Configuration</a></li><li><a href="../../archSpec/base/specialization.html">Specialization</a></li><li><a href="../../archSpec/base/generalization.html">Generalization</a></li><li><a href="../../archSpec/base/constraints.html">Constraints</a><ul class="nav nav-list"><li><a href="../../archSpec/base/constraints-overview.html">Overview of constraints</a></li><li><a href="../../archSpec/base/constraint-rules.html">Constraint rules</a></li><li><a href="../../archSpec/base/constraints-processing-interoperability.html">Constraints, processing, and interoperability</a></li><li><a href="../../archSpec/base/constraints-strong-and-weak.html">Weak and strong constraints</a></li><li><a href="../../archSpec/base/constraints-conref-compatibility.html">Conref compatibility with constraints</a></li><li><a href="../../archSpec/base/examples-constraints.html">Examples: Constraints</a><ul class="nav nav-list"><li><a href="../../archSpec/base/example-contraints-redefine-content-model.html">Example: Redefine the content model for the topic element</a></li><li><a href="../../archSpec/base/example-contraints-redefine-content-model-attributes.html">Example: Constrain attributes for the section element</a></li><li class="active"><a href="../../archSpec/base/example-contraints-subset-domain.html">Example: Constrain a domain module</a></li><li><a href="../../archSpec/base/example-contraints-replace-base-element-w-domain-extensions.html">Example: Replace a base element with the domain extensions</a></li><li><a href="../../archSpec/base/example-contraints-apply-multiple-constraints.html">Example: Apply multiple constraints to a single document-type shell</a></li><li><a href="../../archSpec/base/example-contraints-correct-machinery-task-constraint.html">Example: Correct the constraint for the machinery task</a></li></ul></li></ul></li></ul></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a><ul class="nav nav-list"><li><a href="../../archSpec/base/ditaspecialization.html">Overview of DITA extension facilities</a></li><li><a href="../../archSpec/base/configuration.html">Configuration</a></li><li><a href="../../archSpec/base/specialization.html">Specialization</a></li><li><a href="../../archSpec/base/generalization.html">Generalization</a></li><li><a href="../../archSpec/base/constraints.html">Constraints</a><ul class="nav nav-list"><li><a href="../../archSpec/base/constraints-overview.html">Overview of constraints</a></li><li><a href="../../archSpec/base/constraint-rules.html">Constraint rules</a></li><li><a href="../../archSpec/base/constraints-processing-interoperability.html">Constraints, processing, and interoperability</a></li><li><a href="../../archSpec/base/examples-constraints.html">Examples: Constraints</a><ul class="nav nav-list"><li><a href="../../archSpec/base/example-contraints-redefine-content-model.html">Example: Redefine the content model for the topic element</a></li><li><a href="../../archSpec/base/example-contraints-redefine-content-model-attributes.html">Example: Constrain attributes for the section element</a></li><li class="active"><a href="../../archSpec/base/example-contraints-subset-domain.html">Example: Constrain a domain module</a></li><li><a href="../../archSpec/base/example-contraints-replace-base-element-w-domain-extensions.html">Example: Replace a base element with the domain extensions</a></li><li><a href="../../archSpec/base/example-contraints-apply-multiple-constraints.html">Example: Apply multiple constraints to a single document-type shell</a></li><li><a href="../../archSpec/base/example-contraints-correct-machinery-task-constraint.html">Example: Correct the constraint for the machinery task</a></li></ul></li></ul></li></ul></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1">Example: Constrain a domain module</h1>
   
   
@@ -20,13 +26,10 @@ index: "../../toc.html"
         <li class="li">She creates
             <span class="ph filepath">reducedHighlightingDomainConstraint.mod</span>, where "reduced" is a
           string that characterizes the constraint.</li>
-        <li class="li">She adds the following content to <span class="ph filepath">reducedHighlightingDomainConstraint.mod</span>:<pre class="pre codeblock"><code>&lt;!-- ============================================================= --&gt;
+        <li class="li">She adds the following content to
+            <span class="ph filepath">reducedHighlightingDomainConstraint.mod</span>:<pre class="pre codeblock"><code>&lt;!-- ============================================================= --&gt;
 &lt;!--      CONSTRAINED HIGHLIGHTING DOMAIN ENTITIES                 --&gt;
 &lt;!-- ============================================================= --&gt;
-
-&lt;!ENTITY HighlightingDomain-constraints     
-  "(topic hi-d basic-HighlightingDomain-c)"
-&gt;
 
 &lt;!ENTITY % HighlightingDomain-c-ph     "b | i"                 &gt;  </code></pre></li>
         <li class="li">She then integrates the constraint module into her company-specific, document-type shell
@@ -47,23 +50,6 @@ index: "../../toc.html"
                          %sw-d-ph; | 
                          %ui-d-ph;
                         "&gt;</code></pre></li>
-        <li class="li">She then adds the constraint to the list of domains and constraints that need to be
-          included in the value of the <code class="keyword markupname xmlatt">@domains</code> attribute for
-            <code class="keyword markupname xmlelement">&lt;task&gt;</code>:<pre class="pre codeblock"><code>&lt;!-- ============================================================= --&gt;
-&lt;!--                    DOMAINS ATTRIBUTE OVERRIDE                 --&gt;
-&lt;!-- ============================================================= --&gt;
-
-&lt;!ENTITY included-domains 
-                          "&amp;task-att;
-                           &amp;hi-d-att; 
-                           &amp;indexing-d-att;
-                           &amp;pr-d-att; 
-                           &amp;sw-d-att;
-                           &amp;ui-d-att;
-                           &amp;taskbody-constraints;
-                           <strong class="ph b">&amp;HighlightingDomain-constraints;</strong>
-  "
-&gt;</code></pre></li>
         <li class="li">After updating the <span class="ph filepath">catalog.xml</span> file to include the new constraints
           file, her work is done.</li>
       </ol>

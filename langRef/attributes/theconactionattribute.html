@@ -1,19 +1,26 @@
 ---
 # Generated from DITA source
 layout: base
-title: "The conaction attribute"
-index: "../../toc.html"
+title: 'The conaction attribute'
+description: 'The conaction attribute allows users to push content from one topic into
+    another. It causes the conref attribute to work in reverse, so that the content
+    is pushed from the current topic into another, rather than pulled from another topic into the
+    current one. Allowable values for conaction are: pushafter,
+      pushbefore, pushreplace, mark, and
+      -dita-use-conref-target.'
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a><ul class="nav nav-list"><li><a href="../../langRef/quick-reference/base-elements-a-to-z.html">DITA elements, A to Z</a></li><li><a href="../../langRef/quick-reference/base-attributes-a-to-z.html">DITA attributes, A to Z</a></li><li><a href="../../langRef/containers/topic-elements.html">Topic elements</a></li><li><a href="../../langRef/containers/map-elements.html">Map elements</a></li><li><a href="../../langRef/containers/metadata-elements.html">Metadata elements</a></li><li><a href="../../langRef/containers/domain-elements.html">Domain elements</a></li><li><a href="../../langRef/containers/classification-elements.html">Classification elements</a></li><li><a href="../../langRef/other-elements.html">Other elements</a></li><li><a href="../../langRef/attributes/attributes.html">Attributes</a><ul class="nav nav-list"><li><a href="../../langRef/attributes/universalAttributes.html">Universal attribute group</a></li><li><a href="../../langRef/attributes/architecturalAttributes.html">Architectural attribute group</a></li><li><a href="../../langRef/attributes/commonMapAttributes.html">Attributes common to many map elements</a></li><li><a href="../../langRef/attributes/calsTableAttributes.html">Complex-table attribute group</a></li><li><a href="../../langRef/attributes/dataElementAttributes.html">Data-element attributes group</a></li><li><a href="../../langRef/attributes/dateAttributes.html">Date attributes group</a></li><li><a href="../../langRef/attributes/displayAttributes.html">Display attribute group</a></li><li><a href="../../langRef/attributes/linkRelationshipAttributes.html">Link-relationship attribute group</a></li><li><a href="../../langRef/attributes/commonAttributes.html">Other common attributes</a></li><li><a href="../../langRef/attributes/simpletableAttributes.html">Simpletable attribute group</a></li><li><a href="../../langRef/attributes/specializationAttributes.html">Specialization attributes group</a></li><li><a href="../../langRef/attributes/topicrefElementAttributes.html">Topicref-element attributes group</a></li><li><a href="../../langRef/attributes/complexattributedefinitions.html">Complex attribute definitions</a><ul class="nav nav-list"><li class="active"><a href="../../langRef/attributes/theconactionattribute.html">The conaction attribute</a></li><li><a href="../../langRef/attributes/theconrefendattribute.html">The conrefend attribute</a></li><li><a href="../../langRef/attributes/theconkeyrefattribute.html">The conkeyref attribute</a></li><li><a href="../../langRef/attributes/theconrefattribute.html">The conref attribute</a></li><li><a href="../../langRef/attributes/theformatattribute.html">The format attribute</a></li><li><a href="../../langRef/attributes/thehrefattribute.html">The href attribute</a></li><li><a href="../../langRef/attributes/thekeyrefattribute.html">The keyref attribute</a></li><li><a href="../../langRef/attributes/thekeysattribute.html">The keys attribute</a></li><li><a href="../../langRef/attributes/the-key-scope-attribute.html">The keyscope attribute</a></li><li><a href="../../langRef/attributes/theroleattribute.html">The role and otherrole attributes</a></li><li><a href="../../langRef/attributes/thescopeattribute.html">The scope attribute</a></li><li><a href="../../langRef/attributes/thetypeattribute.html">The type attribute</a></li></ul></li></ul></li></ul></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">The <code class="keyword markupname xmlatt">@conaction</code> attribute</h1>
 
   
 <div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlatt">@conaction</code> attribute allows users to push content from one topic into
     another. It causes the <code class="keyword markupname xmlatt">@conref</code> attribute to work in reverse, so that the content
     is pushed from the current topic into another, rather than pulled from another topic into the
-    current one. Allowable values for <code class="keyword markupname xmlatt">@conaction</code> are: pushafter, pushbefore,
-    pushreplace, mark, and -dita-use-conref-target.</p>
+    current one. Allowable values for <code class="keyword markupname xmlatt">@conaction</code> are: <span class="keyword">pushafter</span>,
+      <span class="keyword">pushbefore</span>, <span class="keyword">pushreplace</span>, mark<span class="keyword"></span>, and
+      <span class="keyword">-dita-use-conref-target</span>.</p>
 <section class="section" id="theconactionattribute__section-1"><div class="note note note_note"><span class="note__title">Note:</span> In the descriptions below, the word <em class="ph i">target</em> always refers to the element referenced by a
           <code class="keyword markupname xmlatt">@conref</code> attribute.</div><p class="p">There are three possible functions using the <code class="keyword markupname xmlatt">@conaction</code> attribute: replacing an
         element, pushing content before an element, and pushing content after an element. The
@@ -38,11 +45,14 @@ index: "../../toc.html"
 </ul></section>
 <section class="section" id="theconactionattribute__replacing-content"><h2 class="title sectiontitle">Replacing content in another topic</h2>
       
-      <p class="p">When the <code class="keyword markupname xmlatt">@conaction</code> attribute is set to "pushreplace", the source element
-        will replace the target specified on the <code class="keyword markupname xmlatt">@conref</code> attribute. The pushed
-        content remains in the source topic where it was originally authored.</p>
-      <div class="p">For example, assume that a task in <span class="ph filepath">example.dita</span> has the id "example",
-        and contains a <code class="keyword markupname xmlelement">&lt;step&gt;</code> with the id "b":
+      <p class="p">When the <code class="keyword markupname xmlatt">@conaction</code> attribute is set to <span class="keyword">pushreplace</span>, the
+        source element will replace the target specified on the <code class="keyword markupname xmlatt">@conref</code> attribute.
+        The pushed content remains in the source topic where it was originally authored.</p>
+      <p class="p">For example, assume that a task in <span class="ph filepath">example.dita</span> has the
+          <code class="keyword markupname xmlatt">@id</code> set to example<span class="keyword"></span>, and it contains a
+          <code class="keyword markupname xmlelement">&lt;step&gt;</code> element with the <code class="keyword markupname xmlatt">@id</code> set to
+          <span class="keyword">b</span>:</p>
+      <div class="p">
         <pre class="pre codeblock"><code>&lt;task id="example" xml:lang="en"&gt;
   &lt;title&gt;Example topic&lt;/title&gt;
   &lt;taskbody&gt;
@@ -52,10 +62,11 @@ index: "../../toc.html"
       &lt;step id="c"&gt;&lt;cmd&gt;C&lt;/cmd&gt;&lt;/step&gt;
     &lt;/steps&gt;
   &lt;/taskbody&gt;
-&lt;/task&gt;</code></pre></div>
-      <div class="p">In order to replace the step with id="b", another topic must combine a
-          <code class="keyword markupname xmlatt">@conaction</code> value of "pushreplace" with a <code class="keyword markupname xmlatt">@conref</code> attribute
-        that references this
+&lt;/task&gt;</code></pre>
+      </div>
+      <div class="p">In order to replace the step with <code class="ph codeph">id="b"</code>, another topic must combine a
+          <code class="keyword markupname xmlatt">@conaction</code> value of <span class="keyword">pushreplace</span> with a
+          <code class="keyword markupname xmlatt">@conref</code> attribute that references this
         <code class="keyword markupname xmlelement">&lt;step&gt;</code>:<pre class="pre codeblock"><code>&lt;task id="other" xml:lang="en"&gt;
   ...
    &lt;step conaction="pushreplace" 
@@ -87,22 +98,22 @@ index: "../../toc.html"
     </section>
 <section class="section" id="theconactionattribute__pushing-content"><h2 class="title sectiontitle">Pushing content before or after another element</h2>
       
-      <p class="p">Setting the <code class="keyword markupname xmlatt">@conaction</code> attribute to "pushbefore" allows an element to be
-        pushed before the element referenced by the <code class="keyword markupname xmlatt">@conref</code> attribute. Likewise,
-        setting the <code class="keyword markupname xmlatt">@conaction</code> attribute to "pushafter" allows an element to be
-        pushed after the element referenced by the <code class="keyword markupname xmlatt">@conref</code> attribute. Multiple
-        sources <span class="ph">can</span> push content before or after the same target; the
-        order in which that content is pushed is undefined. </p>
+      <p class="p">Setting the <code class="keyword markupname xmlatt">@conaction</code> attribute to <span class="keyword">pushbefore</span> allows an
+        element to be pushed before the element referenced by the <code class="keyword markupname xmlatt">@conref</code> attribute.
+        Likewise, setting the <code class="keyword markupname xmlatt">@conaction</code> attribute to <span class="keyword">pushafter</span>
+        allows an element to be pushed after the element referenced by the <code class="keyword markupname xmlatt">@conref</code>
+        attribute. Multiple sources can push content before or after the same target; the order in
+        which that content is pushed is undefined.</p>
       <p class="p">When an element is pushed before or after a target, the resulting document will have at
         least two of that element. Because this is not always valid, a document attempting to push
         content before or after a target must take an extra step to ensure that the result will be
         valid. The extra step makes use of the <code class="ph codeph">conaction="mark"</code> value.</p>
       <p class="p">When pushing before, the <code class="keyword markupname xmlatt">@conref</code> attribute itself looks just as it did when
-        replacing, but the <code class="keyword markupname xmlatt">@conaction</code> attribute is set to "mark" because it is
-        marking the target element. This element remains empty; its purpose is to ensure that it is
-        legal to have more than one of the current element. Immediately before the element which
+        replacing, but the <code class="keyword markupname xmlatt">@conaction</code> attribute is set to mark<span class="keyword"></span> because it
+        is marking the target element. This element remains empty; its purpose is to ensure that it
+        is legal to have more than one of the current element. Immediately before the element which
         marks the target, you will place the content that you actually want to push. This element
-        will set the <code class="keyword markupname xmlatt">@conaction</code> attribute to "pushbefore".</p>
+        will set the <code class="keyword markupname xmlatt">@conaction</code> attribute to <span class="keyword">pushbefore</span>.</p>
       <p class="p">When pushing after, the procedure is the same, except that the order of the elements is
         reversed. The element with <code class="ph codeph">conaction="pushafter"</code> comes immediately after
         the element which marks the target.</p>
@@ -113,19 +124,19 @@ index: "../../toc.html"
         ensure uniqueness, or warning the user.</p>
       <div class="p">The following restrictions apply when pushing content before or after an element: <ul class="ul">
           <li class="li">The elements that use <code class="ph codeph">conaction="mark"</code> and
-              <code class="ph codeph">conaction="pushbefore"</code>
-            <span class="ph">are</span> the same type as each other and appear in sequence.
-            This restriction prevents a topic from trying to push a <code class="keyword markupname xmlelement">&lt;body&gt;</code>
-            element before or after another <code class="keyword markupname xmlelement">&lt;body&gt;</code> element, because it is not
-            valid to have two body elements in sequence.</li>
-          <li class="li"><span class="ph">Either</span> the container elements of the source and target
-            match, or the container of the source element <span class="ph">is</span> be a
-            specialization of the target's container. This is also to ensure validity of the target;
-            for example, while it is possible to include multiple titles in a
-              <code class="keyword markupname xmlelement">&lt;section&gt;</code>, it is not possible to do so in a figure. Comparing
+              <code class="ph codeph">conaction="pushbefore"</code> are the same type as each other and appear in
+            sequence. This restriction prevents a topic from trying to push a
+              <code class="keyword markupname xmlelement">&lt;body&gt;</code> element before or after another
+              <code class="keyword markupname xmlelement">&lt;body&gt;</code> element, because it is not valid to have two body
+            elements in sequence.</li>
+          <li class="li">Either the container elements of the source and target match, or the container of the
+            source element is be a specialization of the target's container. This is also to ensure
+            validity of the target; for example, while it is possible to include multiple titles in
+            a <code class="keyword markupname xmlelement">&lt;section&gt;</code>, it is not possible to do so in a figure. Comparing
             the parents prevents a second <code class="keyword markupname xmlelement">&lt;section&gt;</code> title from being pushed
             before a figure title (the resulting figure would not be valid DITA). This restriction
-            only applies to the pushbefore or pushafter actions, not to the pushreplace action.</li>
+            only applies to the <span class="keyword">pushbefore</span> or<span class="keyword"> pushafter</span>
+            actions, not to the <span class="keyword">pushreplace</span> action.</li>
         </ul></div>
       <p class="p">When content is pushed from one topic to another, it is still rendered in the original
         context. Processors might delete the empty element that has the

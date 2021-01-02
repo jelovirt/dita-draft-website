@@ -1,8 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: "DTD: Coding requirements for structural modules"
-index: "../../toc.html"
+title: 'DTD: Coding requirements for structural modules'
+description: 'A structural vocabulary module defines a new topic or map type as a specialization of a
+    topic or map type.'
+index: '../../toc.html'
 ---
 
 <nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Overview of coding requirements</a></li><li><a href="../../archSpec/base/dtd-coding-doctype-shell.html">DTD: Coding requirements for document-type shells</a></li><li><a href="../../archSpec/base/dtd-coding-element-types.html">DTD: Coding requirements for element type declarations</a></li><li class="active"><a href="../../archSpec/base/dtd-coding-structural-modules.html">DTD: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/dtd-coding-element-domains.html">DTD: Coding requirements for element domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-attribute-domains.html">DTD: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-constraint-modules.html">DTD: Coding requirements for constraint modules</a></li></ul></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
@@ -14,16 +16,16 @@ index: "../../toc.html"
       
       <p class="p">The topic or map element type must set the <code class="keyword markupname xmlatt">@DITAArchVersion</code> attribute to
         the version of DITA in use, typically by referencing the <code class="ph codeph">arch-atts</code>
-        parameter entity. It must also set the <code class="keyword markupname xmlatt">@domains</code> attribute to the
+        parameter entity. It must also set the <code class="keyword markupname xmlatt">@specializations</code> attribute to the
           <code class="ph codeph">included-domains</code> entity. These attributes give processors a reliable way
-        to check the architecture version and look up the list of domains available in the document
-        type.</p>
+        to check the architecture version and look up the list of attribute domains available in the
+        document type.</p>
       <p class="p">The following example shows how these attributes are defined for the
-          <code class="keyword markupname xmlelement">&lt;concept&gt;</code> element in DITA 1.3:</p>
+          <code class="keyword markupname xmlelement">&lt;concept&gt;</code> element in DITA 2.0:</p>
       <pre class="pre codeblock"><code>&lt;!ATTLIST concept    
   %concept.attributes;
   %arch-atts;
-  domains  CDATA  "&amp;included-domains;"&gt;</code></pre>
+  specializations  CDATA  "&amp;included-domains;"&gt;</code></pre>
     </section>
     <section class="section" id="dtdStructuralCoding__topic-nesting"><h2 class="title sectiontitle">Controlling nesting in topic types</h2>
       

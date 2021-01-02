@@ -1,11 +1,16 @@
 ---
 # Generated from DITA source
 layout: base
-title: "class attribute rules and syntax"
-index: "../../toc.html"
+title: 'class attribute rules and syntax'
+description: 'The specialization hierarchy of each DITA element is declared as the value of the
+      class attribute. The class attribute provides a mapping from
+    the current name of the element to its more general equivalents, but it also can provide a
+    mapping from the current name to more specialized equivalents. All specialization-aware
+    processing can be defined in terms of class attribute values.'
+index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a><ul class="nav nav-list"><li><a href="../../archSpec/base/ditaspecialization.html">Overview of DITA extension facilities</a></li><li><a href="../../archSpec/base/configuration.html">Configuration</a></li><li><a href="../../archSpec/base/specialization.html">Specialization</a><ul class="nav nav-list"><li><a href="../../archSpec/base/specialization-overview.html">Overview of specialization</a></li><li><a href="../../archSpec/base/specialization-modularization.html">Modularization</a></li><li><a href="../../archSpec/base/specialization-vocabulary-modules.html">Vocabulary modules</a></li><li><a href="../../archSpec/base/specialization-rules-elements.html">Specialization rules for element types</a></li><li><a href="../../archSpec/base/specialization-rules-attributes.html">Specialization rules for attributes</a></li><li class="active"><a href="../../archSpec/base/specialization-class-attribute.html">class attribute rules and syntax</a></li><li><a href="../../archSpec/base/specialization-domains-attribute.html">domains attribute rules and syntax</a></li><li><a href="../../archSpec/base/specialization-including-non-dita-content.html">Specializing to include non-DITA content</a></li><li><a href="../../archSpec/base/specialization-sharing-elements-across-modules.html">Sharing elements across specializations</a></li></ul></li><li><a href="../../archSpec/base/generalization.html">Generalization</a></li><li><a href="../../archSpec/base/constraints.html">Constraints</a></li></ul></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a><ul class="nav nav-list"><li><a href="../../archSpec/base/ditaspecialization.html">Overview of DITA extension facilities</a></li><li><a href="../../archSpec/base/configuration.html">Configuration</a></li><li><a href="../../archSpec/base/specialization.html">Specialization</a><ul class="nav nav-list"><li><a href="../../archSpec/base/specialization-overview.html">Overview of specialization</a></li><li><a href="../../archSpec/base/specialization-modularization.html">Modularization</a></li><li><a href="../../archSpec/base/specialization-vocabulary-modules.html">Vocabulary modules</a></li><li><a href="../../archSpec/base/specialization-rules-elements.html">Specialization rules for element types</a></li><li><a href="../../archSpec/base/specialization-rules-attributes.html">Specialization rules for attributes</a></li><li class="active"><a href="../../archSpec/base/specialization-class-attribute.html">class attribute rules and syntax</a></li><li><a href="../../archSpec/base/specialization-specializations-attribute.html">specializations attribute rules and syntax</a></li><li><a href="../../archSpec/base/specialization-including-non-dita-content.html">Specializing to include non-DITA content</a></li><li><a href="../../archSpec/base/specialization-sharing-elements-across-modules.html">Sharing elements across specializations</a></li></ul></li><li><a href="../../archSpec/base/generalization.html">Generalization</a></li><li><a href="../../archSpec/base/constraints.html">Constraints</a></li></ul></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlatt">@class</code> attribute rules and syntax</h1>
   
   <div class="body conbody"><p class="shortdesc">The specialization hierarchy of each DITA element is declared as the value of the
@@ -44,10 +49,11 @@ index: "../../toc.html"
     </section>
     <section class="section" id="classatt__rules"><h2 class="title sectiontitle">Rules</h2>
       
+      
       <div class="p">The root element of every topic and map <dfn class="term RFC-2119">MUST</dfn> declare
         the following attributes:<ul class="ul">
           <li class="li"><code class="keyword markupname xmlatt">@class</code></li>
-          <li class="li"><code class="keyword markupname xmlatt">@domains</code></li>
+          <li class="li"><code class="keyword markupname xmlatt">@specializations</code></li>
         </ul></div>
       <p class="p">Every DITA element (except the <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element that is used as the
         root of a ditabase document) <dfn class="term RFC-2119">MUST</dfn> declare a
@@ -88,15 +94,15 @@ index: "../../toc.html"
     <div class="example" id="classatt__example3"><h2 class="title sectiontitle">Example: <code class="keyword markupname xmlatt">@class</code> attribute with intermediate value</h2>
       
       <p class="p">The following code sample shows the value of a <code class="keyword markupname xmlatt">@class</code> attribute for an
-        element in the guitask module, which is specialized from <code class="keyword markupname xmlelement">&lt;task&gt;</code>. The
+        element in the guiTask module, which is specialized from <code class="keyword markupname xmlelement">&lt;task&gt;</code>. The
         element is specialized from <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> in the base topic vocabulary,
         rather than from an element in the task module:</p>
-      <pre class="pre codeblock"><code>&lt;windowname class="- topic/keyword task/keyword guitask/windowname "&gt;...&lt;/windowname&gt;</code></pre>
+      <pre class="pre codeblock"><code>&lt;windowName class="- topic/keyword task/keyword guiTask/windowname "&gt;...&lt;/windowName&gt;</code></pre>
       <p class="p">The intermediate values are necessary so that generalizing and specializing transformations
         can map the values simply and accurately. For example, if <code class="ph codeph">task/keyword</code> was
-        missing as a value, and a user decided to generalize this guitask up to a task topic, then
+        missing as a value, and a user decided to generalize this guiTask up to a task topic, then
         the transformation would have to guess whether to map to keyword (appropriate if task is
-        more general than guitask, which it is) or leave it as windowname (appropriate if task were
+        more general than guiTask, which it is) or leave it as windowName (appropriate if task were
         more specialized, which it isn't). By always providing mappings for more general values,
         processors can then apply the simple rule that missing mappings must by default be to more
         specialized values than the one we are generalizing to, which means the last value in the
