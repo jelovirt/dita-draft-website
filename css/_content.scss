@@ -1,3 +1,17 @@
+div#content {
+  padding-top: 24px;
+  //min-height: 100vh;
+  padding-bottom: 30px;
+}
+
+main#content {
+  margin-bottom: 30px;
+}
+
+.row > main[role='main'] {
+  @extend .col-lg-9;
+}
+
 .anchor-link {
   opacity: 0;
   text-decoration: none;
@@ -14,8 +28,4 @@
 
 .anchor-link-container:hover .anchor-link {
   opacity: 0.5;
-}
-
-.example {
-  opacity: 0.2;
 }

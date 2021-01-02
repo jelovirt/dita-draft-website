@@ -8,7 +8,8 @@
 $brand-primary:                 #1d365d;
 
 $theme-colors: (
-  "primary": $brand-primary
+  "primary": $brand-primary,
+  "info":    $brand-primary,
 );
 
 //** Global textual link color.
@@ -39,13 +40,16 @@ $navbar-dark-bg:                $brand-primary;
 // Inverted navbar links
 $navbar-dark-hover-color:       #fff; // rgba($white, .75)
 $navbar-dark-color:             #b9c8e0;
-$navbar-dark-link-hover-bg:     darken($navbar-dark-bg, 5%);
+$navbar-dark-link-hover-bg:     darken($navbar-dark-bg, 5%); // #172b4a
 
 // Inverted navbar brand label        // DITA Open Toolkit home page
-$navbar-dark-brand-color:       lighten($navbar-dark-color, 10%);
+$navbar-dark-brand-color:       lighten($navbar-dark-color, 10%); // #dce4f0
 
 // Banner icon colors
 $warning-icon-color:            #856404;
+
+// https://github.com/twbs/rfs
+$enable-responsive-font-sizes:  true;
 
 // Import DITA-OT custom subset of Bootstrap modules
 @import 'bootstrap-custom';
@@ -57,9 +61,12 @@ $warning-icon-color:            #856404;
 @import 'dita';
 @import 'footer';
 @import 'glossary';
+@import 'hi-d';
 @import 'home';
+@import 'icons';
 @import 'navbar';
 @import 'notes';
+@import 'profile';
 @import 'search';
 @import 'tables';
 @import 'toc';

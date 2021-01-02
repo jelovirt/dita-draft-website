@@ -3,7 +3,7 @@
 
 .lq {
   color: $text-muted;
-  font-size: 14px;
+  font-style: italic;
 }
 
 // Add bottom margin to nested lists & short descriptions that appear in abstracts
@@ -38,4 +38,8 @@ dd {
 // Top margin for first term in list
 dt {
   margin: $paragraph-margin-bottom 0 0;
+  // Remove top margin from adjacent term siblings
+  + dt {
+    margin: 0;
+  }
 }

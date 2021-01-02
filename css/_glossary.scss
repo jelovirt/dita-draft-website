@@ -10,11 +10,11 @@
   margin: $spacer 1em;
 
   &::before {
-    content: 'Abbreviation: “';
+    content: 'Abbreviation:\00A0\201C';
   }
 
   &::after {
-    content: '”';
+    content: '\201D';
   }
 }
 
