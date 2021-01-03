@@ -48,14 +48,14 @@ nav[role='toc'] {
   li {
     display: block;
     position: relative;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 
     > a {
       display: block;
       margin: 0;
       padding: 3px 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
 
       @include hover-focus {
         @include border-radius($badge-border-radius);
