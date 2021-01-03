@@ -15,31 +15,31 @@ nav[role='toc'] {
   }
   top: 0px;
 
-  > .toc-wrapper {
-    overflow-y: scroll;
-    height: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(0deg, transparent, white);
-    z-index: 1000;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(180deg, transparent, white);
-    z-index: 1000;
-  }
+  //> .toc-wrapper {
+  //  overflow-y: scroll;
+  //  height: 100%;
+  //  padding-top: 10px;
+  //  padding-bottom: 10px;
+  //}
+  //
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  width: 100%;
+  //  height: 10px;
+  //  background: linear-gradient(0deg, transparent, white);
+  //  z-index: 1000;
+  //}
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  width: 100%;
+  //  height: 10px;
+  //  background: linear-gradient(180deg, transparent, white);
+  //  z-index: 1000;
+  //}
 
   ul {
     display: block;
