@@ -2,31 +2,132 @@
 # Generated from DITA source
 layout: base
 title: 'Recognized XML-document grammar mechanisms'
-description: 'The DITA standard recognizes three XML-document grammar mechanisms by which conforming
-    DITA vocabulary modules and document types can be constructed: document type declarations
-    (DTDs), XML Schema declarations (XSDs), and RELAX NG
-      grammars.'
+description: 'The DITA standard recognizes the following XML-document grammar
+  mechanisms by which conforming DITA vocabulary modules and document types can be constructed:
+  document type declarations (DTDs), XML Schema declarations (XSDs), and RELAX NG
+  grammars. Conforming DITA document types and vocabulary modules can be
+  constructed using several XML document-grammar mechanisms. The DITA specification provides
+  coding requirements for DTDs and RNG; it also includes grammar files constructed using those
+  mechanisms.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li class="active"><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-  <h1 class="title topictitle1" id="ariaid-title1">Recognized XML-document grammar mechanisms</h1>
-  
-  <div class="body conbody"><p class="shortdesc">The DITA standard recognizes three XML-document grammar mechanisms by which conforming
-    DITA vocabulary modules and document types can be constructed: document type declarations
-    (DTDs), XML Schema declarations (XSDs), <span class="ph">and RELAX NG
-      grammars.</span></p>
-    <p class="p">This specification defines implementation requirements for all of these document grammar
-      mechanisms. The OASIS DITA Technical Committee recognizes that other XML grammar languages
-      might provide similar modularity and extensibility mechanisms. However, because the Technical
-      Committee has not yet defined implementation requirements for those languages, their
-      conformance cannot be determined.</p>
-    <p class="p">Of these three document grammar mechanisms, RELAX NG grammars
-      offer the easiest-to-use syntax and the most <span class="ph">precise</span>
-      constraints. For this reason, the RELAX NG definitions of the standard DITA vocabularies are
-      the normative versions. The DTD and XSD versions shipped by OASIS are generated from the RELAX
-      NG version using open source
-      tools.</p>
-    
-  </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/coding-requirements.html" title="This section collects all of the rules for creating modular DTD, RELAX NG, or XML Schema grammar files to represent DITA document types, specializations, and constraints.">Coding practices for DITA grammar files</a></div></div><div class="linklist relinfo"><strong>Related information</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="http://dita.xml.org/resource/relax-ng-to-dtd-or-xsd-tools" target="_blank" rel="external noopener">Tools for generating DTD or XSD from RELAX NG</a></li></ul></div></nav></article></main>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+      <ul class="nav nav-list">
+        <li class="active">
+          <a href="../../archSpec/base/recognizedconstraintmechanisms.html"
+            >Recognized XML-document grammar mechanisms</a
+          >
+        </li>
+        <li>
+          <a href="../../archSpec/base/using-relax-ng.html"
+            >Normative versions of DITA grammar files</a
+          >
+        </li>
+        <li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li>
+        <li>
+          <a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Recognized XML-document grammar mechanisms</h1>
+
+    <div class="body conbody">
+      <div class="abstract">
+        <p class="shortdesc">
+          The DITA standard recognizes the following XML-document grammar mechanisms by which
+          conforming DITA vocabulary modules and document types can be constructed: document type
+          declarations (DTDs), XML Schema declarations (XSDs), and RELAX NG grammars.
+        </p>
+        <p class="shortdesc">
+          Conforming DITA document types and vocabulary modules can be constructed using several XML
+          document-grammar mechanisms. The DITA specification provides coding requirements for DTDs
+          and RNG; it also includes grammar files constructed using those mechanisms.
+        </p>
+      </div>
+      <p class="p">
+        This specification defines implementation requirements for all of these document grammar
+        mechanisms. The OASIS DITA Technical Committee recognizes that other XML grammar languages
+        might provide similar modularity and extensibility mechanisms. However, because the
+        Technical Committee has not yet defined implementation requirements for those languages,
+        their conformance cannot be determined.
+      </p>
+      <p class="p">
+        Of these document-grammar mechanisms, RELAX NG grammars offer the easiest-to-use syntax and
+        the most precise constraints. For this reason, the RELAX NG definitions of the standard DITA
+        vocabularies are the normative versions.<span class="ph">
+          The DTD and XSD versions shipped by OASIS are generated from the RELAX NG version using
+          open source tools.</span
+        >
+      </p>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../archSpec/base/coding-requirements.html"
+            title="This section collects all of the rules for creating modular DTD, RELAX NG, or XML Schema grammar files to represent DITA document types, specializations, and constraints."
+            >Coding practices for DITA grammar files</a
+          >
+        </div>
+      </div>
+      <div class="linklist relinfo">
+        <strong>Related information</strong><br />
+        <ul class="linklist">
+          <li class="linklist">
+            <a
+              class="link"
+              href="http://dita.xml.org/resource/relax-ng-to-dtd-or-xsd-tools"
+              target="_blank"
+              rel="external noopener"
+              >Tools for generating DTD or XSD from RELAX NG</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </article>
+</main>

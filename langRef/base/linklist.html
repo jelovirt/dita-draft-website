@@ -6,69 +6,162 @@ description: 'A link list is an author-ordered group of links.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;linklist&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;linklist&gt;</code>
+    </h1>
 
+    <div class="body refbody">
+      <p class="shortdesc">A link list is an author-ordered group of links.</p>
 
-<div class="body refbody"><p class="shortdesc">A link list is an author-ordered group of links.</p>
-    
-    <section class="section" id="linklist__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <p class="p">Attributes that are set on the <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element cascade to the
-        contained links.</p>
-    </section>
-    <section class="section" id="linklist__rendering-expectations"><h2 class="title sectiontitle">Rendering expectations</h2>
-      
-      <p class="p">When rendering links, processors <dfn class="term RFC-2119">MUST</dfn> preserve the
-        order of links that are specified within <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements.</p>
-    </section>
-    <section class="section" id="linklist__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../attributes/commonAttributes.html#common-atts__collection-type">collection-type (common map attributes)</a>, <a class="xref" href="../attributes/theroleattribute.html" title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time.">The role and otherrole attributes</a>,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__spectitle">spectitle (specialization attributes)</a>, and the attributes defined below. This element
-        also uses <code class="keyword markupname xmlatt">@format</code>, <code class="keyword markupname xmlatt">@scope</code>, and <code class="keyword markupname xmlatt">@type</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts">Link-relationship attributes</a>. </p>
-      <dl class="dl">
-                                
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@duplicates</code></dt>
-                                        <dd class="dd">Specifies whether duplicate links are removed from a
-                                                group of links. Duplicate links are links that
-                                                address the same resource using the same properties,
-                                                such as link text and link role. How duplicate links
-                                                are determined is processor-specific. The following
-                                                values are permitted:<dl class="dl">
-                                                  
-                                                  <dt class="dt dlterm">yes</dt>
-                                                  <dd class="dd">Specifies that duplicate links are
-                                                  retained.</dd>
-                                                  
-                                                  
-                                                  <dt class="dt dlterm">no</dt>
-                                                  <dd class="dd">Specifies that duplicate links are
-                                                  removed.</dd>
-                                                  
-                                                  
-                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
-                                
-                                                </dl><p class="p">The suggested processing default is "yes"
-                                                  within <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements
-                                                  and "no" for other links.</p></dd>
-                                
-                                
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@collection-type</code></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/commonAttributes.html#common-atts__collection-type">collection-type (common map attributes)</a> for a full definition and list of supported
-                                                values. </dd>
-                                
-                        </dl>
-    </section>
-    <div class="example" id="linklist__example"><h2 class="title sectiontitle">Example</h2>
-      
-      <p class="p">The following code sample shows how the <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element is used
-        to construct an author-defined group of links. The <code class="keyword markupname xmlatt">@format</code> and
-          <code class="keyword markupname xmlatt">@scope</code> attributes are set on the <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element
-        and cascade to the contained links. The order of links is preserved in the output.</p>
-      <pre class="pre codeblock"><code>&lt;related-links&gt;
+      <section class="section" id="linklist__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          Attributes that are set on the
+          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element cascade to the
+          contained links.
+        </p>
+      </section>
+      <section class="section" id="linklist__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
+
+        <p class="p">
+          When rendering links, processors <dfn class="term RFC-2119">MUST</dfn> preserve the order
+          of links that are specified within
+          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements.
+        </p>
+      </section>
+      <section class="section" id="linklist__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__collection-type"
+            >collection-type (common map attributes)</a
+          >,
+          <a
+            class="xref"
+            href="../attributes/theroleattribute.html"
+            title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time."
+            >The role and otherrole attributes</a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__spectitle"
+            >spectitle (specialization attributes)</a
+          >, and the attributes defined below. This element also uses
+          <code class="keyword markupname xmlatt">@format</code>,
+          <code class="keyword markupname xmlatt">@scope</code>, and
+          <code class="keyword markupname xmlatt">@type</code> from
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
+            >Link-relationship attributes</a
+          >.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@duplicates</code></dt>
+          <dd class="dd">
+            Specifies whether duplicate links are removed from a group of links. Duplicate links are
+            links that address the same resource using the same properties, such as link text and
+            link role. How duplicate links are determined is processor-specific. The following
+            values are permitted:
+            <dl class="dl">
+              <dt class="dt dlterm">yes</dt>
+              <dd class="dd">Specifies that duplicate links are retained.</dd>
+
+              <dt class="dt dlterm">no</dt>
+              <dd class="dd">Specifies that duplicate links are removed.</dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+            <p class="p">
+              The suggested processing default is "yes" within
+              <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements and "no"
+              for other links.
+            </p>
+          </dd>
+
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@collection-type</code></dt>
+          <dd class="dd">
+            See
+            <a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__collection-type"
+              >collection-type (common map attributes)</a
+            >
+            for a full definition and list of supported values.
+          </dd>
+        </dl>
+      </section>
+      <div class="example" id="linklist__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          The following code sample shows how the
+          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element is used to
+          construct an author-defined group of links. The
+          <code class="keyword markupname xmlatt">@format</code> and
+          <code class="keyword markupname xmlatt">@scope</code> attributes are set on the
+          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element and cascade to
+          the contained links. The order of links is preserved in the output.
+        </p>
+        <pre class="pre codeblock"><code>&lt;related-links&gt;
   &lt;linklist format="html" scope="external"&gt;
     &lt;link href="http://www.example.org"&gt;
       &lt;linktext&gt;Example 1&lt;/linktext&gt;
@@ -78,6 +171,20 @@ index: '../../toc.html'
     &lt;/link&gt;
   &lt;/linklist&gt;
 &lt;/related-links&gt;</code></pre>
+      </div>
     </div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/related-links-elements.html" title="Related links are topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources.">Related links elements</a></div></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/related-links-elements.html"
+            title="Related links are topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
+            >Related links elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

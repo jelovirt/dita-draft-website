@@ -3,67 +3,166 @@
 layout: base
 title: 'stentry'
 description: 'A simple table entry represents a single cell within a simple
-    table.'
+  table.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;stentry&gt;</code></h1>
-  <div class="body refbody"><p class="shortdesc">A simple table entry represents a single cell within a simple
-    table.</p>
-    <section class="section" id="stentry__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__specentry">specentry (specialization attributes)</a>, and
-        the attributes defined below.</p>
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a> and the attributes defined below.</p>
-      <dl class="dl">
-        
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colspan</code></dt>
-                                        <dd class="dd">Specifies the number of columns that a cell is to span
-                                                inside a simple table.</dd>
-                                
-        
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@rowspan</code></dt>
-                                        <dd class="dd">Specifies the number of rows that a cells is to span
-                                                inside a simple table.</dd>
-                                
-        
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
-                                        <dd class="dd">Specifies that the current entry is a header for other
-                                                table entries. Allowable values are:<dl class="dl">
-                                                  
-                                                  <dt class="dt dlterm"><span class="keyword">row</span></dt>
-                                                  <dd class="dd">The current entry is a header for all cells in
-                                                  the row.</dd>
-                                                  
-                                                  
-                                                  <dt class="dt dlterm"><span class="keyword">col</span></dt>
-                                                  <dd class="dd">The current entry is a header for all cells in
-                                                  the column.</dd>
-                                                  
-                                                  
-                                                  <dt class="dt dlterm"><span class="keyword">rowgroup</span></dt>
-                                                  <dd class="dd">The current entry is a header for all cells in
-                                                  the rows spanned by this entry.</dd>
-                                                  
-                                                  
-                                                  <dt class="dt dlterm"><span class="keyword">colgroup</span></dt>
-                                                  <dd class="dd">The current entry is a header for all cells in
-                                                  the columns spanned by this entry.</dd>
-                                                  
-                                                  
-                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
-                                
-                                                </dl></dd>
-                                
-        
-                                        <dt class="dt dlterm"><code class="keyword markupname xmlatt">@headers</code></dt>
-                                        <dd class="dd">Specifies one or more <code class="keyword markupname xmlelement">&lt;entry&gt;</code>
-                                                headers that apply to the current entry. The
-                                                  <code class="keyword markupname xmlatt">@headers</code> attribute contains an
-                                                unordered set of unique space-separated tokens, each
-                                                of which is an ID reference of an entry from the
-                                                same table. </dd>
-                                
-      </dl>
-    </section><div class="example" id="stentry__example"><h2 class="title sectiontitle">Example</h2><p class="p">See <a class="xref" href="simpletable.html" title="Simple tables are a basic tabular environment to present organized content.">simpletable</a>.</p></div></div><nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/table-elements.html" title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself.">Table elements</a></div></div></nav></article></main>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;stentry&gt;</code>
+    </h1>
+    <div class="body refbody">
+      <p class="shortdesc">A simple table entry represents a single cell within a simple table.</p>
+      <section class="section" id="stentry__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >,
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__specentry"
+            >specentry (specialization attributes)</a
+          >, and the attributes defined below.
+        </p>
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >
+          and the attributes defined below.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colspan</code></dt>
+          <dd class="dd">
+            Specifies the number of columns that a cell is to span inside a simple table.
+          </dd>
+
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@rowspan</code></dt>
+          <dd class="dd">
+            Specifies the number of rows that a cells is to span inside a simple table.
+          </dd>
+
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
+          <dd class="dd">
+            Specifies that the current entry is a header for other table entries. Allowable values
+            are:
+            <dl class="dl">
+              <dt class="dt dlterm"><span class="keyword">row</span></dt>
+              <dd class="dd">The current entry is a header for all cells in the row.</dd>
+
+              <dt class="dt dlterm"><span class="keyword">col</span></dt>
+              <dd class="dd">The current entry is a header for all cells in the column.</dd>
+
+              <dt class="dt dlterm"><span class="keyword">rowgroup</span></dt>
+              <dd class="dd">
+                The current entry is a header for all cells in the rows spanned by this entry.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">colgroup</span></dt>
+              <dd class="dd">
+                The current entry is a header for all cells in the columns spanned by this entry.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/reuse-w-lwdita/../../langRef/attributes/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+          </dd>
+
+          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@headers</code></dt>
+          <dd class="dd">
+            Specifies one or more <code class="keyword markupname xmlelement">&lt;entry&gt;</code>
+            headers that apply to the current entry. The
+            <code class="keyword markupname xmlatt">@headers</code> attribute contains an unordered
+            set of unique space-separated tokens, each of which is an ID reference of an entry from
+            the same table.
+          </dd>
+        </dl>
+      </section>
+      <div class="example" id="stentry__example">
+        <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          See
+          <a
+            class="xref"
+            href="simpletable.html"
+            title="Simple tables are a basic tabular environment to present organized content."
+            >simpletable</a
+          >.
+        </p>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/table-elements.html"
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            >Table elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

@@ -7,25 +7,97 @@ dialogs, poetry, or other text fragments where line breaks are significant.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;lines&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;lines&gt;</code>
+    </h1>
 
+    <div class="body refbody">
+      <p class="shortdesc">
+        Lines are lines of text where white space is significant. It can be used to represent
+        dialogs, poetry, or other text fragments where line breaks are significant.
+      </p>
+      <section class="section" id="lines__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
 
-<div class="body refbody"><p class="shortdesc">Lines are lines of text where white space is significant. It can be used to represent
-dialogs, poetry, or other text fragments where line breaks are significant.</p>
-    <section class="section" id="lines__rendering-expectations"><h2 class="title sectiontitle">Rendering expectations</h2>
-      
-      <p class="p">Processors <dfn class="term RFC-2119">SHOULD</dfn> preserve or otherwise indicate white
-space within the <code class="keyword markupname xmlelement">&lt;lines&gt;</code> element.</p>
-    </section>
-    <section class="section" id="lines__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../attributes/commonAttributes.html#common-atts__displayatts">Display attributes</a>, <a class="xref" href="../attributes/commonAttributes.html#common-atts__xmlspace">xml:space</a>, and <a class="xref" href="../attributes/commonAttributes.html#common-atts__spectitle">spectitle (specialization attributes)</a>.</p>
-    </section>
-<div class="example" id="lines__example"><h2 class="title sectiontitle">Example</h2>
-      <p class="p">In the following code sample, a <code class="keyword markupname xmlelement">&lt;lines&gt;</code> element contains an excerpt
-                from Sonnet 18, one of the best-known of the 154 sonnets written by the English
-                playwright and poet William Shakespeare:</p><pre class="pre codeblock"><code>
+        <p class="p">
+          Processors <dfn class="term RFC-2119">SHOULD</dfn> preserve or otherwise indicate white
+          space within the <code class="keyword markupname xmlelement">&lt;lines&gt;</code> element.
+        </p>
+      </section>
+      <section class="section" id="lines__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__displayatts"
+            >Display attributes</a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__xmlspace"
+            >xml:space</a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__spectitle"
+            >spectitle (specialization attributes)</a
+          >.
+        </p>
+      </section>
+      <div class="example" id="lines__example">
+        <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          In the following code sample, a
+          <code class="keyword markupname xmlelement">&lt;lines&gt;</code> element contains an
+          excerpt from Sonnet 18, one of the best-known of the 154 sonnets written by the English
+          playwright and poet William Shakespeare:
+        </p>
+        <pre class="pre codeblock"><code>
 &lt;lines&gt;
 Shall I compare thee to a summer's day?
 Thou art more lovely and more temperate:
@@ -34,5 +106,19 @@ and summer's lease hath all too short a date:
 ...&lt;/lines&gt;
 </code></pre>
       </div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/body-elements.html" title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document.">Body elements</a></div></div></nav></article></main>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/body-elements.html"
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            >Body elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

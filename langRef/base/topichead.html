@@ -6,35 +6,118 @@ description: 'A topic head is a title-only entry in a DITA map.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;topichead&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;topichead&gt;</code>
+    </h1>
 
-  
-<div class="body refbody"><p class="shortdesc">A topic head is a title-only entry in a DITA map.</p>
-    <section class="section" id="topichead__rendering-expectations"><h2 class="title sectiontitle">Rendering expectations</h2>
-      
-      <p class="p">The content of the <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element appears as a heading when the
-        map is rendered as a table of content. In print contexts, it also appears as a heading in
-        the rendered
-        content.</p>
-    </section>
-    <section class="section" id="topichead__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
-      
-      <p class="p">Processors <dfn class="term RFC-2119">SHOULD</dfn> generate a warning if a navigation
-        title is not specified on a <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element.</p>
-    </section>
-    <section class="section" id="topichead__specialization-hierarchy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
-      
-      <p class="p">The <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element is specialized from
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It is defined in the map-group module. </p>
-    </section>
-    <section class="section" id="topichead__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts">Common map attributes</a> (except for <code class="keyword markupname xmlatt">@locktitle</code>), and <code class="keyword markupname xmlatt">@copy-to</code> from <a class="xref" href="../attributes/commonAttributes.html#common-atts__topicrefatts">Topicref-element attributes</a>. This element also uses
-the <code class="keyword markupname xmlatt">@scope</code>, <code class="keyword markupname xmlatt">@format</code>, and <code class="keyword markupname xmlatt">@type</code> attributes from <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts">Link-relationship attributes</a>.</p>
-    </section>
-<div class="example" id="topichead__example"><h2 class="title sectiontitle">Example</h2><p class="p">In the following example, the <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> elements provide titles
-        ("Computers" and "Books") for two groups of topics.</p><pre class="pre codeblock"><code>&lt;map&gt;
+    <div class="body refbody">
+      <p class="shortdesc">A topic head is a title-only entry in a DITA map.</p>
+      <section class="section" id="topichead__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
+
+        <p class="p">
+          The content of the
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with a
+          <code class="keyword markupname xmlatt">@title-role</code> of
+          <code class="keyword markupname xmlelement">&lt;navigation&gt;</code>, such as
+          <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code>, appears as a heading
+          when the map is rendered as a table of content. In print contexts, it also appears as a
+          heading in the rendered content.
+        </p>
+      </section>
+      <section class="section" id="topichead__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
+
+        <p class="p">
+          Processors <dfn class="term RFC-2119">SHOULD</dfn> generate a warning if a navigation
+          title is not specified on a
+          <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element.
+        </p>
+      </section>
+      <section class="section" id="topichead__specialization-hierarchy">
+        <h2 class="title sectiontitle">Specialization hierarchy</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element is
+          specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
+          is defined in the map-group module.
+        </p>
+      </section>
+      <section class="section" id="topichead__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
+            >Common map attributes</a
+          >, and <code class="keyword markupname xmlatt">@copy-to</code> from
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__topicrefatts"
+            >Topicref-element attributes</a
+          >. This element also uses the <code class="keyword markupname xmlatt">@scope</code>,
+          <code class="keyword markupname xmlatt">@format</code>, and
+          <code class="keyword markupname xmlatt">@type</code> attributes from
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
+            >Link-relationship attributes</a
+          >.
+        </p>
+      </section>
+      <div class="example" id="topichead__example">
+        <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          In the following example, the
+          <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> elements provide
+          titles ("Computers" and "Books") for two groups of topics.
+        </p>
+        <pre class="pre codeblock"><code>&lt;map&gt;
   <strong class="ph b">&lt;topichead&gt;</strong>
     &lt;topicmeta&gt;
       <strong class="ph b">&lt;navtitle&gt;Computers&lt;/navtitle&gt;</strong>
@@ -50,6 +133,21 @@ the <code class="keyword markupname xmlatt">@scope</code>, <code class="keyword 
     &lt;topicref href="hardback.dita"/&gt;
     &lt;topicref href="paperback.dita"/&gt;
  <strong class="ph b"> &lt;/topichead&gt;</strong>
-&lt;/map&gt;</code></pre></div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/mapgroup-d.html" title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup">Mapgroup domain elements</a></div></div></nav></article></main>
+&lt;/map&gt;</code></pre>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/mapgroup-d.html"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            >Mapgroup domain elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

@@ -2,94 +2,172 @@
 # Generated from DITA source
 layout: base
 title: 'resourceid'
-description: 'A resource ID provides an identifier for applications that must use their own identifier
-    scheme, such as context-sensitive help systems and databases.'
+description:
+  'A resource ID provides an identifier for applications that must use their own identifier
+  scheme, such as context-sensitive help systems and databases.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;resourceid&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code>
+    </h1>
 
-  
-<div class="body refbody"><p class="shortdesc">A resource ID provides an identifier for applications that must use their own identifier
-    scheme, such as context-sensitive help systems and databases.</p>
-    <section class="section" id="resourceid__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <p class="p">The <code class="keyword markupname xmlatt">@appid</code> and <code class="keyword markupname xmlatt">@appname</code> attributes are available to
-        associate an ID with an application. Multiple <code class="keyword markupname xmlatt">@appid</code> values can be
-        associated with a single <code class="keyword markupname xmlatt">@appname</code> value, and multiple
-          <code class="keyword markupname xmlatt">@appname</code> values can be associated with a single <code class="keyword markupname xmlatt">@appid</code>
-        value. Because the values for the <code class="keyword markupname xmlatt">@appid</code> and <code class="keyword markupname xmlatt">@appname</code>
-        attributes work in combination to specify a specific ID for a specific application, each
-        combination of values for the <code class="keyword markupname xmlatt">@appid</code> and <code class="keyword markupname xmlatt">@appname</code> attributes
-        should be unique within the context of a single root map.</p>
-    </section>
-    <section class="section" id="resourceid__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a> and the attributes defined below.</p>
-      <dl class="dl">
-        
-          <dt class="dt dlterm" id="resourceid__appname"><code class="keyword markupname xmlatt">@appname</code></dt>
-          <dd class="dd"><span class="ph">Specifies a name for the external application that references the topic.</span>
-          </dd>
-        
-        
-          <dt class="dt dlterm" id="resourceid__appid"><code class="keyword markupname xmlatt">@appid</code></dt>
-          <dd class="dd">Specifies an ID used by an application to identify the topic. </dd>
-        
-      </dl>
-      <dl class="dl">
-        
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@ux-context-string</code></dt>
-          <dd class="dd">Specifies the value of a user-assistance context-string that is used to identify the
-            topic.</dd>
-        
-        
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@ux-source-priority</code></dt>
+    <div class="body refbody">
+      <p class="shortdesc">
+        A resource ID provides an identifier for applications that must use their own identifier
+        scheme, such as context-sensitive help systems and databases.
+      </p>
+      <section class="section" id="resourceid__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlatt">@appid</code> and
+          <code class="keyword markupname xmlatt">@appname</code> attributes are available to
+          associate an ID with an application. Multiple
+          <code class="keyword markupname xmlatt">@appid</code> values can be associated with a
+          single <code class="keyword markupname xmlatt">@appname</code> value, and multiple
+          <code class="keyword markupname xmlatt">@appname</code> values can be associated with a
+          single <code class="keyword markupname xmlatt">@appid</code> value. Because the values for
+          the <code class="keyword markupname xmlatt">@appid</code> and
+          <code class="keyword markupname xmlatt">@appname</code> attributes work in combination to
+          specify a specific ID for a specific application, each combination of values for the
+          <code class="keyword markupname xmlatt">@appid</code> and
+          <code class="keyword markupname xmlatt">@appname</code> attributes should be unique within
+          the context of a single root map.
+        </p>
+      </section>
+      <section class="section" id="resourceid__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >
+          and the attributes defined below.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="resourceid__appname">
+            <code class="keyword markupname xmlatt">@appname</code>
+          </dt>
           <dd class="dd">
-            <p class="p">Specifies precedence for handling <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> definitions
-              that exist in both a map and a topic. This attribute only is valid when used within a
-                <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element in a map. <span class="ph">The allowable values are
-                  <span class="keyword">-dita-use-conref-target</span> and the following:</span></p>
+            <span class="ph"
+              >Specifies a name for the external application that references the topic.</span
+            >
+          </dd>
+
+          <dt class="dt dlterm" id="resourceid__appid">
+            <code class="keyword markupname xmlatt">@appid</code>
+          </dt>
+          <dd class="dd">Specifies an ID used by an application to identify the topic.</dd>
+        </dl>
+        <dl class="dl">
+          <dt class="dt dlterm">
+            <code class="keyword markupname xmlatt">@ux-context-string</code>
+          </dt>
+          <dd class="dd">
+            Specifies the value of a user-assistance context-string that is used to identify the
+            topic.
+          </dd>
+
+          <dt class="dt dlterm">
+            <code class="keyword markupname xmlatt">@ux-source-priority</code>
+          </dt>
+          <dd class="dd">
+            <p class="p">
+              Specifies precedence for handling
+              <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> definitions that
+              exist in both a map and a topic. This attribute only is valid when used within a
+              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element in a map.
+              <span class="ph"
+                >The allowable values are <span class="keyword">-dita-use-conref-target</span> and
+                the following:</span
+              >
+            </p>
             <dl class="dl">
-              
-                <dt class="dt dlterm">topic-and-map</dt>
-                <dd class="dd">Use IDs from both the topic and map.</dd>
-              
-              
-                <dt class="dt dlterm">topic-only</dt>
-                <dd class="dd">Use IDs from the topic only.</dd>
-              
-              
-                <dt class="dt dlterm">map-only</dt>
-                <dd class="dd">Use IDs from the map only.</dd>
-              
-              
-                <dt class="dt dlterm">map-takes-priority</dt>
-                <dd class="dd">Use the IDs from the map (if they exist); otherwise, use IDs from the
-                  topic.</dd>
-              
-              
-                <dt class="dt dlterm">topic-takes-priority</dt>
-                <dd class="dd">Use the IDs from the topic (if they exist); otherwise, use IDs from the
-                  map.</dd>
-              
+              <dt class="dt dlterm">topic-and-map</dt>
+              <dd class="dd">Use IDs from both the topic and map.</dd>
+
+              <dt class="dt dlterm">topic-only</dt>
+              <dd class="dd">Use IDs from the topic only.</dd>
+
+              <dt class="dt dlterm">map-only</dt>
+              <dd class="dd">Use IDs from the map only.</dd>
+
+              <dt class="dt dlterm">map-takes-priority</dt>
+              <dd class="dd">
+                Use the IDs from the map (if they exist); otherwise, use IDs from the topic.
+              </dd>
+
+              <dt class="dt dlterm">topic-takes-priority</dt>
+              <dd class="dd">
+                Use the IDs from the topic (if they exist); otherwise, use IDs from the map.
+              </dd>
             </dl>
           </dd>
-        
-        
+
           <dt class="dt dlterm"><code class="keyword markupname xmlatt">@ux-windowref</code></dt>
-          <dd class="dd">References the <code class="keyword markupname xmlatt">@name</code> attribute on the
-              <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element that is used to display the topic when
-            called from a help API.</dd>
-        
-      </dl>
-    </section>
-<div class="example" id="resourceid__example"><h2 class="title sectiontitle">Example</h2>
-      
-      <p class="p">In the following example, user-assistance context hooks are applied to three topics that
-        are referenced from a DITA map. The second topic has two hooks for the same topic.</p>
-      <pre class="pre codeblock"><code>&lt;map title="Widget Help"&gt;
+          <dd class="dd">
+            References the <code class="keyword markupname xmlatt">@name</code> attribute on the
+            <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element that is
+            used to display the topic when called from a help API.
+          </dd>
+        </dl>
+      </section>
+      <div class="example" id="resourceid__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          In the following example, user-assistance context hooks are applied to three topics that
+          are referenced from a DITA map. The second topic has two hooks for the same topic.
+        </p>
+        <pre class="pre codeblock"><code>&lt;map title="Widget Help"&gt;
  &lt;topicref href="file_ops.dita" type="concept"&gt;
    &lt;topicref href="saving.dita" type="task"&gt;
      &lt;topicmeta&gt;
@@ -113,11 +191,14 @@ index: '../../toc.html'
    &lt;/topicref&gt;
 &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-      <p class="p">In the following example, a user-assistance context hook is defined in the prolog of a task
-        topic. The context hook is made up of a context ID (value for <code class="keyword markupname xmlatt">@appid</code>
-        attribute) and a context string (value for <code class="keyword markupname xmlatt">@ux-context-string</code> attribute). A
-        user-assistance window profile also is referenced for this topic. </p>
-      <pre class="pre codeblock"><code>&lt;task id="fedt"&gt;
+        <p class="p">
+          In the following example, a user-assistance context hook is defined in the prolog of a
+          task topic. The context hook is made up of a context ID (value for
+          <code class="keyword markupname xmlatt">@appid</code> attribute) and a context string
+          (value for <code class="keyword markupname xmlatt">@ux-context-string</code> attribute). A
+          user-assistance window profile also is referenced for this topic.
+        </p>
+        <pre class="pre codeblock"><code>&lt;task id="fedt"&gt;
  &lt;title&gt;Editing a File&lt;/title&gt;
  &lt;prolog&gt;
    <strong class="ph b">&lt;resourceid appname="ua" 
@@ -132,6 +213,33 @@ index: '../../toc.html'
   &lt;/steps&gt;
  &lt;/taskbody&gt;
 &lt;/task&gt;</code></pre>
+      </div>
     </div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/prolog-elements.html" title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element.">Prolog (metadata) elements</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../archSpec/base/help-systems-and-other-user-assistance.html" title="Context hook information specified in the resourceid element in the DITA map or in a DITA topic enables processors to generate the header, map, alias and other types of support files that are required to integrate the user assistance with the application. Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element.">Context hooks and window metadata for user assistance</a></li></ul></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/prolog-elements.html"
+            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            >Prolog (metadata) elements</a
+          >
+        </div>
+      </div>
+      <div class="linklist relconcepts">
+        <strong>Related concepts</strong><br />
+        <ul class="linklist">
+          <li class="linklist">
+            <a
+              class="link"
+              href="../../archSpec/base/help-systems-and-other-user-assistance.html"
+              title="Context hook information specified in the resourceid element in the DITA map or in a DITA topic enables processors to generate the header, map, alias and other types of support files that are required to integrate the user assistance with the application. Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element."
+              >Context hooks and window metadata for user assistance</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </article>
+</main>

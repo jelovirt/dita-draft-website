@@ -3,12 +3,145 @@
 layout: base
 title: 'Examples of conditional processing'
 description: 'This section provides examples that illustrate the ways that
-        conditional processing attributes can be set and used.'
+  conditional processing attributes can be set and used.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/navigation.html">Navigation</a></li><li><a href="../../archSpec/base/indexes.html">Indexes</a></li><li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li><li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a><ul class="nav nav-list"><li><a href="../../archSpec/base/usage-of-conditional-processing-attributes.html">Conditional processing values and groups</a></li><li><a href="../../archSpec/base/filtering.html">Filtering</a></li><li><a href="../../archSpec/base/flagging.html">Flagging</a></li><li><a href="../../archSpec/base/conditional-processing-for-specific-output-types.html">Conditional processing to generate multiple deliverable types</a></li><li class="active"><a href="../../archSpec/base/examples-of-conditional-processing.html">Examples of conditional processing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/example-setting-condproc-values.html">Example: Setting conditional processing values and groups</a></li><li><a href="../../archSpec/base/evaluating-conditional-processing-attributes.html">Example: Filtering and flagging topic content</a></li></ul></li></ul></li><li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li><li><a href="../../archSpec/base/translation.html">Translation and localization</a></li><li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li></ul></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li>
+      <a href="../../archSpec/base/behaviors.html">DITA processing</a>
+      <ul class="nav nav-list">
+        <li><a href="../../archSpec/base/navigation.html">Navigation</a></li>
+        <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
+        <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
+        <li>
+          <a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a>
+          <ul class="nav nav-list">
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
+                >Conditional processing values and groups</a
+              >
+            </li>
+            <li><a href="../../archSpec/base/filtering.html">Filtering</a></li>
+            <li><a href="../../archSpec/base/flagging.html">Flagging</a></li>
+            <li>
+              <a href="../../archSpec/base/conditional-processing-for-specific-output-types.html"
+                >Conditional processing to generate multiple deliverable types</a
+              >
+            </li>
+            <li class="active">
+              <a href="../../archSpec/base/examples-of-conditional-processing.html"
+                >Examples of conditional processing</a
+              >
+              <ul class="nav nav-list">
+                <li>
+                  <a href="../../archSpec/base/example-setting-condproc-values.html"
+                    >Example: Setting conditional processing values and groups</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/evaluating-conditional-processing-attributes.html"
+                    >Example: Filtering and flagging topic content</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
+        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
+        <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Examples of conditional processing</h1>
-    <p class="shortdesc">This section provides examples that illustrate the ways that
-        conditional processing attributes can be set and used.</p>
-<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../../archSpec/base/example-setting-condproc-values.html">Example: Setting conditional processing values and groups</a></strong><br>Conditional processing attributes can be used to classify content     using either individual values or using groups.</li><li class="link ulchildlink"><strong><a href="../../archSpec/base/evaluating-conditional-processing-attributes.html">Example: Filtering and flagging topic content</a></strong><br>A publisher might want to flag information that applies to administrators and exclude     information that applies to the extended product.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/condproc.html" title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria.">Conditional processing (profiling)</a></div></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../langRef/ditaval/ditaval-val.html" title="The val element is the root element of a DITAVAL document.">DITAVAL markup with additional filtering and flagging examples</a></li></ul></div></nav></article></main>
+    <p class="shortdesc">
+      This section provides examples that illustrate the ways that conditional processing attributes
+      can be set and used.
+    </p>
+    <nav role="navigation" class="related-links">
+      <ul class="ullinks">
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-setting-condproc-values.html"
+              >Example: Setting conditional processing values and groups</a
+            ></strong
+          ><br />Conditional processing attributes can be used to classify content using either
+          individual values or using groups.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/evaluating-conditional-processing-attributes.html"
+              >Example: Filtering and flagging topic content</a
+            ></strong
+          ><br />A publisher might want to flag information that applies to administrators and
+          exclude information that applies to the extended product.
+        </li>
+      </ul>
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../archSpec/base/condproc.html"
+            title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
+            >Conditional processing (profiling)</a
+          >
+        </div>
+      </div>
+      <div class="linklist relref">
+        <strong>Related reference</strong><br />
+        <ul class="linklist">
+          <li class="linklist">
+            <a
+              class="link"
+              href="../../langRef/ditaval/ditaval-val.html"
+              title="The val element is the root element of a DITAVAL document."
+              >DITAVAL markup with additional filtering and flagging examples</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </article>
+</main>

@@ -3,44 +3,139 @@
 layout: base
 title: 'simpletable'
 description: 'Simple tables are a basic tabular environment to present organized
-    content. '
+  content. '
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;simpletable&gt;</code></h1>
-  
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code>
+    </h1>
 
-<div class="body refbody"><p class="shortdesc">Simple tables are a basic tabular environment to present organized
-    content. </p>
-    <section class="section" id="simpletable__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-   
-   <p class="p">Choose the <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> element when control of tabular formatting is
-        not as important. <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> is designed for closer compatibility
-        with HTML5 tables. For example, multi-column tabular data such as phone directory listings
-        or parts lists are good candidates for <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code>. Another good
-        use of <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> is for information that seems to beg for a
-        three-part definition list; the <code class="keyword markupname xmlatt">@keycol</code> attribute can be used to indicate
-        which column represents the "key" or term-like column of the structure.</p>
-      
-   <p class="p">The <code class="keyword markupname xmlatt">@keycol</code> attribute indicates which column represents the "key" or term-like
-    column of the structure.</p>
-   <p class="p">The close match of <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> to tabular, regular data makes
-     <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> suitable as the basis for specialized structures such as
-     <code class="keyword markupname xmlelement">&lt;properties&gt;</code> (for programming information) and choice tables (for
-    tasks).</p>
-  </section>
-  <section class="section" id="simpletable__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__displayatts">Display attributes</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__simpletableatts">Simpletable attributes</a>, and <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__spectitle">spectitle (specialization attributes)</a>.</p>
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>.</p>
-    </section>
-<div class="example" id="simpletable__example"><h2 class="title sectiontitle">Examples</h2>
-      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Example of a simple table</figcaption>
-        
-        <p class="p">The following code sample shows a simple table that is used to represent a truth table
-          from Boolean logic:</p>
-        <pre class="pre codeblock"><code>&lt;simpletable&gt;
+    <div class="body refbody">
+      <p class="shortdesc">
+        Simple tables are a basic tabular environment to present organized content.
+      </p>
+      <section class="section" id="simpletable__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          Choose the <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> element
+          when control of tabular formatting is not as important.
+          <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> is designed for
+          closer compatibility with HTML5 tables. For example, multi-column tabular data such as
+          phone directory listings or parts lists are good candidates for
+          <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code>. Another good use
+          of <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> is for
+          information that seems to beg for a three-part definition list; the
+          <code class="keyword markupname xmlatt">@keycol</code> attribute can be used to indicate
+          which column represents the "key" or term-like column of the structure.
+        </p>
+
+        <p class="p">
+          The <code class="keyword markupname xmlatt">@keycol</code> attribute indicates which
+          column represents the "key" or term-like column of the structure.
+        </p>
+        <p class="p">
+          The close match of
+          <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> to tabular, regular
+          data makes <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> suitable
+          as the basis for specialized structures such as
+          <code class="keyword markupname xmlelement">&lt;properties&gt;</code> (for programming
+          information) and choice tables (for tasks).
+        </p>
+      </section>
+      <section class="section" id="simpletable__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >,
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__displayatts"
+            >Display attributes</a
+          >,
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__simpletableatts"
+            >Simpletable attributes</a
+          >, and
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__spectitle"
+            >spectitle (specialization attributes)</a
+          >.
+        </p>
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >.
+        </p>
+      </section>
+      <div class="example" id="simpletable__example">
+        <h2 class="title sectiontitle">Examples</h2>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 1. </span>Example of a simple table
+          </figcaption>
+
+          <p class="p">
+            The following code sample shows a simple table that is used to represent a truth table
+            from Boolean logic:
+          </p>
+          <pre class="pre codeblock"><code>&lt;simpletable&gt;
   &lt;sthead&gt;
     &lt;stentry&gt;P&lt;/stentry&gt;
     &lt;stentry&gt;not P&lt;/stentry&gt;
@@ -54,11 +149,14 @@ index: '../../toc.html'
     &lt;stentry&gt;true&lt;/stentry&gt;
   &lt;/strow&gt;
 &lt;/simpletable&gt;</code></pre>
-      </figure>
-      <figure class="fig fignone" id="simpletable__fig_mnz_2gy_jlb"><figcaption><span class="fig--title-label">Figure 2. </span>Example with column and row spanning</figcaption>
-        
-        <p class="p">The following code sample shows a simple table that tracks meals:</p>
-        <pre class="pre codeblock"><code>&lt;simpletable&gt;
+        </figure>
+        <figure class="fig fignone" id="simpletable__fig_mnz_2gy_jlb">
+          <figcaption>
+            <span class="fig--title-label">Figure 2. </span>Example with column and row spanning
+          </figcaption>
+
+          <p class="p">The following code sample shows a simple table that tracks meals:</p>
+          <pre class="pre codeblock"><code>&lt;simpletable&gt;
   &lt;title&gt;Food log for Wednesday&lt;/title&gt;
   &lt;sthead&gt;
     &lt;stentry&gt;Meal&lt;/stentry&gt;
@@ -75,14 +173,21 @@ index: '../../toc.html'
     &lt;stentry&gt;Dinner&lt;/stentry&gt;
   &lt;/strow&gt;
 &lt;/simpletable&gt;</code></pre>
-      </figure>
-      <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 3. </span>Example using <code class="keyword markupname xmlatt">@keycol</code></figcaption>
-        
-        <p class="p">The following code sample shows how the <code class="keyword markupname xmlatt">@keycol</code> attribute can be used.
-          The value of the <code class="keyword markupname xmlatt">@keycol</code> attribute specifies that the first column is the
-          header column. This indicates that items in the first column are headers for the row.
-          Rendering of the header column is left up to the implementation.</p>
-        <pre class="pre codeblock"><code>&lt;simpletable keycol="1"&gt;
+        </figure>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 3. </span>Example using
+            <code class="keyword markupname xmlatt">@keycol</code>
+          </figcaption>
+
+          <p class="p">
+            The following code sample shows how the
+            <code class="keyword markupname xmlatt">@keycol</code> attribute can be used. The value
+            of the <code class="keyword markupname xmlatt">@keycol</code> attribute specifies that
+            the first column is the header column. This indicates that items in the first column are
+            headers for the row. Rendering of the header column is left up to the implementation.
+          </p>
+          <pre class="pre codeblock"><code>&lt;simpletable keycol="1"&gt;
  &lt;sthead&gt;
   &lt;stentry&gt;Term&lt;/stentry&gt;
   &lt;stentry&gt;Categorization&lt;/stentry&gt;
@@ -99,6 +204,21 @@ index: '../../toc.html'
   &lt;stentry&gt;What you feel when you drop the widget&lt;/stentry&gt;
  &lt;/strow&gt;
 &lt;/simpletable&gt;</code></pre>
-      </figure></div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/table-elements.html" title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself.">Table elements</a></div></div></nav></article></main>
+        </figure>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/table-elements.html"
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            >Table elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

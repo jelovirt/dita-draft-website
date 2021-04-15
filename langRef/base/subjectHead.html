@@ -3,69 +3,158 @@
 layout: base
 title: 'subjectHead'
 description: 'The subjectHead element provides a heading for a group of
-    subjects, for use if the scheme is displayed. \'
+  subjects, for use if the scheme is displayed. \'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code>
+    </h1>
 
+    <div class="body refbody">
+      <p class="shortdesc">
+        The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element provides
+        a heading for a group of subjects, for use if the scheme is displayed. \
+      </p>
+      <section class="section" id="subjectHead__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
 
-<div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element provides a heading for a group of
-    subjects, for use if the scheme is displayed. \</p>
-    <section class="section" id="subjectHead__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <p class="p">For example, the <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> could be displayed as part of a
-        scheme that is rendered to let a user select subjects as part of faceted browsing.</p>
-      <p class="p">The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element itself does not reference a file and
-        cannot be referenced as a key, so it does not define any controlled values.</p>
-    </section>
-    <section class="section" id="subjectHead__specialization-hierachy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
-      
-      <p class="p">The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element is specialized from
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It is defined in the subject scheme module.</p>
-    </section>
-    <section class="section" id="subjectHead__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <div class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>. This element also
-        uses <code class="keyword markupname xmlatt">@processing-role</code>, <code class="keyword markupname xmlatt">@toc</code>, and narrowed definitions of
-          <code class="keyword markupname xmlatt">@collection-type</code> and <code class="keyword markupname xmlatt">@linking</code> from <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts">Common map attributes</a>. <dl class="dl">
-          
-            <dt class="dt dlterm" id="subjectHead__collection-type"><code class="keyword markupname xmlatt">@collection-type</code></dt>
-            <dd class="dd">Collection types describe how links relate to each other. The processing default is
+        <p class="p">
+          For example, the
+          <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> could be displayed
+          as part of a scheme that is rendered to let a user select subjects as part of faceted
+          browsing.
+        </p>
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element itself
+          does not reference a file and cannot be referenced as a key, so it does not define any
+          controlled values.
+        </p>
+      </section>
+      <section class="section" id="subjectHead__specialization-hierachy">
+        <h2 class="title sectiontitle">Specialization hierarchy</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element is
+          specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
+          is defined in the subject scheme module.
+        </p>
+      </section>
+      <section class="section" id="subjectHead__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <div class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >. This element also uses <code class="keyword markupname xmlatt">@processing-role</code>,
+          <code class="keyword markupname xmlatt">@toc</code>, and narrowed definitions of
+          <code class="keyword markupname xmlatt">@collection-type</code> and
+          <code class="keyword markupname xmlatt">@linking</code> from
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
+            >Common map attributes</a
+          >.
+          <dl class="dl">
+            <dt class="dt dlterm" id="subjectHead__collection-type">
+              <code class="keyword markupname xmlatt">@collection-type</code>
+            </dt>
+            <dd class="dd">
+              Collection types describe how links relate to each other. The processing default is
               "unordered", although no default is specified in the DTD or Schema. Allowable values
-              for <code class="keyword markupname xmlatt">@collection-type</code> on this element are:<dl class="dl">
-                
-                  <dt class="dt dlterm">unordered </dt>
-                  <dd class="dd">Indicates that the order of the child topics is not significant. </dd>
-                
-                
-                  <dt class="dt dlterm">sequence </dt>
-                  <dd class="dd">Indicates that the order of the child topics is significant; output processors
-                    will typically link between them in order. </dd>
-                
-                
-                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
-                                
-              </dl></dd>
-          
-          
-            <dt class="dt dlterm" id="subjectHead__linking"><code class="keyword markupname xmlatt">@linking</code></dt>
-            <dd class="dd">Defines some specific linking characteristics of subject topics. "normal" is the
-              only valid value, and is specified as the default in the DTD, XSD Schema, and RELAX NG
+              for <code class="keyword markupname xmlatt">@collection-type</code> on this element
+              are:
+              <dl class="dl">
+                <dt class="dt dlterm">unordered</dt>
+                <dd class="dd">Indicates that the order of the child topics is not significant.</dd>
+
+                <dt class="dt dlterm">sequence</dt>
+                <dd class="dd">
+                  Indicates that the order of the child topics is significant; output processors
+                  will typically link between them in order.
+                </dd>
+
+                <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+                <dd class="dd">
+                  See
+                  <a
+                    class="xref"
+                    href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                    title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                    >Using the -dita-use-conref-target value</a
+                  >
+                  for more information.
+                </dd>
+              </dl>
+            </dd>
+
+            <dt class="dt dlterm" id="subjectHead__linking">
+              <code class="keyword markupname xmlatt">@linking</code>
+            </dt>
+            <dd class="dd">
+              Defines some specific linking characteristics of subject topics. "normal" is the only
+              valid value, and is specified as the default in the DTD, XSD Schema, and RELAX NG
               implementations. When attribute values cascade, this causes a linking value of
-              "normal" to cascade to the subjects.</dd>
-          
-        </dl></div>
-    </section>
-<div class="example" id="subjectHead__example"><h2 class="title sectiontitle">Example</h2>
-      
-      <p class="p">In this example the <q class="q">Server setup</q> label doesn't classify content but, when selected, is
-        equivalent to the union of its child subjects. That is, the heading covers content about
-        planning for any application, installing for any application, any task for web servers, or
-        any task for database servers.</p>
-      <pre class="pre codeblock"><code>&lt;subjectScheme toc="yes" search="no"&gt;
+              "normal" to cascade to the subjects.
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <div class="example" id="subjectHead__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          In this example the <q class="q">Server setup</q> label doesn't classify content but, when
+          selected, is equivalent to the union of its child subjects. That is, the heading covers
+          content about planning for any application, installing for any application, any task for
+          web servers, or any task for database servers.
+        </p>
+        <pre class="pre codeblock"><code>&lt;subjectScheme toc="yes" search="no"&gt;
   &lt;!-- ... --&gt;
   &lt;subjectHead&gt;
     &lt;subjectHeadMeta&gt;
@@ -78,6 +167,20 @@ index: '../../toc.html'
   &lt;/subjectHead&gt;
   &lt;!-- ... --&gt;
 &lt;/subjectScheme&gt;</code></pre>
+      </div>
     </div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/subjectScheme.html" title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects.">Subject scheme elements</a></div></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/subjectScheme.html"
+            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            >Subject scheme elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

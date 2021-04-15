@@ -3,43 +3,136 @@
 layout: base
 title: 'colspec'
 description: 'A column specifications provides information about a single column in a table from on
-    the OASIS Exchange Table Model, such as a column name and number, cell content alignment, or a
-    column width.'
+  the OASIS Exchange Table Model, such as a column name and number, cell content alignment, or a
+  column width.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-  <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;colspec&gt;</code></h1>
-  
-  
-  <div class="body refbody"><p class="shortdesc">A column specifications provides information about a single column in a table from on
-    the OASIS Exchange Table Model, such as a column name and number, cell content alignment, or a
-    column width.</p>
-    <section class="section" id="colspec__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a> (without the Metadata attribute group),
-          <code class="keyword markupname xmlatt">@base</code> from the <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts">Metadata attributes</a>, and the attributes
-        defined below. This element also uses <code class="keyword markupname xmlatt">@align</code>, <code class="keyword markupname xmlatt">@char</code>,
-          <code class="keyword markupname xmlatt">@charoff</code>, <code class="keyword markupname xmlatt">@colsep</code>, <code class="keyword markupname xmlatt">@rowsep</code>, and
-          <code class="keyword markupname xmlatt">@rowheader</code> from <a class="xref" href="../attributes/commonAttributes.html#common-atts__complextableatts">Complex table attributes</a>.</p>
-      <dl class="dl">
-        
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;colspec&gt;</code>
+    </h1>
+
+    <div class="body refbody">
+      <p class="shortdesc">
+        A column specifications provides information about a single column in a table from on the
+        OASIS Exchange Table Model, such as a column name and number, cell content alignment, or a
+        column width.
+      </p>
+      <section class="section" id="colspec__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >
+          (without the Metadata attribute group),
+          <code class="keyword markupname xmlatt">@base</code> from the
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts"
+            >Metadata attributes</a
+          >, and the attributes defined below. This element also uses
+          <code class="keyword markupname xmlatt">@align</code>,
+          <code class="keyword markupname xmlatt">@char</code>,
+          <code class="keyword markupname xmlatt">@charoff</code>,
+          <code class="keyword markupname xmlatt">@colsep</code>,
+          <code class="keyword markupname xmlatt">@rowsep</code>, and
+          <code class="keyword markupname xmlatt">@rowheader</code> from
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__complextableatts"
+            >Complex table attributes</a
+          >.
+        </p>
+        <dl class="dl">
           <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colnum</code></dt>
-          <dd class="dd">Indicates the number of a column in the table, counting from the first logical column
-            to the last column.</dd>
-        
-        
+          <dd class="dd">
+            Indicates the number of a column in the table, counting from the first logical column to
+            the last column.
+          </dd>
+
           <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colname</code></dt>
-          <dd class="dd"><span class="ph">Specifies a name for the column defined by this element. The
-                <code class="keyword markupname xmlelement">&lt;entry&gt;</code> element can use <code class="keyword markupname xmlatt">@colname</code> to refer to
-              the name of this column.</span></dd>
-        
-        
+          <dd class="dd">
+            <span class="ph"
+              >Specifies a name for the column defined by this element. The
+              <code class="keyword markupname xmlelement">&lt;entry&gt;</code> element can use
+              <code class="keyword markupname xmlatt">@colname</code> to refer to the name of this
+              column.</span
+            >
+          </dd>
+
           <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colwidth</code></dt>
           <dd class="dd">Describes the column width.</dd>
-        
-      </dl>
-    </section>
-    <div class="example" id="colspec__example"><h2 class="title sectiontitle">Example</h2><p class="p">See <a class="xref" href="table.html" title="A table based on the OASIS Exchange Table Model organizes arbitrarily complex relationships of tabular information. This standard table markup allows column or row spanning and table captions or descriptions.">table</a>.</p></div>
-  </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/table-elements.html" title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself.">Table elements</a></div></div></nav></article></main>
+        </dl>
+      </section>
+      <div class="example" id="colspec__example">
+        <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          See
+          <a
+            class="xref"
+            href="table.html"
+            title="A table based on the OASIS Exchange Table Model organizes arbitrarily complex relationships of tabular information. This standard table markup allows column or row spanning and table captions or descriptions."
+            >table</a
+          >.
+        </p>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/table-elements.html"
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            >Table elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

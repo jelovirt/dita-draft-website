@@ -2,85 +2,174 @@
 # Generated from DITA source
 layout: base
 title: 'draft-comment'
-description: 'A draft comment is content that is intended for review and discussion, such as questions,
-    comments, and notes to reviewers. This content is not intended to be included in production
-    output.'
+description:
+  'A draft comment is content that is intended for review and discussion, such as questions,
+  comments, and notes to reviewers. This content is not intended to be included in production
+  output.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code>
+    </h1>
 
+    <div class="body refbody">
+      <p class="shortdesc">
+        A draft comment is content that is intended for review and discussion, such as questions,
+        comments, and notes to reviewers. This content is not intended to be included in production
+        output.
+      </p>
+      <section class="section" id="draft-comment__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
 
-<div class="body refbody"><p class="shortdesc">A draft comment is content that is intended for review and discussion, such as questions,
-    comments, and notes to reviewers. This content is not intended to be included in production
-    output.</p>
-<section class="section" id="draft-comment__rendering-expectations"><h2 class="title sectiontitle">Rendering expectations</h2>
-      
-      <p class="p">By default, processors <dfn class="term RFC-2119">SHOULD NOT</dfn> render
-          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> elements. Processors <dfn class="term RFC-2119">SHOULD</dfn> provide a mechanism that causes the content of the
-          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> element to be rendered in draft output only. </p>
-    </section>
-    <section class="section" id="draft-comment__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a> (with a narrowed definition for
-          <code class="keyword markupname xmlatt">@translate</code>, given below) and the attributes
-        defined below.</p>
-      <dl class="dl">
-        
-          <dt class="dt dlterm" id="draft-comment__author"><code class="keyword markupname xmlatt">@author</code></dt>
+        <p class="p">
+          By default, processors <dfn class="term RFC-2119">SHOULD NOT</dfn> render
+          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> elements.
+          Processors <dfn class="term RFC-2119">SHOULD</dfn> provide a mechanism that causes the
+          content of the
+          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> element to be
+          rendered in draft output only.
+        </p>
+      </section>
+      <section class="section" id="draft-comment__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >
+          (with a narrowed definition for <code class="keyword markupname xmlatt">@translate</code>,
+          given below) and the attributes defined below.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="draft-comment__author">
+            <code class="keyword markupname xmlatt">@author</code>
+          </dt>
           <dd class="dd">Designates the originator of the draft comment.</dd>
-        
-        
-          <dt class="dt dlterm" id="draft-comment__disposition"><code class="keyword markupname xmlatt">@disposition</code></dt>
-          <dd class="dd">Specifies the status of the draft comment. </dd>
-        
-        
-          <dt class="dt dlterm" id="draft-comment__time"><code class="keyword markupname xmlatt">@time</code></dt>
+
+          <dt class="dt dlterm" id="draft-comment__disposition">
+            <code class="keyword markupname xmlatt">@disposition</code>
+          </dt>
+          <dd class="dd">Specifies the status of the draft comment.</dd>
+
+          <dt class="dt dlterm" id="draft-comment__time">
+            <code class="keyword markupname xmlatt">@time</code>
+          </dt>
           <dd class="dd">Specifies when the draft comment was created.</dd>
-        
-        
-                                                <dt class="dt dlterm" id="draft-comment__translate"><code class="keyword markupname xmlatt">@translate</code></dt>
-                                                <dd class="dd">Specifies whether the content of the element is
-                                                  translatable. The default value is "no". Setting
-                                                  <code class="keyword markupname xmlatt">@translate</code> to "yes" overrides the
-                                                  default value. The DITA specification contains a
-                                                  list of each OASIS DITA element and its common
-                                                  processing default for the translate value;
-                                                  because this element uses an actual default, it is
-                                                  always treated as <code class="ph codeph">translate="no"</code>
-                                                  unless overridden. Available values are: <dl class="dl">
-                                                  
-                                                  <dt class="dt dlterm">no </dt>
-                                                  <dd class="dd">The content of this element is not
-                                                  translatable.</dd>
-                                                  
-                                                  
-                                                  <dt class="dt dlterm">yes</dt>
-                                                  <dd class="dd">The content of this element is
-                                                  translatable.</dd>
-                                                  
-                                                  
-                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
-                                
-                                                  </dl></dd>
-                                        
-      </dl>
-    </section>
-<div class="example" id="draft-comment__example"><h2 class="title sectiontitle">Example</h2>
-      
-      <p class="p">The following example illustrates how an content developer can use a
-          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> element to pose a question to reviewers.</p>
-      <pre class="pre codeblock"><code>&lt;draft-comment 
+
+          <dt class="dt dlterm" id="draft-comment__translate">
+            <code class="keyword markupname xmlatt">@translate</code>
+          </dt>
+          <dd class="dd">
+            Specifies whether the content of the element is translatable. The default value is "no".
+            Setting <code class="keyword markupname xmlatt">@translate</code> to "yes" overrides the
+            default value. The DITA specification contains a list of each OASIS DITA element and its
+            common processing default for the translate value; because this element uses an actual
+            default, it is always treated as <code class="ph codeph">translate="no"</code> unless
+            overridden. Available values are:
+            <dl class="dl">
+              <dt class="dt dlterm">no</dt>
+              <dd class="dd">The content of this element is not translatable.</dd>
+
+              <dt class="dt dlterm">yes</dt>
+              <dd class="dd">The content of this element is translatable.</dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+          </dd>
+        </dl>
+      </section>
+      <div class="example" id="draft-comment__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          The following example illustrates how an content developer can use a
+          <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> element to pose a
+          question to reviewers.
+        </p>
+        <pre class="pre codeblock"><code>&lt;draft-comment 
   <strong class="ph b">author="EBP"</strong> 
   <strong class="ph b">time="23 May 2017"</strong> 
   status="missing-info"&gt;
 Where's the usage information for this section?
 &lt;/draft-comment&gt;</code></pre>
-      <p class="p">Processors might render the information from the highlighted attributes at viewing or
-        publishing time. Authors might use the value of the  <code class="keyword markupname xmlatt">@status</code> attribute to
-        track the work that remains to be done on a content collection.</p>
+        <p class="p">
+          Processors might render the information from the highlighted attributes at viewing or
+          publishing time. Authors might use the value of the
+          <code class="keyword markupname xmlatt">@status</code> attribute to track the work that
+          remains to be done on a content collection.
+        </p>
+      </div>
     </div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/body-elements.html" title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document.">Body elements</a></div></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/body-elements.html"
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            >Body elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

@@ -8,19 +8,160 @@ possible.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dita-maps-and-their-usage.html">DITA maps and their usage</a></li><li><a href="../../archSpec/base/subject-scheme-maps-and-usage.html">Subject scheme maps and their usage</a></li><li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li><li><a href="../../archSpec/base/chunking.html">Chunking</a><ul class="nav nav-list"><li><a href="../../archSpec/base/chunk-attribute-overview.html">About the chunk attribute</a></li><li><a href="../../archSpec/base/chunk-attribute-combine.html">Processing chunk="combine"</a></li><li><a href="../../archSpec/base/chunk-attribute-split.html">Processing chunk="split"</a></li><li><a href="../../archSpec/base/chunk-attribute-other-tokens.html">Using the chunk attribute for other purposes</a></li><li><a href="../../archSpec/base/examples-of-chunking.html">Examples of the chunk attribute</a><ul class="nav nav-list"><li><a href="../../archSpec/base/example-chunk-combine-all.html">Example: Using chunk to combine all documents into one</a></li><li><a href="../../archSpec/base/example-chunk-combine-branch.html">Example: Using chunk to render a single document from one branch</a></li><li><a href="../../archSpec/base/example-chunk-combine-group.html">Example: Using chunk to combine a group of topics</a></li><li><a href="../../archSpec/base/example-chunk-combine-nested-topics.html">Example: Using chunk to combine nested documents</a></li><li class="active"><a href="../../archSpec/base/example-chunk-split.html">Example: Using chunk to split documents</a></li><li><a href="../../archSpec/base/example-chunk-split-nested.html">Example: Using chunk to split nested documents</a></li><li><a href="../../archSpec/base/example-chunk-ignored.html">Example: When chunk is ignored</a></li><li><a href="../../archSpec/base/example-chunk-combine-within-split.html">Example: Combining topics within a split context</a></li><li><a href="../../archSpec/base/example-chunk-managing-links.html">Example: Managing links when chunking</a></li></ul></li></ul></li></ul></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1">Example: Using <code class="keyword markupname xmlatt">@chunk</code> to split documents</h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li>
+      <a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a>
+      <ul class="nav nav-list">
+        <li>
+          <a href="../../archSpec/base/dita-maps-and-their-usage.html">DITA maps and their usage</a>
+        </li>
+        <li>
+          <a href="../../archSpec/base/subject-scheme-maps-and-usage.html"
+            >Subject scheme maps and their usage</a
+          >
+        </li>
+        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li>
+          <a href="../../archSpec/base/chunking.html">Chunking</a>
+          <ul class="nav nav-list">
+            <li>
+              <a href="../../archSpec/base/chunk-attribute-overview.html"
+                >About the chunk attribute</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/chunk-attribute-combine.html"
+                >Processing chunk="combine"</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/chunk-attribute-split.html">Processing chunk="split"</a>
+            </li>
+            <li>
+              <a href="../../archSpec/base/chunk-attribute-other-tokens.html"
+                >Using the chunk attribute for other purposes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/examples-of-chunking.html"
+                >Examples of the chunk attribute</a
+              >
+              <ul class="nav nav-list">
+                <li>
+                  <a href="../../archSpec/base/example-chunk-combine-all.html"
+                    >Example: Using chunk to combine all documents into one</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-combine-branch.html"
+                    >Example: Using chunk to render a single document from one branch</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-combine-group.html"
+                    >Example: Using chunk to combine a group of topics</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
+                    >Example: Using chunk to combine nested documents</a
+                  >
+                </li>
+                <li class="active">
+                  <a href="../../archSpec/base/example-chunk-split.html"
+                    >Example: Using chunk to split documents</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-split-nested.html"
+                    >Example: Using chunk to split nested documents</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-ignored.html"
+                    >Example: When chunk is ignored</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-combine-within-split.html"
+                    >Example: Combining topics within a split context</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-chunk-managing-links.html"
+                    >Example: Managing links when chunking</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      Example: Using <code class="keyword markupname xmlatt">@chunk</code> to split documents
+    </h1>
 
-<div class="body conbody"><p class="shortdesc">When topics are most easily created or generated in a single DITA document,
-<code class="ph codeph">chunk="split"</code> will instruct processors to render them individually when
-possible.</p>
-<div class="example"><h2 class="title sectiontitle">Splitting a single document in the map</h2>
+    <div class="body conbody">
+      <p class="shortdesc">
+        When topics are most easily created or generated in a single DITA document,
+        <code class="ph codeph">chunk="split"</code> will instruct processors to render them
+        individually when possible.
+      </p>
+      <div class="example">
+        <h2 class="title sectiontitle">Splitting a single document in the map</h2>
 
-<p class="p">Consider the following example, where a map includes generated topics used to document message
-numbers from an application:</p>
-<figure class="fig fignone" id="chunksplitexample__fig_gqp_nqd_1gb"><figcaption><span class="fig--title-label">Figure 1. </span>Source map and topics</figcaption>
+        <p class="p">
+          Consider the following example, where a map includes generated topics used to document
+          message numbers from an application:
+        </p>
+        <figure class="fig fignone" id="chunksplitexample__fig_gqp_nqd_1gb">
+          <figcaption>
+            <span class="fig--title-label">Figure 1. </span>Source map and topics
+          </figcaption>
 
-<pre class="pre codeblock"><code>&lt;map&gt;
+          <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Message guide for WidgetAnalyzer&lt;/title&gt;
   &lt;topicref href="about.dita"&gt;
     &lt;topicref href="messages-install.dita"/&gt;
@@ -70,17 +211,23 @@ messages-other.dita:
     &lt;!-- explanation and recovery... --&gt;
   &lt;/topic&gt;
 &lt;/topic&gt;</code></pre>
-</figure>
-<p class="p">In a normal build to HTML5, this map might result in four result documents
-                    <span class="ph filepath">about.html</span>, <span class="ph filepath">messages-install.html</span>,
-                    <span class="ph filepath">messages-run.html</span>, and
-                    <span class="ph filepath">messages-other.html</span>. With hundreds of messages in
-                    <span class="ph filepath">messages-run.dita</span>, it might be better in some situations to
-                render one result document for each message topic in the document. This can be done
-                by setting <code class="ph codeph">chunk="split"</code> on the topic reference.</p>
-<figure class="fig fignone" id="chunksplitexample__fig_ltd_yrd_1gb"><figcaption><span class="fig--title-label">Figure 2. </span>Splitting all topics in one document</figcaption>
+        </figure>
+        <p class="p">
+          In a normal build to HTML5, this map might result in four result documents
+          <span class="ph filepath">about.html</span>,
+          <span class="ph filepath">messages-install.html</span>,
+          <span class="ph filepath">messages-run.html</span>, and
+          <span class="ph filepath">messages-other.html</span>. With hundreds of messages in
+          <span class="ph filepath">messages-run.dita</span>, it might be better in some situations
+          to render one result document for each message topic in the document. This can be done by
+          setting <code class="ph codeph">chunk="split"</code> on the topic reference.
+        </p>
+        <figure class="fig fignone" id="chunksplitexample__fig_ltd_yrd_1gb">
+          <figcaption>
+            <span class="fig--title-label">Figure 2. </span>Splitting all topics in one document
+          </figcaption>
 
-<pre class="pre codeblock"><code>&lt;map&gt;
+          <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Message guide for WidgetAnalyzer&lt;/title&gt;
   &lt;topicref href="about.dita"&gt;
     &lt;topicref href="messages-install.dita"/&gt;
@@ -88,13 +235,19 @@ messages-other.dita:
     &lt;topicref href="messages-other.dita"/&gt;
   &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-</figure>
-<p class="p">The result of evaluating <code class="keyword markupname xmlatt">@chunk</code> in this case is equivalent to the following map
-                and topics. While <span class="ph filepath">messages-run.dita</span> now is split into hundreds
-                of topics, other topics in the map are unaffected.</p>
-<figure class="fig fignone" id="chunksplitexample__fig_htc_2sd_1gb"><figcaption><span class="fig--title-label">Figure 3. </span>Equivalent source content</figcaption>
+        </figure>
+        <p class="p">
+          The result of evaluating <code class="keyword markupname xmlatt">@chunk</code> in this
+          case is equivalent to the following map and topics. While
+          <span class="ph filepath">messages-run.dita</span> now is split into hundreds of topics,
+          other topics in the map are unaffected.
+        </p>
+        <figure class="fig fignone" id="chunksplitexample__fig_htc_2sd_1gb">
+          <figcaption>
+            <span class="fig--title-label">Figure 3. </span>Equivalent source content
+          </figcaption>
 
-<pre class="pre codeblock"><code>&lt;map&gt;
+          <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Message guide for WidgetAnalyzer&lt;/title&gt;
   &lt;topicref href="about.dita"&gt;
     &lt;topicref href="messages-install.dita"/&gt;
@@ -116,21 +269,32 @@ RUN999.dita:
   &lt;title&gt;RUN999: Out of memory&lt;/title&gt;
   &lt;!-- explanation and recovery... --&gt;
 &lt;/topic&gt;</code></pre>
-</figure>
-<div class="note note note_note"><span class="note__title">Note:</span> Because the <code class="keyword markupname xmlatt">@chunk</code> attribute does not cascade, even if the reference to
-<span class="ph filepath">messages-install.dita</span> had child topic references, they would be unaffected by
-the <code class="ph codeph">chunk="split"</code> value in this example.</div>
-</div>
-<div class="example"><h2 class="title sectiontitle">Splitting every document in the map</h2>
+        </figure>
+        <div class="note note note_note">
+          <span class="note__title">Note:</span> Because the
+          <code class="keyword markupname xmlatt">@chunk</code> attribute does not cascade, even if
+          the reference to <span class="ph filepath">messages-install.dita</span> had child topic
+          references, they would be unaffected by the
+          <code class="ph codeph">chunk="split"</code> value in this example.
+        </div>
+      </div>
+      <div class="example">
+        <h2 class="title sectiontitle">Splitting every document in the map</h2>
 
-<p class="p">Similarly, because setting <code class="ph codeph">chunk="split"</code> on the map element sets a default for
-the entire map, the following change to the original map would result in <em class="ph i">every</em> referenced
-DITA document being split into one document per topic. The only source document not affected by this
-split is <span class="ph filepath">about.dita</span>, because it only contained a single topic to begin
-with.</p>
-<figure class="fig fignone" id="chunksplitexample__fig_qns_tsd_1gb"><figcaption><span class="fig--title-label">Figure 4. </span>Splitting every topic in the map</figcaption>
+        <p class="p">
+          Similarly, because setting <code class="ph codeph">chunk="split"</code> on the map element
+          sets a default for the entire map, the following change to the original map would result
+          in <em class="ph i">every</em> referenced DITA document being split into one document per
+          topic. The only source document not affected by this split is
+          <span class="ph filepath">about.dita</span>, because it only contained a single topic to
+          begin with.
+        </p>
+        <figure class="fig fignone" id="chunksplitexample__fig_qns_tsd_1gb">
+          <figcaption>
+            <span class="fig--title-label">Figure 4. </span>Splitting every topic in the map
+          </figcaption>
 
-<pre class="pre codeblock"><code>&lt;map chunk="split"&gt;
+          <pre class="pre codeblock"><code>&lt;map chunk="split"&gt;
   &lt;title&gt;Message guide for WidgetAnalyzer&lt;/title&gt;
   &lt;topicref href="about.dita"&gt;
     &lt;topicref href="messages-install.dita"/&gt;
@@ -138,19 +302,34 @@ with.</p>
     &lt;topicref href="messages-other.dita"/&gt;
   &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-</figure>
-<p class="p">Using <code class="ph codeph">chunk="split"</code> on the map is equivalent to the following structure:</p>
-<ul class="ul" id="chunksplitexample__ul_m3y_wng_thb">
-<li class="li"><span class="ph filepath">about.dita</span> is unchanged.</li>
-<li class="li"><span class="ph filepath">messages-install.dita</span> is split into one document per message (as in the
-previous example that split <span class="ph filepath">messages-run.dita</span>).</li>
-<li class="li"><span class="ph filepath">messages-run.dita</span> is split exactly as in the previous example.</li>
-<li class="li"><span class="ph filepath">messages-other.dita</span> contains a root topic and two child topics, so it
-results in three documents. The hierarchy of those documents is preserved in the map.</li>
-</ul>
-<figure class="fig fignone" id="chunksplitexample__fig_pbm_dtd_1gb"><figcaption><span class="fig--title-label">Figure 5. </span>Equivalent source content</figcaption>
+        </figure>
+        <p class="p">
+          Using <code class="ph codeph">chunk="split"</code> on the map is equivalent to the
+          following structure:
+        </p>
+        <ul class="ul" id="chunksplitexample__ul_m3y_wng_thb">
+          <li class="li"><span class="ph filepath">about.dita</span> is unchanged.</li>
+          <li class="li">
+            <span class="ph filepath">messages-install.dita</span> is split into one document per
+            message (as in the previous example that split
+            <span class="ph filepath">messages-run.dita</span>).
+          </li>
+          <li class="li">
+            <span class="ph filepath">messages-run.dita</span> is split exactly as in the previous
+            example.
+          </li>
+          <li class="li">
+            <span class="ph filepath">messages-other.dita</span> contains a root topic and two child
+            topics, so it results in three documents. The hierarchy of those documents is preserved
+            in the map.
+          </li>
+        </ul>
+        <figure class="fig fignone" id="chunksplitexample__fig_pbm_dtd_1gb">
+          <figcaption>
+            <span class="fig--title-label">Figure 5. </span>Equivalent source content
+          </figcaption>
 
-<pre class="pre codeblock"><code>&lt;map&gt;
+          <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Message guide for WidgetAnalyzer&lt;/title&gt;
   &lt;topicref href="about.dita"&gt;
     &lt;topicref href="INS001.dita"/&gt;
@@ -201,7 +380,21 @@ OTHER002.dita:
   &lt;!-- explanation and recovery... --&gt;
 &lt;/topic&gt;
 </code></pre>
-</figure>
-</div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../archSpec/base/examples-of-chunking.html" title="These examples illustrate the processing expectations for various scenarios that involve the chunk attribute. The processing examples use either before and after sample markup or expanded syntax that shows the equivalent markup without the chunk attribute.">Examples of the chunk attribute</a></div></div></nav></article></main>
+        </figure>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../archSpec/base/examples-of-chunking.html"
+            title="These examples illustrate the processing expectations for various scenarios that involve the chunk attribute. The processing examples use either before and after sample markup or expanded syntax that shows the equivalent markup without the chunk attribute."
+            >Examples of the chunk attribute</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

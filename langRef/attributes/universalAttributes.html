@@ -3,240 +3,502 @@
 layout: base
 title: 'Universal attribute group'
 description: 'The universal attribute group defines a set of common attributes that are available on
-    almost every DITA element. The universal attribute group includes all attributes from the ID,
-    metadata, and localization attribute groups, plus the class and
-      outputclass attributes.'
+  almost every DITA element. The universal attribute group includes all attributes from the ID,
+  metadata, and localization attribute groups, plus the class and
+  outputclass attributes.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1">Universal attribute group</h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Universal attribute group</h1>
 
+    <div class="body refbody">
+      <p class="shortdesc">
+        The universal attribute group defines a set of common attributes that are available on
+        almost every DITA element. The universal attribute group includes all attributes from the
+        ID, metadata, and localization attribute groups, plus the
+        <code class="keyword markupname xmlatt">@class</code> and
+        <code class="keyword markupname xmlatt">@outputclass</code> attributes.
+      </p>
+      <section class="section" id="univ-atts__summary">
+        <h2 class="title sectiontitle">Common attribute groups</h2>
 
-<div class="body refbody"><p class="shortdesc">The universal attribute group defines a set of common attributes that are available on
-    almost every DITA element. The universal attribute group includes all attributes from the ID,
-    metadata, and localization attribute groups, plus the <code class="keyword markupname xmlatt">@class</code> and
-      <code class="keyword markupname xmlatt">@outputclass</code> attributes.</p>
-    <section class="section" id="univ-atts__summary"><h2 class="title sectiontitle">Common attribute groups</h2>
-      
-      <p class="p">The following groups are referenced in this specification, and are also used in grammar
-        files when defining attributes for elements.</p>
-      <dl class="dl">
-        
+        <p class="p">
+          The following groups are referenced in this specification, and are also used in grammar
+          files when defining attributes for elements.
+        </p>
+        <dl class="dl">
           <dt class="dt dlterm" id="univ-atts__universalatts">Universal attributes</dt>
-          <dd class="dd">Includes <code class="keyword markupname xmlatt">@class</code> and <code class="keyword markupname xmlatt">@outputclass</code>, along with every
-            attribute in the ID, Localization, and Metadata attribute groups.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__idatts">ID attributes</dt>
-          <dd class="dd">Includes attributes that enable the naming and referencing of elements in topics and
-            maps: <code class="keyword markupname xmlatt">@conaction</code>, <code class="keyword markupname xmlatt">@conkeyref</code>, <code class="keyword markupname xmlatt">@conref</code>,
-              <code class="keyword markupname xmlatt">@conrefend</code>, and <code class="keyword markupname xmlatt">@id</code>.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__localizationatts">Localization attributes</dt>
-          <dd class="dd">Includes attributes that are related to translation and localization:
-              <code class="keyword markupname xmlatt">@dir</code>, <code class="keyword markupname xmlatt">@translate</code>, and <code class="keyword markupname xmlatt">@xml:lang</code>.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__metadataatts">Metadata attributes</dt>
-          <dd class="dd">Includes common metadata attributes, two of which are available for specialization:
-              <code class="keyword markupname xmlatt">@base</code>, <code class="keyword markupname xmlatt">@importance</code>, <code class="keyword markupname xmlatt">@props</code>,
-              <code class="keyword markupname xmlatt">@rev</code>, and <code class="keyword markupname xmlatt">@status</code>.</dd>
-          <dd class="dd ddexpand">The base DITA vocabulary from OASIS includes several predefined specializations of
-              <code class="keyword markupname xmlatt">@props</code>. These attributes are defined as independent attribute
-            extension domains; they are integrated by default into all OASIS-provided document-type
-            shells, and can be easily removed from custom document-type shells:
-              <code class="keyword markupname xmlatt">@audience</code>, <code class="keyword markupname xmlatt">@deliveryTarget</code>, <code class="keyword markupname xmlatt">@platform</code>,
-              <code class="keyword markupname xmlatt">@product</code>, and <code class="keyword markupname xmlatt">@otherprops</code>.</dd>
-        
-      </dl>
-    </section>
-  <section class="section" id="univ-atts__definitions"><h2 class="title sectiontitle">Universal attribute definitions</h2>
-      
-      <p class="p">The universal attributes for OASIS DITA elements are defined below. Specialized attributes,
-        which are part of the OASIS distribution but are only available when explicitly included in
-        a shell, are noted in the list.</p>
-      <dl class="dl">
-        
-          <dt class="dt dlterm" id="univ-atts__audience"><code class="keyword markupname xmlatt">@audience</code>
-            <em class="ph i">(specialized attribute)</em></dt>
-          <dd class="dd">Indicates the intended audience for the element. <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+          <dd class="dd">
+            Includes <code class="keyword markupname xmlatt">@class</code> and
+            <code class="keyword markupname xmlatt">@outputclass</code>, along with every attribute
+            in the ID, Localization, and Metadata attribute groups.
           </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__base"><code class="keyword markupname xmlatt">@base</code></dt>
-          <dd class="dd">A generic attribute that has no specific purpose. It is intended to act as a base for
+
+          <dt class="dt dlterm" id="univ-atts__idatts">ID attributes</dt>
+          <dd class="dd">
+            Includes attributes that enable the naming and referencing of elements in topics and
+            maps: <code class="keyword markupname xmlatt">@conaction</code>,
+            <code class="keyword markupname xmlatt">@conkeyref</code>,
+            <code class="keyword markupname xmlatt">@conref</code>,
+            <code class="keyword markupname xmlatt">@conrefend</code>, and
+            <code class="keyword markupname xmlatt">@id</code>.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__localizationatts">Localization attributes</dt>
+          <dd class="dd">
+            Includes attributes that are related to translation and localization:
+            <code class="keyword markupname xmlatt">@dir</code>,
+            <code class="keyword markupname xmlatt">@translate</code>, and
+            <code class="keyword markupname xmlatt">@xml:lang</code>.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__metadataatts">Metadata attributes</dt>
+          <dd class="dd">
+            Includes common metadata attributes, two of which are available for specialization:
+            <code class="keyword markupname xmlatt">@base</code>,
+            <code class="keyword markupname xmlatt">@importance</code>,
+            <code class="keyword markupname xmlatt">@props</code>,
+            <code class="keyword markupname xmlatt">@rev</code>, and
+            <code class="keyword markupname xmlatt">@status</code>.
+          </dd>
+          <dd class="dd ddexpand">
+            The base DITA vocabulary from OASIS includes several predefined specializations of
+            <code class="keyword markupname xmlatt">@props</code>. These attributes are defined as
+            independent attribute extension domains; they are integrated by default into all
+            OASIS-provided document-type shells, and can be easily removed from custom document-type
+            shells: <code class="keyword markupname xmlatt">@audience</code>,
+            <code class="keyword markupname xmlatt">@deliveryTarget</code>,
+            <code class="keyword markupname xmlatt">@platform</code>,
+            <code class="keyword markupname xmlatt">@product</code>, and
+            <code class="keyword markupname xmlatt">@otherprops</code>.
+          </dd>
+        </dl>
+      </section>
+      <section class="section" id="univ-atts__definitions">
+        <h2 class="title sectiontitle">Universal attribute definitions</h2>
+
+        <p class="p">
+          The universal attributes for OASIS DITA elements are defined below. Specialized
+          attributes, which are part of the OASIS distribution but are only available when
+          explicitly included in a shell, are noted in the list.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="univ-atts__audience">
+            <code class="keyword markupname xmlatt">@audience</code>
+            <em class="ph i">(specialized attribute)</em>
+          </dt>
+          <dd class="dd">
+            Indicates the intended audience for the element.
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__base">
+            <code class="keyword markupname xmlatt">@base</code>
+          </dt>
+          <dd class="dd">
+            A generic attribute that has no specific purpose. It is intended to act as a base for
             specialized attributes that have a simple value syntax like the conditional processing
             attributes (one or more alphanumeric values separated by whitespace), but is not itself
-            a filtering or flagging attribute. </dd>
-          <dd class="dd ddexpand">The <code class="keyword markupname xmlatt">@base</code> attribute takes a space-delimited set of values. However,
-            when acting as a container for generalized attributes, the attribute values will be more
-            complex; see <a class="xref" href="../../archSpec/base/generalization-attributes.html" title="DITA provides a syntax to generalize attributes that have been specialized from the props or base attribute.">Attribute generalization</a> for more
-            details.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__class"><code class="keyword markupname xmlatt">@class</code>
-            <em class="ph i">(not for use by authors)</em></dt>
-          <dd class="dd"><em class="ph i">This attribute is not for use by authors. If an editor displays
-                <code class="keyword markupname xmlatt">@class</code> attribute values, do not edit them.</em> The
-              <code class="keyword markupname xmlatt">@class</code> attribute supports specialization. Its predefined values allow
-            DITA tools to work correctly with ranges of related content. In a generalized DITA
-            document the <code class="keyword markupname xmlatt">@class</code> attribute value in the generalized instance might
-            differ from the default value for the <code class="keyword markupname xmlatt">@class</code> attribute for the element
-            as given in the DTD or schema. See <a class="xref" href="../../archSpec/base/specialization-class-attribute.html" title="The specialization hierarchy of each DITA element is declared as the value of the class attribute. The class attribute provides a mapping from the current name of the element to its more general equivalents, but it also can provide a mapping from the current name to more specialized equivalents. All specialization-aware processing can be defined in terms of class attribute values.">class attribute rules and syntax</a> for more information.
-            This attribute is specified on every element except for the
-              <code class="keyword markupname xmlelement">&lt;dita&gt;</code> container element. It is always specified with a default
-            value, which varies for each element.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__conaction"><code class="keyword markupname xmlatt">@conaction</code></dt>
-          <dd class="dd">This attribute enables users to push content into a new location. Allowable values are
-              <span class="keyword">mark</span>, <span class="keyword">pushafter</span>, <span class="keyword">pushbefore</span>,
-              <span class="keyword">pushreplace</span>, and <span class="keyword">-dita-use-conref-target</span>. See
-              <a class="xref" href="theconactionattribute.html" title="The conaction attribute allows users to push content from one topic into another. It causes the conref attribute to work in reverse, so that the content is pushed from the current topic into another, rather than pulled from another topic into the current one. Allowable values for conaction are: pushafter, pushbefore, pushreplace, mark, and -dita-use-conref-target.">The conaction attribute</a> for examples and details about the syntax.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__conkeyref"><code class="keyword markupname xmlatt">@conkeyref</code></dt>
-          <dd class="dd">Allows the conref feature to operate using a key instead of a URI. See <a class="xref" href="theconkeyrefattribute.html" title="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The conkeyref attribute</a> for more details about the syntax and behaviors.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__conref"><code class="keyword markupname xmlatt">@conref</code></dt>
-          <dd class="dd">This attribute is used to reference an ID on content that can be reused. See <a class="xref" href="theconrefattribute.html" title="The conref attribute is used to reference content that can be reused. It allows reuse of DITA elements, including topic or map level elements.">The conref attribute</a> for examples and details about the syntax. </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__conrefend"><code class="keyword markupname xmlatt">@conrefend</code></dt>
-          <dd class="dd">The <code class="keyword markupname xmlatt">@conrefend</code> attribute is used when reusing a range of elements
-            through <code class="keyword markupname xmlatt">@conref</code>. The syntax is the same as for the
-              <code class="keyword markupname xmlatt">@conref</code> attribute; see <a class="xref" href="theconrefendattribute.html" title="The conrefend attribute is used when referencing a range of elements with the conref mechanism. The conref or conkeyref attribute references the first element in the range, while conrefend references the last element in the range.">The conrefend attribute</a> for
-            examples. </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__deliveryTarget"><code class="keyword markupname xmlatt">@deliveryTarget</code>
-            <em class="ph i">(specialized attribute)</em></dt>
-          <dd class="dd"><span class="ph">The intended
-              delivery target of the content, for example, <span class="keyword">html</span>,
-                <span class="keyword">pdf</span>, or <span class="keyword">epub</span>.</span>
-            <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span></dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__dir"><code class="keyword markupname xmlatt">@dir</code></dt>
-          <dd class="dd">Specifies the directionality of text: left-to-right (<span class="keyword">ltr</span>, the
-            processing default) or right-to-left (<span class="keyword">rtl</span>). The value
-              <span class="keyword">lro</span> indicates an override of normal bidirectional text
-            presentation, forcing the element into left-to-right mode; <span class="keyword">rlo</span>
+            a filtering or flagging attribute.
+          </dd>
+          <dd class="dd ddexpand">
+            The <code class="keyword markupname xmlatt">@base</code> attribute takes a
+            space-delimited set of values. However, when acting as a container for generalized
+            attributes, the attribute values will be more complex; see
+            <a
+              class="xref"
+              href="../../archSpec/base/generalization-attributes.html"
+              title="DITA provides a syntax to generalize attributes that have been specialized from the props or base attribute."
+              >Attribute generalization</a
+            >
+            for more details.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__class">
+            <code class="keyword markupname xmlatt">@class</code>
+            <em class="ph i">(not for use by authors)</em>
+          </dt>
+          <dd class="dd">
+            <em class="ph i"
+              >This attribute is not for use by authors. If an editor displays
+              <code class="keyword markupname xmlatt">@class</code> attribute values, do not edit
+              them.</em
+            >
+            The <code class="keyword markupname xmlatt">@class</code> attribute supports
+            specialization. Its predefined values allow DITA tools to work correctly with ranges of
+            related content. In a generalized DITA document the
+            <code class="keyword markupname xmlatt">@class</code> attribute value in the generalized
+            instance might differ from the default value for the
+            <code class="keyword markupname xmlatt">@class</code> attribute for the element as given
+            in the DTD or schema. See
+            <a
+              class="xref"
+              href="../../archSpec/base/specialization-class-attribute.html"
+              title="The specialization hierarchy of each DITA element is declared as the value of the class attribute. The class attribute provides a mapping from the current name of the element to its more general equivalents, but it also can provide a mapping from the current name to more specialized equivalents. All specialization-aware processing can be defined in terms of class attribute values."
+              >class attribute rules and syntax</a
+            >
+            for more information. This attribute is specified on every element except for the
+            <code class="keyword markupname xmlelement">&lt;dita&gt;</code> container element. It is
+            always specified with a default value, which varies for each element.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__conaction">
+            <code class="keyword markupname xmlatt">@conaction</code>
+          </dt>
+          <dd class="dd">
+            This attribute enables users to push content into a new location. Allowable values are
+            <span class="keyword">mark</span>, <span class="keyword">pushafter</span>,
+            <span class="keyword">pushbefore</span>, <span class="keyword">pushreplace</span>, and
+            <span class="keyword">-dita-use-conref-target</span>. See
+            <a
+              class="xref"
+              href="theconactionattribute.html"
+              title="The conaction attribute allows users to push content from one topic into another. It causes the conref attribute to work in reverse, so that the content is pushed from the current topic into another, rather than pulled from another topic into the current one. Allowable values for conaction are: pushafter, pushbefore, pushreplace, mark, and -dita-use-conref-target."
+              >The conaction attribute</a
+            >
+            for examples and details about the syntax.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__conkeyref">
+            <code class="keyword markupname xmlatt">@conkeyref</code>
+          </dt>
+          <dd class="dd">
+            Allows the conref feature to operate using a key instead of a URI. See
+            <a
+              class="xref"
+              href="theconkeyrefattribute.html"
+              title="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
+              >The conkeyref attribute</a
+            >
+            for more details about the syntax and behaviors.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__conref">
+            <code class="keyword markupname xmlatt">@conref</code>
+          </dt>
+          <dd class="dd">
+            This attribute is used to reference an ID on content that can be reused. See
+            <a
+              class="xref"
+              href="theconrefattribute.html"
+              title="The conref attribute is used to reference content that can be reused. It allows reuse of DITA elements, including topic or map level elements."
+              >The conref attribute</a
+            >
+            for examples and details about the syntax.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__conrefend">
+            <code class="keyword markupname xmlatt">@conrefend</code>
+          </dt>
+          <dd class="dd">
+            The <code class="keyword markupname xmlatt">@conrefend</code> attribute is used when
+            reusing a range of elements through
+            <code class="keyword markupname xmlatt">@conref</code>. The syntax is the same as for
+            the <code class="keyword markupname xmlatt">@conref</code> attribute; see
+            <a
+              class="xref"
+              href="theconrefendattribute.html"
+              title="The conrefend attribute is used when referencing a range of elements with the conref mechanism. The conref or conkeyref attribute references the first element in the range, while conrefend references the last element in the range."
+              >The conrefend attribute</a
+            >
+            for examples.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__deliveryTarget">
+            <code class="keyword markupname xmlatt">@deliveryTarget</code>
+            <em class="ph i">(specialized attribute)</em>
+          </dt>
+          <dd class="dd">
+            <span class="ph"
+              >The intended delivery target of the content, for example,
+              <span class="keyword">html</span>, <span class="keyword">pdf</span>, or
+              <span class="keyword">epub</span>.</span
+            >
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__dir">
+            <code class="keyword markupname xmlatt">@dir</code>
+          </dt>
+          <dd class="dd">
+            Specifies the directionality of text: left-to-right (<span class="keyword">ltr</span>,
+            the processing default) or right-to-left (<span class="keyword">rtl</span>). The value
+            <span class="keyword">lro</span> indicates an override of normal bidirectional text
+            presentation, forcing the element into left-to-right mode;
+            <span class="keyword">rlo</span>
             overrides normal rules to force right-to-left presentation. Allowable values are
-              <span class="keyword">ltr</span>, <span class="keyword">rtl</span>, <span class="keyword">lro</span>,
-              <span class="keyword">rlo</span>, and <span class="keyword">-dita-use-conref-target</span>. See <a class="xref" href="../../archSpec/base/diratt.html" title="The dir attribute provides instructions to processors about how bi-directional text is rendered.">The dir attribute</a> for more information.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__id"><code class="keyword markupname xmlatt">@id</code></dt>
-          <dd class="dd">An anchor point. This ID is the target for references by <code class="keyword markupname xmlatt">@href</code> and
-              <code class="keyword markupname xmlatt">@conref</code> attributes and for external applications that refer to DITA
-            content. This attribute is defined with the XML data type NMTOKEN, except where noted
-            for specific elements within the language reference. See <a class="xref" href="../../archSpec/base/id.html" title="The id attribute assigns an identifier to DITA elements so that the elements can be referenced.">ID attribute</a> for more details.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__importance"><code class="keyword markupname xmlatt">@importance</code></dt>
-          <dd class="dd">A range of values that describe an importance or priority attributed to an element.
-            For example, in steps of a task, the attribute indicates whether a step is optional or
+            <span class="keyword">ltr</span>, <span class="keyword">rtl</span>,
+            <span class="keyword">lro</span>, <span class="keyword">rlo</span>, and
+            <span class="keyword">-dita-use-conref-target</span>. See
+            <a
+              class="xref"
+              href="../../archSpec/base/diratt.html"
+              title="The dir attribute provides instructions to processors about how bi-directional text is rendered."
+              >The dir attribute</a
+            >
+            for more information.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__id">
+            <code class="keyword markupname xmlatt">@id</code>
+          </dt>
+          <dd class="dd">
+            An anchor point. This ID is the target for references by
+            <code class="keyword markupname xmlatt">@href</code> and
+            <code class="keyword markupname xmlatt">@conref</code> attributes and for external
+            applications that refer to DITA content. This attribute is defined with the XML data
+            type NMTOKEN, except where noted for specific elements within the language reference.
+            See
+            <a
+              class="xref"
+              href="../../archSpec/base/id.html"
+              title="The id attribute assigns an identifier to DITA elements so that the elements can be referenced."
+              >ID attribute</a
+            >
+            for more details.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__importance">
+            <code class="keyword markupname xmlatt">@importance</code>
+          </dt>
+          <dd class="dd">
+            A range of values that describe an importance or priority attributed to an element. For
+            example, in steps of a task, the attribute indicates whether a step is optional or
             required. This attribute is not used for DITAVAL-based filtering or flagging;
             applications might use the importance value to highlight elements. Allowable values are:
-              <span class="keyword">obsolete</span>, <span class="keyword">deprecated</span>,
-              <span class="keyword">optional</span>, <span class="keyword">default</span>, <span class="keyword">low</span>,
-              <span class="keyword">normal</span>, <span class="keyword">high</span>, <span class="keyword">recommended</span>,
-              <span class="keyword">required</span>, <span class="keyword">urgent</span>, and
-              <span class="keyword">-dita-use-conref-target</span>. </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__otherprops"><code class="keyword markupname xmlatt">@otherprops</code>
-            <em class="ph i">(specialized attribute)</em></dt>
-          <dd class="dd">This attribute can be used for any other properties that might be needed to describe
-            an audience, or to provide selection criteria for the element. Alternatively, the
-              <code class="keyword markupname xmlatt">@props</code> attribute <span class="ph">can</span> be specialized to provide a new metadata
-            attribute instead of using the general <code class="keyword markupname xmlatt">@otherprops</code> attribute. <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+            <span class="keyword">obsolete</span>, <span class="keyword">deprecated</span>,
+            <span class="keyword">optional</span>, <span class="keyword">default</span>,
+            <span class="keyword">low</span>, <span class="keyword">normal</span>,
+            <span class="keyword">high</span>, <span class="keyword">recommended</span>,
+            <span class="keyword">required</span>, <span class="keyword">urgent</span>, and
+            <span class="keyword">-dita-use-conref-target</span>.
           </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__outputclass"><code class="keyword markupname xmlatt">@outputclass</code></dt>
-          <dd class="dd">Names a role that the element is playing. The role must be consistent with the basic
+
+          <dt class="dt dlterm" id="univ-atts__otherprops">
+            <code class="keyword markupname xmlatt">@otherprops</code>
+            <em class="ph i">(specialized attribute)</em>
+          </dt>
+          <dd class="dd">
+            This attribute can be used for any other properties that might be needed to describe an
+            audience, or to provide selection criteria for the element. Alternatively, the
+            <code class="keyword markupname xmlatt">@props</code> attribute
+            <span class="ph">can</span> be specialized to provide a new metadata attribute instead
+            of using the general
+            <code class="keyword markupname xmlatt">@otherprops</code> attribute.
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__outputclass">
+            <code class="keyword markupname xmlatt">@outputclass</code>
+          </dt>
+          <dd class="dd">
+            Names a role that the element is playing. The role must be consistent with the basic
             semantic and expectations for the element. In particular, the
-              <code class="keyword markupname xmlatt">@outputclass</code> attribute can be used for styling during output
-            processing; HTML output will typically preserve <code class="keyword markupname xmlatt">@outputclass</code> for CSS
-            processing. </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__platform"><code class="keyword markupname xmlatt">@platform</code>
-            <em class="ph i">(specialized attribute)</em></dt>
-          <dd class="dd">Indicates operating system and hardware. <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+            <code class="keyword markupname xmlatt">@outputclass</code> attribute can be used for
+            styling during output processing; HTML output will typically preserve
+            <code class="keyword markupname xmlatt">@outputclass</code> for CSS processing.
           </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__product"><code class="keyword markupname xmlatt">@product</code>
-            <em class="ph i">(specialized attribute)</em></dt>
-          <dd class="dd">Contains the name of the product to which the element applies. <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+
+          <dt class="dt dlterm" id="univ-atts__platform">
+            <code class="keyword markupname xmlatt">@platform</code>
+            <em class="ph i">(specialized attribute)</em>
+          </dt>
+          <dd class="dd">
+            Indicates operating system and hardware.
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
           </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__props"><code class="keyword markupname xmlatt">@props</code></dt>
-          <dd class="dd">Root attribute from which new metadata attributes can be specialized. <span class="ph">This is a property
-                                        attribute which supports conditional processing for
-                                        filtering or flagging.</span>
-            <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+
+          <dt class="dt dlterm" id="univ-atts__product">
+            <code class="keyword markupname xmlatt">@product</code>
+            <em class="ph i">(specialized attribute)</em>
+          </dt>
+          <dd class="dd">
+            Contains the name of the product to which the element applies.
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
           </dd>
-          <dd class="dd ddexpand">The <code class="keyword markupname xmlatt">@props</code> attribute takes a space-delimited set of values. However,
-            when acting as a container for generalized attributes, the attribute values will be more
-            complex; see <a class="xref" href="../../archSpec/base/generalization-attributes.html" title="DITA provides a syntax to generalize attributes that have been specialized from the props or base attribute.">Attribute generalization</a> for more
-            details.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__rev"><code class="keyword markupname xmlatt">@rev</code></dt>
-          <dd class="dd">Indicates a revision level of an element that identifies when the element was added or
+
+          <dt class="dt dlterm" id="univ-atts__props">
+            <code class="keyword markupname xmlatt">@props</code>
+          </dt>
+          <dd class="dd">
+            Root attribute from which new metadata attributes can be specialized.
+            <span class="ph"
+              >This is a property attribute which supports conditional processing for filtering or
+              flagging.</span
+            >
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
+          </dd>
+          <dd class="dd ddexpand">
+            The <code class="keyword markupname xmlatt">@props</code> attribute takes a
+            space-delimited set of values. However, when acting as a container for generalized
+            attributes, the attribute values will be more complex; see
+            <a
+              class="xref"
+              href="../../archSpec/base/generalization-attributes.html"
+              title="DITA provides a syntax to generalize attributes that have been specialized from the props or base attribute."
+              >Attribute generalization</a
+            >
+            for more details.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__rev">
+            <code class="keyword markupname xmlatt">@rev</code>
+          </dt>
+          <dd class="dd">
+            Indicates a revision level of an element that identifies when the element was added or
             modified. It can be used to flag outputs when it matches a run-time parameter; it cannot
-            be used for filtering. It is not sufficient to be used for version control. <span class="ph">If no value is
-                                        specified, but the attribute is specified on an ancestor
-                                        within a map or within the related-links section, the value
-                                        will cascade from the closest ancestor.</span>
+            be used for filtering. It is not sufficient to be used for version control.
+            <span class="ph"
+              >If no value is specified, but the attribute is specified on an ancestor within a map
+              or within the related-links section, the value will cascade from the closest
+              ancestor.</span
+            >
           </dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__status"><code class="keyword markupname xmlatt">@status</code></dt>
-          <dd class="dd">The modification status of the current element. Allowable values are:
-              <span class="keyword">new</span>, <span class="keyword">changed</span>, <span class="keyword">deleted</span>,
-              <span class="keyword">unchanged</span>, and <span class="keyword">-dita-use-conref-target</span>.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__translate"><code class="keyword markupname xmlatt">@translate</code></dt>
-          <dd class="dd">Indicates whether the content of the element should be translated or not. Allowable
+
+          <dt class="dt dlterm" id="univ-atts__status">
+            <code class="keyword markupname xmlatt">@status</code>
+          </dt>
+          <dd class="dd">
+            The modification status of the current element. Allowable values are:
+            <span class="keyword">new</span>, <span class="keyword">changed</span>,
+            <span class="keyword">deleted</span>, <span class="keyword">unchanged</span>, and
+            <span class="keyword">-dita-use-conref-target</span>.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__translate">
+            <code class="keyword markupname xmlatt">@translate</code>
+          </dt>
+          <dd class="dd">
+            Indicates whether the content of the element should be translated or not. Allowable
             values are <span class="keyword">yes</span>, <span class="keyword">no</span>, and
-              <span class="keyword">-dita-use-conref-target</span>. See <a class="xref" href="../../non-normative/elementsMerged.html" title="This topic contains a list of all OASIS DITA elements that are available in the edition. It includes recommendations on how to present the element type to translators, whether the element contents are likely to be suitable for translation, and whether the element has attributes whose values are likely to be suitable for translation. Examples of content that is not suitable for translation include code fragments and mailing addresses.">Element-by-element recommendations for translators</a> for suggested processing defaults for
-            each element.</dd>
-        
-        
-          <dt class="dt dlterm" id="univ-atts__xml-lang"><code class="keyword markupname xmlatt">@xml:lang</code></dt>
-          <dd class="dd">Specifies the language of the element content. The <code class="keyword markupname xmlatt">@xml:lang</code> attribute
-            and its values are described in the XML Recommendation at <a class="xref" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" target="_blank" rel="external noopener">http://www.w3.org/TR/REC-xml/#sec-lang-tag</a>. Allowable values are language
-            tokens or the null string.</dd>
-        
-      </dl>
-    </section>
- </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/attributes/attributes.html" title="This section collects commonly used attributes, with common definitions. If an element uses a different definition, or narrows the scope of, an otherwise common attribute, it will be called out in the topic that defines the element.">Attributes</a></div></div></nav></article></main>
+            <span class="keyword">-dita-use-conref-target</span>. See
+            <a
+              class="xref"
+              href="../../non-normative/elementsMerged.html"
+              title="This topic contains a list of all OASIS DITA elements that are available in the edition. It includes recommendations on how to present the element type to translators, whether the element contents are likely to be suitable for translation, and whether the element has attributes whose values are likely to be suitable for translation. Examples of content that is not suitable for translation include code fragments and mailing addresses."
+              >Element-by-element recommendations for translators</a
+            >
+            for suggested processing defaults for each element.
+          </dd>
+
+          <dt class="dt dlterm" id="univ-atts__xml-lang">
+            <code class="keyword markupname xmlatt">@xml:lang</code>
+          </dt>
+          <dd class="dd">
+            Specifies the language of the element content. The
+            <code class="keyword markupname xmlatt">@xml:lang</code> attribute and its values are
+            described in the XML Recommendation at
+            <a
+              class="xref"
+              href="http://www.w3.org/TR/REC-xml/#sec-lang-tag"
+              target="_blank"
+              rel="external noopener"
+              >http://www.w3.org/TR/REC-xml/#sec-lang-tag</a
+            >. Allowable values are language tokens or the null string.
+          </dd>
+        </dl>
+      </section>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/attributes/attributes.html"
+            title="This section collects commonly used attributes, with common definitions. If an element uses a different definition, or narrows the scope of, an otherwise common attribute, it will be called out in the topic that defines the element."
+            >Attributes</a
+          >
+        </div>
+      </div>
+      <div class="linklist relconcepts">
+        <strong>Related concepts</strong><br />
+        <ul class="linklist">
+          <li class="linklist">
+            <a
+              class="link"
+              href="../../archSpec/base/specialization.html"
+              title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. This facilitates interchange of conforming DITA content and ensures a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing."
+              >Specialization</a
+            >
+          </li>
+          <li class="linklist">
+            <a
+              class="link"
+              href="../../archSpec/base/dtd-coding-attribute-domains.html"
+              title="The vocabulary modules that define attribute domains have additional coding requirements. The module must include a parameter entity for the new attribute, which can be referenced in document-type shells, as well as a text entity that specifies the contribution to the specializations attribute for the attribute domain."
+              >DTD: Coding requirements for attribute domain modules</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </article>
+</main>

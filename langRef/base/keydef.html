@@ -3,72 +3,218 @@
 layout: base
 title: 'keydef'
 description: 'A key definition provides a simple way to define a key without making
-    the definition itself a part of rendered content.'
+  the definition itself a part of rendered content.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;keydef&gt;</code></h1>
-  
-  
-<div class="body refbody"><p class="shortdesc">A key definition provides a simple way to define a key without making
-    the definition itself a part of rendered content.</p>
-    <section class="section" id="keydef__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <div class="div">
-        <p class="p">The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is a convenience element. It is equivalent to
-          a <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element with <code class="keyword markupname xmlatt">@processing-role</code> set to
-            <span class="keyword">resource-only</span>. </p>
-        <p class="p">Attributes defaulted on the <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element ensure that key
-          definitions do not appear in the TOC, do not add extra links, and are not rendered as
-          topics.</p>
-      </div>
-      <p class="p">The key definition component is a convenience component. It is equivalent
-        to a topic reference component element with <code class="keyword markupname xmlatt">@processing-role</code> set to
-          <span class="keyword">resource-only</span>. Attributes defaulted on the key definition component
-        ensure that key definitions do not appear in the TOC, do not add extra links, and are not
-        rendered as topics.</p>
-    </section>
-<section class="section" id="keydef__specialization-hierarchy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
+    </h1>
 
-<p class="p">The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is specialized from
-<code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It is defined in the mapgroup-domain module.</p>
-</section>
-<section class="section" id="keydef__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <div class="sectiondiv" id="keydef__d1262e63">
-        <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__linkatts">Link-relationship attributes</a> (with a
-          narrowed definition of <code class="keyword markupname xmlatt">@href</code>, given below), <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__commonmapatts">Common map attributes</a> (with a narrowed definition of
-            <code class="keyword markupname xmlatt">@processing-role</code>, given below), <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__topicrefatts">Topicref-element attributes</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."><code class="keyword markupname xmlatt">@keyref</code></a>, and the attributes defined below.</p>
-        <p class="p">The following attributes are available on this element: <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__linkatts">Link-relationship attributes</a> (with a narrowed definition of
-            <code class="keyword markupname xmlatt">@href</code>, given below), <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__localizationatts">Localization attributes</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__metadataatts">Metadata attributes</a>, <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__class"><code class="keyword markupname xmlatt">@class</code></a>, and <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__outputclass"><code class="keyword markupname xmlatt">@outputclass</code></a>.</p>
-        <dl class="dl">
-          
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@keys</code>
-              <span class="ph">(REQUIRED)</span></dt>
-            <dd class="dd">Specifies the required key. Otherwise, the attribute is the same as that described
-              in <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/thekeysattribute.html" title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the keys attribute. Each key definition introduces an identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both.">The keys attribute</a>.</dd>
-          
-          
+    <div class="body refbody">
+      <p class="shortdesc">
+        A key definition provides a simple way to define a key without making the definition itself
+        a part of rendered content.
+      </p>
+      <section class="section" id="keydef__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <div class="div">
+          <p class="p">
+            The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is a
+            convenience element. It is equivalent to a
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element with
+            <code class="keyword markupname xmlatt">@processing-role</code> set to
+            <span class="keyword">resource-only</span>.
+          </p>
+          <p class="p">
+            Attributes defaulted on the
+            <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element ensure that
+            key definitions do not appear in tables of contents, do not add extra links, and are not
+            rendered as topics.
+          </p>
+        </div>
+        <p class="p">
+          The key definition component is a convenience component. It is equivalent to a topic
+          reference component element with
+          <code class="keyword markupname xmlatt">@processing-role</code> set to
+          <span class="keyword">resource-only</span>. Attributes defaulted on the key definition
+          component ensure that key definitions do not appear in the TOC, do not add extra links,
+          and are not rendered as topics.
+        </p>
+      </section>
+      <section class="section" id="keydef__specialization-hierarchy">
+        <h2 class="title sectiontitle">Specialization hierarchy</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is
+          specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
+          is defined in the mapgroup-domain module.
+        </p>
+      </section>
+      <section class="section" id="keydef__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <div class="sectiondiv" id="keydef__d1318e63">
+          <p class="p">
+            The following attributes are available on this element:
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+              title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+              >Universal attribute group</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__linkatts"
+              >Link-relationship attributes</a
+            >
+            (with a narrowed definition of <code class="keyword markupname xmlatt">@href</code>,
+            given below),
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__commonmapatts"
+              >Common map attributes</a
+            >
+            (with a narrowed definition of
+            <code class="keyword markupname xmlatt">@processing-role</code>, given below),
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__topicrefatts"
+              >Topicref-element attributes</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/thekeyrefattribute.html"
+              title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
+              ><code class="keyword markupname xmlatt">@keyref</code></a
+            >, and the attributes defined below.
+          </p>
+          <p class="p">
+            The following attributes are available on this element:
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__linkatts"
+              >Link-relationship attributes</a
+            >
+            (with a narrowed definition of <code class="keyword markupname xmlatt">@href</code>,
+            given below),
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__localizationatts"
+              >Localization attributes</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__metadataatts"
+              >Metadata attributes</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__class"
+              ><code class="keyword markupname xmlatt">@class</code></a
+            >, and
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html#univ-atts__outputclass"
+              ><code class="keyword markupname xmlatt">@outputclass</code></a
+            >.
+          </p>
+          <dl class="dl">
+            <dt class="dt dlterm">
+              <code class="keyword markupname xmlatt">@keys</code>
+              <span class="ph">(REQUIRED)</span>
+            </dt>
+            <dd class="dd">
+              Specifies the required key. Otherwise, the attribute is the same as that described in
+              <a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../langRef/attributes/thekeysattribute.html"
+                title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the keys attribute. Each key definition introduces an identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both."
+                >The keys attribute</a
+              >.
+            </dd>
+
             <dt class="dt dlterm"><code class="keyword markupname xmlatt">@href</code></dt>
-            <dd class="dd">Specifies the referenced resource. In the case of a key definition for variable
-              text, this attribute might be omitted. See <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/thehrefattribute.html" title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource.">The href attribute</a> for
-              detailed information on supported values and processing implications.
-              References
-              to non-DITA content need to use the <code class="keyword markupname xmlatt">@format</code> attribute to identify the
-              kind of resource.</dd>
-          
-          
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@processing-role</code></dt>
-            <dd class="dd">Specifies the role that the resource plays in processing. By default, this is set to
-                <span class="keyword">resource-only</span>. Otherwise, the definition matches the one in <a class="xref" href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__commonmapatts">Common map attributes</a>.</dd>
-          
-        </dl>
-      </div>
-    </section>
-<div class="example" id="keydef__example"><h2 class="title sectiontitle">Example</h2>
-<p class="p">The following code sample shows several different types of key definitions:</p>
-      <pre class="pre codeblock"><code>&lt;map&gt;
+            <dd class="dd">
+              Specifies the referenced resource. In the case of a key definition for variable text,
+              this attribute might be omitted. See
+              <a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../langRef/attributes/thehrefattribute.html"
+                title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
+                >The href attribute</a
+              >
+              for detailed information on supported values and processing implications. References
+              to non-DITA content need to use the
+              <code class="keyword markupname xmlatt">@format</code> attribute to identify the kind
+              of resource.
+            </dd>
+
+            <dt class="dt dlterm">
+              <code class="keyword markupname xmlatt">@processing-role</code>
+            </dt>
+            <dd class="dd">
+              Specifies the role that the resource plays in processing. By default, this is set to
+              <span class="keyword">resource-only</span>. Otherwise, the definition matches the one
+              in
+              <a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__commonmapatts"
+                >Common map attributes</a
+              >.
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <div class="example" id="keydef__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">The following code sample shows several different types of key definitions:</p>
+        <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Possible keys for use in the DITA specification&lt;/title&gt;
   &lt;!-- Key definition #1--&gt;
   &lt;keydef keys="dita-tc" scope="external" format="html"
@@ -86,15 +232,38 @@ index: '../../toc.html'
     &lt;/topicmeta&gt;
   &lt;/keydef&gt;
 &lt;/map&gt;</code></pre>
-      <ol class="ol">
-        <li class="li">The first <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element defines a key that links to a Web
-          page. It contains link text; it also specifies the necessary <code class="keyword markupname xmlatt">@scope</code> and
-            <code class="keyword markupname xmlatt">@format</code> attributes, so that authors do not need to include them when
-          they reference this key.</li>
-        <li class="li">The second <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element defines a key for a local DITA topic
-          about addressing in DITA; that topic is available to resolve link text.</li>
-        <li class="li">The third <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element defines a text-only key that specifies
-          the current DITA version number.</li>
-      </ol></div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/mapgroup-d.html" title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup">Mapgroup domain elements</a></div></div></nav></article></main>
+        <ol class="ol" id="keydef__ol_ud1_l2w_bpb">
+          <li class="li">
+            The first <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element
+            defines a key that links to a Web page. It contains link text; it also specifies the
+            necessary <code class="keyword markupname xmlatt">@scope</code> and
+            <code class="keyword markupname xmlatt">@format</code> attributes, so that authors do
+            not need to include them when they reference this key.
+          </li>
+          <li class="li">
+            The second <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element
+            defines a key for a local DITA topic about addressing in DITA; that topic is available
+            to resolve link text.
+          </li>
+          <li class="li">
+            The third <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element
+            defines a text-only key that specifies the current DITA version number.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/mapgroup-d.html"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            >Mapgroup domain elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

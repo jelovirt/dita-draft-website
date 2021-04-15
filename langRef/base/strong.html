@@ -3,44 +3,130 @@
 layout: base
 title: 'strong'
 description: 'Strong text is considered to be important or serious, or has some form of
-        urgency.'
+  urgency.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;strong&gt;</code></h1>
-    
-    
-    <div class="body refbody"><p class="shortdesc">Strong text is considered to be important or serious, or has some form of
-        urgency.</p>
-        <section class="section" id="strong__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-            
-            <p class="p">Use this only when a more semantically appropriate alternative is not available. <span class="ph">For example, for a specific warning, consider using
-                    something from the hazard statement domain, such as
-                        <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code>.</span></p>
-        </section>
-        <section class="section" id="strong__rendering-expectations"><h2 class="title sectiontitle">Rendering expectations</h2>
-            
-            <p class="p">The <code class="keyword markupname xmlelement">&lt;strong&gt;</code> element is typically rendered using a bold.</p>
-        </section>
-        <section class="section" id="strong__specialization-hierarchy"><h2 class="title sectiontitle">Specialization hierarchy</h2>
-            
-            <p class="p">The <code class="keyword markupname xmlelement">&lt;strong&gt;</code> element is specialized from
-                    <code class="keyword markupname xmlelement">&lt;ph&gt;</code>. It is defined in the emphasis-domain module.</p>
-        </section>
-        <section class="section" id="strong__attributes"><h2 class="title sectiontitle">Attributes</h2>
-            
-            <p class="p">The following attributes are available
-                                on this element: <a class="xref" href="../../common/../langRef/attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a>.</p>
-        </section>
-        <div class="example" id="strong__example"><h2 class="title sectiontitle">How &lt;strong&gt; can be used in context</h2>
-            
-            <p class="p">The following code sample shows how <code class="keyword markupname xmlelement">&lt;strong&gt;</code> can be used to
-                highlight an important detail.</p>
-            <pre class="pre codeblock"><code>&lt;p&gt;Your doctor prescribed this medicine to treat an infection.
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;strong&gt;</code>
+    </h1>
+
+    <div class="body refbody">
+      <p class="shortdesc">
+        Strong text is considered to be important or serious, or has some form of urgency.
+      </p>
+      <section class="section" id="strong__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          Use this only when a more semantically appropriate alternative is not available.
+          <span class="ph"
+            >For example, for a specific warning, consider using something from the hazard statement
+            domain, such as
+            <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code>.</span
+          >
+        </p>
+      </section>
+      <section class="section" id="strong__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;strong&gt;</code> element is typically
+          rendered using a bold.
+        </p>
+      </section>
+      <section class="section" id="strong__specialization-hierarchy">
+        <h2 class="title sectiontitle">Specialization hierarchy</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;strong&gt;</code> element is
+          specialized from <code class="keyword markupname xmlelement">&lt;ph&gt;</code>. It is
+          defined in the emphasis-domain module.
+        </p>
+      </section>
+      <section class="section" id="strong__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../../common/../langRef/attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >.
+        </p>
+      </section>
+      <div class="example" id="strong__example">
+        <h2 class="title sectiontitle">How &lt;strong&gt; can be used in context</h2>
+
+        <p class="p">
+          The following code sample shows how
+          <code class="keyword markupname xmlelement">&lt;strong&gt;</code> can be used to highlight
+          an important detail.
+        </p>
+        <pre
+          class="pre codeblock"
+        ><code>&lt;p&gt;Your doctor prescribed this medicine to treat an infection.
 It is important that you <strong class="ph b">&lt;strong&gt;take all of the medicine&lt;/strong&gt;</strong> 
 as described.&lt;/p&gt;</code></pre>
-            
-        </div>
+      </div>
     </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/emphasis-domain.html" title="The emphasis elements are used to emphasize text that is important or serious.">Emphasis domain elements</a></div></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/emphasis-domain.html"
+            title="The emphasis elements are used to emphasize text that is important or serious."
+            >Emphasis domain elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

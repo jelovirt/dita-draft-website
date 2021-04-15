@@ -2,54 +2,141 @@
 # Generated from DITA source
 layout: base
 title: 'navref'
-description: 'A navigation reference is a reference to another map which is preserved as a transcluding
-    link in the result deliverable rather than resolved when the deliverable is produced. Output
-    formats that support such linking can integrate the referenced resource when displaying the
-    referencing map to an end user. '
+description:
+  'A navigation reference is a reference to another map which is preserved as a transcluding
+  link in the result deliverable rather than resolved when the deliverable is produced. Output
+  formats that support such linking can integrate the referenced resource when displaying the
+  referencing map to an end user. '
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-<h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;navref&gt;</code></h1>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;navref&gt;</code>
+    </h1>
 
-  
-<div class="body refbody"><p class="shortdesc">A navigation reference is a reference to another map which is preserved as a transcluding
-    link in the result deliverable rather than resolved when the deliverable is produced. Output
-    formats that support such linking can integrate the referenced resource when displaying the
-    referencing map to an end user. </p>
-    <section class="section" id="navref__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <p class="p">The <code class="keyword markupname xmlelement">&lt;navref&gt;</code> element is intended as a reference to a navigation
-        resource that can be resolved at rendering time. It allows for maps to be published into a
-        help system where the referenced navigation is published independently (or may not be
-        avilable at all). If available, the referenced navigation can then be resolved at render
-        time within a help system.</p>
-      
-      <div class="p">In order to include another map directly without depending on the output format or help
-        system, use a <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element with the <code class="keyword markupname xmlatt">@format</code>
-        attribute set to <code class="ph codeph">ditamap</code>. The effect is similar to using a
-          <code class="keyword markupname xmlatt">@conref</code> attribute. For example, the following markup represents a literal
-        inclusion of the map
-        <span class="ph filepath">other.ditamap</span>:<pre class="pre codeblock"><code>&lt;topicref href="other.ditamap" format="ditamap"/&gt;</code></pre></div>
-    </section>
-    <section class="section" id="navref__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p" id="navref__universal-outputclass">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html" title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes.">Universal attribute group</a> and the attribute
-        defined below.</p>
-      <dl class="dl">
-        
+    <div class="body refbody">
+      <p class="shortdesc">
+        A navigation reference is a reference to another map which is preserved as a transcluding
+        link in the result deliverable rather than resolved when the deliverable is produced. Output
+        formats that support such linking can integrate the referenced resource when displaying the
+        referencing map to an end user.
+      </p>
+      <section class="section" id="navref__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;navref&gt;</code> element is intended
+          as a reference to a navigation resource that can be resolved at rendering time. It allows
+          for maps to be published into a help system where the referenced navigation is published
+          independently (or may not be avilable at all). If available, the referenced navigation can
+          then be resolved at render time within a help system.
+        </p>
+
+        <div class="p">
+          In order to include another map directly without depending on the output format or help
+          system, use a <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element
+          with the <code class="keyword markupname xmlatt">@format</code> attribute set to
+          <code class="ph codeph">ditamap</code>. The effect is similar to using a
+          <code class="keyword markupname xmlatt">@conref</code> attribute. For example, the
+          following markup represents a literal inclusion of the map
+          <span class="ph filepath">other.ditamap</span>:
+          <pre
+            class="pre codeblock"
+          ><code>&lt;topicref href="other.ditamap" format="ditamap"/&gt;</code></pre>
+        </div>
+      </section>
+      <section class="section" id="navref__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p" id="navref__universal-outputclass">
+          The following attributes are available on this element:
+          <a
+            class="xref"
+            href="../attributes/universalAttributes.html"
+            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
+            >Universal attribute group</a
+          >
+          and the attribute defined below.
+        </p>
+        <dl class="dl">
           <dt class="dt dlterm"><code class="keyword markupname xmlatt">@mapref</code></dt>
-          <dd class="dd">Specifies the URI of the map file or non-DITA resource to be referenced. It might
-            reference a DITA map or a resource that is appropriate for a target help system. <span class="ph">For example, it could reference an XML TOC file for use with
-              Eclipse help.</span>
+          <dd class="dd">
+            Specifies the URI of the map file or non-DITA resource to be referenced. It might
+            reference a DITA map or a resource that is appropriate for a target help system.
+            <span class="ph"
+              >For example, it could reference an XML TOC file for use with Eclipse help.</span
+            >
           </dd>
-        
-      </dl>
-    </section>
-<div class="example" id="navref__example"><h2 class="title sectiontitle">Example</h2><p class="p">In the following code sample, the map titled "MyComponent tasks" references the maps
-          <span class="ph filepath">othermap2.ditamap</span> and <span class="ph filepath">othermap3.ditamap</span>.</p><pre class="pre codeblock"><code>&lt;map title="MyComponent tasks"&gt;
+        </dl>
+      </section>
+      <div class="example" id="navref__example">
+        <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          In the following code sample, the map titled "MyComponent tasks" references the maps
+          <span class="ph filepath">othermap2.ditamap</span> and
+          <span class="ph filepath">othermap3.ditamap</span>.
+        </p>
+        <pre class="pre codeblock"><code>&lt;map title="MyComponent tasks"&gt;
  &lt;navref mapref="../com.example.plugin.xml.doc/othermap1.ditamap"/&gt;
  &lt;navref mapref="../com.example.plugin.xml.doc/othermap2.ditamap"/&gt;
-&lt;/map&gt;</code></pre></div>
-</div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-map-elements.html" title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog.">Basic map elements</a></div></div></nav></article></main>
+&lt;/map&gt;</code></pre>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/basic-map-elements.html"
+            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog."
+            >Basic map elements</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>

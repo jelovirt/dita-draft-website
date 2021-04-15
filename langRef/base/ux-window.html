@@ -3,122 +3,236 @@
 layout: base
 title: 'ux-window'
 description: 'The ux-window element provides specifications for a window or
-    viewport in which a user assistance topic or web page can be displayed. The window or viewport
-    can be referenced by the resourceid element associated with a topic or
-      topicref element.'
+  viewport in which a user assistance topic or web page can be displayed. The window or viewport
+  can be referenced by the resourceid element associated with a topic or
+  topicref element.'
 index: '../../toc.html'
 ---
 
-<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/determining-effective-attribute-values.html">Determining effective attribute values</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, and constraints </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
-  <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;ux-window&gt;</code></h1>
-  
-  
-  <div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element provides specifications for a window or
-    viewport in which a user assistance topic or web page can be displayed. The window or viewport
-    can be referenced by the <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element associated with a topic or
-      <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.</p>
-    <section class="section" id="ux-window__usage-information"><h2 class="title sectiontitle">Usage information</h2>
-      
-      <p class="p">The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element can be used anywhere within a map. If more
-        than one <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element in a map has the same
-          <code class="keyword markupname xmlatt">@name</code> attribute, the first window specification in document order with
-        that <code class="keyword markupname xmlatt">@name</code> attribute is used.</p>
-    </section>
-    <section class="section" id="ux-window__attributes"><h2 class="title sectiontitle">Attributes</h2>
-      
-      <p class="p">The following attributes are available on this element: <a class="xref" href="../attributes/universalAttributes.html#univ-atts__idatts">ID attributes</a>, <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts">Metadata attributes</a>, <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class">class (not for use by authors)</a>, and the attributes
-        defined below.</p>
-      <dl class="dl">
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-name"><code class="keyword markupname xmlatt">@name</code>
-            <span class="ph">(REQUIRED)</span></dt>
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code>
+    </h1>
+
+    <div class="body refbody">
+      <p class="shortdesc">
+        The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element provides
+        specifications for a window or viewport in which a user assistance topic or web page can be
+        displayed. The window or viewport can be referenced by the
+        <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element associated
+        with a topic or <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.
+      </p>
+      <section class="section" id="ux-window__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element can be
+          used anywhere within a map. If more than one
+          <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element in a map has
+          the same <code class="keyword markupname xmlatt">@name</code> attribute, the first window
+          specification in document order with that
+          <code class="keyword markupname xmlatt">@name</code> attribute is used.
+        </p>
+      </section>
+      <section class="section" id="ux-window__attributes">
+        <h2 class="title sectiontitle">Attributes</h2>
+
+        <p class="p">
+          The following attributes are available on this element:
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__idatts"
+            >ID attributes</a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts"
+            >Metadata attributes</a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class"
+            >class (not for use by authors)</a
+          >, and the attributes defined below.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="ux-window__uxatt-name">
+            <code class="keyword markupname xmlatt">@name</code> <span class="ph">(REQUIRED)</span>
+          </dt>
           <dd class="dd">The value used to refer to this window definition.</dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-top"><code class="keyword markupname xmlatt">@top</code></dt>
-          <dd class="dd">The top position of the target help window, whether relative to the calling window or
+
+          <dt class="dt dlterm" id="ux-window__uxatt-top">
+            <code class="keyword markupname xmlatt">@top</code>
+          </dt>
+          <dd class="dd">
+            The top position of the target help window, whether relative to the calling window or to
+            the entire display. The value of this attribute is a real number optionally followed by
+            a unit of measure from the set of pc, pt, px, in, cm, mm, em (picas, points, pixels,
+            inches, centimeters, millimeters, and ems respectively). The default unit is px
+            (pixels).
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-left">
+            <code class="keyword markupname xmlatt">@left</code>
+          </dt>
+          <dd class="dd">
+            The left position of the target help window, whether relative to the calling window or
             to the entire display. The value of this attribute is a real number optionally followed
             by a unit of measure from the set of pc, pt, px, in, cm, mm, em (picas, points, pixels,
             inches, centimeters, millimeters, and ems respectively). The default unit is px
             (pixels).
-            </dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-left"><code class="keyword markupname xmlatt">@left</code></dt>
-          <dd class="dd">The left position of the target help window, whether relative to the calling window or
-            to the entire display. The value of this attribute is a real number optionally followed
-            by a unit of measure from the set of pc, pt, px, in, cm, mm, em (picas, points, pixels,
-            inches, centimeters, millimeters, and ems respectively). The default unit is px
-            (pixels).
-            </dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-height"><code class="keyword markupname xmlatt">@height</code></dt>
-          <dd class="dd">The height of the window. The value of this attribute is a real number optionally
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-height">
+            <code class="keyword markupname xmlatt">@height</code>
+          </dt>
+          <dd class="dd">
+            The height of the window. The value of this attribute is a real number optionally
             followed by a unit of measure from the set of pc, pt, px, in, cm, mm, em (picas, points,
             pixels, inches, centimeters, millimeters, and ems respectively). The default unit is px
             (pixels).
-            </dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-width"><code class="keyword markupname xmlatt">@width</code></dt>
-          <dd class="dd">The width of the window. The value of this attribute is a real number optionally
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-width">
+            <code class="keyword markupname xmlatt">@width</code>
+          </dt>
+          <dd class="dd">
+            The width of the window. The value of this attribute is a real number optionally
             followed by a unit of measure from the set of pc, pt, px, in, cm, mm, em (picas, points,
             pixels, inches, centimeters, millimeters, and ems respectively). The default unit is px
             (pixels).
-            </dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-on-top"><code class="keyword markupname xmlatt">@on-top</code></dt>
-          <dd class="dd">Indicates whether the initial z-order of the target help window is on top of all
-            windows on the desktop. Allowable values are: "yes", "no", and <a class="xref" href="../attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">-dita-use-conref-target</a>. The
-            default value is "no".</dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-features"><code class="keyword markupname xmlatt">@features</code></dt>
-          <dd class="dd">A list of other features (size, position, scroll bars, etc.) of the window. Each
-            feature name and value can not contain any blank space, and each feature name and value
-            is separated by a comma or other delimiter character.</dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-relative"><code class="keyword markupname xmlatt">@relative</code></dt>
-          <dd class="dd">Indicates whether the window dimensions are relative to the calling window or the
-            entire target display. The default value is <span class="keyword">no</span>. Allowable values are: <dl class="dl">
-              
-                <dt class="dt dlterm">no</dt>
-                <dd class="dd">The window dimensions specified on this element are absolute positions; they are
-                  not relative to the calling window.</dd>
-              
-              
-                <dt class="dt dlterm">yes</dt>
-                <dd class="dd">The window dimensions specified on this element are relative to the calling
-                  window.</dd>
-              
-              
-                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                                        <dd class="dd">See <a class="xref" href="../../common/../langRef/attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
-                                
-            </dl></dd>
-        
-        
-          <dt class="dt dlterm" id="ux-window__uxatt-full-screen"><code class="keyword markupname xmlatt">@full-screen</code></dt>
-          <dd class="dd">Indicates whether the window is initially displayed in a maximized state. Allowable
-            values are: "yes", "no", and <a class="xref" href="../attributes/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">-dita-use-conref-target</a>. The default value is <span class="keyword">no</span>.</dd>
-        
-      </dl>
-    </section>
-    <div class="example" id="ux-window__example"><h2 class="title sectiontitle">Example</h2>
-      
-      <p class="p">This section shows how <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> and
-          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> work together to define and use window
-        definitions.</p>
-      <figure class="fig fignone" id="ux-window__fig_nky_ftw_3nb"><figcaption><span class="fig--title-label">Figure 1. </span>Using <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> with
-          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code></figcaption>
-        
-        <p class="p">The following code sample shows how a window with a name of "help" is defined in the map.
-          The window name is later referenced by the <code class="keyword markupname xmlatt">@ux-windowref</code> attribute on the
-            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element.</p>
-        <pre class="pre codeblock"><code>&lt;map title="Widget Help"&gt;
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-on-top">
+            <code class="keyword markupname xmlatt">@on-top</code>
+          </dt>
+          <dd class="dd">
+            Indicates whether the initial z-order of the target help window is on top of all windows
+            on the desktop. Allowable values are: "yes", "no", and
+            <a
+              class="xref"
+              href="../attributes/ditauseconreftarget.html"
+              title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+              >-dita-use-conref-target</a
+            >. The default value is "no".
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-features">
+            <code class="keyword markupname xmlatt">@features</code>
+          </dt>
+          <dd class="dd">
+            A list of other features (size, position, scroll bars, etc.) of the window. Each feature
+            name and value can not contain any blank space, and each feature name and value is
+            separated by a comma or other delimiter character.
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-relative">
+            <code class="keyword markupname xmlatt">@relative</code>
+          </dt>
+          <dd class="dd">
+            Indicates whether the window dimensions are relative to the calling window or the entire
+            target display. The default value is <span class="keyword">no</span>. Allowable values
+            are:
+            <dl class="dl">
+              <dt class="dt dlterm">no</dt>
+              <dd class="dd">
+                The window dimensions specified on this element are absolute positions; they are not
+                relative to the calling window.
+              </dd>
+
+              <dt class="dt dlterm">yes</dt>
+              <dd class="dd">
+                The window dimensions specified on this element are relative to the calling window.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+          </dd>
+
+          <dt class="dt dlterm" id="ux-window__uxatt-full-screen">
+            <code class="keyword markupname xmlatt">@full-screen</code>
+          </dt>
+          <dd class="dd">
+            Indicates whether the window is initially displayed in a maximized state. Allowable
+            values are: "yes", "no", and
+            <a
+              class="xref"
+              href="../attributes/ditauseconreftarget.html"
+              title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+              >-dita-use-conref-target</a
+            >. The default value is <span class="keyword">no</span>.
+          </dd>
+        </dl>
+      </section>
+      <div class="example" id="ux-window__example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          This section shows how
+          <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> and
+          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> work together to
+          define and use window definitions.
+        </p>
+        <figure class="fig fignone" id="ux-window__fig_nky_ftw_3nb">
+          <figcaption>
+            <span class="fig--title-label">Figure 1. </span>Using
+            <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> with
+            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code>
+          </figcaption>
+
+          <p class="p">
+            The following code sample shows how a window with a name of "help" is defined in the
+            map. The window name is later referenced by the
+            <code class="keyword markupname xmlatt">@ux-windowref</code> attribute on the
+            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element.
+          </p>
+          <pre class="pre codeblock"><code>&lt;map title="Widget Help"&gt;
  &lt;topicmeta&gt;
   <strong class="ph b">&lt;ux-window id="fg23" name="help" top="10" left="20" height="400" width="500" 
      features="status=yes,toolbar=no,menubar=no,location=no" relative="yes"
@@ -135,14 +249,22 @@ index: '../../toc.html'
    &lt;/topicref&gt;
 &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-      </figure>
-      <p class="p">This section shows how multiple window specifications can be defined for alternate
-        presentations.</p>
-      <figure class="fig fignone" id="ux-window__fig_tvf_jtw_3nb"><figcaption><span class="fig--title-label">Figure 2. </span>Using multiple <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> definitions</figcaption>
-        
-        <p class="p">The following code sample shows different window specifications for tablet and display
-          presentation.</p>
-        <pre class="pre codeblock"><code>&lt;map title="Puggles Help"&gt;
+        </figure>
+        <p class="p">
+          This section shows how multiple window specifications can be defined for alternate
+          presentations.
+        </p>
+        <figure class="fig fignone" id="ux-window__fig_tvf_jtw_3nb">
+          <figcaption>
+            <span class="fig--title-label">Figure 2. </span>Using multiple
+            <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> definitions
+          </figcaption>
+
+          <p class="p">
+            The following code sample shows different window specifications for tablet and display
+            presentation.
+          </p>
+          <pre class="pre codeblock"><code>&lt;map title="Puggles Help"&gt;
  &lt;topicmeta&gt;
  <strong class="ph b">&lt;ux-window id="p76" name="ux-tablet" top="1cm" left="1cm" height="4cm" width="3cm" 
     features="status=no,toolbar=no,menubar=no,location=no" relative="no"
@@ -155,7 +277,23 @@ index: '../../toc.html'
   &lt;!-- ... --&gt;
  &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-      </figure>
+        </figure>
+      </div>
     </div>
-  </div>
-<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../langRef/containers/basic-map-elements.html" title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog.">Basic map elements</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../../archSpec/base/help-systems-and-other-user-assistance.html" title="Context hook information specified in the resourceid element in the DITA map or in a DITA topic enables processors to generate the header, map, alias and other types of support files that are required to integrate the user assistance with the application. Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element.">Context hooks and window metadata for user assistance</a></li></ul></div></nav></article></main>
+    <nav role="navigation" class="related-links">
+      <div class="linklist relconcepts">
+        <strong>Related concepts</strong><br />
+        <ul class="linklist">
+          <li class="linklist">
+            <a
+              class="link"
+              href="../../archSpec/base/help-systems-and-other-user-assistance.html"
+              title="Context hook information specified in the resourceid element in the DITA map or in a DITA topic enables processors to generate the header, map, alias and other types of support files that are required to integrate the user assistance with the application. Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element."
+              >Context hooks and window metadata for user assistance</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </article>
+</main>

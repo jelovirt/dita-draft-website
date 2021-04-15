@@ -1,0 +1,335 @@
+---
+# Generated from DITA source
+layout: base
+title: 'Adding an element to the section element'
+description: 'In this scenario, a DITA architect wants to modify the content model for the
+  section element. He wants to add an optional
+  section-shortdesc element that is specialized from
+  p.'
+index: '../../toc.html'
+---
+
+<nav role="toc" class="col-lg-3">
+  <ul>
+    <li><a href="../../introduction/dita-release-overview.html">Introduction</a></li>
+    <li>
+      <a href="../../archSpec/base/dita-terminology.html"
+        >DITA terminology, notation, and conventions</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
+    <li>
+      <a href="../../archSpec/base/determining-effective-attribute-values.html"
+        >Determining effective attribute values</a
+      >
+    </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
+    <li>
+      <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
+        >Configuration, specialization, generalization, constraints, and expansion
+      </a>
+      <ul class="nav nav-list">
+        <li>
+          <a href="../../archSpec/base/ditaspecialization.html"
+            >Overview of DITA extension facilities</a
+          >
+        </li>
+        <li><a href="../../archSpec/base/configuration.html">Document-type configuration</a></li>
+        <li><a href="../../archSpec/base/specialization.html">Specialization</a></li>
+        <li><a href="../../archSpec/base/generalization.html">Generalization</a></li>
+        <li><a href="../../archSpec/base/constraints.html">Constraints</a></li>
+        <li>
+          <a href="../../archSpec/base/expansion-modules.html">Expansion modules</a>
+          <ul class="nav nav-list">
+            <li>
+              <a href="../../archSpec/base/overview-of-expansion-modules.html"
+                >Overview of expansion modules</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/expansion-module-rules.html">Expansion module rules</a>
+            </li>
+            <li>
+              <a href="../../archSpec/base/example-expansion-modules.html"
+                >Example: Expansion modules</a
+              >
+              <ul class="nav nav-list">
+                <li>
+                  <a href="../../archSpec/base/adding-an-attribute-to-certain-table-elements.html"
+                    >Adding an attribute to certain table elements</a
+                  >
+                </li>
+                <li class="active">
+                  <a href="../../archSpec/base/adding-an-element-to-the-section-element.html"
+                    >Adding an element to the section element</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/aggregating-constraint-and-expansion-modules.html"
+                    >Aggregating constraint and expansion modules</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="../../archSpec/base/coding-requirements.html"
+        >Coding practices for DITA grammar files</a
+      >
+    </li>
+    <li><a href="../../langRef/langRef-base.html">Element reference</a></li>
+    <li><a href="../../conformance/conformance.html">Conformance</a></li>
+    <li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li>
+    <li>
+      <a href="../../non-normative/aggregated-RFC-2119-statements.html"
+        >Aggregated RFC-2119 statements</a
+      >
+    </li>
+    <li>
+      <a href="../../non-normative/non-normative-information.html">Non-normative information</a>
+    </li>
+    <li><a href="../../non-normative/revision-history.html">Revision history</a></li>
+  </ul>
+</nav>
+<main role="main" class="col-lg-9">
+  <article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">
+      Adding an element to the
+      <code class="keyword markupname xmlelement">&lt;section&gt;</code> element
+    </h1>
+
+    <div class="body conbody">
+      <p class="shortdesc">
+        In this scenario, a DITA architect wants to modify the content model for the
+        <code class="keyword markupname xmlelement">&lt;section&gt;</code> element. He wants to add
+        an optional
+        <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element that is
+        specialized from <code class="keyword markupname xmlelement">&lt;p&gt;</code>.
+      </p>
+      <div class="example">
+        <p class="p">
+          To accomplish this, the DITA architect needs to create the following modules and integrate
+          them into the document-type shell:
+        </p>
+        <ul class="ul">
+          <li class="li">
+            An element specialization module that defines the
+            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element
+          </li>
+          <li class="li">
+            An expansion module that adds the
+            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element to
+            the content model for <code class="keyword markupname xmlelement">&lt;section&gt;</code>
+          </li>
+        </ul>
+        <ol class="ol">
+          <li class="li">
+            First, the DITA architect creates the entity declaration file:
+            <span class="ph filepath">sectionShortdescDomain.ent</span>
+            <pre
+              class="pre codeblock"
+            ><code>&lt;!ENTITY sectionShortdesc-d-p-expansion "section-shortdesc"&gt;
+
+&lt;!ENTITY % section-shortdesc "section-shortdesc"&gt;</code></pre>
+            <div class="note note note_note">
+              <span class="note__title">Note:</span> This entity file declares a
+              <code class="keyword markupname parameterentity"
+                >%sectionShortdesc-d-p-expansion;</code
+              >
+              entity, not
+              <code class="keyword markupname parameterentity">%sectionShortdesc-d-p;</code>,
+              indicating that the expansion nature of this domain. The content author wants to
+              control exactly where the element is allowed; he does not want to allow it everywhere
+              that <code class="keyword markupname xmlelement">&lt;p&gt;</code> is allowed.
+            </div>
+          </li>
+          <li class="li">
+            Then the DITA architect creates the <span class="ph filepath">.mod</span> file that
+            defines the content model and attributes for
+            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code>:
+            <span class="ph filepath">sectionShortdescDomain.mod</span>
+            <pre
+              class="pre codeblock"
+            ><code>&lt;!ENTITY % section-shortdesc.content "(%para.cnt;)*"&gt;
+&lt;!ENTITY % section-shortdesc.attributes "%univ-atts;"&gt;
+
+&lt;!ELEMENT section-shortdesc %section-shortdesc.content;&gt;
+&lt;!ATTLIST section-shortdesc %section-shortdesc.attributes;&gt;
+
+&lt;!ATTLIST section-shortdesc    class CDATA "+ topic/p sectionShortdesc-d/section-shortdesc"&gt;</code></pre>
+          </li>
+          <li class="li">
+            Next, the content architect modifies the document-type shell to integrate the domain
+            modules:
+            <pre
+              class="pre codeblock"
+            ><code>&lt;!-- ============================================================= --&gt;
+&lt;!--             DOMAIN ENTITY DECLARATIONS                        --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!-- ... other domains ... --&gt;
+<strong class="ph b">
+&lt;!ENTITY % sectionShortdesc-d-dec
+  PUBLIC "-//ACME//ENTITIES DITA Section Short Description Domain//EN"
+         "sectionShortdescDomain.ent"
+&gt;%sectionShortdesc-d-dec;</strong>
+
+&lt;!-- ... other DTD content ... --&gt;
+
+&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN ELEMENT INTEGRATION                 --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!-- ... other domains ... --&gt;
+<strong class="ph b">
+&lt;!ENTITY % sectionShortdesc-d-def
+  PUBLIC "-//ACME//ELEMENTS DITA Section Short Description Domain//EN"
+         "sectionShortdescDomain.mod"
+&gt;%sectionShortdesc-d-def;
+</strong></code></pre>
+            <p class="p">
+              At this point, the new domain is integrated into the topic document-type shell.
+              However, the new element is not added to the content model for
+              <code class="keyword markupname xmlelement">&lt;section&gt;</code>.
+            </p>
+          </li>
+          <li class="li">
+            Next, the DITA architect creates an expansion module that adds the
+            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element to
+            the content model of <code class="keyword markupname xmlelement">&lt;section&gt;</code>:
+            <span class="ph filepath">acme-SectionExpansion.mod</span>
+            <pre
+              class="pre codeblock"
+            ><code>&lt;!-- Declares the entities referenced in the modified content  --&gt;
+&lt;!-- model.                                                       --&gt;
+
+&lt;!ENTITY % dl "dl"&gt;
+&lt;!ENTITY % div "div"&gt;
+&lt;!ENTITY % fig "fig"&gt;
+&lt;!ENTITY % image "image"&gt;
+&lt;!ENTITY % lines "lines"&gt;
+&lt;!ENTITY % lq "lq"&gt;
+&lt;!ENTITY % note "note"&gt;
+&lt;!ENTITY % object "object"&gt;
+&lt;!ENTITY % ol "ol"&gt;
+&lt;!ENTITY % p "p"&gt;
+&lt;!ENTITY % pre "pre"&gt;
+&lt;!ENTITY % simpletable "simpletable"&gt;
+&lt;!ENTITY % sl "sl"&gt;
+&lt;!ENTITY % table "table"&gt;
+&lt;!ENTITY % ul "ul"&gt;
+&lt;!ENTITY % cite "cite"&gt;
+&lt;!ENTITY % include "include"&gt;
+&lt;!ENTITY % keyword "keyword"&gt;
+&lt;!ENTITY % ph "ph"&gt;
+&lt;!ENTITY % q "q"&gt;
+&lt;!ENTITY % term "term"&gt;
+&lt;!ENTITY % text "text"&gt;
+&lt;!ENTITY % tm "tm"&gt;
+&lt;!ENTITY % xref "xref"&gt;
+&lt;!ENTITY % state "state"&gt;
+&lt;!ENTITY % data "data"&gt;
+&lt;!ENTITY % data-about "data-about"&gt;
+&lt;!ENTITY % foreign "foreign"&gt;
+&lt;!ENTITY % unknown "unknown"&gt;
+&lt;!ENTITY % sectiondiv "sectiondiv"&gt;
+&lt;!ENTITY % title "title"&gt;
+&lt;!ENTITY % draft-comment "draft-comment"&gt;
+&lt;!ENTITY % fn "fn"&gt;
+&lt;!ENTITY % indexterm "indexterm"&gt;
+&lt;!ENTITY % required-cleanup "required-cleanup"&gt;
+
+&lt;!-- Defines the modified content model for &lt;section&gt;.       --&gt;
+
+&lt;!ENTITY % section.content
+              "(#PCDATA |
+               %dl; |
+               %div; |
+               %fig; |
+               %image; |
+               %lines; |
+               %lq; |
+               %note; |
+               %object; |
+               %ol; |
+               %p; |
+               %pre; |
+               %simpletable; |
+               %sl; |
+               %table; |
+               %ul; |
+               %cite; |
+               %include; |
+               %keyword; |
+               %ph; |
+               %q; |
+               %term; |
+               %text; |
+               %tm; |
+               %xref; |
+               %state; |
+               %data; |
+               %data-about; |
+               %foreign; |
+               %unknown; |
+               %sectiondiv; |
+               %title; |
+               %draft-comment; |
+               %fn; |
+               %indexterm; |
+               %required-cleanup; <strong class="ph b">|
+               %sectionShortdesc-d-p-expansion;</strong>)*"
+&gt;
+</code></pre>
+            <div class="note note note_note">
+              <span class="note__title">Note:</span> The DITA architect needed to explicitly declare
+              all the elements, rather than using the parameter entity used in the definition of
+              <code class="keyword markupname xmlelement">&lt;section&gt;</code>:
+              <code class="keyword markupname parameterentity">%section.cnt;</code>. Because the
+              element-configuration modules are integrated into the document-type shell before the
+              base grammar modules, none of the parameter entities that used in the base DITA
+              vocabulary modules are available.
+            </div>
+          </li>
+          <li class="li">
+            Finally, the DITA architect integrates the expansion module into the document-type
+            shell:
+            <pre
+              class="pre codeblock"
+            ><code>&lt;!-- ============================================================= --&gt;
+&lt;!--                    ELEMENT-TYPE CONFIGURATION INTEGRATION              --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!ENTITY % acmeSection-def
+  PUBLIC "-//ACME//ELEMENTS DITA Section Mix-in//EN"
+         "acme-SectionMixin.mod"
+&gt;%acmeSection-def;
+</code></pre>
+          </li>
+          <li class="li">
+            After updating the <span class="ph filepath">catalog.xml</span> file to include the new
+            domain modules and the expansion module, the work is done.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../archSpec/base/example-expansion-modules.html"
+            title="This section of the specification contains examples and scenarios. They illustrate a variety of ways that expansion modules can be used; they also provide examples of the DTD coding requirements for expansion modules and how expansion modules are integrated into document-type shells."
+            >Example: Expansion modules</a
+          >
+        </div>
+      </div>
+    </nav>
+  </article>
+</main>
