@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'related-links'
-description: 'The (related-links element contains …. This element follows the
-  body of the topic.'
+description:
+  'Related links are a group of references to other topics or external information related
+  to the current topic.'
 index: '../../toc.html'
 ---
 
@@ -56,66 +57,53 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        The (<code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element
-        contains …. This element follows the body of the topic.
+        Related links are a group of references to other topics or external information related to
+        the current topic.
       </p>
       <section class="section" id="related-links__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
         <p class="p">
-          After a topic is processed into its final output form, the related links usually are
-          displayed at the end of the topic, although some Web-based help systems might display them
-          in a separate navigation frame.
+          Related links usually are displayed at the end of the topic, although some Web-based help
+          systems might display them in a separate navigation frame.
         </p>
         <p class="p">
           Links specified within the
           <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element typically
-          are displayed together with the links that are generated based on the map context.
+          are displayed together with any links that are generated based on the map context.
         </p>
-      </section>
-      <section class="section" id="related-links__processing-expectations">
-        <h2 class="title sectiontitle">Processing expectations</h2>
-
         <p class="p">
-          The following lists contains processing expectations for the
-          <code class="keyword markupname xmlelement">&lt;related-link&gt;</code> element:
+          PDF or print-oriented output commonly ignores hierarchical links such as those with roles
+          of ancestor, parent, child, descendant, next, previous, or sibling.
         </p>
-        <ol class="ol">
-          <li class="li">
-            Links within a
-            <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element appear in
-            the order defined, while those outside of a
-            <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> might be sorted and
-            displayed in a different order or location (based upon their role, target, importance,
-            or other qualifiers).
-          </li>
-          <li class="li">
-            PDF or print-oriented output typically ignores hierarchical links such as those with
-            roles of ancestor, parent, child, descendant, next, previous, or sibling, although this
-            behavior is not required.
-          </li>
-        </ol>
       </section>
       <section class="section" id="related-links__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
-            >Link-relationship attributes</a
-          >
-          (apart from <code class="keyword markupname xmlatt">@href</code>), and
-          <a
-            class="xref"
-            href="../attributes/theroleattribute.html"
-            title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time."
-            >The role and otherrole attributes</a
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@format</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@scope</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@type</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-role"
+            ><code class="keyword markupname xmlatt">@role</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-otherrole"
+            ><code class="keyword markupname xmlatt">@otherrole</code></a
           >.
         </p>
       </section>
@@ -124,9 +112,10 @@ index: '../../toc.html'
         <p class="p">
           The following code sample show how the
           <code class="keyword markupname xmlelement">&lt;related-link&gt;</code> element is used to
-          specify links to Web sites that always will be relevant to the topic:
+          specify links to external information that always will be relevant to the topic:
         </p>
-        <pre class="pre codeblock"><code>&lt;related-links scope="external" format="html"&gt;
+        <pre class="pre codeblock"><code>&lt;related-links 
+    scope="external" format="html"&gt;
   &lt;link href="http://www.example.org"&gt;
     &lt;linktext&gt;Example 1&lt;/linktext&gt;
   &lt;/link&gt;

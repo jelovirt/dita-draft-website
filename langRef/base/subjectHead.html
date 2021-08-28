@@ -86,63 +86,49 @@ index: '../../toc.html'
       <section class="section" id="subjectHead__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
-        <div class="p">
+        <p class="p">
           The following attributes are available on this element:
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >,
           <a
             class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >. This element also uses <code class="keyword markupname xmlatt">@processing-role</code>,
-          <code class="keyword markupname xmlatt">@toc</code>, and narrowed definitions of
-          <code class="keyword markupname xmlatt">@collection-type</code> and
-          <code class="keyword markupname xmlatt">@linking</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
-            >Common map attributes</a
+            href="../attributes/commonAttributes.html#common-atts__attr-processing-role"
+            ><code class="keyword markupname xmlatt">@processing-role</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-toc"
+            ><code class="keyword markupname xmlatt">@toc</code></a
+          >,
+          <a
+            class="xref"
+            href="../attributes/commonAttributes.html#common-atts__attr-collection-type"
+            ><code class="keyword markupname xmlatt">@collection-type</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-linking"
+            ><code class="keyword markupname xmlatt">@linking</code></a
           >.
-          <dl class="dl">
-            <dt class="dt dlterm" id="subjectHead__collection-type">
-              <code class="keyword markupname xmlatt">@collection-type</code>
-            </dt>
-            <dd class="dd">
-              Collection types describe how links relate to each other. The processing default is
-              "unordered", although no default is specified in the DTD or Schema. Allowable values
-              for <code class="keyword markupname xmlatt">@collection-type</code> on this element
-              are:
-              <dl class="dl">
-                <dt class="dt dlterm">unordered</dt>
-                <dd class="dd">Indicates that the order of the child topics is not significant.</dd>
-
-                <dt class="dt dlterm">sequence</dt>
-                <dd class="dd">
-                  Indicates that the order of the child topics is significant; output processors
-                  will typically link between them in order.
-                </dd>
-
-                <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-                <dd class="dd">
-                  See
-                  <a
-                    class="xref"
-                    href="../../common/../langRef/attributes/ditauseconreftarget.html"
-                    title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-                    >Using the -dita-use-conref-target value</a
-                  >
-                  for more information.
-                </dd>
-              </dl>
-            </dd>
-
-            <dt class="dt dlterm" id="subjectHead__linking">
-              <code class="keyword markupname xmlatt">@linking</code>
-            </dt>
-            <dd class="dd">
-              Defines some specific linking characteristics of subject topics. "normal" is the only
-              valid value, and is specified as the default in the DTD, XSD Schema, and RELAX NG
-              implementations. When attribute values cascade, this causes a linking value of
-              "normal" to cascade to the subjects.
-            </dd>
-          </dl>
+        </p>
+        <div class="p attr-exception" id="subjectHead__attr-exception">
+          For this element:
+          <ul class="ul" id="subjectHead__ul_pz3_w3r_ppb">
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@collection-type</code> attribute has an
+              expected processing default value of <span class="keyword">unordered</span>, although
+              this value is not defaulted in the grammar files. This element limits the available
+              values for <code class="keyword markupname xmlatt">@collection-type</code> to
+              <span class="keyword">unordered</span>, <span class="keyword">sequence</span>, and
+              <span class="keyword">-dita-use-conref-target</span>.
+            </li>
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@linking</code> has a default value of
+              <span class="keyword">normal</span>, and no other values are valid.
+            </li>
+          </ul>
         </div>
       </section>
       <div class="example" id="subjectHead__example">

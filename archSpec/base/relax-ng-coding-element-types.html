@@ -1,7 +1,7 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'RELAX NG: Coding requirements for element type declarations'
+title: 'RELAX NG: Coding requirements for element-type declarations'
 description: 'This topic covers general coding requirements for element types in structural and
   element-domain vocabulary modules.'
 index: '../../toc.html'
@@ -60,7 +60,7 @@ index: '../../toc.html'
             </li>
             <li class="active">
               <a href="../../archSpec/base/relax-ng-coding-element-types.html"
-                >RELAX NG: Coding requirements for element type declarations</a
+                >RELAX NG: Coding requirements for element-type declarations</a
               >
             </li>
             <li>
@@ -79,8 +79,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/relax-ng-coding-constraint-modules.html"
-                >RELAX NG: Coding requirements for constraint modules</a
+              <a
+                href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html"
+                >RELAX NG: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -104,7 +105,7 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">
-      RELAX NG: Coding requirements for element type declarations
+      RELAX NG: Coding requirements for element-type declarations
     </h1>
 
     <div class="body conbody">
@@ -147,7 +148,7 @@ index: '../../toc.html'
               <code class="ph codeph"><var class="keyword varname">tagname</var>.element</code>
               pattern.
             </p>
-            <div class="div">
+            <div class="example">
               <p class="p">For example:</p>
               <pre class="pre codeblock"><code>&lt;div&gt;
   &lt;a:documentation&gt;ELEMENT TYPE NAME PATTERNS&lt;/a:documentation&gt;
@@ -197,7 +198,7 @@ index: '../../toc.html'
                 Defines the complete content model for the element
                 <var class="keyword varname">tagname</var>. The content model pattern can be
                 overridden in
-                <span class="ph">element-configuration modules (constraints and expansion)</span>.
+                <span class="ph">element-configuration modules (constraint and expansion)</span>.
               </dd>
 
               <dt class="dt dlterm">
@@ -208,7 +209,7 @@ index: '../../toc.html'
                 <var class="keyword varname">tagname</var>, except for
                 <code class="keyword markupname xmlatt">@class</code>. The attribute list
                 declaration can be overridden in
-                <span class="ph">element-configuration modules (constraints and expansion)</span>.
+                <span class="ph">element-configuration modules (constraint and expansion)</span>.
               </dd>
 
               <dt class="dt dlterm">
@@ -222,10 +223,7 @@ index: '../../toc.html'
                 <code class="ph codeph"><var class="keyword varname">tagname</var>.content</code>
                 and
                 <code class="ph codeph"><var class="keyword varname">tagname</var>.attlist</code>
-                patterns. In OASIS grammar files, the
-                <code class="keyword markupname xmlatt">@longName</code> attribute in the DITA
-                architecture namespace is also used to help enable generation of DTD and XSD grammar
-                files.
+                patterns.
               </dd>
 
               <dt class="dt dlterm">
@@ -240,7 +238,7 @@ index: '../../toc.html'
                 pattern.
               </dd>
             </dl>
-            <div class="div">
+            <div class="example">
               <p class="p">
                 The following example shows the declaration for the
                 <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element,
@@ -264,9 +262,6 @@ index: '../../toc.html'
       <strong class="ph b">&lt;define name="topichead.attributes"&gt;
 </strong>        &lt;optional&gt;
           &lt;attribute name="keys"/&gt;
-        &lt;/optional&gt;
-        &lt;optional&gt;
-          &lt;attribute name="copy-to"/&gt;
         &lt;/optional&gt;
         &lt;ref name="topicref-atts"/&gt;
         &lt;ref name="univ-atts"/&gt;

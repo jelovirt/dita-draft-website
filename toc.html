@@ -276,7 +276,7 @@
                       >
                     </li>
                     <li class="topicref">
-                      <a href="archSpec/base/example-subjectScheme-extension-upwards.dita.html"
+                      <a href="archSpec/base/example-subjectScheme-extension-upwards.html"
                         >Example: Extending a subject scheme upwards</a
                       >
                     </li>
@@ -419,7 +419,23 @@
           <a href="archSpec/base/ditaaddressing.html">DITA addressing</a>
           <ul>
             <li class="topicref"><a href="archSpec/base/id.html">ID attribute</a></li>
-            <li class="topicref"><a href="archSpec/base/dita-linking.html">DITA linking</a></li>
+            <li class="topicref">
+              <a href="archSpec/base/dita-linking.html">DITA linking</a>
+              <ul>
+                <li class="topicref">
+                  <a href="archSpec/base/theformatattribute.html">The format attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/thehrefattribute.html">The href attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/thescopeattribute.html">The scope attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/thetypeattribute.html">The type attribute</a>
+                </li>
+              </ul>
+            </li>
             <li class="topicref">
               <a href="archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a>
             </li>
@@ -431,11 +447,22 @@
                     >Core concepts for working with keys</a
                   >
                 </li>
-                <li class="topicref"><a href="archSpec/base/keyScopes.html">Key scopes</a></li>
+                <li class="topicref">
+                  <a href="archSpec/base/thekeysattribute.html"
+                    >Setting key names with the keys attribute</a
+                  >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/thekeyrefattribute.html">The keyref attribute</a>
+                </li>
                 <li class="topicref">
                   <a href="archSpec/base/using-keys-for-addressing.html"
                     >Using keys for addressing</a
                   >
+                </li>
+                <li class="topicref"><a href="archSpec/base/keyScopes.html">Key scopes</a></li>
+                <li class="topicref">
+                  <a href="archSpec/base/the-key-scope-attribute.html">The keyscope attribute</a>
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/using-keys-to-address-keys-across-scopes.html"
@@ -624,6 +651,23 @@
               <ul>
                 <li class="topicref">
                   <a href="archSpec/base/conref-overview.html">Conref overview</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/theconactionattribute.html">The conaction attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/theconrefendattribute.html">The conrefend attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/theconkeyrefattribute.html">The conkeyref attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/theconrefattribute.html">The conref attribute</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/ditauseconreftarget.html"
+                    >Using the -dita-use-conref-target value</a
+                  >
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/conref-processing.html">Processing conrefs</a>
@@ -895,35 +939,30 @@
                   <ul>
                     <li class="topicref">
                       <a href="archSpec/base/example-contraints-redefine-content-model.html"
-                        >Example: Redefine the content model for the topic element</a
+                        >Example: Redefine the content model for the topic element using DTD</a
                       >
                     </li>
                     <li class="topicref">
                       <a
                         href="archSpec/base/example-contraints-redefine-content-model-attributes.html"
-                        >Example: Constrain attributes for the section element</a
+                        >Example: Constrain attributes for the section element using DTD</a
                       >
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-contraints-subset-domain.html"
-                        >Example: Constrain a domain module</a
+                        >Example: Constrain a domain module using DTD</a
                       >
                     </li>
                     <li class="topicref">
                       <a
                         href="archSpec/base/example-contraints-replace-base-element-w-domain-extensions.html"
-                        >Example: Replace a base element with the domain extensions</a
+                        >Example: Replace a base element with the domain extensions using DTD</a
                       >
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-contraints-apply-multiple-constraints.html"
-                        >Example: Apply multiple constraints to a single document-type shell</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a
-                        href="archSpec/base/example-contraints-correct-machinery-task-constraint.html"
-                        >Example: Correct the constraint for the machinery task</a
+                        >Example: Apply multiple constraints to a single document-type shell using
+                        DTD</a
                       >
                     </li>
                   </ul>
@@ -934,8 +973,32 @@
                   >
                   <ul>
                     <li class="topicref">
+                      <a href="archSpec/base/example-rng-constraints-redefine-content-model.html"
+                        >Example: Redefine the content model for the topic element using RNG</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/example-rng-constraints-redefine-content-model-attributes.html"
+                        >Example: Constrain attributes for the section element using RNG</a
+                      >
+                    </li>
+                    <li class="topicref">
                       <a href="archSpec/base/example-constrain-a-domain-using-rng.html"
-                        >Example: Constrain a domain using RNG</a
+                        >Example: Constrain a domain module using RNG</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/example-rng-constraints-replace-base-element-w-domain-extensions.html"
+                        >Example: Replace a base element with the domain extensions using RNG</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/example-rng-constraints-apply-multiple-constraints.html"
+                        >Example: Apply multiple constraints to a single document-type shell using
+                        RNG</a
                       >
                     </li>
                   </ul>
@@ -959,19 +1022,50 @@
                   >
                   <ul>
                     <li class="topicref">
-                      <a href="archSpec/base/adding-an-attribute-to-certain-table-elements.html"
-                        >Adding an attribute to certain table elements</a
+                      <a href="archSpec/base/examples-expansion-implemented-using-dtds.html"
+                        >Example: Expansion implemented using DTD</a
                       >
+                      <ul>
+                        <li class="topicref">
+                          <a href="archSpec/base/adding-an-attribute-to-certain-table-elements.html"
+                            >Example: Adding an attribute to certain table elements using DTD</a
+                          >
+                        </li>
+                        <li class="topicref">
+                          <a href="archSpec/base/adding-an-element-to-the-section-element.html"
+                            >Example: Adding an element to the section element using DTD</a
+                          >
+                        </li>
+                        <li class="topicref">
+                          <a href="archSpec/base/aggregating-constraint-and-expansion-modules.html"
+                            >Example: Aggregating constraint and expansion modules using DTD</a
+                          >
+                        </li>
+                      </ul>
                     </li>
                     <li class="topicref">
-                      <a href="archSpec/base/adding-an-element-to-the-section-element.html"
-                        >Adding an element to the section element</a
+                      <a href="archSpec/base/examples-expansion-implemented-using-rng.html"
+                        >Examples: Expansion implemented using RNG</a
                       >
-                    </li>
-                    <li class="topicref">
-                      <a href="archSpec/base/aggregating-constraint-and-expansion-modules.html"
-                        >Aggregating constraint and expansion modules</a
-                      >
+                      <ul>
+                        <li class="topicref">
+                          <a
+                            href="archSpec/base/rng-adding-an-attribute-to-certain-table-elements.html"
+                            >Example: Adding an attribute to certain table elements using RNG</a
+                          >
+                        </li>
+                        <li class="topicref">
+                          <a href="archSpec/base/rng-adding-an-element-to-the-section-element.html"
+                            >Example: Adding an element to the section element using RNG</a
+                          >
+                        </li>
+                        <li class="topicref">
+                          <a
+                            href="archSpec/base/rng-aggregating-constraint-and-expansion-modules.html"
+                            >Example: Aggregating constraint and expansion modules using RNG</a
+                          >
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
@@ -998,9 +1092,7 @@
               <a href="archSpec/base/dtd-requirements.html">DTD coding requirements</a>
               <ul>
                 <li class="topicref">
-                  <a href="archSpec/base/dtd-coding-overview.html"
-                    >DTD: Overview of coding requirements</a
-                  >
+                  <a href="archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a>
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/dtd-coding-doctype-shell.html"
@@ -1009,7 +1101,7 @@
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/dtd-coding-element-types.html"
-                    >DTD: Coding requirements for element type declarations</a
+                    >DTD: Coding requirements for element-type declarations</a
                   >
                 </li>
                 <li class="topicref">
@@ -1019,7 +1111,7 @@
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/dtd-coding-element-domains.html"
-                    >DTD: Coding requirements for element domain modules</a
+                    >DTD: Coding requirements for element-domain modules</a
                   >
                 </li>
                 <li class="topicref">
@@ -1028,13 +1120,9 @@
                   >
                 </li>
                 <li class="topicref">
-                  <a href="archSpec/base/dtd-coding-constraint-modules.html"
-                    >DTD: Coding requirements for constraint modules</a
-                  >
-                </li>
-                <li class="topicref">
-                  <a href="archSpec/base/dtd-coding-requirements-expansion-modules.html"
-                    >DTD: Coding requirements for expansion modules</a
+                  <a
+                    href="archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html"
+                    >DTD: Coding requirements for element-configuration modules</a
                   >
                 </li>
               </ul>
@@ -1054,7 +1142,7 @@
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/relax-ng-coding-element-types.html"
-                    >RELAX NG: Coding requirements for element type declarations</a
+                    >RELAX NG: Coding requirements for element-type declarations</a
                   >
                 </li>
                 <li class="topicref">
@@ -1073,8 +1161,9 @@
                   >
                 </li>
                 <li class="topicref">
-                  <a href="archSpec/base/relax-ng-coding-constraint-modules.html"
-                    >RELAX NG: Coding requirements for constraint modules</a
+                  <a
+                    href="archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html"
+                    >RELAX NG: Coding requirements for element-configuration modules</a
                   >
                 </li>
               </ul>
@@ -1141,9 +1230,6 @@
                     <li class="topicref">
                       <a href="langRef/base/longdescref.html">longdescref</a>
                     </li>
-                    <li class="topicref">
-                      <a href="langRef/base/longquoteref.html">longquoteref</a>
-                    </li>
                     <li class="topicref"><a href="langRef/base/lq.html">lq</a></li>
                     <li class="topicref"><a href="langRef/base/note.html">note</a></li>
                     <li class="topicref"><a href="langRef/base/object.html">object</a></li>
@@ -1154,7 +1240,6 @@
                     <li class="topicref"><a href="langRef/base/pre.html">pre</a></li>
                     <li class="topicref"><a href="langRef/base/q.html">q</a></li>
                     <li class="topicref"><a href="langRef/base/section.html">section</a></li>
-                    <li class="topicref"><a href="langRef/base/sectiondiv.html">sectiondiv</a></li>
                     <li class="topicref"><a href="langRef/base/sl.html">sl</a></li>
                     <li class="topicref"><a href="langRef/base/sli.html">sli</a></li>
                     <li class="topicref"><a href="langRef/base/term.html">term</a></li>
@@ -1235,8 +1320,8 @@
                     <li class="topicref"><a href="langRef/base/relcell.html">relcell</a></li>
                     <li class="topicref"><a href="langRef/base/relheader.html">relheader</a></li>
                     <li class="topicref"><a href="langRef/base/relcolspec.html">relcolspec</a></li>
-                    <li class="topicref"><a href="langRef/base/anchor.html">anchor</a></li>
                     <li class="topicref"><a href="langRef/base/keytext.html">keytext</a></li>
+                    <li class="topicref"><a href="langRef/base/ux-window.html">ux-window</a></li>
                   </ul>
                 </li>
                 <li class="topicref">
@@ -1520,66 +1605,6 @@
                 </li>
                 <li class="topicref">
                   <a href="langRef/attributes/commonAttributes.html">Common attributes</a>
-                </li>
-                <li class="topicref">
-                  <a href="langRef/attributes/complexattributedefinitions.html"
-                    >Complex attribute definitions</a
-                  >
-                  <ul>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theconactionattribute.html"
-                        >The conaction attribute</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theconrefendattribute.html"
-                        >The conrefend attribute</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theconkeyrefattribute.html"
-                        >The conkeyref attribute</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theconrefattribute.html">The conref attribute</a>
-                      <ul>
-                        <li class="topicref">
-                          <a href="langRef/attributes/ditauseconreftarget.html"
-                            >Using the -dita-use-conref-target value</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theformatattribute.html">The format attribute</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/thehrefattribute.html">The href attribute</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/thekeyrefattribute.html">The keyref attribute</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/thekeysattribute.html">The keys attribute</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/the-key-scope-attribute.html"
-                        >The keyscope attribute</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/theroleattribute.html"
-                        >The role and otherrole attributes</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/thescopeattribute.html">The scope attribute</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/attributes/thetypeattribute.html">The type attribute</a>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </li>

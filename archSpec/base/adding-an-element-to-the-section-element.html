@@ -1,10 +1,11 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Adding an element to the section element'
+title: 'Example: Adding an element to the section element using
+  DTD'
 description: 'In this scenario, a DITA architect wants to modify the content model for the
   section element. He wants to add an optional
-  section-shortdesc element that is specialized from
+  sectionDesc element that is specialized from
   p.'
 index: '../../toc.html'
 ---
@@ -57,18 +58,32 @@ index: '../../toc.html'
               >
               <ul class="nav nav-list">
                 <li>
-                  <a href="../../archSpec/base/adding-an-attribute-to-certain-table-elements.html"
-                    >Adding an attribute to certain table elements</a
+                  <a href="../../archSpec/base/examples-expansion-implemented-using-dtds.html"
+                    >Example: Expansion implemented using DTD</a
                   >
-                </li>
-                <li class="active">
-                  <a href="../../archSpec/base/adding-an-element-to-the-section-element.html"
-                    >Adding an element to the section element</a
-                  >
+                  <ul class="nav nav-list">
+                    <li>
+                      <a
+                        href="../../archSpec/base/adding-an-attribute-to-certain-table-elements.html"
+                        >Example: Adding an attribute to certain table elements using DTD</a
+                      >
+                    </li>
+                    <li class="active">
+                      <a href="../../archSpec/base/adding-an-element-to-the-section-element.html"
+                        >Example: Adding an element to the section element using DTD</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../../archSpec/base/aggregating-constraint-and-expansion-modules.html"
+                        >Example: Aggregating constraint and expansion modules using DTD</a
+                      >
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <a href="../../archSpec/base/aggregating-constraint-and-expansion-modules.html"
-                    >Aggregating constraint and expansion modules</a
+                  <a href="../../archSpec/base/examples-expansion-implemented-using-rng.html"
+                    >Examples: Expansion implemented using RNG</a
                   >
                 </li>
               </ul>
@@ -99,17 +114,16 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">
-      Adding an element to the
-      <code class="keyword markupname xmlelement">&lt;section&gt;</code> element
+      Example: Adding an element to the
+      <code class="keyword markupname xmlelement">&lt;section&gt;</code> element using DTD
     </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
         In this scenario, a DITA architect wants to modify the content model for the
         <code class="keyword markupname xmlelement">&lt;section&gt;</code> element. He wants to add
-        an optional
-        <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element that is
-        specialized from <code class="keyword markupname xmlelement">&lt;p&gt;</code>.
+        an optional <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code> element
+        that is specialized from <code class="keyword markupname xmlelement">&lt;p&gt;</code>.
       </p>
       <div class="example">
         <p class="p">
@@ -119,79 +133,51 @@ index: '../../toc.html'
         <ul class="ul">
           <li class="li">
             An element specialization module that defines the
-            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element
+            <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code> element
           </li>
           <li class="li">
             An expansion module that adds the
-            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element to
-            the content model for <code class="keyword markupname xmlelement">&lt;section&gt;</code>
+            <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code> element to the
+            content model for <code class="keyword markupname xmlelement">&lt;section&gt;</code>
           </li>
         </ul>
         <ol class="ol">
           <li class="li">
-            First, the DITA architect creates the entity declaration file:
-            <span class="ph filepath">sectionShortdescDomain.ent</span>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!ENTITY sectionShortdesc-d-p-expansion "section-shortdesc"&gt;
+            First the DITA architect creates the element specialization module. He does this in a
+            single <span class="ph filepath">.mod</span> file (<span class="ph filepath"
+              >sectionDescDomain.mod</span
+            >) that defines the parameter entity, content model, and attributes for
+            <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code>:
+            <pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 
-&lt;!ENTITY % section-shortdesc "section-shortdesc"&gt;</code></pre>
-            <div class="note note note_note">
-              <span class="note__title">Note:</span> This entity file declares a
-              <code class="keyword markupname parameterentity"
-                >%sectionShortdesc-d-p-expansion;</code
-              >
-              entity, not
-              <code class="keyword markupname parameterentity">%sectionShortdesc-d-p;</code>,
-              indicating that the expansion nature of this domain. The content author wants to
-              control exactly where the element is allowed; he does not want to allow it everywhere
-              that <code class="keyword markupname xmlelement">&lt;p&gt;</code> is allowed.
-            </div>
+&lt;!ENTITY % sectionDesc "sectionDesc"&gt;
+
+&lt;!ENTITY % sectionDesc.content "(%para.cnt;)*"&gt;
+&lt;!ENTITY % sectionDesc.attributes "%univ-atts;"&gt;
+
+&lt;!ELEMENT sectionDesc %sectionDesc.content;&gt;
+&lt;!ATTLIST sectionDesc %sectionDesc.attributes;&gt;
+
+&lt;!ATTLIST sectionDesc    class CDATA "+ topic/p sectionShortdesc-d/sectionDesc "&gt;</code></pre>
           </li>
           <li class="li">
-            Then the DITA architect creates the <span class="ph filepath">.mod</span> file that
-            defines the content model and attributes for
-            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code>:
-            <span class="ph filepath">sectionShortdescDomain.mod</span>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!ENTITY % section-shortdesc.content "(%para.cnt;)*"&gt;
-&lt;!ENTITY % section-shortdesc.attributes "%univ-atts;"&gt;
-
-&lt;!ELEMENT section-shortdesc %section-shortdesc.content;&gt;
-&lt;!ATTLIST section-shortdesc %section-shortdesc.attributes;&gt;
-
-&lt;!ATTLIST section-shortdesc    class CDATA "+ topic/p sectionShortdesc-d/section-shortdesc"&gt;</code></pre>
+            The DITA architect adds the element specialization module to the
+            <span class="ph filepath">catalog.xml</span> file.
           </li>
           <li class="li">
-            Next, the content architect modifies the document-type shell to integrate the domain
-            modules:
+            Next, the content architect modifies the document-type shell to integrate the element
+            specialization module:
             <pre
               class="pre codeblock"
             ><code>&lt;!-- ============================================================= --&gt;
-&lt;!--             DOMAIN ENTITY DECLARATIONS                        --&gt;
-&lt;!-- ============================================================= --&gt;
-
-&lt;!-- ... other domains ... --&gt;
-<strong class="ph b">
-&lt;!ENTITY % sectionShortdesc-d-dec
-  PUBLIC "-//ACME//ENTITIES DITA Section Short Description Domain//EN"
-         "sectionShortdescDomain.ent"
-&gt;%sectionShortdesc-d-dec;</strong>
-
-&lt;!-- ... other DTD content ... --&gt;
-
-&lt;!-- ============================================================= --&gt;
 &lt;!--                    DOMAIN ELEMENT INTEGRATION                 --&gt;
 &lt;!-- ============================================================= --&gt;
 
 &lt;!-- ... other domains ... --&gt;
-<strong class="ph b">
-&lt;!ENTITY % sectionShortdesc-d-def
-  PUBLIC "-//ACME//ELEMENTS DITA Section Short Description Domain//EN"
-         "sectionShortdescDomain.mod"
-&gt;%sectionShortdesc-d-def;
-</strong></code></pre>
+<strong class="ph b">&lt;!ENTITY % sectionDesc-d-def
+  PUBLIC "-//ACME//ELEMENTS DITA 2.0 Section Description Domain//EN"
+         "sectionDescDomain.mod"
+&gt;%sectionDesc-d-def;</strong></code></pre>
             <p class="p">
               At this point, the new domain is integrated into the topic document-type shell.
               However, the new element is not added to the content model for
@@ -199,14 +185,15 @@ index: '../../toc.html'
             </p>
           </li>
           <li class="li">
-            Next, the DITA architect creates an expansion module that adds the
-            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> element to
-            the content model of <code class="keyword markupname xmlelement">&lt;section&gt;</code>:
-            <span class="ph filepath">acme-SectionExpansion.mod</span>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!-- Declares the entities referenced in the modified content  --&gt;
-&lt;!-- model.                                                       --&gt;
+            Next, the DITA architect creates an expansion module (<span class="ph filepath"
+              >acme-SectionExpansion.mod</span
+            >) that adds the
+            <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code> element to the
+            content model of <code class="keyword markupname xmlelement">&lt;section&gt;</code>:
+            <pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;!-- Declares the entities referenced in the modified content  --&gt;
+&lt;!-- model.                                                    --&gt;
 
 &lt;!ENTITY % dl "dl"&gt;
 &lt;!ENTITY % div "div"&gt;
@@ -234,15 +221,14 @@ index: '../../toc.html'
 &lt;!ENTITY % xref "xref"&gt;
 &lt;!ENTITY % state "state"&gt;
 &lt;!ENTITY % data "data"&gt;
-&lt;!ENTITY % data-about "data-about"&gt;
 &lt;!ENTITY % foreign "foreign"&gt;
 &lt;!ENTITY % unknown "unknown"&gt;
-&lt;!ENTITY % sectiondiv "sectiondiv"&gt;
 &lt;!ENTITY % title "title"&gt;
 &lt;!ENTITY % draft-comment "draft-comment"&gt;
 &lt;!ENTITY % fn "fn"&gt;
 &lt;!ENTITY % indexterm "indexterm"&gt;
 &lt;!ENTITY % required-cleanup "required-cleanup"&gt;
+&lt;!ENTITY % sectionDesc "sectionDesc"&gt;
 
 &lt;!-- Defines the modified content model for &lt;section&gt;.       --&gt;
 
@@ -274,25 +260,23 @@ index: '../../toc.html'
                %xref; |
                %state; |
                %data; |
-               %data-about; |
                %foreign; |
                %unknown; |
-               %sectiondiv; |
                %title; |
                %draft-comment; |
                %fn; |
                %indexterm; |
-               %required-cleanup; <strong class="ph b">|
-               %sectionShortdesc-d-p-expansion;</strong>)*"
-&gt;
-</code></pre>
+               %required-cleanup; |
+               %sectionDesc;)*"
+&gt;</code></pre>
             <div class="note note note_note">
               <span class="note__title">Note:</span> The DITA architect needed to explicitly declare
-              all the elements, rather than using the parameter entity used in the definition of
-              <code class="keyword markupname xmlelement">&lt;section&gt;</code>:
-              <code class="keyword markupname parameterentity">%section.cnt;</code>. Because the
+              all the elements, rather than using the
+              <code class="keyword markupname parameterentity">%section.cnt;</code> parameter entity
+              used in the definition of
+              <code class="keyword markupname xmlelement">&lt;section&gt;</code>. Because the
               element-configuration modules are integrated into the document-type shell before the
-              base grammar modules, none of the parameter entities that used in the base DITA
+              base grammar modules, none of the parameter entities that are used in the base DITA
               vocabulary modules are available.
             </div>
           </li>
@@ -302,18 +286,17 @@ index: '../../toc.html'
             <pre
               class="pre codeblock"
             ><code>&lt;!-- ============================================================= --&gt;
-&lt;!--                    ELEMENT-TYPE CONFIGURATION INTEGRATION              --&gt;
+&lt;!--           ELEMENT-TYPE CONFIGURATION INTEGRATION              --&gt;
 &lt;!-- ============================================================= --&gt;
 
 &lt;!ENTITY % acmeSection-def
-  PUBLIC "-//ACME//ELEMENTS DITA Section Mix-in//EN"
-         "acme-SectionMixin.mod"
-&gt;%acmeSection-def;
-</code></pre>
+  PUBLIC "-//ACME//ELEMENTS DITA 2.0 Section Expansion//EN"
+         "acme-SectionExpansion.mod"
+&gt;%acmeSection-def;</code></pre>
           </li>
           <li class="li">
-            After updating the <span class="ph filepath">catalog.xml</span> file to include the new
-            domain modules and the expansion module, the work is done.
+            After updating the <span class="ph filepath">catalog.xml</span> file to include the
+            expansion module and testing, the work is done.
           </li>
         </ol>
       </div>
@@ -324,9 +307,9 @@ index: '../../toc.html'
           <strong>Parent topic:</strong>
           <a
             class="link"
-            href="../../archSpec/base/example-expansion-modules.html"
-            title="This section of the specification contains examples and scenarios. They illustrate a variety of ways that expansion modules can be used; they also provide examples of the DTD coding requirements for expansion modules and how expansion modules are integrated into document-type shells."
-            >Example: Expansion modules</a
+            href="../../archSpec/base/examples-expansion-implemented-using-dtds.html"
+            title="This section of the specification contains examples of extension modules implemented using DTD."
+            >Example: Expansion implemented using DTD</a
           >
         </div>
       </div>

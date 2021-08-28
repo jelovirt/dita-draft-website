@@ -93,9 +93,9 @@ index: '../../toc.html'
         <dt class="dt dlterm">XML grammars</dt>
         <dd class="dd">
           <p class="p">
-            While the DITA specification only defines coding requirements for DTD, RELAX NG, and XML
-            Schema documents, conforming DITA documents <dfn class="term RFC-2119">MAY</dfn> use
-            other document-type constraint languages, such as Schematron.
+            While the DITA specification only defines coding requirements for DTD and RELAX NG,
+            conforming DITA documents <dfn class="term RFC-2119">MAY</dfn> use other document-type
+            constraint languages, such as Schematron.
           </p>
         </dd>
 
@@ -105,7 +105,7 @@ index: '../../toc.html'
             With two exceptions, a document-type shell
             <dfn class="term RFC-2119">MUST NOT</dfn> directly define element or attribute types; it
             only includes vocabulary
-            <span class="ph">and element-configuration modules (constraints and expansions)</span>.
+            <span class="ph">and element-configuration modules (constraint and expansion)</span>.
             The exceptions to this rule are the following:
             <ul class="ul">
               <li class="li">
@@ -113,7 +113,7 @@ index: '../../toc.html'
                 <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element.
               </li>
               <li class="li">
-                RNG-based shells directly specify values for the
+                RNG-based document-type shells directly specify values for the
                 <code class="keyword markupname xmlatt">@specializations</code> attribute; these
                 values reflect the details of the attribute domains that are integrated by the
                 document-type shell.
@@ -138,7 +138,7 @@ index: '../../toc.html'
           </p>
           <p class="p">
             For example, if <span class="ph filepath">example.com</span> creates a copy of the
-            document type shell for topic, an appropriate public identifier would be
+            document-type shell for topic, an appropriate public identifier would be
             "-//EXAMPLE//DTD DITA Topic//EN", where "EXAMPLE" is the owner identifier component of
             the public identifier. An appropriate URN would be
             <span class="keyword">urn:example.com:names:dita:rng:topic.rng</span>.
@@ -153,7 +153,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/configuration.html"
-            title="Document-type configuration enables the definition of DITA document types that include only the vocabulary modules that are required for a given set of documents. There is no need to modify the vocabulary modules. Configurations are implemented as document-type shells."
+            title="Document-type configuration enables the definition of DITA document types that include only the vocabulary modules that are required for a given set of documents. There is no need to modify the vocabulary modules. Document-type configurations are implemented as document-type shells."
             >Document-type configuration</a
           >
         </div>

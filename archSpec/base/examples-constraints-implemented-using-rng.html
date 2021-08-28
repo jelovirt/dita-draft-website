@@ -2,10 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'Examples: Constraints implemented using RNG'
-description: 'This section of the specification contains examples and scenarios. They illustrate a
-  variety of ways that constraints can be used; they also provide examples of the DTD coding
-  requirements for constraints and how constraints are integrated into document-type
-  shells.'
+description: 'This section of the specification contains examples of constraints implemented using
+  RNG'
 index: '../../toc.html'
 ---
 
@@ -62,8 +60,32 @@ index: '../../toc.html'
               >
               <ul class="nav nav-list">
                 <li>
+                  <a href="../../archSpec/base/example-rng-constraints-redefine-content-model.html"
+                    >Example: Redefine the content model for the topic element using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-redefine-content-model-attributes.html"
+                    >Example: Constrain attributes for the section element using RNG</a
+                  >
+                </li>
+                <li>
                   <a href="../../archSpec/base/example-constrain-a-domain-using-rng.html"
-                    >Example: Constrain a domain using RNG</a
+                    >Example: Constrain a domain module using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-replace-base-element-w-domain-extensions.html"
+                    >Example: Replace a base element with the domain extensions using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-apply-multiple-constraints.html"
+                    >Example: Apply multiple constraints to a single document-type shell using
+                    RNG</a
                   >
                 </li>
               </ul>
@@ -98,16 +120,38 @@ index: '../../toc.html'
       Examples: Constraints implemented using RNG
     </h1>
     <p class="shortdesc">
-      This section of the specification contains examples and scenarios. They illustrate a variety
-      of ways that constraints can be used; they also provide examples of the DTD coding
-      requirements for constraints and how constraints are integrated into document-type shells.
+      This section of the specification contains examples of constraints implemented using RNG
     </p>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong
+            ><a href="../../archSpec/base/example-rng-constraints-redefine-content-model.html"
+              >Example: Redefine the content model for the topic element using RNG</a
+            ></strong
+          ><br />In this scenario, an information architect for Acme, Incorporated wants to redefine
+          the content model for the topic document type. She wants to omit the
+          <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element and make the
+          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element required; she
+          also wants to omit the
+          <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element and
+          disallow topic nesting.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a
+              href="../../archSpec/base/example-rng-constraints-redefine-content-model-attributes.html"
+              >Example: Constrain attributes for the section element using RNG</a
+            ></strong
+          ><br />In this scenario, an information architect wants to redefine the attributes for the
+          <code class="keyword markupname xmlelement">&lt;section&gt;</code> element. He wants to
+          make the <code class="keyword markupname xmlatt">@id</code> attribute required and omit
+          the <code class="keyword markupname xmlatt">@spectitle</code> attribute.
+        </li>
+        <li class="link ulchildlink">
+          <strong
             ><a href="../../archSpec/base/example-constrain-a-domain-using-rng.html"
-              >Example: Constrain a domain using RNG</a
+              >Example: Constrain a domain module using RNG</a
             ></strong
           ><br />In this scenario, an information architect wants to use only a subset of the
           elements defined in the highlighting domain. She wants to use
@@ -120,6 +164,25 @@ index: '../../toc.html'
           <code class="keyword markupname xmlelement">&lt;tt&gt;</code>, or
           <code class="keyword markupname xmlelement">&lt;u&gt;</code>. Her implementation uses RNG
           for its grammar files.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a
+              href="../../archSpec/base/example-rng-constraints-replace-base-element-w-domain-extensions.html"
+              >Example: Replace a base element with the domain extensions using RNG</a
+            ></strong
+          ><br />In this scenario, an information architect wants to remove the
+          <code class="keyword markupname xmlelement">&lt;ph&gt;</code> element but allow the
+          extensions of <code class="keyword markupname xmlelement">&lt;ph&gt;</code> that exist in
+          the highlight, programming, software, and user interface domains.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-rng-constraints-apply-multiple-constraints.html"
+              >Example: Apply multiple constraints to a single document-type shell using RNG</a
+            ></strong
+          ><br />In this scenario, an information architect wants to apply multiple constraints to a
+          document-type shell.
         </li>
       </ul>
       <div class="familylinks">

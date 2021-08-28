@@ -1,7 +1,7 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Example: Constrain a domain module'
+title: 'Example: Constrain a domain module using DTD'
 description: 'In this scenario, an information architect wants to use only a subset of the elements
   defined in the highlighting domain. She wants to use b and
   i, but not line-through,
@@ -60,35 +60,30 @@ index: '../../toc.html'
               <ul class="nav nav-list">
                 <li>
                   <a href="../../archSpec/base/example-contraints-redefine-content-model.html"
-                    >Example: Redefine the content model for the topic element</a
+                    >Example: Redefine the content model for the topic element using DTD</a
                   >
                 </li>
                 <li>
                   <a
                     href="../../archSpec/base/example-contraints-redefine-content-model-attributes.html"
-                    >Example: Constrain attributes for the section element</a
+                    >Example: Constrain attributes for the section element using DTD</a
                   >
                 </li>
                 <li class="active">
                   <a href="../../archSpec/base/example-contraints-subset-domain.html"
-                    >Example: Constrain a domain module</a
+                    >Example: Constrain a domain module using DTD</a
                   >
                 </li>
                 <li>
                   <a
                     href="../../archSpec/base/example-contraints-replace-base-element-w-domain-extensions.html"
-                    >Example: Replace a base element with the domain extensions</a
+                    >Example: Replace a base element with the domain extensions using DTD</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-contraints-apply-multiple-constraints.html"
-                    >Example: Apply multiple constraints to a single document-type shell</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../../archSpec/base/example-contraints-correct-machinery-task-constraint.html"
-                    >Example: Correct the constraint for the machinery task</a
+                    >Example: Apply multiple constraints to a single document-type shell using
+                    DTD</a
                   >
                 </li>
               </ul>
@@ -124,7 +119,9 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">Example: Constrain a domain module</h1>
+    <h1 class="title topictitle1" id="ariaid-title1">
+      Example: Constrain a domain module using DTD
+    </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
@@ -152,10 +149,13 @@ index: '../../toc.html'
             <pre
               class="pre codeblock"
             ><code>&lt;!-- ============================================================= --&gt;
-&lt;!--      CONSTRAINED HIGHLIGHTING DOMAIN ENTITIES                 --&gt;
+&lt;!--      CONSTRAINED HIGHLIGHT DOMAIN ENTITIES                    --&gt;
 &lt;!-- ============================================================= --&gt;
 
 &lt;!ENTITY % HighlightingDomain-c-ph     "b | i"                 &gt;  </code></pre>
+          </li>
+          <li class="li">
+            She adds the constraint module to the <span class="ph filepath">catalog.xml</span> file.
           </li>
           <li class="li">
             She then integrates the constraint module into her company-specific, document-type shell
@@ -167,23 +167,23 @@ index: '../../toc.html'
 &lt;!--                    DOMAIN CONSTRAINT INTEGRATION              --&gt;
 &lt;!-- ============================================================= --&gt;
 
-&lt;!ENTITY % HighlightingDomain-c-dec  
+&lt;!ENTITY % HighlightDomain-c-dec  
   PUBLIC "-//ACME//ENTITIES DITA Highlighting Domain Constraint//EN" 
-  "acme-HighlightingDomainConstraint.mod"
-&gt;%basic-HighlightingDomain-c-dec;</code></pre>
+  "acme-HighlightDomainConstraint.mod"
+&gt;%HighlightDomain-c-dec;</code></pre>
           </li>
           <li class="li">
             In the "DOMAIN EXTENSIONS" section, she replaces the parameter entity for the
             highlighting domain with the parameter entity for the constrained highlighting domain:
             <pre class="pre codeblock"><code>&lt;!ENTITY % ph           "ph |
-                         <strong class="ph b">%HighlightingDomain-c-ph;</strong> |
+                         <strong class="ph b">%HighlightDomain-c-ph;</strong> |
                          %sw-d-ph; | 
                          %ui-d-ph;
                         "&gt;</code></pre>
           </li>
           <li class="li">
-            After updating the <span class="ph filepath">catalog.xml</span> file to include the new
-            constraints file, her work is done.
+            After checking her test topic to ensure that the content model is modified as expected,
+            her work is done.
           </li>
         </ol>
       </div>
@@ -196,7 +196,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/examples-constraints.html"
-            title="This section of the specification contains examples and scenarios. They illustrate a variety of ways that constraints can be used; they also provide examples of the DTD coding requirements for constraints and how constraints are integrated into document-type shells."
+            title="This section of the specification contains examples of constraints implemented using DTD."
             >Examples: Constraints implemented using DTDs</a
           >
         </div>

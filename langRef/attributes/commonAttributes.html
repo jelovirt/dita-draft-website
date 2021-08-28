@@ -2,8 +2,7 @@
 # Generated from DITA source
 layout: base
 title: 'Common attributes'
-description: 'Many attributes and attribute groups are not used universally, but are still used
-  across many DITA elements.'
+description: 'Common attributes include attributes used on more than one base element.'
 index: '../../toc.html'
 ---
 
@@ -54,8 +53,7 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        Many attributes and attribute groups are not used universally, but are still used across
-        many DITA elements.
+        Common attributes include attributes used on more than one base element.
       </p>
       <section class="section" id="common-atts__summary">
         <h2 class="title sectiontitle">Common attribute groups</h2>
@@ -161,13 +159,14 @@ index: '../../toc.html'
             <code class="keyword markupname xmlatt">@spectitle</code>.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__topicrefatts">Topicref-element attributes</dt>
+          <dt class="dt dlterm" id="common-atts__otheratts">Other attributes (not in a group)</dt>
           <dd class="dd">
-            Includes attributes defined on
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> and on most
-            specializations of the
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element:
-            <code class="keyword markupname xmlatt">@copy-to</code>.
+            Includes attributes used in the same way on more than one base element, but otherwise
+            not grouped together: <code class="keyword markupname xmlatt">@compact</code>,
+            <code class="keyword markupname xmlatt">@duplicates</code>,
+            <code class="keyword markupname xmlatt">@role</code>,
+            <code class="keyword markupname xmlatt">@otherrole</code>, and
+            <code class="keyword markupname xmlatt">@title-role</code>.
           </dd>
         </dl>
       </section>
@@ -178,8 +177,9 @@ index: '../../toc.html'
           Common attributes, including those in the groups listed above, are defined as follows.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="common-atts__align">
-            <code class="keyword markupname xmlatt">@align</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-align">
+            <a id="common-atts__align"></a
+            ><code class="keyword markupname xmlatt">@align</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Describes the alignment of text in a table column. Allowable values are:
@@ -207,7 +207,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -223,8 +223,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__anchorref">
-            <code class="keyword markupname xmlatt">@anchorref</code>
+          <dt class="dt dlterm" id="common-atts__attr-anchorref">
+            <a id="common-atts__anchorref"></a
+            ><code class="keyword markupname xmlatt">@anchorref</code>
           </dt>
           <dd class="dd">
             Identifies a location within another map file where this map will be anchored at
@@ -236,8 +237,9 @@ index: '../../toc.html'
             <span class="ph filepath">map1.ditamap</span> is rendered for delivery.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__cascade">
-            <code class="keyword markupname xmlatt">@cascade</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-cascade">
+            <a id="common-atts__cascade"></a
+            ><code class="keyword markupname xmlatt">@cascade</code> (common map attributes)
           </dt>
           <dd class="dd">
             <p class="p">
@@ -262,8 +264,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__char">
-            <code class="keyword markupname xmlatt">@char</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-char">
+            <a id="common-atts__char"></a
+            ><code class="keyword markupname xmlatt">@char</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Specifies the character for aligning the table entry data.
@@ -288,8 +291,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__charoff">
-            <code class="keyword markupname xmlatt">@charoff</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-charoff">
+            <a id="common-atts__charoff"></a
+            ><code class="keyword markupname xmlatt">@charoff</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Specifies the horizontal offset of alignment character when
@@ -319,8 +323,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__chunk">
-            <code class="keyword markupname xmlatt">@chunk</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-chunk">
+            <a id="common-atts__chunk"></a
+            ><code class="keyword markupname xmlatt">@chunk</code> (common map attributes)
           </dt>
           <dd class="dd">
             When a set of topics is transformed using a map, the
@@ -339,8 +344,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__collection-type">
-            <code class="keyword markupname xmlatt">@collection-type</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-collection-type">
+            <a id="common-atts__collection-type"></a
+            ><code class="keyword markupname xmlatt">@collection-type</code> (common map attributes)
           </dt>
           <dd class="dd">
             Collection types describe how links relate to each other. The processing default is
@@ -367,8 +373,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__colsep">
-            <code class="keyword markupname xmlatt">@colsep</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-colsep">
+            <a id="common-atts__colsep"></a
+            ><code class="keyword markupname xmlatt">@colsep</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Column separator. A value of 0 indicates no separators; 1 indicates separators.
@@ -382,8 +389,8 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__compact">
-            <code class="keyword markupname xmlatt">@compact</code>
+          <dt class="dt dlterm" id="common-atts__attr-compact">
+            <a id="common-atts__compact"></a><code class="keyword markupname xmlatt">@compact</code>
           </dt>
           <dd class="dd">
             Indicates close vertical spacing between list items. Expanded spacing is the processing
@@ -401,7 +408,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -410,42 +417,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__copy-to">
-            <code class="keyword markupname xmlatt">@copy-to</code> (topicref-element attributes)
-          </dt>
-          <dd class="dd">
-            <p class="p">
-              Use the <code class="keyword markupname xmlatt">@copy-to</code> attribute on the
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element to provide
-              a different resource name for a particular instance of a resource referenced by the
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> (for example, to
-              separate out the different versions of the topic, rather than combining them on
-              output). If applicable, the
-              <code class="keyword markupname xmlatt">@copy-to</code> value can include path
-              information. The links and navigation associated with that instance will point to a
-              copy of the topic with the file name you specified.
-            </p>
-            <p class="p">
-              Applications <dfn class="term RFC-2119">MAY</dfn> support
-              <code class="keyword markupname xmlatt">@copy-to</code> for references to local
-              non-DITA resources.
-            </p>
-            <p class="p">
-              The <code class="keyword markupname xmlatt">@copy-to</code> attribute is not supported
-              for references to resources where the effective value for
-              <code class="keyword markupname xmlatt">@scope</code> is "peer" or "external".
-            </p>
-            <p class="p">
-              Use the <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> and
-              <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> in the
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>'s
-              <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> to provide a
-              unique name and short description for the new copy.
-            </p>
-          </dd>
-
-          <dt class="dt dlterm" id="common-atts__datatype">
-            <code class="keyword markupname xmlatt">@datatype</code> (data-element attributes)
+          <dt class="dt dlterm" id="common-atts__attr-datatype">
+            <a id="common-atts__datatype"></a
+            ><code class="keyword markupname xmlatt">@datatype</code> (data-element attributes)
           </dt>
           <dd class="dd">
             Describes the type of data contained in the
@@ -455,8 +429,9 @@ index: '../../toc.html'
             for an XML Schema datatype.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__DITAArchVersion">
-            <code class="keyword markupname xmlatt">@DITAArchVersion</code> (architectural
+          <dt class="dt dlterm" id="common-atts__attr-DITAArchVersion">
+            <a id="common-atts__DITAArchVersion"></a
+            ><code class="keyword markupname xmlatt">@DITAArchVersion</code> (architectural
             attributes)
           </dt>
           <dd class="dd">
@@ -467,8 +442,43 @@ index: '../../toc.html'
             current default is <span class="keyword">2.0</span>.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__encoding">
-            <code class="keyword markupname xmlatt">@encoding</code> (inclusion attributes)
+          <dt class="dt dlterm" id="common-atts__attr-duplicates">
+            <code class="keyword markupname xmlatt">@duplicates</code>
+          </dt>
+          <dd class="dd">
+            Specifies whether duplicate links are removed from a group of links. Duplicate links are
+            links that address the same resource using the same properties, such as link text and
+            link role. How duplicate links are determined is processor-specific. Allowable values
+            are:
+            <dl class="dl" id="common-atts__dl_ohs_fyg_ppb">
+              <dt class="dt dlterm">yes</dt>
+              <dd class="dd">Specifies that duplicate links are retained.</dd>
+
+              <dt class="dt dlterm">no</dt>
+              <dd class="dd">Specifies that duplicate links are removed.</dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+            <p class="p">
+              The suggested processing default is "yes" within
+              <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements and "no"
+              for other links.
+            </p>
+          </dd>
+
+          <dt class="dt dlterm" id="common-atts__attr-encoding">
+            <a id="common-atts__encoding"></a
+            ><code class="keyword markupname xmlatt">@encoding</code> (inclusion attributes)
           </dt>
           <dd class="dd">
             Specifies the character encoding to use when translating the character data from the
@@ -486,8 +496,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__expanse">
-            <code class="keyword markupname xmlatt">@expanse</code> (display attributes)
+          <dt class="dt dlterm" id="common-atts__attr-expanse">
+            <a id="common-atts__expanse"></a
+            ><code class="keyword markupname xmlatt">@expanse</code> (display attributes)
           </dt>
           <dd class="dd">
             Determines the horizontal placement of the element. Allowable values are:
@@ -520,7 +531,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -541,31 +552,33 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__expiry">
-            <code class="keyword markupname xmlatt">@expiry</code> (date attributes)
+          <dt class="dt dlterm" id="common-atts__attr-expiry">
+            <a id="common-atts__expiry"></a
+            ><code class="keyword markupname xmlatt">@expiry</code> (date attributes)
           </dt>
           <dd class="dd">
             The date when the information should be retired or refreshed, entered as YYYY-MM-DD,
             where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__format">
-            <code class="keyword markupname xmlatt">@format</code> (link-relationship attributes)
+          <dt class="dt dlterm" id="common-atts__attr-format">
+            <a id="common-atts__format"></a
+            ><code class="keyword markupname xmlatt">@format</code> (link-relationship attributes)
           </dt>
           <dd class="dd">
-            The <code class="keyword markupname xmlatt">@format</code> attribute identifies the
-            format of the resource being referenced. See
+            Specifies the format of the resource being referenced. See
             <a
               class="xref"
-              href="theformatattribute.html"
+              href="../../archSpec/base/theformatattribute.html"
               title="The format attribute identifies the format of the resource that is referenced. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor."
               >The format attribute</a
             >
             for details on supported values.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__frame">
-            <code class="keyword markupname xmlatt">@frame</code> (display attributes)
+          <dt class="dt dlterm" id="common-atts__attr-frame">
+            <a id="common-atts__frame"></a
+            ><code class="keyword markupname xmlatt">@frame</code> (display attributes)
           </dt>
           <dd class="dd">
             Specifies which portion of a border should surround the element. Allowable values are:
@@ -597,7 +610,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -609,30 +622,33 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__golive">
-            <code class="keyword markupname xmlatt">@golive</code> (date attributes)
+          <dt class="dt dlterm" id="common-atts__attr-golive">
+            <a id="common-atts__golive"></a
+            ><code class="keyword markupname xmlatt">@golive</code> (date attributes)
           </dt>
           <dd class="dd">
             The publication or general availability (GA) date, entered as YYYY-MM-DD, where YYYY is
             the year, MM is the month from 01 to 12, and DD is the day from 01-31.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__href">
-            <code class="keyword markupname xmlatt">@href</code> (link-relationship attributes)
+          <dt class="dt dlterm" id="common-atts__attr-href">
+            <a id="common-atts__href"></a
+            ><code class="keyword markupname xmlatt">@href</code> (link-relationship attributes)
           </dt>
           <dd class="dd">
-            Provides a reference to a resource. See
+            Specifies a reference to a resource. See
             <a
               class="xref"
-              href="thehrefattribute.html"
+              href="../../archSpec/base/thehrefattribute.html"
               title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
               >The href attribute</a
             >
             for detailed information on supported values and processing implications.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__keycol">
-            <code class="keyword markupname xmlatt">@keycol</code> (simpletable attributes)
+          <dt class="dt dlterm" id="common-atts__attr-keycol">
+            <a id="common-atts__keycol"></a
+            ><code class="keyword markupname xmlatt">@keycol</code> (simpletable attributes)
           </dt>
           <dd class="dd">
             Defines the column that contains headings for each row. No value indicates no key
@@ -640,8 +656,8 @@ index: '../../toc.html'
             vertical header.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__keyref">
-            <code class="keyword markupname xmlatt">@keyref</code>
+          <dt class="dt dlterm" id="common-atts__attr-keyref">
+            <a id="common-atts__keyref"></a><code class="keyword markupname xmlatt">@keyref</code>
           </dt>
           <dd class="dd">
             <span class="ph" id="common-atts__keyrefDescription"
@@ -649,7 +665,7 @@ index: '../../toc.html'
               reference based on a key defined within a map. See
               <a
                 class="xref"
-                href="thekeyrefattribute.html"
+                href="../../archSpec/base/thekeyrefattribute.html"
                 title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
                 >The keyref attribute</a
               >
@@ -657,14 +673,29 @@ index: '../../toc.html'
             </span>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__keyscope">
-            <code class="keyword markupname xmlatt">@keyscope</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-keys">
+            <code class="keyword markupname xmlatt">@keys</code>
+          </dt>
+          <dd class="dd">
+            Specifies one or more names for a resource. See
+            <a
+              class="xref"
+              href="../../archSpec/base/thekeysattribute.html"
+              title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the keys attribute. Each key definition introduces an identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both."
+              >Setting key names with the keys attribute</a
+            >
+            for information on using this attribute.
+          </dd>
+
+          <dt class="dt dlterm" id="common-atts__attr-keyscope">
+            <a id="common-atts__keyscope"></a
+            ><code class="keyword markupname xmlatt">@keyscope</code> (common map attributes)
           </dt>
           <dd class="dd">
             Specifies that the element marks the boundaries of a key scope. See
             <a
               class="xref"
-              href="the-key-scope-attribute.html"
+              href="../../archSpec/base/the-key-scope-attribute.html"
               title="The keyscope attribute consists of one or more space-separated key scope names. Map authors define the boundaries for key scopes by specifying the keyscope attribute on map elements, topicref elements, or elements that are specializations of map or topicref. Such elements, their contents, and any locally-scoped content referenced from within the element, are considered to be part of the scope. Keys defined within a scope are only directly referenceable from within the same scope. They can be referenced from the parent scope using the scope's name, followed by a period, followed by the key name."
               >The keyscope attribute</a
             >
@@ -672,8 +703,9 @@ index: '../../toc.html'
             <code class="keyword markupname xmlatt">@keyscope</code> attribute.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__linking">
-            <code class="keyword markupname xmlatt">@linking</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-linking">
+            <a id="common-atts__linking"></a
+            ><code class="keyword markupname xmlatt">@linking</code> (common map attributes)
           </dt>
           <dd class="dd">
             Defines some specific linking characteristics of a topic's current location in the map.
@@ -709,7 +741,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -718,13 +750,24 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__name">
-            <code class="keyword markupname xmlatt">@name</code> (data-element attributes)
+          <dt class="dt dlterm" id="common-atts__attr-name">
+            <a id="common-atts__name"></a
+            ><code class="keyword markupname xmlatt">@name</code> (data-element attributes)
           </dt>
           <dd class="dd">Defines a unique name for the object.</dd>
 
-          <dt class="dt dlterm" id="common-atts__parse">
-            <code class="keyword markupname xmlatt">@parse</code> (inclusion attributes)
+          <dt class="dt dlterm" id="common-atts__attr-otherrole">
+            <code class="keyword markupname xmlatt">@otherrole</code>
+          </dt>
+          <dd class="dd">
+            Specifies an alternate role for a link relationship when the
+            <code class="keyword markupname xmlatt">@role</code> element is set to
+            <span class="keyword">other</span>.
+          </dd>
+
+          <dt class="dt dlterm" id="common-atts__attr-parse">
+            <a id="common-atts__parse"></a
+            ><code class="keyword markupname xmlatt">@parse</code> (inclusion attributes)
           </dt>
           <dd class="dd">
             Specifies the processing expectations for the referenced resource. Processors must
@@ -773,8 +816,9 @@ index: '../../toc.html'
             </div>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__processing-role">
-            <code class="keyword markupname xmlatt">@processing-role</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-processing-role">
+            <a id="common-atts__processing-role"></a
+            ><code class="keyword markupname xmlatt">@processing-role</code> (common map attributes)
           </dt>
           <dd class="dd">
             Describes the processing role of the referenced topic. The processing default is
@@ -801,7 +845,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -810,8 +854,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__relcolwidth">
-            <code class="keyword markupname xmlatt">@relcolwidth</code> (simpletable attributes)
+          <dt class="dt dlterm" id="common-atts__attr-relcolwidth">
+            <a id="common-atts__relcolwidth"></a
+            ><code class="keyword markupname xmlatt">@relcolwidth</code> (simpletable attributes)
           </dt>
           <dd class="dd">
             Specifies the width of each column in relationship to the width of the other columns.
@@ -826,8 +871,80 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__rowsep">
-            <code class="keyword markupname xmlatt">@rowsep</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-role">
+            <code class="keyword markupname xmlatt">@role</code>
+          </dt>
+          <dd class="dd">
+            Specifies the role that a linked topic plays in relationship with the current topic.
+            <p class="p">
+              For example, in a parent/child relationship, the role would be "parent" when the
+              target is the parent of the current topic, and "child" when the target is the child of
+              the current topic. This structure can be used to sort and classify links at display
+              time.
+            </p>
+            <p class="p">
+              Allowable values for the
+              <code class="keyword markupname xmlatt">@role</code> attribute are:
+            </p>
+            <dl class="dl" id="common-atts__linkrolevalues">
+              <dt class="dt dlterm">parent</dt>
+              <dd class="dd">Indicates a link to a topic that is a parent of the current topic.</dd>
+
+              <dt class="dt dlterm">child</dt>
+              <dd class="dd">
+                Indicates a link to a direct child such as a directly nested or dependent topic.
+              </dd>
+
+              <dt class="dt dlterm">sibling</dt>
+              <dd class="dd">Indicates a link between two children of the same parent topic.</dd>
+
+              <dt class="dt dlterm">friend</dt>
+              <dd class="dd">
+                Indicates a link to a similar topic that is not necessarily part of the same
+                hierarchy.
+              </dd>
+
+              <dt class="dt dlterm">next</dt>
+              <dd class="dd">Indicates a link to the next topic in a sequence.</dd>
+
+              <dt class="dt dlterm">previous</dt>
+              <dd class="dd">Indicates a link to the previous topic in a sequence.</dd>
+
+              <dt class="dt dlterm">cousin</dt>
+              <dd class="dd">
+                Indicates a link to another topic in the same hierarchy that is not a parent, child,
+                sibling, next, or previous.
+              </dd>
+
+              <dt class="dt dlterm">ancestor</dt>
+              <dd class="dd">Indicates a link to a topic above the parent topic.</dd>
+
+              <dt class="dt dlterm">descendant</dt>
+              <dd class="dd">Indicates a link to a topic below a child topic.</dd>
+
+              <dt class="dt dlterm">other</dt>
+              <dd class="dd">
+                Indicates any other kind of relationship or role. Enter that role as the value for
+                the <code class="keyword markupname xmlatt">@otherrole</code> attribute.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
+          </dd>
+
+          <dt class="dt dlterm" id="common-atts__attr-rowsep">
+            <a id="common-atts__rowsep"></a
+            ><code class="keyword markupname xmlatt">@rowsep</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Row separator. A value of <span class="keyword">0</span> indicates no separators;
@@ -843,8 +960,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__rowheader">
-            <code class="keyword markupname xmlatt">@rowheader</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-rowheader">
+            <a id="common-atts__rowheader"></a
+            ><code class="keyword markupname xmlatt">@rowheader</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Indicates whether the entries in the respective column
@@ -883,7 +1001,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -903,8 +1021,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__scale">
-            <code class="keyword markupname xmlatt">@scale</code> (display attributes)
+          <dt class="dt dlterm" id="common-atts__attr-scale">
+            <a id="common-atts__scale"></a
+            ><code class="keyword markupname xmlatt">@scale</code> (display attributes)
           </dt>
           <dd class="dd">
             Specifies a percentage, selected from an enumerated list, that is used to resize fonts
@@ -928,15 +1047,16 @@ index: '../../toc.html'
               Allowable values are 50, 60, 70, 80, 90, 100, 110, 120, 140, 160, 180, 200, and
               <a
                 class="xref"
-                href="ditauseconreftarget.html"
+                href="../../archSpec/base/ditauseconreftarget.html"
                 title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                 >-dita-use-conref-target</a
               >. Some DITA processors or output formats might not be able to support all values.
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__scope">
-            <code class="keyword markupname xmlatt">@scope</code> (link-relationship attributes)
+          <dt class="dt dlterm" id="common-atts__attr-scope">
+            <a id="common-atts__scope"></a
+            ><code class="keyword markupname xmlatt">@scope</code> (link-relationship attributes)
           </dt>
           <dd class="dd">
             The <code class="keyword markupname xmlatt">@scope</code> attribute identifies the
@@ -946,15 +1066,16 @@ index: '../../toc.html'
             <span class="keyword">-dita-use-conref-target</span>; see
             <a
               class="xref"
-              href="thescopeattribute.html"
+              href="../../archSpec/base/thescopeattribute.html"
               title="The scope attribute identifies the closeness of the relationship between the current document and the target resource."
               >The scope attribute</a
             >
             for more information on these values.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__search">
-            <code class="keyword markupname xmlatt">@search</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-search">
+            <a id="common-atts__search"></a
+            ><code class="keyword markupname xmlatt">@search</code> (common map attributes)
           </dt>
           <dd class="dd">
             Describes whether the target is available for searching.
@@ -979,7 +1100,7 @@ index: '../../toc.html'
               <dt class="dt dlterm">
                 <a
                   class="xref"
-                  href="ditauseconreftarget.html"
+                  href="../../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >-dita-use-conref-target</a
                 >
@@ -988,8 +1109,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__specentry">
-            <code class="keyword markupname xmlatt">@specentry</code> (specialization attributes)
+          <dt class="dt dlterm" id="common-atts__attr-specentry">
+            <a id="common-atts__specentry"></a
+            ><code class="keyword markupname xmlatt">@specentry</code> (specialization attributes)
           </dt>
           <dd class="dd">
             The specialized entry attribute allows architects of specialized types to define a fixed
@@ -998,8 +1120,9 @@ index: '../../toc.html'
             for direct use by authors.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__specializations">
-            <code class="keyword markupname xmlatt">@specializations</code> (architectural
+          <dt class="dt dlterm" id="common-atts__attr-specializations">
+            <a id="common-atts__specializations"></a
+            ><code class="keyword markupname xmlatt">@specializations</code> (architectural
             attributes)
           </dt>
           <dd class="dd">
@@ -1009,16 +1132,29 @@ index: '../../toc.html'
             <code class="ph codeph">@props/audience @props/deliveryTarget @base/newBaseAtt</code>.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__spectitle">
-            <code class="keyword markupname xmlatt">@spectitle</code> (specialization attributes)
+          <dt class="dt dlterm" id="common-atts__attr-spectitle">
+            <a id="common-atts__spectitle"></a
+            ><code class="keyword markupname xmlatt">@spectitle</code> (specialization attributes)
           </dt>
           <dd class="dd">
             The specialized title attribute allows architects of specialized types to define a fixed
             or default title for a specialized element. Not intended for direct use by authors.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__toc">
-            <code class="keyword markupname xmlatt">@toc</code> (common map attributes)
+          <dt class="dt dlterm" id="common-atts__attr-title-role">
+            <code class="keyword markupname xmlatt">@title-role</code>
+          </dt>
+          <dd class="dd">
+            Specifies the role or roles fulfilled by the alternative title. Multiple roles are
+            separated by white space. Applications can define roles; the following roles are defined
+            in the specification: <span class="keyword">linking</span>,
+            <span class="keyword">navigation</span>, <span class="keyword">search</span>,
+            <span class="keyword">subtitle</span>, and <span class="keyword">hint</span>.
+          </dd>
+
+          <dt class="dt dlterm" id="common-atts__attr-toc">
+            <a id="common-atts__toc"></a><code class="keyword markupname xmlatt">@toc</code> (common
+            map attributes)
           </dt>
           <dd class="dd">
             Specifies whether a topic appears in the table of contents (TOC).
@@ -1045,7 +1181,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="ditauseconreftarget.html"
+                  href="../../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -1054,27 +1190,30 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__type">
-            <code class="keyword markupname xmlatt">@type</code> (link-relationship attributes)
+          <dt class="dt dlterm" id="common-atts__attr-type">
+            <a id="common-atts__type"></a
+            ><code class="keyword markupname xmlatt">@type</code> (link-relationship attributes)
           </dt>
           <dd class="dd">
             Describes the target of a reference. See
             <a
               class="xref"
-              href="thetypeattribute.html"
+              href="../../archSpec/base/thetypeattribute.html"
               title="The type attribute is used on linking elements to describe the target of a cross-reference. It also is used on the note element to describe the note type, as well as on several other elements for varying purposes."
               >The type attribute</a
             >
             for detailed information on supported values and processing implications.
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__value">
-            <code class="keyword markupname xmlatt">@value</code> (data-element attributes)
+          <dt class="dt dlterm" id="common-atts__attr-value">
+            <a id="common-atts__value"></a
+            ><code class="keyword markupname xmlatt">@value</code> (data-element attributes)
           </dt>
           <dd class="dd">Specifies a value associated with the current property or element.</dd>
 
-          <dt class="dt dlterm" id="common-atts__valign">
-            <code class="keyword markupname xmlatt">@valign</code> (complex table attributes)
+          <dt class="dt dlterm" id="common-atts__attr-valign">
+            <a id="common-atts__valign"></a
+            ><code class="keyword markupname xmlatt">@valign</code> (complex table attributes)
           </dt>
           <dd class="dd">
             Indicates the vertical alignment of text in a table entry (cell). Allowable values are:
@@ -1093,7 +1232,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -1110,8 +1249,9 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__xmlspace">
-            <code class="keyword markupname xmlatt">@xml:space</code>
+          <dt class="dt dlterm" id="common-atts__attr-xml:space">
+            <a id="common-atts__xmlspace"></a
+            ><code class="keyword markupname xmlatt">@xml:space</code>
           </dt>
           <dd class="dd">
             This attribute is provided on
@@ -1123,8 +1263,9 @@ index: '../../toc.html'
             authors to change or delete. When defined, it has a fixed value of "preserve".
           </dd>
 
-          <dt class="dt dlterm" id="common-atts__xmlnsditaarch">
-            <code class="keyword markupname xmlatt">@xmlns:ditaarch</code> (architectural
+          <dt class="dt dlterm" id="common-atts__attr-xmlns-ditaarch">
+            <a id="common-atts__xmlnsditaarch"></a
+            ><code class="keyword markupname xmlatt">@xmlns:ditaarch</code> (architectural
             attributes)
           </dt>
           <dd class="dd">

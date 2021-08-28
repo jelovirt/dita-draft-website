@@ -62,7 +62,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/relax-ng-coding-element-types.html"
-                >RELAX NG: Coding requirements for element type declarations</a
+                >RELAX NG: Coding requirements for element-type declarations</a
               >
             </li>
             <li>
@@ -81,8 +81,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/relax-ng-coding-constraint-modules.html"
-                >RELAX NG: Coding requirements for constraint modules</a
+              <a
+                href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html"
+                >RELAX NG: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -118,7 +119,7 @@ index: '../../toc.html'
       <p class="p">
         Because RELAX NG modules are self-integrating, RNG-based document-type shells only need to
         include vocabulary modules<span class="ph">
-          and element-configuration modules (constraints and expansion)</span
+          and element-configuration modules (constraint and expansion)</span
         >.
       </p>
       <p class="p">An RNG-based document-type shell contains the following sections:</p>
@@ -178,7 +179,7 @@ index: '../../toc.html'
           <p class="p">
             This section lists the tokens that attribute-domain
             <span class="ph">and element-configuration</span> modules contribute to the
-            <code class="keyword markupname xmlatt">@specialization</code> attribute.
+            <code class="keyword markupname xmlatt">@specializations</code> attribute.
           </p>
           <div class="p">
             For example:
@@ -205,7 +206,7 @@ index: '../../toc.html'
         <dd class="dd">
           <p class="p">
             This section of the document-type shell contains includes for
-            <span class="ph">element-type configuration modules (constraints and expansions)</span>.
+            <span class="ph">element-type configuration modules (constraint and expansion)</span>.
             Because the element-configuration module imports the module that it override, any module
             that is<span class="ph"> configured</span> in this section (including the base topic or
             map modules) is left out of the following "Module inclusion" section.

@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'ditavalmeta'
-description: 'The ditavalmeta element defines metadata that is associated
-  with a DITAVAL document used for one branch of a map.'
+description: 'The ditavalmeta element defines metadata for use when
+  processing a DITAVAL document for one branch of a map.'
 index: '../../toc.html'
 ---
 
@@ -57,28 +57,27 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> element defines
-        metadata that is associated with a DITAVAL document used for one branch of a map.
+        metadata for use when processing a DITAVAL document for one branch of a map.
       </p>
-      <section class="section" id="ditavalmeta__section-1">
-        Use the <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> to specify
-        the prefixes and suffixes that processors use to construct effective resource names and key
-        scope names within the map branch. The
-        <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> element also can
-        contain other information, such as navigation title, that might be useful for map architects
-        but is not rendered in the output.
+      <section class="section" id="ditavalmeta__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          Use the <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> element to
+          specify the prefixes and suffixes that processors use to construct effective resource
+          names, key scope names, and resource IDs within the map branch. The
+          <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> element also can
+          contain other information, such as navigation title, that might be useful for map
+          architects but is not intended for rendering.
+        </p>
       </section>
       <section class="section" id="ditavalmeta__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;ditavalmeta&gt;</code> element is
-          specialized from
-          <a
-            class="xref"
-            href="topicmeta.html"
-            title="Topic metadata is metadata that applies to a topic based on its context in a map."
-            >topicmeta</a
-          >. It is defined in the DITAVALref domain module.
+          specialized from <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code>. It
+          is defined in the DITAVAL-reference domain module.
         </p>
       </section>
       <section class="section" id="ditavalmeta__attributes">
@@ -86,11 +85,13 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           (except for <code class="keyword markupname xmlatt">@conkeyref</code>, which is removed
           for all elements in this domain).

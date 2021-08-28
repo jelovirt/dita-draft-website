@@ -1,7 +1,7 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Example: Constrain a domain using RNG'
+title: 'Example: Constrain a domain module using RNG'
 description: 'In this scenario, an information architect wants to use only a subset of the elements
   defined in the highlighting domain. She wants to use b and
   i but not line-through,
@@ -63,9 +63,33 @@ index: '../../toc.html'
                 >Examples: Constraints implemented using RNG</a
               >
               <ul class="nav nav-list">
+                <li>
+                  <a href="../../archSpec/base/example-rng-constraints-redefine-content-model.html"
+                    >Example: Redefine the content model for the topic element using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-redefine-content-model-attributes.html"
+                    >Example: Constrain attributes for the section element using RNG</a
+                  >
+                </li>
                 <li class="active">
                   <a href="../../archSpec/base/example-constrain-a-domain-using-rng.html"
-                    >Example: Constrain a domain using RNG</a
+                    >Example: Constrain a domain module using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-replace-base-element-w-domain-extensions.html"
+                    >Example: Replace a base element with the domain extensions using RNG</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../archSpec/base/example-rng-constraints-apply-multiple-constraints.html"
+                    >Example: Apply multiple constraints to a single document-type shell using
+                    RNG</a
                   >
                 </li>
               </ul>
@@ -96,7 +120,9 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">Example: Constrain a domain using RNG</h1>
+    <h1 class="title topictitle1" id="ariaid-title1">
+      Example: Constrain a domain module using RNG
+    </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
@@ -117,45 +143,41 @@ index: '../../toc.html'
       </p>
       <ol class="ol">
         <li class="li">
-          She opens the document-type shell for topic in an XML editor, and then modifies the
-          "Modules inclusions" section to exclude the elements that she does not want the
-          implementation to use:
-          <pre class="pre codeblock"><code>  &lt;div&gt;
-    &lt;a:documentation&gt;MODULE INCLUSIONS&lt;/a:documentation&gt;
-    &lt;include href="topicMod.rng"&gt;
-      &lt;define name="topic-info-types"&gt;
-        &lt;ref name="topic.element"/&gt;
-      &lt;/define&gt;
-    &lt;/include&gt;
-    &lt;include href="audienceAttDomain.rng" dita:since="2.0"/&gt;
-    &lt;include href="deliveryTargetAttDomain.rng"/&gt;
-    &lt;include href="alternativeTitlesDomain.rng" dita:since="2.0"/&gt;
-    &lt;include href="highlightDomain.rng"&gt;
-      &lt;define name="line-through"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-      &lt;define name="overline"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-      &lt;define name="sub"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-      &lt;define name="sup"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-      &lt;define name="tt"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-      &lt;define name="u"&gt;
-        &lt;notAllowed/&gt;
-      &lt;/define&gt;
-    &lt;/include&gt;
-  &lt;/div&gt;</code></pre>
+          <p class="p">
+            She opens the document-type shell for topic in an XML editor, and then modifies the
+            "MODULE INCLUSIONS" division to exclude the elements that she does not want the
+            implementation to use:
+          </p>
+          <pre class="pre codeblock"><code>&lt;div&gt;
+  &lt;a:documentation&gt;MODULE INCLUSIONS&lt;/a:documentation&gt;
+  ...
+  &lt;include href="highlightDomain.rng"&gt;
+    &lt;define name="line-through.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+    &lt;define name="overline.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+    &lt;define name="sub.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+    &lt;define name="sup.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+    &lt;define name="tt.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+    &lt;define name="u.element"&gt;
+      &lt;notAllowed/&gt;
+    &lt;/define&gt;
+  &lt;/include&gt;
+  ..  
+&lt;/div&gt;</code></pre>
           <div class="note note note_note">
-            <span class="note__title">Note:</span> The information architect made an arbitrary
-            choice as to where in the document-type shell she would implement the constraint. It can
-            be placed either in the "Element-type configuration integration" or the "Module
-            inclusions" section.
+            <span class="note__title">Note:</span> The information architect made a choice as to
+            where in the document-type shell she would implement the constraint. It can be placed
+            either in the "Element-type configuration integration" or the "Module inclusions"
+            section.
           </div>
         </li>
         <li class="li">
@@ -171,7 +193,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/examples-constraints-implemented-using-rng.html"
-            title="This section of the specification contains examples and scenarios. They illustrate a variety of ways that constraints can be used; they also provide examples of the DTD coding requirements for constraints and how constraints are integrated into document-type shells."
+            title="This section of the specification contains examples of constraints implemented using RNG"
             >Examples: Constraints implemented using RNG</a
           >
         </div>

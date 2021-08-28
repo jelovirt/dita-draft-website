@@ -112,17 +112,19 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="object__archive">
-            <code class="keyword markupname xmlatt">@archive</code>
+          <dt class="dt dlterm" id="object__attr-archive">
+            <a id="object__archive"></a><code class="keyword markupname xmlatt">@archive</code>
           </dt>
           <dd class="dd">
             Specifies a space-separated list of URIs indicating resources needed by the object.
@@ -134,8 +136,9 @@ index: '../../toc.html'
             <code class="keyword markupname xmlatt">@codebase</code> attribute.
           </dd>
 
-          <dt class="dt dlterm" id="object__archivekeyrefs">
-            <code class="keyword markupname xmlatt">@archivekeyrefs</code>
+          <dt class="dt dlterm" id="object__attr-archivekeyrefs">
+            <a id="object__archivekeyrefs"></a
+            ><code class="keyword markupname xmlatt">@archivekeyrefs</code>
           </dt>
           <dd class="dd">
             Key references to one or more archives, as for
@@ -147,8 +150,8 @@ index: '../../toc.html'
             used as a fallback when no key names can be resolved to a URI.
           </dd>
 
-          <dt class="dt dlterm" id="object__classid">
-            <code class="keyword markupname xmlatt">@classid</code>
+          <dt class="dt dlterm" id="object__attr-classid">
+            <a id="object__classid"></a><code class="keyword markupname xmlatt">@classid</code>
           </dt>
           <dd class="dd">
             Contains a URI that specifies the location of an object's implementation. It can be used
@@ -157,8 +160,9 @@ index: '../../toc.html'
             <code class="keyword markupname xmlatt">@codebase</code> attribute.
           </dd>
 
-          <dt class="dt dlterm" id="object__classidkeyref">
-            <code class="keyword markupname xmlatt">@classidkeyref</code>
+          <dt class="dt dlterm" id="object__attr-classidkeyref">
+            <a id="object__classidkeyref"></a
+            ><code class="keyword markupname xmlatt">@classidkeyref</code>
           </dt>
           <dd class="dd">
             Key reference to the URI that specifies the location of an object's implementation, as
@@ -168,8 +172,8 @@ index: '../../toc.html'
             fallback when the key cannot be resolved to a URI.
           </dd>
 
-          <dt class="dt dlterm" id="object__codebase">
-            <code class="keyword markupname xmlatt">@codebase</code>
+          <dt class="dt dlterm" id="object__attr-codebase">
+            <a id="object__codebase"></a><code class="keyword markupname xmlatt">@codebase</code>
           </dt>
           <dd class="dd">
             Specifies the base URI used for resolving the relative URI values given for
@@ -180,8 +184,9 @@ index: '../../toc.html'
             base URI of the current element.
           </dd>
 
-          <dt class="dt dlterm" id="object__codebasekeyref">
-            <code class="keyword markupname xmlatt">@codebasekeyref</code>
+          <dt class="dt dlterm" id="object__attr-codebasekeyref">
+            <a id="object__codebasekeyref"></a
+            ><code class="keyword markupname xmlatt">@codebasekeyref</code>
           </dt>
           <dd class="dd">
             Key reference to the base URI used for resolving other attributes, as for
@@ -194,8 +199,8 @@ index: '../../toc.html'
             is the base URL of the current element.
           </dd>
 
-          <dt class="dt dlterm" id="object__data">
-            <code class="keyword markupname xmlatt">@data</code>
+          <dt class="dt dlterm" id="object__attr-data">
+            <a id="object__data"></a><code class="keyword markupname xmlatt">@data</code>
           </dt>
           <dd class="dd">
             Contains a reference to the location of an object's data. If this attribute is a
@@ -205,8 +210,9 @@ index: '../../toc.html'
             set.
           </dd>
 
-          <dt class="dt dlterm" id="object__datakeyref">
-            <code class="keyword markupname xmlatt">@datakeyref</code>
+          <dt class="dt dlterm" id="object__attr-datakeyref">
+            <a id="object__datakeyref"></a
+            ><code class="keyword markupname xmlatt">@datakeyref</code>
           </dt>
           <dd class="dd">
             Provides a key reference to the object. When specified and the key is resolvable, the
@@ -215,8 +221,8 @@ index: '../../toc.html'
             specified, it is used as a fallback when the key cannot be resolved to a resource.
           </dd>
 
-          <dt class="dt dlterm" id="object__declare">
-            <code class="keyword markupname xmlatt">@declare</code>
+          <dt class="dt dlterm" id="object__attr-declare">
+            <a id="object__declare"></a><code class="keyword markupname xmlatt">@declare</code>
           </dt>
           <dd class="dd">
             When this attribute is set to "declare", the current object definition is a declaration
@@ -224,8 +230,8 @@ index: '../../toc.html'
             this declaration. The only allowable value is "declare".
           </dd>
 
-          <dt class="dt dlterm" id="object__type">
-            <code class="keyword markupname xmlatt">@type</code>
+          <dt class="dt dlterm" id="object__attr-type">
+            <a id="object__type"></a><code class="keyword markupname xmlatt">@type</code>
           </dt>
           <dd class="dd">
             Indicates the content type (MIME type) for the data specified by the
@@ -244,12 +250,14 @@ index: '../../toc.html'
             >
           </dd>
 
-          <dt class="dt dlterm" id="object__standby">
-            <code class="keyword markupname xmlatt">@standby</code>
+          <dt class="dt dlterm" id="object__attr-standby">
+            <a id="object__standby"></a><code class="keyword markupname xmlatt">@standby</code>
           </dt>
           <dd class="dd">Contains a message to be displayed while an object is loading.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@height</code></dt>
+          <dt class="dt dlterm" id="object__d1313e721">
+            <code class="keyword markupname xmlatt">@height</code>
+          </dt>
           <dd class="dd">
             Specifies the vertical dimension for the resulting display.
             <span class="ph"
@@ -260,7 +268,9 @@ index: '../../toc.html'
             >
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@width</code></dt>
+          <dt class="dt dlterm" id="object__d1313e733">
+            <code class="keyword markupname xmlatt">@width</code>
+          </dt>
           <dd class="dd">
             Specifies the horizontal dimension for the resulting display.
             <span class="ph"
@@ -271,8 +281,8 @@ index: '../../toc.html'
             >
           </dd>
 
-          <dt class="dt dlterm" id="object__usemap">
-            <code class="keyword markupname xmlatt">@usemap</code>
+          <dt class="dt dlterm" id="object__attr-usemap">
+            <a id="object__usemap"></a><code class="keyword markupname xmlatt">@usemap</code>
           </dt>
           <dd class="dd">
             Indicates that a client-side image map is to be used. An image map specifies active
@@ -281,13 +291,13 @@ index: '../../toc.html'
             <span class="ph">might</span> run on the server.
           </dd>
 
-          <dt class="dt dlterm" id="object__name">
-            <code class="keyword markupname xmlatt">@name</code>
+          <dt class="dt dlterm" id="object__attr-name">
+            <a id="object__name"></a><code class="keyword markupname xmlatt">@name</code>
           </dt>
           <dd class="dd">Defines a unique name for the object.</dd>
 
-          <dt class="dt dlterm" id="object__tabindex">
-            <code class="keyword markupname xmlatt">@tabindex</code>
+          <dt class="dt dlterm" id="object__attr-tabindex">
+            <a id="object__tabindex"></a><code class="keyword markupname xmlatt">@tabindex</code>
           </dt>
           <dd class="dd">Position the object in tabbing order.</dd>
         </dl>
@@ -428,7 +438,7 @@ flash/swflash.cab#version=6,0,0,0"
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'hasRelated'
-description: 'The hasRelated element specifies that the contain subjects have
-  an associative relationship  with the container subject.'
+description: 'The hasRelated element specifies that the contained subjects
+  have an associative relationship with the container subject.'
 index: '../../toc.html'
 ---
 
@@ -57,7 +57,7 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;hasRelated&gt;</code> element specifies
-        that the contain subjects have an associative relationship with the container subject.
+        that the contained subjects have an associative relationship with the container subject.
       </p>
       <section class="section" id="hasRelated__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
@@ -71,55 +71,37 @@ index: '../../toc.html'
       <section class="section" id="hasRelated__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
-        <div class="sectiondiv" id="hasRelated__scheme-HAS-elements">
+        <div class="div" id="hasRelated__scheme-HAS-elements">
           <p class="p">
             The following attributes are available on this element:
+            <span class="ph"
+              ><a
+                class="xref"
+                href="../../common/../langRef/attributes/universalAttributes.html"
+                title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+                >universal attributes</a
+              ></span
+            >,
+            <span class="ph"
+              ><a
+                class="xref"
+                href="../../common/../langRef/attributes/commonAttributes.html#common-atts__linkatts"
+                title="Link relationship attributes include: format, href, type, and scope"
+                >link-relationship attributes</a
+              ></span
+            >,
             <a
               class="xref"
-              href="../attributes/universalAttributes.html"
-              title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-              >Universal attribute group</a
+              href="../attributes/commonAttributes.html#common-atts__attr-processing-role"
+              ><code class="keyword markupname xmlatt">@processing-role</code></a
             >,
-            <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
-              >Link-relationship attributes</a
-            >
-            (with a narrowed definition of <code class="keyword markupname xmlatt">@href</code>,
-            given below), processing-role from
-            <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
-              >Common map attributes</a
-            >,
-            <a class="xref" href="../attributes/commonAttributes.html#common-atts__topicrefatts"
-              >Topicref-element attributes</a
-            >,
-            <a
-              class="xref"
-              href="../attributes/thekeysattribute.html"
-              title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the keys attribute. Each key definition introduces an identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both."
+            <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keys"
               ><code class="keyword markupname xmlatt">@keys</code></a
             >, and
-            <a
-              class="xref"
-              href="../attributes/thekeyrefattribute.html"
-              title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
+            <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
               ><code class="keyword markupname xmlatt">@keyref</code></a
             >.
           </p>
-          <dl class="dl">
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@href</code></dt>
-            <dd class="dd">
-              Specifies the referenced resource. See
-              <a
-                class="xref"
-                href="../../common/../langRef/attributes/thehrefattribute.html"
-                title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
-                >The href attribute</a
-              >
-              for detailed information on supported values and processing implications. References
-              to non-DITA content need to use the
-              <code class="keyword markupname xmlatt">@format</code> attribute to identify the kind
-              of resource.
-            </dd>
-          </dl>
         </div>
       </section>
       <div class="example" id="hasRelated__example">

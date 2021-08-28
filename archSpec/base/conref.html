@@ -35,6 +35,21 @@ index: '../../toc.html'
           <a href="../../archSpec/base/conref.html">Content reference (conref)</a>
           <ul class="nav nav-list">
             <li><a href="../../archSpec/base/conref-overview.html">Conref overview</a></li>
+            <li>
+              <a href="../../archSpec/base/theconactionattribute.html">The conaction attribute</a>
+            </li>
+            <li>
+              <a href="../../archSpec/base/theconrefendattribute.html">The conrefend attribute</a>
+            </li>
+            <li>
+              <a href="../../archSpec/base/theconkeyrefattribute.html">The conkeyref attribute</a>
+            </li>
+            <li><a href="../../archSpec/base/theconrefattribute.html">The conref attribute</a></li>
+            <li>
+              <a href="../../archSpec/base/ditauseconreftarget.html"
+                >Using the -dita-use-conref-target value</a
+              >
+            </li>
             <li><a href="../../archSpec/base/conref-processing.html">Processing conrefs</a></li>
             <li>
               <a href="../../archSpec/base/conref-attributes-specified-on-elements.html"
@@ -105,6 +120,62 @@ index: '../../toc.html'
               <span class="ph">pull and push</span> content.</span
             ></span
           >
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/theconactionattribute.html"
+              >The conaction attribute</a
+            ></strong
+          ><br />The <code class="keyword markupname xmlatt">@conaction</code> attribute allows
+          users to push content from one topic into another. It causes the
+          <code class="keyword markupname xmlatt">@conref</code> attribute to work in reverse, so
+          that the content is pushed from the current topic into another, rather than pulled from
+          another topic into the current one. Allowable values for
+          <code class="keyword markupname xmlatt">@conaction</code> are:
+          <span class="keyword">pushafter</span>, <span class="keyword">pushbefore</span>,
+          <span class="keyword">pushreplace</span>, mark<span class="keyword"></span>, and
+          <span class="keyword">-dita-use-conref-target</span>.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/theconrefendattribute.html"
+              >The conrefend attribute</a
+            ></strong
+          ><br />The <code class="keyword markupname xmlatt">@conrefend</code> attribute is used
+          when referencing a range of elements with the conref mechanism. The
+          <code class="keyword markupname xmlatt">@conref</code> or
+          <code class="keyword markupname xmlatt">@conkeyref</code> attribute references the first
+          element in the range, while
+          <code class="keyword markupname xmlatt">@conrefend</code> references the last element in
+          the range.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/theconkeyrefattribute.html"
+              >The conkeyref attribute</a
+            ></strong
+          ><br />The <code class="keyword markupname xmlatt">@conkeyref</code> attribute provides an
+          indirect content reference to topic elements, map elements, or elements within maps or
+          topics. When the DITA content is processed, the key references are resolved using key
+          definitions from DITA maps.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/theconrefattribute.html">The conref attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@conref</code> attribute is used to
+          reference content that can be reused. It allows reuse of DITA elements, including topic or
+          map level elements.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/ditauseconreftarget.html"
+              >Using the -dita-use-conref-target value</a
+            ></strong
+          ><br />The value <span class="keyword">-dita-use-conref-target</span> is available on
+          enumerated attributes and can also be specified on other attributes. When an element uses
+          <code class="keyword markupname xmlatt">@conref</code> to pull in content, for any of its
+          attributes assigned a value of <span class="keyword">-dita-use-conref-target</span>, the
+          resulting value for those attributes is also pulled in from the referenced element.
         </li>
         <li class="link ulchildlink">
           <strong

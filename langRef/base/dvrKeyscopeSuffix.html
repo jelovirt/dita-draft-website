@@ -62,7 +62,9 @@ index: '../../toc.html'
         branch that is implied by the ancestor
         <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element.
       </p>
-      <section class="section" id="dvrKeyscopeSuffix__section-1">
+      <section class="section" id="dvrKeyscopeSuffix__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
+
         <p class="p">
           For map branches that are implied by
           <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements, the value
@@ -88,13 +90,8 @@ index: '../../toc.html'
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> element
-          is specialized from
-          <a
-            class="xref"
-            href="data.html"
-            title="Data is a generic component that represents metadata within a topic or map. Complex metadata is represented by nested data structures."
-            >data</a
-          >. It is defined in the DITAVALref domain module.
+          is specialized from <code class="keyword markupname xmlelement">&lt;data&gt;</code>. It is
+          defined in the DITAVAL-reference domain module.
         </p>
       </section>
       <section class="section" id="dvrKeyscopeSuffix__attributes">
@@ -102,29 +99,33 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           (except for <code class="keyword markupname xmlatt">@conkeyref</code>, which is removed
-          for all elements in this domain) and the attribute defined below.
+          for all elements in this domain) and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-name"
+            ><code class="keyword markupname xmlatt">@name</code></a
+          >.
         </p>
-        <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@name</code></dt>
-          <dd class="dd">
-            The name of the metadata item. For this element the default value is
-            "dvrKeyscopeSuffix".
-          </dd>
-        </dl>
+        <p class="p attr-exception" id="dvrKeyscopeSuffix__attr-exception">
+          For this element, the <code class="keyword markupname xmlatt">@name</code> attribute has a
+          default value of <span class="keyword">dvrKeyscopeSuffix</span>.
+        </p>
       </section>
       <div class="example" id="dvrKeyscopeSuffix__example">
         <h2 class="title sectiontitle">Example</h2>
 
         <div class="p">
-          If the <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> is
-          specified in the following way:
+          The following code sample shows how
+          <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> supplements
+          the existing key scope name of <span class="keyword">branch-01</span> to establish an
+          effective key scope of <span class="keyword">branch-01-cond01</span>:
           <pre class="pre codeblock"><code>&lt;topicref keys="branch-01"
     href="branch-01.dita" 
     keyscope="branch-01"
@@ -137,9 +138,6 @@ index: '../../toc.html'
   &lt;topicref href="topics/subtopic-01.dita"/&gt;
 &lt;/topicref&gt;</code></pre>
         </div>
-        <p class="p">
-          Then the effective key scope name for the branch "branch-01" is "branch-01-cond01".
-        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">

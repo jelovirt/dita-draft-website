@@ -90,39 +90,32 @@ index: '../../toc.html'
       <section class="section" id="required-cleanup__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
-        <div class="p">
+        <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
-          (with a modified definition of <code class="keyword markupname xmlatt">@translate</code>,
-          given below), and the attributes defined below.
-          <dl class="dl">
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@remap</code></dt>
+          and the attribute defined below.
+        </p>
+        <p class="p">
+          For this element, the <code class="keyword markupname xmlatt">@translate</code> attribute
+          has a default value of <span class="keyword">no</span>.
+        </p>
+        <div class="p">
+          <dl class="dl" id="required-cleanup__dl_yl4_524_qpb">
+            <dt class="dt dlterm" id="required-cleanup__attr-remap">
+              <code class="keyword markupname xmlatt">@remap</code>
+            </dt>
             <dd class="dd">
               Specifies information about the origins of the content of the
               <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> element.
               This provides authors with context for determining how migrated content was originally
               encoded.
-            </dd>
-
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@translate</code></dt>
-            <dd class="dd">
-              Specifies whether the content of the element should be translated or not. The default
-              value for this element is "no"; setting to "yes" will override the default. The
-              <a
-                class="xref"
-                href="../attributes/ditauseconreftarget.html"
-                title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-                >-dita-use-conref-target</a
-              >
-              value is also available. The DITA architectural specification contains a list of each
-              OASIS DITA element and its common processing default for the translate value; because
-              this element uses an actual default, it will always be treated as
-              <code class="ph codeph">translate="no"</code> unless overridden as described.
             </dd>
           </dl>
         </div>

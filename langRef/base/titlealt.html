@@ -59,14 +59,14 @@ index: '../../toc.html'
         An alternative title is used to convey information about a document in contexts other than
         straightforward display.
       </p>
-      <section class="section" id="titlealt__section_c2t_k5k_nnb">
+      <section class="section" id="titlealt__usage-information">
         <h2 class="title sectiontitle">Usage Information</h2>
 
         <p class="p">
-          Alternative titles can be used in topics and in maps. When used directly beneath a root
-          <code class="keyword markupname xmlelement">&lt;map&gt;</code> element, the alternative
-          title applies to the map itself. When used inside a
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> or specialization of
+          Alternative titles can be used in topics and in maps. When used in the
+          <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> of a root
+          <code class="keyword markupname xmlelement">&lt;map&gt;</code>
+          element, the alternative title applies to the map itself. When used inside a
           <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>, the alternative title
           applies to the resource referenced by the
           <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. When the referenced
@@ -91,7 +91,7 @@ index: '../../toc.html'
           ignored by processors.
         </p>
       </section>
-      <section class="section" id="titlealt__section_awx_mvk_nnb">
+      <section class="section" id="titlealt__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
@@ -137,13 +137,16 @@ index: '../../toc.html'
             processing or output.
           </dd>
 
-          <dt class="dt dlterm"><code class="ph codeph">-dita-use-conref-target</code></dt>
+          <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
           <dd class="dd">
-            When present, instructs processors to use the
-            <code class="keyword markupname xmlatt">@title-role</code> tokens from the element
-            referenced by <code class="keyword markupname xmlatt">@conref</code> or
-            <code class="keyword markupname xmlatt">@conkeyref</code>. All other tokens are ignored,
-            replaced by those on the referenced element.
+            See
+            <a
+              class="xref"
+              href="../../common/../archSpec/base/ditauseconreftarget.html"
+              title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+              >Using the -dita-use-conref-target value</a
+            >
+            for more information.
           </dd>
         </dl>
         <p class="p">
@@ -158,31 +161,24 @@ index: '../../toc.html'
           <span class="keyword RFC-2119">MUST</span> be ignored and not appear in output.
         </p>
       </section>
-      <section class="section" id="titlealt__section_pwf_1xk_nnb">
+      <section class="section" id="titlealt__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class"
-            ><code class="keyword markupname xmlatt">@class</code></a
-          >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass"
-            ><code class="keyword markupname xmlatt">@outputclass</code></a
-          >, and the attributes listed below.
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >
+          and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-title-role"
+            ><code class="keyword markupname xmlatt">@title-role</code></a
+          >.
         </p>
-        <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@title-role</code></dt>
-          <dd class="dd">
-            Specifies the role or roles fulfilled by the alternative title. Multiple roles are
-            separated by white space.
-          </dd>
-        </dl>
       </section>
       <div class="example" id="titlealt__example">
         <h2 class="title sectiontitle">Examples</h2>

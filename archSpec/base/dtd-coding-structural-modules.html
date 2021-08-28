@@ -2,9 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'DTD: Coding requirements for structural modules'
-description:
-  'A structural vocabulary module defines a new topic or map type as a specialization of a
-  topic or map type.'
+description: 'This
+  topic covers general coding requirements for DTD-based structural modules.'
 index: '../../toc.html'
 ---
 
@@ -48,11 +47,7 @@ index: '../../toc.html'
         <li>
           <a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a>
           <ul class="nav nav-list">
-            <li>
-              <a href="../../archSpec/base/dtd-coding-overview.html"
-                >DTD: Overview of coding requirements</a
-              >
-            </li>
+            <li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a></li>
             <li>
               <a href="../../archSpec/base/dtd-coding-doctype-shell.html"
                 >DTD: Coding requirements for document-type shells</a
@@ -60,7 +55,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/dtd-coding-element-types.html"
-                >DTD: Coding requirements for element type declarations</a
+                >DTD: Coding requirements for element-type declarations</a
               >
             </li>
             <li class="active">
@@ -70,7 +65,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/dtd-coding-element-domains.html"
-                >DTD: Coding requirements for element domain modules</a
+                >DTD: Coding requirements for element-domain modules</a
               >
             </li>
             <li>
@@ -79,13 +74,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/dtd-coding-constraint-modules.html"
-                >DTD: Coding requirements for constraint modules</a
-              >
-            </li>
-            <li>
-              <a href="../../archSpec/base/dtd-coding-requirements-expansion-modules.html"
-                >DTD: Coding requirements for expansion modules</a
+              <a
+                href="../../archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html"
+                >DTD: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -117,31 +108,49 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        A structural vocabulary module defines a new topic or map type as a specialization of a
-        topic or map type.
+        This topic covers general coding requirements for DTD-based structural modules.
       </p>
       <section class="section" id="dtdStructuralCoding__architectural-attributes">
         <h2 class="title sectiontitle">Required topic and map element attributes</h2>
 
         <p class="p">
-          The topic or map element type must set the
+          The topic or map element type sets the
           <code class="keyword markupname xmlatt">@DITAArchVersion</code> attribute to the version
           of DITA in use, typically by referencing the
-          <code class="ph codeph">arch-atts</code> parameter entity. It must also set the
+          <code class="ph codeph">arch-atts</code> parameter entity. It also sets the
           <code class="keyword markupname xmlatt">@specializations</code> attribute to the
-          <code class="ph codeph">included-domains</code> entity. These attributes give processors a
-          reliable way to check the architecture version and look up the list of attribute domains
+          <code class="ph codeph">included-domains</code> entity.
+        </p>
+        <p class="p">
+          The <code class="keyword markupname xmlatt">@DITAArchVersion</code> and
+          <code class="keyword markupname xmlatt">@specializations</code> attributes give processors
+          a reliable way to check the architecture version and look up the list of attribute domains
           that are available in the document type.
         </p>
-        <div class="div">
+        <div class="example">
           <p class="p">
-            The following example shows how these attributes are defined for the
-            <code class="keyword markupname xmlelement">&lt;concept&gt;</code> element in DITA 2.0:
+            The following example shows how the
+            <code class="keyword markupname xmlatt">@DITAArchVersion</code> and
+            <code class="keyword markupname xmlatt">@specializations</code> attributes are defined
+            for the <code class="keyword markupname xmlelement">&lt;concept&gt;</code> element in
+            DITA 2.0. Ellipses indicate where the code is snipped for brevity:
           </p>
-          <pre class="pre codeblock"><code>&lt;!ATTLIST concept    
+          <pre
+            class="pre codeblock"
+          ><code>&lt;!-- ============================================================= --&gt;
+&lt;!--                    ELEMENT DECLARATIONS                       --&gt;
+&lt;!-- ============================================================= --&gt;
+
+...
+
+&lt;!--                    LONG NAME: Concept                         --&gt;
+
+...
+
+&lt;!ATTLIST concept    
   %concept.attributes;
-  %arch-atts;
-  specializations  CDATA  "&amp;included-domains;"&gt;</code></pre>
+  <strong class="ph b">%arch-atts;
+  specializations  CDATA  "&amp;included-domains;</strong>"&gt;</code></pre>
         </div>
       </section>
       <section class="section" id="dtdStructuralCoding__topic-nesting">
@@ -152,6 +161,7 @@ index: '../../toc.html'
           permitted to nest. While there are known exceptions described below, the following rules
           apply when using parameter entities to control nesting.
         </p>
+
         <dl class="dl">
           <dt class="dt dlterm">Parameter entity name</dt>
           <dd class="dd">
@@ -159,10 +169,12 @@ index: '../../toc.html'
               The name of the parameter entity is the topic element name plus the
               <code class="ph codeph">-info-types</code> suffix.
             </p>
-            <p class="p">
-              For example, the name of the parameter entity for the concept topic is
-              <code class="ph codeph">concept-info-types</code>.
-            </p>
+            <div class="example">
+              <p class="p">
+                For example, the name of the parameter entity for the concept topic is
+                <code class="ph codeph">concept-info-types</code>.
+              </p>
+            </div>
           </dd>
 
           <dt class="dt dlterm">Parameter entity value</dt>
@@ -172,33 +184,47 @@ index: '../../toc.html'
               The default topic nesting is used when a document-type shell does not set up different
               rules.
             </p>
+            <div class="example">
+              <p class="p">
+                For example, the following parameter entity sets up default nesting so that
+                <code class="keyword markupname xmlelement">&lt;concept&gt;</code> will nest only
+                other <code class="keyword markupname xmlelement">&lt;concept&gt;</code> topics:
+              </p>
+              <pre
+                class="pre codeblock"
+              ><code>&lt;!-- ============================================================= --&gt;
+&lt;!--                    ELEMENT DECLARATIONS                       --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!ENTITY % concept-info-types
+              "%info-types;"
+&gt;</code></pre>
+            </div>
+            <div class="example">
+              <p class="p">
+                As an additional example, the following parameter entity sets up a default that will
+                not allow any nesting:
+              </p>
+              <pre
+                class="pre codeblock"
+              ><code>&lt;!ENTITY % glossentry-info-types "no-topic-nesting"&gt;</code></pre>
+            </div>
             <p class="p">
-              For example, the following parameter entity sets up default nesting so that
-              <code class="keyword markupname xmlelement">&lt;concept&gt;</code> will nest only
-              other <code class="keyword markupname xmlelement">&lt;concept&gt;</code> topics:
-            </p>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!ENTITY % concept-info-types "%concept;"&gt;</code></pre>
-            <p class="p">
-              As an additional example, the following parameter entity sets up a default that will
-              not allow any nesting:
-            </p>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!ENTITY % glossentry-info-types "no-topic-nesting"&gt;</code></pre>
-            <p class="p">
-              Default topic nesting in a structural module often set up to use the
+              Default topic nesting in a structural module often is set up to use the
               <code class="ph codeph">%info-types;</code> parameter entity rather than using a
               specific element. When this is done consistently, a shell that includes multiple
               structural modules can set common nesting rules for all topic types by setting
-              <code class="ph codeph">%info-types;</code> entity. The following example shows a
-              structural module that uses <code class="ph codeph">%info-types;</code> for default
-              topic nesting:
+              <code class="ph codeph">%info-types;</code> entity.
             </p>
-            <pre
-              class="pre codeblock"
-            ><code>&lt;!ENTITY % concept-info-types "%info-types;"&gt;</code></pre>
+            <div class="example">
+              <p class="p">
+                The following example shows a structural module that uses
+                <code class="ph codeph">%info-types;</code> for default topic nesting:
+              </p>
+              <pre
+                class="pre codeblock"
+              ><code>&lt;!ENTITY % concept-info-types "%info-types;"&gt;</code></pre>
+            </div>
           </dd>
 
           <dt class="dt dlterm">Content model of the root element</dt>
@@ -218,7 +244,7 @@ index: '../../toc.html'
               create common nesting rules by redefining the
               <code class="ph codeph">info-types</code> entity.
             </p>
-            <div class="div">
+            <div class="example">
               <p class="p">
                 For example, with the following content model defined for
                 <code class="keyword markupname xmlelement">&lt;concept&gt;</code>, a document-type
@@ -239,8 +265,8 @@ index: '../../toc.html'
           </dd>
         </dl>
         <p class="p">
-          In rare cases, it might not be desirable to control topic nesting with a parameter entity.
-          For example:
+          In certain cases, you do not need to use an
+          <code class="ph codeph">info-types</code> parameter entity to control topic nesting:
         </p>
         <ul class="ul">
           <li class="li">
@@ -262,7 +288,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/dtd-requirements.html"
-            title="This section explains how to implement DTD based document-type shells, specializations, and element-configuration modules (constraints and expansions)."
+            title="This section explains how to implement DTD based document-type shells, specializations, and element-configuration modules (constraint and expansion)."
             >DTD coding requirements</a
           >
         </div>

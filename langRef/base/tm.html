@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'tm'
-description: 'The tm element identifies a term or phrase that is trademarked.
-  Trademarks include registered trademarks, service marks, slogans, and logos.'
+description: 'A trademark is a term or phrase that is trademarked. Trademarks include registered
+  trademarks, service marks, slogans, and logos.'
 index: '../../toc.html'
 ---
 
@@ -55,9 +55,8 @@ index: '../../toc.html'
     </h1>
     <div class="body refbody">
       <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;tm&gt;</code> element identifies a term
-        or phrase that is trademarked. Trademarks include registered trademarks, service marks,
-        slogans, and logos.
+        A trademark is a term or phrase that is trademarked. Trademarks include registered
+        trademarks, service marks, slogans, and logos.
       </p>
       <section class="section" id="tm__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
@@ -72,16 +71,18 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm">
+          <dt class="dt dlterm" id="tm__attr-tmtype">
             <code class="keyword markupname xmlatt">@tmtype</code>
             <span class="ph">(REQUIRED)</span>
           </dt>
@@ -102,7 +103,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -111,13 +112,19 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@trademark</code></dt>
+          <dt class="dt dlterm" id="tm__attr-trademark">
+            <code class="keyword markupname xmlatt">@trademark</code>
+          </dt>
           <dd class="dd">Specifies the trademarked term.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@tmowner</code></dt>
+          <dt class="dt dlterm" id="tm__attr-tmowner">
+            <code class="keyword markupname xmlatt">@tmowner</code>
+          </dt>
           <dd class="dd">Specifies the trademark owner, for example "OASIS".</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@tmclass</code></dt>
+          <dt class="dt dlterm" id="tm__attr-tmclass">
+            <code class="keyword markupname xmlatt">@tmclass</code>
+          </dt>
           <dd class="dd">
             Specifies the classification of the trademark. This can be used to differentiate
             different groupings of trademarks.
@@ -144,7 +151,7 @@ well known.&lt;/p&gt;</code></pre>
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

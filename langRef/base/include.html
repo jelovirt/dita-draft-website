@@ -2,10 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'include'
-description: 'The include element specifies that non-DITA content from a
-  resource outside the current document should be placed at that location. The resource is
-  specified using either a URI or a key reference. Processing expectations for the referenced
-  data can also be specified.'
+description: 'Included content is a reference to non-DITA content outside the current document that
+  will be rendered at the location of the reference. The resource is specified using either a
+  URI or a key reference. Processing expectations for the referenced data can also be
+  specified.'
 index: '../../toc.html'
 ---
 
@@ -58,10 +58,9 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;include&gt;</code> element specifies
-        that non-DITA content from a resource outside the current document should be placed at that
-        location. The resource is specified using either a URI or a key reference. Processing
-        expectations for the referenced data can also be specified.
+        Included content is a reference to non-DITA content outside the current document that will
+        be rendered at the location of the reference. The resource is specified using either a URI
+        or a key reference. Processing expectations for the referenced data can also be specified.
       </p>
       <section class="section" id="include__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
@@ -86,7 +85,13 @@ index: '../../toc.html'
             <code class="ph codeph">parse="text"</code>
           </li>
         </ul>
-
+        <p class="p">
+          For example, the
+          <code class="keyword markupname xmlelement">&lt;include&gt;</code> element can be
+          specialized to an element such as
+          <code class="keyword markupname xmlelement">&lt;coderef&gt;</code> as a way to include
+          preformatted sample programming code.
+        </p>
         <p class="p">
           It is an error when the
           <code class="keyword markupname xmlelement">&lt;include&gt;</code> element is used to
@@ -130,23 +135,32 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__inclusionatts"
-            >Inclusion attributes</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__inclusionatts"
+              title="Inclusion attributes include: encoding and parse"
+              >inclusion attributes</a
+            ></span
           >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
-            >Link-relationship attributes</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__linkatts"
+              title="Link relationship attributes include: format, href, type, and scope"
+              >link-relationship attributes</a
+            ></span
           >, and
-          <a
-            class="xref"
-            href="../attributes/thekeyrefattribute.html"
-            title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
-            >The keyref attribute</a
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
+            ><code class="keyword markupname xmlatt">@keyref</code></a
           >.
         </p>
       </section>
@@ -189,13 +203,19 @@ index: '../../toc.html'
             topic, with fallback
           </figcaption>
 
-          <div class="p"></div>
-          <pre class="pre codeblock"><code>
-&lt;shortdesc&gt;
-  &lt;include href="../src/README.txt" parse="text" encoding="UTF-8"&gt;
-    &lt;fallback&gt;This topic describes XYZ.&lt;/fallback&gt;
-  &lt;/include&gt;
-&lt;/shortdesc&gt;</code></pre>
+          <p class="p">
+            In the following sample, a README text file is referenced in order to reuse a list of
+            changes to a set of source code.
+          </p>
+          <pre class="pre codeblock"><code>&lt;topic id="readme"&gt;
+  &lt;title&gt;Summary of changes&lt;/title&gt;
+  &lt;shortdesc&gt;This topic describes changes in the project source code.&lt;/shortdesc&gt;
+  &lt;body&gt;
+    &lt;include href="../src/README.txt" parse="text" encoding="UTF-8"&gt;
+      &lt;fallback&gt;See README.txt in the source package for a list of changes.&lt;/fallback&gt;
+    &lt;/include&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
         <figure class="fig fignone">
           <figcaption>
@@ -248,7 +268,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

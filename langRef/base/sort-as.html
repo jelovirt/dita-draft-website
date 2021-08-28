@@ -70,8 +70,8 @@ index: '../../toc.html'
           <code class="keyword markupname xmlatt">@value</code> attribute on the
           <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element. The
           <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element also is useful
-          for elements where the base sort phrase is inadequate or non-existent, for example, a
-          glossary or index entry for a Japanese Kanji phrase.
+          for elements where the base sort phrase is inadequate or non-existent, such as an index
+          entry for a Japanese Kanji phrase.
         </p>
         <p class="p">
           If a <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element is used
@@ -138,6 +138,12 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
+          If the <code class="keyword markupname xmlatt">@value</code> attribute is not specified
+          and the <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element does
+          not contain content, then the
+          <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element has no effect.
+        </p>
+        <p class="p">
           As a specialization of <code class="keyword markupname xmlelement">&lt;data&gt;</code>,
           the <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element is allowed
           in any context where <code class="keyword markupname xmlelement">&lt;data&gt;</code> is
@@ -193,7 +199,7 @@ index: '../../toc.html'
           </ul>
         </div>
         <div class="div">
-          <p class="p" id="sort-as__d1323e408">
+          <p class="p" id="sort-as__d1329e408">
             When a <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element is
             specified, processors that sort the containing element
             <dfn class="term RFC-2119">MUST</dfn> construct the effective sort phrase by prepending
@@ -202,7 +208,7 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element but different
             base sort phrases will sort in the appropriate order.
           </p>
-          <p class="p" id="sort-as__d1323e423">
+          <p class="p" id="sort-as__d1329e423">
             For example, if a processor uses the content of the
             <code class="keyword markupname xmlelement">&lt;title&gt;</code> element as the base
             sort phrase, and the title of a topic is "24 Hour Support Hotline" and the value of the
@@ -226,37 +232,37 @@ index: '../../toc.html'
 
         <p class="p" id="sort-as__only-universal">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >
-          and the attributes defined below.
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-name"
+            ><code class="keyword markupname xmlatt">@name</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-value"
+            ><code class="keyword markupname xmlatt">@value</code></a
+          >.
         </p>
-        <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@name</code></dt>
-          <dd class="dd">
-            Specifies the metadata item that the element represents. The default value is "sort-as".
-            Specializations of
-            <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> can set the default
-            value of the <code class="keyword markupname xmlatt">@name</code> attribute to reflect
-            the tag name of the specialized element.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@value</code></dt>
-          <dd class="dd">
-            Specifies the value of the metadata item. When the
-            <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element has content
-            and the <code class="keyword markupname xmlatt">@value</code> attribute is specified,
-            the <code class="keyword markupname xmlatt">@value</code> attribute takes precedence. If
-            the <code class="keyword markupname xmlatt">@value</code> attribute is not specified and
-            the <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element does not
-            contain content, then the
-            <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element has no
-            effect.
-          </dd>
-        </dl>
+        <div class="p attr-exception" id="sort-as__attr-exception">
+          For this element,
+          <ul class="ul" id="sort-as__ul_g3c_412_ppb">
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@name</code> attribute has a default value
+              of <span class="keyword">sort-as</span>.
+            </li>
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@value</code> attribute specifies a text
+              to combine with the base sort phrase to create an effective sort phrase. When the
+              <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element has content
+              and the <code class="keyword markupname xmlatt">@value</code> attribute is specified,
+              the <code class="keyword markupname xmlatt">@value</code> attribute takes precedence.
+            </li>
+          </ul>
+        </div>
       </section>
       <div class="example" id="sort-as__example">
         <h2 class="title sectiontitle">Example</h2>

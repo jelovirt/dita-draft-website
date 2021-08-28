@@ -65,13 +65,14 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          The DITA table is based on the OASIS Exchange Table Model, augmented with DITA attributes
-          that enable it for accessibility, specialization, conref, and other DITA processing. An
-          optional <code class="keyword markupname xmlelement">&lt;title&gt;</code> inside the
+          The DITA <code class="keyword markupname xmlelement">&lt;table&gt;</code> element is based
+          on the OASIS Exchange Table Model, augmented with DITA attributes that enable
+          accessibility, specialization, conref, and other DITA processing. An optional
+          <code class="keyword markupname xmlelement">&lt;title&gt;</code> inside the
           <code class="keyword markupname xmlelement">&lt;table&gt;</code> element provides a
           caption to describe the table. In addition, the optional
-          <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element enables table
-          description that is parallel with figure description.
+          <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element enables a table
+          description that is parallel with a figure description.
         </p>
         <p class="p">
           See
@@ -81,8 +82,8 @@ index: '../../toc.html'
             title="Simple tables are a basic tabular environment to present organized content."
             >simpletable</a
           >
-          for a simplified table model that is closer to the HTML5 table model, and can be
-          specialized to represent more regular relationships of data.
+          for a simplified table model that is closer to the HTML5 table model, and can be more
+          easily specialized to represent regular relationships of data.
         </p>
         <p class="p">
           In DITA tables, in place of the
@@ -106,31 +107,38 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >, <code class="keyword markupname xmlatt">@frame</code> and
-          <code class="keyword markupname xmlatt">@scale</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__displayatts"
-            >Display attributes</a
-          >, and the attributes defined below. This element also uses
-          <code class="keyword markupname xmlatt">@colsep</code>,
-          <code class="keyword markupname xmlatt">@rowsep</code>, and
-          <code class="keyword markupname xmlatt">@rowheader</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__complextableatts"
-            >Complex table attributes</a
-          >.
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-frame"
+            ><code class="keyword markupname xmlatt">@frame</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scale"
+            ><code class="keyword markupname xmlatt">@scale</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-colsep"
+            ><code class="keyword markupname xmlatt">@colsep</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowsep"
+            ><code class="keyword markupname xmlatt">@rowsep</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowheader"
+            ><code class="keyword markupname xmlatt">@rowheader</code></a
+          >, and the attributes defined below.
         </p>
 
         <dl class="dl">
-          <dt class="dt dlterm" id="table__orient">
-            <code class="keyword markupname xmlatt">@orient</code>
+          <dt class="dt dlterm" id="table__attr-orient">
+            <a id="table__orient"></a><code class="keyword markupname xmlatt">@orient</code>
           </dt>
           <dd class="dd">
             Specifies the orientation of the table in page-based outputs. This attribute is
-            primarily useful for print-oriented display. Allowable values are:
+            primarily useful for print-oriented display. The following values are valid:
             <dl class="dl">
               <dt class="dt dlterm">port</dt>
               <dd class="dd">The same orientation as the text flow.</dd>
@@ -143,7 +151,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -157,15 +165,15 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@pgwide</code></dt>
+          <dt class="dt dlterm" id="table__attr-pgwide">
+            <code class="keyword markupname xmlatt">@pgwide</code>
+          </dt>
           <dd class="dd">
-            Specifies the horizontal placement of the element. Supported values are 1 and 0,
-            although these are not mandated by the DTD or RNG grammar files.
-            <p class="p">
-              For print-oriented display, the value "1" places the element on the left page margin;
-              "0" aligns the element with the left margin of the current text line and takes
-              indention into account.
-            </p>
+            Specifies the horizontal placement of the element. The following values are valid:
+            <span class="keyword">1</span> and <span class="keyword">0</span>. For print-oriented
+            display, the value <span class="keyword">1</span> places the element on the left page
+            margin; <span class="keyword">0</span> aligns the element with the left margin of the
+            current text line and takes indention into account.
           </dd>
         </dl>
       </section>
@@ -667,7 +675,7 @@ expected points in column c2 and actual points in column c3.&lt;/desc&gt;
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
             >Table elements</a
           >
         </div>

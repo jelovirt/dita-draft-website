@@ -89,7 +89,7 @@ index: '../../toc.html'
           </span>
         </p>
         <div class="div">
-          <div class="p" id="ditaval-revprop__d1364e63">
+          <div class="p" id="ditaval-revprop__d1383e63">
             For the <code class="keyword markupname xmlatt">@color</code> and
             <code class="keyword markupname xmlatt">@backcolor</code> attributes on
             <code class="keyword markupname xmlelement">&lt;rev&gt;</code> and
@@ -109,7 +109,7 @@ index: '../../toc.html'
               <li class="li">The associated 6 digit hex code form (#rrggbb, case insensitive).</li>
             </ul>
           </div>
-          <div class="p" id="ditaval-revprop__d1364e91">
+          <div class="p" id="ditaval-revprop__d1383e91">
             For the <code class="keyword markupname xmlatt">@style</code> attribute on
             <code class="keyword markupname xmlelement">&lt;rev&gt;</code> and
             <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, the following tokens
@@ -122,7 +122,7 @@ index: '../../toc.html'
               <li class="li">bold</li>
             </ul>
           </div>
-          <p class="p" id="ditaval-revprop__d1364e123">
+          <p class="p" id="ditaval-revprop__d1383e123">
             In addition, processors <dfn class="term RFC-2119">MAY</dfn> support other proprietary
             tokens for the <code class="keyword markupname xmlatt">@style</code> attribute. Such
             tokens <dfn class="term RFC-2119">SHOULD</dfn> have a processor-specific prefix to
@@ -149,7 +149,9 @@ index: '../../toc.html'
         <div class="p">
           The following attributes are available on this element:
           <dl class="dl">
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@val</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__attr-val">
+              <code class="keyword markupname xmlatt">@val</code>
+            </dt>
             <dd class="dd">
               Specifies the revision value to be acted upon. If the
               <code class="keyword markupname xmlatt">@val</code> attribute is absent, then the
@@ -158,7 +160,7 @@ index: '../../toc.html'
               <code class="keyword markupname xmlatt">@rev</code> attribute.
             </dd>
 
-            <dt class="dt dlterm">
+            <dt class="dt dlterm" id="ditaval-revprop__attr-action">
               <code class="keyword markupname xmlatt">@action</code>
               <span class="ph">(REQUIRED)</span>
             </dt>
@@ -191,7 +193,9 @@ index: '../../toc.html'
               </dl>
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@changebar</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__attr-changebar">
+              <code class="keyword markupname xmlatt">@changebar</code>
+            </dt>
             <dd class="dd">
               When flag has been set, specify a changebar color, style, or character, according to
               the changebar support of the target output format. If the
@@ -199,7 +203,9 @@ index: '../../toc.html'
               this attribute is ignored.
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@outputclass</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__d1311e1085">
+              <code class="keyword markupname xmlatt">@outputclass</code>
+            </dt>
             <dd class="dd">
               If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
               "flag", treat the flagged element as if the full
@@ -217,7 +223,9 @@ index: '../../toc.html'
               attribute.
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@color</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__d1311e1117">
+              <code class="keyword markupname xmlatt">@color</code>
+            </dt>
             <dd class="dd">
               If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
               "flag", specifies the color to use to flag text. Colors can be entered by name or
@@ -225,7 +233,9 @@ index: '../../toc.html'
               set to "flag", this attribute is ignored.
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@backcolor</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__d1311e1133">
+              <code class="keyword markupname xmlatt">@backcolor</code>
+            </dt>
             <dd class="dd">
               If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
               "flag", specifies the color to use as background for flagged text. Colors can be
@@ -234,7 +244,9 @@ index: '../../toc.html'
               this attribute is ignored.
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@style</code></dt>
+            <dt class="dt dlterm" id="ditaval-revprop__d1311e1149">
+              <code class="keyword markupname xmlatt">@style</code>
+            </dt>
             <dd class="dd">
               If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
               "flag", specifies the text styles to use for flagged text. This attribute can contain

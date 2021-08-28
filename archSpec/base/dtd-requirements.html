@@ -4,7 +4,7 @@ layout: base
 title: 'DTD coding requirements'
 description:
   'This section explains how to implement DTD based document-type shells, specializations,
-  and element-configuration modules (constraints and expansions).'
+  and element-configuration modules (constraint and expansion).'
 index: '../../toc.html'
 ---
 
@@ -48,11 +48,7 @@ index: '../../toc.html'
         <li class="active">
           <a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a>
           <ul class="nav nav-list">
-            <li>
-              <a href="../../archSpec/base/dtd-coding-overview.html"
-                >DTD: Overview of coding requirements</a
-              >
-            </li>
+            <li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a></li>
             <li>
               <a href="../../archSpec/base/dtd-coding-doctype-shell.html"
                 >DTD: Coding requirements for document-type shells</a
@@ -60,7 +56,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/dtd-coding-element-types.html"
-                >DTD: Coding requirements for element type declarations</a
+                >DTD: Coding requirements for element-type declarations</a
               >
             </li>
             <li>
@@ -70,7 +66,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/dtd-coding-element-domains.html"
-                >DTD: Coding requirements for element domain modules</a
+                >DTD: Coding requirements for element-domain modules</a
               >
             </li>
             <li>
@@ -79,13 +75,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/dtd-coding-constraint-modules.html"
-                >DTD: Coding requirements for constraint modules</a
-              >
-            </li>
-            <li>
-              <a href="../../archSpec/base/dtd-coding-requirements-expansion-modules.html"
-                >DTD: Coding requirements for expansion modules</a
+              <a
+                href="../../archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html"
+                >DTD: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -114,20 +106,17 @@ index: '../../toc.html'
     <h1 class="title topictitle1" id="ariaid-title1">DTD coding requirements</h1>
     <p class="shortdesc">
       This section explains how to implement DTD based document-type shells, specializations, and
-      <span class="ph">element-configuration modules (constraints and expansions).</span>
+      <span class="ph">element-configuration modules (constraint and expansion).</span>
     </p>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong
-            ><a href="../../archSpec/base/dtd-coding-overview.html"
-              >DTD: Overview of coding requirements</a
-            ></strong
-          ><br />DITA coding practices for DTDs rely heavily on entities to implement specialization
-          and<span class="ph">element-configuration (constraints and expansion).</span>. As such, an
-          understanding of entities is critical when working with DTD document-type shells,
-          vocabulary modules, or
-          <span class="ph">element configuration modules (constraints and expansion).</span>
+            ><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a></strong
+          ><br />DITA-based DTDs use entities to implement specialization and
+          <span class="ph">element configuration.</span> Therefore, an understanding of entities is
+          critical when working with DTD-based document-type shells, vocabulary modules, or
+          <span class="ph">element-configuration modules (constraint and expansion).</span>
         </li>
         <li class="link ulchildlink">
           <strong
@@ -140,7 +129,7 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/dtd-coding-element-types.html"
-              >DTD: Coding requirements for element type declarations</a
+              >DTD: Coding requirements for element-type declarations</a
             ></strong
           ><br />This topic covers general coding requirements for defining element types in both
           structural and element-domain vocabulary modules.
@@ -150,13 +139,12 @@ index: '../../toc.html'
             ><a href="../../archSpec/base/dtd-coding-structural-modules.html"
               >DTD: Coding requirements for structural modules</a
             ></strong
-          ><br />A structural vocabulary module defines a new topic or map type as a specialization
-          of a topic or map type.
+          ><br />This topic covers general coding requirements for DTD-based structural modules.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/dtd-coding-element-domains.html"
-              >DTD: Coding requirements for element domain modules</a
+              >DTD: Coding requirements for element-domain modules</a
             ></strong
           ><br />The vocabulary modules that define element domains have an additional coding
           requirement. The entity declaration file must include a parameter entity for each element
@@ -176,20 +164,12 @@ index: '../../toc.html'
         </li>
         <li class="link ulchildlink">
           <strong
-            ><a href="../../archSpec/base/dtd-coding-constraint-modules.html"
-              >DTD: Coding requirements for constraint modules</a
+            ><a
+              href="../../archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html"
+              >DTD: Coding requirements for element-configuration modules</a
             ></strong
-          ><br />An element-type constraint module defines the constraints for a map or topic
-          element type. A domain constraint module defines the constraints for an element or
-          attribute domain.
-        </li>
-        <li class="link ulchildlink">
-          <strong
-            ><a href="../../archSpec/base/dtd-coding-requirements-expansion-modules.html"
-              >DTD: Coding requirements for expansion modules</a
-            ></strong
-          ><br />An expansion module defines the expanded configuration for a map or topic element
-          type.
+          ><br />Element-configuration modules (constraint and expansion) have specific coding
+          requirements.
         </li>
       </ul>
       <div class="familylinks">
@@ -198,7 +178,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/coding-requirements.html"
-            title="This section collects all of the rules for creating modular DTD, RELAX NG, or XML Schema grammar files to represent DITA document types, specializations, and constraints."
+            title="This section collects all of the rules for creating modular DTD or RELAX NG-based grammar files that represent DITA document types, specializations, constraints, and expansion modules."
             >Coding practices for DITA grammar files</a
           >
         </div>

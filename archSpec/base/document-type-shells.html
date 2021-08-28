@@ -101,29 +101,26 @@ index: '../../toc.html'
         >
       </p>
       <p class="p">
-        A DITA document must either have an associated document-type definition or all required
+        A DITA document either must have an associated document-type definition or all required
         attributes must be made explicit in the document instances. Most DITA documents have an
         associated document-type shell. DITA documents that reference a document-type shell can be
-        validated using standard XML processors. Such validation enables processors to read the XML
-        grammar files and determine default values for the
+        validated using most standard XML processors. Such validation enables processors to read the
+        XML grammar files and determine default values for the
         <code class="keyword markupname xmlatt">@specializations</code> and
-        <code class="keyword markupname xmlatt">@class</code>
-        attributes.
+        <code class="keyword markupname xmlatt">@class</code> attributes.
       </p>
       <p class="p">
         The following figure illustrates the relationship between a DTD-based DITA document, its
         document-type shell, the vocabulary modules that it uses,
         <span class="ph"
-          >and the element-configuration modules (constraints and expansions) that it
-          integrates</span
+          >and the element-configuration modules (constraint and expansion) that it integrates</span
         >. Similar structure applies to DITA documents that use other XML grammars.
       </p>
-      <figure class="fig fignone" id="createCustomDocType__fig_A20B8879F2D94F41B6B732A546C8D772">
+      <figure class="fig fignone">
         <figcaption><span class="fig--title-label">Figure 1. </span>Document type shell</figcaption>
 
         <br /><img
           class="image"
-          id="createCustomDocType__image_1EB5D8D620784EBA9C6D5F250A8C321B"
           src="../../images/instances-modules-declarations-01.png"
           height="484"
           width="541"
@@ -134,11 +131,13 @@ index: '../../toc.html'
       <p class="p">
         The DITA specification contains a starter set of document-type shells. These document-type
         shells are commented and can be used as templates for creating custom document-type shells.
+      </p>
+      <p class="p">
         While the OASIS-provided document-type shells can be used without any modification, creating
         custom document-type shells is a best practice. If the document-type shells need to be
-        modified in the future, for example, to include a specialization or integrate a constraint,
-        the existing DITA documents will not need to be modified to reference a new document-type
-        shell.
+        modified in the future, for example, to include a specialization or integrate
+        <span class="ph">an element-configuration module (constraint or expansion)</span>, the
+        existing DITA documents will not need to be modified to reference a new document-type shell.
       </p>
     </div>
     <nav role="navigation" class="related-links">
@@ -148,7 +147,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/configuration.html"
-            title="Document-type configuration enables the definition of DITA document types that include only the vocabulary modules that are required for a given set of documents. There is no need to modify the vocabulary modules. Configurations are implemented as document-type shells."
+            title="Document-type configuration enables the definition of DITA document types that include only the vocabulary modules that are required for a given set of documents. There is no need to modify the vocabulary modules. Document-type configurations are implemented as document-type shells."
             >Document-type configuration</a
           >
         </div>

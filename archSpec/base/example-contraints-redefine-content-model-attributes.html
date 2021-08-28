@@ -1,11 +1,11 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Example: Constrain attributes for the section element'
-description: 'In this scenario, an information architect wants to redefine
-  the attributes for the section element. He wants to make the
-  id attribute required and omit the spectitle
-  attribute.'
+title: 'Example: Constrain attributes for the section element using
+  DTD'
+description: 'In this scenario, an information architect wants to redefine the attributes for the
+  section element. He wants to make the id attribute
+  required and omit the spectitle attribute.'
 index: '../../toc.html'
 ---
 
@@ -58,35 +58,30 @@ index: '../../toc.html'
               <ul class="nav nav-list">
                 <li>
                   <a href="../../archSpec/base/example-contraints-redefine-content-model.html"
-                    >Example: Redefine the content model for the topic element</a
+                    >Example: Redefine the content model for the topic element using DTD</a
                   >
                 </li>
                 <li class="active">
                   <a
                     href="../../archSpec/base/example-contraints-redefine-content-model-attributes.html"
-                    >Example: Constrain attributes for the section element</a
+                    >Example: Constrain attributes for the section element using DTD</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-contraints-subset-domain.html"
-                    >Example: Constrain a domain module</a
+                    >Example: Constrain a domain module using DTD</a
                   >
                 </li>
                 <li>
                   <a
                     href="../../archSpec/base/example-contraints-replace-base-element-w-domain-extensions.html"
-                    >Example: Replace a base element with the domain extensions</a
+                    >Example: Replace a base element with the domain extensions using DTD</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-contraints-apply-multiple-constraints.html"
-                    >Example: Apply multiple constraints to a single document-type shell</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../../archSpec/base/example-contraints-correct-machinery-task-constraint.html"
-                    >Example: Correct the constraint for the machinery task</a
+                    >Example: Apply multiple constraints to a single document-type shell using
+                    DTD</a
                   >
                 </li>
               </ul>
@@ -124,13 +119,12 @@ index: '../../toc.html'
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">
       Example: Constrain attributes for the
-      <code class="keyword markupname xmlelement">&lt;section&gt;</code> element
+      <code class="keyword markupname xmlelement">&lt;section&gt;</code> element using DTD
     </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
-        In this scenario, an information architect wants to
-        <span class="ph">redefine the attributes</span> for the
+        In this scenario, an information architect wants to redefine the attributes for the
         <code class="keyword markupname xmlelement">&lt;section&gt;</code> element. He wants to make
         the <code class="keyword markupname xmlatt">@id</code> attribute required and omit the
         <code class="keyword markupname xmlatt">@spectitle</code> attribute.
@@ -147,57 +141,99 @@ index: '../../toc.html'
             <span class="ph filepath">idRequiredSectionContraint.mod</span>:
             <pre
               class="pre codeblock"
-            ><code>&lt;!-- ============================================================= --&gt;
-&lt;!--                    CONSTRAINED TOPIC ENTITIES                 --&gt;
-&lt;!-- ============================================================= --&gt;
-
-&lt;!-- Declares the entities referenced in the constrained content  --&gt;
+            ><code>&lt;!-- Declares the entities referenced in the constrained content  --&gt;
 &lt;!-- model.                                                       --&gt;
-&lt;!ENTITY % conref-atts 
-             'conref    CDATA #IMPLIED
-              conrefend CDATA #IMPLIED
-              conaction (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target) #IMPLIED
-              conkeyref CDATA #IMPLIED' &gt;
+
+&lt;!ENTITY % localization-atts
+              "translate
+                          (no |
+                           yes |
+                           -dita-use-conref-target)
+                                    #IMPLIED
+               xml:lang
+                          CDATA
+                                    #IMPLIED
+               dir
+                          (lro |
+                           ltr |
+                           rlo |
+                           rtl |
+                           -dita-use-conref-target)
+                                    #IMPLIED"
+&gt;
 &lt;!ENTITY % filter-atts
-             'props      CDATA #IMPLIED
-              platform   CDATA #IMPLIED
-              product    CDATA #IMPLIED
-              audience   CDATA #IMPLIED
-              otherprops CDATA #IMPLIED
-              %props-attribute-extensions;' &gt;
-&lt;!ENTITY % select-atts 
-             '%filter-atts;
-              base      CDATA #IMPLIED
-              %base-attribute-extensions;
-              importance (default|deprecated|high|low|normal|obsolete|optional| 
-                          recommended|required|urgent|-dita-use-conref-target) #IMPLIED
-              rev       CDATA #IMPLIED
-              status     (changed|deleted|unchanged|-dita-use-conref-target) #IMPLIED' &gt;
-&lt;!ENTITY % localization-atts 
-             'translate (no|yes|-dita-use-conref-target) #IMPLIED
-              xml:lang CDATA #IMPLIED
-              dir      (lro|ltr|rlo|rtl|-dita-use-conref-target) #IMPLIED' &gt;
+              "props
+                          CDATA
+                                    #IMPLIED
+               %props-attribute-extensions;"
+&gt;
+&lt;!ENTITY % select-atts
+              "%filter-atts;
+               base
+                          CDATA
+                                    #IMPLIED
+               %base-attribute-extensions;
+               importance
+                          (default |
+                           deprecated |
+                           high |
+                           low |
+                           normal |
+                           obsolete |
+                           optional |
+                           recommended |
+                           required |
+                           urgent |
+                           -dita-use-conref-target)
+                                    #IMPLIED
+               rev
+                          CDATA
+                                    #IMPLIED
+               status
+                          (changed |
+                           deleted |
+                           new |
+                           unchanged |
+                           -dita-use-conref-target)
+                                    #IMPLIED"
+&gt;
+&lt;!ENTITY % conref-atts
+              "conref
+                          CDATA
+                                    #IMPLIED
+               conrefend
+                          CDATA
+                                    #IMPLIED
+               conaction
+                          (mark |
+                           pushafter |
+                           pushbefore |
+                           pushreplace |
+                           -dita-use-conref-target)
+                                    #IMPLIED
+               conkeyref
+                          CDATA
+                                    #IMPLIED"
+&gt;
+&lt;!-- Redefines the attributes available on section  --&gt;
 
-&lt;!-- Declares the constrained content model. Original definition   --&gt;
-&lt;!-- included %univ-atts; and spectitle; now includes--&gt;
-&lt;!-- individual pieces of univ-atts, to make ID required.          --&gt;
-
-&lt;!ENTITY % section.attributes 
-          "id          CDATA   #REQUIRED
-           %conref-atts;
-           %select-atts;
-           %localization-atts;
-           outputclass CDATA   #IMPLIED"&gt;</code></pre>
+&lt;!ENTITY % section.attributes
+              "id
+                          ID
+                                    #REQUIRED
+               %conref-atts;
+               %select-atts;
+               %localization-atts;
+               outputclass
+                          CDATA
+                                    #IMPLIED"
+&gt;</code></pre>
             <div class="note note note_note">
               <span class="note__title">Note:</span> The information architect had to declare all
-              the parameter entities that are referenced in
-              <span class="ph">the redefined attributes</span> for
+              the parameter entities that are referenced in the redefined attributes for
               <code class="keyword markupname xmlelement">&lt;section&gt;</code>. If he did not do
-              so, none of the attributes that are declared in the
-              <code class="keyword markupname parameterentity">%conref-atts;</code>,
-              <code class="keyword markupname parameterentity">%select-atts;</code>, or
-              <code class="keyword markupname parameterentity">%localization-atts;</code> parameter
-              entities would be available on the
+              so, none of the attributes that are declared in the parameter entities would be
+              available on the
               <code class="keyword markupname xmlelement">&lt;section&gt;</code> element.
               Furthermore, since the
               <code class="keyword markupname parameterentity">%select-atts;</code> parameter entity
@@ -206,21 +242,24 @@ index: '../../toc.html'
               entity, the <code class="keyword markupname parameterentity">%filter-atts;</code> must
               be declared and it must precede the declaration for the
               <code class="keyword markupname parameterentity">%select-atts;</code> parameter
-              entity.
-              <span class="ph"
-                >The
-                <code class="keyword markupname parameterentity">%props-attribute-extensions;</code>
-                and
-                <code class="keyword markupname parameterentity">%base-attribute-extensions;</code>
-                parameter entities do not need to be declared in the constraint module, because they
-                are declared in the document-type shells before the inclusion of the constraint
-                module.</span
-              >
+              entity. The
+              <code class="keyword markupname parameterentity">%props-attribute-extensions;</code>
+              and
+              <code class="keyword markupname parameterentity">%base-attribute-extensions;</code>
+              parameter entities do not need to be declared in the constraint module, because they
+              are declared in the document-type shells before the inclusion of the constraint
+              module.
             </div>
           </li>
           <li class="li">
-            He then integrates the constraint module into the applicable document-type shells and
-            adds it to his <span class="ph filepath">catalog.xml</span> file.
+            He adds the constraint module to the <span class="ph filepath">catalog.xml</span> file.
+          </li>
+          <li class="li">
+            He then integrates the constraint module into the applicable document-type shells.
+          </li>
+          <li class="li">
+            After checking test topics to ensure that the content model is modified as expected, his
+            work is done.
           </li>
         </ol>
       </div>
@@ -233,7 +272,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/examples-constraints.html"
-            title="This section of the specification contains examples and scenarios. They illustrate a variety of ways that constraints can be used; they also provide examples of the DTD coding requirements for constraints and how constraints are integrated into document-type shells."
+            title="This section of the specification contains examples of constraints implemented using DTD."
             >Examples: Constraints implemented using DTDs</a
           >
         </div>

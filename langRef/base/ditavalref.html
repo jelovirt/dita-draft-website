@@ -3,9 +3,8 @@
 layout: base
 title: 'ditavalref'
 description: 'The ditavalref element references a DITAVAL document that
-  specifies filter conditions that can be used to process a map or map branch. Other
-  DITAVAL-reference domain elements can be used to imply multiple copies of the map branch that
-  contains them and so apply a different set of conditions to each copy.'
+  specifies filter conditions to be used when processing a map or map
+  branch.'
 index: '../../toc.html'
 ---
 
@@ -59,11 +58,12 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element references
-        a DITAVAL document that specifies filter conditions that can be used to process a map or map
-        branch. Other DITAVAL-reference domain elements can be used to imply multiple copies of the
-        map branch that contains them and so apply a different set of conditions to each copy.
+        a DITAVAL document that specifies filter conditions to be used when processing a map or map
+        branch.
       </p>
-      <section class="section" id="ditavalref__section-1">
+      <section class="section" id="ditavalref__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
+
         <p class="p">
           When a <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element is
           included in a map, the conditions in the referenced DITAVAL document are used to filter
@@ -192,13 +192,8 @@ index: '../../toc.html'
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element is
-          specialized from
-          <a
-            class="xref"
-            href="topicref.html"
-            title="A topic reference is the mechanism for referencing a topic (or another resource) from a DITA map. It can nest, which enables the expression of navigation and table-of-content hierarchies, as well as containment hierarchies and parent-child relationships."
-            >topicref</a
-          >. It is defined in the DITAVALref domain module.
+          specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
+          is defined in the DITAVAL-reference domain module.
         </p>
       </section>
       <section class="section" id="ditavalref__attributes">
@@ -206,59 +201,46 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           (except for <code class="keyword markupname xmlatt">@conkeyref</code>, which is removed
-          for all elements in this domain) and the attributes defined below.
+          for all elements in this domain),
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@format</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-href"
+            ><code class="keyword markupname xmlatt">@href</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scope"
+            ><code class="keyword markupname xmlatt">@scope</code></a
+          >.
         </p>
-        <dl class="dl">
-          <dt class="dt dlterm" id="ditavalref__ditavalref-href">
-            <code class="keyword markupname xmlatt">@href</code>
-          </dt>
-          <dd class="dd">
-            Provides a reference to a DITAVAL document. If the
-            <code class="keyword markupname xmlatt">@href</code> attribute is unspecified, this
-            <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> will not result in
-            any new filtering behavior, but other aspects of the element are still evaluated. See
-            <a
-              class="xref"
-              href="../attributes/thehrefattribute.html"
-              title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
-              >The href attribute</a
-            >
-            for general information on the format and processing implications of the
-            <code class="keyword markupname xmlatt">@href</code> attribute.
-          </dd>
-
-          <dt class="dt dlterm" id="ditavalref__ditavalref-format">
-            <code class="keyword markupname xmlatt">@format</code>
-          </dt>
-          <dd class="dd">
-            Format of the target document, which <dfn class="term RFC-2119">MUST</dfn> be a DITAVAL
-            document. The default value for this element is <span class="keyword">ditaval</span>.
-            See
-            <a
-              class="xref"
-              href="../attributes/theformatattribute.html"
-              title="The format attribute identifies the format of the resource that is referenced. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor."
-              >The format attribute</a
-            >
-            for more information.
-          </dd>
-
-          <dt class="dt dlterm" id="ditavalref__ditavalref-processing-role">
-            <code class="keyword markupname xmlatt">@processing-role</code>
-          </dt>
-          <dd class="dd">
-            The processing role defaults to "resource-only" for DITAVAL documents, which are only
-            used for processing and do not contain content. There is no other valid value for this
-            attribute on this element.
-          </dd>
-        </dl>
+        <div class="p">
+          For this element:
+          <ul class="ul" id="ditavalref__ul_xlk_gc4_qpb">
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@format</code> attribute has a default
+              value of <span class="keyword">ditaval</span>.
+            </li>
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@href</code> attribute specivies a
+              reference to a DITAVAL document. If the
+              <code class="keyword markupname xmlatt">@href</code> attribute is unspecified, this
+              <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> will not result
+              in any new filtering behavior, but other aspects of the element are still evaluated.
+            </li>
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@processing-role</code> attribute has a
+              default value of <span class="keyword">resource-only</span>.
+            </li>
+          </ul>
+        </div>
       </section>
       <div class="example" id="ditavalref__example">
         <h2 class="title sectiontitle">Example</h2>

@@ -79,61 +79,36 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
-          (with a narrowed definition for <code class="keyword markupname xmlatt">@translate</code>,
-          given below) and the attributes defined below.
+          and the attributes defined below.
+        </p>
+        <p class="p attr-exception" id="draft-comment__attr-exception">
+          For this element, the <code class="keyword markupname xmlatt">@translate</code> attribute
+          has a default value of <span class="keyword">no</span>.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="draft-comment__author">
-            <code class="keyword markupname xmlatt">@author</code>
+          <dt class="dt dlterm" id="draft-comment__attr-author">
+            <a id="draft-comment__author"></a><code class="keyword markupname xmlatt">@author</code>
           </dt>
           <dd class="dd">Designates the originator of the draft comment.</dd>
 
-          <dt class="dt dlterm" id="draft-comment__disposition">
-            <code class="keyword markupname xmlatt">@disposition</code>
+          <dt class="dt dlterm" id="draft-comment__attr-disposition">
+            <a id="draft-comment__disposition"></a
+            ><code class="keyword markupname xmlatt">@disposition</code>
           </dt>
           <dd class="dd">Specifies the status of the draft comment.</dd>
 
-          <dt class="dt dlterm" id="draft-comment__time">
-            <code class="keyword markupname xmlatt">@time</code>
+          <dt class="dt dlterm" id="draft-comment__attr-time">
+            <a id="draft-comment__time"></a><code class="keyword markupname xmlatt">@time</code>
           </dt>
           <dd class="dd">Specifies when the draft comment was created.</dd>
-
-          <dt class="dt dlterm" id="draft-comment__translate">
-            <code class="keyword markupname xmlatt">@translate</code>
-          </dt>
-          <dd class="dd">
-            Specifies whether the content of the element is translatable. The default value is "no".
-            Setting <code class="keyword markupname xmlatt">@translate</code> to "yes" overrides the
-            default value. The DITA specification contains a list of each OASIS DITA element and its
-            common processing default for the translate value; because this element uses an actual
-            default, it is always treated as <code class="ph codeph">translate="no"</code> unless
-            overridden. Available values are:
-            <dl class="dl">
-              <dt class="dt dlterm">no</dt>
-              <dd class="dd">The content of this element is not translatable.</dd>
-
-              <dt class="dt dlterm">yes</dt>
-              <dd class="dd">The content of this element is translatable.</dd>
-
-              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-              <dd class="dd">
-                See
-                <a
-                  class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
-                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-                  >Using the -dita-use-conref-target value</a
-                >
-                for more information.
-              </dd>
-            </dl>
-          </dd>
         </dl>
       </section>
       <div class="example" id="draft-comment__example">
@@ -165,7 +140,7 @@ Where's the usage information for this section?
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

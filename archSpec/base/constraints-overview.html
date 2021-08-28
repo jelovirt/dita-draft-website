@@ -2,10 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Overview of constraints'
-description: 'Constraint modules enable information architects to restrict the
-  content models or attributes of OASIS-defined DITA grammars. A constraint is a simplification of
-  an XML grammar such that any instance that conforms to the constrained grammar also will conform
-  to the original grammar.'
+description: 'Constraint modules enable information architects to restrict the content models or
+  attributes of DITA elements. A constraint is a simplification of an XML grammar such that any
+  instance that conforms to the constrained grammar also will conform to the original
+  grammar.'
 index: '../../toc.html'
 ---
 
@@ -92,9 +92,9 @@ index: '../../toc.html'
     <div class="body conbody">
       <p class="shortdesc">
         Constraint modules enable information architects to restrict the content models or
-        attributes of OASIS-defined DITA grammars. A constraint is a simplification of an XML
-        grammar such that any instance that conforms to the constrained grammar also will conform to
-        the original grammar.
+        attributes of DITA elements. A constraint is a simplification of an XML grammar such that
+        any instance that conforms to the constrained grammar also will conform to the original
+        grammar.
       </p>
       <p class="p">A constraint module can perform the following functions:</p>
       <dl class="dl">
@@ -144,10 +144,7 @@ index: '../../toc.html'
         <dd class="dd">
           <p class="p">
             Constraint modules can restrict the set of extension elements that are provided in a
-            domain.
-            <span class="ph"
-              >They also can restrict the content models for the extension elements.</span
-            >
+            domain. They also can restrict the content models for the extension elements.
           </p>
           <p class="p">
             For example, a constraint on the programming domain can reduce the list of included
@@ -155,6 +152,11 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;codeph&gt;</code> and
             <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code>.
           </p>
+          <div class="note note note_note">
+            <span class="note__title">Note:</span> For DITA implementations that use RNG-based
+            grammar file, restricting the set of extension elements that are provided in a domain
+            can be handled simply by document-type configuration.
+          </div>
         </dd>
 
         <dt class="dt dlterm">Replace base elements with domain extensions</dt>

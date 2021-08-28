@@ -97,16 +97,15 @@ index: '../../toc.html'
           <p class="p">
             For example, an expansion for
             <code class="keyword markupname xmlelement">&lt;section&gt;</code> can make a new
-            element (<code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code>)
+            element (<code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code>)
             available as an optional, child element. The
-            <code class="keyword markupname xmlelement">&lt;section-shortdesc&gt;</code> is
-            specialized from <code class="keyword markupname xmlelement">&lt;p&gt;</code>, but it is
-            available only within
-            <code class="keyword markupname xmlelement">&lt;section&gt;</code>.
+            <code class="keyword markupname xmlelement">&lt;sectionDesc&gt;</code> is specialized
+            from <code class="keyword markupname xmlelement">&lt;p&gt;</code>, but it is available
+            only within <code class="keyword markupname xmlelement">&lt;section&gt;</code>.
           </p>
           <p class="p">
             The elements must be defined in a separate element domain that declares the content
-            model and attributes list for the new elements.
+            models and attribute lists for the new elements.
           </p>
         </dd>
 
@@ -124,17 +123,13 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> can make
             <code class="keyword markupname xmlatt">@cell-purpose</code> available only on those
             elements. The <code class="keyword markupname xmlatt">@cell-purpose</code> attribute is
-            specialized from <code class="keyword markupname xmlatt">@base</code>. (It could be
-            specialized from <code class="keyword markupname xmlatt">@props</code>, but the ability
-            to perform filtering is not wanted – and would be problematic if applied on
-            <code class="keyword markupname xmlelement">&lt;entry&gt;</code> or
-            <code class="keyword markupname xmlelement">&lt;colspec&gt;</code>.
+            specialized from <code class="keyword markupname xmlatt">@base</code>.
           </p>
           <p class="p">
             The additional attributes either can be defined directly within the expansion module, or
             they can be defined in separate attribute-specialization modules. In either case, the
             token used as value for the
-            <code class="keyword markupname xmlatt">@specialization</code> attribute must be
+            <code class="keyword markupname xmlatt">@specializations</code> attribute must be
             defined.
           </p>
         </dd>

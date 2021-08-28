@@ -40,11 +40,20 @@ index: '../../toc.html'
                 >Core concepts for working with keys</a
               >
             </li>
-            <li><a href="../../archSpec/base/keyScopes.html">Key scopes</a></li>
+            <li>
+              <a href="../../archSpec/base/thekeysattribute.html"
+                >Setting key names with the keys attribute</a
+              >
+            </li>
+            <li><a href="../../archSpec/base/thekeyrefattribute.html">The keyref attribute</a></li>
             <li>
               <a href="../../archSpec/base/using-keys-for-addressing.html"
                 >Using keys for addressing</a
               >
+            </li>
+            <li><a href="../../archSpec/base/keyScopes.html">Key scopes</a></li>
+            <li>
+              <a href="../../archSpec/base/the-key-scope-attribute.html">The keyscope attribute</a>
             </li>
             <li>
               <a href="../../archSpec/base/using-keys-to-address-keys-across-scopes.html"
@@ -146,9 +155,30 @@ index: '../../toc.html'
           processing.
         </li>
         <li class="link ulchildlink">
-          <strong><a href="../../archSpec/base/keyScopes.html">Key scopes</a></strong
-          ><br />Key scopes enable map authors to specify different sets of key definitions for
-          different map branches.
+          <strong
+            ><a href="../../archSpec/base/thekeysattribute.html"
+              >Setting key names with the keys attribute</a
+            ></strong
+          ><br />A <code class="keyword markupname xmlatt">@keys</code> attribute consists of one or
+          more space-separated keys. Map authors define keys using a
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> or
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> specialization that
+          contains the <code class="keyword markupname xmlatt">@keys</code> attribute. Each key
+          definition introduces an identifier for a resource referenced from a map. Keys resolve to
+          the resources given as the <code class="keyword markupname xmlatt">@href</code> value on
+          the key definition
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, to content
+          contained within the key definition
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, or both.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/thekeyrefattribute.html">The keyref attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@keyref</code> attribute provides an
+          indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to
+          referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content
+          contained within a key definition topic reference. When the DITA content is processed, the
+          key references are resolved using key definitions from DITA maps.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -160,6 +190,30 @@ index: '../../toc.html'
           <code class="keyword markupname xmlatt">@keyref</code> attribute. For content reference
           relationships, resources can be indirectly addressed by using the
           <code class="keyword markupname xmlatt">@conkeyref</code> attribute.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../archSpec/base/keyScopes.html">Key scopes</a></strong
+          ><br />Key scopes enable map authors to specify different sets of key definitions for
+          different map branches.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/the-key-scope-attribute.html"
+              >The keyscope attribute</a
+            ></strong
+          ><br />The <code class="keyword markupname xmlatt">@keyscope</code> attribute consists of
+          one or more space-separated key scope names. Map authors define the boundaries for key
+          scopes by specifying the
+          <code class="keyword markupname xmlatt">@keyscope</code> attribute on
+          <code class="keyword markupname xmlelement">&lt;map&gt;</code> elements,
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements, or elements
+          that are specializations of
+          <code class="keyword markupname xmlelement">&lt;map&gt;</code> or
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. Such elements, their
+          contents, and any locally-scoped content referenced from within the element, are
+          considered to be part of the scope. Keys defined within a scope are only directly
+          referenceable from within the same scope. They can be referenced from the parent scope
+          using the scope's name, followed by a period, followed by the key name.
         </li>
         <li class="link ulchildlink">
           <strong

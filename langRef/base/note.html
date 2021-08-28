@@ -65,6 +65,92 @@ index: '../../toc.html'
           Variant types of notes (caution, danger, warning, etc.) can be indicated through values
           selected for the <code class="keyword markupname xmlatt">@type</code> attribute.
         </p>
+        <div class="div">
+          <p class="p">
+            For example, if the note is a tip, the word <strong class="ph b">Tip</strong> might be
+            used to draw the reader's attention to it.
+          </p>
+          <p class="p">
+            The values danger, warning, and notice have meanings that are based on ANSI Z535 and ISO
+            3864 regulations.
+          </p>
+          <p class="p">
+            If <code class="keyword markupname xmlatt">@type</code> is set to
+            <span class="keyword">other</span>, the value of the
+            <code class="keyword markupname xmlatt">@othertype</code> attribute can be used. If you
+            use <code class="keyword markupname xmlatt">@othertype</code>, many processors will
+            require additional information on how to process the value. Allowable values for the
+            <code class="keyword markupname xmlatt">@type</code> attribute are:
+          </p>
+          <dl class="dl" id="note__d1556e59">
+            <dt class="dt dlterm"><span class="keyword">note</span></dt>
+            <dd class="dd">This is just a note.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">attention</span></dt>
+            <dd class="dd">Please pay extra attention to this note.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">caution</span></dt>
+            <dd class="dd">Care is required when proceeding.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">danger</span></dt>
+            <dd class="dd">
+              Important! Be aware of this before doing anything else.
+              <span class="ph"
+                >When used with the
+                <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element,
+                this indicates an imminently hazardous situation which, if not avoided,
+                <strong class="ph b">will</strong> result in death or serious injury.</span
+              >
+            </dd>
+
+            <dt class="dt dlterm"><span class="keyword">fastpath</span></dt>
+            <dd class="dd">This note will speed you on your way.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">important</span></dt>
+            <dd class="dd">This note is important.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">notice</span></dt>
+            <dd class="dd">
+              Indicates a potential situation which, if not avoided, might result in an
+              <strong class="ph b">undesirable result or state</strong>.
+            </dd>
+
+            <dt class="dt dlterm"><span class="keyword">remember</span></dt>
+            <dd class="dd">Don't forget to do what this note says.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">restriction</span></dt>
+            <dd class="dd">You can't do what this note says.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">tip</span></dt>
+            <dd class="dd">This is a fine little tip.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">warning</span></dt>
+            <dd class="dd">
+              Indicates a potentially hazardous situation. When used with the
+              <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element,
+              this indicates a situation which, if not avoided, could result in death or serious
+              injury.
+            </dd>
+
+            <dt class="dt dlterm"><span class="keyword">trouble</span></dt>
+            <dd class="dd">Provides information about how to remedy a trouble situation.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">other</span></dt>
+            <dd class="dd">This is something other than a normal note.</dd>
+
+            <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+            <dd class="dd">
+              See
+              <a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../archSpec/base/ditauseconreftarget.html"
+                title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                >Using the -dita-use-conref-target value</a
+              >
+              for more information.
+            </dd>
+          </dl>
+        </div>
       </section>
       <section class="section" id="note__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -72,48 +158,46 @@ index: '../../toc.html'
         <div class="div">
           <p class="p">
             The following attributes are available on this element:
-            <a
-              class="xref"
-              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-              title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-              >Universal attribute group</a
+            <span class="ph"
+              ><a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+                title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+                >universal attributes</a
+              ></span
             >,
             <a
               class="xref"
               href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__spectitle"
-              >spectitle (specialization attributes)</a
+              ><code class="keyword markupname xmlatt">@spectitle</code></a
             >, and the attributes defined below.
           </p>
           <dl class="dl">
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@othertype</code></dt>
+            <dt class="dt dlterm" id="note__d1556e308">
+              <code class="keyword markupname xmlatt">@othertype</code>
+            </dt>
             <dd class="dd">
               Specifies an alternate note type. This value is used as the user-provided note title
               when the <code class="keyword markupname xmlatt">@type</code> attribute value is set
               to <span class="keyword">other</span>.
             </dd>
 
-            <dt class="dt dlterm"><code class="keyword markupname xmlatt">@type</code></dt>
+            <dt class="dt dlterm" id="note__d1556e324">
+              <code class="keyword markupname xmlatt">@type</code>
+            </dt>
             <dd class="dd">
               Specifies the type of a note. Note that this differs from the
               <code class="keyword markupname xmlatt">@type</code> attribute on many other DITA
-              elements. See
+              elements. Allowable values are <span class="keyword">note</span>,
+              <span class="keyword">tip</span>, <span class="keyword">fastpath</span>,
+              <span class="keyword">restriction</span>, <span class="keyword">important</span>,
+              <span class="keyword">remember</span>, <span class="keyword">attention</span>,
+              <span class="keyword">caution</span>, <span class="keyword">notice</span>,
+              <span class="keyword">danger</span>, <span class="keyword">warning</span>,
+              <span class="keyword">trouble</span>, <span class="keyword">other</span>, and
               <a
                 class="xref"
-                href="../../common/reuse-w-lwdita/../../langRef/attributes/thetypeattribute.html"
-                title="The type attribute is used on linking elements to describe the target of a cross-reference. It also is used on the note element to describe the note type, as well as on several other elements for varying purposes."
-                >The type attribute</a
-              >
-              for detailed information on supported values and processing implications. Available
-              values are <span class="keyword">note</span>, <span class="keyword">tip</span>,
-              <span class="keyword">fastpath</span>, <span class="keyword">restriction</span>,
-              <span class="keyword">important</span>, <span class="keyword">remember</span>,
-              <span class="keyword">attention</span>, <span class="keyword">caution</span>,
-              <span class="keyword">notice</span>, <span class="keyword">danger</span>,
-              <span class="keyword">warning</span>, <span class="keyword">trouble</span>,
-              <span class="keyword">other</span>, and
-              <a
-                class="xref"
-                href="../../common/reuse-w-lwdita/../../langRef/attributes/ditauseconreftarget.html"
+                href="../../common/reuse-w-lwdita/../../archSpec/base/ditauseconreftarget.html"
                 title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                 ><span class="keyword">-dita-use-​conref-​target</span></a
               >.
@@ -123,11 +207,13 @@ index: '../../toc.html'
         <div class="div">
           <p class="p">
             The following attributes are available on this element:
-            <a
-              class="xref"
-              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-              title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-              >Universal attribute group</a
+            <span class="ph"
+              ><a
+                class="xref"
+                href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+                title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+                >universal attributes</a
+              ></span
             >
             and the attribute defined below.
           </p>
@@ -141,17 +227,10 @@ index: '../../toc.html'
             <dd class="dd">
               Specifies the type of a note. Note that this differs from the
               <code class="keyword markupname xmlatt">@type</code> attribute on many other DITA
-              elements. See
-              <a
-                class="xref"
-                href="../../common/reuse-w-lwdita/../../langRef/attributes/thetypeattribute.html"
-                title="The type attribute is used on linking elements to describe the target of a cross-reference. It also is used on the note element to describe the note type, as well as on several other elements for varying purposes."
-                >The type attribute</a
-              >
-              for detailed information on supported values and processing implications. Available
-              values are <span class="keyword">caution</span>, <span class="keyword">danger</span>,
-              <span class="keyword">note</span>, <span class="keyword">notice</span>,
-              <span class="keyword">trouble</span>, and <span class="keyword">warning</span>.
+              elements. Available values are <span class="keyword">caution</span>,
+              <span class="keyword">danger</span>, <span class="keyword">note</span>,
+              <span class="keyword">notice</span>, <span class="keyword">trouble</span>, and
+              <span class="keyword">warning</span>.
             </dd>
             <dd class="dd ddexpand">XDITA: <code class="keyword markupname xmlatt">@type</code></dd>
             <dd class="dd ddexpand">
@@ -182,7 +261,7 @@ patient.&lt;/note&gt;</code></pre>
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

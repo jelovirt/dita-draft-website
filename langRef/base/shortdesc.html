@@ -60,13 +60,13 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          When present in topics, the short description is the first paragraph of the topic. It also
-          is used for link previews and search results.
+          When present in topics, the short description is the first paragraph of the topic. It can
+          also be used for link previews and search results.
         </p>
         <div class="div">
           <p class="p">
             When present in topics, the short description is the first paragraph of the topic. It
-            also is used for link previews and search results.
+            can also be used for link previews and search results.
           </p>
           <p class="p">
             When present in maps, the
@@ -81,21 +81,12 @@ index: '../../toc.html'
               Provide a short description that is specific to the map context and used for link
               previews.
             </li>
-            <li class="li">
-              Override the short description located in the associated DITA topic, when the
-              <code class="keyword markupname xmlatt">@copy-to</code> attribute is specified.
-              Processors might not implement this behavior.
-              <p class="p">
-                When a <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element
-                applies to an entire DITA map, it serves as description only.
-              </p>
-            </li>
           </ul>
+          <p class="p">
+            When a <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element
+            applies to an entire DITA map, it serves as description only.
+          </p>
         </div>
-        <p class="p">
-          When present in topics, the short description is the first paragraph of the topic. It also
-          is used for link previews and search results.
-        </p>
       </section>
       <section class="section" id="shortdesc__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
@@ -115,15 +106,7 @@ index: '../../toc.html'
             the DITA topic. However, when processors render the topic itself, they
             <dfn class="term RFC-2119">SHOULD</dfn> use the content of the
             <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element located in
-            the DITA topic, unless the
-            <code class="keyword markupname xmlatt">@copy-to</code> attribute is specified on the
-            topic reference in the map.
-          </p>
-          <p class="p">
-            The short description in the map <dfn class="term RFC-2119">MAY</dfn> override the short
-            description in the topic if the
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element specifies a
-            <code class="keyword markupname xmlatt">@copy-to</code> attribute.
+            the DITA topic.
           </p>
         </div>
         <p class="p">
@@ -136,11 +119,13 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >.
         </p>
       </section>

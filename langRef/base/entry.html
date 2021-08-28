@@ -63,32 +63,46 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           (without the Metadata attribute group),
-          <code class="keyword markupname xmlatt">@base</code> and
-          <code class="keyword markupname xmlatt">@rev</code> from the
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts"
-            >Metadata attributes</a
-          >, and the attributes defined below. This element also uses
-          <code class="keyword markupname xmlatt">@align</code>,
-          <code class="keyword markupname xmlatt">@char</code>,
-          <code class="keyword markupname xmlatt">@charoff</code>,
-          <code class="keyword markupname xmlatt">@colsep</code>,
-          <code class="keyword markupname xmlatt">@rowsep</code>, and
-          <code class="keyword markupname xmlatt">@valign</code> from the
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__complextableatts"
-            >Complex table attributes</a
-          >.
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-base"
+            ><code class="keyword markupname xmlatt">@base</code></a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-rev"
+            ><code class="keyword markupname xmlatt">@rev</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-align"
+            ><code class="keyword markupname xmlatt">@align</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-char"
+            ><code class="keyword markupname xmlatt">@char</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-charoff"
+            ><code class="keyword markupname xmlatt">@charoff</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-colsep"
+            ><code class="keyword markupname xmlatt">@colsep</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowsep"
+            ><code class="keyword markupname xmlatt">@rowsep</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-valign"
+            ><code class="keyword markupname xmlatt">@valign</code></a
+          >, and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@rotate</code></dt>
+          <dt class="dt dlterm" id="entry__attr-rotate">
+            <code class="keyword markupname xmlatt">@rotate</code>
+          </dt>
           <dd class="dd">
-            Specifies whether the contents of the entry is rotated. Supported values are:
+            Specifies whether the contents of the entry is rotated. The following values are valid:
             <dl class="dl">
               <dt class="dt dlterm">1</dt>
               <dd class="dd">The contents of the cell are rotated 90 degrees counterclockwise.</dd>
@@ -101,7 +115,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -115,43 +129,44 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colname</code></dt>
+          <dt class="dt dlterm" id="entry__attr-colname">
+            <code class="keyword markupname xmlatt">@colname</code>
+          </dt>
           <dd class="dd">
-            Specifies the column name in which an entry is found.
-            <span class="ph"
-              >The value is a reference to the
-              <code class="keyword markupname xmlatt">@colname</code> attribute on the
-              <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.</span
-            >
+            Specifies the column name in which an entry is found. The value is a reference to the
+            <code class="keyword markupname xmlatt">@colname</code> attribute on the
+            <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@namest</code></dt>
+          <dt class="dt dlterm" id="entry__attr-namest">
+            <code class="keyword markupname xmlatt">@namest</code>
+          </dt>
           <dd class="dd">
-            Specifies the first logical column that is included in a horizontal span.
-            <span class="ph"
-              >The value is a reference to the
-              <code class="keyword markupname xmlatt">@colname</code> attribute on the
-              <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.</span
-            >
+            Specifies the first logical column that is included in a horizontal span. The value is a
+            reference to the <code class="keyword markupname xmlatt">@colname</code> attribute on
+            the <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@nameend</code></dt>
+          <dt class="dt dlterm" id="entry__attr-nameend">
+            <code class="keyword markupname xmlatt">@nameend</code>
+          </dt>
           <dd class="dd">
-            Specifies the last logical column that is included in a horizontal span.
-            <span class="ph"
-              >The value is a reference to the
-              <code class="keyword markupname xmlatt">@colname</code> attribute on the
-              <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.</span
-            >
+            Specifies the last logical column that is included in a horizontal span. The value is a
+            reference to the <code class="keyword markupname xmlatt">@colname</code> attribute on
+            the <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@morerows</code></dt>
+          <dt class="dt dlterm" id="entry__attr-morerows">
+            <code class="keyword markupname xmlatt">@morerows</code>
+          </dt>
           <dd class="dd">Specifies the number of additional rows to add in a vertical span.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
+          <dt class="dt dlterm" id="entry__d1313e977">
+            <code class="keyword markupname xmlatt">@scope</code>
+          </dt>
           <dd class="dd">
-            Specifies that the current entry is a header for other table entries. Allowable values
-            are:
+            Specifies that the current entry is a header for other table entries. The following
+            values are valid:
             <dl class="dl">
               <dt class="dt dlterm"><span class="keyword">row</span></dt>
               <dd class="dd">The current entry is a header for all cells in the row.</dd>
@@ -174,7 +189,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -183,7 +198,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@headers</code></dt>
+          <dt class="dt dlterm" id="entry__d1313e961">
+            <code class="keyword markupname xmlatt">@headers</code>
+          </dt>
           <dd class="dd">
             Specifies one or more <code class="keyword markupname xmlelement">&lt;entry&gt;</code>
             headers that apply to the current entry. The
@@ -213,7 +230,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
             >Table elements</a
           >
         </div>

@@ -60,43 +60,53 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >,
           <a
             class="xref"
             href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__specentry"
-            >specentry (specialization attributes)</a
+            ><code class="keyword markupname xmlatt">@specentry</code></a
           >, and the attributes defined below.
         </p>
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@colspan</code></dt>
+          <dt class="dt dlterm" id="stentry__d1419e174">
+            <code class="keyword markupname xmlatt">@colspan</code>
+          </dt>
           <dd class="dd">
             Specifies the number of columns that a cell is to span inside a simple table.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@rowspan</code></dt>
+          <dt class="dt dlterm" id="stentry__d1419e184">
+            <code class="keyword markupname xmlatt">@rowspan</code>
+          </dt>
           <dd class="dd">
             Specifies the number of rows that a cells is to span inside a simple table.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
+          <dt class="dt dlterm" id="stentry__d1419e194">
+            <code class="keyword markupname xmlatt">@scope</code>
+          </dt>
           <dd class="dd">
-            Specifies that the current entry is a header for other table entries. Allowable values
-            are:
+            Specifies that the current entry is a header for other table entries. The following
+            values are valid:
             <dl class="dl">
               <dt class="dt dlterm"><span class="keyword">row</span></dt>
               <dd class="dd">The current entry is a header for all cells in the row.</dd>
@@ -119,7 +129,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/reuse-w-lwdita/../../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/reuse-w-lwdita/../../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -128,7 +138,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@headers</code></dt>
+          <dt class="dt dlterm" id="stentry__d1419e258">
+            <code class="keyword markupname xmlatt">@headers</code>
+          </dt>
           <dd class="dd">
             Specifies one or more <code class="keyword markupname xmlelement">&lt;entry&gt;</code>
             headers that apply to the current entry. The
@@ -158,7 +170,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
             >Table elements</a
           >
         </div>

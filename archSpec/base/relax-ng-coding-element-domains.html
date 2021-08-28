@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'RELAX NG: Coding requirements for element-domain modules'
-description: 'Vocabulary modules that define element domains declare an extension pattern for each
-  element that is extended by the domain. These patterns are used when including the domain module
-  in document-type shells.'
+description:
+  'Element-domain modules declare an extension pattern for each element that is extended by
+  the domain. These patterns are used when including the domain module in document-type
+  shells.'
 index: '../../toc.html'
 ---
 
@@ -61,7 +62,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/relax-ng-coding-element-types.html"
-                >RELAX NG: Coding requirements for element type declarations</a
+                >RELAX NG: Coding requirements for element-type declarations</a
               >
             </li>
             <li>
@@ -80,8 +81,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/relax-ng-coding-constraint-modules.html"
-                >RELAX NG: Coding requirements for constraint modules</a
+              <a
+                href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html"
+                >RELAX NG: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -110,48 +112,49 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        Vocabulary modules that define element domains declare an extension pattern for each element
-        that is extended by the domain. These patterns are used when including the domain module in
-        document-type shells.
+        Element-domain modules declare an extension pattern for each element that is extended by the
+        domain. These patterns are used when including the domain module in document-type shells.
       </p>
       <dl class="dl">
         <dt class="dt dlterm">Pattern name</dt>
         <dd class="dd">
           <p class="p">
-            The name of the pattern uses the following format, where
-            <var class="keyword varname">shortName</var> is the short name for the domain, and
-            <var class="keyword varname">elementName</var> is the name of the element that is
-            extended:
+            The name of the pattern is the abbreviation for the domain, followed by a hyphen ("-"),
+            and the name of the element that is extended.
           </p>
-          <pre
-            class="pre codeblock"
-          ><code><code class="ph codeph"><var class="keyword varname">shortName</var>-d-</code><var class="keyword varname">elementName</var></code></pre>
+          <div class="example">
+            <p class="p">
+              For example, the name of the pattern for the highlight domain that extends the
+              <code class="keyword markupname xmlelement">&lt;ph&gt;</code> element is
+              <code class="ph codeph">hi-d-ph</code>.
+            </p>
+          </div>
         </dd>
 
         <dt class="dt dlterm">Pattern definition</dt>
         <dd class="dd">
           <p class="p">
-            The extension pattern consists of a choice group that contains references to
-            element-type name patterns. Each extension of the base element type is referenced.
+            The pattern consists of a choice group that contains references to element-type name
+            patterns. Each extension of the base element type is referenced.
           </p>
-          <div class="div">
-            <p class="p">
-              For example, the following pattern extends the
-              <code class="keyword markupname xmlelement">&lt;ph&gt;</code> element type by adding
-              the specializations of
-              <code class="keyword markupname xmlelement">&lt;ph&gt;</code> that are defined in the
-              highlighting domain:
-            </p>
-            <pre class="pre codeblock"><code>  &lt;define name="hi-d-ph"&gt;
-    &lt;choice&gt;
-      &lt;ref name="b.element"/&gt;
-      &lt;ref name="i.element"/&gt;
-      &lt;ref name="sup.element"/&gt;
-      &lt;ref name="sub.element"/&gt;
-      &lt;ref name="tt.element"/&gt;
-      &lt;ref name="u.element"/&gt;
-    &lt;/choice&gt;
-  &lt;/define&gt;
+          <div class="example">
+            <p class="p">For example:</p>
+            <pre
+              class="pre codeblock"
+            ><code>&lt;a:documentation&gt;DOMAIN EXTENSION PATTERNS&lt;/a:documentation&gt;
+
+&lt;define name="hi-d-ph"&gt;
+  &lt;choice&gt;
+    &lt;ref name="b.element"/&gt;
+    &lt;ref name="i.element"/&gt;
+    &lt;ref name="line-through.element"/&gt;
+    &lt;ref name="overline.element"/&gt;
+    &lt;ref name="sup.element"/&gt;
+    &lt;ref name="sub.element"/&gt;
+    &lt;ref name="tt.element"/&gt;
+    &lt;ref name="u.element"/&gt;
+  &lt;/choice&gt;
+&lt;/define&gt;
 </code></pre>
           </div>
         </dd>
@@ -164,24 +167,52 @@ index: '../../toc.html'
             <code class="keyword markupname xmlatt">@combine</code> value of
             <span class="keyword">choice</span> that contains a reference to the domain pattern.
           </p>
-          <div class="div">
+          <div class="example">
             <p class="p">
-              For example, the following pattern adds the highlighting domain specializations of the
+              For example, the following pattern adds the highlight domain specializations of the
               <code class="keyword markupname xmlelement">&lt;ph&gt;</code> element to the content
               model of the <code class="keyword markupname xmlelement">&lt;ph&gt;</code> element:
             </p>
-            <pre class="pre codeblock"><code>  &lt;define name="ph" combine="choice"&gt;
-    &lt;ref name="hi-d-ph"/&gt;
-  &lt;/define&gt;</code></pre>
+            <pre class="pre codeblock"><code>&lt;define name="ph" combine="choice"&gt;
+  &lt;ref name="hi-d-ph"/&gt;
+&lt;/define&gt;</code></pre>
           </div>
           <p class="p">
             Because the pattern uses a <code class="keyword markupname xmlatt">@combine</code> value
             of <span class="keyword">choice</span>, the effect is that the domain-provided elements
-            automatically are automatically added to the effective content model of the extended
-            element in any grammar that includes the domain module.
+            automatically are added to the effective content model of the extended element in any
+            grammar that includes the domain module.
           </p>
         </dd>
       </dl>
+      <div class="example">
+        <h2 class="title sectiontitle">Example</h2>
+
+        <p class="p">
+          The following code sample shows the extension pattern for the highlight domain, as
+          declared in <span class="ph filepath">highlightDomain.rng</span>:
+        </p>
+        <pre class="pre codeblock"><code>  &lt;div&gt;
+    &lt;a:documentation&gt;DOMAIN EXTENSION PATTERNS&lt;/a:documentation&gt;
+
+    &lt;define name="hi-d-ph"&gt;
+      &lt;choice&gt;
+        &lt;ref name="b.element"/&gt;
+        &lt;ref name="i.element"/&gt;
+        &lt;ref name="line-through.element"/&gt;
+        &lt;ref name="overline.element"/&gt;
+        &lt;ref name="sup.element"/&gt;
+        &lt;ref name="sub.element"/&gt;
+        &lt;ref name="tt.element"/&gt;
+        &lt;ref name="u.element"/&gt;
+      &lt;/choice&gt;
+    &lt;/define&gt;
+
+    &lt;define name="ph" combine="choice"&gt;
+      &lt;ref name="hi-d-ph"/&gt;
+    &lt;/define&gt;
+  &lt;/div&gt;</code></pre>
+      </div>
     </div>
     <nav role="navigation" class="related-links">
       <div class="familylinks">

@@ -88,6 +88,7 @@ index: '../../toc.html'
         interpreted for different output purposes. In addition, DITA maps share many metadata and
         linking attributes with DITA topics.
       </p>
+
       <section class="section" id="ditamap-attributes__mostly-map">
         <p class="p">
           DITA maps often encode structures that are specific to a particular medium or output, for
@@ -214,46 +215,6 @@ index: '../../toc.html'
               <code class="keyword markupname xmlatt">@chunk</code> attributes that are set on more
               specific elements in the DITA map. For a detailed description of the
               <code class="keyword markupname xmlatt">@chunk</code> attribute and its usage, see
-              <a
-                class="xref"
-                href="chunking.html"
-                title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents are combined into a single document for delivery, or that a single source document is split into multiple documents for delivery."
-                >Chunking</a
-              >.
-            </p>
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@copy-to</code></dt>
-          <dd class="dd">
-            <p class="p">
-              In most situations, specifies whether a duplicate version of the topic is created when
-              it is transformed. This duplicate version can be either literal or virtual. The value
-              of the <code class="keyword markupname xmlatt">@copy-to</code> attribute specifies the
-              uniform resource identifier (URI) by which the topic can be referenced by a
-              <code class="keyword markupname xmlatt">@conref</code> attribute,
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, or
-              <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element.
-              <span class="ph"
-                >The duplication is a convenience for output processors that use the URI of the
-                topic to generate the base address of the output. The
-                <code class="keyword markupname xmlatt">@keys</code> and
-                <code class="keyword markupname xmlatt">@keyref</code> attributes provide an
-                alternative mechanism; they enable references to topics in specific-use
-                contexts.</span
-              >
-            </p>
-            <p class="p">
-              The <code class="keyword markupname xmlatt">@copy-to</code> attribute also can be used
-              to specify the name of a new chunk when topics are being chunked; it also can be used
-              to determine the name of the stub topic that is generated from a
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element that
-              contains a title but does not specify a target. In both of those cases, no duplicate
-              version of the topic is generated.
-            </p>
-            <p class="p">
-              For information on how the
-              <code class="keyword markupname xmlatt">@copy-to</code> attribute can be used with the
-              <code class="keyword markupname xmlatt">@chunk</code> attribute, see
               <a
                 class="xref"
                 href="chunking.html"

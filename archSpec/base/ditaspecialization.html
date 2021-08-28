@@ -3,8 +3,8 @@
 layout: base
 title: 'Overview of DITA extension facilities'
 description: 'DITA provides three extension facilities: Document-type configuration,
-  specialization, and element-type configuration. In addition, generalization augments
-  specialization.'
+  specialization, and element-type configuration. In addition, generalization can be applied to
+  reverse specialization.'
 index: '../../toc.html'
 ---
 
@@ -68,14 +68,16 @@ index: '../../toc.html'
     <div class="body conbody">
       <p class="shortdesc">
         DITA provides three extension facilities: Document-type configuration, specialization, and
-        element-type configuration. In addition, generalization augments specialization.
+        element-type configuration. In addition, generalization can be applied to reverse
+        specialization.
       </p>
       <dl class="dl">
         <dt class="dt dlterm">Document-type configuration</dt>
         <dd class="dd">
-          Document-type configuration enables the definition of DITA document types that include
-          only the vocabulary modules that are required for a given set of documents. There is no
-          need to modify the vocabulary modules. Configurations are implemented as document-type
+          <span class="ph">Document-type configuration</span> enables the definition of DITA
+          document types that include only the vocabulary modules that are required for a given set
+          of documents. There is no need to modify the vocabulary modules.
+          <span class="ph">Document-type configurations</span> are implemented as document-type
           shells.
         </dd>
 
@@ -86,12 +88,12 @@ index: '../../toc.html'
           Specializations are implemented as vocabulary modules, which are integrated into
           document-type shells.
           <p class="p">
-            Specializations are declare the elements and entities that are unique to a
-            specialization. The separation of the vocabulary and its declarations into modules makes
-            it easy to extend existing modules, because new modules can be added without affecting
-            existing document types. It also makes it easy to assemble elements from different
-            sources into a single document-type shell and to reuse specific parts of the
-            specialization hierarchy in more than one document-type shell.
+            Specializations declare the elements and entities that are unique to a specialization.
+            The separation of the vocabulary and its declarations into modules makes it easy to
+            extend existing modules, because new modules can be added without affecting existing
+            document types. It also makes it easy to assemble elements from different sources into a
+            single document-type shell and to reuse specific parts of the specialization hierarchy
+            in more than one document-type shell.
           </p>
         </dd>
 
@@ -103,18 +105,17 @@ index: '../../toc.html'
             which the elements are defined.
           </p>
           <p class="p">
-            There are two types of element configuration: Constraints and expansion. Both
-            constraints and expansions are implemented as modules that are integrated into
-            document-type shells:
+            There are two types of element configuration: Constraint and expansion. Both constraint
+            and expansion are implemented as modules that are integrated into document-type shells:
           </p>
           <dl class="dl">
-            <dt class="dt dlterm">Constraints</dt>
+            <dt class="dt dlterm">Constraint</dt>
             <dd class="dd">
               Constraint modules enables the restriction of content models and attribute lists for
               individual elements.
             </dd>
 
-            <dt class="dt dlterm">Expansions</dt>
+            <dt class="dt dlterm">Expansion</dt>
             <dd class="dd">
               Expansion modules enable the expansion of content models and attribute lists for
               individual elements.
@@ -136,7 +137,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/configuration-specialization-and-constraints.html"
-            title="The extension facilities of DITA allow document-type shells, vocabulary modules, and element-configuration modules (constraints and expansion) to be combined to create specific DITA document types. Vocabulary modules also can be specialized to meet requirements that are not satisfied by existing markup."
+            title="The extension facilities of DITA allow document-type shells, vocabulary modules, and element-configuration modules (constraint and expansion) to be combined to create specific DITA document types."
             >Configuration, specialization, generalization, constraints, and expansion</a
           >
         </div>

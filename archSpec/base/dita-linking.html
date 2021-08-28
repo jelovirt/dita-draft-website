@@ -27,7 +27,15 @@ index: '../../toc.html'
       <a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a>
       <ul class="nav nav-list">
         <li><a href="../../archSpec/base/id.html">ID attribute</a></li>
-        <li class="active"><a href="../../archSpec/base/dita-linking.html">DITA linking</a></li>
+        <li class="active">
+          <a href="../../archSpec/base/dita-linking.html">DITA linking</a>
+          <ul class="nav nav-list">
+            <li><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></li>
+            <li><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></li>
+            <li><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></li>
+            <li><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></li>
+          </ul>
+        </li>
         <li>
           <a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a>
         </li>
@@ -147,6 +155,38 @@ index: '../../toc.html'
       </section>
     </div>
     <nav role="navigation" class="related-links">
+      <ul class="ullinks">
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@format</code> attribute identifies the
+          format of the resource that is referenced.
+          <span class="ph"
+            >If no value is specified, but the attribute is specified on an ancestor within a map or
+            within the related-links section, the value will cascade from the closest
+            ancestor.</span
+          >
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@href</code> attribute is used to
+          reference another DITA topic or map, a specific element inside a DITA topic or map, an
+          external Web page, or another non-DITA resource.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@scope</code> attribute identifies the
+          closeness of the relationship between the current document and the target resource.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></strong
+          ><br />The <code class="keyword markupname xmlatt">@type</code> attribute is used on
+          linking elements to describe the target of a cross-reference. It also is used on the
+          <code class="keyword markupname xmlelement">&lt;note&gt;</code> element to describe the
+          note type, as well as on several other elements for varying purposes.
+        </li>
+      </ul>
       <div class="familylinks">
         <div class="parentlink">
           <strong>Parent topic:</strong>

@@ -2,8 +2,7 @@
 # Generated from DITA source
 layout: base
 title: 'subjectScheme'
-description: 'The subjectScheme element
-  defines taxonomic subjects and
+description: 'The subjectScheme element defines taxonomic subjects and
   controlled values.'
 index: '../../toc.html'
 ---
@@ -74,39 +73,57 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >
-          (with a narrowed definition of <code class="keyword markupname xmlatt">@id</code>, given
-          below),
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
-            >Common map attributes</a
-          >
-          (with narrowed definitions of
-          <code class="keyword markupname xmlatt">@processing-role</code> and
-          <code class="keyword markupname xmlatt">@toc</code>, given below),
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__architecturalatts"
-            >Architectural attributes</a
-          >, and the attributes defined below. This element also uses
-          <code class="keyword markupname xmlatt">@type</code>,
-          <code class="keyword markupname xmlatt">@scope</code>, and
-          <code class="keyword markupname xmlatt">@format</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
-            >Link-relationship attributes</a
-          >.
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >,
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__commonmapatts"
+              title="Common map attributes include: cascade, chunk, collection-type, keyscope, linking, processing-role, search, and toc"
+              >common map attributes</a
+            ></span
+          >,
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__architecturalatts"
+              title="Architectural attributes include: DITAArchVersion, specializations, and xmlns:ditaarch"
+              >architectural attributes</a
+            ></span
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-type"
+            ><code class="keyword markupname xmlatt">@type</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scope"
+            ><code class="keyword markupname xmlatt">@scope</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@format</code></a
+          >, and the attribute defined below.
         </p>
+        <div class="p attr-exception" id="subjectScheme__attr-exception">
+          For this element:
+          <ul class="ul" id="subjectScheme__ul_nwz_4kr_ppb">
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@processing-role</code> attribute has a
+              default value of <span class="keyword">resource-only</span>.
+            </li>
+            <li class="li">
+              The <code class="keyword markupname xmlatt">@toc</code> attribute has a default value
+              of <span class="keyword">no</span>.
+            </li>
+          </ul>
+        </div>
         <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@id</code></dt>
-          <dd class="dd">
-            Specifies an ID for the map. Note that maps do not require IDs (unlike topics), and the
-            map ID is not included in references to elements within a map.
-            <span class="ph">This attribute is defined with the XML Data Type ID.</span>
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@anchorref</code></dt>
+          <dt class="dt dlterm" id="subjectScheme__d1313e884">
+            <code class="keyword markupname xmlatt">@anchorref</code>
+          </dt>
           <dd class="dd">
             Specifies a location within another map document where this map will be anchored.
             Resolution of the map is deferred until the final step in the delivery of any rendered
@@ -117,33 +134,12 @@ index: '../../toc.html'
             <span class="ph filepath">map1.ditamap</span> when
             <span class="ph filepath">map1.ditamap</span> is rendered for delivery.
           </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@processing-role</code></dt>
-          <dd class="dd">
-            Specifies the role that the resource plays in processing. By default, this is set to
-            <span class="keyword">resource-only</span>. Otherwise, the definition matches the one in
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__commonmapatts"
-              >Common map attributes</a
-            >.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@toc</code></dt>
-          <dd class="dd">
-            For this element, the default value for
-            <code class="keyword markupname xmlatt">@toc</code> is "no". Otherwise, the definition
-            matches the one found in
-            <a class="xref" href="../attributes/commonAttributes.html#common-atts__commonmapatts"
-              >Common map attributes</a
-            >.
-          </dd>
         </dl>
       </section>
       <div class="example" id="subjectScheme__example">
         <h2 class="title sectiontitle">Example</h2>
 
-        <pre class="pre codeblock" id="subjectScheme__d1410e40"><code>&lt;subjectScheme&gt;
+        <pre class="pre codeblock" id="subjectScheme__d1440e40"><code>&lt;subjectScheme&gt;
   &lt;!-- Pull in a scheme that defines unix OS values --&gt;
   &lt;schemeref href="unixOS.ditamap"/&gt;
   &lt;!-- Define new OS values that are merged with those in the unixOS scheme --&gt;

@@ -75,83 +75,46 @@ index: '../../toc.html'
         <p class="p">
           The order in which links in a
           <code class="keyword markupname xmlelement">&lt;linkpool&gt;</code> element are rendered
-          is processor-specific. A processor might order links based on role or type. A processor
+          is processor-specific. A processor might sort links based on role or type. A processor
           might move or remove links based on the context; for example, prerequisite links might be
           rendered at the beginning of a Web page, or links to the next topic might be removed if
-          the two topics are rendered on the same page in a PDF. Processors might automatically sort
-          some links, while others are left ordered as authored.
+          the two topics are rendered on the same page in a PDF.
         </p>
       </section>
       <section class="section" id="linkpool__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__collection-type"
-            >collection-type (common map attributes)</a
+            ><code class="keyword markupname xmlatt">@collection-type</code></a
           >,
-          <a
-            class="xref"
-            href="../attributes/theroleattribute.html"
-            title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time."
-            >The role and otherrole attributes</a
-          >, and the attributes defined below. This element also uses
-          <code class="keyword markupname xmlatt">@format</code>,
-          <code class="keyword markupname xmlatt">@scope</code>, and
-          <code class="keyword markupname xmlatt">@type</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__linkatts"
-            >Link-relationship attributes</a
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-role"
+            ><code class="keyword markupname xmlatt">@role</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-otherrole"
+            ><code class="keyword markupname xmlatt">@otherrole</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-duplicates"
+            ><code class="keyword markupname xmlatt">@duplicates</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@format</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scope"
+            ><code class="keyword markupname xmlatt">@scope</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-type"
+            ><code class="keyword markupname xmlatt">@type</code></a
           >.
         </p>
-        <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@duplicates</code></dt>
-          <dd class="dd">
-            Specifies whether duplicate links are removed from a group of links. Duplicate links are
-            links that address the same resource using the same properties, such as link text and
-            link role. How duplicate links are determined is processor-specific. The following
-            values are permitted:
-            <dl class="dl">
-              <dt class="dt dlterm">yes</dt>
-              <dd class="dd">Specifies that duplicate links are retained.</dd>
-
-              <dt class="dt dlterm">no</dt>
-              <dd class="dd">Specifies that duplicate links are removed.</dd>
-
-              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-              <dd class="dd">
-                See
-                <a
-                  class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
-                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-                  >Using the -dita-use-conref-target value</a
-                >
-                for more information.
-              </dd>
-            </dl>
-            <p class="p">
-              The suggested processing default is "yes" within
-              <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> elements and "no"
-              for other links.
-            </p>
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@collection-type</code></dt>
-          <dd class="dd">
-            See
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__collection-type"
-              >collection-type (common map attributes)</a
-            >
-            for a full definition and list of supported values.
-          </dd>
-        </dl>
       </section>
       <div class="example" id="linkpool__example">
         <h2 class="title sectiontitle">Example</h2>
@@ -185,7 +148,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/related-links-elements.html"
-            title="Related links are topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
+            title="The related links elements define, group, and describe topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
             >Related links elements</a
           >
         </div>

@@ -68,7 +68,7 @@ index: '../../toc.html'
           might appear in the content of an
           <code class="keyword markupname xmlelement">&lt;object&gt;</code> in any order, but must
           be placed at the start of the content of the enclosing object. This element is comparable
-          to the XHMTL <code class="keyword markupname xmlelement">&lt;param&gt;</code> element, and
+          to the HMTL <code class="keyword markupname xmlelement">&lt;param&gt;</code> element, and
           its attributes' semantics derive from their HTML definitions. For example, the
           <code class="keyword markupname xmlatt">@type</code> attribute differs from the
           <code class="keyword markupname xmlatt">@type</code> attribute on many other DITA
@@ -80,27 +80,33 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm">
+          <dt class="dt dlterm" id="param__attr-name">
             <code class="keyword markupname xmlatt">@name</code> <span class="ph">(REQUIRED)</span>
           </dt>
           <dd class="dd">The name of the parameter.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@value</code></dt>
+          <dt class="dt dlterm" id="param__attr-value">
+            <code class="keyword markupname xmlatt">@value</code>
+          </dt>
           <dd class="dd">
             Specifies the value of a run-time parameter that is specified by the
             <code class="keyword markupname xmlatt">@name</code> attribute.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@valuetype</code></dt>
+          <dt class="dt dlterm" id="param__attr-valuetype">
+            <code class="keyword markupname xmlatt">@valuetype</code>
+          </dt>
           <dd class="dd">
             Specifies the type of the
             <code class="keyword markupname xmlatt">@value</code> attribute. Allowed values are:
@@ -132,7 +138,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -141,7 +147,9 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@type</code></dt>
+          <dt class="dt dlterm" id="param__attr-type">
+            <code class="keyword markupname xmlatt">@type</code>
+          </dt>
           <dd class="dd">
             This attribute specifies for a user agent the type of values that will be found at the
             URI designated by <code class="keyword markupname xmlatt">@value</code>.
@@ -177,7 +185,9 @@ index: '../../toc.html'
             </ol>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@keyref</code></dt>
+          <dt class="dt dlterm" id="param__attr-keyref">
+            <code class="keyword markupname xmlatt">@keyref</code>
+          </dt>
           <dd class="dd">
             Key reference to the thing the parameter references. If
             <code class="keyword markupname xmlatt">@valuetype</code> is specified but is not set to
@@ -233,7 +243,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document."
+            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

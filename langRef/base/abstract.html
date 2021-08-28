@@ -70,12 +70,6 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element cannot be
-          overridden by maps, but its contained
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements can be, for
-          the purpose of creating link summaries or previews.
-        </p>
-        <p class="p">
           Use the <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element when
           the initial paragraph of a topic is unsuitable for use as a link preview or for summaries,
           because, for example, it contains lists or tables, or because only a portion of the
@@ -91,12 +85,8 @@ index: '../../toc.html'
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element within
           <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>.
         </p>
-      </section>
-      <section class="section" id="abstract__processing-expectations">
-        <h2 class="title sectiontitle">Processing expectations</h2>
-
         <p class="p">
-          When the contained
+          When a contained
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> occurs within
           phrase-level content, it is treated as phrase-level content and should not create a
           separate paragraph on output of the topic. When the contained
@@ -104,27 +94,21 @@ index: '../../toc.html'
           paragraph-level content, it is treated as block-level content and should create a separate
           paragraph on output of the topic. When multiple
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements are included
-          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>, they are
-          concatenated in output of link previews or summaries (separated by spaces).
+          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>, they are meant
+          to be concatenated when used for link previews or or link summaries (separated by spaces).
         </p>
+      </section>
+      <section class="section" id="abstract__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
+
         <p class="p" id="abstract__1.2.1">
           When a <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element occurs
           in a DITA map, it overrides the short description provided in the topic for the purpose of
-          generating link previews, but does not replace the
+          generating map-based link previews. It does not replace the
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> in the rendered topic
-          itself. This means that generated links to this topic will use the short description from
-          the map for purposes any link previews provided with the link, while the rendered topic
-          continues to use the short description inside the topic. If the
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element in the DITA
-          map also specifies the <code class="keyword markupname xmlatt">@copy-to</code> attribute,
-          the content of the
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element in the DITA
-          map also overrides the short description provided in the topic. In this case, the rendered
-          topic itself will display the
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> contents from the map
-          in place of the
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> originally specified
-          in the topic. Processors might not implement this behavior.
+          itself. This means that generated map-based links to this topic will use the short
+          description from the map for purposes any link previews provided with the link, while the
+          rendered topic continues to use the short description inside the topic.
         </p>
       </section>
       <section class="section" id="abstract__attributes">
@@ -132,11 +116,13 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >.
         </p>
       </section>

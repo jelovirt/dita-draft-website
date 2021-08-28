@@ -58,7 +58,7 @@ index: '../../toc.html'
       <p class="shortdesc">
         A title hint provides information to map authors about the title of the referenced resource.
       </p>
-      <section class="section" id="titlehint__section_fpd_43h_rnb">
+      <section class="section" id="titlehint__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
@@ -67,7 +67,7 @@ index: '../../toc.html'
           publication.
         </p>
       </section>
-      <section class="section" id="titlehint__section_jhh_njh_rnb">
+      <section class="section" id="titlehint__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
@@ -92,19 +92,22 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
-          >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class"
-            ><code class="keyword markupname xmlatt">@class</code></a
-          >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass"
-            ><code class="keyword markupname xmlatt">@outputclass</code></a
-          >, and the <code class="keyword markupname xmlatt">@title-role</code> attribute set to
-          <code class="ph codeph">hint</code>.
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >
+          and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-title-role"
+            ><code class="keyword markupname xmlatt">@title-role</code></a
+          >.
+        </p>
+        <p class="p attr-exception" id="titlehint__attr-exception">
+          For this element, <code class="keyword markupname xmlatt">@title-role</code> has a default
+          value of <span class="keyword">hint</span>.
         </p>
       </section>
       <div class="example" id="titlehint__example">

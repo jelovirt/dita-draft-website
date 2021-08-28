@@ -63,7 +63,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/relax-ng-coding-element-types.html"
-                >RELAX NG: Coding requirements for element type declarations</a
+                >RELAX NG: Coding requirements for element-type declarations</a
               >
             </li>
             <li>
@@ -82,8 +82,9 @@ index: '../../toc.html'
               >
             </li>
             <li>
-              <a href="../../archSpec/base/relax-ng-coding-constraint-modules.html"
-                >RELAX NG: Coding requirements for constraint modules</a
+              <a
+                href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html"
+                >RELAX NG: Coding requirements for element-configuration modules</a
               >
             </li>
           </ul>
@@ -129,12 +130,11 @@ index: '../../toc.html'
           extensions within the document-type shell.
         </li>
         <li class="li">
-          Constraint modules directly include the modules that they extend, which means that just by
-          referencing a constraint module, the document-type shell gets everything it needs to both
-          define and constrain a vocabulary module.
+          Element-configuration modules (constraint and expansion) directly include the modules that
+          they extend, which means that just by referencing an element-configuration module, the
+          document-type shell gets everything it needs to redefine a vocabulary module.
         </li>
       </ul>
-
       <div class="p">
         RELAX NG grammars for DITA document-type shells, vocabulary modules, and
         <span class="ph">element-configuration modules (constraint and expansion) </span

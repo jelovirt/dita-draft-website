@@ -69,18 +69,19 @@ index: '../../toc.html'
           contain a title. If a title is required, use nested topics.
         </p>
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element can nest
-          itself, so it can be used as a specialization base. Another common use case for the
-          <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element is to group a
-          sequence of related elements for reuse, so that another topic can reference the entire set
-          with a single <code class="keyword markupname xmlatt">@conref</code> or
+          The <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element is often
+          used to group a sequence of related elements for reuse, so that another topic can
+          reference the entire set with a single
+          <code class="keyword markupname xmlatt">@conref</code> or
           <code class="keyword markupname xmlatt">@conkeyref</code> attribute.
         </p>
         <p class="p">
-          Because the <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element
-          allows <code class="keyword markupname xmlelement">&lt;section&gt;</code>, it cannot be
-          used within <code class="keyword markupname xmlelement">&lt;section&gt;</code> elements.
-          Use the <code class="keyword markupname xmlelement">&lt;div&gt;</code> element to group
+          The <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element can nest
+          itself, which makes it a good specialization base for general topic content. Because the
+          <code class="keyword markupname xmlelement">&lt;bodydiv&gt;</code> element allows
+          <code class="keyword markupname xmlelement">&lt;section&gt;</code>, it cannot be used
+          within <code class="keyword markupname xmlelement">&lt;section&gt;</code> elements. Use
+          the <code class="keyword markupname xmlelement">&lt;div&gt;</code> element to group
           content that might occur in both topic bodies and sections.
         </p>
       </section>
@@ -89,11 +90,13 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >.
         </p>
       </section>

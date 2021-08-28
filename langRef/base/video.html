@@ -133,17 +133,21 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >
           and the attributes defined below.
         </p>
 
         <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@autoplay</code></dt>
+          <dt class="dt dlterm" id="video__d1510e140">
+            <code class="keyword markupname xmlatt">@autoplay</code>
+          </dt>
           <dd class="dd">
             Specifies whether the resource automatically plays when it is presented. The following
             values are recognized: <span class="keyword">true</span>,
@@ -152,7 +156,9 @@ index: '../../toc.html'
             <span class="keyword">true</span>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@controls</code></dt>
+          <dt class="dt dlterm" id="video__d1510e162">
+            <code class="keyword markupname xmlatt">@controls</code>
+          </dt>
           <dd class="dd">
             Specifies whether the presentation of the resource includes user interface controls. The
             following values are recognized: <span class="keyword">true</span>,
@@ -161,7 +167,9 @@ index: '../../toc.html'
             <span class="keyword">true</span>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@format</code></dt>
+          <dt class="dt dlterm" id="video__d1510e184">
+            <code class="keyword markupname xmlatt">@format</code>
+          </dt>
           <dd class="dd">
             Specifies the MIME type for the resource. This attribute enables processors to avoid
             loading unsupported resources. If
@@ -175,7 +183,9 @@ index: '../../toc.html'
             determine the effective MIME type of the resource.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@height</code></dt>
+          <dt class="dt dlterm" id="video__d1510e209">
+            <code class="keyword markupname xmlatt">@height</code>
+          </dt>
           <dd class="dd">
             Indicates the vertical dimension for the resulting display. The value of this attribute
             is a real number (expressed in decimal notation) optionally followed by a unit of
@@ -184,17 +194,23 @@ index: '../../toc.html'
             unit is px (pixels). Possible values include: "5", "5in", and "10.5cm".
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@href</code></dt>
+          <dt class="dt dlterm" id="video__d1510e219">
+            <code class="keyword markupname xmlatt">@href</code>
+          </dt>
           <dd class="dd">
             Specifies the absolute or relative URI of the video resource. If
             <code class="keyword markupname xmlatt">@href</code> is specified, specify
             <code class="keyword markupname xmlatt">@format</code> also.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@keyref</code></dt>
+          <dt class="dt dlterm" id="video__d1510e236">
+            <code class="keyword markupname xmlatt">@keyref</code>
+          </dt>
           <dd class="dd">Specifies a key reference to the video resource.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@loop</code></dt>
+          <dt class="dt dlterm" id="video__d1510e246">
+            <code class="keyword markupname xmlatt">@loop</code>
+          </dt>
           <dd class="dd">
             Specifies whether the resource loops when played. The following values are recognized:
             <span class="keyword">true</span>, <span class="keyword">false</span>, and
@@ -202,7 +218,9 @@ index: '../../toc.html'
             <span class="keyword">true</span>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@muted</code></dt>
+          <dt class="dt dlterm" id="video__d1510e268">
+            <code class="keyword markupname xmlatt">@muted</code>
+          </dt>
           <dd class="dd">
             Specifies whether the resource is muted. The following values are recognized:
             <span class="keyword">true</span>, <span class="keyword">false</span>, and
@@ -210,16 +228,22 @@ index: '../../toc.html'
             <span class="keyword">true</span>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@poster</code></dt>
+          <dt class="dt dlterm" id="video__d1510e290">
+            <code class="keyword markupname xmlatt">@poster</code>
+          </dt>
           <dd class="dd">
             Specifies the absolute or relative URI of the image that is rendered before video
             playback begins.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@posterkeyref</code></dt>
+          <dt class="dt dlterm" id="video__d1510e300">
+            <code class="keyword markupname xmlatt">@posterkeyref</code>
+          </dt>
           <dd class="dd">Specifies a key reference for the poster image.</dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
+          <dt class="dt dlterm" id="video__d1510e310">
+            <code class="keyword markupname xmlatt">@scope</code>
+          </dt>
           <dd class="dd">
             The <code class="keyword markupname xmlatt">@scope</code> attribute describes the
             closeness of the relationship between the current document and the target resource.
@@ -230,7 +254,9 @@ index: '../../toc.html'
             pages, are considered <code class="ph codeph">"external"</code>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@tabindex</code></dt>
+          <dt class="dt dlterm" id="video__d1510e333">
+            <code class="keyword markupname xmlatt">@tabindex</code>
+          </dt>
           <dd class="dd">
             Specifies whether the video resource can be focused and where it participates in
             sequential keyboard navigation. See
@@ -244,7 +270,9 @@ index: '../../toc.html'
             in the HTML specification (WHATWG version).
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@width</code></dt>
+          <dt class="dt dlterm" id="video__d1510e349">
+            <code class="keyword markupname xmlatt">@width</code>
+          </dt>
           <dd class="dd">
             Indicates the horizontal dimension for the resulting display. The value of this
             attribute is a real number (expressed in decimal notation) optionally followed by a unit
@@ -311,7 +339,7 @@ index: '../../toc.html'
   &lt;media-source href="video.webm" format="video/webm"/&gt;
 &lt;/video&gt;</code></pre>
         </figure>
-        <figure class="fig fignone" id="video__fig_wsb_jpz_4hb">
+        <figure class="fig fignone" id="video__alternate-and-fallback">
           <figcaption>
             <span class="fig--title-label">Figure 4. </span>Example of a
             <code class="keyword markupname xmlelement">&lt;video&gt;</code> element with multiple

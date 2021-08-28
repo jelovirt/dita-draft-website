@@ -114,67 +114,34 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
           >,
-          <a
-            class="xref"
-            href="../attributes/thekeyrefattribute.html"
-            title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
             ><code class="keyword markupname xmlatt">@keyref</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+            ><code class="keyword markupname xmlatt">@format</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-href"
+            ><code class="keyword markupname xmlatt">@href</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scope"
+            ><code class="keyword markupname xmlatt">@scope</code></a
           >, and the attributes defined below.
         </p>
+        <p class="p attr-exception" id="hazardsymbol__attr-exception">
+          For this element, <code class="keyword markupname xmlatt">@href</code> specifies an image.
+        </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="hazardsymbol__format">
-            <code class="keyword markupname xmlatt">@format</code>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e721">
+            <code class="keyword markupname xmlatt">@height</code>
           </dt>
-          <dd class="dd">
-            Identifies the format of the resource that is referenced. See
-            <a
-              class="xref"
-              href="../attributes/theformatattribute.html"
-              title="The format attribute identifies the format of the resource that is referenced. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor."
-              >The format attribute</a
-            >
-            for details on supported values.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@href</code></dt>
-          <dd class="dd">
-            Specifies the image. See
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/thehrefattribute.html"
-              title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
-              >The href attribute</a
-            >
-            for detailed information on supported values and processing implications.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
-          <dd class="dd">
-            Specifies the relationship between the current document and the target resource.
-            Allowable values are <span class="keyword">local</span>,
-            <span class="keyword">peer</span>, <span class="keyword">external</span>, and
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/ditauseconreftarget.html"
-              title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-              >-dita-use-conref-target</a
-            >. See
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/thescopeattribute.html"
-              title="The scope attribute identifies the closeness of the relationship between the current document and the target resource."
-              >The scope attribute</a
-            >
-            for more information on values.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@height</code></dt>
           <dd class="dd">
             Specifies the vertical dimension for the resulting display.
             <span class="ph"
@@ -185,7 +152,9 @@ index: '../../toc.html'
             >
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@width</code></dt>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e733">
+            <code class="keyword markupname xmlatt">@width</code>
+          </dt>
           <dd class="dd">
             Specifies the horizontal dimension for the resulting display.
             <span class="ph"
@@ -196,7 +165,9 @@ index: '../../toc.html'
             >
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@align</code></dt>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e745">
+            <code class="keyword markupname xmlatt">@align</code>
+          </dt>
           <dd class="dd">
             Specifies the horizontal alignment of an image when placement is specified as
             <span class="keyword">break</span>. Common values include
@@ -204,7 +175,9 @@ index: '../../toc.html'
             <span class="keyword">center</span>.
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scale</code></dt>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e768">
+            <code class="keyword markupname xmlatt">@scale</code>
+          </dt>
           <dd class="dd">
             Specifies a percentage as an unsigned integer by which to scale the image in the absence
             of any specified image height or width; a value of 100 implies that the image should be
@@ -219,13 +192,15 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scalefit</code></dt>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e790">
+            <code class="keyword markupname xmlatt">@scalefit</code>
+          </dt>
           <dd class="dd">
             Specifies whether an image is scaled up or down to fit within available space. Allowable
             values are <span class="keyword">yes</span>, <span class="keyword">no</span>, and
             <a
               class="xref"
-              href="../../common/../langRef/attributes/ditauseconreftarget.html"
+              href="../../common/../archSpec/base/ditauseconreftarget.html"
               title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
               >-dita-use-conref-target</a
             >. For a given image, if any one of
@@ -245,14 +220,16 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@placement</code></dt>
+          <dt class="dt dlterm" id="hazardsymbol__d1313e828">
+            <code class="keyword markupname xmlatt">@placement</code>
+          </dt>
           <dd class="dd">
             Specifies whether an image is displayed inline or on a separate line. The default value
-            is inline. Allowable values are: <span class="keyword">inline</span>,
-            <span class="keyword">break</span>, or and
+            is <span class="keyword">inline</span>. Allowable values are:
+            <span class="keyword">inline</span>, <span class="keyword">break</span>, and
             <a
               class="xref"
-              href="../../common/../langRef/attributes/ditauseconreftarget.html"
+              href="../../common/../archSpec/base/ditauseconreftarget.html"
               title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
               >-dita-use-conref-target</a
             >.

@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'ux-window'
-description: 'The ux-window element provides specifications for a window or
-  viewport in which a user assistance topic or web page can be displayed. The window or viewport
-  can be referenced by the resourceid element associated with a topic or
+description:
+  'A UX window specification is a collection of metadata for a window or viewport in which
+  a user assistance topic or web page can be displayed. The window or viewport can be referenced
+  by the resourceid element associated with a topic or
   topicref element.'
 index: '../../toc.html'
 ---
@@ -58,18 +59,19 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element provides
-        specifications for a window or viewport in which a user assistance topic or web page can be
-        displayed. The window or viewport can be referenced by the
-        <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element associated
-        with a topic or <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.
+        A UX window specification is a collection of metadata for a window or viewport in which a
+        user assistance topic or web page can be displayed. The window or viewport can be referenced
+        by the <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element
+        associated with a topic or
+        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.
       </p>
       <section class="section" id="ux-window__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element can be
-          used anywhere within a map. If more than one
+          used in any <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element
+          in a map. If more than one
           <code class="keyword markupname xmlelement">&lt;ux-window&gt;</code> element in a map has
           the same <code class="keyword markupname xmlatt">@name</code> attribute, the first window
           specification in document order with that
@@ -81,14 +83,24 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__idatts"
-            >ID attributes</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html#univ-atts__idatts"
+              title="ID and conref attributes include: conaction, conkeyref, conref, conrefend, and id"
+              >ID and conref attributes</a
+            ></span
           >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__metadataatts"
-            >Metadata attributes</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html#univ-atts__metadataatts"
+              title="Metadata attributes include: audience, base, deliveryTarget, importance, otherprops, platform, product, props, rev, and status"
+              >metadata attributes</a
+            ></span
           >,
           <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class"
-            >class (not for use by authors)</a
+            ><code class="keyword markupname xmlatt">@class</code></a
           >, and the attributes defined below.
         </p>
         <dl class="dl">
@@ -147,7 +159,7 @@ index: '../../toc.html'
             on the desktop. Allowable values are: "yes", "no", and
             <a
               class="xref"
-              href="../attributes/ditauseconreftarget.html"
+              href="../../archSpec/base/ditauseconreftarget.html"
               title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
               >-dita-use-conref-target</a
             >. The default value is "no".
@@ -186,7 +198,7 @@ index: '../../toc.html'
                 See
                 <a
                   class="xref"
-                  href="../../common/../langRef/attributes/ditauseconreftarget.html"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
                   title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
                   >Using the -dita-use-conref-target value</a
                 >
@@ -203,7 +215,7 @@ index: '../../toc.html'
             values are: "yes", "no", and
             <a
               class="xref"
-              href="../attributes/ditauseconreftarget.html"
+              href="../../archSpec/base/ditauseconreftarget.html"
               title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
               >-dita-use-conref-target</a
             >. The default value is <span class="keyword">no</span>.
@@ -281,6 +293,17 @@ index: '../../toc.html'
       </div>
     </div>
     <nav role="navigation" class="related-links">
+      <div class="familylinks">
+        <div class="parentlink">
+          <strong>Parent topic:</strong>
+          <a
+            class="link"
+            href="../../langRef/containers/basic-map-elements.html"
+            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog."
+            >Basic map elements</a
+          >
+        </div>
+      </div>
       <div class="linklist relconcepts">
         <strong>Related concepts</strong><br />
         <ul class="linklist">

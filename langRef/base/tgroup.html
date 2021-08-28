@@ -64,26 +64,31 @@ index: '../../toc.html'
 
         <p class="p">
           The following attributes are available on this element:
-          <a
-            class="xref"
-            href="../attributes/universalAttributes.html"
-            title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-            >Universal attribute group</a
+          <span class="ph"
+            ><a
+              class="xref"
+              href="../../common/../langRef/attributes/universalAttributes.html"
+              title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
+              >universal attributes</a
+            ></span
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-colsep"
+            ><code class="keyword markupname xmlatt">@colsep</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowsep"
+            ><code class="keyword markupname xmlatt">@rowsep</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-align"
+            ><code class="keyword markupname xmlatt">@align</code></a
           >
-          and the attribute defined below. This element also uses
-          <code class="keyword markupname xmlatt">@colsep</code>,
-          <code class="keyword markupname xmlatt">@rowsep</code>, and
-          <code class="keyword markupname xmlatt">@align</code> from
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__complextableatts"
-            >Complex table attributes</a
-          >.
+          and the attribute defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm">
+          <dt class="dt dlterm" id="tgroup__attr-cols">
             <code class="keyword markupname xmlatt">@cols</code> <span class="ph">(REQUIRED)</span>
           </dt>
           <dd class="dd">
-            Indicates the number of columns in a
+            Specifies the number of columns in a
             <code class="keyword markupname xmlelement">&lt;tgroup&gt;</code>.
           </dd>
         </dl>
@@ -108,7 +113,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."
+            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
             >Table elements</a
           >
         </div>
