@@ -92,28 +92,6 @@ index: '../../toc.html'
             mechanism is used.
           </p>
         </div>
-        <div class="div">
-          <dl class="dl">
-            <dt class="dt dlterm">Single-use footnote</dt>
-            <dd class="dd">
-              This is produced by a footnote component that does not specify a value for the
-              <code class="keyword markupname xmlatt">@id</code> attribute.
-            </dd>
-
-            <dt class="dt dlterm">Use-by-reference footnote</dt>
-            <dd class="dd">
-              This is produced by a footnote component that specifies a value for the
-              <code class="keyword markupname xmlatt">@id</code> attribute. It must be used in
-              conjunction with a cross reference component with
-              <code class="keyword markupname xmlatt">@type</code> set to
-              <span class="keyword">fn</span>.
-            </dd>
-          </dl>
-          <p class="p">
-            To reference a footnote that is located in another topic, the conkeyref mechanism is
-            used.
-          </p>
-        </div>
       </section>
       <section class="section" id="fn__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
@@ -153,32 +131,7 @@ index: '../../toc.html'
             </dd>
           </dl>
         </div>
-        <div class="div">
-          <dl class="dl">
-            <dt class="dt dlterm">Single-use footnote</dt>
-            <dd class="dd">
-              When rendered, a superscript symbol (numeral or character) is produced at the location
-              of the footnote component. The superscript symbol is hyperlinked to the content of the
-              footnote, which is placed at the bottom of a PDF page or the end of an online article.
-              The superscript symbol can be specified by the value of the
-              <code class="keyword markupname xmlatt">@callout</code> attribute. When no
-              <code class="keyword markupname xmlatt">@callout</code> value is specified, footnotes
-              are typically numbered.
-            </dd>
-
-            <dt class="dt dlterm">Use-by-reference footnote</dt>
-            <dd class="dd">
-              Nothing is rendered at the location of the footnote component. The content of a
-              use-by-reference footnote is only rendered when it is referenced by a cross reference
-              with the <code class="keyword markupname xmlatt">@type</code> attribute set to
-              <span class="keyword">fn</span>. If a cross reference with the
-              <code class="keyword markupname xmlatt">@type</code> attribute set to
-              <span class="keyword">fn</span> is present, a superscript symbol is rendered at the
-              location of the cross reference component. Unless conkeyref is used, the footnote and
-              cross reference components must be located in the same topic.
-            </dd>
-          </dl>
-        </div>
+        <div class="div"></div>
         <p class="p">
           However, the details of footnote processing and formatting are implementation dependent.
           For example, a tool that renders DITA as PDF might lack support for the
@@ -202,8 +155,8 @@ index: '../../toc.html'
           and the attribute defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="fn__d1446e256">
-            <a id="fn__d1446e254"></a><code class="keyword markupname xmlatt">@callout</code>
+          <dt class="dt dlterm" id="fn__d1446e178">
+            <a id="fn__d1446e176"></a><code class="keyword markupname xmlatt">@callout</code>
           </dt>
           <dd class="dd">
             Specifies the character that is used for the footnote link, for example, a number or an

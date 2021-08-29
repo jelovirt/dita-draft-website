@@ -118,7 +118,7 @@ index: '../../toc.html'
       </p>
       <p class="p">
         Because RELAX NG modules are self-integrating, RNG-based document-type shells only need to
-        include vocabulary modules<span class="ph">
+        include vocabulary modules<span style="color:red;" class="ph">
           and element-configuration modules (constraint and expansion)</span
         >.
       </p>
@@ -178,8 +178,8 @@ index: '../../toc.html'
         <dd class="dd">
           <p class="p">
             This section lists the tokens that attribute-domain
-            <span class="ph">and element-configuration</span> modules contribute to the
-            <code class="keyword markupname xmlatt">@specializations</code> attribute.
+            <span style="color:red;" class="ph">and element-configuration</span> modules contribute
+            to the <code class="keyword markupname xmlatt">@specializations</code> attribute.
           </p>
           <div class="p">
             For example:
@@ -200,18 +200,20 @@ index: '../../toc.html'
           </div>
         </dd>
 
-        <dt class="dt dlterm" id="concept_rrq_p45_dn__content-constraint">
+        <dt class="dt dlterm" style="color:red;" id="concept_rrq_p45_dn__content-constraint">
           Element-type configuration integration
         </dt>
         <dd class="dd">
           <p class="p">
             This section of the document-type shell contains includes for
-            <span class="ph">element-type configuration modules (constraint and expansion)</span>.
-            Because the element-configuration module imports the module that it override, any module
-            that is<span class="ph"> configured</span> in this section (including the base topic or
-            map modules) is left out of the following "Module inclusion" section.
+            <span style="color:red;" class="ph"
+              >element-type configuration modules (constraint and expansion)</span
+            >. Because the element-configuration module imports the module that it override, any
+            module that is<span style="color:red;" class="ph"> configured</span> in this section
+            (including the base topic or map modules) is left out of the following "Module
+            inclusion" section.
           </p>
-          <div class="div">
+          <div style="color:red;" class="div">
             <p class="p">
               For example, the following code sample shows the section of an RNG-based document-type
               shell that redefines the
