@@ -19,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -80,10 +80,7 @@ index: '../../toc.html'
           given column establish relationships with topics in every other cell of the same row. In a
           <code class="keyword markupname xmlelement">&lt;topicSubjectTable&gt;</code>, topics in
           the first column are related to all of the subjects in the row, but no relationship is
-          implied between subjects in different columns of the same row. (Relationships between
-          subjects are defined in the
-          <code class="keyword markupname xmlelement">&lt;subjectRelTable&gt;</code> in the subject
-          scheme map.)
+          implied between subjects in different columns of the same row.
         </p>
       </section>
       <section class="section" id="topicSubjectTable__specialization-hierachy">
@@ -133,7 +130,7 @@ index: '../../toc.html'
               ><code class="keyword markupname xmlatt">@format</code></a
             >.
           </p>
-          <p class="p attr-exception" id="topicSubjectTable__d1313e1066">
+          <p class="p attr-exception" id="topicSubjectTable__d1318e1016">
             For this element, the <code class="keyword markupname xmlatt">@toc</code> attribute has
             a default value of <span class="keyword">no</span>.
           </p>
@@ -152,6 +149,7 @@ index: '../../toc.html'
             <span class="fig--title-label">Figure 1. </span>Subject scheme map
           </figcaption>
 
+          <p class="p"></p>
           <pre class="pre codeblock"><code>&lt;subjectScheme&gt;
     &lt;hasKind&gt;
         &lt;subjectdef href="goalType.dita" keys="goal"&gt;
@@ -185,16 +183,16 @@ index: '../../toc.html'
             <li class="li">
               The topics <span class="ph filepath">configure-cron-for-efficiency.dita</span> and
               <span class="ph filepath">allocating-raw-storage.dita</span> are each classified by
-              the goal of <span class="keyword">performance</span>; they also are classified by the
+              the goal of <span class="keyword">performance</span>; they are also classified by the
               operating systems <span class="keyword">linux</span> and
               <span class="keyword">unix</span>.
             </li>
             <li class="li">
               The topics <span class="ph filepath">analyze-web-logs.dita</span> and
-              <span class="ph filepath">detect-denial-of-service-attacks.dita</span> are each
-              classified by the goal of "reliability"; they also are classified by the operating
-              systems <span class="keyword">linux</span>, <span class="keyword">unix</span>, and
-              <span class="keyword">windows</span>.
+              <span class="ph filepath">detect-denial-of-service-attacks.dita</span>
+              are each classified by the goal of "reliability"; they are also classified by the
+              operating systems <span class="keyword">linux</span>,
+              <span class="keyword">unix</span>, and <span class="keyword">windows</span>.
             </li>
             <li class="li">
               No relationship is defined between subjects in the table, meaning that this table does

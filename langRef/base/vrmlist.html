@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'vrmlist'
-description: 'A vrmlist element contains one or more
-  vrm elements for logging the version, release, and modification
-  information for products to which the topic applies.'
+description: 'A version metadata list is a grouping of one or
+  more vrm elements that specify information
+  about the version, release, and modification levels of a
+  product.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,10 +57,10 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;vrmlist&gt;</code> element contains one or
-        more <code class="keyword markupname xmlelement">&lt;vrm&gt;</code> elements for logging the
-        version, release, and modification information for products to which the topic applies.
+      <p style="color:red;" class="shortdesc">
+        A version metadata list is a grouping of one or more
+        <code class="keyword markupname xmlelement">&lt;vrm&gt;</code> elements that specify
+        information about the version, release, and modification levels of a product.
       </p>
       <section class="section" id="vrmlist__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -79,19 +80,19 @@ index: '../../toc.html'
       <div class="example" id="vrmlist__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows the version numbers associated with
-          <span class="keyword">Widge-o-matic</span>, as described in the topic.
+          The following code sample shows the version numbers that are associated with
+          <span class="keyword">Widge-o-matic</span> product:
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
- &lt;metadata&gt;
-  &lt;prodinfo&gt;
-   &lt;prodname&gt;Widge-o-matic&lt;/prodname&gt;
-   &lt;vrmlist&gt;
-     &lt;vrm version="1" release="2" modification="0"/&gt;
-     &lt;vrm version="1" release="2" modification="1"/&gt;
-   &lt;/vrmlist&gt;
-  &lt;/prodinfo&gt;
- &lt;/metadata&gt;
+    &lt;metadata&gt;
+        &lt;prodinfo&gt;
+            &lt;prodname&gt;Widge-o-matic&lt;/prodname&gt;
+            &lt;vrmlist&gt;
+                &lt;vrm version="1" release="2" modification="0"/&gt;
+                &lt;vrm version="1" release="2" modification="1"/&gt;
+            &lt;/vrmlist&gt;
+        &lt;/prodinfo&gt;
+    &lt;/metadata&gt;
 &lt;/prolog&gt;
 </code></pre>
         <p class="p">
@@ -107,7 +108,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

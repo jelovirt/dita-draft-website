@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -84,21 +84,19 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample contains a quotation. The
-          <code class="keyword markupname xmlatt">@reftitle</code> attribute specifies the title of
-          the document that is quoted, and the
-          <code class="keyword markupname xmlatt">@href</code> attribute indicates a Web site where
-          the full text of the address can be accessed.
+          The following code sample contains a quotation.
+          <span style="color:red;" class="ph"
+            >The <code class="keyword markupname xmlelement">&lt;cite&gt;</code> attribute specifies
+            the title of the document that is quoted.</span
+          >
         </p>
         <pre
           class="pre codeblock"
         ><code>&lt;p&gt;This is the first line of the address that Abraham Lincoln delivered
 on November 19, 1863 for the dedication of the cemetery at Gettysburg, Pennsylvania.&lt;/p&gt;
-&lt;lq reftitle="Gettysburg address"
-href="https://en.wikisource.org/wiki/Gettysburg_Address_(Nicolay_draft)" format="html"
-scope="external"&gt;Four score and seven years ago our fathers brought forth on this continent 
+&lt;lq&gt;Four score and seven years ago our fathers brought forth on this continent 
 a new nation, conceived in liberty, and dedicated to the proposition that all men
-are created equal.&lt;/lq&gt;</code></pre>
+are created equal. &lt;cite&gt;Gettysburg address&lt;/cite&gt;&lt;/lq&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -108,7 +106,7 @@ are created equal.&lt;/lq&gt;</code></pre>
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'Example: Filtering and flagging topic content'
-description: 'A publisher might want to flag information that applies to administrators and exclude
-  information that applies to the extended product.'
+description: 'In this scenario, a publisher wants to flag information that applies to administrators
+  and exclude information that applies to the extended product.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -30,19 +30,45 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
         <li>
-          <a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a>
+          <a href="../../archSpec/base/condproc.html">Conditional processing</a>
           <ul class="nav nav-list">
             <li>
-              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
-                >Conditional processing values and groups</a
+              <a href="../../archSpec/base/aboutconditionalprocessing.html"
+                >About conditional processing</a
               >
             </li>
-            <li><a href="../../archSpec/base/filtering.html">Filtering</a></li>
-            <li><a href="../../archSpec/base/flagging.html">Flagging</a></li>
             <li>
-              <a href="../../archSpec/base/conditional-processing-for-specific-output-types.html"
-                >Conditional processing to generate multiple deliverable types</a
+              <a href="../../archSpec/base/conditionalprocessingexpectations.html"
+                >Expectations for conditional processing</a
               >
+            </li>
+            <li>
+              <a href="../../archSpec/base/aboutditavaldocuments.html"
+                >About the DITAVAL document</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
+                >Conditional processing attribute values</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attribute-groups.html"
+                >Conditional processing attribute values with groups</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/conditional-processing-and-subject-schemes.html"
+                >Conditional processing and subject schemes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/filtering.html"
+                >Filtering based on metadata attributes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/flagging.html">Flagging based on metadata attributes</a>
             </li>
             <li>
               <a href="../../archSpec/base/examples-of-conditional-processing.html"
@@ -51,7 +77,27 @@ index: '../../toc.html'
               <ul class="nav nav-list">
                 <li>
                   <a href="../../archSpec/base/example-setting-condproc-values.html"
-                    >Example: Setting conditional processing values and groups</a
+                    >Example: Setting conditional processing values</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-simple-ditaval.html"
+                    >Example: Simple DITAVAL document</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-default-exclude.html"
+                    >Example: Changing the default behavior to "exclude"</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-flagging-outputclass.html"
+                    >Example: Flagging with outputclass</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-groups.html"
+                    >Example: Filtering based on groups</a
                   >
                 </li>
                 <li class="active">
@@ -59,13 +105,27 @@ index: '../../toc.html'
                     >Example: Filtering and flagging topic content</a
                   >
                 </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-subjectscheme.html"
+                    >Example: Simple DITAVAL document</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-with-conditions-for-groups.html"
+                    >Example: DITAVAL with conditions for groups</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -100,8 +160,8 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        A publisher might want to flag information that applies to administrators and exclude
-        information that applies to the extended product.
+        In this scenario, a publisher wants to flag information that applies to administrators and
+        exclude information that applies to the extended product.
       </p>
       <p class="p">
         Consider the following DITA source fragment and conditional processing profile:
@@ -137,6 +197,7 @@ index: '../../toc.html'
         (since it applies to extendedProd). The second list item is still included; even though it
         does apply to extendedProd, it also applies to basicProd, which was not excluded.
       </p>
+
       <div class="p">
         The result will look something like the following:
         <figure class="fig fignone">

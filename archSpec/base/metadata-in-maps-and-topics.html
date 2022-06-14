@@ -2,10 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'Metadata in maps and topics'
-description: 'Information about topics can be specified as metadata on the map, as attributes on the
-topicref element, or as metadata attributes or elements in the topic
-itself. By default, metadata in the map supplements or overrides metadata that is specified at the
-topic level.'
+description:
+  'Metadata can be specified in both maps and topics. In most cases, metadata in the map either supplements or overrides metadata that is
+  specified at the topic level.'
 index: '../../toc.html'
 ---
 
@@ -40,7 +39,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/help-systems-and-other-user-assistance.html"
-                >Context hooks and window metadata for user assistance</a
+                >Window metadata for user assistance</a
               >
             </li>
           </ul>
@@ -48,8 +47,8 @@ index: '../../toc.html'
       </ul>
     </li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -84,54 +83,39 @@ index: '../../toc.html'
     <h1 class="title topictitle1" id="ariaid-title1">Metadata in maps and topics</h1>
     <div class="body conbody">
       <p class="shortdesc">
-        Information about topics can be specified as metadata on the map, as attributes on the
-        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, or as metadata
-        attributes or elements in the topic itself. By default, metadata in the map supplements or
-        overrides metadata that is specified at the topic level.
+        Metadata can be specified in both maps and topics.
+        <span style="color:red;" class="ph">In most cases,</span> metadata in the map
+        <span style="color:red;" class="ph">either</span> supplements or overrides metadata that is
+        specified at the topic level.
       </p>
-      <dl class="dl">
-        <dt class="dt dlterm">DITA map: Metadata elements</dt>
-        <dd class="dd">
-          <p class="p">
-            At the map level, properties can be set by using metadata elements. They can be set for
-            an individual topic, for a set of topics, or globally for the entire document. The
-            metadata elements are authored within a
-            <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element, which
-            associates metadata with the parent element and its children. Because the topics in a
-            branch of the hierarchy typically have some common subjects or properties, this is a
-            convenient mechanism to define properties for a set of topics. For example, the
-            <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element in a
-            <code class="keyword markupname xmlelement">&lt;relcolspec&gt;</code>
-            can associate metadata with all the topics that are referenced in the
-            <code class="keyword markupname xmlelement">&lt;reltable&gt;</code> column.
-          </p>
-          <p class="p">
-            A map can override or supplement everything about a topic except its primary title and
-            body content. All the metadata elements that are available in a topic also are available
-            in a map.
-          </p>
-        </dd>
+      <div style="color:red;" class="div">
+        <p class="p">Metadata can be specified by all the following mechanisms:</p>
+        <ul class="ul">
+          <li class="li">Metadata elements that are located in the DITA map</li>
+          <li class="li">
+            Specifying attributes on the
+            <code class="keyword markupname xmlelement">&lt;map&gt;</code> or
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements
+          </li>
+          <li class="li">Metadata elements or attributes that are located in the DITA topic</li>
+        </ul>
+      </div>
+      <p class="p">
+        Metadata elements and attributes in a map might apply to an individual topic, a set of
+        topics, or globally for the entire document. Most metadata elements authored within a
+        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element associate
+        metadata with the parent element and its children. Because the topics in a branch of the
+        hierarchy typically have some common subjects or properties, this is a convenient mechanism
+        to define metadata for a set of topics.
+      </p>
 
-        <dt class="dt dlterm">
-          DITA map: Attributes of the
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element
-        </dt>
-        <dd class="dd">
-          At the map level, properties can be set as attributes of the
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.
-        </dd>
-
-        <dt class="dt dlterm">DITA topic</dt>
-        <dd class="dd">
-          Within a topic, authors can either set metadata attributes on the root element or add
-          metadata elements in the
-          <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element.
-        </dd>
-      </dl>
       <p class="p">
         When the same metadata element or attribute is specified in both a map and a topic, by
-        default the value in the map takes precedence; the assumption here is that the author of the
-        map has more knowledge of the reusing context than the author of the topic.
+        default the value in the map takes precedence<span style="color:red;" class="ph"
+          >. The assumption</span
+        >
+        is that the <span style="color:red;" class="ph">map author</span> has more knowledge of the
+        reusing context than the <span style="color:red;" class="ph">topic author</span>.
       </p>
     </div>
     <nav role="navigation" class="related-links">
@@ -141,7 +125,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/dita-metadata.html"
-            title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts."
+            title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is specified in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map. This design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts."
             >DITA metadata</a
           >
         </div>

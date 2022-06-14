@@ -2,8 +2,12 @@
 # Generated from DITA source
 layout: base
 title: 'line-through'
-description: 'The line-through element indicates text that is rendered with
-  a line struck through the content.'
+description: 'A strikethrough is a typographical presentation of words with
+  a horizontal line through their center. It can indicate that words are
+  a mistake and not intended for inclusion, or it can be used
+  deliberately to imply a change of thought. A
+  strikethrough is represented by the line-through value for the CSS
+  text-decoration property.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +21,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,15 +60,21 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;line-through&gt;</code> element
-        indicates text that is rendered with a line struck through the content.
+        A strikethrough is a typographical presentation of words with a horizontal line through
+        their center. It can indicate that words are a mistake and not intended for inclusion, or it
+        can be used deliberately to imply a change of thought.
+        <span style="color:red;" class="ph"
+          >A strikethrough is represented by the line-through value for the CSS text-decoration
+          property.</span
+        >
       </p>
       <section class="section" id="line-through__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          This element is designed to enable authors to indicate a deletion or revision for
-          rhetorical purpose; it is not intended to be used for indicating revisions.
+          The <code class="keyword markupname xmlelement">&lt;line-through&gt;</code> element is
+          designed to enable authors to indicate a deletion or revision for rhetorical purpose; it
+          is not intended to be used for indicating revisions.
         </p>
       </section>
       <section class="section" id="line-through__specialization-hierarchy">
@@ -101,11 +111,14 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows line-through highlighting used to indicate a rhetorical
-          revision:
+          The following code sample shows a
+          <code class="keyword markupname xmlelement">&lt;line-through&gt;</code> element used to
+          indicate a rhetorical revision:
         </p>
-        <pre class="pre codeblock"><code>&lt;p&gt;Line-through: DITA technology can be
-      &lt;line-through&gt;maddening&lt;/line-through&gt;a challenge to implement.&lt;/p&gt;</code></pre>
+        <pre
+          class="pre codeblock"
+        ><code>&lt;p&gt;After writing up an angry post for social media, the author
+  &lt;line-through&gt;wisely reconsidered&lt;/line-through&gt; decided to wait a day before sharing.&lt;/p&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">

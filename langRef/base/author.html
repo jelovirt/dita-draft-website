@@ -2,7 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'author'
-description: 'An author element specifies the author of a topic.'
+description: 'An author is the entity that created the content, such as a person, organization, or
+  application.'
 index: '../../toc.html'
 ---
 
@@ -16,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,18 +56,10 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        An <code class="keyword markupname xmlelement">&lt;author&gt;</code> element specifies the
-        author of a topic.
+        An author is the entity that created the content,
+        <span style="color:red;" class="ph">such as a person, organization, or application.</span>
       </p>
-      <section class="section" id="author__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
 
-        <p class="p">
-          The author is usually the person, organization, or application that created the content.
-          This element is equivalent to the
-          <code class="keyword markupname xmlelement">&lt;Creator&gt;</code> element in Dublin Core.
-        </p>
-      </section>
       <section class="section" id="author__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -81,6 +74,11 @@ index: '../../toc.html'
                 >universal attributes</a
               ></span
             >,
+            <a
+              class="xref"
+              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
+              ><code class="keyword markupname xmlatt">@keyref</code></a
+            >, and
             <span class="ph"
               ><a
                 class="xref"
@@ -88,35 +86,22 @@ index: '../../toc.html'
                 title="Link relationship attributes include: format, href, type, and scope"
                 >link-relationship attributes</a
               ></span
-            >, and
-            <a
-              class="xref"
-              href="../../common/../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
-              ><code class="keyword markupname xmlatt">@keyref</code></a
             >.
-          </p>
-          <p class="p attr-exception" id="author__d1313e520">
-            For this element, the <code class="keyword markupname xmlatt">@type</code> attribute
-            specifies the type of author.
-            <span class="ph"
-              >For example, possible values enumerated in earlier versions of DITA included
-              <span class="keyword">creator</span> and
-              <span class="keyword">contributor</span>.</span
-            >
           </p>
         </div>
       </section>
       <div class="example" id="author__example">
         <h2 class="title sectiontitle">Example</h2>
 
-        <p class="p">
-          The following code sample shows two authors, with Jane listed as a creator of the topic
-          and John listed as a contributor to the topic.
-        </p>
+        <p class="p">The following code sample shows that two people contributed to the topic:</p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
-  <strong class="ph b">&lt;author type="creator"&gt;Jane&lt;/author&gt;</strong>
-  <strong class="ph b">&lt;author type="contributor"&gt;John&lt;/author&gt;</strong>
+    <strong class="ph b">&lt;author type="creator"&gt;Jane&lt;/author&gt;
+    &lt;author type="contributor"&gt;John&lt;/author&gt;</strong>
 &lt;/prolog&gt;</code></pre>
+        <p class="p">
+          Jane is specified as a creator of the topic, and John is specified as a contributor to the
+          topic.
+        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -126,7 +111,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

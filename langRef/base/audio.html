@@ -2,7 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'audio'
-description: 'Audio is sound that the human ear is capable of
+description: 'Audio is sound that the
+  human ear is capable of
   hearing.'
 index: '../../toc.html'
 ---
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -71,9 +72,9 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;media-source&gt;</code> elements.
           </p>
           <p class="p">
-            Behaviors such as auto-playing, looping, and muting are determined by attributes. When
-            not specified, the default behavior is determined by the user agent that is used to
-            present the media.
+            <span style="color:red;" class="ph">Playback behaviors</span> such as auto-playing,
+            looping, and muting are determined by attributes. When not specified, the default
+            behavior is determined by the user agent that is used to present the media.
           </p>
         </div>
       </section>
@@ -91,7 +92,7 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Attributes</h2>
 
         <div class="div">
-          <p class="p">
+          <p style="color:red;" class="p">
             The following attributes are available on this element:
             <span class="ph"
               ><a
@@ -100,11 +101,30 @@ index: '../../toc.html'
                 title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
                 >universal attributes</a
               ></span
-            >
-            and the attributes defined below.
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-format"
+              >format (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-href"
+              >href (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
+              >keyref</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-scope"
+              >scope (link-relationship attributes)</a
+            >, and the attributes defined below.
           </p>
           <dl class="dl">
-            <dt class="dt dlterm" id="audio__d1491e158">
+            <dt class="dt dlterm" id="audio__d1489e186">
               <code class="keyword markupname xmlatt">@autoplay</code>
             </dt>
             <dd class="dd">
@@ -115,7 +135,7 @@ index: '../../toc.html'
               <span class="keyword">true</span>.
             </dd>
 
-            <dt class="dt dlterm" id="audio__d1491e180">
+            <dt class="dt dlterm" id="audio__d1489e208">
               <code class="keyword markupname xmlatt">@controls</code>
             </dt>
             <dd class="dd">
@@ -126,38 +146,7 @@ index: '../../toc.html'
               <span class="keyword">true</span>.
             </dd>
 
-            <dt class="dt dlterm" id="audio__d1491e202">
-              <code class="keyword markupname xmlatt">@format</code>
-            </dt>
-            <dd class="dd">
-              Specifies the MIME type for the resource. This attribute enables processors to avoid
-              loading unsupported resources. If
-              <code class="keyword markupname xmlatt">@format</code> is not specified and
-              <code class="keyword markupname xmlatt">@keyref</code> is specified, the effective
-              type for the key named by the
-              <code class="keyword markupname xmlatt">@keyref</code> attribute is used as the value.
-              If an explicit <code class="keyword markupname xmlatt">@format</code> is not specified
-              on either the <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element
-              or key definition, processors can use other means, such the URI file extension, to
-              determine the effective MIME type of the resource.
-            </dd>
-
-            <dt class="dt dlterm" id="audio__d1491e227">
-              <code class="keyword markupname xmlatt">@href</code>
-            </dt>
-
-            <dd class="dd">
-              Specifies the absolute or relative URI of the audio resource. If
-              <code class="keyword markupname xmlatt">@href</code> is specified, specify
-              <code class="keyword markupname xmlatt">@format</code> also.
-            </dd>
-
-            <dt class="dt dlterm" id="audio__d1491e243">
-              <code class="keyword markupname xmlatt">@keyref</code>
-            </dt>
-            <dd class="dd">Specifies a key reference to the audio resource.</dd>
-
-            <dt class="dt dlterm" id="audio__d1491e254">
+            <dt class="dt dlterm" id="audio__d1489e230">
               <code class="keyword markupname xmlatt">@loop</code>
             </dt>
             <dd class="dd">
@@ -167,7 +156,7 @@ index: '../../toc.html'
               <span class="keyword">true</span>.
             </dd>
 
-            <dt class="dt dlterm" id="audio__d1491e276">
+            <dt class="dt dlterm" id="audio__d1489e252">
               <code class="keyword markupname xmlatt">@muted</code>
             </dt>
             <dd class="dd">
@@ -177,20 +166,7 @@ index: '../../toc.html'
               <span class="keyword">true</span>.
             </dd>
 
-            <dt class="dt dlterm" id="audio__d1491e298">
-              <code class="keyword markupname xmlatt">@scope</code>
-            </dt>
-            <dd class="dd">
-              The <code class="keyword markupname xmlatt">@scope</code> attribute describes the
-              closeness of the relationship between the current document and the target resource.
-              Resources in the same information unit are considered
-              <code class="ph codeph">"local"</code>; resources in the same system as the
-              referencing content but not part of the same information unit are considered
-              <code class="ph codeph">"peer"</code>; and resources outside the system, such as Web
-              pages, are considered <code class="ph codeph">"external"</code>.
-            </dd>
-
-            <dt class="dt dlterm" id="audio__d1491e320">
+            <dt class="dt dlterm" id="audio__d1489e274">
               <code class="keyword markupname xmlatt">@tabindex</code>
             </dt>
             <dd class="dd">
@@ -206,6 +182,30 @@ index: '../../toc.html'
               in the HTML specification (WHATWG version).
             </dd>
           </dl>
+          <div class="p attr-exception" style="color:red;" id="audio__d1489e287">
+            For this element:
+            <ul class="ul" id="audio__d1489e291">
+              <li class="li">
+                The <code class="keyword markupname xmlatt">@format</code> attribute specifies the
+                MIME type for the resource. This attribute enables processors to avoid loading
+                unsupported resources. If <code class="keyword markupname xmlatt">@format</code> is
+                not specified and <code class="keyword markupname xmlatt">@keyref</code> is
+                specified, the effective type for the key named by the
+                <code class="keyword markupname xmlatt">@keyref</code> attribute is used as the
+                value. If an explicit <code class="keyword markupname xmlatt">@format</code> is not
+                specified on either the
+                <code class="keyword markupname xmlelement">&lt;audio&gt;</code> element or key
+                definition, processors can use other means, such as the URI file extension, to
+                determine the effective MIME type of the resource.
+              </li>
+              <li class="li">
+                The <code class="keyword markupname xmlatt">@href</code> attribute specifies the
+                absolute or relative URI of the audio resource. If
+                <code class="keyword markupname xmlatt">@href</code> is specified, also specify
+                <code class="keyword markupname xmlatt">@format</code>.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <div class="example" id="audio__example">
@@ -268,7 +268,7 @@ index: '../../toc.html'
 
           <p class="p">
             The following code sample specifies an audio resource and defines multiple
-            presentational details; it also provides fallback behavior for when the audio resource
+            presentational details. It also provides fallback behavior for when the audio resource
             cannot be rendered.
           </p>
           <pre class="pre codeblock"><code>&lt;audio autoplay="true"

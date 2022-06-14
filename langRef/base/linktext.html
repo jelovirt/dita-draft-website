@@ -2,7 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'linktext'
-description: 'Link text is the label for a link or resource.'
+description: 'Link text is the label
+  for a link or resource.'
 index: '../../toc.html'
 ---
 
@@ -16,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -70,9 +71,10 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
         <p class="p">
-          For processors that can automatically retrieve link text from a target, a specified
-          <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element is used
-          instead of the retrieved link text.
+          When a link contains a
+          <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element, the content
+          of the <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element is
+          rendered instead of the text that retrieved from the resource.
         </p>
       </section>
       <section class="section" id="linktext__attributes">
@@ -91,27 +93,18 @@ index: '../../toc.html'
         </p>
       </section>
       <div class="example" id="linktext__example">
-        <h2 class="title sectiontitle">Examples</h2>
-        <p class="p">
-          This section contains examples of how the
-          <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element can be used.
-        </p>
-        <figure class="fig fignone" id="linktext__figure-3">
-          <figcaption>
-            <span class="fig--title-label">Figure 1. </span>Link text within a topic
-          </figcaption>
+        <h2 class="title sectiontitle">Example</h2>
 
-          <p class="p">
-            The following code sample shows how a
-            <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element can be used
-            within a topic to provide text for a related link to a non-DITA resource:
-          </p>
-          <pre class="pre codeblock"><code>&lt;related-links&gt;
+        <p class="p">
+          The following code sample shows how a
+          <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element can be used to
+          provide link text for a related link to a non-DITA resource:
+        </p>
+        <pre class="pre codeblock"><code>&lt;related-links&gt;
   &lt;link href="SQLJ-example.html" format="html" scope="local"&gt;
     <strong class="ph b">&lt;linktext&gt;</strong>Accessing relational data with SQLJ<strong class="ph b">&lt;/linktext&gt;</strong>
   &lt;/link&gt;
 &lt;/related-links&gt;</code></pre>
-        </figure>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -121,7 +114,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/related-links-elements.html"
-            title="The related links elements define, group, and describe topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
+            title="The related links elements define, group, and describe hyperlinks that are embedded in a DITA topic. The links are contained by the related-links element and apply to the DITA topic as a whole."
             >Related links elements</a
           >
         </div>

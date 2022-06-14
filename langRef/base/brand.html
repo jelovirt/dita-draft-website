@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'brand'
-description: 'A brand element specifies the manufacturer or brand associated
-  with the product described by the parent prodinfo element.'
+description: 'A brand is a name, term, design, or any other
+  feature that uniquely identifies a good or service and distinguishes it
+  from that of other sellers.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,10 +56,9 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;brand&gt;</code> element specifies the
-        manufacturer or brand associated with the product described by the parent
-        <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code> element.
+      <p style="color:red;" class="shortdesc">
+        A brand is a name, term, design, or any other feature that uniquely identifies a good or
+        service and distinguishes it from that of other sellers.
       </p>
       <section class="section" id="brand__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -78,14 +78,11 @@ index: '../../toc.html'
       <div class="example" id="brand__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows that product "MyMedDevice" is associated with the brand
-          "ExampleCo".
+          See
+          <a class="xref" href="prodinfo.html#prodinfo__example"
+            ><code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code>.</a
+          >
         </p>
-        <pre class="pre codeblock"><code>&lt;prodinfo&gt;
-  &lt;prodname&gt;MyMedDevice&lt;/prodname&gt;
-  &lt;vrmlist&gt;&lt;vrm version="1"/&gt;&lt;/vrmlist&gt;
-  <strong class="ph b">&lt;brand&gt;ExampleCo&lt;/brand&gt;</strong>
-&lt;/prodinfo&gt; </code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -95,7 +92,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

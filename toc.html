@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8" />
-    <meta name="copyright" content="(C) Copyright 2021" />
+    <meta name="copyright" content="(C) Copyright 2022" />
     <meta name="generator" content="DITA-OT" />
     <link rel="stylesheet" type="text/css" href="commonltr.css" />
     <title>Darwin Information Typing Architecture (DITA) Version 2.0</title>
@@ -15,19 +15,6 @@
         <li class="topicref chapter">
           <a href="introduction/dita-release-overview.html">Introduction</a>
           <ul>
-            <li class="topicref">
-              <a href="introduction/about-the-dita-specification-base.html"
-                >About the DITA 2.0 specification</a
-              >
-              <ul>
-                <li class="topicref">
-                  <a href="introduction/xml-grammar-files.html">XML grammar files</a>
-                </li>
-                <li class="topicref">
-                  <a href="introduction/written-specification.html">Written specification</a>
-                </li>
-              </ul>
-            </li>
             <li class="topicref"><a href="introduction/terminology.html">Terminology</a></li>
             <li class="topicref"><a href="introduction/ipr-policy.html">IPR policy</a></li>
             <li class="topicref">
@@ -173,28 +160,6 @@
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/metadata-attributes.html">Metadata attributes</a>
-                  <ul>
-                    <li class="topicref">
-                      <a href="archSpec/base/conditional-processing-attributes.html"
-                        >Filtering and flagging attributes</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="archSpec/base/other-processing-attributes.html"
-                        >Other processing attributes</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="archSpec/base/translation-and-localization-attributes.html"
-                        >Translation and localization attributes</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="archSpec/base/architectural-attributes.html"
-                        >Architectural attributes</a
-                      >
-                    </li>
-                  </ul>
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/metadata-in-maps-and-topics.html"
@@ -203,7 +168,7 @@
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/help-systems-and-other-user-assistance.html"
-                    >Context hooks and window metadata for user assistance</a
+                    >Window metadata for user assistance</a
                   >
                 </li>
               </ul>
@@ -211,9 +176,116 @@
           </ul>
         </li>
         <li class="topicref chapter">
-          <a href="archSpec/base/determining-effective-attribute-values.html"
-            >Determining effective attribute values</a
+          <a href="archSpec/base/accessibility-and-translation.html"
+            >Accessibility and translation</a
           >
+          <ul>
+            <li class="topicref">
+              <a href="archSpec/base/accessibility.html">Accessibility</a>
+              <ul>
+                <li class="topicref">
+                  <a href="archSpec/base/accessibility-contentvsprocessor.html"
+                    >Handling accessibility in content and in processors</a
+                  >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/accessiblemarkup.html">Accessible content</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/accessibletablemarkup.html">Accessible tables</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/examples-of-dita-markup-for-accessibility.html"
+                    >Examples of DITA markup for accessibility</a
+                  >
+                  <ul>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-alternate-text-for-an-image.html"
+                        >Example: Alternate text for an image</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-alternate-text-for-an-image-map.html"
+                        >Example: Alternate text for an image map</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-fallback-information-for-multimedia.html"
+                        >Example: Fallback information for multimedia content</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-complex-table-with-accessibility-markup.html"
+                        >Example: Complex table with accessibility markup</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/example-complex-table-with-some-manually-specified-accessibility-markup.html"
+                        >Example: Complex table with some manually-specified accessibility markup</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/example-complex-table-with-manual-accessibility-markup.html"
+                        >Example: Complex table with manual accessibility markup</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="topicref">
+              <a href="archSpec/base/translation.html">Translation and localization</a>
+              <ul>
+                <li class="topicref">
+                  <a href="archSpec/base/xmllang.html">The xml:lang attribute</a>
+                  <ul>
+                    <li class="topicref">
+                      <a href="archSpec/base/location-of-the-xml-lang-attribute.html"
+                        >Recommendations for the xml:lang attribute</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/processing-expectations-regarding-the-xml-lang-attribute.html"
+                        >Processing expectations regarding the xml:lang attribute</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-of-conref-and-the-xml-lang-attribute.html"
+                        >Example: content reference and the xml:lang attribute</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/diratt.html">The dir attribute</a>
+                  <ul>
+                    <li class="topicref">
+                      <a href="archSpec/base/the-unicode-bidirectional-algorithm.html"
+                        >The Unicode Bidirectional Algorithm</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/recommended-usage-of-the-dir-attribute.html"
+                        >Recommended usage of the dir attribute</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a
+                        href="archSpec/base/processing-expectations-about-the-unicode-bidirectional-algorithm.html"
+                        >Processing expectations regarding the Unicode Bidirectional Algorithm</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/the-translate-attribute.html">The translate attribute</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
         <li class="topicref chapter">
           <a href="archSpec/base/dita-map-processing.html">DITA map processing</a>
@@ -245,16 +317,6 @@
                   >
                 </li>
                 <li class="topicref">
-                  <a href="archSpec/base/extending-a-subject-scheme.html"
-                    >Extending subject schemes</a
-                  >
-                </li>
-                <li class="topicref">
-                  <a href="archSpec/base/scaling-controlled-values-to-define-a-taxonomy.html"
-                    >Scaling a list of controlled values to define a taxonomy</a
-                  >
-                </li>
-                <li class="topicref">
                   <a href="archSpec/base/classification-maps.html">Classification maps</a>
                 </li>
                 <li class="topicref">
@@ -269,16 +331,6 @@
                       >
                     </li>
                     <li class="topicref">
-                      <a href="archSpec/base/example-subjectScheme-extension.html"
-                        >Example: Extending a subject scheme</a
-                      >
-                    </li>
-                    <li class="topicref">
-                      <a href="archSpec/base/example-subjectScheme-extension-upwards.html"
-                        >Example: Extending a subject scheme upwards</a
-                      >
-                    </li>
-                    <li class="topicref">
                       <a href="archSpec/base/example-subjectScheme-values-for-deliveryTarget.html"
                         >Example: Defining values for deliveryTarget</a
                       >
@@ -288,7 +340,7 @@
               </ul>
             </li>
             <li class="topicref">
-              <a href="archSpec/base/map-processing.html">Map cascading</a>
+              <a href="archSpec/base/map-cascading.html">Metadata cascading</a>
               <ul>
                 <li class="topicref">
                   <a href="archSpec/base/cascading-in-a-ditamap.html"
@@ -296,13 +348,13 @@
                   >
                   <ul>
                     <li class="topicref">
-                      <a href="archSpec/base/merging-of-cascading-attributes.html"
-                        >Merging of cascading attributes</a
+                      <a href="archSpec/base/processing-cascading-attributes-in-a-map.html"
+                        >Processing cascading attributes in a map</a
                       >
                     </li>
                     <li class="topicref">
-                      <a href="archSpec/base/processing-cascading-attributes-in-a-map.html"
-                        >Processing cascading attributes in a map</a
+                      <a href="archSpec/base/merging-of-cascading-attributes.html"
+                        >Merging of cascading attributes</a
                       >
                     </li>
                   </ul>
@@ -330,6 +382,39 @@
                     <li class="topicref">
                       <a href="archSpec/base/cascading-of-roles-in-specialized-maps.html"
                         >Cascading of roles from map to map</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/examples-of-cascading.html"
+                    >Examples of metadata cascading</a
+                  >
+                  <ul>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-cascade-elements.html"
+                        >Example: How map-level metadata elements cascade to the referenced
+                        topics</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-cascade-map-to-map-elements.html"
+                        >Example: How metadata elements cascade from one map to another</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-cascade-map-to-map-attributes.html"
+                        >Example: How attributes cascade from one map to another</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-cascade-attribute.html"
+                        >Example: How the cascade attribute affects attribute cascading</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-cascading-topicref-roles.html"
+                        >Example: How topicref roles cascade to referenced maps</a
                       >
                     </li>
                   </ul>
@@ -369,17 +454,18 @@
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-chunk-combine-branch.html"
-                        >Example: Using chunk to render a single document from one branch</a
+                        >Example: Using chunk to render a single document from one or more
+                        branches</a
                       >
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-chunk-combine-group.html"
-                        >Example: Using chunk to combine a group of topics</a
+                        >Example: Using chunk to combine groups of topics</a
                       >
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-chunk-combine-nested-topics.html"
-                        >Example: Using chunk to combine nested documents</a
+                        >Example: How chunk="combine" effects the map hierarchy</a
                       >
                     </li>
                     <li class="topicref">
@@ -389,7 +475,7 @@
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-chunk-split-nested.html"
-                        >Example: Using chunk to split nested documents</a
+                        >Example: How chunk="split" effects the map hierarchy</a
                       >
                     </li>
                     <li class="topicref">
@@ -399,7 +485,7 @@
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/example-chunk-combine-within-split.html"
-                        >Example: Combining topics within a split context</a
+                        >Example: Using chunk="combine" when the root map specifies chunk="split"</a
                       >
                     </li>
                     <li class="topicref">
@@ -576,9 +662,19 @@
                         >Example: How key scopes affect key precedence</a
                       >
                     </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-scoped-key-name-conflicts.html"
+                        >Example: How key scopes with the same name interact</a
+                      >
+                    </li>
                   </ul>
                 </li>
               </ul>
+            </li>
+            <li class="topicref">
+              <a href="archSpec/base/context-hooks-for-user-assistance.html"
+                >Context hooks for user assistance</a
+              >
             </li>
           </ul>
         </li>
@@ -590,6 +686,9 @@
               <ul>
                 <li class="topicref">
                   <a href="archSpec/base/table-of-contents.html">Table of contents</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/alternative-titles.html">Alternative titles</a>
                 </li>
               </ul>
             </li>
@@ -683,19 +782,41 @@
               </ul>
             </li>
             <li class="topicref">
-              <a href="archSpec/base/condproc.html">Conditional processing (profiling)</a>
+              <a href="archSpec/base/condproc.html">Conditional processing</a>
               <ul>
                 <li class="topicref">
-                  <a href="archSpec/base/usage-of-conditional-processing-attributes.html"
-                    >Conditional processing values and groups</a
+                  <a href="archSpec/base/aboutconditionalprocessing.html"
+                    >About conditional processing</a
                   >
                 </li>
-                <li class="topicref"><a href="archSpec/base/filtering.html">Filtering</a></li>
-                <li class="topicref"><a href="archSpec/base/flagging.html">Flagging</a></li>
                 <li class="topicref">
-                  <a href="archSpec/base/conditional-processing-for-specific-output-types.html"
-                    >Conditional processing to generate multiple deliverable types</a
+                  <a href="archSpec/base/conditionalprocessingexpectations.html"
+                    >Expectations for conditional processing</a
                   >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/aboutditavaldocuments.html">About the DITAVAL document</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/usage-of-conditional-processing-attributes.html"
+                    >Conditional processing attribute values</a
+                  >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/usage-of-conditional-processing-attribute-groups.html"
+                    >Conditional processing attribute values with groups</a
+                  >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/conditional-processing-and-subject-schemes.html"
+                    >Conditional processing and subject schemes</a
+                  >
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/filtering.html">Filtering based on metadata attributes</a>
+                </li>
+                <li class="topicref">
+                  <a href="archSpec/base/flagging.html">Flagging based on metadata attributes</a>
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/examples-of-conditional-processing.html"
@@ -704,12 +825,42 @@
                   <ul>
                     <li class="topicref">
                       <a href="archSpec/base/example-setting-condproc-values.html"
-                        >Example: Setting conditional processing values and groups</a
+                        >Example: Setting conditional processing values</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-simple-ditaval.html"
+                        >Example: Simple DITAVAL document</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-ditaval-default-exclude.html"
+                        >Example: Changing the default behavior to "exclude"</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-flagging-outputclass.html"
+                        >Example: Flagging with outputclass</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-ditaval-groups.html"
+                        >Example: Filtering based on groups</a
                       >
                     </li>
                     <li class="topicref">
                       <a href="archSpec/base/evaluating-conditional-processing-attributes.html"
                         >Example: Filtering and flagging topic content</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-ditaval-subjectscheme.html"
+                        >Example: Simple DITAVAL document</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/example-ditaval-with-conditions-for-groups.html"
+                        >Example: DITAVAL with conditions for groups</a
                       >
                     </li>
                   </ul>
@@ -725,19 +876,41 @@
                   >
                 </li>
                 <li class="topicref">
+                  <a href="archSpec/base/branch-filtering-interactions.html"
+                    >How filtering rules interact</a
+                  >
+                </li>
+                <li class="topicref">
                   <a href="archSpec/base/branch-filtering-single-set.html"
-                    >Branch filtering: Single condition set for a branch</a
+                    >Branch filtering: Single referenced DITAVAL document for a branch</a
                   >
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/branch-filtering-multiple-sets.html"
-                    >Branch filtering: Multiple condition sets for a branch</a
+                    >Branch filtering: Multiple referenced DITAVAL documents for a branch</a
                   >
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/branch-filtering-resource-names.html"
                     >Branch filtering: Impact on resource and key names</a
                   >
+                  <ul>
+                    <li class="topicref">
+                      <a href="archSpec/base/branch-filtering-metadata-elements.html"
+                        >Using metadata elements in the DITAVAL reference domain</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/branch-filtering-renaming-multiple-times.html"
+                        >Renaming based on multiple ditavalref elements</a
+                      >
+                    </li>
+                    <li class="topicref">
+                      <a href="archSpec/base/branch-filtering-handling-conflicts.html"
+                        >Handling resource name conflicts caused by branch filtering</a
+                      >
+                    </li>
+                  </ul>
                 </li>
                 <li class="topicref">
                   <a href="archSpec/base/branch-filtering-implications-of-processing-order.html"
@@ -793,16 +966,12 @@
                 </li>
               </ul>
             </li>
-            <li class="topicref">
-              <a href="archSpec/base/translation.html">Translation and localization</a>
-              <ul>
-                <li class="topicref">
-                  <a href="archSpec/base/xmllang.html">The xml:lang attribute</a>
-                </li>
-                <li class="topicref"><a href="archSpec/base/diratt.html">The dir attribute</a></li>
-              </ul>
-            </li>
             <li class="topicref"><a href="archSpec/base/sort-as-processing.html">Sorting</a></li>
+            <li class="topicref">
+              <a href="archSpec/base/determining-effective-attribute-values.html"
+                >Determining effective attribute values</a
+              >
+            </li>
           </ul>
         </li>
         <li class="topicref chapter">
@@ -1189,6 +1358,7 @@
                     <li class="topicref"><a href="langRef/base/body.html">body</a></li>
                     <li class="topicref"><a href="langRef/base/bodydiv.html">bodydiv</a></li>
                     <li class="topicref"><a href="langRef/base/dita.html">dita</a></li>
+                    <li class="topicref"><a href="langRef/base/prolog.html">prolog</a></li>
                     <li class="topicref">
                       <a href="langRef/base/related-links.html">related-links</a>
                     </li>
@@ -1308,17 +1478,16 @@
                 <li class="topicref">
                   <a href="langRef/containers/basic-map-elements.html">Basic map elements</a>
                   <ul>
+                    <li class="topicref"><a href="langRef/base/keytext.html">keytext</a></li>
                     <li class="topicref"><a href="langRef/base/map.html">map</a></li>
+                    <li class="topicref"><a href="langRef/base/navref.html">navref</a></li>
+                    <li class="topicref"><a href="langRef/base/relcell.html">relcell</a></li>
+                    <li class="topicref"><a href="langRef/base/relcolspec.html">relcolspec</a></li>
+                    <li class="topicref"><a href="langRef/base/relheader.html">relheader</a></li>
+                    <li class="topicref"><a href="langRef/base/relrow.html">relrow</a></li>
+                    <li class="topicref"><a href="langRef/base/reltable.html">reltable</a></li>
                     <li class="topicref"><a href="langRef/base/topicref.html">topicref</a></li>
                     <li class="topicref"><a href="langRef/base/topicmeta.html">topicmeta</a></li>
-                    <li class="topicref"><a href="langRef/base/anchor.html">anchor</a></li>
-                    <li class="topicref"><a href="langRef/base/navref.html">navref</a></li>
-                    <li class="topicref"><a href="langRef/base/reltable.html">reltable</a></li>
-                    <li class="topicref"><a href="langRef/base/relrow.html">relrow</a></li>
-                    <li class="topicref"><a href="langRef/base/relcell.html">relcell</a></li>
-                    <li class="topicref"><a href="langRef/base/relheader.html">relheader</a></li>
-                    <li class="topicref"><a href="langRef/base/relcolspec.html">relcolspec</a></li>
-                    <li class="topicref"><a href="langRef/base/keytext.html">keytext</a></li>
                     <li class="topicref"><a href="langRef/base/ux-window.html">ux-window</a></li>
                   </ul>
                 </li>
@@ -1335,18 +1504,6 @@
                     <li class="topicref">
                       <a href="langRef/base/enumerationdef.html">enumerationdef</a>
                     </li>
-                    <li class="topicref">
-                      <a href="langRef/base/hasInstance.html">hasInstance</a>
-                    </li>
-                    <li class="topicref"><a href="langRef/base/hasKind.html">hasKind</a></li>
-                    <li class="topicref">
-                      <a href="langRef/base/hasNarrower.html">hasNarrower</a>
-                    </li>
-                    <li class="topicref"><a href="langRef/base/hasPart.html">hasPart</a></li>
-                    <li class="topicref"><a href="langRef/base/hasRelated.html">hasRelated</a></li>
-                    <li class="topicref">
-                      <a href="langRef/base/relatedSubjects.html">relatedSubjects</a>
-                    </li>
                     <li class="topicref"><a href="langRef/base/schemeref.html">schemeref</a></li>
                     <li class="topicref"><a href="langRef/base/subjectdef.html">subjectdef</a></li>
                     <li class="topicref">
@@ -1354,16 +1511,6 @@
                     </li>
                     <li class="topicref">
                       <a href="langRef/base/subjectHeadMeta.html">subjectHeadMeta</a>
-                    </li>
-                    <li class="topicref"><a href="langRef/base/subjectRel.html">subjectRel</a></li>
-                    <li class="topicref">
-                      <a href="langRef/base/subjectRelTable.html">subjectRelTable</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/base/subjectRelHeader.html">subjectRelHeader</a>
-                    </li>
-                    <li class="topicref">
-                      <a href="langRef/base/subjectRole.html">subjectRole</a>
                     </li>
                     <li class="topicref">
                       <a href="langRef/base/subjectScheme.html">subjectScheme</a>
@@ -1401,7 +1548,6 @@
                     <li class="topicref"><a href="langRef/base/prodinfo.html">prodinfo</a></li>
                     <li class="topicref"><a href="langRef/base/prodname.html">prodname</a></li>
                     <li class="topicref"><a href="langRef/base/prognum.html">prognum</a></li>
-                    <li class="topicref"><a href="langRef/base/prolog.html">prolog</a></li>
                     <li class="topicref"><a href="langRef/base/publisher.html">publisher</a></li>
                     <li class="topicref"><a href="langRef/base/resourceid.html">resourceid</a></li>
                     <li class="topicref"><a href="langRef/base/revised.html">revised</a></li>
@@ -1432,7 +1578,7 @@
               <ul>
                 <li class="topicref">
                   <a href="langRef/containers/alternativeTitles-d.html"
-                    >Alternative titles domain elements</a
+                    >Alternative-titles domain elements</a
                   >
                   <ul>
                     <li class="topicref"><a href="langRef/base/linktitle.html">linktitle</a></li>
@@ -1534,7 +1680,6 @@
                 <li class="topicref">
                   <a href="langRef/containers/mapgroup-d.html">Mapgroup domain elements</a>
                   <ul>
-                    <li class="topicref"><a href="langRef/base/anchorref.html">anchorref</a></li>
                     <li class="topicref"><a href="langRef/base/keydef.html">keydef</a></li>
                     <li class="topicref"><a href="langRef/base/mapref.html">mapref</a></li>
                     <li class="topicref">

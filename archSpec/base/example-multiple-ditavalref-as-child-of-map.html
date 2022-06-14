@@ -3,9 +3,10 @@
 layout: base
 title: 'Example: Multiple ditavalref elements as children of
   map in a root map'
-description: 'Using multiple instances of the ditavalref element as direct
-  children of the map element in a root map is equivalent to setting
-  multiple sets of global filtering conditions for the root map.'
+description: 'In this scenario, multiple instances of the ditavalref element
+  are specified as direct children of the map element in a root map. This
+  is equivalent to setting multiple sets of global filtering conditions for the root
+  map.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -31,7 +32,7 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/navigation.html">Navigation</a></li>
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
+        <li><a href="../../archSpec/base/condproc.html">Conditional processing</a></li>
         <li>
           <a href="../../archSpec/base/branch-filtering.html">Branch filtering</a>
           <ul class="nav nav-list">
@@ -41,13 +42,18 @@ index: '../../toc.html'
               >
             </li>
             <li>
+              <a href="../../archSpec/base/branch-filtering-interactions.html"
+                >How filtering rules interact</a
+              >
+            </li>
+            <li>
               <a href="../../archSpec/base/branch-filtering-single-set.html"
-                >Branch filtering: Single condition set for a branch</a
+                >Branch filtering: Single referenced DITAVAL document for a branch</a
               >
             </li>
             <li>
               <a href="../../archSpec/base/branch-filtering-multiple-sets.html"
-                >Branch filtering: Multiple condition sets for a branch</a
+                >Branch filtering: Multiple referenced DITAVAL documents for a branch</a
               >
             </li>
             <li>
@@ -109,8 +115,12 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -147,11 +157,11 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        Using multiple instances of the
-        <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element as direct
-        children of the <code class="keyword markupname xmlelement">&lt;map&gt;</code> element in a
-        root map is equivalent to setting multiple sets of global filtering conditions for the root
-        map.
+        In this scenario, multiple instances of the
+        <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element are specified
+        as direct children of the
+        <code class="keyword markupname xmlelement">&lt;map&gt;</code> element in a root map. This
+        is equivalent to setting multiple sets of global filtering conditions for the root map.
       </p>
       <div
         class="example"
@@ -159,17 +169,17 @@ index: '../../toc.html'
       >
         <div class="note note note_note">
           <span class="note__title">Note:</span> Unlike most other examples of branch filtering,
-          this example cannot be rewritten using
-          <span class="ph">a single valid map with</span> alternate markup that avoids having
-          multiple <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements as
-          children of the same grouping element.
+          this example cannot be rewritten using a single valid map with alternate markup that
+          avoids having multiple
+          <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements as children
+          of the same grouping element.
         </div>
         <p class="p">
           Processing the following root map is equivalent to processing all the contents of the map
           with the conditions in the <span class="ph filepath">mac.ditaval</span> file and again
           with the <span class="ph filepath">linux.ditaval</span> file. If additional conditions are
-          provided externally (for example, as a parameter to the publishing process),
-          <span class="ph">those</span> global conditions take precedence.
+          provided externally (for example, as a parameter to the publishing process), those global
+          conditions take precedence.
         </p>
         <figure
           class="fig fignone"

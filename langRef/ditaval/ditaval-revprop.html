@@ -2,10 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'revprop'
-description: 'The revprop element in a DITAVAL document identifies a value in
-  the rev attribute that should be flagged in some manner. Unlike the
-  conditional processing attributes, which can be used for both filtering and flagging, the
-  rev attribute only can be used for flagging. '
+description: 'The revprop element in a DITAVAL
+  document identifies a value of the rev attribute for
+  flagging. Unlike the conditional processing attributes, which can be
+  used for both filtering and flagging, the rev
+  attribute can only be used for flagging. '
 index: '../../toc.html'
 ---
 
@@ -19,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,42 +60,38 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element in a DITAVAL
-        document identifies a value in the
-        <code class="keyword markupname xmlatt">@rev</code> attribute that should be flagged in some
-        manner. Unlike the conditional processing attributes, which can be used for both filtering
-        and flagging, the <code class="keyword markupname xmlatt">@rev</code> attribute only can be
-        used for flagging.
+        document identifies a value of the
+        <code class="keyword markupname xmlatt">@rev</code> attribute for flagging. Unlike the
+        conditional processing attributes, which can be used for both filtering and flagging, the
+        <code class="keyword markupname xmlatt">@rev</code> attribute can only be used for flagging.
       </p>
       <section class="section" id="ditaval-revprop__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlatt">@rev</code> attribute identifies when a
-          particular section of a document was added or modified. The attribute is not considered a
-          filtering attribute because this is not sufficient to be used for full version control,
-          such as single-sourcing multiple product variants based on version level – it only
-          represents one aspect of the revision level.
+          <span style="color:red;" class="ph"
+            >Neither the <code class="keyword markupname xmlelement">&lt;reprop&gt;</code> element
+            or the <code class="keyword markupname xmlatt">@rev</code> attribute are</span
+          >
+          designed to be used for version control.
         </p>
       </section>
       <section class="section" id="ditaval-revprop__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
-        <p class="p">
-          <span class="ph" id="ditaval-revprop__default-text"
-            >When no alternate text is specified for a revision flag, the default alternate text for
-            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> start of change is
-            typically a localized translation of "Start of change", and the default alternate text
-            for <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> end of change is
-            typically a localized translation of "End of change".
-          </span>
+        <p class="p" id="ditaval-revprop__default-text">
+          If no alternate text is specified, processors can provide default alternate text to
+          indicate the start and end point of the flagged content.
         </p>
+
         <div class="div">
           <div class="p" id="ditaval-revprop__d1383e63">
             For the <code class="keyword markupname xmlatt">@color</code> and
             <code class="keyword markupname xmlatt">@backcolor</code> attributes on
-            <code class="keyword markupname xmlelement">&lt;rev&gt;</code> and
+            <code style="color:red;" class="keyword markupname xmlelement">&lt;prop&gt;</code> and
             <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors
-            <dfn class="term RFC-2119">SHOULD</dfn> support the following:
+            <dfn class="term RFC-2119">SHOULD</dfn> support
+            <span style="color:red;" class="ph">at least</span> the following values:
             <ul class="ul">
               <li class="li">
                 The color names listed under the heading "&lt;color&gt;" in
@@ -103,33 +100,33 @@ index: '../../toc.html'
                   href="http://www.w3.org/TR/2006/REC-xsl11-20061205/#datatype"
                   target="_blank"
                   rel="external noopener"
-                  >http://www.w3.org/TR/2006/REC-xsl11-20061205/#datatype</a
+                  >the XSL version 1.1 specification</a
                 >
               </li>
-              <li class="li">The associated 6 digit hex code form (#rrggbb, case insensitive).</li>
+              <li class="li">The associated hex code</li>
             </ul>
           </div>
-          <div class="p" id="ditaval-revprop__d1383e91">
+          <div class="p" id="ditaval-revprop__d1383e103">
             For the <code class="keyword markupname xmlatt">@style</code> attribute on
             <code class="keyword markupname xmlelement">&lt;rev&gt;</code> and
-            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, the following tokens
-            <dfn class="term RFC-2119">SHOULD</dfn> be processed by all DITAVAL processors:
+            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors
+            <dfn class="term RFC-2119">SHOULD</dfn> support the following tokens:
             <ul class="ul">
-              <li class="li">underline</li>
+              <li class="li">bold</li>
               <li class="li">double-underline</li>
               <li class="li">italics</li>
               <li class="li">overline</li>
-              <li class="li">bold</li>
+              <li class="li">underline</li>
             </ul>
           </div>
-          <p class="p" id="ditaval-revprop__d1383e123">
-            In addition, processors <dfn class="term RFC-2119">MAY</dfn> support other proprietary
-            tokens for the <code class="keyword markupname xmlatt">@style</code> attribute. Such
-            tokens <dfn class="term RFC-2119">SHOULD</dfn> have a processor-specific prefix to
-            identify them as proprietary. If a processor encounters an unsupported style token, it
-            <dfn class="term RFC-2119">MAY</dfn> issue a warning, and
-            <dfn class="term RFC-2119">MAY</dfn> render content flagged with such a style token
-            using some default formatting.
+          <p class="p" id="ditaval-revprop__d1383e135">
+            In addition, processors <dfn class="term RFC-2119">MAY</dfn> support proprietary tokens
+            for the <code class="keyword markupname xmlatt">@style</code> attribute. Such tokens
+            <dfn class="term RFC-2119">SHOULD</dfn> have a processor-specific prefix to identify
+            them as proprietary. If a processor encounters an unsupported style token, it
+            <dfn class="term RFC-2119">MAY</dfn> issue a warning, and it
+            <dfn class="term RFC-2119">MAY</dfn> render content that is flagged with such a style
+            token by using some default formatting.
           </p>
         </div>
       </section>
@@ -139,136 +136,162 @@ index: '../../toc.html'
         <p class="p">
           It is an error to include more than one
           <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element with the same
-          <code class="keyword markupname xmlatt">@val</code> attribute setting. Recovery from this
-          error is implementation dependent; in such cases processors
+          <code class="keyword markupname xmlatt">@val</code> attribute. Recovery from this error is
+          implementation dependent. In such cases processors
           <dfn class="term RFC-2119">MAY</dfn> provide an error or warning message.
         </p>
+        <div class="div">
+          <p class="p">
+            The following list outlines how processors apply
+            <code class="keyword markupname xmlatt">@outputclass</code> flags:
+          </p>
+          <ul class="ul">
+            <li class="li">
+              If one or more DITAVAL properties apply
+              <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element,
+              and the element already specifies one or more values for the
+              <code class="keyword markupname xmlatt">@outputclass</code> attribute, processors
+              treat the element as if
+              <span style="color:red;" class="ph"
+                >the tokens for the
+                <code class="keyword markupname xmlatt">@outputclass</code> attribute that were
+                provided in the DITAVAL document</span
+              >
+              are specified first.
+            </li>
+            <li class="li">
+              If two or more DITAVAL properties apply
+              <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element,
+              processors treat the element as if each value was specified for the
+              <code class="keyword markupname xmlatt">@outputclass</code> attribute. The order of
+              the
+              <span style="color:red;" class="ph">
+                tokens for the <code class="keyword markupname xmlatt">@outputclass</code> attribute
+                that were provided in the DITAVAL document</span
+              >
+              is undefined.
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="section" id="ditaval-revprop__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
-        <div class="p">
-          The following attributes are available on this element:
-          <dl class="dl">
-            <dt class="dt dlterm" id="ditaval-revprop__attr-val">
-              <code class="keyword markupname xmlatt">@val</code>
-            </dt>
-            <dd class="dd">
-              Specifies the revision value to be acted upon. If the
-              <code class="keyword markupname xmlatt">@val</code> attribute is absent, then the
-              <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element declares a
-              default behavior for any value in the
-              <code class="keyword markupname xmlatt">@rev</code> attribute.
-            </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__attr-action">
-              <code class="keyword markupname xmlatt">@action</code>
-              <span class="ph">(REQUIRED)</span>
-            </dt>
-            <dd class="dd">
-              Specifies the action to be taken. Allowable values are:
-              <dl class="dl">
-                <dt class="dt dlterm">include</dt>
-                <dd class="dd">
-                  Include the content in output without flags. This is the default behavior unless
-                  otherwise set.
-                </dd>
+        <p class="p">The following attributes are available on this element:</p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="ditaval-revprop__attr-action">
+            <code class="keyword markupname xmlatt">@action</code>
+            <span class="ph">(REQUIRED)</span>
+          </dt>
+          <dd class="dd">
+            <p class="p">Specifies the action to be taken. The following values are supported:</p>
+            <dl class="dl">
+              <dt class="dt dlterm">flag</dt>
+              <dd class="dd">
+                Indicates that the content is included in the output and flagged, if the content has
+                not been excluded.
+              </dd>
 
-                <dt class="dt dlterm">passthrough</dt>
-                <dd class="dd">
-                  Include the content in output, and preserve the attribute value as part of the
-                  output stream for further processing by a runtime engine.
-                  <span class="ph"
-                    >For example, this could be used to enable runtime highlighting based on
-                    individual user settings.</span
-                  >
-                  The value should be preserved in whatever syntax is required by the target
-                  runtime. Values that are not explicitly passed through should be removed from the
-                  output stream, even though the content is still included.
-                </dd>
+              <dt class="dt dlterm">include</dt>
+              <dd class="dd">
+                Indicates that the content is included in the output and not flagged. This is the
+                default behavior, unless otherwise set.
+              </dd>
 
-                <dt class="dt dlterm">flag</dt>
-                <dd class="dd">
-                  Include and flag the content when rendered (if the content has not been excluded).
-                </dd>
-              </dl>
-            </dd>
+              <dt class="dt dlterm">passthrough</dt>
+              <dd class="dd">
+                Indicates that the content is included in the output and that the attribute value is
+                preserved. This enables further processing by a runtime engine. The attribute value
+                is preserved in the syntax that is required by the runtime engine.
+              </dd>
+            </dl>
+          </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__attr-changebar">
-              <code class="keyword markupname xmlatt">@changebar</code>
-            </dt>
-            <dd class="dd">
-              When flag has been set, specify a changebar color, style, or character, according to
-              the changebar support of the target output format. If the
-              <code class="keyword markupname xmlatt">@action</code> attribute is not set to "flag",
-              this attribute is ignored.
-            </dd>
+          <dt class="dt dlterm" id="ditaval-revprop__attr-val">
+            <code class="keyword markupname xmlatt">@val</code>
+          </dt>
+          <dd class="dd">
+            Specifies the value of the
+            <code class="keyword markupname xmlatt">@rev</code> attribute. If the
+            <code class="keyword markupname xmlatt">@val</code> attribute is not specified, then the
+            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element declares a
+            default behavior for any instance of the
+            <code class="keyword markupname xmlatt">@rev</code> attribute.
+          </dd>
+        </dl>
+        <p style="color:red;" class="p">
+          The following attributes are only applicable when the
+          <code class="keyword markupname xmlatt">@action</code> attribute is set to
+          <span class="keyword">flag</span>. If the
+          <code class="keyword markupname xmlatt">@action</code> attribute is not set to
+          <span class="keyword">flag</span>, any value specified for these attributes are ignored.
+        </p>
+        <dl class="dl">
+          <dt class="dt dlterm" id="ditaval-revprop__d1314e1054">
+            <code class="keyword markupname xmlatt">@backcolor</code>
+          </dt>
+          <dd class="dd">
+            Specifies the background color for flagged text. Colors can be entered by name or
+            <span style="color:red;" class="ph">hex</span> code. When images are flagged, the
+            background color is rendered as a thick border.
+          </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__d1311e1085">
-              <code class="keyword markupname xmlatt">@outputclass</code>
-            </dt>
-            <dd class="dd">
-              If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
-              "flag", treat the flagged element as if the full
-              <code class="keyword markupname xmlatt">@outputclass</code> value in the DITAVAL was
-              specified on that element's
-              <code class="keyword markupname xmlatt">@outputclass</code> attribute. If two or more
-              DITAVAL properties apply
-              <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element,
-              treat the flagged element as if each value was specified on that element's
-              <code class="keyword markupname xmlatt">@outputclass</code> attribute; in that case,
-              the order of those DITAVAL-based tokens is undefined. If the flagged element already
-              specifies <code class="keyword markupname xmlatt">@outputclass</code>, treat the
-              flagged element as if all DITAVAL-based
-              <code class="keyword markupname xmlatt">@outputclass</code> values come first in the
-              attribute.
-            </dd>
+          <dt class="dt dlterm" id="ditaval-revprop__attr-changebar">
+            <code class="keyword markupname xmlatt">@changebar</code>
+          </dt>
+          <dd class="dd">
+            Specifies a color, style, or character to be used for rendering a change bar.
+          </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__d1311e1117">
-              <code class="keyword markupname xmlatt">@color</code>
-            </dt>
-            <dd class="dd">
-              If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
-              "flag", specifies the color to use to flag text. Colors can be entered by name or
-              code. If the <code class="keyword markupname xmlatt">@action</code> attribute is not
-              set to "flag", this attribute is ignored.
-            </dd>
+          <dt class="dt dlterm" id="ditaval-revprop__d1314e1071">
+            <code class="keyword markupname xmlatt">@color</code>
+          </dt>
+          <dd class="dd">
+            Specifies the color for flagged text. Colors can be entered by name or
+            <span style="color:red;" class="ph">hex</span> code. When images are flagged, the color
+            is rendered as a thin border.
+          </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__d1311e1133">
-              <code class="keyword markupname xmlatt">@backcolor</code>
-            </dt>
-            <dd class="dd">
-              If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
-              "flag", specifies the color to use as background for flagged text. Colors can be
-              entered by name or code. If the
-              <code class="keyword markupname xmlatt">@action</code> attribute is not set to "flag",
-              this attribute is ignored.
-            </dd>
+          <dt class="dt dlterm" id="ditaval-revprop__d1314e1103">
+            <code class="keyword markupname xmlatt">@outputclass</code>
+          </dt>
+          <dd class="dd">
+            Specifies a value for the <code class="keyword markupname xmlatt">@outputclass</code>
+            attribute. The flagged element is treated as if the specified
+            <code class="keyword markupname xmlatt">@outputclass</code> value was specified on that
+            element.
+          </dd>
 
-            <dt class="dt dlterm" id="ditaval-revprop__d1311e1149">
-              <code class="keyword markupname xmlatt">@style</code>
-            </dt>
-            <dd class="dd">
-              If the <code class="keyword markupname xmlatt">@action</code> attribute is set to
-              "flag", specifies the text styles to use for flagged text. This attribute can contain
-              multiple space-delimited tokens. If the
-              <code class="keyword markupname xmlatt">@action</code> attribute is not set to "flag",
-              this attribute is ignored.
-            </dd>
-          </dl>
-        </div>
+          <dt class="dt dlterm" id="ditaval-revprop__d1314e1119">
+            <code class="keyword markupname xmlatt">@style</code>
+          </dt>
+          <dd class="dd">
+            Specifies the formatting to use for flagged text. This attribute can contain multiple
+            space-delimited tokens.
+          </dd>
+        </dl>
       </section>
       <div class="example" id="ditaval-revprop__example">
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          See
-          <a
-            class="xref"
-            href="ditaval-val.html"
-            title="The val element is the root element of a DITAVAL document."
-            >val</a
-          >.
+          The following code sample shows how the
+          <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element can be used to
+          flag content that has been marked with the
+          <code class="keyword markupname xmlatt">@rev</code> attribute. Elements that specify
+          <code class="ph codeph">rev="edits"</code> are rendered in red text, and glyphs mark the
+          start and end points of the flagged revision. Alternate text is provided.
         </p>
+        <pre class="pre codeblock"><code>&lt;val&gt;
+  &lt;revprop action="flag" color="red" val="edits"&gt;
+    &lt;startflag imageref="start-glyph.png&gt;
+      &lt;alt-text&gt;Start of revision&lt;/alt-text&gt;
+    &lt;/startflag&gt;
+    &lt;endflag imageref="end-glyph.png&gt;
+      &lt;alt-text&gt;End of revision&lt;/alt-text&gt;
+    &lt;/endflag&gt;
+  &lt;/revprop&gt;
+&lt;/val&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -278,7 +301,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/ditaval-elements.html"
-            title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
+            title="A DITAVAL document identifies content that is filtered and flagged at rendering time. The DITAVAL document has an extension of .ditaval."
             >DITAVAL elements</a
           >
         </div>
@@ -290,8 +313,8 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../archSpec/base/flagging.html"
-              title="Flagging is the application of text, images, or styling during rendering. This can highlight the fact that content applies to a specific audience or operating system, for example; it also can draw a reader's attention to content that has been marked as being revised."
-              >Flagging</a
+              title="When rendering content, a conditional processing profile can be used to specify whether an element's content is flagged based on its conditional processing attributes."
+              >Flagging based on metadata attributes</a
             >
           </li>
         </ul>

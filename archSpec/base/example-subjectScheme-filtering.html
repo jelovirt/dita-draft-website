@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -48,16 +48,6 @@ index: '../../toc.html'
                 >Processing controlled attribute values</a
               >
             </li>
-            <li>
-              <a href="../../archSpec/base/extending-a-subject-scheme.html"
-                >Extending subject schemes</a
-              >
-            </li>
-            <li>
-              <a href="../../archSpec/base/scaling-controlled-values-to-define-a-taxonomy.html"
-                >Scaling a list of controlled values to define a taxonomy</a
-              >
-            </li>
             <li><a href="../../archSpec/base/classification-maps.html">Classification maps</a></li>
             <li>
               <a href="../../archSpec/base/examples-subjectScheme-maps.html"
@@ -70,16 +60,6 @@ index: '../../toc.html'
                   >
                 </li>
                 <li>
-                  <a href="../../archSpec/base/example-subjectScheme-extension.html"
-                    >Example: Extending a subject scheme</a
-                  >
-                </li>
-                <li>
-                  <a href="../../archSpec/base/example-subjectScheme-extension-upwards.html"
-                    >Example: Extending a subject scheme upwards</a
-                  >
-                </li>
-                <li>
                   <a href="../../archSpec/base/example-subjectScheme-values-for-deliveryTarget.html"
                     >Example: Defining values for deliveryTarget</a
                   >
@@ -88,7 +68,7 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li><a href="../../archSpec/base/chunking.html">Chunking</a></li>
       </ul>
     </li>
@@ -135,7 +115,7 @@ index: '../../toc.html'
           <span class="keyword">os</span>. There are sub-categories for Linux, Windows, and z/OS, as
           well as specific Linux variants: Red Hat Linux and SuSE Linux. The company then binds the
           values that are enumerated in the "Operating system" category to the
-          <code class="keyword markupname xmlatt">@platform</code> attribute.
+          <code class="keyword markupname xmlatt">@platform</code> attribute:
         </p>
         <pre class="pre codeblock"><code>&lt;subjectScheme&gt;
     &lt;subjectdef keys="os"&gt;
@@ -158,15 +138,15 @@ index: '../../toc.html'
             &lt;/subjectdef&gt;
         &lt;/subjectdef&gt;
         &lt;subjectdef keys="windows"&gt;
-        &lt;topicmeta&gt;
-            &lt;navtitle&gt;Windows&lt;/navtitle&gt;
-        &lt;/topicmeta&gt;
-    &lt;/subjectdef&gt;
-    &lt;subjectdef keys="zos"&gt;
-        &lt;topicmeta&gt;
-            &lt;navtitle&gt;z/OS&lt;/navtitle&gt;
-        &lt;/topicmeta&gt;
-    &lt;/subjectdef&gt;
+            &lt;topicmeta&gt;
+                &lt;navtitle&gt;Windows&lt;/navtitle&gt;
+            &lt;/topicmeta&gt;
+        &lt;/subjectdef&gt;
+        &lt;subjectdef keys="zos"&gt;
+            &lt;topicmeta&gt;
+                &lt;navtitle&gt;z/OS&lt;/navtitle&gt;
+            &lt;/topicmeta&gt;
+        &lt;/subjectdef&gt;
     &lt;/subjectdef&gt;
     &lt;enumerationdef&gt;
         &lt;attributedef name="platform"/&gt;
@@ -185,8 +165,8 @@ index: '../../toc.html'
         <p class="p">
           The following table illustrates how filtering and flagging operate when the above map is
           processed by a processor. The first two columns provide the values specified in the
-          DITAVAL file; the third and fourth columns indicate the results of the filtering or
-          flagging operation.
+          DITAVAL file<span style="color:red;" class="ph">. The </span>third and fourth columns
+          indicate the results of the filtering or flagging operation.
         </p>
         <table class="table">
           <caption></caption>
@@ -323,7 +303,7 @@ index: '../../toc.html'
                 action="exclude"
               </td>
               <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__3">
-                Excluded, because all<span class="keyword">redhat</span> content is excluded.
+                Excluded, because all <span class="keyword">redhat</span> content is excluded.
               </td>
               <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__4">
                 Included and flagged with the <span class="keyword">linux</span> flag.
@@ -382,10 +362,11 @@ index: '../../toc.html'
                 Excluded, because all <span class="keyword">redhat</span> content is excluded
               </td>
               <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__4">
-                If the default for <code class="keyword markupname xmlatt">@platform</code> values
-                is "include", this is included. If the default for
-                <code class="keyword markupname xmlatt">@platform</code> values is "exclude", this
-                is excluded.
+                If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "include", this is included. If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "exclude", this is excluded.
               </td>
             </tr>
             <tr class="row">
@@ -416,17 +397,23 @@ index: '../../toc.html'
               <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__2">
                 Unspecified
               </td>
-              <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__3">
-                If the default for <code class="keyword markupname xmlatt">@platform</code> values
-                is "include", this is included. If the default for
-                <code class="keyword markupname xmlatt">@platform</code> values is "exclude", this
-                is excluded.
+              <td
+                style="color:red;"
+                class="entry colsep-1 rowsep-1"
+                headers="concept_hxl_2sz_vp__example__entry__3"
+              >
+                If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "include", this is included. If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "exclude", this is excluded.
               </td>
               <td class="entry colsep-1 rowsep-1" headers="concept_hxl_2sz_vp__example__entry__4">
-                If the default for <code class="keyword markupname xmlatt">@platform</code> values
-                is "include", this is included. If the default for
-                <code class="keyword markupname xmlatt">@platform</code> values is "exclude", this
-                is excluded.
+                If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "include", this is included. If the default value for
+                <code class="keyword markupname xmlatt">@platform</code> set in the DITAVAL is
+                "exclude", this is excluded.
               </td>
             </tr>
           </tbody>

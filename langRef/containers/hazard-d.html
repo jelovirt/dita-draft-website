@@ -2,10 +2,12 @@
 # Generated from DITA source
 layout: base
 title: 'Hazard-statement domain elements'
-description: 'The hazard statement domain contains the hazardstatement
-  element, which can be used to provide information about product safety hazards. The domain can be
-  included in any topic type or map. Hazard statements are used to inform readers about potential
-  hazards, consequences, and avoidance strategies. '
+description: 'The hazardstatement domain adds
+  markup to support hazard statements. It is based on the regulations
+  of ANSI Z535 and ISO 3864. The domain enables authors to provide all
+  the information necessary for a hazard statement: a signal word,
+  description of the hazard and its consequences, how to avoid the
+  hazard, and one or more images.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +21,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,7 +59,7 @@ index: '../../toc.html'
           <ul class="nav nav-list">
             <li>
               <a href="../../langRef/containers/alternativeTitles-d.html"
-                >Alternative titles domain elements</a
+                >Alternative-titles domain elements</a
               >
             </li>
             <li>
@@ -105,29 +107,27 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Hazard-statement domain elements</h1>
-    <p class="shortdesc">
-      The hazard statement domain contains the
-      <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element, which can
-      be used to provide information about product safety hazards. The domain can be included in any
-      topic type or map. Hazard statements are used to inform readers about potential hazards,
-      consequences, and avoidance strategies.
-    </p>
+    <div class="abstract">
+      <span class="shortdesc"
+        >The <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> domain adds
+        markup to support hazard statements. It is based on the regulations of ANSI Z535 and ISO
+        3864. The domain enables authors to provide all the information necessary for a hazard
+        statement: a signal word, description of the hazard and its consequences, how to avoid the
+        hazard, and one or more images.</span
+      >
+    </div>
 
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/consequence.html">consequence</a></strong
-          ><br />The <code class="keyword markupname xmlelement">&lt;consequence&gt;</code> element
-          specifies the consequence of failing to avoid a hazard, for example, "Contact may cause a
-          burn."
+          ><br />A consequence is a result or effect of an action or condition. In the context of a
+          hazard statement, it is the result of failing to avoid a hazard.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/hazardstatement.html">hazardstatement</a></strong
-          ><br />
-          The <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element
-          contains hazard warning information. It is based on the regulations of ANSI Z535 and ISO
-          3864. It enables the author to select the signal word, describe the hazard and its
-          consequences, explain how to avoid it, and add one or more safety images.
+          ><br />A hazard statement provides information about a hazard and its consequences. It
+          also explains how to avoid the hazard. It can also associate an image.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/hazardsymbol.html">hazardsymbol</a></strong
@@ -145,8 +145,8 @@ index: '../../toc.html'
           <strong><a href="../../langRef/base/messagepanel.html">messagepanel</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;messagepanel&gt;</code> element
           contains the textual information that is displayed on the hazard statement. This
-          information identifies the hazard, specifies how to avoid the hazard, and states the
-          probable consequences of failing to avoid the hazard.
+          information identifies the hazard, specifies how to avoid the hazard, states the probable
+          consequences of failing to avoid the hazard, and might specify one or more images.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/typeofhazard.html">typeofhazard</a></strong
@@ -160,7 +160,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/domain-elements.html"
-            title="General purpose domains are not specific to any type of information, such as the hazard statement domain that provides elements for describing hazardous situations."
+            title="A domain is a grouping of related DITA elements that can be integrated into document-type shells. The base edition of DITA includes a variety of domains for use in topics and maps."
             >Domain elements</a
           >
         </div>

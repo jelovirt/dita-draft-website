@@ -2,8 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'subjectHeadMeta'
-description: 'The subjectHeadMeta element allows a navigation title and short
-description to be associated with a subject heading. '
+description: 'The subjectHeadMeta element enables a
+  navigation title and short description to be associated with a subject
+  heading, for use if the subject scheme is rendered
+  and displayed.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,7 +59,10 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;subjectHeadMeta&gt;</code> element
-        allows a navigation title and short description to be associated with a subject heading.
+        enables a navigation title and short description to be associated with a subject
+        heading<span style="color:red;" class="ph"
+          >, for use if the subject scheme is rendered and displayed.</span
+        >
       </p>
       <section class="section" id="subjectHeadMeta__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
@@ -86,25 +91,12 @@ index: '../../toc.html'
       <div class="example" id="subjectHeadMeta__example">
         <h2 class="title sectiontitle">Example</h2>
 
-        <p class="p">
-          In this example the <q class="q">Server setup</q> label doesn't classify content but, when
-          selected, is equivalent to the union of its child subjects. That is, the heading covers
-          content about planning for any application, installing for any application, any task for
-          web servers, or any task for database servers.
+        <p style="color:red;" class="p">
+          See
+          <a class="xref" href="subjectHead.html#subjectHead__example"
+            ><code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code></a
+          >.
         </p>
-        <pre class="pre codeblock"><code>&lt;subjectScheme toc="yes" search="no"&gt;
-  &lt;!-- ... --&gt;
-  &lt;subjectHead&gt;
-    &lt;subjectHeadMeta&gt;
-      &lt;navtitle&gt;Server setup&lt;/navtitle&gt;
-    &lt;/subjectHeadMeta&gt;
-    &lt;subjectdef href="planningTaskType.dita"/&gt;
-    &lt;subjectdef href="installingTaskType.dita"/&gt;
-    &lt;subjectdef href="webServerApp.dita"/&gt;
-    &lt;subjectdef href="databaseApp.dita"/&gt;
-  &lt;/subjectHead&gt;
-  &lt;!-- ... --&gt;
-&lt;/subjectScheme&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -114,7 +106,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

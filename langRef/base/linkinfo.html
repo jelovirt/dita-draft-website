@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'linkinfo'
-description: 'Link information is a description of the links that are contained in a
-  linklist element, or additional information about those links. '
+description: 'Link information is a description of the links that are
+  contained in a linklist element. It can
+  provide additional information about those links. '
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,15 +58,15 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         Link information is a description of the links that are contained in a
-        <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element, or additional
-        information about those links.
+        <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element. It can provide
+        additional information about those links.
       </p>
       <section class="section" id="linkinfo__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;linkinfo&gt;</code> element is
-          considered part of the content flow and commonly rendered as a paragraph.
+          considered part of the content flow and typically rendered as a paragraph.
         </p>
       </section>
       <section class="section" id="linkinfo__attributes">
@@ -86,18 +87,11 @@ index: '../../toc.html'
       <div class="example" id="linkinfo__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows how the
-          <code class="keyword markupname xmlelement">&lt;linkinfo&gt;</code> element provides
-          additional information about the links related to "Repairing widgets":
+          See
+          <a class="xref" href="linklist.html#linklist__example"
+            ><code class="keyword markupname xmlelement">&lt;linklist&gt;</code></a
+          >.
         </p>
-        <pre class="pre codeblock"><code>&lt;linklist&gt;
-  &lt;title&gt;Repairing widgets&lt;/title&gt;
-  &lt;link href="debug.dita" type="task"/&gt;
-  &lt;link href="repair.dita" type="task"/&gt;
-  &lt;link href="test.dita" type="task"/&gt;
-  <strong class="ph b">&lt;linkinfo&gt;To repair a reciprocating widget,follow the instructions carefully
-            and in the specified order.&lt;/linkinfo&gt;</strong>
-&lt;/linklist&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -107,7 +101,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/related-links-elements.html"
-            title="The related links elements define, group, and describe topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
+            title="The related links elements define, group, and describe hyperlinks that are embedded in a DITA topic. The links are contained by the related-links element and apply to the DITA topic as a whole."
             >Related links elements</a
           >
         </div>

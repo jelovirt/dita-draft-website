@@ -19,8 +19,8 @@ index: '../toc.html'
     </li>
     <li><a href="../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -389,100 +389,6 @@ index: '../toc.html'
           </li>
         </ul>
       </section>
-      <section class="section" id="file-naming-conventions__xsd-modules">
-        <h2 class="title sectiontitle">XSD-based specialization modules</h2>
-
-        <p class="p">
-          Use the following file-naming conventions for XSD-based specialization modules.
-        </p>
-        <table class="simpletable frame-all">
-          <colgroup>
-            <col style="width:16%" />
-            <col style="width:44.00000000000001%" />
-            <col style="width:40%" />
-          </colgroup>
-          <thead>
-            <tr class="sthead">
-              <th class="stentry" scope="col" id="file-naming-conventions__xsd-modules__stentry__1">
-                Module
-              </th>
-              <th class="stentry" scope="col" id="file-naming-conventions__xsd-modules__stentry__2">
-                File name
-              </th>
-              <th class="stentry" scope="col" id="file-naming-conventions__xsd-modules__stentry__3">
-                Example
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="strow">
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__1">
-                Structural modules: Element groups
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__2">
-                <span class="ph filepath"
-                  ><var class="keyword varname">ModuleName</var>Grp.xsd</span
-                >
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__3">
-                <span class="ph filepath">conceptGrp.xsd</span>
-              </td>
-            </tr>
-            <tr class="strow">
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__1">
-                Structural modules: All other declarations
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__2">
-                <span class="ph filepath"
-                  ><var class="keyword varname">ModuleName</var>Mod.xsd</span
-                >
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__3">
-                <span class="ph filepath">conceptMod.xsd</span>
-              </td>
-            </tr>
-            <tr class="strow">
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__1">
-                Domain modules
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__2">
-                <span class="ph filepath"><var class="keyword varname">DomainName</var>.xsd</span>
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__3">
-                <span class="ph filepath">highlightDomain.xsd</span>
-              </td>
-            </tr>
-            <tr class="strow">
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__1">
-                Attribute domain
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__2">
-                <span class="ph filepath"
-                  ><var class="keyword varname">AttributeName</var>AttDomain.xsd</span
-                >
-              </td>
-              <td class="stentry" headers="file-naming-conventions__xsd-modules__stentry__3">
-                <span class="ph filepath">deliveryTargetAttDomain.xsd</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="p">where:</p>
-        <ul class="ul">
-          <li class="li">
-            <var class="keyword varname">ModuleName</var> is the name of the element type, such as
-            "concept" or "glossentry".
-          </li>
-          <li class="li">
-            <var class="keyword varname">DomainName</var> is the name of the domain, for example,
-            "highlight" or "utilities".
-          </li>
-          <li class="li">
-            <var class="keyword varname">AttributeName</var> is the name of the specialized
-            attribute, for example, "deliveryTarget".
-          </li>
-        </ul>
-      </section>
       <section class="section" id="file-naming-conventions__constraint-modules">
         <h2 class="title sectiontitle">Constraint modules</h2>
 
@@ -514,15 +420,6 @@ index: '../toc.html'
                     <span class="ph filepath"
                       ><var class="keyword varname">qualifier</var
                       ><var class="keyword varname">Tagname</var>ConstraintMod.rng</span
-                    >
-                  </td>
-                </tr>
-                <tr class="strow">
-                  <th class="stentry" scope="row">XSD</th>
-                  <td class="stentry">
-                    <span class="ph filepath"
-                      ><var class="keyword varname">qualifier</var
-                      ><var class="keyword varname">Tagname</var>ConstraintMod.xsd</span
                     >
                   </td>
                 </tr>
@@ -576,15 +473,6 @@ index: '../toc.html'
                     >
                   </td>
                 </tr>
-                <tr class="strow">
-                  <th class="stentry" scope="row">XSD</th>
-                  <td class="stentry">
-                    <span class="ph filepath"
-                      ><var class="keyword varname">qualifier</var
-                      ><var class="keyword varname">domain</var>DomainConstraintMod.xsd</span
-                    >
-                  </td>
-                </tr>
               </tbody>
             </table>
             <p class="p">where:</p>
@@ -595,7 +483,7 @@ index: '../toc.html'
                 "myCompany-".
               </li>
               <li class="li">
-                <span class="ph" id="file-naming-conventions__d1465e570"
+                <span class="ph" id="file-naming-conventions__d1464e636"
                   ><var class="keyword varname">domain</var> is the name of the domain to which the
                   constraints apply, for example, "Highlighting" or "Programming".</span
                 >
@@ -605,16 +493,6 @@ index: '../toc.html'
               For example, the file name for a constraint module that removes the syntax diagram
               from the programming domain might be
               <span class="ph filepath">noSyntaxDiagramProgrammingDomainConstraint.ent</span>.
-            </p>
-
-            <p class="p">
-              Because of restrictions on the redefine feature of XML Schema, it is sometimes
-              necessary to use an intermediate level of redefinition, which requires a separate XSD
-              document. In that case, the intermediate XSD document should be named
-              <span class="ph filepath"
-                ><var class="keyword varname">qualifier</var
-                ><var class="keyword varname">domain</var>DomainConstraintsInt.xsd</span
-              >.
             </p>
           </dd>
         </dl>

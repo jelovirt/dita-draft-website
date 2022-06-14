@@ -2,8 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'endflag'
-description: 'The endflag element in a DITAVAL document provides information
-  that identifies the end of flagged content.'
+description: 'The endflag element in a DITAVAL
+  document specifies information that identifies the end of flagged
+  content. The information can be an image, alternate text, or
+  both.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,50 +59,54 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element in a DITAVAL
-        document provides information that identifies the end of flagged content.
+        document specifies information that identifies the end of flagged content. The information
+        can be an image, alternate text, or both.
       </p>
       <section class="section" id="ditaval-endflag__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
-        <div class="p">
-          The <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element defines a
-          flag to be used at the end of content identified by "flag" conditions in a DITAVAL
-          document:
-          <ul class="ul" id="ditaval-endflag__ul_r1g_lws_jnb">
-            <li class="li">
-              If an image is specified, the specified image is a flag to identify the end of the
-              content, with the
-              <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> contents as
-              alternative text for that image.
-            </li>
-            <li class="li">
-              If <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> is specified
-              but <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> does not
-              reference an image, that text can be used to flag the content instead of an image.
-            </li>
-            <li class="li">
-              If no image and no
-              <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> are specified,
-              then this element has no defined purpose.
-            </li>
-          </ul>
-        </div>
+        <p class="p">
+          If the <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element does not
+          specify an image or provide alternate text, the element has no defined purpose.
+        </p>
+      </section>
+      <section class="section" id="ditaval-endflag__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
+
+        <p class="p">
+          Processors treat the information provided by the
+          <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element in the
+          following way:
+        </p>
+        <ul class="ul">
+          <li class="li">
+            If an image is specified, the image is used as a flag to identify the end of the flagged
+            content. If the
+            <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element contains
+            content, the content is used as alternate text for the image.
+          </li>
+          <li class="li">
+            If alternate text is specified but the
+            <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element does not
+            specify an image, the alternate text is used to indicate the end of the flagged content.
+          </li>
+        </ul>
       </section>
       <section class="section" id="ditaval-endflag__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
         <p class="p">The following attribute is available on this element:</p>
         <dl class="dl">
-          <dt class="dt dlterm" id="ditaval-endflag__d1311e1165">
+          <dt class="dt dlterm" id="ditaval-endflag__d1314e1088">
             <code class="keyword markupname xmlatt">@imageref</code>
           </dt>
           <dd class="dd">
-            Specifies a URI reference to the image file, using the same syntax as the
+            Specifies a URI reference to the image, using the same syntax as the
             <code class="keyword markupname xmlatt">@href</code> attribute. See
             <a
               class="xref"
               href="../../common/../archSpec/base/thehrefattribute.html"
-              title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
+              title="The href attribute specifies the URI of the resource that is addressed. The referenced resource can be another DITA topic or map, an element inside a DITA topic or map, or a non-DITA resource."
               >The href attribute</a
             >
             for information on supported values and processing implications.
@@ -109,15 +115,26 @@ index: '../../toc.html'
       </section>
       <div class="example" id="ditaval-endflag__example">
         <h2 class="title sectiontitle">Example</h2>
+
         <p class="p">
-          See
-          <a
-            class="xref"
-            href="ditaval-val.html"
-            title="The val element is the root element of a DITAVAL document."
-            >val</a
-          >.
+          The following code sample shows a DITAVAL document that is used to flag content that
+          applies to administrators. The
+          <code style="color:red;" class="keyword markupname xmlelement">&lt;startflag&gt;</code>
+          and
+          <code style="color:red;" class="keyword markupname xmlelement">&lt;endflag&gt;</code>
+          elements provide text that is used to indicate the start and end point of the flagged
+          content.
         </p>
+        <pre class="pre codeblock"><code>&lt;val&gt;
+  &lt;prop action="flag" att="audience" val="administrator"&gt;
+    &lt;startflag&gt;
+      &lt;alt-text&gt;Administrator content&lt;/alt-text&gt;
+    &lt;/startflag&gt;
+    &lt;endflag&gt;
+      &lt;alt-text&gt;End of administrator content&lt;/alt-text&gt;
+    &lt;/endflag&gt;
+  &lt;/prop&gt;
+&lt;/val&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -127,7 +144,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/ditaval-elements.html"
-            title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
+            title="A DITAVAL document identifies content that is filtered and flagged at rendering time. The DITAVAL document has an extension of .ditaval."
             >DITAVAL elements</a
           >
         </div>

@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'copyright'
-description: 'A copyright element specifies legal ownership of the
-  content.'
+description: 'A copyright is a legal device that gives the creator of a
+  creative work the sole right to publish and sell that work.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,21 +56,16 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;copyright&gt;</code> element specifies
-        legal ownership of the content.
+        A copyright is a legal device that gives the creator of a creative work the sole right to
+        publish and sell that work.
       </p>
       <section class="section" id="copyright__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;copyright&gt;</code> element is used
-          for a single copyright entry. It includes the copyright years and the copyright holder.
-          Multiple <code class="keyword markupname xmlelement">&lt;copyright&gt;</code> statements
-          are allowed.
-        </p>
-        <p class="p">
-          This element is equivalent to the
-          <code class="keyword markupname xmlelement">&lt;Rights&gt;</code> element in Dublin Core.
+          The <code class="keyword markupname xmlelement">&lt;copyright&gt;</code> element is a
+          <span style="color:red;" class="ph">grouping</span> element that contains elements that
+          specify the copyright holder and the copyright year.
         </p>
       </section>
       <section class="section" id="copyright__attributes">
@@ -99,24 +94,20 @@ index: '../../toc.html'
               <code class="keyword markupname xmlatt">@type</code> attribute on many other DITA
               elements.</span
             >
-            <span class="ph"
-              >For example, possible values enumerated in earlier versions of DITA included
-              <span class="keyword">primary</span> and <span class="keyword">secondary</span>.</span
-            >
           </dd>
         </dl>
       </section>
       <div class="example" id="copyright__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows that OASIS Open holds the copyright to material in a
-          topic, with a copyright year of 2020.
+          The following code sample shows that OASIS Open holds the copyright to the material
+          covered in a topic. The copyright year is specified as 2020.
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
- <strong class="ph b">&lt;copyright&gt;</strong>
-  &lt;copyryear year="2020"&gt;&lt;/copyryear&gt;
-  &lt;copyrholder&gt;OASIS Open&lt;/copyrholder&gt;
- <strong class="ph b">&lt;/copyright&gt;</strong>
+    &lt;copyright&gt;
+      &lt;copyryear year="2020"/&gt;
+      &lt;copyrholder&gt;OASIS Open&lt;/copyrholder&gt;
+    &lt;/copyright&gt;
 &lt;/prolog&gt;</code></pre>
       </div>
     </div>
@@ -127,7 +118,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

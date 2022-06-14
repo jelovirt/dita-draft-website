@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -61,6 +61,9 @@ index: '../../toc.html'
         specifies the default value for the attribute in cases where no value is specified. The
         default value must be one of the controlled values that are bound to the attribute.
       </p>
+      <section class="section" id="defaultSubject__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
+      </section>
       <section class="section" id="defaultSubject__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
 
@@ -113,19 +116,8 @@ index: '../../toc.html'
         <p class="p">
           The following code sample limits the values for
           <code class="keyword markupname xmlatt">@platform</code> to the
-          <span class="keyword">os</span> subject. The result is that the following values are
-          permitted for <code class="keyword markupname xmlatt">@platform</code>:
-        </p>
-        <ul class="ul">
-          <li class="li"><code class="ph codeph">linux</code></li>
-          <li class="li"><code class="ph codeph">mswin</code></li>
-          <li class="li"><code class="ph codeph">zos</code></li>
-          <li class="li"><code class="ph codeph">macos</code></li>
-        </ul>
-        <p class="p">
-          If no value is specified for the
-          <code class="keyword markupname xmlatt">@platform</code> attribute in the DITA source, the
-          default is <span class="keyword">linux</span>.
+          <span class="keyword">os</span> subject and sets the default value to
+          <span class="keyword">linux</span>:
         </p>
         <pre class="pre codeblock"><code>&lt;subjectScheme&gt;
   &lt;subjectdef keys="os"&gt;
@@ -136,10 +128,25 @@ index: '../../toc.html'
   &lt;/subjectdef&gt;
   &lt;enumerationdef&gt;
     &lt;attributedef name="platform"/&gt;
-    <strong class="ph b">&lt;defaultSubject keyref="linux"/&gt;</strong>
     &lt;subjectdef keyref="os"/&gt;
+    <strong class="ph b">&lt;defaultSubject keyref="linux"/&gt;</strong>
   &lt;/enumerationdef&gt;
 &lt;/subjectScheme&gt;</code></pre>
+        <p class="p">
+          The result is that only the following values are permitted for
+          <code class="keyword markupname xmlatt">@platform</code>:
+        </p>
+        <ul class="ul">
+          <li class="li"><code class="ph codeph">linux</code></li>
+          <li class="li"><code class="ph codeph">macos</code></li>
+          <li class="li"><code class="ph codeph">mswin</code></li>
+          <li class="li"><code class="ph codeph">zos</code></li>
+        </ul>
+        <p class="p">
+          If no value is specified for the <code class="keyword markupname xmlatt">@platform</code>
+          attribute in the DITA source, the value is assumed to be
+          <span class="keyword">linux</span>.
+        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -149,7 +156,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

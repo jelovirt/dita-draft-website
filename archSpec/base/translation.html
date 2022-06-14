@@ -2,12 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Translation and localization'
-description: 'DITA has features that facilitate preparing content for translation and working with
-  multilingual content, including the xml:lang attribute, the dir
-  attribute, and the translate attribute. In addition, the
-  sort-as element provides support for sorting in languages in which the
-  correct sorting of an element requires text that is different from the base content of the
-  element.'
+description: 'DITA has markup that facilitates translation and localization.
+  This markup includes the xml:lang attribute, the
+  dir attribute, and the translate
+  attribute.'
 index: '../../toc.html'
 ---
 
@@ -21,30 +19,26 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
-    </li>
-    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
-    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
-    <li>
-      <a href="../../archSpec/base/behaviors.html">DITA processing</a>
       <ul class="nav nav-list">
-        <li><a href="../../archSpec/base/navigation.html">Navigation</a></li>
-        <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
-        <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
-        <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
+        <li><a href="../../archSpec/base/accessibility.html">Accessibility</a></li>
         <li class="active">
           <a href="../../archSpec/base/translation.html">Translation and localization</a>
           <ul class="nav nav-list">
             <li><a href="../../archSpec/base/xmllang.html">The xml:lang attribute</a></li>
             <li><a href="../../archSpec/base/diratt.html">The dir attribute</a></li>
+            <li>
+              <a href="../../archSpec/base/the-translate-attribute.html">The translate attribute</a>
+            </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
       </ul>
     </li>
+    <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
+    <li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li>
+    <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
     <li>
       <a href="../../archSpec/base/configuration-specialization-and-constraints.html"
         >Configuration, specialization, generalization, constraints, and expansion
@@ -73,32 +67,40 @@ index: '../../toc.html'
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Translation and localization</h1>
     <p class="shortdesc">
-      DITA has features that facilitate preparing content for translation and working with
-      multilingual content, including the
+      DITA has markup that facilitates translation and localization. This markup includes the
       <code class="keyword markupname xmlatt">@xml:lang</code> attribute, the
       <code class="keyword markupname xmlatt">@dir</code> attribute, and the
-      <code class="keyword markupname xmlatt">@translate</code> attribute. In addition, the
-      <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element provides support
-      for sorting in languages in which the correct sorting of an element requires text that is
-      different from the base content of the element.
+      <code class="keyword markupname xmlatt">@translate</code> attribute.
     </p>
+
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong><a href="../../archSpec/base/xmllang.html">The xml:lang attribute</a></strong
           ><br />
           The <code class="keyword markupname xmlatt">@xml:lang</code> attribute specifies the
-          language and (optional) locale of the element content. The
-          <code class="keyword markupname xmlatt">@xml:lang</code> attribute applies to all
-          attributes and content of the element where it is specified, unless it is overridden with
-          <code class="keyword markupname xmlatt">@xml:lang</code> on another element within that
-          content.
+          language and optional locale of the content that is contained in an element. The
+          <code class="keyword markupname xmlatt">@xml:lang</code> attribute is described in the
+          <a
+            class="xref"
+            href="http://www.w3.org/TR/REC-xml/#sec-lang-tag"
+            target="_blank"
+            rel="external noopener"
+            >XML Recommendation</a
+          >.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../archSpec/base/diratt.html">The dir attribute</a></strong
           ><br />The <code class="keyword markupname xmlatt">@dir</code> attribute provides
-          instructions to processors about how <dfn class="term">bi-directional text</dfn> is
-          rendered.
+          instructions to processors about how bidirectional text is rendered.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/the-translate-attribute.html"
+              >The translate attribute</a
+            ></strong
+          ><br />The <code class="keyword markupname xmlatt">@translate</code> attribute provides
+          information about whether the content of an element is to be translated.
         </li>
       </ul>
       <div class="familylinks">
@@ -106,9 +108,9 @@ index: '../../toc.html'
           <strong>Parent topic:</strong>
           <a
             class="link"
-            href="../../archSpec/base/behaviors.html"
-            title="DITA processing is affected by a number of factors, including attributes that indicate the set of vocabulary and constraint modules on which a DITA document depends; navigation; linking; content reuse (using direct or indirect addressing); conditional processing; branch filtering; chunking; and more. In addition, translation of DITA content is expedited through the use of the dir, translate, and xml:lang attributes."
-            >DITA processing</a
+            href="../../archSpec/base/accessibility-and-translation.html"
+            title="Content needed"
+            >Accessibility and translation</a
           >
         </div>
       </div>

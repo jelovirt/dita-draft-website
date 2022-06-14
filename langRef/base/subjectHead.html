@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'subjectHead'
-description: 'The subjectHead element provides a heading for a group of
-  subjects, for use if the scheme is displayed. \'
+description: 'The subjectHead element provides a
+  heading for a group of subjects, for use if the subject scheme is rendered and displayed.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,21 +57,24 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element provides
-        a heading for a group of subjects, for use if the scheme is displayed. \
+        a heading for a group of subjects, for use if the subject scheme
+        <span style="color:red;" class="ph">is rendered and displayed.</span>
       </p>
       <section class="section" id="subjectHead__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          For example, the
-          <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> could be displayed
-          as part of a scheme that is rendered to let a user select subjects as part of faceted
-          browsing.
+          The heading provided by the
+          <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element might be
+          displayed when a subject scheme is rendered to let users select subjects as part of a
+          faceted browsing experience.
         </p>
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element itself
-          does not reference a file and cannot be referenced as a key, so it does not define any
-          controlled values.
+          The <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> element does
+          not reference a resource. It also cannot specify either the
+          <code class="keyword markupname xmlatt">@keys</code> or
+          <code class="keyword markupname xmlatt">@keyref</code> attribute, so it does not define
+          any controlled values.
         </p>
       </section>
       <section class="section" id="subjectHead__specialization-hierachy">
@@ -114,7 +117,7 @@ index: '../../toc.html'
           >.
         </p>
         <div class="p attr-exception" id="subjectHead__attr-exception">
-          For this element:
+          For this element, the following considerations apply:
           <ul class="ul" id="subjectHead__ul_pz3_w3r_ppb">
             <li class="li">
               The <code class="keyword markupname xmlatt">@collection-type</code> attribute has an
@@ -125,33 +128,43 @@ index: '../../toc.html'
               <span class="keyword">-dita-use-conref-target</span>.
             </li>
             <li class="li">
-              The <code class="keyword markupname xmlatt">@linking</code> has a default value of
-              <span class="keyword">normal</span>, and no other values are valid.
+              The <code class="keyword markupname xmlatt">@linking</code> attribute has a default
+              value of <span class="keyword">normal</span>, and no other values are valid.
             </li>
           </ul>
         </div>
       </section>
-      <div class="example" id="subjectHead__example">
+      <div class="example" style="color:red;" id="subjectHead__example">
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          In this example the <q class="q">Server setup</q> label doesn't classify content but, when
-          selected, is equivalent to the union of its child subjects. That is, the heading covers
-          content about planning for any application, installing for any application, any task for
-          web servers, or any task for database servers.
+          In the following code sample, the
+          <code class="keyword markupname xmlelement">&lt;subjectHead&gt;</code> elements define two
+          groupings of subjects and associate labels.
         </p>
         <pre class="pre codeblock"><code>&lt;subjectScheme toc="yes" search="no"&gt;
-  &lt;!-- ... --&gt;
-  &lt;subjectHead&gt;
-    &lt;subjectHeadMeta&gt;
-      &lt;navtitle&gt;Server setup&lt;/navtitle&gt;
-    &lt;/subjectHeadMeta&gt;
-    &lt;subjectdef href="planningTaskType.dita"/&gt;
-    &lt;subjectdef href="installingTaskType.dita"/&gt;
-    &lt;subjectdef href="webServerApp.dita"/&gt;
-    &lt;subjectdef href="databaseApp.dita"/&gt;
-  &lt;/subjectHead&gt;
-  &lt;!-- ... --&gt;
+  &lt;subjectdef keys="hobbies"&gt;
+    &lt;subjectdef keys="fiber-arts"&gt;
+      &lt;subjectHead&gt;
+        &lt;subjectHeadMeta&gt;
+          &lt;navtitle&gt;Fiber arts&lt;/navtitle&gt;
+        &lt;/subjectHeadMeta&gt;
+        &lt;subjectdef keys="knitting" href="knitting.dita"/&gt;
+        &lt;subjectdef keys="quilting" href="quilting.dita"/&gt;
+        &lt;subjectdef keys="sewing" href="sewing.dita/&gt;
+      &lt;/subjectHead&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="woodworking"&gt;
+      &lt;subjectHead&gt;
+        &lt;subjectHeadMeta&gt;
+          &lt;navtitle&gt;Woodworking&lt;/navtitle&gt;
+        &lt;/subjectHeadMeta&gt;
+        &lt;subjectdef keys="scroll-sawing" href="scroll-sawing.dita"/&gt;
+        &lt;subjectdef keys="whittling" href="whittling.dita"/&gt;
+        &lt;subjectdef keys="wood-turning" href="woodturning.dita"/&gt;
+      &lt;/subjectHead&gt;
+    &lt;/subjectdef&gt;
+  &lt;/subjectdef&gt;
 &lt;/subjectScheme&gt;</code></pre>
       </div>
     </div>
@@ -162,7 +175,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

@@ -2,9 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'resourceid'
-description:
-  'A resource ID provides an identifier for applications that must use their own identifier
-  scheme, such as context-sensitive help systems and databases.'
+description: 'A resource ID is an identifier that is designed for applications
+  that need to use their own identifier scheme, such as context-sensitive
+  help systems and databases.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,59 +57,47 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A resource ID provides an identifier for applications that must use their own identifier
-        scheme, such as context-sensitive help systems and databases.
+        A resource ID is an identifier that is designed for applications that need to use their own
+        identifier scheme, such as context-sensitive help systems and databases.
       </p>
       <section class="section" id="resourceid__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
           The <code class="keyword markupname xmlatt">@appid</code> and
-          <code class="keyword markupname xmlatt">@appname</code> attributes are available to
-          associate an ID with an application. Multiple
+          <code class="keyword markupname xmlatt">@appname</code> attributes work in combination to
+          specify a specific ID for an application. Multiple
           <code class="keyword markupname xmlatt">@appid</code> values can be associated with a
           single <code class="keyword markupname xmlatt">@appname</code> value, and multiple
           <code class="keyword markupname xmlatt">@appname</code> values can be associated with a
-          single <code class="keyword markupname xmlatt">@appid</code> value. Because the values for
-          the <code class="keyword markupname xmlatt">@appid</code> and
-          <code class="keyword markupname xmlatt">@appname</code> attributes work in combination to
-          specify a specific ID for a specific application, each combination of values for the
-          <code class="keyword markupname xmlatt">@appid</code> and
-          <code class="keyword markupname xmlatt">@appname</code> attributes should be unique within
-          the context of a single root map.
+          single <code class="keyword markupname xmlatt">@appid</code> value.Accordingly, each
+          combination of values for the <code class="keyword markupname xmlatt">@appid</code> and
+          <code class="keyword markupname xmlatt">@appname</code> attributes need to be unique
+          within the context of the main map.
         </p>
         <p class="p">
-          When <code class="keyword markupname xmlatt">@appid-role</code> is set to
-          <span class="keyword">deliverable-anchor</span>, the
-          <code class="keyword markupname xmlatt">@appid</code> attribute
-          <em class="ph i">contributes</em> to deliverable anchors for a topic, while
-          <code class="keyword markupname xmlatt">@ux-context-string</code> specifies an exact
-          context-sensitive help context identifier.
+          When the <code class="keyword markupname xmlatt">@appid-role</code> attribute is set to
+          <span class="keyword">deliverable-anchor</span>, the value that it specifies contributes
+          to deliverable anchors for a topic. According, certain limitations apply to the value of
+          the <code class="keyword markupname xmlatt">@appid</code> attribute:
         </p>
-        <div class="p">
-          When <code class="keyword markupname xmlatt">@appid-role</code> is set to
-          <span class="keyword">deliverable-anchor</span>, the following limitations apply to the
-          value of the <code class="keyword markupname xmlatt">@appid</code> attribute:
-          <ul class="ul" id="resourceid__ul_bcz_cfb_ppb">
-            <li class="li">
-              The <code class="keyword markupname xmlatt">@appid</code> attribute specifies only a
-              single URI component
-            </li>
-            <li class="li">
-              The <code class="keyword markupname xmlatt">@appid</code> value is limited to values
-              that can contribute to the following URI components:
-              <ul class="ul" id="resourceid__ul_tgj_xnb_ppb">
-                <li class="li">The last path component of a URI path</li>
-                <li class="li">A fragment identifier</li>
-                <li class="li">A query parameter</li>
-              </ul>
-            </li>
-            <li class="li">
-              The <code class="keyword markupname xmlatt">@appid</code> value should avoid
-              specifying deliverable-specific aspects of URIs such as filename extensions
-            </li>
-          </ul>
-        </div>
+        <ul class="ul">
+          <li class="li">It specifies only a single URI component.</li>
+          <li class="li">
+            It is limited to values that can contribute to the following URI components:
+            <ul class="ul">
+              <li class="li">The last path component of a URI path</li>
+              <li class="li">A fragment identifier</li>
+              <li class="li">A query parameter</li>
+            </ul>
+          </li>
+          <li class="li">
+            It should not specify components of URIs that are specific to a particular deliverable,
+            such as a file extension.
+          </li>
+        </ul>
+
+        <p class="p"></p>
       </section>
       <section class="section" id="resourceid__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
@@ -184,19 +172,21 @@ index: '../../toc.html'
           <dt class="dt dlterm" id="resourceid__attr-appname">
             <a id="resourceid__appname"></a><code class="keyword markupname xmlatt">@appname</code>
           </dt>
-          <dd class="dd">
-            <span class="ph"
-              >Specifies a name for the external application that references the topic.</span
-            >
-          </dd>
+          <dd class="dd"><span class="ph">Specifies a name for the external application.</span></dd>
 
           <dt class="dt dlterm" id="resourceid__attr-appid">
             <a id="resourceid__appid"></a><code class="keyword markupname xmlatt">@appid</code>
           </dt>
           <dd class="dd">
-            Specifies an ID used by an application to identify the topic. See
-            <a class="xref" href="#resourceid__usage-information">Usage information</a> for details
-            on the syntax and allowed values.
+            Specifies an ID that can be used by an application to identify the topic.
+            <p class="p">
+              When <code class="keyword markupname xmlatt">@app-role</code> is set to
+              <span class="keyword">deliverable-anchor</span>, certain restrictions apply to the
+              value of the <code class="keyword markupname xmlatt">@appid</code> attribute. See
+              <a class="xref" href="resourceid.html#resourceid__usage-information"
+                >Usage information</a
+              >.
+            </p>
           </dd>
 
           <dt class="dt dlterm" id="resourceid__attr-appid-role">
@@ -204,21 +194,31 @@ index: '../../toc.html'
           </dt>
           <dd class="dd">
             Specifies the role that the <code class="keyword markupname xmlatt">@appid</code> value
-            plays for intended applications. The value is a single name token. The default value is
+            plays for applications. The value is a single name token. The default value is
             <span class="keyword">context-sensitive-help</span>. While applications can define their
-            own values; the following values are defined by OASIS:
+            own values, the following values are defined by OASIS:
             <dl class="dl">
-              <dt class="dt dlterm">deliverable-anchor</dt>
-              <dd class="dd">
-                The <code class="keyword markupname xmlatt">@appid</code> value is used to construct
-                anchors for the associated resource.
-              </dd>
-
               <dt class="dt dlterm">context-sensitive-help</dt>
               <dd class="dd">
-                The <code class="keyword markupname xmlatt">@appid</code> value is used to connect
+                Specifies that the value of the
+                <code class="keyword markupname xmlatt">@appid</code> attribute is used to connect
                 the associated resource with applications that use the associated resource as
                 context sensitive help.
+              </dd>
+
+              <dt class="dt dlterm">deliverable-anchor</dt>
+              <dd class="dd">
+                Specifies that the value of the
+                <code class="keyword markupname xmlatt">@appid</code> attribute is used to construct
+                anchors for the associated resource.
+                <p class="p">
+                  When <code class="keyword markupname xmlatt">@app-role</code> is set to
+                  <span class="keyword">deliverable-anchor</span>, certain restrictions apply to the
+                  value of the <code class="keyword markupname xmlatt">@appid</code> attribute. See
+                  <a class="xref" href="resourceid.html#resourceid__usage-information"
+                    >Usage information</a
+                  >.
+                </p>
               </dd>
             </dl>
           </dd>
@@ -238,29 +238,40 @@ index: '../../toc.html'
             <p class="p">
               Specifies precedence for handling
               <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> definitions that
-              exist in both a map and a topic. This attribute only is valid when used within a
+              exist in both a map and a topic. This attribute is only valid when used within a
               <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element in a map.
-              The allowable values are <span class="keyword">-dita-use-conref-target</span> and the
-              following:
+              The following values are valid:
             </p>
             <dl class="dl">
+              <dt class="dt dlterm">map-only</dt>
+              <dd class="dd">Use IDs from the map only.</dd>
+
+              <dt class="dt dlterm">map-takes-priority</dt>
+              <dd class="dd">
+                Use the IDs from the map, if they exist. Otherwise, use IDs from the topic.
+              </dd>
+
               <dt class="dt dlterm">topic-and-map</dt>
               <dd class="dd">Use IDs from both the topic and map.</dd>
 
               <dt class="dt dlterm">topic-only</dt>
               <dd class="dd">Use IDs from the topic only.</dd>
 
-              <dt class="dt dlterm">map-only</dt>
-              <dd class="dd">Use IDs from the map only.</dd>
-
-              <dt class="dt dlterm">map-takes-priority</dt>
-              <dd class="dd">
-                Use the IDs from the map (if they exist); otherwise, use IDs from the topic.
-              </dd>
-
               <dt class="dt dlterm">topic-takes-priority</dt>
               <dd class="dd">
-                Use the IDs from the topic (if they exist); otherwise, use IDs from the map.
+                Use the IDs from the topic, if they exist. Otherwise, use IDs from the map.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
               </dd>
             </dl>
           </dd>
@@ -276,21 +287,33 @@ index: '../../toc.html'
         </dl>
       </section>
       <div class="example" id="resourceid__example">
-        <h2 class="title sectiontitle">Example</h2>
+        <h2 class="title sectiontitle">Examples</h2>
 
         <p class="p">
-          In the following example, user-assistance context hooks are applied to three topics that
-          are referenced from a DITA map. The second topic has two hooks for the same topic.
+          This section contains examples of how the
+          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element can be used.
         </p>
-        <pre class="pre codeblock"><code>&lt;map title="Widget Help"&gt;
- &lt;topicref href="file_ops.dita" type="concept"&gt;
-   &lt;topicref href="saving.dita" type="task"&gt;
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 1. </span>Example: Using a
+            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element in a map
+            to generate hooks for online help
+          </figcaption>
+
+          <p class="p">
+            In the following code sample, user-assistance context hooks are applied to three topics
+            that are referenced from a DITA map. The second topic has two hooks for the same topic.
+          </p>
+          <pre class="pre codeblock"><code>&lt;map&gt;
+ &lt;title&gt;Widget Help&lt;/title&gt;
+ &lt;topicref href="file_ops.dita"&gt;
+   &lt;topicref href="saving.dita"&gt;
      &lt;topicmeta&gt;
      <strong class="ph b">&lt;resourceid appname="ua" appid="1234" ux-context-string="idh_filesave"
-     ux-source-priority="topic-only" /&gt;</strong>
+     ux-source-priority="topic-only"/&gt;</strong>
      &lt;/topicmeta&gt;
    &lt;/topicref&gt;
-   &lt;topicref href="deleting.dita" type="task"&gt;
+   &lt;topicref href="deleting.dita"&gt;
      &lt;topicmeta&gt;
       <strong class="ph b">&lt;resourceid appname="ua" 
            appid="2345" ux-context-string="idh_filedelete" /&gt;</strong>
@@ -298,7 +321,7 @@ index: '../../toc.html'
            appid="6789" ux-context-string="idh_filekill" /&gt;</strong>
      &lt;/topicmeta&gt;
    &lt;/topicref&gt;
-   &lt;topicref href="editing.dita" type="task"&gt;
+   &lt;topicref href="editing.dita"&gt;
      &lt;topicmeta&gt;
        <strong class="ph b">&lt;resourceid appname="ua" 
             appid="5432" ux-context-string="idh_fileedit" ux-windowref="csh"  /&gt;</strong>
@@ -306,14 +329,22 @@ index: '../../toc.html'
    &lt;/topicref&gt;
 &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-        <p class="p">
-          In the following example, a user-assistance context hook is defined in the prolog of a
-          task topic. The context hook is made up of a context ID (value for
-          <code class="keyword markupname xmlatt">@appid</code> attribute) and a context string
-          (value for <code class="keyword markupname xmlatt">@ux-context-string</code> attribute). A
-          user-assistance window profile also is referenced for this topic.
-        </p>
-        <pre class="pre codeblock"><code>&lt;task id="fedt"&gt;
+        </figure>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 2. </span>Example: Using a
+            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element in a topic
+            to generate hooks for online help
+          </figcaption>
+
+          <p class="p">
+            In the following code sample, a user-assistance context hook is defined in the prolog of
+            a task topic. The context hook is made up of a context ID (value for
+            <code class="keyword markupname xmlatt">@appid</code> attribute) and a context string
+            (value for <code class="keyword markupname xmlatt">@ux-context-string</code> attribute).
+            A user-assistance window profile is also referenced for this topic.
+          </p>
+          <pre class="pre codeblock"><code>&lt;task id="fedt"&gt;
  &lt;title&gt;Editing a File&lt;/title&gt;
  &lt;prolog&gt;
    <strong class="ph b">&lt;resourceid appname="ua" 
@@ -328,12 +359,19 @@ index: '../../toc.html'
   &lt;/steps&gt;
  &lt;/taskbody&gt;
 &lt;/task&gt;</code></pre>
-        <p class="p">
-          In the following examples, intended anchor components are defined for two different
-          references to the same topic, where each use represents the documentation for a different
-          model of the same base device.
-        </p>
-        <pre class="pre codeblock"><code>&lt;map&gt;
+        </figure>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 3. </span>Example: Using a
+            <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element to XXX
+          </figcaption>
+
+          <p class="p">
+            In the following code sample, anchor components are defined for two different references
+            to the same topic. Each use of the topic represents the documentation for a different
+            model of the same base device.
+          </p>
+          <pre class="pre codeblock"><code>&lt;map&gt;
 
   &lt;!-- ... --&gt;
   &lt;keydef keys="topic-0014" href="replacing-widgetA.dita"/&gt;
@@ -359,13 +397,14 @@ index: '../../toc.html'
   &lt;/topicref&gt;
   &lt;!-- ... --&gt;
 &lt;/map&gt;</code></pre>
-        <div class="p">
-          In that example, <span class="ph filepath">replacing-widgetA.dita</span> is published
-          twice, once in each scope. When the map is published:
-          <ul class="ul" id="resourceid__ul_qcv_dqb_ppb">
+          <p class="p">
+            The <span class="ph filepath">replacing-widgetA.dita</span> topic is published twice,
+            once in each scope. When the map is published, the following occurs:
+          </p>
+          <ul class="ul">
             <li class="li">
               An HTML deliverable might use the specified anchors to construct base file names for
-              the resulting HTML; in that case, the copy in the first scope would use the name
+              the resulting HTML. In this case, the copy in the first scope would use the name
               <span class="ph filepath">replace_widgetA_model_01.html</span>, while the copy in the
               second scope uses the name <span class="ph filepath">replace_widgetA_model_02</span>.
             </li>
@@ -376,7 +415,7 @@ index: '../../toc.html'
               within the PDF.
             </li>
           </ul>
-        </div>
+        </figure>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -386,7 +425,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>
@@ -398,8 +437,8 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../archSpec/base/help-systems-and-other-user-assistance.html"
-              title="Context hook information specified in the resourceid element in the DITA map or in a DITA topic enables processors to generate the header, map, alias and other types of support files that are required to integrate the user assistance with the application. Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element."
-              >Context hooks and window metadata for user assistance</a
+              title="Some user assistance topics might need to be displayed in a specific window or viewport, and this windowing metadata can be defined in the DITA map within the ux-window element."
+              >Window metadata for user assistance</a
             >
           </li>
         </ul>

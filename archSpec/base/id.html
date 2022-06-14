@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -32,6 +32,11 @@ index: '../../toc.html'
         </li>
         <li>
           <a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a>
+        </li>
+        <li>
+          <a href="../../archSpec/base/context-hooks-for-user-assistance.html"
+            >Context hooks for user assistance</a
+          >
         </li>
       </ul>
     </li>
@@ -82,14 +87,17 @@ index: '../../toc.html'
         name tokens.
       </p>
       <p class="p">
-        The <code class="keyword markupname xmlatt">@id</code> attributes for topic and map elements
-        are declared as XML attribute type ID; therefore, they must be unique with respect to other
-        XML IDs within the XML document that contains the topic or map element. The
+        The <code class="keyword markupname xmlatt">@id</code> attributes for
+        <code class="keyword markupname xmlelement">&lt;topic&gt;</code> and
+        <code class="keyword markupname xmlelement">&lt;map&gt;</code> elements are declared as XML
+        attribute type ID; therefore, they must be unique with respect to other XML IDs within the
+        XML document that contains the topic or map element. The
         <code class="keyword markupname xmlatt">@id</code> attribute for most other elements within
-        topics and maps are not declared to be XML IDs; this means that XML parsers do not require
-        that the values of those attributes be unique. However, the DITA specification requires that
-        all IDs be unique within the context of a topic. For this reason, tools might provide an
-        additional layer of validation to flag violations of this rule.
+        topics and maps is not declared to be XML ID; this means that XML parsers do not require
+        that the values of those <code class="keyword markupname xmlatt">@id</code> attributes be
+        unique. However, the DITA specification requires that all IDs be unique within the context
+        of a topic. For this reason, tools might provide an additional layer of validation to flag
+        violations of this rule.
       </p>
       <p class="p">
         Within documents that contain multiple topics, the values of the
@@ -168,6 +176,7 @@ index: '../../toc.html'
           </tbody>
         </table>
       </figure>
+
       <div class="note note note_note">
         <span class="note__title">Note:</span> For all elements other than footnote (<code
           class="keyword markupname xmlelement"

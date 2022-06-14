@@ -2,10 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'DITAVAL elements'
-description:
-  'A conditional processing profile (DITAVAL file) is used to identify which values are to
-  be used for conditional processing during a particular output, build, or some other purpose.
-  The profile should have an extension of .ditaval.'
+description: 'A DITAVAL document identifies content that is
+  filtered and flagged at rendering time. The DITAVAL document has an extension of
+  .ditaval.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -96,86 +95,55 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">DITAVAL elements</h1>
+    <p class="shortdesc">
+      A
+      <span style="color:red;" class="ph"
+        >DITAVAL document identifies content that is filtered and flagged at rendering time</span
+      >. The <span style="color:red;" class="ph">DITAVAL document</span> has an extension of
+      <span class="ph filepath">.ditaval</span>.
+    </p>
 
-    <div class="body refbody">
-      <p class="shortdesc">
-        A conditional processing profile (DITAVAL file) is used to identify which values are to be
-        used for conditional processing during a particular output, build, or some other purpose.
-        The profile should have an extension of <span class="ph filepath">.ditaval</span>.
-      </p>
-      <section class="section" id="ditaval__section-1">
-        <p class="p">
-          The DITAVAL format has several elements:
-          <code class="keyword markupname xmlelement">&lt;val&gt;</code>, the root element, can
-          contain a
-          <code class="keyword markupname xmlelement">&lt;style-conflict&gt;</code> element followed
-          by <code class="keyword markupname xmlelement">&lt;prop&gt;</code> or
-          <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> elements; the
-          <code class="keyword markupname xmlelement">&lt;prop&gt;</code> and
-          <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> elements can contain
-          <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> and
-          <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> elements; and the
-          <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> and
-          <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> elements can contain
-          <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code>
-          elements.
-        </p>
-      </section>
-      <section class="section" id="ditaval__section-2">
-        <h2 class="title sectiontitle">Notes on DITAVAL messages</h2>
-        <p class="p">
-          Conditional processing code should provide a report of any attribute values encountered in
-          content that do not have an action associated with them.
-        </p>
-      </section>
-
-      <section class="section" id="ditaval__section-3">
-        <h2 class="title sectiontitle">Note on DITAVAL flagging of images</h2>
-        <p class="p">
-          If an image in DITA content becomes flagged using a background color, the color should be
-          represented as a thick border. If a foreground color is expressed, it should be
-          represented as a thin border.
-        </p>
-      </section>
-    </div>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-alt-text.html">alt-text</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element in
-          a DITAVAL document provides alternate text for an image used for flagging.
+          a DITAVAL document specifies alternate text for an image that is used to flag content. If
+          an image is not specified, the text is used to mark the flagged content.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-endflag.html">endflag</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element in a
-          DITAVAL document provides information that identifies the end of flagged content.
+          DITAVAL document specifies information that identifies the end of flagged content. The
+          information can be an image, alternate text, or both.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-prop.html">prop</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element in a
-          DITAVAL document identifies an attribute, and usually values in the attribute, to take an
-          action on. The identified attribute is a conditional-processing attribute (either
-          <code class="keyword markupname xmlatt">@props</code> or a specialization of
-          <code class="keyword markupname xmlatt">@props</code>, such as
+          DITAVAL document specifies filtering or flagging actions that occur when rendering. The
+          actions target the <code class="keyword markupname xmlatt">@props</code> attribute or
+          specializations of <code class="keyword markupname xmlatt">@props</code>,
+          <span style="color:red;" class="ph">including</span>
           <code class="keyword markupname xmlatt">@audience</code>,
           <code class="keyword markupname xmlatt">@deliveryTarget</code>,
-          <code class="keyword markupname xmlatt">@platform</code>,
-          <code class="keyword markupname xmlatt">@product</code>, or
-          <code class="keyword markupname xmlatt">@otherprops</code>).
+          <code class="keyword markupname xmlatt">@otherprops</code>,
+          <code class="keyword markupname xmlatt">@platform</code>, and
+          <code class="keyword markupname xmlatt">@product</code>.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-revprop.html">revprop</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element in a
-          DITAVAL document identifies a value in the
-          <code class="keyword markupname xmlatt">@rev</code> attribute that should be flagged in
-          some manner. Unlike the conditional processing attributes, which can be used for both
-          filtering and flagging, the <code class="keyword markupname xmlatt">@rev</code> attribute
-          only can be used for flagging.
+          DITAVAL document identifies a value of the
+          <code class="keyword markupname xmlatt">@rev</code> attribute for flagging. Unlike the
+          conditional processing attributes, which can be used for both filtering and flagging, the
+          <code class="keyword markupname xmlatt">@rev</code> attribute can only be used for
+          flagging.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-startflag.html">startflag</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> element in
-          a DITAVAL document provides information that identifies the beginning of flagged content.
+          a DITAVAL document specifies information that identifies the beginning of flagged content.
+          The information can be an image, alternate text, or both.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -183,7 +151,7 @@ index: '../../toc.html'
           ><br />The
           <code class="keyword markupname xmlelement">&lt;style-conflict&gt;</code> element in a
           DITAVAL document declares the behavior to be used when one or more flagging methods
-          collide on a single content element.
+          collide on <span style="color:red;" class="ph">the same element.</span>.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/ditaval/ditaval-val.html">val</a></strong
@@ -196,35 +164,6 @@ index: '../../toc.html'
           <strong>Parent topic:</strong>
           <a class="link" href="../../langRef/other-elements.html">Other elements</a>
         </div>
-      </div>
-      <div class="linklist relconcepts">
-        <strong>Related concepts</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../archSpec/base/conditional-processing-attributes.html"
-              title="Conditional-processing attributes are available on most elements."
-              >Filtering and flagging attributes</a
-            >
-          </li>
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../archSpec/base/condproc.html"
-              title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-              >Conditional processing (profiling)</a
-            >
-          </li>
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
-              title="Conditional processing attributes classify elements with metadata. The metadata is specified using space-delimited string values or grouped values."
-              >Conditional processing values and groups</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
   </article>

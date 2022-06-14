@@ -2,7 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'Basic topic elements'
-description: 'The generic topic structure is used for untyped topics.'
+description: 'The basic topic elements provide the structural
+  framework for a topic: title, short description, prolog, body, and
+  related links.'
 index: '../../toc.html'
 ---
 
@@ -16,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,6 +58,7 @@ index: '../../toc.html'
                 <li><a href="../../langRef/base/body.html">body</a></li>
                 <li><a href="../../langRef/base/bodydiv.html">bodydiv</a></li>
                 <li><a href="../../langRef/base/dita.html">dita</a></li>
+                <li><a href="../../langRef/base/prolog.html">prolog</a></li>
                 <li><a href="../../langRef/base/related-links.html">related-links</a></li>
                 <li><a href="../../langRef/base/shortdesc.html">shortdesc</a></li>
                 <li><a href="../../langRef/base/title.html">title</a></li>
@@ -99,32 +102,17 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Basic topic elements</h1>
-
-    <div class="body refbody">
-      <p class="shortdesc">The generic topic structure is used for untyped topics.</p>
-      <section class="section" id="topic2__section-1">
-        <p class="p">
-          For an answer to the question "What are topics?" and more details on when to use different
-          information types, see
-          <a
-            class="xref"
-            href="../../archSpec/base/topicover.html"
-            title="DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject."
-            >DITA topics</a
-          >.
-        </p>
-      </section>
-    </div>
+    <p style="color:red;" class="shortdesc">
+      The basic topic elements provide the structural framework for a topic: title, short
+      description, prolog, body, and related links.
+    </p>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/abstract.html">abstract</a></strong
-          ><br />The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element
-          occurs between the topic title and the topic body. It is presented as the initial content
-          of a topic. The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> can
-          contain paragraph-level content as well as one or more
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements which can be
-          used for providing link previews or summaries.
+          ><br />An abstract summarizes the content of the topic; it appears at the start of the
+          topic. It can contain multiple short descriptions, as well as block-level content such as
+          paragraphs, lists, and tables.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/body.html">body</a></strong
@@ -133,13 +121,18 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/bodydiv.html">bodydiv</a></strong
           ><br />A body division is a grouping of sequential elements within the body of a topic.
-          There is no addition semantic meaning. It is useful primarily as a specialization base and
-          for reuse.
+          There is no <span style="color:red;" class="ph">additional</span> semantic meaning. It is
+          useful primarily for reuse and as a specialization base.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/dita.html">dita</a></strong
           ><br />The <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element is the
           root element for the ditabase document type.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/prolog.html">prolog</a></strong
+          ><br />The prolog contains metadata about the topic, for example, author information or
+          subject category.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/related-links.html">related-links</a></strong
@@ -148,7 +141,8 @@ index: '../../toc.html'
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/shortdesc.html">shortdesc</a></strong
-          ><br />A short description describes the purpose or main point of a topic.
+          ><br />A short description is a sentence or group of sentences that describes the purpose
+          or main point of the topic.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/title.html">title</a></strong

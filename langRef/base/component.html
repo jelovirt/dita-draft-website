@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'component'
-description: 'A component element specifies the component of the product that
-  this topic is concerned with.'
+description: 'A component is a part of a larger whole, such as a machine,
+  software application, or vehicle.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,8 +56,8 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;component&gt;</code> element specifies the
-        component of the product that this topic is concerned with.
+        A component is a part of a larger whole, such as a machine, software application, or
+        vehicle.
       </p>
       <section class="section" id="component__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
@@ -68,16 +68,7 @@ index: '../../toc.html'
           available for installation with many products.
         </p>
       </section>
-      <section class="section" id="component__processing-expectations">
-        <h2 class="title sectiontitle">Processing expectations</h2>
 
-        <p class="p">
-          An implementation might use this identification to check cross-component dependencies when
-          some components are installed, but not others. An implementation might use the
-          identification to make sure that topics are hidden, removed, or flagged in some way when
-          the component they describe isn't installed.
-        </p>
-      </section>
       <section class="section" id="component__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -97,16 +88,11 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that the topic is associated with the
-          <span class="keyword">TCP/IP</span> component of the product
-          <span class="keyword">MyAdapter</span>.
+          See
+          <a class="xref" href="prodinfo.html#prodinfo__example"
+            ><code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code>.</a
+          >
         </p>
-        <pre class="pre codeblock"><code>&lt;prodinfo&gt;
- &lt;prodname&gt;MyAdapter&lt;/prodname&gt;
- &lt;vrmlist&gt;&lt;vrm version="2"/&gt;&lt;/vrmlist&gt;
- <strong class="ph b">&lt;component&gt;</strong>TCP/IP<strong class="ph b">&lt;/component&gt;</strong>
-&lt;/prodinfo&gt;
-</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -116,7 +102,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

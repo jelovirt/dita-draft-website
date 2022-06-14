@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'featnum'
-description: 'A featnum element specifies the feature number of a
-  product.'
+description: 'A feature number is the number that is associated with a product
+  feature.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,8 +55,7 @@ index: '../../toc.html'
     </h1>
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;featnum&gt;</code> element specifies the
-        feature number of a product.
+        A feature number is the number that is associated with a product feature.
       </p>
       <section class="section" id="featnum__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -76,16 +75,11 @@ index: '../../toc.html'
       <div class="example" id="featnum__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows that the topic is associated with feature number 135 of
-          the product <span class="keyword">MyController</span>.
+          See
+          <a class="xref" href="prodinfo.html#prodinfo__example"
+            ><code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code>.</a
+          >
         </p>
-        <pre class="pre codeblock"><code>&lt;prodinfo&gt;
-  &lt;prodname&gt;MyController&lt;/prodname&gt;
-  &lt;vrmlist&gt;&lt;vrm version="2"/&gt;&lt;/vrmlist&gt;
-  <strong class="ph b">&lt;featnum&gt;</strong>135<strong class="ph b">&lt;/featnum&gt;</strong>
-  &lt;component&gt;TCP/IP&lt;/component&gt;
-&lt;/prodinfo&gt;
-</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -95,7 +89,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

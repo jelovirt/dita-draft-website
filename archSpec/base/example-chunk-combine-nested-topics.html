@@ -1,7 +1,8 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Example: Using chunk to combine nested documents'
+title: 'Example: How chunk="combine" effects
+    the map hierarchy'
 description: 'Special attention is necessary when combining a nested map hierarchy that includes
 documents with their own nested topics.'
 index: '../../toc.html'
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -32,7 +33,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li>
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -66,17 +67,17 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-branch.html"
-                    >Example: Using chunk to render a single document from one branch</a
+                    >Example: Using chunk to render a single document from one or more branches</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-group.html"
-                    >Example: Using chunk to combine a group of topics</a
+                    >Example: Using chunk to combine groups of topics</a
                   >
                 </li>
                 <li class="active">
                   <a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
-                    >Example: Using chunk to combine nested documents</a
+                    >Example: How chunk="combine" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -86,7 +87,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-split-nested.html"
-                    >Example: Using chunk to split nested documents</a
+                    >Example: How chunk="split" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -96,7 +97,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-within-split.html"
-                    >Example: Combining topics within a split context</a
+                    >Example: Using chunk="combine" when the root map specifies chunk="split"</a
                   >
                 </li>
                 <li>
@@ -138,9 +139,8 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">
-      Example: Using <code class="keyword markupname xmlatt">@chunk</code> to combine nested
-      documents
+    <h1 class="title topictitle1" style="color:red;" id="ariaid-title1">
+      Example: How <code class="ph codeph">chunk="combine"</code> effects the map hierarchy
     </h1>
 
     <div class="body conbody">
@@ -148,16 +148,11 @@ index: '../../toc.html'
         Special attention is necessary when combining a nested map hierarchy that includes documents
         with their own nested topics.
       </p>
-      <p class="p">
-        Consider the following source map <span class="ph filepath">input.ditamap</span>:
-      </p>
       <figure class="fig fignone">
-        <figcaption>
-          <span class="fig--title-label">Figure 1. </span>Input map without chunking
-        </figcaption>
+        <figcaption><span class="fig--title-label">Figure 1. </span>Source DITA map</figcaption>
 
-        <pre class="pre codeblock"><code>input.ditamap:
-&lt;map chunk="combine"&gt;
+        <p class="p">Consider the following DITA map:</p>
+        <pre class="pre codeblock"><code>&lt;map <strong class="ph b">chunk="combine"</strong>&gt;
   &lt;title&gt;Generation example&lt;/title&gt;
   &lt;topicref href="ancestor.dita"&gt;
     &lt;topicref href="middle.dita"&gt;
@@ -169,103 +164,126 @@ index: '../../toc.html'
       </figure>
       <p class="p">
         In this case, the <code class="keyword markupname xmlatt">@chunk</code> attribute instructs
-        a processor to treat the three topics as a single combined DITA document, while preserving
-        the original map hierarchy. Now consider the following three topic documents, each of which
-        includes nested or peer topics:
+        a processor to treat the three topics as a single combined document, while preserving the
+        original map hierarchy.
       </p>
       <figure class="fig fignone">
         <figcaption>
           <span class="fig--title-label">Figure 2. </span>Source documents with nested structures
         </figcaption>
 
-        <pre class="pre codeblock"><code>ancestor.dita:
+        <p class="p">
+          Now consider the following three source documents, each of which includes nested or peer
+          topics: <span class="ph filepath">ancestor.dita</span>,
+          <span class="ph filepath">middle.dita</span>, and
+          <span class="ph filepath">child.dita</span>.
+        </p>
+        <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- ancestor.dita --&gt;</strong>
 &lt;dita&gt;
   &lt;topic id="ancestor-first"&gt;
-    &lt;title&gt;First major topic in ancestor composite doc&lt;/title&gt;
-    &lt;!-- ...topic content... --&gt;
+    &lt;title&gt;First major topic in ancestor composite document&lt;/title&gt;
+    &lt;!-- ... Topic content ... --&gt;
   &lt;/topic&gt;
-  &lt;!-- more topics in ancestor composite doc --&gt;
+  &lt;!-- More topics in ancestor composite document --&gt;
   &lt;topic id="ancestor-last"&gt;
     &lt;title&gt;Last major topic in ancestor composite doc&lt;/title&gt;
-    &lt;!-- ...topic content... --&gt;
+    &lt;!-- ... Topic content ... --&gt;
     &lt;topic id="ancestor-last-child"&gt;
-      &lt;title&gt;Child of last major topic in ancestor composite doc&lt;/title&gt;
-      &lt;!-- ...topic content... --&gt;
+      &lt;title&gt;Child of last major topic in ancestor composite document&lt;/title&gt;
+      &lt;!-- ... Topic content ... --&gt;
     &lt;/topic&gt;
   &lt;/topic&gt;
-&lt;/dita&gt;
-
-middle.dita:
+&lt;/dita&gt;</code></pre>
+      </figure>
+      <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- middle.dita --&gt;</strong>
 &lt;topic id="middle-root"&gt;
-  &lt;title&gt;Root topic in middle doc&lt;/title&gt;
-  &lt;body&gt;&lt;!-- ... --&gt;&lt;/body&gt;
+  &lt;title&gt;Root topic in middle document&lt;/title&gt;
+  &lt;body&gt;
+    &lt;!-- ... --&gt;
+  &lt;/body&gt;
   &lt;topic id="middle-child"&gt;
-    &lt;title&gt;Child of root topic in middle doc&lt;/title&gt;
-    &lt;!-- body content, maybe more children of middle topic's root --&gt;
+    &lt;title&gt;Child of root topic in middle document&lt;/title&gt;
+    &lt;!-- ... Body content, maybe more children topics --&gt;
   &lt;/topic&gt;
-&lt;/topic&gt;
-
-child.dita:
+&lt;/topic&gt;</code></pre>
+      <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- child.dita --&gt;</strong>
 &lt;topic id="child"&gt;
   &lt;title&gt;Small child topic&lt;/title&gt;
-  &lt;!-- small child topic content --&gt;
+  &lt;!-- ... Topic content ... --&gt;
 &lt;/topic&gt;</code></pre>
-      </figure>
-      <p class="p">
-        When <code class="ph codeph">chunk="combine"</code> is evaluated, the three source documents
-        are combined into one. Both the ancestor and middle documents have child topics that need to
-        be taken into account.
-      </p>
-      <ul class="ul" id="examplecombinenest__ul_l3y_wng_thb">
-        <li class="li">
-          <span class="ph filepath">ancestor.dita</span> has a root
-          <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element, so content from
-          each nested topic reference is located after any nested topics within the final child of
-          the <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element.
-        </li>
-        <li class="li">
-          <span class="ph filepath">middle.dita</span> does not have
-          <code class="keyword markupname xmlelement">&lt;dita&gt;</code> but does have a nested
-          topic, so content from any nested topic references is located after that nested topic.
-        </li>
-      </ul>
       <figure class="fig fignone">
         <figcaption>
-          <span class="fig--title-label">Figure 3. </span>Equivalent source content
+          <span class="fig--title-label">Figure 3. </span>Evaluating
+          <code class="ph codeph">chunk="combine"</code>
         </figcaption>
 
-        <pre class="pre codeblock"><code>input.ditamap:
+        <p class="p">
+          When <code class="ph codeph">chunk="combine"</code> is evaluated, the three source
+          documents are combined into one. Both the ancestor and middle documents have child topics
+          that need to be taken into account:
+        </p>
+        <ul class="ul" id="examplecombinenest__ul_l3y_wng_thb">
+          <li class="li">
+            <span class="ph filepath">ancestor.dita</span> has a root
+            <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element, with several
+            root-level topics. After evaluating the
+            <code class="keyword markupname xmlatt">@chunk</code> attribute, content from
+            <span class="ph filepath">middle.dita</span> is placed after the topic with
+            <code class="ph codeph">id="ancestor-last-child"</code>in
+            <span class="ph filepath">ancestor.dita</span>.
+          </li>
+
+          <li class="li">
+            <span class="ph filepath">middle.dita</span> does not have a
+            <code class="keyword markupname xmlelement">&lt;dita&gt;</code> element, but it does
+            have a nested topic, so content from <span class="ph filepath">child.dita</span> is
+            located after that nested topic.
+          </li>
+        </ul>
+        <p style="color:red;" class="p">In each case, the original map hierarchy is preserved.</p>
+      </figure>
+      <figure class="fig fignone">
+        <figcaption>
+          <span class="fig--title-label">Figure 4. </span>Equivalent content of source documents
+          after evaluation
+        </figcaption>
+
+        <p class="p">
+          The result of evaluating the
+          <code class="keyword markupname xmlatt">@chunk</code> attribute is equivalent to the
+          following map and topic documents:
+        </p>
+        <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- Root map --&gt;</strong>
 &lt;map&gt;
   &lt;title&gt;Generation example&lt;/title&gt;
   &lt;topicref href="input.dita"/&gt;
-&lt;/map&gt;
-
-input.dita:
+&lt;/map&gt;</code></pre>
+        <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- input.dita --&gt;</strong>
 &lt;dita&gt;
   &lt;topic id="ancestor-first"&gt;
     &lt;title&gt;First major topic in ancestor composite doc&lt;/title&gt;
-    &lt;!-- ...topic content... --&gt;
+    &lt;!-- ... Topic content ... --&gt;
   &lt;/topic&gt;
-  &lt;!-- more topics in ancestor composite doc --&gt;
+  &lt;!-- More topics in ancestor composite doc --&gt;
   &lt;topic id="ancestor-last"&gt;
     &lt;title&gt;Last major topic in ancestor composite doc&lt;/title&gt;
-    &lt;!-- ...topic content... --&gt;
+    &lt;!-- ... Topic content ... --&gt;
     &lt;topic id="ancestor-last-child"&gt;
       &lt;title&gt;Child of last major topic in ancestor composite doc&lt;/title&gt;
-      &lt;!-- ...topic content... --&gt;
+      &lt;!-- ... Topic content ... --&gt;
     &lt;/topic&gt;
-    <strong class="ph b">&lt;!-- content of middle.dita combined here --&gt;</strong>
+    <strong class="ph b">&lt;!-- Content of middle.dita combined here --&gt;</strong>
     &lt;topic id="middle-root"&gt;
       &lt;title&gt;Root topic in middle doc&lt;/title&gt;
       &lt;body&gt;&lt;!-- ... --&gt;&lt;/body&gt;
       &lt;topic id="middle-child"&gt;
         &lt;title&gt;Child of root topic in middle doc&lt;/title&gt;
-        &lt;!-- body content, maybe more children of middle topic's root --&gt;
+        &lt;!-- ... Body content, maybe more children topics ... --&gt;
       &lt;/topic&gt;
-      <strong class="ph b">&lt;!-- content of child.dita combined here --&gt;</strong>
+      <strong class="ph b">&lt;!-- Content of child.dita combined here --&gt;</strong>
       &lt;topic id="child"&gt;
         &lt;title&gt;Small child topic&lt;/title&gt;
-        &lt;!-- small child topic content --&gt;
+        &lt;!-- ... Topic content ... --&gt;
       &lt;/topic&gt;
     &lt;/topic&gt;
   &lt;/topic&gt;

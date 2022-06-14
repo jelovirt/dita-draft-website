@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'copyryear'
-description: 'A copyryear element specifies the copyright year for a topic
-  using the year attribute.'
+description: 'A copyright year is the year in which an
+  author first published a work or submitted it to a copyright-granting
+  agency.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,9 +57,11 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;copyryear&gt;</code> element specifies the
-        copyright year for a topic using the
-        <code class="keyword markupname xmlatt">@year</code> attribute.
+        A copyright year is the year
+        <span style="color:red;" class="ph"
+          >in which an author first published a work or submitted it to a copyright-granting
+          agency.</span
+        >
       </p>
       <section class="section" id="copyryear__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -79,22 +82,18 @@ index: '../../toc.html'
           <dt class="dt dlterm" id="copyryear__attr-year">
             <a id="copyryear__year"></a><code class="keyword markupname xmlatt">@year</code>
           </dt>
-          <dd class="dd">Specifies the year in YYYY format.</dd>
+          <dd class="dd">Specifies the year in YYYY format</dd>
         </dl>
       </section>
       <div class="example" id="copyryear__example">
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that OASIS Open holds the copyright to material in a
-          topic, with a copyright year of 2020.
+          See
+          <a class="xref" href="copyright.html#copyright__example"
+            ><code class="keyword markupname xmlelement">&lt;copyright&gt;</code></a
+          >.
         </p>
-        <pre class="pre codeblock"><code>&lt;prolog&gt;
- &lt;copyright&gt;
-  <strong class="ph b">&lt;copyryear year="2020"/&gt;</strong>
-  &lt;copyrholder&gt;OASIS Open&lt;/copyrholder&gt;
- &lt;/copyright&gt;
-&lt;/prolog&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -104,7 +103,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

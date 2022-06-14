@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'publisher'
-description: 'A publisher is the person, company, or organization who publishes the
-  content.'
+description: 'A publisher is an entity (person, company, or organization) who
+  makes information, literature, music, software, and other content
+  available to a reader.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,17 +57,11 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A publisher is the person, company, or organization who publishes the content.
+        A publisher is an entity (person, company, or organization) who makes information,
+        literature, music, software, and other content available to
+        <span style="color:red;" class="ph">a reader</span>.
       </p>
-      <section class="section" id="publisher__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
 
-        <p class="p">
-          This element is equivalent to the
-          <code class="keyword markupname xmlelement">&lt;Publisher&gt;</code> element in Dublin
-          Core.
-        </p>
-      </section>
       <section class="section" id="publisher__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -97,11 +92,11 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that the content is published by OASIS Open Printing, Inc.
+          The following code sample shows that the content is published by OASIS Open Printing, Inc:
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
-  &lt;author&gt;Ivan&lt;/author&gt;
-  <strong class="ph b">&lt;publisher&gt;</strong>OASIS Open Printing, Inc.<strong class="ph b">&lt;/publisher&gt;</strong>
+    &lt;author&gt;Ivan&lt;/author&gt;
+    &lt;publisher&gt;OASIS Open Printing, Inc.&lt;/publisher&gt;
 &lt;/prolog&gt;
 </code></pre>
       </div>
@@ -113,7 +108,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

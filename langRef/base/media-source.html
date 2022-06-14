@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'media-source'
-description: 'The media source specifies the location of an audio or video
-  resource.'
+description: 'The media source
+  specifies the location of an audio or video resource.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -81,7 +81,7 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Attributes</h2>
 
         <div class="div">
-          <p class="p">
+          <p style="color:red;" class="p">
             The following attributes are available on this element:
             <span class="ph"
               ><a
@@ -90,54 +90,45 @@ index: '../../toc.html'
                 title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
                 >universal attributes</a
               ></span
-            >
-            and the attributes defined below.
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-format"
+              >format (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-href"
+              >href (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
+              >keyref</a
+            >, and
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-scope"
+              >scope (link-relationship attributes)</a
+            >.
           </p>
-          <dl class="dl">
-            <dt class="dt dlterm" id="media-source__d1456e125">
-              <code class="keyword markupname xmlatt">@format</code>
-            </dt>
-            <dd class="dd">Specifies the format of the resource being addressed.</dd>
-
-            <dt class="dt dlterm" id="media-source__d1456e135">
-              <code class="keyword markupname xmlatt">@href</code>
-            </dt>
-            <dd class="dd">Specifies the URI of the media resource.</dd>
-
-            <dt class="dt dlterm" id="media-source__d1456e145">
-              <code class="keyword markupname xmlatt">@keyref</code>
-            </dt>
-            <dd class="dd">Specifies a key reference to the media resource.</dd>
-
-            <dt class="dt dlterm" id="media-source__d1456e155">
-              <code class="keyword markupname xmlatt">@scope</code>
-            </dt>
-            <dd class="dd">
-              The <code class="keyword markupname xmlatt">@scope</code> attribute describes the
-              closeness of the relationship between the current document and the target resource.
-              Resources in the same information unit are considered
-              <code class="ph codeph">"local"</code>; resources in the same system as the
-              referencing content but not part of the same information unit are considered
-              <code class="ph codeph">"peer"</code>; and resources outside the system, such as Web
-              pages, are considered <code class="ph codeph">"external"</code>.
-            </dd>
-          </dl>
+          <p style="color:red;" class="p attr-exception" id="media-source__d1454e134">
+            For this element, the <code class="keyword markupname xmlatt">@href</code> attribute
+            specifies the URI of the track resource.
+          </p>
         </div>
       </section>
       <div class="example" id="media-source__example">
         <h2 class="title sectiontitle">Example</h2>
 
-        <p class="p">
+        <p style="color:red;" class="p">
           See
-          <a
-            class="xref"
-            href="audio.html"
-            title="Audio is sound that the human ear is capable of hearing."
-            >audio</a
+          <a class="xref" href="audio.html#audio__complex"
+            ><code class="keyword markupname xmlelement">&lt;audio&gt;</code></a
           >
           and
-          <a class="xref" href="video.html" title="A video is a recording of moving visual images."
-            >video</a
+          <a class="xref" href="video.html#video__video-with-multiple-formats"
+            ><code class="keyword markupname xmlelement">&lt;video&gt;</code></a
           >.
         </p>
       </div>

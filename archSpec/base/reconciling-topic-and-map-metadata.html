@@ -2,11 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'Reconciling topic and map metadata elements'
-description: 'The topicmeta element in maps contains numerous elements that
-  can be used to declare metadata. These metadata elements have an effect on the parent
-  topicref element, any child topicref elements,
-  and – if a direct child of the map element – on the map as a
-  whole.'
+description: 'The topicmeta element in maps can contain numerous metadata elements. These
+  metadata elements can have an effect on the
+  parent topicref element, any child
+  topicref elements, and – if a direct child
+  of the map element – on the .'
 index: '../../toc.html'
 ---
 
@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -36,7 +36,7 @@ index: '../../toc.html'
           >
         </li>
         <li>
-          <a href="../../archSpec/base/map-processing.html">Map cascading</a>
+          <a href="../../archSpec/base/map-cascading.html">Metadata cascading</a>
           <ul class="nav nav-list">
             <li>
               <a href="../../archSpec/base/cascading-in-a-ditamap.html"
@@ -51,6 +51,11 @@ index: '../../toc.html'
             <li>
               <a href="../../archSpec/base/map-to-map-cascading-of-metadata.html"
                 >Map-to-map cascading behaviors</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/examples-of-cascading.html"
+                >Examples of metadata cascading</a
               >
             </li>
           </ul>
@@ -93,12 +98,12 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element in maps
-        contains numerous elements that can be used to declare metadata. These metadata elements
-        have an effect on the parent
-        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, any child
-        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements, and – if a
-        direct child of the <code class="keyword markupname xmlelement">&lt;map&gt;</code> element –
-        on the map as a whole.
+        <span style="color:red;" class="ph">can contain</span> numerous metadata elements. These
+        metadata elements <span style="color:red;" class="ph">can</span> have an effect on the
+        parent <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, any
+        child <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements, and – if
+        a direct child of the <code class="keyword markupname xmlelement">&lt;map&gt;</code> element
+        – on the .
       </p>
       <section class="section" id="reconciling-topic-and-map-metadata__section">
         <div class="p">
@@ -110,27 +115,38 @@ index: '../../toc.html'
             <dd class="dd">
               This column describes how the metadata specified within the
               <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element interacts
-              with the metadata specified in the topic. In most cases, the properties are additive.
-              For example, when the
-              <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element is set to
-              "user" at the map level, the value "user" is added during processing to any audience
-              metadata that is specified within the topic.
+              with the metadata specified in the
+              <span style="color:red;" class="ph">referenced</span> topic. In most cases, the
+              properties are additive.
+              <span style="color:red;" class="ph"
+                >For example, when a topic reference in a map contains
+                <code style="color:red;" class="ph codeph"
+                  >&lt;category&gt;installation&lt;/category&gt;</code
+                >,
+                <code style="color:red;" class="ph codeph"
+                  >&lt;category&gt;installation&lt;/category&gt;</code
+                >
+                is added during processing to any metadata that is specified in the topic
+                prolog.</span
+              >
             </dd>
 
             <dt class="dt dlterm">Does it cascade to other topics in the map?</dt>
             <dd class="dd">
-              This column indicates whether the specified metadata value cascades to nested
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements. For
-              example, when an
-              <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element is set to
-              "user" at the map level, all child
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements
-              implicitly have an
-              <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element set to
-              "user" also. Elements that can apply only to the specific
-              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element, such as
-              <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> or
-              <code class="keyword markupname xmlelement">&lt;keytext&gt;</code>, do not cascade.
+              This column indicates whether the specified metadata
+              <span style="color:red;" class="ph">element</span> cascades to nested
+              <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements.
+              <span style="color:red;" class="ph"
+                >For example, when a topic reference in a map contains
+                <code style="color:red;" class="ph codeph"
+                  >&lt;author&gt;Jane Doe&lt;/author&gt;</code
+                >,
+                <code style="color:red;" class="ph codeph"
+                  >&lt;author&gt;Jane Doe&lt;/author&gt;</code
+                >
+                is added during processing to the metadata for all child topic references. Some
+                elements do not cascade.</span
+              >
             </dd>
 
             <dt class="dt dlterm">
@@ -138,8 +154,21 @@ index: '../../toc.html'
               <code class="keyword markupname xmlelement">&lt;map&gt;</code> element?
             </dt>
             <dd class="dd">
-              The map element allows metadata to be specified for the entire map. This column
-              describes what effect, if any, an element has when specified at this level.
+              The map element <span style="color:red;" class="ph">permits</span> metadata to be
+              specified for the map. This column describes
+              <span style="color:red;" class="ph">the effect that</span> an element has when
+              specified at this level.
+            </dd>
+
+            <dt style="color:red;" class="dt dlterm">
+              When set on the
+              <code class="keyword markupname xmlelement">&lt;map&gt;</code> element, does it apply
+              to all topics referenced in the map?
+            </dt>
+            <dd style="color:red;" class="dd">
+              When specified on the
+              <code class="keyword markupname xmlelement">&lt;map&gt;</code> element element, some
+              metadata elements then apply to all the topics that are referenced in the map.
             </dd>
           </dl>
         </div>
@@ -153,6 +182,7 @@ index: '../../toc.html'
           >
         </caption>
         <colgroup>
+          <col />
           <col />
           <col />
           <col />
@@ -174,6 +204,11 @@ index: '../../toc.html'
               What is the purpose when set on the
               <code class="keyword markupname xmlelement">&lt;map&gt;</code> element?
             </th>
+            <th class="entry" id="reconciling-topic-and-map-metadata__entry__5">
+              When set on the
+              <code class="keyword markupname xmlelement">&lt;map&gt;</code> element, does it apply
+              to all topics referenced in the map?
+            </th>
           </tr>
         </thead>
         <tbody class="tbody">
@@ -186,8 +221,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify an audience for the entire map
+              Specify an audience for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -198,8 +234,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify an author for the entire map
+              Specify an author for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -210,8 +247,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify a category for the entire map
+              Specify a category for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -222,8 +260,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify a copyright for the entire map
+              Specify a copyright for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -234,8 +273,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify critical dates for the entire map
+              Specify critical dates for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -248,8 +288,9 @@ index: '../../toc.html'
               No, unless specialized for a purpose that cascades
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              No stated purpose, until the element is specialized
+              No stated purpose
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -262,8 +303,9 @@ index: '../../toc.html'
               No, unless specialized for a purpose that cascades
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              No stated purpose, until the element is specified
+              No stated purpose
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -276,6 +318,7 @@ index: '../../toc.html'
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               No stated purpose
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -288,6 +331,7 @@ index: '../../toc.html'
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               No stated purpose
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -298,8 +342,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify metadata for the entire map
+              Specify metadata for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -310,8 +355,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">No</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Define metadata for the entire map
+              Define metadata for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -322,8 +368,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify permissions for the entire map
+              Specify permissions for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -334,8 +381,9 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">Yes</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify product info for the entire map
+              Specify product info for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">Yes</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -348,6 +396,7 @@ index: '../../toc.html'
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               Specify a publisher for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -358,22 +407,22 @@ index: '../../toc.html'
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">No</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              Specify a resource ID for the map
+              Specify a resource ID for the map itself
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
               <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code>
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__2">
-              <span class="ph"
-                >Applies only to links created based on this occurrence in the map.</span
-              >
+              Applies only to links created based on this occurrence in the map
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__3">No</td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               Provide a description of the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -386,6 +435,7 @@ index: '../../toc.html'
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               Specify a source for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -399,6 +449,7 @@ index: '../../toc.html'
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
               Specify an alternative title for the map
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -411,8 +462,9 @@ index: '../../toc.html'
               No, unless specialized for a purpose that cascades
             </td>
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__4">
-              No stated purpose, until the element is specified
+              No stated purpose
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
           <tr class="row">
             <td class="entry" headers="reconciling-topic-and-map-metadata__entry__1">
@@ -426,42 +478,21 @@ index: '../../toc.html'
               Definitions are global, so setting at map level is equivalent to setting anywhere
               else.
             </td>
+            <td class="entry" headers="reconciling-topic-and-map-metadata__entry__5">No</td>
           </tr>
         </tbody>
       </table>
-      <div class="example" id="reconciling-topic-and-map-metadata__attr-cascade-example">
-        <h2 class="title sectiontitle">Example of metadata elements cascading in a DITA map</h2>
-
-        <div class="p">
-          The following code sample illustrates how an information architect can apply certain
-          metadata to all the DITA topics in a map:
-          <pre class="pre codeblock"><code>&lt;map title="DITA maps" xml:lang="en-us"&gt;
-	&lt;topicmeta&gt;
-		&lt;author&gt;Kristen James Eberlein&lt;/author&gt;
-		&lt;copyright&gt;
-			&lt;copyryear year="2020"/&gt;
-			&lt;copyrholder&gt;OASIS&lt;/copyrholder&gt;
-		&lt;/copyright&gt;
-	&lt;/topicmeta&gt;
-	&lt;topicref href="dita_maps.dita"&gt;
-		&lt;topicref href="definition_ditamaps.dita"/&gt;
-		&lt;topicref href="purpose_ditamaps.dita"/&gt;
-		&lt;!-- ... --&gt;
-       &lt;/topicref&gt;
-&lt;/map&gt;</code></pre>
-        </div>
-        <p class="p">
-          The author and copyright information cascades to each of the DITA topics referenced in the
-          DITA map. When the DITA map is processed to HTML5, for example, each HTML5 file contains
-          the metadata information.
-        </p>
-      </div>
     </div>
     <nav role="navigation" class="related-links">
       <div class="familylinks">
         <div class="parentlink">
           <strong>Parent topic:</strong>
-          <a class="link" href="../../archSpec/base/map-processing.html">Map cascading</a>
+          <a
+            class="link"
+            href="../../archSpec/base/map-cascading.html"
+            title="Metadata cascading is the process by which metadata elements and attributes specified for a map or for a topic reference cascade to nested references. This allows metadata properties to be set once and apply to an entire map or branch of a map."
+            >Metadata cascading</a
+          >
         </div>
       </div>
       <div class="linklist relref">

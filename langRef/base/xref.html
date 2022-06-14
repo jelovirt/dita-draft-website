@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'xref'
-description: 'A cross reference is an inline link. A cross reference can link to a
-  different location within the current topic, another topic, a specific location in another
-  topic, or an external resource such as a PDF or Web page.'
+description: 'A cross reference is
+  an inline link. A cross reference can link to a different location
+  within the current topic, another topic, a specific location in another
+  topic, or an external resource such as a PDF or web page.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,7 +60,7 @@ index: '../../toc.html'
       <p class="shortdesc">
         A cross reference is an inline link. A cross reference can link to a different location
         within the current topic, another topic, a specific location in another topic, or an
-        external resource such as a PDF or Web page.
+        external resource such as a PDF or <span style="color:red;" class="ph">web</span> page.
       </p>
       <section class="section" id="xref__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -103,7 +104,7 @@ index: '../../toc.html'
           </figcaption>
 
           <p class="p">
-            The following code sample shows a cross reference to another topic; link text is not
+            The following code sample shows a cross reference to another topic. Link text is not
             provided. Processor typically use the topic title as the link text.
           </p>
           <pre class="pre codeblock"><code>&lt;p&gt;Background information about DITA is provided in
@@ -111,7 +112,7 @@ index: '../../toc.html'
           <p class="p">
             The same cross reference could be created using
             <code class="keyword markupname xmlatt">@keyref</code> instead of
-            <code class="keyword markupname xmlatt">@href</code>; using
+            <code class="keyword markupname xmlatt">@href</code>. Using
             <code class="keyword markupname xmlatt">@keyref</code> allows the link to be redirected
             to different resources when the topic is used in different contexts.
           </p>
@@ -131,36 +132,16 @@ index: '../../toc.html'
 list of DITA features is available in the DITA specification
 &lt;xref keyref="dita-conformance"&gt;conformance clause&lt;/xref&gt;.&lt;/p&gt;</code></pre>
         </figure>
-        <figure class="fig fignone">
+        <figure class="fig fignone" style="color:red;">
           <figcaption>
-            <span class="fig--title-label">Figure 3. </span>Cross reference to a URI that contains
-            an ampersand
+            <span class="fig--title-label">Figure 3. </span>Cross reference to an external ressource
           </figcaption>
 
-          <p class="p">
-            The following code sample shows a cross reference that contains an ampersand:
-          </p>
+          <p class="p">The following code sample shows a cross reference to a web page:</p>
           <pre
             class="pre codeblock"
-          ><code>&lt;xref href="https://www.example.com/docview.wss?rs=757<strong class="ph b">&amp;</strong>context=SSVNX5"
+          ><code>&lt;xref href="https://www.example.com/docview.wss?rs=757"
 scope="external" format="html"&gt;Part number SSVNX5&lt;/xref&gt;</code></pre>
-          <p class="p">
-            Because the <code class="keyword markupname xmlatt">@href</code> attribute value needs
-            to be a valid URI, the ampersand must be escaped, as shown in the revised code sample
-            below:
-          </p>
-          <pre
-            class="pre codeblock"
-          ><code>&lt;xref href="https://www.example.com/docview.wss?rs=757<strong class="ph b">&amp;amp;</strong>context=SSVNX5"
-scope="external" format="html"&gt;Part number SSVNX5&lt;/xref&gt;</code></pre>
-          <p class="p">
-            Although the entity is in the DITA source, the entity might not show up when the link
-            target is displayed in an editor or a Web browser; the URI might be shown as the
-            following:
-          </p>
-          <pre
-            class="pre codeblock"
-          ><code>https://www.example.com/docview.wss?rs=757<strong class="ph b">&amp;</strong>context=SSVNX5</code></pre>
         </figure>
       </div>
     </div>
@@ -171,36 +152,10 @@ scope="external" format="html"&gt;Part number SSVNX5&lt;/xref&gt;</code></pre>
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>
-      </div>
-      <div class="linklist relconcepts">
-        <strong>Related concepts</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../archSpec/base/ditaaddressing.html"
-              title="DITA provides two addressing mechanisms. DITA addresses either are direct URI-based addresses, or they are indirect key-based addresses. Within DITA documents, individual elements are addressed by unique identifiers specified on the id attribute. DITA defines two fragment-identifier syntaxes; one is the full fragment-identifier syntax, and the other is an abbreviated fragment-identifier syntax that can be used when addressing non-topic elements from within the same topic."
-              >DITA addressing</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="linklist relref">
-        <strong>Related reference</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../langRef/base/link.html"
-              title="A link is a reference to another DITA topic or a non-DITA resource."
-              >link</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
   </article>

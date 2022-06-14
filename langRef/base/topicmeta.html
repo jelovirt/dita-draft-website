@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'topicmeta'
-description: 'Topic metadata is metadata that applies to a topic based on its context
-  in a map.'
+description: 'Topic metadata is
+  metadata that applies to a topic based on its context in a
+  map.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -95,23 +96,24 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following example shows how the
+          The following code sample shows how the
           <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element can contain a
-          metadata element:
+          link title and short description:
         </p>
         <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Indexing elements&lt;/title&gt;        
-  &lt;topicref href=indexing.dita"&gt;
+  &lt;topicref href="indexing.dita"&gt;
     &lt;topicmeta&gt;
-      &lt;audience&gt;Indexing specialists&lt;/audience&gt;
+      &lt;linktitle&gt;Indexing for company specialists&lt;/linktitle&gt;
+      &lt;shortdesc&gt;Guidelines for indexing company materials&lt;/shortdesc&gt;
     &lt;/topicmeta&gt;
-    &lt;!-- Adding topic references --&gt;
+    &lt;!-- Additional topic references --&gt;
   &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element indicates
-          that the topic (and its child topics) are of interest to the indexing specialists within
-          the company.
+          When link previews for <span class="ph filepath">indexing.dita</span> are generated, the
+          link title and short description provided within the
+          <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element are used.
         </p>
       </div>
     </div>
@@ -122,7 +124,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/basic-map-elements.html"
-            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog."
+            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. In addition, the topicmeta element can be used to specify metadata for the map, individual topics, or groups of topics."
             >Basic map elements</a
           >
         </div>
@@ -134,7 +136,7 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../archSpec/base/cascading-in-a-ditamap.html"
-              title="Certain map-level attributes cascade throughout a map, which facilitates attribute and metadata management. When attributes cascade, they apply to the elements that are children of the element where the attributes were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy."
+              title="Certain attributes cascade throughout a map, which facilitates attribute and metadata management. When attributes cascade, they apply to the elements that are children of the element where the attributes were specified. Cascading applies to a containment hierarchy, as opposed to a specialization hierarchy."
               >Cascading of metadata attributes in a DITA map</a
             >
           </li>
@@ -147,7 +149,7 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../archSpec/base/reconciling-topic-and-map-metadata.html"
-              title="The topicmeta element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent topicref element, any child topicref elements, and – if a direct child of the map element – on the map as a whole."
+              title="The topicmeta element in maps can contain numerous metadata elements. These metadata elements can have an effect on the parent topicref element, any child topicref elements, and – if a direct child of the map element – on the ."
               >Reconciling topic and map metadata elements</a
             >
           </li>

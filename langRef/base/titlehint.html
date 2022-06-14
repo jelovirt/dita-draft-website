@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'titlehint'
-description: 'A title hint provides information to map authors about the title of the referenced
-  resource.'
+description: 'A title hint provides information to map authors about the
+  title of the referenced resource. This is useful if the referenced
+  resources are not available.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,25 +58,25 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         A title hint provides information to map authors about the title of the referenced resource.
+        This is useful if the referenced resources are not available.
       </p>
       <section class="section" id="titlehint__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          Title hints are intended to provide the title of referenced resources to map authors when
-          the title may not be immediately accessible. It is not rendered as part of the
-          publication.
+          The <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> element is a
+          convenience element. It is equivalent to a
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with
+          <code class="keyword markupname xmlatt">@title-role</code> set to
+          <span class="keyword">hint</span>.
         </p>
       </section>
       <section class="section" id="titlehint__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> element is a
-          specialization of <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> with
-          the <code class="keyword markupname xmlatt">@title-role</code> set to
-          <code class="ph codeph">hint</code>. Processing is dictated by the rules for
-          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>.
+          Processing expectations are dictated by the rules for the
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element.
         </p>
       </section>
       <section class="section" id="titlehint__specialization-hierachy">
@@ -84,7 +85,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>. It
-          is defined in the alternativeTitle-domain module.
+          is defined in the alternative-titles domain module.
         </p>
       </section>
       <section class="section" id="titlehint__attributes">
@@ -111,28 +112,19 @@ index: '../../toc.html'
         </p>
       </section>
       <div class="example" id="titlehint__example">
-        <h2 class="title sectiontitle">Examples</h2>
+        <h2 class="title sectiontitle" style="color:red;">Example</h2>
 
         <p class="p">
-          This section contains examples of how the
-          <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> element can be used.
+          The following code sample shows how a
+          <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> element is used to
+          show the title of a referenced topic to map authors. This might be especially helpful in
+          the context of a CCMS with opaque URIs.
         </p>
-        <figure class="fig fignone" id="titlehint__figure-3">
-          <figcaption>
-            <span class="fig--title-label">Figure 1. </span>Referencing remote DITA resources
-          </figcaption>
-
-          <p class="p">
-            The following code sample shows how
-            <code class="keyword markupname xmlelement">&lt;titlehint&gt;</code> can be used to show
-            the title of a referenced topic to map authors in the context of a CMS with opaque URIs.
-          </p>
-          <pre class="pre codeblock"><code>&lt;topicref href="x-id://AOE82KJAW1B0"&gt;
+        <pre class="pre codeblock"><code>&lt;topicref href="x-id://AOE82KJAW1B0"&gt;
   &lt;topicmeta&gt;
-    <strong class="ph b">&lt;titlehint&gt;Getting started&lt;/titlehint&gt;</strong>
+    &lt;titlehint&gt;Getting started&lt;/titlehint&gt;
   &lt;/topicmeta&gt;
 &lt;/topicref&gt;</code></pre>
-        </figure>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -142,8 +134,8 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/alternativeTitles-d.html"
-            title="The alternative title elements are used to describe alternative titles for resources for use in specific use cases."
-            >Alternative titles domain elements</a
+            title="The alternative title elements are designed to provide alternative titles for resources. The elements in the alternative-titles domain are specialized from the titlealt element."
+            >Alternative-titles domain elements</a
           >
         </div>
       </div>

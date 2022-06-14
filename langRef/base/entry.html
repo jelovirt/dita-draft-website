@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'entry'
-description: 'A table entry represents a single cell in a table based on the OASIS Exchange Table
-  Model.'
+description: 'A table entry represents a single cell in a table that is
+  based on the OASIS Exchange Table Model.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,7 +56,8 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A table entry represents a single cell in a table based on the OASIS Exchange Table Model.
+        A table entry represents a single cell in a table that is based on the OASIS Exchange Table
+        Model.
       </p>
       <section class="section" id="entry__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -71,15 +72,12 @@ index: '../../toc.html'
               >universal attributes</a
             ></span
           >
-          (without the Metadata attribute group),
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-base"
-            ><code class="keyword markupname xmlatt">@base</code></a
-          >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-rev"
-            ><code class="keyword markupname xmlatt">@rev</code></a
-          >,
+          (without the metadata attribute group),
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-align"
             ><code class="keyword markupname xmlatt">@align</code></a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-base"
+            ><code class="keyword markupname xmlatt">@base</code></a
           >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-char"
             ><code class="keyword markupname xmlatt">@char</code></a
@@ -90,45 +88,17 @@ index: '../../toc.html'
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-colsep"
             ><code class="keyword markupname xmlatt">@colsep</code></a
           >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-rev"
+            ><code class="keyword markupname xmlatt">@rev</code></a
+          >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowsep"
             ><code class="keyword markupname xmlatt">@rowsep</code></a
-          >, and
+          >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-valign"
             ><code class="keyword markupname xmlatt">@valign</code></a
           >, and the attributes defined below.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="entry__attr-rotate">
-            <code class="keyword markupname xmlatt">@rotate</code>
-          </dt>
-          <dd class="dd">
-            Specifies whether the contents of the entry is rotated. The following values are valid:
-            <dl class="dl">
-              <dt class="dt dlterm">1</dt>
-              <dd class="dd">The contents of the cell are rotated 90 degrees counterclockwise.</dd>
-
-              <dt class="dt dlterm">0</dt>
-              <dd class="dd">No rotation <span class="ph">occurs</span>.</dd>
-
-              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
-              <dd class="dd">
-                See
-                <a
-                  class="xref"
-                  href="../../common/../archSpec/base/ditauseconreftarget.html"
-                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
-                  >Using the -dita-use-conref-target value</a
-                >
-                for more information.
-              </dd>
-            </dl>
-            <p class="p">
-              If this attribute is not specified, no rotation occurs. In situations where a
-              stylesheet or other formatting mechanism specifies table cell orientation, the
-              <code class="keyword markupname xmlatt">@rotate</code> attribute can be ignored.
-            </p>
-          </dd>
-
           <dt class="dt dlterm" id="entry__attr-colname">
             <code class="keyword markupname xmlatt">@colname</code>
           </dt>
@@ -138,13 +108,16 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
           </dd>
 
-          <dt class="dt dlterm" id="entry__attr-namest">
-            <code class="keyword markupname xmlatt">@namest</code>
+          <dt class="dt dlterm" id="entry__d1318e908">
+            <code class="keyword markupname xmlatt">@headers</code>
           </dt>
           <dd class="dd">
-            Specifies the first logical column that is included in a horizontal span. The value is a
-            reference to the <code class="keyword markupname xmlatt">@colname</code> attribute on
-            the <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
+            <span style="color:red;" class="ph"
+              >Specifies which entries in the current table provide headers for this cell.
+            </span>
+            The <code class="keyword markupname xmlatt">@headers</code> attribute contains an
+            unordered set of unique, space-separated tokens, each of which is an ID reference of an
+            entry from the same table.
           </dd>
 
           <dt class="dt dlterm" id="entry__attr-nameend">
@@ -156,32 +129,32 @@ index: '../../toc.html'
             the <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
           </dd>
 
+          <dt class="dt dlterm" id="entry__attr-namest">
+            <code class="keyword markupname xmlatt">@namest</code>
+          </dt>
+          <dd class="dd">
+            Specifies the first logical column that is included in a horizontal span. The value is a
+            reference to the <code class="keyword markupname xmlatt">@colname</code> attribute on
+            the <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> element.
+          </dd>
+
           <dt class="dt dlterm" id="entry__attr-morerows">
             <code class="keyword markupname xmlatt">@morerows</code>
           </dt>
           <dd class="dd">Specifies the number of additional rows to add in a vertical span.</dd>
 
-          <dt class="dt dlterm" id="entry__d1313e977">
-            <code class="keyword markupname xmlatt">@scope</code>
+          <dt class="dt dlterm" id="entry__attr-rotate">
+            <code class="keyword markupname xmlatt">@rotate</code>
           </dt>
           <dd class="dd">
-            Specifies that the current entry is a header for other table entries. The following
-            values are valid:
+            Specifies whether the contents of the entry are rotated. The following values are valid:
             <dl class="dl">
-              <dt class="dt dlterm"><span class="keyword">row</span></dt>
-              <dd class="dd">The current entry is a header for all cells in the row.</dd>
+              <dt class="dt dlterm">0</dt>
+              <dd class="dd">Indicates that no rotation occurs.</dd>
 
-              <dt class="dt dlterm"><span class="keyword">col</span></dt>
-              <dd class="dd">The current entry is a header for all cells in the column.</dd>
-
-              <dt class="dt dlterm"><span class="keyword">rowgroup</span></dt>
+              <dt class="dt dlterm">1</dt>
               <dd class="dd">
-                The current entry is a header for all cells in the rows spanned by this entry.
-              </dd>
-
-              <dt class="dt dlterm"><span class="keyword">colgroup</span></dt>
-              <dd class="dd">
-                The current entry is a header for all cells in the columns spanned by this entry.
+                Indicates that the contents of the cell are rotated 90 degrees counterclockwise.
               </dd>
 
               <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
@@ -198,15 +171,47 @@ index: '../../toc.html'
             </dl>
           </dd>
 
-          <dt class="dt dlterm" id="entry__d1313e961">
-            <code class="keyword markupname xmlatt">@headers</code>
+          <dt class="dt dlterm" id="entry__d1318e927">
+            <code class="keyword markupname xmlatt">@scope</code>
           </dt>
           <dd class="dd">
-            Specifies one or more <code class="keyword markupname xmlelement">&lt;entry&gt;</code>
-            headers that apply to the current entry. The
-            <code class="keyword markupname xmlatt">@headers</code> attribute contains an unordered
-            set of unique space-separated tokens, each of which is an ID reference of an entry from
-            the same table.
+            Specifies that the current entry is a header for other table entries. The following
+            values are valid:
+            <dl class="dl">
+              <dt class="dt dlterm"><span class="keyword">col</span></dt>
+              <dd class="dd">
+                Indicates that the current entry is a header for all cells in the column.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">colgroup</span></dt>
+              <dd class="dd">
+                Indicates that the current entry is a header for all cells in the columns that are
+                spanned by this entry.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">row</span></dt>
+              <dd class="dd">
+                Indicates that the current entry is a header for all cells in the row.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">rowgroup</span></dt>
+              <dd class="dd">
+                Indicates that the current entry is a header for all cells in the rows that are
+                spanned by this entry.
+              </dd>
+
+              <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
+              <dd class="dd">
+                See
+                <a
+                  class="xref"
+                  href="../../common/../archSpec/base/ditauseconreftarget.html"
+                  title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element."
+                  >Using the -dita-use-conref-target value</a
+                >
+                for more information.
+              </dd>
+            </dl>
           </dd>
         </dl>
       </section>
@@ -214,11 +219,8 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
           See
-          <a
-            class="xref"
-            href="table.html"
-            title="A table based on the OASIS Exchange Table Model organizes arbitrarily complex relationships of tabular information. This standard table markup allows column or row spanning and table captions or descriptions."
-            >table</a
+          <a class="xref" href="table.html#table__example"
+            ><code class="keyword markupname xmlelement">&lt;table&gt;</code></a
           >.
         </p>
       </div>
@@ -230,7 +232,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
+            title="DITA topics support two types of tables: complex table and simple table."
             >Table elements</a
           >
         </div>

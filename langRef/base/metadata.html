@@ -2,9 +2,7 @@
 # Generated from DITA source
 layout: base
 title: 'metadata'
-description: 'A metadata section is a contaner that groups metadata such as
-    a topic's audience and key
-    words.'
+description: 'Metadata is data about data.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +16,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,26 +54,24 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> section is a contaner
-        that groups metadata such as a topic's audience and key words.
-      </p>
+      <p style="color:red;" class="shortdesc">Metadata is data about data.</p>
       <section class="section" id="metadata__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          Elements inside of
-          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> provide information
-          about the content and subject of a topic. When used in topics, other metadata elements
-          outside of the
-          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> container generally
-          provide lifecycle information for the content unit (such as the author or copyright),
-          which are unrelated to the subject.
+          Elements inside of the
+          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element provide
+          information about the content and subject of an information resource.
+        </p>
+        <p class="p">
+          When used in topics, metadata elements that are outside of the
+          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element generally
+          provide lifecycle information for the content unit, such as the author or copyright.
         </p>
         <p class="p">
           When used in maps, several metadata elements are allowed both inside and outside of the
-          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> container, with the
-          container made available to provide parity with topic prologs.
+          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> container element.
+          This is done to provide parity with topic prologs.
         </p>
       </section>
       <section class="section" id="metadata__attributes">
@@ -96,18 +92,17 @@ index: '../../toc.html'
       <div class="example" id="metadata__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows that a topic about jet packs is only intended for advanced
-          users.
+          The following code sample shows how metadata can be provided in a topic about jet packs:
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
-  <strong class="ph b">&lt;metadata&gt;</strong>
-    &lt;audience type="user" job="flying" experiencelevel="advanced"/&gt;
-    &lt;keywords&gt;
-      &lt;keyword&gt;jet pack&lt;/keyword&gt;
-      &lt;keyword&gt;danger&lt;/keyword&gt;
-      &lt;keyword&gt;don't try this&lt;/keyword&gt;
-    &lt;/keywords&gt;
-  <strong class="ph b">&lt;/metadata&gt;</strong>
+    &lt;metadata&gt;
+        &lt;audience type="user" job="flying" experiencelevel="advanced"/&gt;
+        &lt;keywords&gt;
+            &lt;keyword&gt;jet pack&lt;/keyword&gt;
+            &lt;keyword&gt;danger&lt;/keyword&gt;
+            &lt;keyword&gt;liability&lt;/keyword&gt;
+        &lt;/keywords&gt;
+    &lt;/metadata&gt;
 &lt;/prolog&gt;</code></pre>
       </div>
     </div>
@@ -118,7 +113,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

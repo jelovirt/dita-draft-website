@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'othermeta'
-description: 'An othermeta element specifies properties not otherwise
-  included in metadata using name/content values.'
+description: 'Other metadata is metadata that specifies properties by using
+  name and content pairs.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,20 +56,19 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        An <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code> element specifies
-        properties not otherwise included in
-        <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> using name/content
-        values.
+        Other metadata is metadata that specifies properties by using name and content pairs.
       </p>
-      <section class="section" id="othermeta__processing-expectations">
-        <h2 class="title sectiontitle">Processing expectations</h2>
+      <section class="section" style="color:red;" id="othermeta__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          All <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code> elements are
-          considered part of the topic's metadata and should be reflected in the output as
-          appropriate for the output medium.
+          The <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code> element enables
+          implementations to specify custom metadata without specializing.
+          <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code> element can also be
+          used as a specialization base.
         </p>
       </section>
+
       <section class="section" id="othermeta__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -107,8 +106,8 @@ index: '../../toc.html'
           </dt>
           <dd class="dd">
             Indicates whether the <code class="keyword markupname xmlatt">@content</code> attribute
-            of the defined metadata property should be translated or not. Allowable values are
-            <span class="keyword">yes</span>, <span class="keyword">no</span>, and
+            is translated. Allowable values are <span class="keyword">yes</span>,
+            <span class="keyword">no</span>, and
             <a
               class="xref"
               href="../../archSpec/base/ditauseconreftarget.html"
@@ -122,13 +121,15 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that for the current topic, the metadata
+          The following code sample shows that the metadata
           <code class="ph codeph">ThreadWidthSystem</code> has a value of
-          <code class="ph codeph">metric</code>.
+          <span class="keyword" style="color:red;">metric</span>:
         </p>
-        <pre
-          class="pre codeblock"
-        ><code>&lt;othermeta name="ThreadWidthSystem" content="metric"/&gt;</code></pre>
+        <pre class="pre codeblock"><code>&lt;prolog&gt;
+    &lt;metadata&gt;
+        &lt;othermeta name="ThreadWidthSystem" content="metric"/&gt;
+    &lt;/metadata&gt;
+&lt;/prolog&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -138,7 +139,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

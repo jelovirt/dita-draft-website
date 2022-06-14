@@ -20,8 +20,8 @@ index: '../toc.html'
     </li>
     <li><a href="../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -167,12 +167,12 @@ index: '../toc.html'
         </p>
         <p class="p">
           Different processing orders might also provide different results in the case where pushed
-          content is wrapped in an element that is filtered out. If filtering is applied before
-          content resolution, that entire block of content (the wrapper and the content to be
-          pushed) is filtered out before the content reference is resolved. If filtering is applied
-          after content resolution, the push action will be resolved first so that content appears
-          in the referenced location, after which the referencing element (along with its wrapper)
-          is filtered from the original source location.
+          content is grouped in an element that is filtered out. If filtering is applied before
+          content resolution, that entire block of content (the grouping element and the content to
+          be pushed) is filtered out before the content reference is resolved. If filtering is
+          applied after content resolution, the push action will be resolved first so that content
+          appears in the referenced location, after which the referencing element (along with its
+          grouping element) is filtered from the original source location.
         </p>
       </section>
       <section

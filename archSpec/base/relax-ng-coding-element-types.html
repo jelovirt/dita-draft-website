@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -198,9 +198,7 @@ index: '../../toc.html'
                 Defines the complete content model for the element
                 <var class="keyword varname">tagname</var>. The content model pattern can be
                 overridden in
-                <span style="color:red;" class="ph"
-                  >element-configuration modules (constraint and expansion)</span
-                >.
+                <span class="ph">element-configuration modules (constraint and expansion)</span>.
               </dd>
 
               <dt class="dt dlterm">
@@ -211,9 +209,7 @@ index: '../../toc.html'
                 <var class="keyword varname">tagname</var>, except for
                 <code class="keyword markupname xmlatt">@class</code>. The attribute list
                 declaration can be overridden in
-                <span style="color:red;" class="ph"
-                  >element-configuration modules (constraint and expansion)</span
-                >.
+                <span class="ph">element-configuration modules (constraint and expansion)</span>.
               </dd>
 
               <dt class="dt dlterm">
@@ -256,7 +252,6 @@ index: '../../toc.html'
         &lt;/optional&gt;
         &lt;zeroOrMore&gt;
           &lt;choice&gt;
-            &lt;ref name="anchor"/&gt;
             &lt;ref name="data.elements.incl"/&gt;
             &lt;ref name="navref"/&gt;
             &lt;ref name="topicref"/&gt;
@@ -298,7 +293,7 @@ index: '../../toc.html'
               <code class="keyword markupname xmlatt">@combine</code> attribute set to the value
               <span class="keyword">choice</span>.
             </p>
-            <div style="color:red;" class="div">
+            <div class="div">
               <p class="p">For example:</p>
               <pre class="pre codeblock"><code>&lt;div&gt;
   &lt;a:documentation&gt;LONG NAME: Map&lt;/a:documentation&gt;
@@ -340,10 +335,10 @@ index: '../../toc.html'
               For example:
               <pre
                 class="pre codeblock"
-              ><code>&lt;define name="anchorref.attlist" combine="interleave"&gt;
+              ><code>&lt;define name="topichead.attlist" combine="interleave"&gt;
   &lt;optional&gt;
     &lt;attribute name="class" 
-        a:defaultValue="+ map/topicref mapgroup-d/anchorref "
+        a:defaultValue="+ map/topicref mapgroup-d/topichead "
     /&gt;
   &lt;/optional&gt;
 &lt;/define&gt;</code></pre>

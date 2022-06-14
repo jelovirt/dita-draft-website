@@ -2,10 +2,12 @@
 # Generated from DITA source
 layout: base
 title: 'mapresources'
-description: 'The mapresources element serves as an intuitive location
-  for map authors to place objects with processing-role set to
-  resource-only, for example, key definitions and subject scheme
-  maps'
+description: 'Map resources are objects with a
+  processing-role set to
+  resource-only, for example, key definitions and
+  subject scheme maps. Such resources do not contribute to the navigation
+  structure, although they might be essential for authoring and
+  processing.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +21,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,12 +59,12 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;mapresources&gt;</code> element serves
-        as an intuitive location for map authors to place objects with
+      <p style="color:red;" class="shortdesc">
+        Map resources are objects with a
         <code class="keyword markupname xmlatt">@processing-role</code> set to
         <span class="keyword">resource-only</span>, for example, key definitions and subject scheme
-        maps
+        maps. Such resources do not contribute to the navigation structure, although they might be
+        essential for authoring and processing.
       </p>
       <section class="section" id="mapresources__specialization-hierarchy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
@@ -70,7 +72,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;mapresources&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
-          is defined in the map group module.
+          is defined in the <span style="color:red;" class="ph">mapgroup-domain module</span>.
         </p>
       </section>
       <section class="section" id="mapresources__attributes">
@@ -106,10 +108,10 @@ index: '../../toc.html'
           <code class="keyword markupname xmlatt">@collection-type</code>),
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keys"
             ><code class="keyword markupname xmlatt">@keys</code></a
-          >,
+          >, and
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
             ><code class="keyword markupname xmlatt">@keyref</code></a
-          >, and the attributes defined below.
+          >.
         </p>
         <p class="p attr-exception" id="mapresources__attr-exception">
           For this element, the
@@ -145,7 +147,7 @@ index: '../../toc.html'
     &lt;mapref href="subject-scheme.ditamap" type="subjectscheme"/&gt;
     &lt;topicref href="cover-page.dita outputclass="cover-page"/&gt;
   &lt;/mapresources&gt;</strong>
-  ...
+  &lt;!-- ... --&gt;
 &lt;/bookmap&gt;</code></pre>
           <p class="p">
             Note that this example illustrates that
@@ -187,7 +189,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/mapgroup-d.html"
-            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup."
             >Mapgroup domain elements</a
           >
         </div>

@@ -1,11 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Flagging'
-description: 'Flagging is the application of text, images, or styling during rendering. This can
-  highlight the fact that content applies to a specific audience or operating system, for example;
-  it also can draw a reader's attention to content that has been marked as being
-  revised.'
+title: 'Flagging based on metadata attributes'
+description: 'When rendering content, a conditional processing profile can be used to specify whether
+  an element's content is flagged based on its conditional processing
+  attributes.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -32,19 +31,45 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
         <li>
-          <a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a>
+          <a href="../../archSpec/base/condproc.html">Conditional processing</a>
           <ul class="nav nav-list">
             <li>
-              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
-                >Conditional processing values and groups</a
+              <a href="../../archSpec/base/aboutconditionalprocessing.html"
+                >About conditional processing</a
               >
             </li>
-            <li><a href="../../archSpec/base/filtering.html">Filtering</a></li>
-            <li class="active"><a href="../../archSpec/base/flagging.html">Flagging</a></li>
             <li>
-              <a href="../../archSpec/base/conditional-processing-for-specific-output-types.html"
-                >Conditional processing to generate multiple deliverable types</a
+              <a href="../../archSpec/base/conditionalprocessingexpectations.html"
+                >Expectations for conditional processing</a
               >
+            </li>
+            <li>
+              <a href="../../archSpec/base/aboutditavaldocuments.html"
+                >About the DITAVAL document</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
+                >Conditional processing attribute values</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attribute-groups.html"
+                >Conditional processing attribute values with groups</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/conditional-processing-and-subject-schemes.html"
+                >Conditional processing and subject schemes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/filtering.html"
+                >Filtering based on metadata attributes</a
+              >
+            </li>
+            <li class="active">
+              <a href="../../archSpec/base/flagging.html">Flagging based on metadata attributes</a>
             </li>
             <li>
               <a href="../../archSpec/base/examples-of-conditional-processing.html"
@@ -54,8 +79,12 @@ index: '../../toc.html'
           </ul>
         </li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -84,17 +113,17 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">Flagging</h1>
+    <h1 class="title topictitle1" id="ariaid-title1">Flagging based on metadata attributes</h1>
 
     <div class="body conbody">
       <p class="shortdesc">
-        Flagging is the application of text, images, or styling during rendering. This can highlight
-        the fact that content applies to a specific audience or operating system, for example; it
-        also can draw a reader's attention to content that has been marked as being revised.
+        When rendering content, a conditional processing profile can be used to specify whether an
+        element's content is flagged based on its conditional processing attributes.
       </p>
       <p class="p">
-        At processing time, a conditional processing profile can be used to specify profiling
-        attribute values that determine whether an element with those values is flagged.
+        For example, flagging can be used to highlight the fact that content applies to a specific
+        audience or operating system. Flagging can also draw a reader's attention to content that
+        has been marked as being revised.
       </p>
       <p class="p">
         When deciding whether to flag a particular element, a processor evaluates each value.
@@ -111,6 +140,24 @@ index: '../../toc.html'
         value for the <code class="keyword markupname xmlatt">@product</code> attribute value), the
         element is filtered.
       </p>
+
+      <p class="p">
+        <span style="color:red;" class="ph">When</span> flagging methods are specified for elements
+        at different levels of the containment hierarchy, the flagging method
+        <span style="color:red;" class="ph">that is</span> specified for the element at the lowest
+        level of the hierarchy applies.
+      </p>
+      <p class="p">
+        For example, if <span style="color:red;" class="ph">a</span>
+        <code class="keyword markupname xmlelement">&lt;section&gt;</code> element is to be flagged
+        with green text and a <code class="keyword markupname xmlelement">&lt;p&gt;</code> element
+        <span style="color:red;" class="ph">within that section</span> is to be flagged with red
+        text,
+        <span style="color:red;" class="ph"
+          >the <code class="keyword markupname xmlelement">&lt;p&gt;</code> element</span
+        >
+        should be rendered with red text.
+      </p>
     </div>
     <nav role="navigation" class="related-links">
       <div class="familylinks">
@@ -119,8 +166,8 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/condproc.html"
-            title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-            >Conditional processing (profiling)</a
+            title="Conditional processing is the filtering or flagging of information based on processing-time criteria. Conditional processing is based on attributes specified in the DITA source."
+            >Conditional processing</a
           >
         </div>
       </div>
@@ -139,7 +186,7 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../langRef/ditaval/ditaval-revprop.html"
-              title="The revprop element in a DITAVAL document identifies a value in the rev attribute that should be flagged in some manner. Unlike the conditional processing attributes, which can be used for both filtering and flagging, the rev attribute only can be used for flagging."
+              title="The revprop element in a DITAVAL document identifies a value of the rev attribute for flagging. Unlike the conditional processing attributes, which can be used for both filtering and flagging, the rev attribute can only be used for flagging."
               >DITAVAL markup for flagging revisions</a
             >
           </li>

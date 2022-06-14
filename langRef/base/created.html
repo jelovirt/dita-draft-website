@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'created'
-description: 'A created element specifies the document creation date using the
-  date attribute.'
+description: 'The creation date is the date that a document was
+  ceated.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,11 +55,7 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;created&gt;</code> element specifies the
-        document creation date using the
-        <code class="keyword markupname xmlatt">@date</code> attribute.
-      </p>
+      <p class="shortdesc">The creation date is the date that a document was ceated.</p>
       <section class="section" id="created__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -88,31 +84,27 @@ index: '../../toc.html'
             <span class="ph">(REQUIRED)</span>
           </dt>
           <dd class="dd">
-            Specifies the document creation date. The format is YYYY-MM-DD where YYYY is the year,
-            MM is the month from 01 to 12, and DD is the day from 01-31. See
-            <a
-              class="xref"
-              href="http://www.cl.cam.ac.uk/~mgk25/iso-time.html"
-              target="_blank"
-              rel="external noopener"
-              >A Summary of the International Standard Date and Time Notation</a
+            Specifies the document creation date.
+            <span class="ph"
+              >The date is specified using the ISO 8601 format:
+              <var class="keyword varname">YYYY</var>-<var class="keyword varname">MM</var>-<var
+                class="keyword varname"
+                >DD</var
+              >, where <var class="keyword varname">YYYY</var> is the year,
+              <var class="keyword varname">MM</var> is the month (01 to 12), and
+              <var class="keyword varname">DD</var> is the day (01-31).</span
             >
-            for background.
           </dd>
         </dl>
       </section>
       <div class="example" id="created__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows that the topic was created on the twelth day of June in
-          2020.
+          See
+          <a class="xref" href="critdates.html#critdates__example"
+            ><code class="keyword markupname xmlelement">&lt;critdates&gt;</code></a
+          >.
         </p>
-        <pre class="pre codeblock"><code>&lt;prolog&gt;
- &lt;critdates&gt;
-  <strong class="ph b">&lt;created date="2020-06-12"&gt;&lt;/created&gt;</strong>
-  &lt;revised golive="2020-08-20" modified="2020-07-01"&gt;&lt;/revised&gt;
- &lt;/critdates&gt;
-&lt;/prolog&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -122,7 +114,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

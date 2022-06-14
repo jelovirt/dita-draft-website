@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'foreign'
-description: 'The foreign element allows the introduction of non-DITA content,
-  such as MathML, SVG, or Rich Text Format (RTF).'
+description: 'Foreign content is non-DITA content, such as MathML, SVG, or
+  Rich Text Format (RTF).'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,23 +55,28 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element allows the
-        introduction of non-DITA content, such as MathML, SVG, or Rich Text Format (RTF).
-      </p>
+      <div class="abstract">
+        <span class="shortdesc"
+          >Foreign content is non-DITA content, such as MathML, SVG, or Rich Text Format
+          (RTF).</span
+        >
+      </div>
       <section class="section" id="foreign__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element or a
-          specialization can contain more than one type of non-DITA content or a mix of DITA and
-          non-DITA content. Specialization of the
-          <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element is typically
-          implemented as a domain, but it is also possible to implement foreign vocabularies as
+          The <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element is intended
+          primarily as a base for specialization. Specializations of the
+          <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element are typically
+          implemented as domains, but it is also possible to implement foreign vocabularies as
           structural specializations.
         </p>
         <p class="p">
-          If alternate content is desired, use or specialize the
+          The <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element can contain
+          non-DITA content or a mix of DITA and non-DITA content.
+        </p>
+        <p class="p">
+          If alternate content is wanted, use or specialize the
           <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element inside of the
           <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> specialization. Such
           alternate content needs to be valid wherever the
@@ -86,11 +91,12 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          Processors should attempt to display
+          Processors attempt to display
           <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> content unless
-          otherwise instructed. If the processor cannot render the content, it
+          otherwise instructed. If a processor cannot render the content, it
           <dfn class="term RFC-2119">MAY</dfn> issue a warning.
         </p>
+
         <p class="p">
           The enabler of the foreign vocabulary must provide the processing and override the base
           processing for <code class="keyword markupname xmlelement">&lt;foreign&gt;</code>.
@@ -146,11 +152,12 @@ index: '../../toc.html'
       </section>
       <div class="example" id="foreign__example">
         <h2 class="title sectiontitle">Example</h2>
+
         <p class="p">
           The following code sample shows a specialization of
-          <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> used to hold SVG
-          elements. For this to work, the specialization module that defines
-          <code class="keyword markupname xmlelement">&lt;svg&gt;</code> also needs to include
+          <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> that is used to hold
+          SVG elements. For this to work, the specialization module that defines
+          <code class="keyword markupname xmlelement">&lt;svg&gt;</code> also needs to include the
           definitions for the SVG elements.
         </p>
         <pre class="pre codeblock"><code>&lt;p&gt;... as in the formula 

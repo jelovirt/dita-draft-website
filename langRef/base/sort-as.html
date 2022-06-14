@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -199,7 +199,7 @@ index: '../../toc.html'
           </ul>
         </div>
         <div class="div">
-          <p class="p" id="sort-as__d1329e412">
+          <p class="p" id="sort-as__d1332e457">
             When a <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element is
             specified, processors that sort the containing element
             <dfn class="term RFC-2119">MUST</dfn> construct the effective sort phrase by prepending
@@ -208,7 +208,7 @@ index: '../../toc.html'
             <code class="keyword markupname xmlelement">&lt;sort-as&gt;</code> element but different
             base sort phrases will sort in the appropriate order.
           </p>
-          <p class="p" id="sort-as__d1329e427">
+          <p class="p" id="sort-as__d1332e472">
             For example, if a processor uses the content of the
             <code class="keyword markupname xmlelement">&lt;title&gt;</code> element as the base
             sort phrase, and the title of a topic is "24 Hour Support Hotline" and the value of the
@@ -281,7 +281,7 @@ index: '../../toc.html'
 
           <pre class="pre codeblock"><code>&lt;glossentry id="gloss-dada"&gt;
   &lt;glossterm&gt;&lt;sort-as value="dada"/&gt;&amp;#x5927;&amp;#x5927;&lt;/glossterm&gt;
-    &lt;glossdef&gt;Literally "big big".&lt;/glossdef&gt;
+  &lt;glossdef&gt;Literally "big big".&lt;/glossdef&gt;
 &lt;/glossentry&gt;</code></pre>
         </figure>
         <figure class="fig fignone">
@@ -293,10 +293,10 @@ index: '../../toc.html'
 
           <pre class="pre codeblock"><code>&lt;glossentry id="gloss-dada"&gt;
   &lt;glossterm&gt;&amp;#x5927;&amp;#x5927;&lt;/glossterm&gt;
+  &lt;glossdef&gt;Literally "big big".&lt;/glossdef&gt;
   &lt;prolog&gt;
     &lt;sort-as&gt;dada&lt;/sort-as&gt;
   &lt;/prolog&gt;
-    &lt;glossdef&gt;Literally "big big".&lt;/glossdef&gt;
 &lt;/glossentry&gt;</code></pre>
         </figure>
       </div>

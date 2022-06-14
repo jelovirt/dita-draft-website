@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'unknown'
-description: 'The unknown element is an open extension that enables
-  information architects to incorporate XML fragments.'
+description: 'The unknown element is an open
+  extension that enables information architects to incorporate XML
+  fragments in DITA topics.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,12 +58,25 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element is an open
-        extension that enables information architects to incorporate XML fragments.
+        extension that enables information architects to incorporate XML fragments in DITA topics.
       </p>
+      <section class="section" id="unknown__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element is intended
+          primarily as a base for specialization. It might also be used in automatically-generated
+          DITA topics or DITA used as a data-exchange format.
+        </p>
+      </section>
       <section class="section" id="unknown__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
-        <p class="p">Processors should ignore this element unless otherwise instructed.</p>
+        <p class="p">
+          Processors ignore the
+          <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element unless
+          otherwise instructed.
+        </p>
       </section>
       <section class="section" id="unknown__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -82,17 +96,9 @@ index: '../../toc.html'
       <div class="example" id="unknown__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          This example features a specialized
-          <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element that includes
-          other non-DITA content. If this specialization is imported to a DTD or schema, the DTD or
-          schema will need to handle declaring the new elements or any namespaces.
-        </p>
-        <p class="p">
-          By definition, the content of
-          <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> can only be understood
-          by DITA processors as unknown XML. This means that processors would generally ignore this
-          content unless they are configured to recognize the
-          <code class="keyword markupname xmlelement">&lt;my-unknown&gt;</code> specialization.
+          The following code sample shows a specialized
+          <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> element that contains
+          non-DITA content:
         </p>
         <pre class="pre codeblock"><code>&lt;body&gt;
   &lt;my-unknown class="+ topic/unknown mything/my-unknown "&gt;
@@ -100,6 +106,14 @@ index: '../../toc.html'
     &lt;otherthing value="16"/&gt;
   &lt;/my-unknown&gt;
 &lt;/body&gt;</code></pre>
+
+        <p class="p">
+          By definition, the content of
+          <code class="keyword markupname xmlelement">&lt;unknown&gt;</code> can only be understood
+          by DITA processors as unknown XML. This means that processors generally ignore this
+          content unless they are configured to recognize the
+          <code class="keyword markupname xmlelement">&lt;my-unknown&gt;</code> specialization.
+        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">

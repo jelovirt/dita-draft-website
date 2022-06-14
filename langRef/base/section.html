@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'section'
-description: 'A section is an organizational division in a topic. Sections are used to
-  organize subsets of information that are directly related to the topic; they can have
-  titles.'
+description: 'A section is an
+  organizational division in a topic. Sections are used to organize
+  subsets of information that are directly related to the
+  topic.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -58,7 +59,7 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         A section is an organizational division in a topic. Sections are used to organize subsets of
-        information that are directly related to the topic; they can have titles.
+        information that are directly related to the topic.
       </p>
       <section class="section" id="section__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
@@ -66,6 +67,7 @@ index: '../../toc.html'
         <p class="p">
           Multiple sections within a single topic do not represent a hierarchy, but rather peer
           divisions of that topic. Sections cannot be nested.
+          <span style="color:red;" class="ph">Sections can have titles.</span>
         </p>
         <div class="note note note_note">
           <span class="note__title">Note:</span> For maximum flexibility in creating specialization,
@@ -76,9 +78,9 @@ index: '../../toc.html'
           <code class="keyword markupname xmlelement">&lt;title&gt;</code> to appear anywhere as a
           child of <code class="keyword markupname xmlelement">&lt;section&gt;</code>. However, the
           intent of the specification is that
-          <code class="keyword markupname xmlelement">&lt;title&gt;</code> should only be used once
-          in any <code class="keyword markupname xmlelement">&lt;section&gt;</code>, and when used,
-          it should precede any other text or element content.
+          <code class="keyword markupname xmlelement">&lt;title&gt;</code> only be used once in any
+          <code class="keyword markupname xmlelement">&lt;section&gt;</code>, and when used, that it
+          precede any other text or element content.
         </div>
       </section>
       <section class="section" id="section__rendering-expectations">
@@ -102,12 +104,6 @@ index: '../../toc.html'
               title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
               >universal attributes</a
             ></span
-          >
-          and
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__spectitle"
-            ><code class="keyword markupname xmlatt">@spectitle</code></a
           >.
         </p>
       </section>
@@ -117,8 +113,8 @@ index: '../../toc.html'
           The following code sample shows how element-reference topics in the DITA specification use
           titled sections to provide a consistent structure for grouping information:
         </p>
-        <pre class="pre codeblock"><code>&lt;reference id="sub" xml:lang="en-us"&gt;
-  &lt;title&gt;p&lt;/title&gt;
+        <pre class="pre codeblock"><code>&lt;reference id="pb" xml:lang="en-us"&gt;
+  &lt;title&gt;&lt;xmlelement&gt;p&lt;/xmlelement&gt;&lt;/title&gt;
   &lt;shortdesc conkeyref="library-short-descriptions/p"/&gt;
   &lt;refbody&gt;
     &lt;section&gt;&lt;title&gt;Usage information&lt;/title&gt;
@@ -150,7 +146,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

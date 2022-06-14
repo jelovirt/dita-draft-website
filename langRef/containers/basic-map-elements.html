@@ -2,11 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'Basic map elements'
-description: 'DITA maps are built from a few core elements that are used
-for referencing and organizing topics. The topicmeta element
-is also available to specify metadata for the map, for individual
-topics, or for groups of topics. Many elements inside topicmeta
-are also available inside the topic prolog.'
+description: 'DITA maps are built from a few core elements
+  that are used for referencing and organizing topics. In addition, the
+  topicmeta element can be used to specify
+  metadata for the map, individual topics, or groups of
+  topics.'
 index: '../../toc.html'
 ---
 
@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,17 +57,16 @@ index: '../../toc.html'
             <li class="active">
               <a href="../../langRef/containers/basic-map-elements.html">Basic map elements</a>
               <ul class="nav nav-list">
+                <li><a href="../../langRef/base/keytext.html">keytext</a></li>
                 <li><a href="../../langRef/base/map.html">map</a></li>
+                <li><a href="../../langRef/base/navref.html">navref</a></li>
+                <li><a href="../../langRef/base/relcell.html">relcell</a></li>
+                <li><a href="../../langRef/base/relcolspec.html">relcolspec</a></li>
+                <li><a href="../../langRef/base/relheader.html">relheader</a></li>
+                <li><a href="../../langRef/base/relrow.html">relrow</a></li>
+                <li><a href="../../langRef/base/reltable.html">reltable</a></li>
                 <li><a href="../../langRef/base/topicref.html">topicref</a></li>
                 <li><a href="../../langRef/base/topicmeta.html">topicmeta</a></li>
-                <li><a href="../../langRef/base/anchor.html">anchor</a></li>
-                <li><a href="../../langRef/base/navref.html">navref</a></li>
-                <li><a href="../../langRef/base/reltable.html">reltable</a></li>
-                <li><a href="../../langRef/base/relrow.html">relrow</a></li>
-                <li><a href="../../langRef/base/relcell.html">relcell</a></li>
-                <li><a href="../../langRef/base/relheader.html">relheader</a></li>
-                <li><a href="../../langRef/base/relcolspec.html">relcolspec</a></li>
-                <li><a href="../../langRef/base/keytext.html">keytext</a></li>
                 <li><a href="../../langRef/base/ux-window.html">ux-window</a></li>
               </ul>
             </li>
@@ -98,22 +97,62 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Basic map elements</h1>
-    <p class="shortdesc">
+    <p style="color:red;" class="shortdesc">
       DITA maps are built from a few core elements that are used for referencing and organizing
-      topics. The <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element is
-      also available to specify metadata for the map, for individual topics, or for groups of
-      topics. Many elements inside
-      <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> are also available inside
-      the topic prolog.
+      topics. In addition, the
+      <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element can be used to
+      specify metadata for the map, individual topics, or groups of topics.
     </p>
 
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/keytext.html">keytext</a></strong
+          ><br />Key text is variable or link text that is used when resolving key references. It
+          also specifies alternate text for images that are referenced by keys.
+        </li>
+        <li class="link ulchildlink">
           <strong><a href="../../langRef/base/map.html">map</a></strong
           ><br />A DITA map is the mechanism for aggregating topic references and defining a context
-          for those references. It contains references to topics, maps, and other resources; these
-          references are organized into hierarchies, groups, and tables.
+          for those references. It contains references to topics, maps, and other resources.<span
+            class="ph"
+          >
+            These references are organized into hierarchies, groups, and tables.</span
+          >
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/navref.html">navref</a></strong
+          ><br />A navigation reference is a reference to another map that is preserved as a
+          transcluding link in the result deliverable, rather than resolved when the deliverable is
+          produced. Output formats that support such linking can integrate the referenced resource
+          when displaying the referencing map to an end user.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/relcell.html">relcell</a></strong
+          ><br />A cell in a relationship table is a group of one or more topic references that are
+          related to the topic references in other cells of the same row.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/relcolspec.html">relcolspec</a></strong
+          ><br />A column specification in a relationship table column
+          <span style="color:red;" class="ph">that</span> provides default attribute values for the
+          references in that column of a relationship table.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/relheader.html">relheader</a></strong
+          ><br />A header row in a relationship table is a group of column definitions for a
+          relationship table.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/relrow.html">relrow</a></strong
+          ><br />A row in a relationship table creates a relationship between the cells in that row,
+          which is often expressed in output as links between the topics or resources that are
+          referenced in those cells.
+        </li>
+        <li class="link ulchildlink">
+          <strong><a href="../../langRef/base/reltable.html">reltable</a></strong
+          ><br />A relationship table is a mechanism that creates relationships among topics, based
+          on the familiar table model of rows, columns, and cells.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/topicref.html">topicref</a></strong
@@ -127,59 +166,12 @@ index: '../../toc.html'
           ><br />Topic metadata is metadata that applies to a topic based on its context in a map.
         </li>
         <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/anchor.html">anchor</a></strong
-          ><br />An anchor within a map is an integration point that another map can reference in
-          order to insert its navigation into the referenced map's navigation tree.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/navref.html">navref</a></strong
-          ><br />A navigation reference is a reference to another map which is preserved as a
-          transcluding link in the result deliverable rather than resolved when the deliverable is
-          produced. Output formats that support such linking can integrate the referenced resource
-          when displaying the referencing map to an end user.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/reltable.html">reltable</a></strong
-          ><br />A relationship table is a mechanism that creates among topics, based on the
-          familiar table model of rows, columns, and cells.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/relrow.html">relrow</a></strong
-          ><br />A row in a relationship table creates a relationship between the cells in that row,
-          which is expressed in output as links between the topics or resources referenced in those
-          cells.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/relcell.html">relcell</a></strong
-          ><br />A relationship table cell is a group of one or more topic references that are
-          related to topic references in other cells of the same row. A relationship table cell does
-          not imply a relationship between topics or resources that are referenced in the same cell,
-          unless the <code class="keyword markupname xmlatt">@collection-type</code> attribute cell
-          indicates that they are related.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/relheader.html">relheader</a></strong
-          ><br />A relationship table header row is a group of column definitions for a relationship
-          table.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/relcolspec.html">relcolspec</a></strong
-          ><br />A relationship table column specification provides default attribute values for
-          references in a single column of a relationship table.
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/keytext.html">keytext</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;keytext&gt;</code> element
-          specifies variable or link text; it also specifies alternate text for images that are
-          referenced by keys.
-        </li>
-        <li class="link ulchildlink">
           <strong><a href="../../langRef/base/ux-window.html">ux-window</a></strong
           ><br />A UX window specification is a collection of metadata for a window or viewport in
           which a user assistance topic or web page can be displayed. The window or viewport can be
           referenced by the
-          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element associated
-          with a topic or
+          <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code> element that is
+          associated with a topic or
           <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element.
         </li>
       </ul>
@@ -189,7 +181,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/map-elements.html"
-            title="Map elements include the core components of DITA maps, such as topicref and reltable, as well as general purpose map specializations in the map group domain."
+            title="Map elements include the core components of DITA maps, such as the topicref and reltable elements."
             >Map elements</a
           >
         </div>

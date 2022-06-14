@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'critdates'
-description: 'A critdates element specifies the critical dates in a document
-  life cycle, such as the creation date and revision dates.'
+description: 'Critical dates are important dates in
+  the document life cycle, such as creation and revision
+  dates.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,17 +57,10 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;critdates&gt;</code> element specifies the
-        critical dates in a document life cycle, such as the creation date and revision dates.
+        Critical dates are <span style="color:red;" class="ph">important</span> dates in the
+        document life cycle, such as creation and revision dates.
       </p>
-      <section class="section" id="critdates__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
 
-        <p class="p">
-          This element is equivalent to the
-          <code class="keyword markupname xmlelement">&lt;Date&gt;</code> element in Dublin Core.
-        </p>
-      </section>
       <section class="section" id="critdates__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -86,14 +80,15 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that the topic was created on the twelth day of June in
-          2020, and updated on the 20th of August in 2020.
+          The following code sample shows that the topic was created on 12 June 2020. It was revised
+          on 03 March
+          <span style="color:red;" class="ph">2021, and it will expire on 02 March 2024.</span>
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
-  &lt;critdates&gt;
-    &lt;created date="2020-06-12"&gt;&lt;/created&gt;
-    &lt;revised modified="2020-08-20"&gt;&lt;/revised&gt;
-  &lt;/critdates&gt;
+    &lt;critdates&gt;
+        &lt;created date="2020-06-12"/&gt;
+        &lt;revised modified="2021-03-03" golive="2020-02-03" expiry=<span style="color:red;" class="ph">"2024-03-02"</span>/&gt;
+    &lt;/critdates&gt;
 &lt;/prolog&gt;</code></pre>
       </div>
     </div>
@@ -104,7 +99,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

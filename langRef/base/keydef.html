@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'keydef'
-description: 'A key definition provides a simple way to define a key without making
-  the definition itself a part of rendered content.'
+description: 'A key definition
+  provides a simple way to define a key without making the definition
+  itself a part of rendered content.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -66,8 +67,9 @@ index: '../../toc.html'
           <p class="p">
             The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is a
             convenience element. It is equivalent to a
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element with
-            <code class="keyword markupname xmlatt">@processing-role</code> set to
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element that defines
+            a key while also setting
+            <code class="keyword markupname xmlatt">@processing-role</code> to
             <span class="keyword">resource-only</span>.
           </p>
           <p class="p">
@@ -90,7 +92,7 @@ index: '../../toc.html'
       <section class="section" id="keydef__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
-        <div class="div" id="keydef__d1320e54">
+        <div class="div" id="keydef__d1323e54">
           <p class="p">
             The following attributes are available on this element:
             <span class="ph"
@@ -116,17 +118,17 @@ index: '../../toc.html'
                 title="Common map attributes include: cascade, chunk, collection-type, keyscope, linking, processing-role, search, and toc"
                 >common map attributes</a
               ></span
-            >,
+            >, and
             <a
               class="xref"
               href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
               ><code class="keyword markupname xmlatt">@keyref</code></a
-            >, and the attributes defined below.
+            >.
           </p>
 
-          <div class="p attr-exception" id="keydef__d1320e69">
+          <div class="p attr-exception" id="keydef__d1323e69">
             For this element:
-            <ul class="ul" id="keydef__d1320e71">
+            <ul class="ul" id="keydef__d1323e71">
               <li class="li">
                 The <code class="keyword markupname xmlatt">@keys</code> attribute is required.
               </li>
@@ -152,7 +154,7 @@ index: '../../toc.html'
   &lt;keydef keys="dita-tc" scope="external" format="html"
           href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita"&gt;
     &lt;topicmeta&gt;
-      &lt;linktext&gt;DITA Technical Committee&lt;/linktext&gt;
+      &lt;keytext&gt;DITA Technical Committee&lt;/keytext&gt;
     &lt;/topicmeta&gt;
   &lt;/keydef&gt;
   &lt;!-- Key definition #2--&gt;
@@ -160,14 +162,14 @@ index: '../../toc.html'
   &lt;!-- Key definition #3--&gt;
   &lt;keydef keys="dita-version"&gt;
     &lt;topicmeta&gt;
-      &lt;linktext&gt;2.0&lt;/linktext&gt;
+      &lt;keytext&gt;2.0&lt;/keytext&gt;
     &lt;/topicmeta&gt;
   &lt;/keydef&gt;
 &lt;/map&gt;</code></pre>
         <ol class="ol" id="keydef__ol_ud1_l2w_bpb">
           <li class="li">
             The first <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element
-            defines a key that links to a Web page. It contains link text; it also specifies the
+            defines a key that links to a web page. It contains link text; it also specifies the
             necessary <code class="keyword markupname xmlatt">@scope</code> and
             <code class="keyword markupname xmlatt">@format</code> attributes, so that authors do
             not need to include them when they reference this key.
@@ -191,7 +193,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/mapgroup-d.html"
-            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup."
             >Mapgroup domain elements</a
           >
         </div>

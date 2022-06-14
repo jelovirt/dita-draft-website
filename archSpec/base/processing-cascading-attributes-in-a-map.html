@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -33,21 +33,21 @@ index: '../../toc.html'
           >
         </li>
         <li>
-          <a href="../../archSpec/base/map-processing.html">Map cascading</a>
+          <a href="../../archSpec/base/map-cascading.html">Metadata cascading</a>
           <ul class="nav nav-list">
             <li>
               <a href="../../archSpec/base/cascading-in-a-ditamap.html"
                 >Cascading of metadata attributes in a DITA map</a
               >
               <ul class="nav nav-list">
-                <li>
-                  <a href="../../archSpec/base/merging-of-cascading-attributes.html"
-                    >Merging of cascading attributes</a
-                  >
-                </li>
                 <li class="active">
                   <a href="../../archSpec/base/processing-cascading-attributes-in-a-map.html"
                     >Processing cascading attributes in a map</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/merging-of-cascading-attributes.html"
+                    >Merging of cascading attributes</a
                   >
                 </li>
               </ul>
@@ -60,6 +60,11 @@ index: '../../toc.html'
             <li>
               <a href="../../archSpec/base/map-to-map-cascading-of-metadata.html"
                 >Map-to-map cascading behaviors</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/examples-of-cascading.html"
+                >Examples of metadata cascading</a
               >
             </li>
           </ul>
@@ -104,11 +109,12 @@ index: '../../toc.html'
       <p class="p">
         When determining the value of an attribute, processors
         <dfn class="term RFC-2119">MUST</dfn> evaluate each attribute on each individual element in
-        a specific order; this order is specified in the following list. Applications
-        <dfn class="term RFC-2119">MUST</dfn> continue through the list until a value is established
-        or until the end of the list is reached (at which point no value is established for the
-        attribute). In essence, the list provides instructions on how processors can construct a map
-        where all attribute values are set and all cascading is complete.
+        a specific order<span style="color:red;" class="ph">. This</span> order is specified in the
+        following list. Applications <dfn class="term RFC-2119">MUST</dfn> continue through the list
+        until a value is established or until the end of the list is reached, at which point no
+        value is established for the attribute. In essence, the list provides instructions on how
+        processors can construct a map where all attribute values are set and all cascading is
+        complete.
       </p>
       <div class="p">
         For attributes within a map, the following processing order
@@ -141,28 +147,27 @@ index: '../../toc.html'
           </li>
           <li class="li">The processing-supplied default values are applied.</li>
           <li class="li">
-            After the attributes are resolved within the map, they cascade to referenced maps.
-            <div class="note note note_note">
-              <span class="note__title">Note:</span> The processing-supplied default values do not
-              cascade to other maps. For example, most processors will supply a default value of
+            After the attributes are resolved within the map,
+            <em class="ph i">any values that do not come from processing-supplied defaults</em> will
+            cascade to referenced maps.
+            <p class="p">
+              For example, most processors will supply a default value of
               <code class="ph codeph">toc="yes"</code> when no
               <code class="keyword markupname xmlatt">@toc</code> attribute is specified. However, a
-              processor-supplied default of
-              <code class="ph codeph">toc="yes"</code>
-              <dfn class="term RFC-2119">MUST</dfn> not override a value of
-              <code class="ph codeph">toc="no"</code> that is set on a referenced map. If the
-              <code class="ph codeph">toc="yes"</code> value is explicitly specified, is given as a
-              default through a DTD, XSD, RNG, or controlled values file, or cascades from a
-              containing element in the map, it <dfn class="term RFC-2119">MUST</dfn> override a
+              processor-supplied default of <code class="ph codeph">toc="yes"</code> does not
+              override a value of <code class="ph codeph">toc="no"</code> that is set on a
+              referenced map. If the <code class="ph codeph">toc="yes"</code> value is explicitly
+              specified, is given as a default through a DTD, RNG, or controlled values file, or
+              cascades from a containing element in the map, it will override a
               <code class="ph codeph">toc="no"</code> setting on the referenced map. See
               <a
                 class="xref"
                 href="map-to-map-cascading-of-metadata.html"
-                title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (for example, the role of &#34;Chapter&#34; assigned by a chapter element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map, but there are some exceptions and additional rules that apply."
+                title="When a DITA map or map branch is referenced by another DITA map, by default certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and the roles that are assigned to content , for example, the role of &#34;Chapter&#34; that is assigned by a chapter element. Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map, but there are some exceptions and additional rules that apply."
                 >Map-to-map cascading behaviors</a
               >
               for more details.
-            </div>
+            </p>
           </li>
           <li class="li">
             Repeat steps
@@ -189,7 +194,7 @@ index: '../../toc.html'
         <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element will cascade to
         contained elements, provided those elements reach item
         <a class="xref" href="#processing-cascading-attributes-in-a-map__attributes-cascade">5</a>
-        below when evaluating the <code class="keyword markupname xmlatt">@toc</code> attribute.
+        when evaluating the <code class="keyword markupname xmlatt">@toc</code> attribute.
       </p>
     </div>
     <nav role="navigation" class="related-links">
@@ -199,7 +204,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/cascading-in-a-ditamap.html"
-            title="Certain map-level attributes cascade throughout a map, which facilitates attribute and metadata management. When attributes cascade, they apply to the elements that are children of the element where the attributes were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy."
+            title="Certain attributes cascade throughout a map, which facilitates attribute and metadata management. When attributes cascade, they apply to the elements that are children of the element where the attributes were specified. Cascading applies to a containment hierarchy, as opposed to a specialization hierarchy."
             >Cascading of metadata attributes in a DITA map</a
           >
         </div>

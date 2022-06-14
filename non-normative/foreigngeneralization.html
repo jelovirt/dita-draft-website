@@ -19,8 +19,8 @@ index: '../toc.html'
     </li>
     <li><a href="../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -160,15 +160,19 @@ index: '../toc.html'
           DITA element, will be exported to another file. The
           <code class="keyword markupname xmlelement">&lt;data&gt;</code> element will remain:
         </p>
-        <pre class="pre codeblock"><code>&lt;foreign class="+ topic/foreign mathml-d/mathml "&gt;
+        <pre
+          class="pre codeblock"
+          id="foreigngeneralization__codeblock_kg3_vsh_psb"
+        ><code>&lt;foreign class="+ topic/foreign mathml-d/mathml "&gt;
   &lt;object data="dita-generalized-topicid_mathml1.xml" type="DITA-foreign"/&gt;
   &lt;data&gt;X plus three&lt;/data&gt;
-&lt;/foreign&gt;
-
-Contents of dita-generalized-topicid_mathml1.xml:
+&lt;/foreign&gt;</code></pre>
+        <pre
+          class="pre codeblock"
+          id="foreigngeneralization__codeblock_lg3_vsh_psb"
+        ><code>&lt;!-- Contents of dita-generalized-topicid_mathml1.xml: --&gt;
 &lt;foreign class="+ topic/foreign mathml-d/mathml "
          xmlns:m="http://www.w3.org/1998/Math/MathML"&gt;
-&gt;
   &lt;m:math&gt;
     &lt;m:mi&gt;x&lt;/m:mi&gt;&lt;m:mo&gt;+&lt;/m:mo&gt;&lt;m:mn&gt;3&lt;/m:mn&gt;
   &lt;/m:math&gt;

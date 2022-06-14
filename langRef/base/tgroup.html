@@ -2,8 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'tgroup'
-description: 'A table group is a grouping of a table header and table body, based on the OASIS
-  Exchange Table Model.'
+description: 'A table group is a grouping element that
+  contains column specifications, a table header, and the table body in
+  a table that is based  on the OASIS Exchange Table
+  Model.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,8 +58,12 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A table group is a grouping of a table header and table body, based on the OASIS Exchange
-        Table Model.
+        A table group is a
+        <span style="color:red;" class="ph"
+          >grouping element that contains column specifications, a table header, and the table body
+          in a table that is based
+        </span>
+        on the OASIS Exchange Table Model.
       </p>
       <section class="section" id="tgroup__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -72,25 +78,21 @@ index: '../../toc.html'
               >universal attributes</a
             ></span
           >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-align"
+            ><code class="keyword markupname xmlatt">@align</code></a
+          >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-colsep"
             ><code class="keyword markupname xmlatt">@colsep</code></a
           >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-rowsep"
             ><code class="keyword markupname xmlatt">@rowsep</code></a
-          >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-align"
-            ><code class="keyword markupname xmlatt">@align</code></a
-          >
-          and the attribute defined below.
+          >, and the attribute defined below.
         </p>
         <dl class="dl">
           <dt class="dt dlterm" id="tgroup__attr-cols">
             <code class="keyword markupname xmlatt">@cols</code> <span class="ph">(REQUIRED)</span>
           </dt>
-          <dd class="dd">
-            Specifies the number of columns in a
-            <code class="keyword markupname xmlelement">&lt;tgroup&gt;</code>.
-          </dd>
+          <dd class="dd">Specifies the number of columns in a table group.</dd>
         </dl>
       </section>
       <div class="example" id="tgroup__example">
@@ -100,7 +102,7 @@ index: '../../toc.html'
           <a
             class="xref"
             href="table.html"
-            title="A table based on the OASIS Exchange Table Model organizes arbitrarily complex relationships of tabular information. This standard table markup allows column or row spanning and table captions or descriptions."
+            title="A table based on the OASIS Exchange Table Model organizes arbitrarily complex relationships of tabular information. This standard table markup provides a wide variety of controls over the display properties of the data and even the table structure itself."
             >table</a
           >.
         </p>
@@ -113,7 +115,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/table-elements.html"
-            title="DITA topics support two types of tables. The table element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The simpletable element is structurally less complex than the OASIS table, and is an easier base for specialization."
+            title="DITA topics support two types of tables: complex table and simple table."
             >Table elements</a
           >
         </div>

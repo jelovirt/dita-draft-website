@@ -2,10 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Related links elements'
-description: 'The related links elements define, group, and describe topic-to-topic connections or
-  connections from DITA topics to non-DITA resources. These embedded references in
-  DITA topics establish dependencies from the topics to the referenced
-  resources.'
+description: 'The related links elements define, group, and describe hyperlinks that are embedded
+  in a DITA topic. The links are contained by the related-links element
+  and apply to the DITA topic as a whole.
+  '
 index: '../../toc.html'
 ---
 
@@ -19,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -100,11 +100,14 @@ index: '../../toc.html'
     <h1 class="title topictitle1" id="ariaid-title1">Related links elements</h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        The related links elements define, group, and describe topic-to-topic connections or
-        connections from DITA topics to non-DITA resources. These embedded references in DITA topics
-        establish dependencies from the topics to the referenced resources.
-      </p>
+      <div class="abstract">
+        <span class="shortdesc"
+          >The related links elements define, group, and describe hyperlinks that are embedded in a
+          DITA topic. The links are contained by the
+          <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element and apply
+          to the DITA topic as a whole.
+        </span>
+      </div>
       <section class="section" id="relatedl__section-1"><p class="p"></p></section>
     </div>
     <nav role="navigation" class="related-links">
@@ -116,16 +119,16 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/linkinfo.html">linkinfo</a></strong
           ><br />Link information is a description of the links that are contained in a
-          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element, or additional
-          information about those links.
+          <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element. It can
+          provide additional information about those links.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/linklist.html">linklist</a></strong
-          ><br />A link list is an author-ordered group of links.
+          ><br />A link list is an author-ordered group of links that can include a title.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/linkpool.html">linkpool</a></strong
-          ><br />A link pool is a group of links; the order that the links are rendered in the
+          ><br />A link pool is a group of links. The order that the links are rendered in the
           output is determined by the processor.
         </li>
         <li class="link ulchildlink">

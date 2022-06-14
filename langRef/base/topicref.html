@@ -2,10 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'topicref'
-description: 'A topic reference is the mechanism for referencing a topic (or another
-  resource) from a DITA map. It can nest, which enables the expression of navigation and
-  table-of-content hierarchies, as well as containment hierarchies and parent-child
-  relationships.'
+description: 'A topic reference is the
+  mechanism for referencing a topic (or another resource) from a DITA
+  map. It can nest, which enables the expression of navigation and
+  table-of-content hierarchies, as well as containment hierarchies and
+  parent-child relationships.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -115,7 +116,7 @@ index: '../../toc.html'
             <a
               class="xref"
               href="../../common/reuse-w-lwdita/../../archSpec/base/thehrefattribute.html"
-              title="The href attribute is used to reference another DITA topic or map, a specific element inside a DITA topic or map, an external Web page, or another non-DITA resource."
+              title="The href attribute specifies the URI of the resource that is addressed. The referenced resource can be another DITA topic or map, an element inside a DITA topic or map, or a non-DITA resource."
               >The href attribute</a
             >
             for detailed information on supported values and processing implications. References to
@@ -129,21 +130,15 @@ index: '../../toc.html'
       <div class="example" id="topicref__example">
         <h2 class="title sectiontitle">Example</h2>
 
-        <figure class="fig fignone">
-          <figcaption>
-            <span class="fig--title-label">Figure 1. </span>Common map hierarchy using
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements
-          </figcaption>
-
-          <p class="p">
-            The following code sample shows a simple map that organizes several topics about the
-            software product Example Tool Builder. The
-            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> that refers to
-            <span class="ph filepath">setup.dita</span> uses the
-            <code class="keyword markupname xmlatt">@collection-type</code> attribute to indicate
-            that the order of three sub-topics in that section is important.
-          </p>
-          <pre class="pre codeblock"><code>&lt;map&gt;
+        <p class="p">
+          The following code sample shows a simple map that organizes several topics about the
+          software product "Example Tool Builder". The
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> that refers to
+          <span class="ph filepath">setup.dita</span> uses the
+          <code class="keyword markupname xmlatt">@collection-type</code> attribute to indicate that
+          the order of three children topics in that section is important.
+        </p>
+        <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Example Tool Builder version 1.2.3&lt;/title&gt;
   <strong class="ph b">&lt;topicref href="setup.dita" collection-type="sequence"&gt;</strong>
     &lt;topicref href="prerequisites.dita"/&gt;
@@ -157,7 +152,6 @@ index: '../../toc.html'
     &lt;!-- ... --&gt;
   &lt;/topicref&gt;
 &lt;/map&gt;</code></pre>
-        </figure>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -167,7 +161,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/basic-map-elements.html"
-            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog."
+            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. In addition, the topicmeta element can be used to specify metadata for the map, individual topics, or groups of topics."
             >Basic map elements</a
           >
         </div>

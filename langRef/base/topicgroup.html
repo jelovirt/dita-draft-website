@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -62,6 +62,14 @@ index: '../../toc.html'
       <section class="section" id="topicgroup__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
+        <p style="color:red;" class="p">
+          The <code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> element is a
+          convenience element. It is equivalent to a
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element without a
+          navigation title or <code class="keyword markupname xmlatt">@href</code>,
+          <code class="keyword markupname xmlatt">@keys</code>, or
+          <code class="keyword markupname xmlatt">@keyref</code> attributes.
+        </p>
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> element does not
           affect the navigation hierarchy of the map.
@@ -70,8 +78,8 @@ index: '../../toc.html'
           Most <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> elements within
           the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element inside of
           a <code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> have no effect on
-          rendered publications, but can be used to hold descriptive information about the grouped
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements.
+          rendered publications, but they can be used to hold descriptive information about the
+          grouped <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements.
         </p>
       </section>
       <section class="section" id="topicgroup__rendering-expectations">
@@ -91,7 +99,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
-          is defined in the map-group domain.
+          is defined in the <span style="color:red;" class="ph">mapgroup-domain module</span>.
         </p>
       </section>
       <section class="section" id="topicgroup__attributes">
@@ -137,7 +145,7 @@ index: '../../toc.html'
         </p>
         <pre class="pre codeblock"><code>&lt;topicgroup audience="novice" linking="none"&gt;
   &lt;topicmeta&gt;
-    &lt;navtitle&gt;Topics used only in "Getting started" material.&lt;/navtitle&gt;
+    &lt;titlehint&gt;Topics used only in "Getting started" material.&lt;/titlehint&gt;
   &lt;/topicmeta&gt;
   &lt;topicref href="getting-started.dita"/&gt;
   &lt;topicref href="basic-concepts.dita"/&gt;
@@ -152,7 +160,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/mapgroup-d.html"
-            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup."
             >Mapgroup domain elements</a
           >
         </div>

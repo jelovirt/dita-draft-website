@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Processing chunk="combine"'
-description: 'Setting chunk="combine" instructs a processor to combine the
-  reference source documents for rendering purposes. A single result document is
-  generated.'
+description: 'The presence of
+  chunk="combine" instructs a processor to combine the
+  referenced source documents for rendering
+  purposes.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -33,7 +34,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li>
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -98,37 +99,49 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        Setting <code class="ph codeph">chunk="combine"</code> instructs a processor to combine the
-        reference source documents for rendering purposes. A single result document is generated.
+        <span style="color:red;" class="ph">The presence of </span>
+        <code class="ph codeph">chunk="combine"</code> instructs a processor to combine the
+        <span style="color:red;" class="ph">referenced</span> source documents for rendering
+        purposes.
       </p>
-
       <p class="p">The following rules apply:</p>
       <ul class="ul">
         <li class="li">
-          When specified on the root element of a map, all source DITA documents referenced by the
-          map are treated as one DITA document.
+          When
+          <span style="color:red;" class="ph"
+            ><code class="ph codeph">chunk="combine"</code> is specified</span
+          >
+          on the root element of a map, all source DITA documents
+          <span style="color:red;" class="ph">that are</span> referenced by the map are treated as
+          one DITA document.
         </li>
         <li class="li">
-          When specified on a branch of a map, all source DITA documents referenced within that
-          branch are treated as one DITA document.
+          When
+          <span style="color:red;" class="ph"
+            ><code class="ph codeph">chunk="combine"</code> is specified</span
+          >
+          on a branch of a map, all source DITA documents
+          <span style="color:red;" class="ph">that are</span> referenced within that branch are
+          treated as one DITA document.
           <div class="note note note_note">
             <span class="note__title">Note:</span> This is true regardless of whether the element
             that specifies <code class="keyword markupname xmlatt">@chunk</code> refers to a topic
             or specifies a heading. In cases such as
             <code class="keyword markupname xmlelement">&lt;topicgroup&gt;</code> where a grouping
             element specifies <code class="ph codeph">chunk="combine"</code>, the equivalent DITA
-            document would be a single DITA document with a root element grouping peer topics.
+            document would be a single DITA document with a root element
+            <span style="color:red;" class="ph">that groups</span> peer topics.
           </div>
         </li>
+
         <li class="li">
-          When specified on a reference to a map, all source DITA documents within the scope of the
-          referenced map are treated as one DITA document.
-        </li>
-        <li class="li">
-          Once <code class="ph codeph">chunk="combine"</code> is specified on a map, branch, or map
-          reference, all source DITA documents grouped by that reference are treated as a single
-          resource. Any additional <code class="keyword markupname xmlatt">@chunk</code> attributes
-          on elements within the hierarchy are ignored.
+          <span style="color:red;" class="ph">When</span>
+          <code class="ph codeph">chunk="combine"</code> is specified on a map,
+          <span style="color:red;" class="ph">map</span> branch, or map reference, all source DITA
+          documents <span style="color:red;" class="ph">that are</span> grouped by the reference are
+          treated as a single resource. Any additional
+          <code class="keyword markupname xmlatt">@chunk</code> attributes on elements within the
+          <span style="color:red;" class="ph">grouping</span> are ignored.
         </li>
       </ul>
     </div>
@@ -139,7 +152,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/chunking.html"
-            title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents are combined into a single document for delivery, or that a single source document is split into multiple documents for delivery."
+            title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents should be combined into a single document for delivery or that a single source document should be split into multiple documents for delivery."
             >Chunking</a
           >
         </div>

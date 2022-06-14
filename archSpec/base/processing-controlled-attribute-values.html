@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -48,16 +48,6 @@ index: '../../toc.html'
                 >Processing controlled attribute values</a
               >
             </li>
-            <li>
-              <a href="../../archSpec/base/extending-a-subject-scheme.html"
-                >Extending subject schemes</a
-              >
-            </li>
-            <li>
-              <a href="../../archSpec/base/scaling-controlled-values-to-define-a-taxonomy.html"
-                >Scaling a list of controlled values to define a taxonomy</a
-              >
-            </li>
             <li><a href="../../archSpec/base/classification-maps.html">Classification maps</a></li>
             <li>
               <a href="../../archSpec/base/examples-subjectScheme-maps.html"
@@ -66,7 +56,7 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li><a href="../../archSpec/base/chunking.html">Chunking</a></li>
       </ul>
     </li>
@@ -105,7 +95,6 @@ index: '../../toc.html'
         An enumeration of controlled values can be defined with hierarchical levels by nesting
         subject definitions. This affects how processors perform filtering and flagging.
       </p>
-
       <div class="p">
         The following behavior is expected of processors in regard to subject scheme maps:
         <ul class="ul">
@@ -117,9 +106,13 @@ index: '../../toc.html'
           <li class="li">
             Processors <dfn class="term RFC-2119">SHOULD</dfn> validate that the values of
             attributes that are bound to controlled values contain only valid values from those
-            sets. (The list of controlled values is not validated by basic XML parsers.) If the
-            controlled values are part of a named key scope, the scope name is ignored for the
-            purpose of validating the controlled values.
+            sets.
+            <span style="color:red;" class="ph"
+              >This requirement is needed because basic XML parsers do not validate the list of
+              controlled values.</span
+            >
+            If the controlled values are part of a named key scope, the scope name is ignored for
+            the purpose of validating the controlled values.
           </li>
           <li class="li">
             Processors <dfn class="term RFC-2119">SHOULD</dfn> check that all values listed for an
@@ -176,7 +169,7 @@ index: '../../toc.html'
         <ul class="ul">
           <li class="li">
             If "therapist" is excluded, both "novice-therapist" and "expert-therapist" are by
-            default excluded (unless they are explicitly set to be included).
+            default excluded.
           </li>
           <li class="li">
             If "therapist" is flagged and "novice-therapist" is not explicitly flagged, processors

@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'navtitle'
-description: 'A navigation title is an alternative title for a resource; this
-  alternate title is optimized for situations where the topic title is unsuitable for use in a
-  table of contents or navigation pane.'
+description: 'A navigation title is an
+  alternative title for a resource. It is designed for situations where
+  the topic title is unsuitable for use in a table of contents or
+  navigation pane.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,31 +58,34 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A navigation title is an alternative title for a resource; this alternate title is optimized
-        for situations where the topic title is unsuitable for use in a table of contents or
-        navigation pane.
+        A navigation title is an alternative title for a resource. It is designed for situations
+        where the topic title is unsuitable for use in a table of contents or navigation pane.
       </p>
       <section class="section" id="navtitle__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          Navigation titles specify the title for use in tables of contents and other navigation
-          aids. In some cases, when processing a
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> that has no
-          <code class="keyword markupname xmlatt">@href</code>, this should also be used as the
-          title of the generated pseudo-topic, if applicable.
+          The <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element is a
+          convenience element. It is equivalent to a
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with
+          <code class="keyword markupname xmlatt">@title-role</code> set to
+          <span class="keyword">navigation</span>.
         </p>
       </section>
       <section class="section" id="navtitle__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
-        <div class="div">
-          The <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element is a
-          specialization of <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> with
-          the <code class="keyword markupname xmlatt">@title-role</code> set to
-          <code class="ph codeph">navigation</code>. Processing is dictated by the rules for
-          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>.
-        </div>
+        <p class="p">
+          Processing expectations are dictated by the rules for the
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element.
+        </p>
+        <p class="p">
+          In some cases, when processing a
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element that has no
+          <code class="keyword markupname xmlatt">@href</code> attribute, the navigation title can
+          also be used as the title of the
+          <span style="color:red;" class="ph">generated topic</span>, if applicable.
+        </p>
       </section>
       <section class="section" id="navtitle__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
@@ -89,7 +93,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>. It
-          is defined in the alternativeTitle-domain module.
+          is defined in the alternative-titles domain module.
         </p>
       </section>
       <section class="section" id="navtitle__attributes">
@@ -113,7 +117,7 @@ index: '../../toc.html'
               ><code class="keyword markupname xmlatt">@title-role</code></a
             >.
           </p>
-          <p class="p attr-exception" id="navtitle__d1370e74">
+          <p class="p attr-exception" id="navtitle__d1370e84">
             For this element, <code class="keyword markupname xmlatt">@title-role</code> has a
             default value of <span class="keyword">navigation</span>.
           </p>
@@ -140,8 +144,7 @@ index: '../../toc.html'
           </p>
           <pre class="pre codeblock"><code>&lt;task id="publishing-dita"&gt;
   &lt;title&gt;Publishing a DITA information set in PDF&lt;/title&gt;
-  &lt;shortdesc&gt;You can quickly publish your DITA information to PDF.
-  &lt;/shortdesc&gt;
+  &lt;shortdesc&gt;You can quickly publish your DITA information to PDF.&lt;/shortdesc&gt;
   &lt;prolog&gt;
     &lt;navtitle&gt;Publishing in PDF&lt;/navtitle&gt;
   &lt;/prolog&gt;
@@ -155,14 +158,14 @@ index: '../../toc.html'
           </figcaption>
 
           <p class="p">
-            The following code sample shows
-            <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> elements used in a
-            DITA map. The navigation title in the map takes precedence over any navigation titles
-            specified in the topic.
+            The following code sample shows a
+            <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element used in a
+            DITA map. The navigation title in the map takes precedence over a navigation title that
+            is specified in the topic.
           </p>
           <pre class="pre codeblock"><code>&lt;map xml:lang="en"&gt;
   &lt;title&gt;Publishing a DITA information set&lt;/title&gt;
-  &lt;topicref href="GUID-gibberish.dita"&gt;
+  &lt;topicref href="2378d670f2op78.dita"&gt;
     &lt;topicmeta&gt;
       &lt;navtitle&gt;Publishing to PDF&lt;/navtitle&gt;
     &lt;/topicmeta&gt;
@@ -178,8 +181,8 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/alternativeTitles-d.html"
-            title="The alternative title elements are used to describe alternative titles for resources for use in specific use cases."
-            >Alternative titles domain elements</a
+            title="The alternative title elements are designed to provide alternative titles for resources. The elements in the alternative-titles domain are specialized from the titlealt element."
+            >Alternative-titles domain elements</a
           >
         </div>
       </div>

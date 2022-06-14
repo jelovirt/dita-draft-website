@@ -2,9 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'Metadata elements'
-description: 'The metadata elements, many of which map to Dublin core metadata, are available in
-  topics and DITA maps. This design enables authors and information architects to use identical
-  metadata markup in both topics and maps.'
+description: 'Metadata elements are available in both topics and DITA maps. This design enables
+  authors and information architects to use identical metadata markup in
+  both topics and maps.'
 index: '../../toc.html'
 ---
 
@@ -41,7 +41,7 @@ index: '../../toc.html'
             </li>
             <li>
               <a href="../../archSpec/base/help-systems-and-other-user-assistance.html"
-                >Context hooks and window metadata for user assistance</a
+                >Window metadata for user assistance</a
               >
             </li>
           </ul>
@@ -49,8 +49,8 @@ index: '../../toc.html'
       </ul>
     </li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -86,40 +86,41 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        The metadata elements, many of which map to Dublin core metadata, are available in topics
-        and DITA maps. This design enables authors and information architects to use identical
-        metadata markup in both topics and maps.
+        <span style="color:red;" class="ph">M</span>etadata elements are available in
+        <span style="color:red;" class="ph">both</span> topics and DITA maps. This design enables
+        authors and information architects to use identical metadata markup in both topics and maps.
       </p>
       <p class="p">
-        The <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element is a wrapper
-        element that contains many of the metadata elements. In topics, the
-        <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element is available in
-        the <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element. In maps, the
-        <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element is available in
-        the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element.
-      </p>
-      <div class="note note note_note">
-        <span class="note__title">Note:</span> Not all metadata elements are available in the
-        <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> element. However, they
-        are available in either the topic
-        <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element or the map
-        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element.
-      </div>
-      <p class="p">
-        In DITA maps, the metadata elements also are available directly in the
-        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element. Collections of
-        metadata can be shared between DITA maps and topics by using the conref or keyref mechanism.
+        When used in maps, metadata elements are located in the
+        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code>
+        element. When used in topics, metadata elements are located in the
+        <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element.
       </p>
       <p class="p">
         In general, specifying metadata in a
-        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element is equivalent
-        to specifying it in the
-        <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element of a referenced
-        topic. The value of specifying the metadata at the map level is that the topic then can be
-        reused in other maps where different metadata might apply. Many items in the
-        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element also cascade to
+        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element
+        <span style="color:red;" class="ph"
+          >that is a child of a
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element</span
+        >
+        is equivalent to specifying it in the
+        <code class="keyword markupname xmlelement">&lt;prolog&gt;</code>
+        element of the referenced topic. The value of specifying the metadata
+        <span style="color:red;" class="ph">in the map</span> is that the topic then can be reused
+        in other maps where different metadata might apply. Many items in the
+        <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element cascade to
         nested <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements within
         the map.
+        <span style="color:red;" class="ph"
+          >See
+          <a
+            class="xref"
+            href="reconciling-topic-and-map-metadata.html"
+            title="The topicmeta element in maps can contain numerous metadata elements. These metadata elements can have an effect on the parent topicref element, any child topicref elements, and – if a direct child of the map element – on the ."
+            >Reconciling topic and map metadata elements</a
+          >
+          for information about which elements cascade.</span
+        >
       </p>
     </div>
     <nav role="navigation" class="related-links">
@@ -129,20 +130,10 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/dita-metadata.html"
-            title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts."
+            title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is specified in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map. This design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts."
             >DITA metadata</a
           >
         </div>
-      </div>
-      <div class="linklist relinfo">
-        <strong>Related information</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a class="link" href="http://dublincore.org/" target="_blank" rel="external noopener"
-              >Dublin Core Metadata Initiative (DCMI)</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
   </article>

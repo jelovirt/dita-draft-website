@@ -1,10 +1,9 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Conditional processing values and groups'
-description: 'Conditional processing attributes classify elements with metadata. The metadata is
-  specified using space-delimited string values or grouped
-  values.'
+title: 'Conditional processing attribute values'
+description: 'Conditional processing attributes use space-delimited string values or grouped string
+  values to support both filtering and flagging.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -31,19 +30,45 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
         <li>
-          <a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a>
+          <a href="../../archSpec/base/condproc.html">Conditional processing</a>
           <ul class="nav nav-list">
-            <li class="active">
-              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
-                >Conditional processing values and groups</a
+            <li>
+              <a href="../../archSpec/base/aboutconditionalprocessing.html"
+                >About conditional processing</a
               >
             </li>
-            <li><a href="../../archSpec/base/filtering.html">Filtering</a></li>
-            <li><a href="../../archSpec/base/flagging.html">Flagging</a></li>
             <li>
-              <a href="../../archSpec/base/conditional-processing-for-specific-output-types.html"
-                >Conditional processing to generate multiple deliverable types</a
+              <a href="../../archSpec/base/conditionalprocessingexpectations.html"
+                >Expectations for conditional processing</a
               >
+            </li>
+            <li>
+              <a href="../../archSpec/base/aboutditavaldocuments.html"
+                >About the DITAVAL document</a
+              >
+            </li>
+            <li class="active">
+              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
+                >Conditional processing attribute values</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attribute-groups.html"
+                >Conditional processing attribute values with groups</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/conditional-processing-and-subject-schemes.html"
+                >Conditional processing and subject schemes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/filtering.html"
+                >Filtering based on metadata attributes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/flagging.html">Flagging based on metadata attributes</a>
             </li>
             <li>
               <a href="../../archSpec/base/examples-of-conditional-processing.html"
@@ -53,8 +78,12 @@ index: '../../toc.html'
           </ul>
         </li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -83,117 +112,27 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">Conditional processing values and groups</h1>
+    <h1 class="title topictitle1" id="ariaid-title1">Conditional processing attribute values</h1>
 
     <div class="body conbody">
       <p class="shortdesc">
-        Conditional processing attributes classify elements with metadata. The metadata is specified
-        using space-delimited string values <span class="ph">or grouped values.</span>
+        Conditional processing attributes use space-delimited string values or grouped string values
+        to support both filtering and flagging.
       </p>
       <p class="p">
-        For example, the string values within
-        <code class="keyword markupname xmlatt">@product</code> in
-        <code class="ph codeph">&lt;p product="basic deluxe"&gt;</code> indicate that the paragraph
-        applies to the <q class="q">basic</q> product and to the <q class="q">deluxe</q> product.
-      </p>
-      <p class="p">
-        Groups can be used to organize classification metadata into subcategories. This is intended
-        to support situations where a predefined metadata attribute applies to multiple specialized
-        subcategories. The grouping syntax exactly matches the syntax used for generalized
-        attributes, making it valid inside
+        The simplest and most common way to specify metadata on a conditional processing attribute
+        is using individual string values.
         <span class="ph"
-          ><code class="keyword markupname xmlatt">@props</code> and any attribute specialized from
-          <code class="keyword markupname xmlatt">@props</code> (including those integrated by
-          default in OASIS shells: <code class="keyword markupname xmlatt">@audience</code>,
-          <code class="keyword markupname xmlatt">@deliveryTarget</code>,
-          <code class="keyword markupname xmlatt">@platform</code>,
-          <code class="keyword markupname xmlatt">@product</code>,
-          <code class="keyword markupname xmlatt">@otherprops</code>)</span
-        >.
+          >For example, the values <span class="keyword">basic</span> and
+          <span class="keyword">deluxe</span> within
+          <code class="ph codeph">&lt;p product="basic deluxe"&gt;</code> indicate that the
+          paragraph applies to the basic and deluxe products.</span
+        >
       </p>
-      <p class="p">
-        For example, the <code class="keyword markupname xmlatt">@product</code> attribute can be
-        used to classify an element based on both related databases and related application servers.
-        Using groups for these subcategories allows each category to be processed independently;
-        when filter conditions exclude all applicable databases within a group, the element can be
-        safely excluded, regardless of any other
-        <code class="keyword markupname xmlatt">@product</code> conditions.
-      </p>
-      <p class="p">
-        Groups can be used within
-        <span class="ph"
-          ><code class="keyword markupname xmlatt">@props</code> and any attribute specialized from
-          <code class="keyword markupname xmlatt">@props</code> (including those integrated by
-          default in OASIS shells: <code class="keyword markupname xmlatt">@audience</code>,
-          <code class="keyword markupname xmlatt">@deliveryTarget</code>,
-          <code class="keyword markupname xmlatt">@platform</code>,
-          <code class="keyword markupname xmlatt">@product</code>,
-          <code class="keyword markupname xmlatt">@otherprops</code>)</span
-        >. The following rules apply:
-      </p>
-      <ul class="ul">
-        <li class="li">
-          Groups consist of a name immediately followed by a parenthetical group of zero or more
-          space-delimited string values. For example,
-          <code class="ph codeph">"groupName(valueOne valueTwo)"</code>.
-        </li>
-        <li class="li">Groups cannot be nested.</li>
-        <li class="li">
-          If two groups with the same name are found in a single attribute, they are treated as if
-          all values are specified in the same group. The following values for the
-          <code class="keyword markupname xmlatt">@otherprops</code> attribute are equivalent:
-          <pre class="pre codeblock"><code>otherprops="groupA(a b) groupA(c) groupZ(APPNAME)"
-otherprops="groupA(a b c) groupZ(APPNAME)"</code></pre>
-        </li>
-        <li class="li">
-          If both grouped values and ungrouped values are found in a single attribute, the ungrouped
-          values belong to an implicit group; the name of that group matches the name of the
-          attribute. Therefore, the following values for the
-          <code class="keyword markupname xmlatt">@product</code> attribute are equivalent:
-          <pre class="pre codeblock"><code>product="a database(dbA dbB) b appserver(mySERVER) c"
-product="product(a b c) database(dbA dbB) appserver(mySERVER)"</code></pre>
-        </li>
-      </ul>
       <p class="p">
         Setting a conditional processing attribute to an empty value, such as
         <code class="ph codeph">product=""</code>, is equivalent to omitting that attribute from the
-        element. An empty group within an attribute is equivalent to omitting that group from the
-        attribute. For example, <code class="ph codeph">&lt;ph product="database() A"&gt;</code> is
-        equivalent to <code class="ph codeph">&lt;ph product="A"&gt;</code>. Combining both rules
-        into one example, <code class="ph codeph">&lt;ph product="operatingSystem()"&gt;</code> is
-        equivalent to <code class="ph codeph">&lt;ph&gt;</code>.
-      </p>
-      <p class="p">
-        If two groups with the same name exist on different attributes, a rule specified for that
-        group will evaluate the same way on each attribute. For example, if the group "sample" is
-        specified within both <code class="keyword markupname xmlatt">@platform</code> and
-        <code class="keyword markupname xmlatt">@otherprops</code>, a DITAVAL rule for
-        <code class="ph codeph">sample="value"</code> will evaluate the same in each attribute. If
-        there is a need to distinguish between similarly named groups on different attributes, the
-        best practice is to use more specific group names such as
-        <var class="keyword varname">platformGroupname</var> and
-        <var class="keyword varname">productGroupname</var>. Alternatively, DITAVAL rules can be
-        specified based on the attribute name rather than the group name.
-      </p>
-      <p class="p">
-        If the same group name is used in different attributes, a complex scenario could be created
-        where different defaults are specified for different attributes, with no rule set for a
-        group or individual value. In this case a value might end up evaluating differently in the
-        different attributes. For example, a DITAVAL can set a default of "exclude" for
-        <code class="keyword markupname xmlatt">@platform</code> and a default of "flag" for
-        <code class="keyword markupname xmlatt">@product</code>. If no rules are specified for group
-        <code class="ph codeph">oddgroup()</code>, or for the value
-        <code class="ph codeph">oddgroup="edgecase"</code>, the attribute
-        <code class="ph codeph">platform="oddgroup(edgecase)"</code> will evaluate to "exclude"
-        while <code class="ph codeph">product="oddgroup(edgecase)"</code> will resolve to "flag".
-        See
-        <a
-          class="xref"
-          href="../../langRef/containers/ditaval-elements.html"
-          title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
-          >DITAVAL elements</a
-        >
-        for information on how to change default behaviors in DITAVAL profile.
+        element.
       </p>
     </div>
     <nav role="navigation" class="related-links">
@@ -203,31 +142,10 @@ product="product(a b c) database(dbA dbB) appserver(mySERVER)"</code></pre>
           <a
             class="link"
             href="../../archSpec/base/condproc.html"
-            title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-            >Conditional processing (profiling)</a
+            title="Conditional processing is the filtering or flagging of information based on processing-time criteria. Conditional processing is based on attributes specified in the DITA source."
+            >Conditional processing</a
           >
         </div>
-      </div>
-      <div class="linklist relref">
-        <strong>Related reference</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../langRef/attributes/universalAttributes.html"
-              title="The universal attribute group defines a set of common attributes that are available on almost every DITA element. The universal attribute group includes all attributes from the ID, metadata, and localization attribute groups, plus the class and outputclass attributes."
-              >Metadata attributes</a
-            >
-          </li>
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../langRef/containers/ditaval-elements.html"
-              title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
-              >DITAVAL elements</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
   </article>

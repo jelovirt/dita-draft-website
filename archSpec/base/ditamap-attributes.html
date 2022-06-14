@@ -45,8 +45,8 @@ index: '../../toc.html'
       </ul>
     </li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -218,7 +218,7 @@ index: '../../toc.html'
               <a
                 class="xref"
                 href="chunking.html"
-                title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents are combined into a single document for delivery, or that a single source document is split into multiple documents for delivery."
+                title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents should be combined into a single document for delivery or that a single source document should be split into multiple documents for delivery."
                 >Chunking</a
               >.
             </p>
@@ -258,23 +258,29 @@ index: '../../toc.html'
               map apply. The following values are specified:
             </p>
             <dl class="dl">
-              <dt class="dt dlterm"><code class="ph codeph">cascade="merge"</code></dt>
+              <dt class="dt dlterm">merge</dt>
               <dd class="dd">
-                The metadata attributes cascade; the values of the metadata attributes are additive.
-                This is the processing default for the
-                <code class="keyword markupname xmlatt">@cascade</code> attribute and was the only
-                defined behavior for DITA 1.2 and earlier.
+                <span style="color:red;" class="ph"
+                  >Indicates that the metadata attributes cascade, and that </span
+                >the values of the metadata attributes are additive. This is the processing default
+                for the <code class="keyword markupname xmlatt">@cascade</code> attribute.
               </dd>
 
-              <dt class="dt dlterm"><code class="ph codeph">cascade="nomerge"</code></dt>
+              <dt class="dt dlterm">nomerge</dt>
               <dd class="dd">
-                The metadata attributes cascade; however, they are not additive for
+                <span style="color:red;" class="ph"
+                  >Indicates that the metadata attributes cascade, but that </span
+                >they are not additive for
                 <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that
                 specify a different value for a specific metadata attribute. If the cascading value
                 for an attribute is already merged based on multiple ancestor elements, that merged
-                value continues to cascade until a new value is encountered (that is, setting
-                <code class="ph codeph">cascade="nomerge"</code> does not undo merging that took
-                place on ancestors).
+                value continues to cascade until a new value is encountered<span
+                  style="color:red;"
+                  class="ph"
+                  >. That is,</span
+                >
+                setting <code class="ph codeph">cascade="nomerge"</code> does not undo merging that
+                took place on ancestor elements.
               </dd>
             </dl>
             <p class="p">
@@ -356,13 +362,13 @@ index: '../../toc.html'
             <li class="li">
               <span class="ph"
                 ><code class="keyword markupname xmlatt">@props</code> and any attribute specialized
-                from <code class="keyword markupname xmlatt">@props</code> (including those
-                integrated by default in OASIS shells:
+                from <code class="keyword markupname xmlatt">@props</code>, including those
+                integrated by default in the OASIS-provided document-type shells:
                 <code class="keyword markupname xmlatt">@audience</code>,
                 <code class="keyword markupname xmlatt">@deliveryTarget</code>,
                 <code class="keyword markupname xmlatt">@platform</code>,
                 <code class="keyword markupname xmlatt">@product</code>,
-                <code class="keyword markupname xmlatt">@otherprops</code>)</span
+                <code class="keyword markupname xmlatt">@otherprops</code></span
               >
             </li>
             <li class="li"><code class="keyword markupname xmlatt">@search</code></li>

@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -101,11 +101,11 @@ index: '../../toc.html'
           >.
         </p>
         <div class="p attr-exception" id="elementdef__attr-exception">
-          For this element,
+          For this element, the following considerations apply:
           <ul class="ul" id="elementdef__ul_ddp_51l_ppb">
             <li class="li">
-              The <code class="keyword markupname xmlatt">@name</code> attribute is required, and
-              specifies the name of an element to which controlled attribute values are bound.
+              The <code class="keyword markupname xmlatt">@name</code> attribute is required. It
+              specifies the name of an element to which the controlled attribute values are bound.
             </li>
             <li class="li">
               The <code class="keyword markupname xmlatt">@translate</code> attribute has a default
@@ -117,14 +117,9 @@ index: '../../toc.html'
       <div class="example" id="elementdef__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          In this example, the <code class="keyword markupname xmlatt">@type</code> attribute for
-          the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
-          element is bound to the specified set of values. Processors should limit the values for
-          the
-          <code class="keyword markupname xmlatt">@type</code> attribute on the
-          <code class="keyword markupname xmlelement">&lt;note&gt;</code> element to the following
-          set of values: attention, caution, and danger. Other elements that have a
-          <code class="keyword markupname xmlatt">@type</code> attribute are not affected.
+          In this code sample, the <code class="keyword markupname xmlatt">@type</code> attribute
+          for the <code class="keyword markupname xmlelement">&lt;note&gt;</code> element is bound
+          to the specified set of values:
         </p>
         <pre class="pre codeblock"><code>&lt;subjectScheme&gt;
   &lt;subjectdef keys="note-values"&gt;
@@ -139,6 +134,15 @@ index: '../../toc.html'
     &lt;subjectdef keyref="note-values"/&gt;
   &lt;/enumerationdef&gt;
 &lt;/subjectScheme&gt;</code></pre>
+        <p class="p">
+          Processors limit the values for the
+          <code class="keyword markupname xmlatt">@type</code> attribute on the
+          <code class="keyword markupname xmlelement">&lt;note&gt;</code> element to the following
+          set of values: <span class="keyword">attention</span>,
+          <span class="keyword">caution</span>, and <span class="keyword">danger</span>. Other
+          elements that have a <code class="keyword markupname xmlatt">@type</code> attribute are
+          not affected.
+        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -148,7 +152,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

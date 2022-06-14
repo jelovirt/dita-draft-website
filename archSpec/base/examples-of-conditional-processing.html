@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -30,19 +30,45 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
         <li>
-          <a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a>
+          <a href="../../archSpec/base/condproc.html">Conditional processing</a>
           <ul class="nav nav-list">
             <li>
-              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
-                >Conditional processing values and groups</a
+              <a href="../../archSpec/base/aboutconditionalprocessing.html"
+                >About conditional processing</a
               >
             </li>
-            <li><a href="../../archSpec/base/filtering.html">Filtering</a></li>
-            <li><a href="../../archSpec/base/flagging.html">Flagging</a></li>
             <li>
-              <a href="../../archSpec/base/conditional-processing-for-specific-output-types.html"
-                >Conditional processing to generate multiple deliverable types</a
+              <a href="../../archSpec/base/conditionalprocessingexpectations.html"
+                >Expectations for conditional processing</a
               >
+            </li>
+            <li>
+              <a href="../../archSpec/base/aboutditavaldocuments.html"
+                >About the DITAVAL document</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attributes.html"
+                >Conditional processing attribute values</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/usage-of-conditional-processing-attribute-groups.html"
+                >Conditional processing attribute values with groups</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/conditional-processing-and-subject-schemes.html"
+                >Conditional processing and subject schemes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/filtering.html"
+                >Filtering based on metadata attributes</a
+              >
+            </li>
+            <li>
+              <a href="../../archSpec/base/flagging.html">Flagging based on metadata attributes</a>
             </li>
             <li class="active">
               <a href="../../archSpec/base/examples-of-conditional-processing.html"
@@ -51,7 +77,27 @@ index: '../../toc.html'
               <ul class="nav nav-list">
                 <li>
                   <a href="../../archSpec/base/example-setting-condproc-values.html"
-                    >Example: Setting conditional processing values and groups</a
+                    >Example: Setting conditional processing values</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-simple-ditaval.html"
+                    >Example: Simple DITAVAL document</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-default-exclude.html"
+                    >Example: Changing the default behavior to "exclude"</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-flagging-outputclass.html"
+                    >Example: Flagging with outputclass</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-groups.html"
+                    >Example: Filtering based on groups</a
                   >
                 </li>
                 <li>
@@ -59,13 +105,27 @@ index: '../../toc.html'
                     >Example: Filtering and flagging topic content</a
                   >
                 </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-subjectscheme.html"
+                    >Example: Simple DITAVAL document</a
+                  >
+                </li>
+                <li>
+                  <a href="../../archSpec/base/example-ditaval-with-conditions-for-groups.html"
+                    >Example: DITAVAL with conditions for groups</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -104,18 +164,66 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-setting-condproc-values.html"
-              >Example: Setting conditional processing values and groups</a
+              >Example: Setting conditional processing values</a
             ></strong
-          ><br />Conditional processing attributes can be used to classify content using either
-          individual values or using groups.
+          ><br />In this scenario, conditional processing attributes are set in DITA content.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-simple-ditaval.html"
+              >Example: Simple DITAVAL document</a
+            ></strong
+          ><br />In this scenario, a simple DITAVAL document sets up rules for filtering and
+          flagging based on conditional processing attributes.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-ditaval-default-exclude.html"
+              >Example: Changing the default behavior to "exclude"</a
+            ></strong
+          ><br />In this scenario, a simple DITAVAL document resets the default behavior for
+          unspecified values to "exclude".
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-flagging-outputclass.html"
+              >Example: Flagging with outputclass</a
+            ></strong
+          ><br />In this scenario, the
+          <code class="keyword markupname xmlatt">@outputclass</code> attribute in a DITAVAL
+          document is used to enable CSS based flagging.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-ditaval-groups.html"
+              >Example: Filtering based on groups</a
+            ></strong
+          ><br />In this scenario, groups are used for filtering within a conditional processing
+          attribute.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/evaluating-conditional-processing-attributes.html"
               >Example: Filtering and flagging topic content</a
             ></strong
-          ><br />A publisher might want to flag information that applies to administrators and
-          exclude information that applies to the extended product.
+          ><br />In this scenario, a publisher wants to flag information that applies to
+          administrators and exclude information that applies to the extended product.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-ditaval-subjectscheme.html"
+              >Example: Simple DITAVAL document</a
+            ></strong
+          ><br />A DITAVAL document can reference tokens that pull in additional topics from a
+          subject scheme.
+        </li>
+        <li class="link ulchildlink">
+          <strong
+            ><a href="../../archSpec/base/example-ditaval-with-conditions-for-groups.html"
+              >Example: DITAVAL with conditions for groups</a
+            ></strong
+          ><br />In this advanced scenario, grouped values are used for filtewring within a
+          conditional processing attribute.
         </li>
       </ul>
       <div class="familylinks">
@@ -124,8 +232,8 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/condproc.html"
-            title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-            >Conditional processing (profiling)</a
+            title="Conditional processing is the filtering or flagging of information based on processing-time criteria. Conditional processing is based on attributes specified in the DITA source."
+            >Conditional processing</a
           >
         </div>
       </div>

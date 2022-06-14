@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -134,14 +134,14 @@ index: '../../toc.html'
       <div class="example" id="tm__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows how IBM uses the
+          The following code sample shows
+          <span style="color:red;" class="ph">how a company might use</span> the
           <code class="keyword markupname xmlelement">&lt;tm&gt;</code> element:
         </p>
-        <pre
-          class="pre codeblock"
-        ><code>&lt;p&gt;The advantages of using &lt;tm trademark="DB2 Universal Database" tmtype="tm"&gt;
-&lt;tm trademark="DB2" tmtype="reg" tmclass="ibm"&gt;DB2&lt;/tm&gt; Universal Database&lt;/tm&gt; are 
-well known.&lt;/p&gt;</code></pre>
+        <pre style="color:red;" class="pre codeblock"><code>&lt;p&gt;The advantages of using the 
+  &lt;tm trademark="Acme" tmtype="reg"&gt;Acme&lt;/tm&gt; 
+  &lt;tm trademark="SuperFancyWidget" tmtype="tm"&gt;SuperFancyWidget&lt;/tm&gt;
+  are well known to Bugs Bunny fans.&lt;/p&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -151,7 +151,7 @@ well known.&lt;/p&gt;</code></pre>
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

@@ -16,8 +16,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,18 +55,34 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">A topic head is a title-only entry in a DITA map.</p>
+      <section class="section" style="color:red;" id="topichead__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element is a
+          convenience element. It is equivalent to a
+          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element with the
+          following components:
+        </p>
+        <ul class="ul">
+          <li class="li">A navigation title</li>
+          <li class="li">
+            No <code class="keyword markupname xmlatt">@href</code>,
+            <code class="keyword markupname xmlatt">@keys</code>, or
+            <code class="keyword markupname xmlatt">@keyref</code> attributes
+          </li>
+        </ul>
+      </section>
       <section class="section" id="topichead__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
-        <p class="p">
-          The content of the
-          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with a
-          <code class="keyword markupname xmlatt">@title-role</code> of
-          <code class="keyword markupname xmlelement">&lt;navigation&gt;</code>, such as
-          <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code>, appears as a heading
-          when the map is rendered as a table of content. In print contexts, it also appears as a
-          heading in the rendered content.
+        <p style="color:red;" class="p">
+          When the navigation title associated with a
+          <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element is rendered,
+          it appears as a heading in a table of contents. In print contexts, it also appears as a
+          heading in the rendered body content.
         </p>
+        <p class="p"></p>
       </section>
       <section class="section" id="topichead__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
@@ -83,7 +99,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It
-          is defined in the map-group module.
+          is defined in the <span style="color:red;" class="ph">mapgroup-domain module</span>.
         </p>
       </section>
       <section class="section" id="topichead__attributes">
@@ -123,7 +139,7 @@ index: '../../toc.html'
         <p class="p">
           In the following example, the
           <code class="keyword markupname xmlelement">&lt;topichead&gt;</code> elements provide
-          titles ("Computers" and "Books") for two groups of topics.
+          titles ("Computers" and "Books") for two groups of topics:
         </p>
         <pre class="pre codeblock"><code>&lt;map&gt;
   <strong class="ph b">&lt;topichead&gt;</strong>
@@ -151,7 +167,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/mapgroup-d.html"
-            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup"
+            title="The mapgroup domain elements define, group, or reference content. Many of the mapgroup elements are convenience elements; they simply provide shortcuts for an author to use existing markup."
             >Mapgroup domain elements</a
           >
         </div>

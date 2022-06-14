@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -83,25 +83,31 @@ index: '../../toc.html'
               >ID and conref attributes</a
             ></span
           >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-status"
-            ><code class="keyword markupname xmlatt">@status</code></a
-          >,
           <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-base"
             ><code class="keyword markupname xmlatt">@base</code></a
           >,
-          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass"
-            ><code class="keyword markupname xmlatt">@outputclass</code></a
-          >, and
           <a class="xref" href="../attributes/universalAttributes.html#univ-atts__class"
             ><code class="keyword markupname xmlatt">@class</code></a
+          >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-name"
+            ><code class="keyword markupname xmlatt">@name</code></a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__outputclass"
+            ><code class="keyword markupname xmlatt">@outputclass</code></a
+          >,
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-status"
+            ><code class="keyword markupname xmlatt">@status</code></a
+          >, and
+          <a class="xref" href="../attributes/universalAttributes.html#univ-atts__attr-translate"
+            ><code class="keyword markupname xmlatt">@translate</code></a
           >.
         </p>
         <div class="p attr-exception" id="attributedef__attr-exception">
-          For this element,
-          <ul class="ul" id="attributedef__ul_ddp_51l_ppb">
+          For this element, the following considerations apply:
+          <ul class="ul">
             <li class="li">
-              The <code class="keyword markupname xmlatt">@name</code> attribute is required, and
-              specifies the name of an attribute that will take a set of enumerated values.
+              The <code class="keyword markupname xmlatt">@name</code> attribute is required. It
+              specifies the name of the attribute to which the controlled values are bound.
             </li>
             <li class="li">
               The <code class="keyword markupname xmlatt">@translate</code> attribute has a default
@@ -115,21 +121,16 @@ index: '../../toc.html'
         <p class="p">
           In the following code sample, the enumeration definition for the
           <code class="keyword markupname xmlatt">@otherprops</code> attribute limits the
-          permissible values to the subject <span class="keyword">values-otherprops</span>. This
-          means that the only valid value for the
-          <code class="keyword markupname xmlatt">@otherprops</code> attribute is "examples".
+          permissible values to the subject <span class="keyword">values-otherprops</span>:
         </p>
         <pre class="pre codeblock"><code>&lt;subjectScheme&gt;
-    
-    &lt;!-- DEFINE SETS OF CONTROLLED VALUES --&gt;
-    
+    &lt;!-- DEFINE SETS OF CONTROLLED VALUES --&gt;    
     &lt;!-- Values for @otherprops --&gt;
     &lt;subjectdef keys="values-otherprops"&gt;
         &lt;subjectdef keys="examples"/&gt;
     &lt;/subjectdef&gt;
     
-    &lt;!-- BINDS SETS OF CONTROLLED VALUES --&gt;
-    
+    &lt;!-- BINDS SETS OF CONTROLLED VALUES --&gt;    
     &lt;!-- Binding for @otherprops --&gt;
     &lt;enumerationdef&gt;
         <strong class="ph b">&lt;attributedef name="otherprops"/&gt;</strong>
@@ -137,6 +138,11 @@ index: '../../toc.html'
     &lt;/enumerationdef&gt;
 
 &lt;/subjectScheme&gt;</code></pre>
+        <p class="p">
+          This means that the only valid value for the
+          <code class="keyword markupname xmlatt">@otherprops</code> attribute is
+          <span class="keyword">examples</span>.
+        </p>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -146,7 +152,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

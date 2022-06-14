@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -35,7 +35,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li>
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -69,17 +69,17 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-branch.html"
-                    >Example: Using chunk to render a single document from one branch</a
+                    >Example: Using chunk to render a single document from one or more branches</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-group.html"
-                    >Example: Using chunk to combine a group of topics</a
+                    >Example: Using chunk to combine groups of topics</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
-                    >Example: Using chunk to combine nested documents</a
+                    >Example: How chunk="combine" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -89,7 +89,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-split-nested.html"
-                    >Example: Using chunk to split nested documents</a
+                    >Example: How chunk="split" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -99,7 +99,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-within-split.html"
-                    >Example: Combining topics within a split context</a
+                    >Example: Using chunk="combine" when the root map specifies chunk="split"</a
                   >
                 </li>
                 <li>
@@ -153,13 +153,13 @@ index: '../../toc.html'
         without the <code class="keyword markupname xmlatt">@chunk</code> attribute.
       </p>
       <div class="note note note_note">
-        <span class="note__title">Note:</span> Examples use sample files with modified file names to
-        help illustrate equivalent before and after resolution of
-        <code class="keyword markupname xmlatt">@chunk</code> attributes. However, there is no
-        requirement for implementations processing
-        <code class="keyword markupname xmlatt">@chunk</code> to generate files, as long as the
-        rendered result is split or combined as described. If generating files, actual file names
-        are implementation dependent.
+        <span class="note__title">Note:</span> The examples use sample files with modified file
+        names to help illustrate <span style="color:red;" class="ph">the</span> equivalent before
+        and after resolution of <code class="keyword markupname xmlatt">@chunk</code> attributes.
+        However, there is no requirement for implementations processing the
+        <code class="keyword markupname xmlatt">@chunk</code> attribute to generate files, as long
+        as the rendered result is split or combined as described. If generating files,
+        <span style="color:red;" class="ph">the</span> file names are implementation dependent.
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -169,17 +169,16 @@ index: '../../toc.html'
             ><a href="../../archSpec/base/example-chunk-combine-all.html"
               >Example: Using chunk to combine all documents into one</a
             ></strong
-          ><br />Where a publishing system typically would render each topic document as an
-          independent result document, the
-          <code class="keyword markupname xmlatt">@chunk</code> attribute can be used to render all
-          content as a single document.
+          ><br />When a processor would typically render each topic document as an independent
+          result document, the <code class="keyword markupname xmlatt">@chunk</code> attribute can
+          be used to render all content as a single document.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-combine-branch.html"
-              >Example: Using chunk to render a single document from one branch</a
+              >Example: Using chunk to render a single document from one or more branches</a
             ></strong
-          ><br />Where a publishing system typically would render each topic document as an
+          ><br />When a publishing system typically would render each topic document as an
           independent result document, the
           <code class="keyword markupname xmlatt">@chunk</code> attribute can be used to render
           individual branches of a map as single documents.
@@ -187,7 +186,7 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-combine-group.html"
-              >Example: Using chunk to combine a group of topics</a
+              >Example: Using chunk to combine groups of topics</a
             ></strong
           ><br />The <code class="keyword markupname xmlatt">@chunk</code> attribute can be used on
           grouping elements to combine multiple source documents into one result document.
@@ -195,7 +194,7 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
-              >Example: Using chunk to combine nested documents</a
+              >Example: How chunk="combine" effects the map hierarchy</a
             ></strong
           ><br />Special attention is necessary when combining a nested map hierarchy that includes
           documents with their own nested topics.
@@ -205,17 +204,19 @@ index: '../../toc.html'
             ><a href="../../archSpec/base/example-chunk-split.html"
               >Example: Using chunk to split documents</a
             ></strong
-          ><br />When topics are most easily created or generated in a single DITA document,
-          <code class="ph codeph">chunk="split"</code> will instruct processors to render them
+          ><br />When topics are <span style="color:red;" class="ph">authored</span> or generated in
+          a single DITA document, <span style="color:red;" class="ph">specifying </span
+          ><code class="ph codeph">chunk="split"</code>
+          <span style="color:red;" class="ph">instructs</span> processors to render them
           individually when possible.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-split-nested.html"
-              >Example: Using chunk to split nested documents</a
+              >Example: How chunk="split" effects the map hierarchy</a
             ></strong
           ><br />Special attention is necessary when evaluating the map hierarchy that results from
-          splitting a documents with their own nested topics.
+          splitting <span style="color:red;" class="ph">documents that contain</span> nested topics.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -230,21 +231,24 @@ index: '../../toc.html'
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-combine-within-split.html"
-              >Example: Combining topics within a split context</a
+              >Example: Using chunk="combine" when the root map specifies chunk="split"</a
             ></strong
           ><br />While <code class="keyword markupname xmlatt">@chunk</code> attributes are ignored
-          when a "combine" action is already in effect, it is possible to use
+          when
+          <span style="color:red;" class="ph"><code class="ph codeph">chunk="combine"</code></span>
+          is already in effect, it is possible to use
           <code class="ph codeph">chunk="combine"</code> when
-          <code class="ph codeph">split</code> is otherwise in effect.
+          <code class="ph codeph">chunk="split"</code> is in effect.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/example-chunk-managing-links.html"
               >Example: Managing links when chunking</a
             ></strong
-          ><br />Link management with <code class="keyword markupname xmlatt">@chunk</code> is often
-          straightforward; in most cases where URI-based linking is ambiguous, using indirect links
-          and <code class="keyword markupname xmlatt">@keyref</code> will give the correct result.
+          ><br />If a topic is referenced more than once and one of those instances involves
+          chunking, links to that topic might be ambiguous. In most of such cases, using key
+          references to keys that are defined directly on the chunked instance of the topic will
+          give the correct result.
         </li>
       </ul>
       <div class="familylinks">
@@ -253,7 +257,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../archSpec/base/chunking.html"
-            title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents are combined into a single document for delivery, or that a single source document is split into multiple documents for delivery."
+            title="Content often needs to be delivered in a different granularity than it is authored. The chunk attribute enables map authors to specify that multiple source documents should be combined into a single document for delivery or that a single source document should be split into multiple documents for delivery."
             >Chunking</a
           >
         </div>

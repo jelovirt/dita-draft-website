@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -114,10 +114,8 @@ index: '../../toc.html'
         RELAX NG modules are self-integrating; they automatically add to the content models and
         attribute lists that they extend. This means that information architects do not have much
         work to do when integrating vocabulary modules
-        <span style="color:red;" class="ph"
-          >and element-configuration modules (constraints and expansion)</span
-        >
-        into document-type shells.
+        <span class="ph">and element-configuration modules (constraints and expansion)</span> into
+        document-type shells.
       </p>
       <p class="p">
         In addition to simplifying document-type shells, the self-integrating aspect of RELAX NG
@@ -131,7 +129,7 @@ index: '../../toc.html'
           Domain modules directly extend elements, unlike DTDs, which rely on an extra file and
           extensions within the document-type shell.
         </li>
-        <li style="color:red;" class="li">
+        <li class="li">
           Element-configuration modules (constraint and expansion) directly include the modules that
           they extend, which means that just by referencing an element-configuration module, the
           document-type shell gets everything it needs to redefine a vocabulary module.
@@ -139,8 +137,7 @@ index: '../../toc.html'
       </ul>
       <div class="p">
         RELAX NG grammars for DITA document-type shells, vocabulary modules, and
-        <span style="color:red;" class="ph"
-          >element-configuration modules (constraint and expansion) </span
+        <span class="ph">element-configuration modules (constraint and expansion) </span
         ><dfn class="term RFC-2119">MAY</dfn> do the following:
         <ul class="ul">
           <li class="li">
@@ -199,11 +196,9 @@ index: '../../toc.html'
         <p class="p">
           The DITA coding requirements are defined for the RELAX NG XML syntax. Document type
           shells, vocabulary modules, and
-          <span style="color:red;" class="ph"
-            >element-configuration modules (constraints and expansion)</span
-          >
-          that use the RELAX NG compact syntax can use the same organization requirements as those
-          defined for the RELAX NG XML syntax.
+          <span class="ph">element-configuration modules (constraints and expansion)</span> that use
+          the RELAX NG compact syntax can use the same organization requirements as those defined
+          for the RELAX NG XML syntax.
         </p>
       </section>
     </div>

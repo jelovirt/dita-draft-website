@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,56 +59,65 @@ index: '../../toc.html'
         The <code class="keyword markupname xmlelement">&lt;val&gt;</code> element is the root
         element of a DITAVAL document.
       </p>
-      <section class="section" id="ditaval-val__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
+      <section class="section" id="ditaval-val__processing-expectations">
+        <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          For information about processing DITAVAL files, including how to filter or flag elements
-          with multiple property attributes or multiple properties within a single attribute, see
+          For information about processing DITAVAL
+          <span style="color:red;" class="ph">documents</span>, including how to filter or flag
+          elements with multiple property attributes or multiple properties within a single
+          attribute, see
           <a
             class="xref"
             href="../../archSpec/base/condproc.html"
-            title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-            >Conditional processing (profiling)</a
+            title="Conditional processing is the filtering or flagging of information based on processing-time criteria. Conditional processing is based on attributes specified in the DITA source."
+            >Conditional processing</a
           >.
         </p>
       </section>
-      <section class="section" id="ditaval-val__attributes">
-        <h2 class="title sectiontitle">Attributes</h2>
 
-        <p class="p">This element does not define any attributes.</p>
-      </section>
       <div class="example" id="ditaval-val__example">
         <h2 class="title sectiontitle">Example</h2>
+        <p class="p">
+          This section contains examples of DITAVAL documents and how they can be used.
+        </p>
         <figure class="fig fignone">
           <figcaption>
-            <span class="fig--title-label">Figure 1. </span>Sample DITAVAL file
+            <span class="fig--title-label">Figure 1. </span>Sample DITAVAL document
           </figcaption>
+          <p class="p">
+            The following code sample shows a DITAVAL document that
+            <span class="ph">excludes certain</span> content, flags certain content, flags certain
+            revisions, and provides a background color for when there are style conflicts:
+          </p>
           <pre class="pre codeblock"><code>&lt;val&gt;
-   &lt;style-conflict background-conflict-color="red"/&gt;
-   &lt;prop action="include" att="audience" val="everybody"/&gt;
-   &lt;prop action="flag" att="product" val="YourProd" backcolor="purple"/&gt;
-   &lt;prop action="flag" att="product" backcolor="blue"
-         color="yellow" style="underline" val="MyProd"&gt;
-      &lt;startflag imageref="startflag.jpg"&gt;
-        &lt;alt-text&gt;This is the start of my product info&lt;/alt-text&gt;
-      &lt;/startflag&gt;
-      &lt;endflag imageref="endflag.jpg"&gt;
-        &lt;alt-text&gt;This is the end of my product info&lt;/alt-text&gt;
-      &lt;/endflag&gt;
-   &lt;/prop&gt;
-   &lt;revprop action="flag" val="1.2"/&gt;
+  &lt;style-conflict background-conflict-color="red"/&gt;
+  &lt;prop <span style="color:red;" class="ph">action="exclude"</span> att="audience" <span style="color:red;" class="ph">val="internal-test"</span>/&gt;
+  &lt;prop action="flag" att="product" val="YourProd" backcolor="purple"/&gt;
+  &lt;prop action="flag" att="product" backcolor="blue"
+        color="yellow" style="underline" val="MyProd"&gt;
+    &lt;startflag imageref="startflag.jpg"&gt;
+      &lt;alt-text&gt;This is the start of my product info&lt;/alt-text&gt;
+    &lt;/startflag&gt;
+    &lt;endflag imageref="endflag.jpg"&gt;
+      &lt;alt-text&gt;This is the end of my product info&lt;/alt-text&gt;
+    &lt;/endflag&gt;
+  &lt;/prop&gt;
+  &lt;revprop action="flag" val="1.2"/&gt;
 &lt;/val&gt;</code></pre>
           <div class="p">
-            This sample DITAVAL file performs the following actions:
+            This sample DITAVAL document performs the following actions:
             <ul class="ul">
               <li class="li">
-                Elements with <code class="ph codeph">audience="everybody"</code> are included
-                without change.
+                Elements that specify
+                <code class="ph codeph"
+                  >audience=<span style="color:red;" class="ph">"internal-test"</span></code
+                >
+                are <span style="color:red;" class="ph">excluded</span>.
               </li>
               <li class="li">
-                Elements with <code class="ph codeph">product="YourProd"</code> get a background
-                color of purple.
+                Elements that specify <code class="ph codeph">product="YourProd"</code> are rendered
+                with a background color of purple.
               </li>
               <li class="li">
                 Elements with <code class="ph codeph">product="MyProd"</code> get the following
@@ -122,15 +131,15 @@ index: '../../toc.html'
                     The image <span class="ph filepath">endflag.jpg</span> is placed at the end of
                     the element.
                   </li>
-                  <li class="li">The element gets a background color of blue.</li>
+                  <li class="li">The element is rendered with a background color of blue.</li>
                   <li class="li">
-                    The text in the element appears in yellow; the text is underlined.
+                    The text in the element is rendered in yellow, and the text is underlined.
                   </li>
                 </ul>
               </li>
               <li class="li">
-                Elements marked with are flagged with the default revision flags, which are
-                implementation dependent.
+                Elements marked with <code class="ph codeph">rev="1.2"</code> are flagged with the
+                default revision flags, which are implementation dependent.
               </li>
               <li class="li">
                 When there are conflicts, for example, if an element is marked with
@@ -142,157 +151,55 @@ index: '../../toc.html'
         </figure>
         <figure class="fig fignone">
           <figcaption>
-            <span class="fig--title-label">Figure 2. </span>DITAVAL file that overrides the default
-            "include" action
+            <span class="fig--title-label">Figure 2. </span>DITAVAL document that overrides the
+            default <span class="keyword">include</span> action
           </figcaption>
+          <p class="p">
+            The following code sample shows a DITAVAL document that sets a default value of
+            <span class="keyword">exclude</span> for every conditional-processing attribute. That
+            default value is then overriden by the
+            <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements with a value of
+            <span class="keyword">include.</span>
+          </p>
           <pre class="pre codeblock"><code>&lt;val&gt;
-   &lt;prop action="exclude"/&gt;
-   &lt;prop action="include" att="audience" val="everybody"/&gt;
-   &lt;prop action="include" att="audience" val="novice"/&gt;
-   &lt;prop action="include" att="product" val="productA"/&gt;
-   &lt;prop action="include" att="product" val="productB"/&gt;
+  &lt;prop action="exclude"/&gt;
+  &lt;prop action="include" att="audience" val="everybody"/&gt;
+  &lt;prop action="include" att="audience" val="novice"/&gt;
+  &lt;prop action="include" att="product" val="productA"/&gt;
+  &lt;prop action="include" att="product" val="productB"/&gt;
 &lt;/val&gt;</code></pre>
           <div class="p">
-            This simple DITAVAL file performs the following actions:
+            This DITAVAL document performs the following actions:
             <ul class="ul">
               <li class="li">
                 The first <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element
-                does not specify an attribute, which sets a default action of "exclude" for every
-                prop value. This means that, by default, any property value not otherwise defined in
-                this file evaluates to "exclude". Note that this same behavior can be limited to a
-                single attribute; the following
+                does not specify an attribute, which sets a default action of
+                <span class="keyword">exclude</span> for every conditional-processing attribute.
+                This means that, by default, any property value not otherwise defined in this
+                document evaluates to <span class="keyword">exclude</span>. Note that this same
+                behavior can be limited to a single attribute. The following
                 <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element sets a
-                default action of "exclude" for all properties specified on the
-                <code class="keyword markupname xmlatt">@platform</code> attribute:
+                default action of <span class="keyword">exclude</span> for all properties specified
+                on the <code class="keyword markupname xmlatt">@platform</code> attribute:
                 <code class="ph codeph">&lt;prop action="exclude" att="platform"/&gt;</code>
               </li>
               <li class="li">
                 The second and third
                 <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements set an
-                action of "include" for two values on the
+                action of <span class="keyword">include</span> for two values on the
                 <code class="keyword markupname xmlatt">@audience</code> attribute. All other values
                 on the <code class="keyword markupname xmlatt">@audience</code> attribute still
-                evaluate to "exclude".
+                evaluate to <span class="keyword">exclude</span>.
               </li>
               <li class="li">
                 The fourth and fifth
                 <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements set an
-                action of "include" for two values on the
+                action of <span class="keyword">include</span> for two values on the
                 <code class="keyword markupname xmlatt">@product</code> attribute. All other values
                 on the <code class="keyword markupname xmlatt">@product</code> attribute still
-                evaluate to "exclude".
+                evaluate to <span class="keyword">exclude</span>.
               </li>
             </ul>
-          </div>
-        </figure>
-        <figure class="fig fignone">
-          <figcaption>
-            <span class="fig--title-label">Figure 3. </span>DITAVAL with conditions for groups
-          </figcaption>
-
-          <pre class="pre codeblock"><code>&lt;val&gt;
-   &lt;prop action="exclude" att="product" val="appserver"/&gt;
-   &lt;prop action="include" att="product" val="mySERVER"/&gt;
-   &lt;prop action="include" att="database" val="dbFIRST"/&gt;
-   &lt;prop action="include" att="database" val="dbSECOND"/&gt;
-   &lt;prop action="exclude" att="database" val="newDB"/&gt;
-&lt;/val&gt;</code></pre>
-          <div class="p">
-            Assume that "database" and "appServer" are used as group names within the
-            <code class="keyword markupname xmlatt">@product</code> attribute. In that case, the
-            sample DITAVAL above performs the following actions:
-            <ul class="ul">
-              <li class="li">
-                The first <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element
-                excludes the value "appServer" when used within the
-                <code class="keyword markupname xmlatt">@product</code> attribute. It also sets a
-                default of "exclude" for values within any appServer() group inside of the
-                <code class="keyword markupname xmlatt">@product</code> attribute.
-              </li>
-              <li class="li">
-                The second <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element
-                sets "mySERVER" to include; this applies whether "mySERVER" appears alone in the
-                <code class="keyword markupname xmlatt">@product</code> attribute (<code
-                  class="ph codeph"
-                  >product="mySERVER"</code
-                >) or inside of any group (<code class="ph codeph"
-                  >product="appServer(mySERVER)"</code
-                >
-                or <code class="ph codeph">product="otherGroup(mySERVER)"</code>).
-              </li>
-              <li class="li">
-                The third and fourth
-                <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements set the
-                database values "dbFIRST" and "dbSECOND" to include. If those values appear inside
-                of a "database" group, they are explicitly set to "include". If they appear
-                elsewhere in a conditional attribute (such as
-                <code class="ph codeph">product="dbFIRST"</code> or
-                <code class="ph codeph">platform="dbSECOND"</code>), this rule does not apply.
-              </li>
-              <li class="li">
-                The final <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element
-                sets the database value "newDB" to exclude. If that value appears inside of a
-                database group, it is explicitly set to "exclude". If it appears in any other group
-                or attribute, this rule does not apply.
-              </li>
-            </ul>
-          </div>
-          <div class="p">
-            Remember that with groups, if all values inside of a single group evaluate to "exclude",
-            that is equivalent to an entire attribute evaluating to "exclude", which results in the
-            removal of the content. Using the above sample DITAVAL:
-            <ul class="ul">
-              <li class="li">
-                <code class="ph codeph">&lt;p product="appServer"&gt;</code> is filtered out,
-                because this value is excluded.
-              </li>
-              <li class="li">
-                <code class="ph codeph">&lt;p product="appServer(A B)"&gt;</code> is filtered out,
-                because there is no explicit rule for A or B, and values in the "appServer" group
-                inside of <code class="keyword markupname xmlatt">@product</code> default to
-                exclude.
-              </li>
-              <li class="li">
-                <code class="ph codeph">&lt;p product="appServer(A B mySERVER)"&gt;</code> is
-                included, because <code class="ph codeph">product="mySERVER"</code> evaluates to
-                "include", which means the entire group evaluates to "include".
-              </li>
-              <li class="li">
-                <code class="ph codeph">&lt;p product="newDB"&gt;</code> is included, because no
-                rule in the DITAVAL applies, so the "newDB" token defaults to "include".
-              </li>
-              <li class="li">
-                <code class="ph codeph">&lt;p product="database(newDB)"&gt;</code> is filtered out,
-                because the token "newDB" is excluded when found in the database group.
-              </li>
-              <li class="li">
-                <code class="ph codeph">&lt;p product="database(dbFIRST dbSECOND newDB)"&gt;</code>
-                is included, because both "dbFIRST" and "dbSECOND" are included, so the group
-                evaluates to include.
-              </li>
-              <li class="li">
-                <code class="ph codeph"
-                  >&lt;p product="database(newDB) appserver(mySERVER)"&gt;</code
-                >
-                is filtered out, because the token "newDB" is excluded when found in the database
-                group. The entire "database" group on this paragraph evaluates to "exclude", so the
-                element is excluded, regardless of how the "appServer" group evaluates.
-              </li>
-            </ul>
-          </div>
-          <div class="note note note_note">
-            <span class="note__title">Note:</span> If two groups with the same name exist on
-            different attributes, each group will evaluate the same way. For example, rules for the
-            database group in this sample would evaluate the same whether the group is used within
-            <code class="keyword markupname xmlatt">@product</code> or
-            <code class="keyword markupname xmlatt">@platform</code>. See
-            <a
-              class="xref"
-              href="../../archSpec/base/condproc.html"
-              title="Conditional processing, also known as profiling, is the filtering or flagging of information based on processing-time criteria."
-              >Conditional processing (profiling)</a
-            >
-            for suggestions on how to handle similar groups on different attributes.
           </div>
         </figure>
       </div>
@@ -304,7 +211,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/ditaval-elements.html"
-            title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
+            title="A DITAVAL document identifies content that is filtered and flagged at rendering time. The DITAVAL document has an extension of .ditaval."
             >DITAVAL elements</a
           >
         </div>
@@ -316,16 +223,16 @@ index: '../../toc.html'
             <a
               class="link"
               href="../../archSpec/base/filtering.html"
-              title="At processing time, a conditional processing profile can be used to specify profiling attribute values that determine whether an element with those values is included or excluded."
-              >Filtering</a
+              title="When rendering content, a conditional processing profile can be used to specify whether an element's content is filtered based on its conditional processing attributes."
+              >Filtering based on metadata attributes</a
             >
           </li>
           <li class="linklist">
             <a
               class="link"
               href="../../archSpec/base/flagging.html"
-              title="Flagging is the application of text, images, or styling during rendering. This can highlight the fact that content applies to a specific audience or operating system, for example; it also can draw a reader's attention to content that has been marked as being revised."
-              >Flagging</a
+              title="When rendering content, a conditional processing profile can be used to specify whether an element's content is flagged based on its conditional processing attributes."
+              >Flagging based on metadata attributes</a
             >
           </li>
           <li class="linklist">

@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Domain elements'
-description: 'General purpose domains are not specific to any type of
-information, such as the hazard statement domain that provides elements
-for describing hazardous situations.'
+description: 'A domain is a grouping of related DITA elements
+  that can be integrated into document-type shells. The base edition of
+  DITA includes a variety of domains for use in topics and
+  maps.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,7 +57,7 @@ index: '../../toc.html'
           <ul class="nav nav-list">
             <li>
               <a href="../../langRef/containers/alternativeTitles-d.html"
-                >Alternative titles domain elements</a
+                >Alternative-titles domain elements</a
               >
             </li>
             <li>
@@ -96,19 +97,23 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Domain elements</h1>
-    <p class="shortdesc">
-      General purpose domains are not specific to any type of information, such as the hazard
-      statement domain that provides elements for describing hazardous situations.
+    <p style="color:red;" class="shortdesc">
+      A domain is a grouping of related DITA elements that can be integrated into document-type
+      shells. The base edition of DITA includes a variety of domains for use in topics and maps.
     </p>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong
             ><a href="../../langRef/containers/alternativeTitles-d.html"
-              >Alternative titles domain elements</a
+              >Alternative-titles domain elements</a
             ></strong
-          ><br />The alternative title elements are used to describe alternative titles for
-          resources for use in specific use cases.
+          ><br />The alternative title elements are designed to provide alternative titles for
+          resources.
+          <span style="color:red;" class="ph"
+            >The elements in the alternative-titles domain are specialized from the
+            <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element.</span
+          >
         </li>
         <li class="link ulchildlink">
           <strong
@@ -132,18 +137,20 @@ index: '../../toc.html'
             ><a href="../../langRef/containers/emphasis-domain.html"
               >Emphasis domain elements</a
             ></strong
-          ><br />The emphasis elements are used to emphasize text that is important or serious.
+          ><br />The emphasis elements are used to indicate text that has special meaning or
+          importance, or text that needs to be distinguished from surrounding text.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../langRef/containers/hazard-d.html"
               >Hazard-statement domain elements</a
             ></strong
-          ><br />The hazard statement domain contains the
-          <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> element, which
-          can be used to provide information about product safety hazards. The domain can be
-          included in any topic type or map. Hazard statements are used to inform readers about
-          potential hazards, consequences, and avoidance strategies.
+          ><br />The
+          <code class="keyword markupname xmlelement">&lt;hazardstatement&gt;</code> domain adds
+          markup to support hazard statements. It is based on the regulations of ANSI Z535 and ISO
+          3864. The domain enables authors to provide all the information necessary for a hazard
+          statement: a signal word, description of the hazard and its consequences, how to avoid the
+          hazard, and one or more images.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -157,7 +164,7 @@ index: '../../toc.html'
             ><a href="../../langRef/containers/mapgroup-d.html">Mapgroup domain elements</a></strong
           ><br />The mapgroup domain elements define, group, or reference content. Many of the
           mapgroup elements are convenience elements; they simply provide shortcuts for an author to
-          use existing markup
+          use existing markup.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/containers/ut-d.html">Utilities domain elements</a></strong

@@ -2,11 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'Chunking'
-description:
-  'Content often needs to be delivered in a different granularity than it is authored. The
-  chunk attribute enables map authors to specify that multiple source
-  documents are combined into a single document for delivery, or that a single source document
-  is split into multiple documents for delivery.'
+description: 'Content often needs to be delivered in a different granularity
+  than it is authored. The chunk attribute enables map
+  authors to specify that multiple source documents should be combined into a single document for delivery or that
+  a single source document should be split into
+  multiple documents for delivery.'
 index: '../../toc.html'
 ---
 
@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -35,7 +35,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li class="active">
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -98,8 +98,10 @@ index: '../../toc.html'
     <p class="shortdesc">
       Content often needs to be delivered in a different granularity than it is authored. The
       <code class="keyword markupname xmlatt">@chunk</code> attribute enables map authors to specify
-      that multiple source documents are combined into a single document for delivery, or that a
-      single source document is split into multiple documents for delivery.
+      that multiple source documents <span style="color:red;" class="ph">should be</span> combined
+      into a single document for delivery or that a single source document
+      <span style="color:red;" class="ph">should be</span> split into multiple documents for
+      delivery.
     </p>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
@@ -108,27 +110,31 @@ index: '../../toc.html'
             ><a href="../../archSpec/base/chunk-attribute-overview.html"
               >About the chunk attribute</a
             ></strong
-          ><br />The <code class="keyword markupname xmlatt">@chunk</code> attribute is designed to
-          handle cases where the best organization for authoring DITA topics is not equivalent to
-          the best organization for publishing those topics.
+          ><br />The <code class="keyword markupname xmlatt">@chunk</code> attribute specifies how a
+          processor <span style="color:red;" class="ph">should</span> split or combine source DITA
+          documents into alternate organizational schemes for rendering purposes. This means that
+          the <code class="keyword markupname xmlatt">@chunk</code> attribute is only relevant when
+          the organization of source DITA documents has an effect on
+          <span style="color:red;" class="ph">the</span> organization of published documents.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/chunk-attribute-combine.html"
               >Processing chunk="combine"</a
             ></strong
-          ><br />Setting <code class="ph codeph">chunk="combine"</code> instructs a processor to
-          combine the reference source documents for rendering purposes. A single result document is
-          generated.
+          ><br /><span style="color:red;" class="ph">The presence of </span>
+          <code class="ph codeph">chunk="combine"</code> instructs a processor to combine the
+          <span style="color:red;" class="ph">referenced</span> source documents for rendering
+          purposes.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/chunk-attribute-split.html"
               >Processing chunk="split"</a
             ></strong
-          ><br />Setting <code class="ph codeph">chunk="split"</code> instructs a processor to split
-          each topic from the referenced source document into its own document for rendering
-          purposes. Multiple result documents are generated.
+          ><br /><span style="color:red;" class="ph">The presence of </span>
+          <code class="ph codeph">chunk="split"</code> instructs a processor to split each topic
+          from the referenced source document into its own document for rendering purposes.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -137,7 +143,7 @@ index: '../../toc.html'
             ></strong
           ><br />Applications can define additional tokens for use in the
           <code class="keyword markupname xmlatt">@chunk</code> attribute. These tokens are
-          necessarily implementation dependent and might not be supported by other applications.
+          implementation dependent and might not be supported by other applications.
         </li>
         <li class="link ulchildlink">
           <strong

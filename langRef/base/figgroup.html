@@ -2,7 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'figgroup'
-description: 'A figure group organizes segments within a figure.'
+description: 'A figure group is a grouping of segments within a
+  figure.'
 index: '../../toc.html'
 ---
 
@@ -16,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -54,7 +55,7 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">A figure group organizes segments within a figure.</p>
+      <p class="shortdesc">A figure group is a grouping of segments within a figure.</p>
       <section class="section" id="figgroup__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
@@ -62,8 +63,12 @@ index: '../../toc.html'
           The <code class="keyword markupname xmlelement">&lt;figgroup&gt;</code> element is useful
           primarily as a base for complex specializations, such as nestable groups of syntax within
           a syntax diagram. The
-          <code class="keyword markupname xmlelement">&lt;figgroup&gt;</code> element can nest; it
-          also can contain multiple cross-references, footnotes, and keywords.
+          <code class="keyword markupname xmlelement">&lt;figgroup&gt;</code> element can nest<span
+            style="color:red;"
+            class="ph"
+            >. It can</span
+          >
+          also contain multiple cross-references, footnotes, and keywords.
         </p>
       </section>
       <section class="section" id="figgroup__attributes">
@@ -83,6 +88,11 @@ index: '../../toc.html'
       </section>
       <div class="example" id="figgroup__example">
         <h2 class="title sectiontitle">Example</h2>
+        <p style="color:red;" class="p">
+          For the most part, <code class="keyword markupname xmlelement">&lt;figgroup&gt;</code> is
+          intended to be used as a base for specialization. This example uses it directly for
+          purposes of illustration.
+        </p>
         <p class="p">
           The following code sample shows how the
           <code class="keyword markupname xmlelement">&lt;figgroup&gt;</code> can group content with
@@ -105,7 +115,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

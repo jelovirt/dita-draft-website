@@ -2,9 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'platform'
-description: 'A platform element specifies the operating system or hardware
-  related to the product being described by the parent prodinfo
-  element.'
+description: 'A platform is a group of technologies that are used as a
+  base upon which other applications, processes, or technologies are
+  developed.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -54,21 +54,15 @@ index: '../../toc.html'
     <h1 class="title topictitle1" id="ariaid-title1">
       <code class="keyword markupname xmlelement">&lt;platform&gt;</code>
     </h1>
-    <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;platform&gt;</code> element specifies the
-        operating system or hardware related to the product being described by the parent
-        <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code> element.
-      </p>
-      <section class="section" id="platform__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
 
-        <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;platform&gt;</code> element can be
-          used to provide a more detailed definition of values used throughout the map or topic on
-          the <code class="keyword markupname xmlatt">@platform</code> attribute.
-        </p>
-      </section>
+    <div class="body refbody">
+      <div class="abstract">
+        <span class="shortdesc"
+          >A platform is a group of technologies that are used as a base upon which other
+          applications, processes, or technologies are developed.</span
+        >
+      </div>
+
       <section class="section" id="platform__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -88,11 +82,8 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
           See
-          <a
-            class="xref"
-            href="prodinfo.html"
-            title="A prodinfo element contains information about the product or products that are the subject matter of the current topic."
-            >prodinfo</a
+          <a class="xref" href="prodinfo.html#prodinfo__example"
+            ><code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code></a
           >.
         </p>
       </div>
@@ -104,7 +95,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

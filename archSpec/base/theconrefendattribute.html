@@ -19,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -62,10 +62,14 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
+        <li><a href="../../archSpec/base/condproc.html">Conditional processing</a></li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -210,18 +214,17 @@ index: '../../toc.html'
           </figcaption>
 
           <pre class="pre codeblock"><code>&lt;topic id="x"&gt;
- 	...
- 	&lt;body&gt;
- 		&lt;ol&gt;
- 			&lt;li id="apple"&gt;A&lt;/li&gt;
- 			&lt;li id="bear"&gt;B&lt;/li&gt;
- 			&lt;li id="cat"&gt;C&lt;/li&gt;
- 			&lt;li id="dog"&gt;D&lt;/li&gt;
- 			&lt;li id="eel"&gt;E&lt;/li&gt;
- 		&lt;/ol&gt;
- 	&lt;/body&gt;
- &lt;/topic&gt;
- </code></pre>
+  &lt;title&gt;Sample file topic.dita&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ol&gt;
+      &lt;li id="apple"&gt;A&lt;/li&gt;
+      &lt;li id="bear"&gt;B&lt;/li&gt;
+      &lt;li id="cat"&gt;C&lt;/li&gt;
+      &lt;li id="dog"&gt;D&lt;/li&gt;
+      &lt;li id="eel"&gt;E&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
         <figure
           class="fig fignone"
@@ -231,17 +234,16 @@ index: '../../toc.html'
             <span class="fig--title-label">Figure 2. </span>List example: Reusing topic with conrefs
           </figcaption>
 
-          <pre class="pre codeblock"><code> &lt;topic id="y"&gt;
- 	...
- 	&lt;body&gt;
- 		&lt;ol&gt;
- 			&lt;li&gt;My own first item&lt;/li&gt;
- 			&lt;li conref="topic.dita#x/bear" conrefend="topic.dita#x/dog"/&gt;
- 			&lt;li&gt;And a different final item&lt;/li&gt;
- 		&lt;/ol&gt;
- 	&lt;/body&gt;
- &lt;/topic&gt;
- </code></pre>
+          <pre class="pre codeblock"><code>&lt;topic id="y"&gt;
+  &lt;title&gt;Sample file reusing content&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ol&gt;
+      &lt;li&gt;My own first item&lt;/li&gt;
+      &lt;li conref="topic.dita#x/bear" conrefend="topic.dita#x/dog"/&gt;
+      &lt;li&gt;And a different final item&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
         <figure
           class="fig fignone"
@@ -252,19 +254,18 @@ index: '../../toc.html'
             reusing topic
           </figcaption>
 
-          <pre class="pre codeblock"><code> &lt;topic id="y"&gt;
- 	...
- 	&lt;body&gt;
- 		&lt;ol&gt;
- 			&lt;li&gt;My own first item&lt;/li&gt;
- 			&lt;li&gt;B&lt;/li&gt;
- 			&lt;li id="cat"&gt;C&lt;/li&gt;
- 			&lt;li&gt;D&lt;/li&gt;
- 			&lt;li&gt;And a different final item&lt;/li&gt;
- 		&lt;/ol&gt;
- 	&lt;/body&gt;
-&lt;/topic&gt;
-</code></pre>
+          <pre class="pre codeblock"><code>&lt;topic id="y"&gt;
+  &lt;title&gt;Sample file reusing content&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ol&gt;
+      &lt;li&gt;My own first item&lt;/li&gt;
+      &lt;li&gt;B&lt;/li&gt;
+      &lt;li id="cat"&gt;C&lt;/li&gt;
+      &lt;li&gt;D&lt;/li&gt;
+      &lt;li&gt;And a different final item&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
       </div>
       <div class="example" id="theconrefendattribute__example-reuse-blocks">
@@ -280,20 +281,19 @@ index: '../../toc.html'
           </figcaption>
 
           <pre class="pre codeblock"><code>&lt;topic id="x"&gt;
- 	...
- 	&lt;body&gt;
-   &lt;p id="p1"&gt;First para&lt;/p&gt;
- 	 &lt;ol id="mylist"&gt;
-     &lt;li id="apple"&gt;A&lt;/li&gt;
-     &lt;li id="bear"&gt;B&lt;/li&gt;
-     &lt;li id="cat"&gt;C&lt;/li&gt;
-     &lt;li id="dog"&gt;D&lt;/li&gt;
-     &lt;li id="eel"&gt;E&lt;/li&gt;
-   &lt;/ol&gt;
-   &lt;p id="p2"&gt;Second para&lt;/p&gt;
- 	&lt;/body&gt;
- &lt;/topic&gt;
- </code></pre>
+  &lt;title&gt;Sample file topic.dita&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p id="p1"&gt;First para&lt;/p&gt;
+    &lt;ol id="mylist"&gt;
+      &lt;li id="apple"&gt;A&lt;/li&gt;
+      &lt;li id="bear"&gt;B&lt;/li&gt;
+      &lt;li id="cat"&gt;C&lt;/li&gt;
+      &lt;li id="dog"&gt;D&lt;/li&gt;
+      &lt;li id="eel"&gt;E&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p id="p2"&gt;Second para&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
         <figure
           class="fig fignone"
@@ -304,12 +304,12 @@ index: '../../toc.html'
             conrefs
           </figcaption>
 
-          <pre class="pre codeblock"><code> &lt;topic id="y"&gt;
- 	...
- 	&lt;body&gt;
- 		&lt;p conref="topic.dita#x/p1" conrefend="topic.dita#x/p2"/&gt;
- 	&lt;/body&gt;
- &lt;/topic&gt;</code></pre>
+          <pre class="pre codeblock"><code>&lt;topic id="y"&gt;
+  &lt;title&gt;Sample file reusing content&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p conref="topic.dita#x/p1" conrefend="topic.dita#x/p2"/&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
         <figure
           class="fig fignone"
@@ -320,11 +320,11 @@ index: '../../toc.html'
             reusing topic
           </figcaption>
 
-          <pre class="pre codeblock"><code> &lt;topic id="y"&gt;
- 	...
- 	&lt;body&gt;
+          <pre class="pre codeblock"><code>&lt;topic id="y"&gt;
+  &lt;title&gt;Sample file reusing content&lt;/title&gt;
+  &lt;body&gt;
     &lt;p&gt;First para&lt;/p&gt;
- 	  &lt;ol id="mylist"&gt;
+    &lt;ol id="mylist"&gt;
       &lt;li id="apple"&gt;A&lt;/li&gt;
       &lt;li id="bear"&gt;B&lt;/li&gt;
       &lt;li id="cat"&gt;C&lt;/li&gt;
@@ -332,9 +332,8 @@ index: '../../toc.html'
       &lt;li id="eel"&gt;E&lt;/li&gt;
     &lt;/ol&gt;
     &lt;p&gt;Second para&lt;/p&gt;
- 	&lt;/body&gt;
-&lt;/topic&gt;
-</code></pre>
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
         </figure>
       </div>
       <section class="section" id="theconrefendattribute__conkeyref">
@@ -384,13 +383,18 @@ index: '../../toc.html'
             In this example the key <span class="keyword">xmp</span> is defined as the first topic
             in the file <span class="ph filepath">examples.dita.</span>
           </p>
-          <pre class="pre codeblock"><code>&lt;map&gt;
+          <pre
+            class="pre codeblock"
+            id="theconrefendattribute__codeblock_hwy_krh_psb"
+          ><code>&lt;map&gt;
   &lt;!-- ... --&gt;
   &lt;keydef keys="xmp" href="examples.dita"/&gt;
   &lt;!-- ... --&gt;
-&lt;/map&gt;
-
-examples.dita:
+&lt;/map&gt;</code></pre>
+          <pre
+            class="pre codeblock"
+            id="theconrefendattribute__codeblock_iwy_krh_psb"
+          ><code>&lt;!-- examples.dita: --&gt;
 &lt;topic id="examples"&gt;
   &lt;title&gt;These are examples&lt;/title&gt;
   &lt;body&gt;
@@ -400,8 +404,7 @@ examples.dita:
       &lt;li id="last"&gt;Final example&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/body&gt;
-&lt;/topic&gt;
-</code></pre>
+&lt;/topic&gt;</code></pre>
           <div class="p">
             To reuse these list items by using the key, the
             <code class="keyword markupname xmlatt">@conkeyref</code> attribute combines the key

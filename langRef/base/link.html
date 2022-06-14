@@ -16,8 +16,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -60,7 +60,7 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          When displayed, links typically are sorted based on their attributes, which define the
+          When displayed, links are typically sorted based on their attributes, which define the
           type or role of the link target in relation to the current topic.
         </p>
       </section>
@@ -77,6 +77,9 @@ index: '../../toc.html'
               >universal attributes</a
             ></span
           >,
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
+            ><code class="keyword markupname xmlatt">@keyref</code></a
+          >,
           <span class="ph"
             ><a
               class="xref"
@@ -85,21 +88,23 @@ index: '../../toc.html'
               >link-relationship attributes</a
             ></span
           >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
-            ><code class="keyword markupname xmlatt">@keyref</code></a
-          >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-role"
-            ><code class="keyword markupname xmlatt">@role</code></a
-          >, and
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-otherrole"
             ><code class="keyword markupname xmlatt">@otherrole</code></a
+          >, and
+          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-role"
+            ><code class="keyword markupname xmlatt">@role</code></a
           >.
         </p>
       </section>
       <div class="example" id="link__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample shows a simple collection of links in a DITA topic:
+          The following code sample shows a simple collection of links in a DITA topic. There are
+          four links: two to DITA topics and two to to HTML pages. The
+          <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element provides link
+          text for the HTML pages, and the
+          <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element contain text that
+          describes the resource that the link targets.
         </p>
         <pre class="pre codeblock"><code>&lt;related-links&gt;
   &lt;link href="covid-19.dita"/&gt;
@@ -122,36 +127,10 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/related-links-elements.html"
-            title="The related links elements define, group, and describe topic-to-topic connections or connections from DITA topics to non-DITA resources. These embedded references in DITA topics establish dependencies from the topics to the referenced resources."
+            title="The related links elements define, group, and describe hyperlinks that are embedded in a DITA topic. The links are contained by the related-links element and apply to the DITA topic as a whole."
             >Related links elements</a
           >
         </div>
-      </div>
-      <div class="linklist relconcepts">
-        <strong>Related concepts</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../archSpec/base/ditaaddressing.html"
-              title="DITA provides two addressing mechanisms. DITA addresses either are direct URI-based addresses, or they are indirect key-based addresses. Within DITA documents, individual elements are addressed by unique identifiers specified on the id attribute. DITA defines two fragment-identifier syntaxes; one is the full fragment-identifier syntax, and the other is an abbreviated fragment-identifier syntax that can be used when addressing non-topic elements from within the same topic."
-              >DITA addressing</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="linklist relref">
-        <strong>Related reference</strong><br />
-        <ul class="linklist">
-          <li class="linklist">
-            <a
-              class="link"
-              href="../../langRef/base/xref.html"
-              title="A cross reference is an inline link. A cross reference can link to a different location within the current topic, another topic, a specific location in another topic, or an external resource such as a PDF or Web page."
-              >xref</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
   </article>

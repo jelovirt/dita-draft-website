@@ -2,9 +2,7 @@
 # Generated from DITA source
 layout: base
 title: 'dvrKeyscopeSuffix'
-description: 'The dvrKeyscopeSuffix element specifies the suffix to use
-  when constructing the effective key scope names for the map branch that is implied by the
-  ancestor ditavalref element.'
+description: 'The dvrKeyscopeSuffix element specifies the suffix to use when constructing the effective key scope names for the map branch that is implied by the ancestor ditavalref element.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +16,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,10 +55,12 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> element
-        specifies the suffix to use when constructing the effective key scope names for the map
-        branch that is implied by the ancestor
-        <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element.
+        <span class="ph"
+          >The <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> element
+          specifies the suffix to use when constructing the effective key scope names for the map
+          branch that is implied by the ancestor
+          <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element.</span
+        >
       </p>
       <section class="section" id="dvrKeyscopeSuffix__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
@@ -75,11 +75,12 @@ index: '../../toc.html'
           <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> element. Note
           that if the branch as authored does not specify a
           <code class="keyword markupname xmlatt">@keyscope</code> value, specifying
-          <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> (without also
-          specifying <code class="keyword markupname xmlelement">&lt;dvrKeyscopePrefix&gt;</code>)
-          results in the branch establishing a key scope whose name is the value of the
+          <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code>
+          (without also specifying
+          <code class="keyword markupname xmlelement">&lt;dvrKeyscopePrefix&gt;</code>) results in
+          the branch establishing a key scope whose name is the value of the
           <code class="keyword markupname xmlelement">&lt;dvrKeyscopeSuffix&gt;</code> element. The
-          full key scope names also will reflect the value of a
+          full key scope names will also reflect the value of a
           <code class="keyword markupname xmlelement">&lt;dvrKeyscopePrefix&gt;</code> element if
           one is specified, regardless of whether the branch as authored specifies a
           <code class="keyword markupname xmlatt">@keyscope</code> value.

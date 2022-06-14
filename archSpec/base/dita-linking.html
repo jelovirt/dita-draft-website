@@ -2,9 +2,11 @@
 # Generated from DITA source
 layout: base
 title: 'DITA linking'
-description: 'DITA supports many different linking elements,
-  but they all use the same set of attributes to describe
-  relationships between content.'
+description: 'DITA supports many different linking elements, but they all
+  use the same set of attributes: format,
+  href, scope, and
+  type. These four attributes act as a
+  unit.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -41,6 +43,11 @@ index: '../../toc.html'
         </li>
         <li>
           <a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a>
+        </li>
+        <li>
+          <a href="../../archSpec/base/context-hooks-for-user-assistance.html"
+            >Context hooks for user assistance</a
+          >
         </li>
       </ul>
     </li>
@@ -75,84 +82,12 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        DITA supports many different linking elements, but they all use the same set of attributes
-        to describe relationships between content.
+        DITA supports many different linking elements, but they all use the same set of attributes:
+        <code class="keyword markupname xmlatt">@format</code>,
+        <code class="keyword markupname xmlatt">@href</code>,
+        <code class="keyword markupname xmlatt">@scope</code>, and
+        <code class="keyword markupname xmlatt">@type</code>. These four attributes act as a unit.
       </p>
-      <section class="section" id="dita-linking__uri">
-        <h2 class="title sectiontitle">URI-based addressing</h2>
-
-        <p class="p">URI-based links are described by the following attributes.</p>
-        <dl class="dl">
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@href</code></dt>
-          <dd class="dd">
-            The <code class="keyword markupname xmlatt">@href</code> attribute specifies the URI of
-            the resource that is being addressed.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@format</code></dt>
-          <dd class="dd">
-            The <code class="keyword markupname xmlatt">@format</code> attribute identifies the
-            format of the resource being addressed. For example, references to DITA topics are
-            identified with <code class="ph codeph">format="dita"</code>, whereas references to DITA
-            maps use <code class="ph codeph">format="ditamap"</code>. References to other types of
-            content use other values for this attribute. By default, references to non-XML content
-            use the extension of the URI in the
-            <code class="keyword markupname xmlatt">@href</code> attribute as the effective format.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@scope</code></dt>
-          <dd class="dd">
-            The <code class="keyword markupname xmlatt">@scope</code> attribute describes the
-            closeness of the relationship between the current document and the target resource.
-            Resources in the same information unit are considered
-            <code class="ph codeph">"local"</code>; resources in the same system as the referencing
-            content but not part of the same information unit are considered
-            <code class="ph codeph">"peer"</code>; and resources outside the system, such as Web
-            pages, are considered <code class="ph codeph">"external"</code>.
-          </dd>
-
-          <dt class="dt dlterm"><code class="keyword markupname xmlatt">@type</code></dt>
-          <dd class="dd">
-            The <code class="keyword markupname xmlatt">@type</code> attribute is used on
-            cross-references to describe the target of the reference. Most commonly, the
-            <code class="keyword markupname xmlatt">@type</code> attribute names the element type
-            being referenced when <code class="ph codeph">format="dita"</code>.
-          </dd>
-        </dl>
-        <p class="p">
-          These four attributes act as a unit, describing whatever link is established by the
-          element that carries them.
-        </p>
-        <p class="p">
-          The <code class="keyword markupname xmlatt">@format</code> and
-          <code class="keyword markupname xmlatt">@scope</code> attributes are assigned default
-          values based on the URI that is specified in the
-          <code class="keyword markupname xmlatt">@href</code> attribute. Thus they rarely need to
-          be explicitly specified in most cases. However, they can be useful in many non-traditional
-          linking scenarios or environments.
-        </p>
-      </section>
-      <section class="section" id="dita-linking__keys">
-        <h2 class="title sectiontitle">Indirect key-based addressing</h2>
-
-        <p class="p">
-          DITA also supports indirect links and cross-references in which a DITA map assigns unique
-          names, or keys, to the resources being referenced by the publication. This is done using
-          <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that specify
-          the <code class="keyword markupname xmlatt">@keys</code> attribute. Using the
-          <code class="keyword markupname xmlatt">@keyref</code> attribute, individual links,
-          cross-references, and images then reference resources by their keys instead of their URIs.
-          Links defined using <code class="keyword markupname xmlatt">@keyref</code> thus allow
-          context-specific linking behavior. That is, the links in a topic or map might resolve to
-          one set of resources in one context, and a completely different set of resources in
-          another, without the need for any modifications to the link markup.
-        </p>
-        <p class="p">
-          When links are defined using <code class="keyword markupname xmlatt">@keyref</code>,
-          values for the four linking attributes described above are typically all specified (or
-          given default values) on the key defining element.
-        </p>
-      </section>
     </div>
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
@@ -160,18 +95,14 @@ index: '../../toc.html'
           <strong
             ><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></strong
           ><br />The <code class="keyword markupname xmlatt">@format</code> attribute identifies the
-          format of the resource that is referenced.
-          <span class="ph"
-            >If no value is specified, but the attribute is specified on an ancestor within a map or
-            within the related-links section, the value will cascade from the closest
-            ancestor.</span
-          >
+          format of the <span style="color:red;" class="ph">referenced resource</span>.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></strong
-          ><br />The <code class="keyword markupname xmlatt">@href</code> attribute is used to
-          reference another DITA topic or map, a specific element inside a DITA topic or map, an
-          external Web page, or another non-DITA resource.
+          ><br />The <code class="keyword markupname xmlatt">@href</code> attribute specifies the
+          URI of the resource that is addressed.
+          <span style="color:red;" class="ph">The referenced resource can be </span> another DITA
+          topic or map, an element inside a DITA topic or map, or a non-DITA resource.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -181,10 +112,14 @@ index: '../../toc.html'
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></strong
-          ><br />The <code class="keyword markupname xmlatt">@type</code> attribute is used on
-          linking elements to describe the target of a cross-reference. It also is used on the
-          <code class="keyword markupname xmlelement">&lt;note&gt;</code> element to describe the
-          note type, as well as on several other elements for varying purposes.
+          ><br />On linking elements, the
+          <code class="keyword markupname xmlatt">@type</code> attribute describes the target of a
+          reference.
+          <span style="color:red;" class="ph"
+            >The <code class="keyword markupname xmlatt">@type</code> attribute</span
+          >
+          is also used on several <span style="color:red;" class="ph">non-linking</span> elements
+          for <span style="color:red;" class="ph">other</span> purposes.
         </li>
       </ul>
       <div class="familylinks">

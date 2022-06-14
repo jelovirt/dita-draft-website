@@ -2,10 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'Branch filtering'
-description: 'The branch filtering mechanism enables map authors to set
-  filtering conditions for specific branches of a map. This makes it possible for multiple
-  conditional-processing profiles to be applied within a single
-  publication.'
+description: 'The branch filtering mechanism enables map authors to set filtering conditions for
+  specific branches of a map. This makes it possible for multiple conditional-processing profiles
+  to be applied within a single publication.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -31,7 +30,7 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/navigation.html">Navigation</a></li>
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
+        <li><a href="../../archSpec/base/condproc.html">Conditional processing</a></li>
         <li class="active">
           <a href="../../archSpec/base/branch-filtering.html">Branch filtering</a>
           <ul class="nav nav-list">
@@ -41,13 +40,18 @@ index: '../../toc.html'
               >
             </li>
             <li>
+              <a href="../../archSpec/base/branch-filtering-interactions.html"
+                >How filtering rules interact</a
+              >
+            </li>
+            <li>
               <a href="../../archSpec/base/branch-filtering-single-set.html"
-                >Branch filtering: Single condition set for a branch</a
+                >Branch filtering: Single referenced DITAVAL document for a branch</a
               >
             </li>
             <li>
               <a href="../../archSpec/base/branch-filtering-multiple-sets.html"
-                >Branch filtering: Multiple condition sets for a branch</a
+                >Branch filtering: Multiple referenced DITAVAL documents for a branch</a
               >
             </li>
             <li>
@@ -67,8 +71,12 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -103,19 +111,20 @@ index: '../../toc.html'
       <p class="shortdesc">
         The branch filtering mechanism enables map authors to set filtering conditions for specific
         branches of a map. This makes it possible for multiple conditional-processing profiles to be
-        applied within a <span class="ph">single</span> publication.
+        applied within a single publication.
       </p>
       <p class="p">
-        <span class="ph"
-          >Without the branch filtering mechanism, the conditions specified in a DITAVAL document
-          are applied globally. With branch filtering, the
-          <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element specifies a
-          DITAVAL document that can be applied to a subset of content; the location of the
-          <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element determines
-          the content to which filtering conditions are applied.</span
-        >
-        The filtering conditions then are used to filter the map branch itself (map elements used to
-        create the branch), as well as the local maps or topics that are referenced by that branch.
+        Conditional processing profiles are most often used for an entire root map, with rules
+        applied to all content in that root map. The branch filtering mechanism uses the
+        <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element to apply rules
+        from a single DITAVAL document against a subset of content.
+      </p>
+      <p class="p">
+        The location of the
+        <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element determines the
+        content to which filtering conditions are applied. The filtering conditions then are used to
+        filter the map branch itself (that is, the map elements used to create the branch). In
+        addition, it is used to filter local maps and topics that are referenced by that branch.
       </p>
       <p class="p">
         The <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element also
@@ -136,23 +145,32 @@ index: '../../toc.html'
         </li>
         <li class="link ulchildlink">
           <strong
+            ><a href="../../archSpec/base/branch-filtering-interactions.html"
+              >How filtering rules interact</a
+            ></strong
+          ><br />With branch filtering, it is possible to set include or exclude rules globally,
+          within a map, and within an already filtered map branch. The general rule for conflicts is
+          that once specified, "exclude" conditions are in effect for the entire map or branch.
+        </li>
+        <li class="link ulchildlink">
+          <strong
             ><a href="../../archSpec/base/branch-filtering-single-set.html"
-              >Branch filtering: Single condition set for a branch</a
+              >Branch filtering: Single referenced DITAVAL document for a branch</a
             ></strong
           ><br />Using a single
           <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element as a child
-          of a map or map branch indicates that the map or map branch must be conditionally
-          processed using the rules specified in the referenced DITAVAL document.
+          of a map or map branch indicates that the map or map branch is filtered using the rules
+          specified in the referenced DITAVAL document.
         </li>
         <li class="link ulchildlink">
           <strong
             ><a href="../../archSpec/base/branch-filtering-multiple-sets.html"
-              >Branch filtering: Multiple condition sets for a branch</a
+              >Branch filtering: Multiple referenced DITAVAL documents for a branch</a
             ></strong
           ><br />Using multiple
           <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements as the
-          children of a map or map branch indicates that the map or map branch will be conditionally
-          processed using the rules that are specified in the referenced DITAVAL documents.
+          children of a map or map branch indicates that the map or map branch will be independently
+          filtered using the rules that are specified in each referenced DITAVAL document.
         </li>
         <li class="link ulchildlink">
           <strong
@@ -169,7 +187,9 @@ index: '../../toc.html'
             ><a href="../../archSpec/base/branch-filtering-implications-of-processing-order.html"
               >Branch filtering: Implications of processing order</a
             ></strong
-          ><br />
+          ><br />The branch filtering mechanism can result in changes to the global key space for a
+          root map. As a result, processors are required to evaluate branch filtering in order to
+          construct the key space.
         </li>
         <li class="link ulchildlink">
           <strong

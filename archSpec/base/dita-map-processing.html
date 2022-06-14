@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li class="active">
@@ -32,7 +32,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li><a href="../../archSpec/base/chunking.html">Chunking</a></li>
       </ul>
     </li>
@@ -90,15 +90,21 @@ index: '../../toc.html'
           be used in taxonomies and ontologies.
         </li>
         <li class="link ulchildlink">
-          <strong><a href="../../archSpec/base/map-processing.html">Map cascading</a></strong
-          ><br />
+          <strong><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></strong
+          ><br />Metadata cascading is the process by which metadata elements and attributes
+          specified for a map or for a topic reference cascade to nested references. This allows
+          metadata properties to be set once and <span style="color:red;" class="ph">apply</span> to
+          an entire map or branch of a map.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../archSpec/base/chunking.html">Chunking</a></strong
           ><br />Content often needs to be delivered in a different granularity than it is authored.
           The <code class="keyword markupname xmlatt">@chunk</code> attribute enables map authors to
-          specify that multiple source documents are combined into a single document for delivery,
-          or that a single source document is split into multiple documents for delivery.
+          specify that multiple source documents
+          <span style="color:red;" class="ph">should be</span> combined into a single document for
+          delivery or that a single source document
+          <span style="color:red;" class="ph">should be</span> split into multiple documents for
+          delivery.
         </li>
       </ul>
     </nav>

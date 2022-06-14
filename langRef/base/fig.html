@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'fig'
-description: 'A figure is a container for a variety of objects, including artwork,
-  images, code samples, equations, and tables.'
+description: 'A figure is a container
+  for a variety of objects, including artwork, images, code samples,
+  equations, and tables.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,6 +60,15 @@ index: '../../toc.html'
         A figure is a container for a variety of objects, including artwork, images, code samples,
         equations, and tables.
       </p>
+      <section class="section">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p style="color:red;" class="p">
+          A <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element enables
+          associating other elements, such as a title or description, with the contents of the
+          <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element.
+        </p>
+      </section>
       <section class="section" id="fig__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
 
@@ -71,7 +81,8 @@ index: '../../toc.html'
               title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
               >universal attributes</a
             ></span
-          >,
+          >
+          and
           <span class="ph"
             ><a
               class="xref"
@@ -79,11 +90,6 @@ index: '../../toc.html'
               title="Display attributes include: expanse, frame, and scale"
               >display attributes</a
             ></span
-          >, and
-          <a
-            class="xref"
-            href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__spectitle"
-            ><code class="keyword markupname xmlatt">@spectitle</code></a
           >.
         </p>
       </section>
@@ -92,15 +98,14 @@ index: '../../toc.html'
         <p class="p">
           The following code sample shows how a
           <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element can associate a
-          title and a description with an image.
+          title and a description with an image:
         </p>
         <pre class="pre codeblock"><code>&lt;fig&gt;
-&lt;title&gt;The handshake&lt;/title&gt;
-&lt;desc&gt;This image shows two hands clasped in a formal, 
-business-like handshake.&lt;/desc&gt;
-&lt;image href="59j0p66.jpg"&gt;
- &lt;alt&gt;A handshake&lt;/alt&gt;
-&lt;/image&gt;
+    &lt;title&gt;The handshake&lt;/title&gt;
+    &lt;desc&gt;This image shows two hands clasped in a formal, business-like handshake.&lt;/desc&gt;
+    &lt;image href="59j0p66.jpg"&gt;
+        &lt;alt&gt;A handshake&lt;/alt&gt;
+    &lt;/image&gt;  
 &lt;/fig&gt;</code></pre>
       </div>
     </div>
@@ -111,7 +116,7 @@ business-like handshake.&lt;/desc&gt;
           <a
             class="link"
             href="../../langRef/containers/body-elements.html"
-            title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common document components."
+            title="The body elements support the most common types of content for topics: paragraphs, lists, phrases, figures, and other common document components."
             >Body elements</a
           >
         </div>

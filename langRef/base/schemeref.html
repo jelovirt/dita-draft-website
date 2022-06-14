@@ -2,11 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'schemeref'
-description: 'A schemeref element references another subject
-  scheme map. Typically, the referenced subject scheme defines a base set of controlled values;
-  the referencing map then extends the base set of controlled values. The values specified in the
-  subject scheme maps are merged; the result is equivalent to specifying all of the values in a
-  single map.'
+description: 'A scheme reference is the mechanism for referencing a subject
+  scheme
+  map.'
 index: '../../toc.html'
 ---
 
@@ -20,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,12 +57,9 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;schemeref&gt;</code> element references
-        another subject scheme map. Typically, the referenced subject scheme defines a base set of
-        controlled values; the referencing map then extends the base set of controlled values. The
-        values specified in the subject scheme maps are merged; the result is equivalent to
-        specifying all of the values in a single map.
+        A scheme reference is the mechanism for referencing a subject scheme map.
       </p>
+
       <section class="section" id="schemeref__specialization-hierachy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
 
@@ -104,7 +99,7 @@ index: '../../toc.html'
             >.
           </p>
           <div class="p attr-exception" id="schemeref__attr-exception">
-            For this element:
+            For this element, the following considerations apply:
             <ul class="ul" id="schemeref__ul_pz3_w3r_ppb">
               <li class="li">
                 The <code class="keyword markupname xmlatt">@format</code> attribute has a default
@@ -119,12 +114,14 @@ index: '../../toc.html'
         </div>
       </section>
       <div class="example" id="schemeref__example">
+        <h2 class="title sectiontitle">Example</h2>
+
         <p class="p">
           See
           <a
             class="xref"
             href="subjectScheme.html"
-            title="The subjectScheme element defines taxonomic subjects and controlled values."
+            title="The subjectScheme element defines controlled values and taxonomic subjects."
             >subjectScheme</a
           >.
         </p>
@@ -137,7 +134,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/subjectScheme.html"
-            title="Subject scheme maps are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
+            title="Subject scheme elements are used to define sets of controlled values and taxonomic subjects, bind controlled values to attributes as enumerations, and specify relationships among taxonomic subjects."
             >Subject scheme elements</a
           >
         </div>

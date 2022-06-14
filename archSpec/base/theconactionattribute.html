@@ -2,12 +2,12 @@
 # Generated from DITA source
 layout: base
 title: 'The conaction attribute'
-description: 'The conaction attribute allows users to push content from one topic into
-  another. It causes the conref attribute to work in reverse, so that the content
-  is pushed from the current topic into another, rather than pulled from another topic into the
-  current one. Allowable values for conaction are: pushafter,
-  pushbefore, pushreplace, mark, and
-  -dita-use-conref-target.'
+description: 'The conaction attribute allows users to push
+  content from one topic into another. It causes the
+  conref attribute to work in reverse, so that the
+  content is pushed from the current topic into another, rather than
+  pulled from another topic into the current
+  one.'
 index: '../../toc.html'
 ---
 
@@ -21,8 +21,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -64,10 +64,14 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
+        <li><a href="../../archSpec/base/condproc.html">Conditional processing</a></li>
         <li><a href="../../archSpec/base/branch-filtering.html">Branch filtering</a></li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -106,11 +110,7 @@ index: '../../toc.html'
         content from one topic into another. It causes the
         <code class="keyword markupname xmlatt">@conref</code> attribute to work in reverse, so that
         the content is pushed from the current topic into another, rather than pulled from another
-        topic into the current one. Allowable values for
-        <code class="keyword markupname xmlatt">@conaction</code> are:
-        <span class="keyword">pushafter</span>, <span class="keyword">pushbefore</span>,
-        <span class="keyword">pushreplace</span>, mark<span class="keyword"></span>, and
-        <span class="keyword">-dita-use-conref-target</span>.
+        topic into the current one.
       </p>
       <section class="section"></section>
       <section class="section" id="theconactionattribute__section-1">
@@ -182,8 +182,10 @@ index: '../../toc.html'
           <code class="keyword markupname xmlelement">&lt;step&gt;</code> element with the
           <code class="keyword markupname xmlatt">@id</code> set to <span class="keyword">b</span>:
         </p>
-        <div class="p">
-          <pre class="pre codeblock"><code>&lt;task id="example" xml:lang="en"&gt;
+        <pre
+          class="pre codeblock"
+          id="theconactionattribute__codeblock_scr_wqh_psb"
+        ><code>&lt;task id="example" xml:lang="en"&gt;
   &lt;title&gt;Example topic&lt;/title&gt;
   &lt;taskbody&gt;
     &lt;steps&gt;
@@ -193,20 +195,19 @@ index: '../../toc.html'
     &lt;/steps&gt;
   &lt;/taskbody&gt;
 &lt;/task&gt;</code></pre>
-        </div>
         <div class="p">
           In order to replace the step with <code class="ph codeph">id="b"</code>, another topic
           must combine a <code class="keyword markupname xmlatt">@conaction</code> value of
           <span class="keyword">pushreplace</span> with a
           <code class="keyword markupname xmlatt">@conref</code> attribute that references this
           <code class="keyword markupname xmlelement">&lt;step&gt;</code>:
-          <pre class="pre codeblock"><code>&lt;task id="other" xml:lang="en"&gt;
-  ...
-   &lt;step conaction="pushreplace" 
-         conref="example.dita#example/b"&gt;
-     &lt;cmd&gt;Updated B&lt;/cmd&gt;
-   &lt;/step&gt;
-  ...
+          <pre class="pre codeblock"><code>&lt;!-- Steps element within another task --&gt;
+&lt;steps&gt;
+  &lt;step conaction="pushreplace" 
+        conref="example.dita#example/b"&gt;
+    &lt;cmd&gt;Updated B&lt;/cmd&gt;
+  &lt;/step&gt;
+&lt;/steps&gt;
 &lt;/task&gt;</code></pre>
         </div>
         <div class="p">
@@ -331,12 +332,14 @@ index: '../../toc.html'
           The following example pushes a
           <code class="keyword markupname xmlelement">&lt;step&gt;</code> before "b" in the
           <span class="ph filepath">example.dita</span> file shown above.
-          <pre
-            class="pre codeblock"
-          ><code>&lt;step conaction="pushbefore"&gt;&lt;cmd&gt;Do this before B&lt;/cmd&gt;&lt;/step&gt;
-<span class="ph">&lt;step conaction="mark" conref="example.dita#example/b"&gt;
-  &lt;cmd/&gt;
-&lt;/step&gt;</span></code></pre>
+          <pre class="pre codeblock"><code>&lt;steps&gt;
+  &lt;step conaction="pushbefore"&gt;
+    &lt;cmd&gt;Do this before B&lt;/cmd&gt;
+  &lt;/step&gt;
+  &lt;step conaction="mark" conref="example.dita#example/b"&gt;
+    &lt;cmd/&gt;
+  &lt;/step&gt;
+&lt;/steps&gt;</code></pre>
         </div>
         <div class="p">
           The result contains the pushed
@@ -360,13 +363,14 @@ index: '../../toc.html'
         <div class="p">
           Pushing an element after a target is exactly the same as pushing before, except that the
           order of the "mark" element and the pushed element are reversed.
-          <pre
-            class="pre codeblock"
-          ><code><span class="ph">&lt;step conaction="mark" conref="example.dita#example/b"&gt;
-  &lt;cmd/&gt;
-&lt;/step&gt;</span>
-&lt;step conaction="pushafter"&gt;&lt;cmd&gt;Do this AFTER B&lt;/cmd&gt;&lt;/step&gt;
-</code></pre>
+          <pre class="pre codeblock"><code>&lt;steps&gt;
+  &lt;step conaction="mark" conref="example.dita#example/b"&gt;
+    &lt;cmd/&gt;
+  &lt;/step&gt;
+  &lt;step conaction="pushafter"&gt;
+    &lt;cmd&gt;Do this AFTER B&lt;/cmd&gt;
+  &lt;/step&gt;
+&lt;/steps&gt;</code></pre>
         </div>
         <div class="p">
           In this case the resulting document has the pushed content after

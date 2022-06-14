@@ -2,9 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'Prolog (metadata) elements'
-description: 'The prolog elements represent the metadata associated with
-a document. Most of the metadata in a topic prolog can also be authored
-in a DITA map, in the map's topicmeta element.'
+description: 'The prolog elements represent metadata that is associated with a
+  document. Most of these elements are valid in both topics and
+  maps.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -75,7 +75,6 @@ index: '../../toc.html'
                 <li><a href="../../langRef/base/prodinfo.html">prodinfo</a></li>
                 <li><a href="../../langRef/base/prodname.html">prodname</a></li>
                 <li><a href="../../langRef/base/prognum.html">prognum</a></li>
-                <li><a href="../../langRef/base/prolog.html">prolog</a></li>
                 <li><a href="../../langRef/base/publisher.html">publisher</a></li>
                 <li><a href="../../langRef/base/resourceid.html">resourceid</a></li>
                 <li><a href="../../langRef/base/revised.html">revised</a></li>
@@ -114,128 +113,114 @@ index: '../../toc.html'
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Prolog (metadata) elements</h1>
     <p class="shortdesc">
-      The prolog elements represent the metadata associated with a document. Most of the metadata in
-      a topic prolog can also be authored in a DITA map, in the map's
-      <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element.
+      The prolog elements represent metadata that is associated with a document. Most of these
+      elements are valid in both topics and maps.
     </p>
 
     <nav role="navigation" class="related-links">
       <ul class="ullinks">
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/audience.html">audience</a></strong
-          ><br />An <code class="keyword markupname xmlelement">&lt;audience&gt;</code> element
-          specifies an audience for a topic.
+          ><br />An audience is the group of readers for whom a piece of content is intended.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/author.html">author</a></strong
-          ><br />An <code class="keyword markupname xmlelement">&lt;author&gt;</code> element
-          specifies the author of a topic.
+          ><br />An author is the entity that created the content,
+          <span style="color:red;" class="ph">such as a person, organization, or application.</span>
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/brand.html">brand</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;brand&gt;</code> element
-          specifies the manufacturer or brand associated with the product described by the parent
-          <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code> element.
+          ><br />A brand is a name, term, design, or any other feature that uniquely identifies a
+          good or service and distinguishes it from that of other sellers.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/category.html">category</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;category&gt;</code> element
-          specifies any category by which a topic might be classified for retrieval or navigation.
+          ><br />A category is a group of things that have shared characteristics.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/component.html">component</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;component&gt;</code> element
-          specifies the component of the product that this topic is concerned with.
+          ><br />A component is a part of a larger whole, such as a machine, software application,
+          or vehicle.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/copyrholder.html">copyrholder</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;copyrholder&gt;</code> element
-          specifies the copyright holder that holds legal rights to the material contained in the
-          topic.
+          ><br />A copyright holder is the entity that holds the
+          <span style="color:red;" class="ph">legal</span> rights to a work that has been assigned a
+          copyright.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/copyright.html">copyright</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;copyright&gt;</code> element
-          specifies legal ownership of the content.
+          ><br />A copyright is a legal device that gives the creator of a creative work the sole
+          right to publish and sell that work.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/copyryear.html">copyryear</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;copyryear&gt;</code> element
-          specifies the copyright year for a topic using the
-          <code class="keyword markupname xmlatt">@year</code> attribute.
+          ><br />A copyright year is the year
+          <span style="color:red;" class="ph"
+            >in which an author first published a work or submitted it to a copyright-granting
+            agency.</span
+          >
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/created.html">created</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;created&gt;</code> element
-          specifies the document creation date using the
-          <code class="keyword markupname xmlatt">@date</code> attribute.
+          ><br />The creation date is the date that a document was ceated.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/critdates.html">critdates</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;critdates&gt;</code> element
-          specifies the critical dates in a document life cycle, such as the creation date and
-          revision dates.
+          ><br />Critical dates are <span style="color:red;" class="ph">important</span> dates in
+          the document life cycle, such as creation and revision dates.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/featnum.html">featnum</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;featnum&gt;</code> element
-          specifies the feature number of a product.
+          ><br />A feature number is the number that is associated with a product feature.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/keywords.html">keywords</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element
-          contains a list of terms that applies to the topic or map.
+          ><br />Key words are terms that <span style="color:red;" class="ph">apply</span> to the
+          topic or map.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/metadata.html">metadata</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> section is a
-          contaner that groups metadata such as a topic's audience and key words.
+          ><br />Metadata is data about data.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/othermeta.html">othermeta</a></strong
-          ><br />An <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code> element
-          specifies properties not otherwise included in
-          <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> using name/content
-          values.
+          ><br />Other metadata is metadata that specifies properties by using name and content
+          pairs.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/permissions.html">permissions</a></strong
-          ><br />Permissions are the level of entitlement needed to access content.
+          ><br />Permissions are the level of entitlement that are needed to access content.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/platform.html">platform</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;platform&gt;</code> element
-          specifies the operating system or hardware related to the product being described by the
-          parent <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code> element.
+          ><br />A platform is a group of technologies that are used as a base upon which other
+          applications, processes, or technologies are developed.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/prodinfo.html">prodinfo</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code> element
-          contains information about the product or products that are the subject matter of the
-          current topic.
+          ><br />Product information is detailed information about a product, such as the product
+          name, version number, brand name, associated components, and more.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/prodname.html">prodname</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;prodname&gt;</code> element
-          specifies the name of the product that is supported by the information in this topic.
+          ><br />A product name is the name that a business, company, or enterprise chooses to give
+          a product.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/prognum.html">prognum</a></strong
-          ><br />A program number is an order number or a product tracking code
-        </li>
-        <li class="link ulchildlink">
-          <strong><a href="../../langRef/base/prolog.html">prolog</a></strong
-          ><br />The prolog contains metadata about the topic, for example, author information or
-          subject category.
+          ><br />A program number is an order number or a product tracking code.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/publisher.html">publisher</a></strong
-          ><br />A publisher is the person, company, or organization who publishes the content.
+          ><br />A publisher is an entity (person, company, or organization) who makes information,
+          literature, music, software, and other content available to
+          <span style="color:red;" class="ph">a reader</span>.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/resourceid.html">resourceid</a></strong
-          ><br />A resource ID provides an identifier for applications that must use their own
-          identifier scheme, such as context-sensitive help systems and databases.
+          ><br />A resource ID is an identifier that is designed for applications that need to use
+          their own identifier scheme, such as context-sensitive help systems and databases.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/revised.html">revised</a></strong
@@ -245,26 +230,23 @@ index: '../../toc.html'
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/series.html">series</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;series&gt;</code> element
-          specifies information about the product series that the topic supports.
+          ><br />A series is a set of related products or programs.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/source.html">source</a></strong
-          ><br />Source information identifies a resource from which the present topic is derived,
-          either completely or in part.
+          ><br />A source is a resource from which the present topic is derived, either completely
+          or in part.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/vrmlist.html">vrmlist</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;vrmlist&gt;</code> element
-          contains one or more
-          <code class="keyword markupname xmlelement">&lt;vrm&gt;</code> elements for logging the
-          version, release, and modification information for products to which the topic applies.
+          ><br />A version metadata list is a grouping of one or more
+          <code class="keyword markupname xmlelement">&lt;vrm&gt;</code> elements that specify
+          information about the version, release, and modification levels of a product.
         </li>
         <li class="link ulchildlink">
           <strong><a href="../../langRef/base/vrm.html">vrm</a></strong
-          ><br />A <code class="keyword markupname xmlelement">&lt;vrm&gt;</code> element specifies
-          information about a product's version, modification, and release, to which the current
-          topic applies.
+          ><br />Version metadata is metadata that is used to track the version, release, and
+          modification numbers for a product
         </li>
       </ul>
       <div class="familylinks">

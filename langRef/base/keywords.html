@@ -2,9 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'keywords'
-description: 'A keywords element contains a list of terms
-  that applies to the topic or
-  map.'
+description: 'Key words are terms that apply to the
+  topic or map.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,23 +56,28 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element contains a
-        list of terms that applies to the topic or map.
+        Key words are terms that <span style="color:red;" class="ph">apply</span> to the topic or
+        map.
       </p>
       <section class="section" id="keywords__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          Key words in <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> are used
-          to help find content in the topic.
-          <span class="ph"
-            >For example,
-            <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> elements can be
-            supplied as key words to search engines, and
-            <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> elements can be
-            collected for a document index.</span
-          >
+          The content of the
+          <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element can be used to
+          optimize the rendered output:
         </p>
+        <ul class="ul">
+          <li class="li">
+            Processors might add metadata to the output format to facilitate search engine
+            optimization.
+          </li>
+          <li class="li">
+            Processors might use the content of
+            <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> elements to
+            generate an index for a document.
+          </li>
+        </ul>
         <p class="p">
           While the
           <a
@@ -87,19 +91,19 @@ index: '../../toc.html'
           inline element. The
           <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element only appears
           in the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> or
-          <code class="keyword markupname xmlelement">&lt;prolog&gt;</code>, and is used to specify
-          keywords that apply to the topic.
+          <code class="keyword markupname xmlelement">&lt;prolog&gt;</code>, and it is used to
+          specify keywords that apply to the topic.
         </p>
       </section>
       <section class="section" id="keywords__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          All <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> and/or
-          <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> elements in the
-          <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element are considered
-          part of the topic's metadata and should be reflected in the output as appropriate for the
-          output medium.
+          All <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> and
+          <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> elements contained in
+          the <code class="keyword markupname xmlelement">&lt;keywords&gt;</code> element are
+          considered part of the topic or map metadata. How the content of these elements is
+          processed depends on the output medium.
         </p>
       </section>
       <section class="section" id="keywords__attributes">
@@ -121,19 +125,17 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows how several key words can be associated with a topic
-          related to installing software.
+          The following code sample shows how several key words can be associated with a topic that
+          is related to installing software:
         </p>
         <pre class="pre codeblock"><code>&lt;prolog&gt;
- &lt;metadata&gt;
-  &lt;keywords&gt;
-   &lt;keyword&gt;installing&lt;/keyword&gt;
-   &lt;keyword&gt;uninstalling&lt;/keyword&gt;
-   &lt;keyword&gt;prerequisites&lt;/keyword&gt; 
-   &lt;keyword&gt;helps&lt;/keyword&gt;
-   &lt;keyword&gt;wizards&lt;/keyword&gt;
-  &lt;/keywords&gt;
- &lt;/metadata&gt;
+    &lt;metadata&gt;
+        &lt;keywords&gt;
+            &lt;keyword&gt;installing&lt;/keyword&gt;
+            &lt;keyword&gt;prerequisites&lt;/keyword&gt;
+            &lt;keyword&gt;wizards&lt;/keyword&gt;
+        &lt;/keywords&gt;
+    &lt;/metadata&gt;
 &lt;/prolog&gt;</code></pre>
       </div>
     </div>
@@ -144,7 +146,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

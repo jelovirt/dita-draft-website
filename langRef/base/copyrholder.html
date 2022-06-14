@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'copyrholder'
-description: 'A copyrholder element specifies the copyright holder that holds
-  legal rights to the material contained in the topic.'
+description:
+  'A copyright holder is the entity that holds the legal rights to a work that has been assigned a
+  copyright.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,8 +57,9 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;copyrholder&gt;</code> element specifies
-        the copyright holder that holds legal rights to the material contained in the topic.
+        A copyright holder is the entity that holds the
+        <span style="color:red;" class="ph">legal</span> rights to a work that has been assigned a
+        copyright.
       </p>
       <section class="section" id="copyrholder__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -78,14 +80,11 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows that OASIS Open holds the copyright to the material in a
-          topic.
+          See
+          <a class="xref" href="copyright.html#copyright__example"
+            ><code class="keyword markupname xmlelement">&lt;copyright&gt;</code></a
+          >.
         </p>
-        <pre class="pre codeblock"><code>&lt;copyright&gt;
-  &lt;copyryear year="2020"&gt;&lt;/copyryear&gt;
-  <strong class="ph b">&lt;copyrholder&gt;</strong>OASIS Open<strong class="ph b">&lt;/copyrholder&gt;</strong>
-&lt;/copyright&gt;
-</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -95,7 +94,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>

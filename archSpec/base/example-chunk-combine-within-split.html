@@ -1,10 +1,11 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Example: Combining topics within a split context'
-description: 'While chunk attributes are ignored when a "combine" action is already in
-effect, it is possible to use chunk="combine" when split is
-otherwise in effect.'
+title: 'Example: Using chunk="combine" when
+  the root map specifies chunk="split"'
+description: 'While chunk attributes are ignored when chunk="combine" is already in
+  effect, it is possible to use chunk="combine" when
+  chunk="split" is in effect.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -33,7 +34,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li>
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -67,17 +68,17 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-branch.html"
-                    >Example: Using chunk to render a single document from one branch</a
+                    >Example: Using chunk to render a single document from one or more branches</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-group.html"
-                    >Example: Using chunk to combine a group of topics</a
+                    >Example: Using chunk to combine groups of topics</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
-                    >Example: Using chunk to combine nested documents</a
+                    >Example: How chunk="combine" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -87,7 +88,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-split-nested.html"
-                    >Example: Using chunk to split nested documents</a
+                    >Example: How chunk="split" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -97,7 +98,7 @@ index: '../../toc.html'
                 </li>
                 <li class="active">
                   <a href="../../archSpec/base/example-chunk-combine-within-split.html"
-                    >Example: Combining topics within a split context</a
+                    >Example: Using chunk="combine" when the root map specifies chunk="split"</a
                   >
                 </li>
                 <li>
@@ -139,57 +140,88 @@ index: '../../toc.html'
 </nav>
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
-    <h1 class="title topictitle1" id="ariaid-title1">
-      Example: Combining topics within a split context
+    <h1 class="title topictitle1" style="color:red;" id="ariaid-title1">
+      Example: Using <code class="ph codeph">chunk="combine"</code> when the root map specifies
+      <code class="ph codeph">chunk="split"</code>
     </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
-        While <code class="keyword markupname xmlatt">@chunk</code> attributes are ignored when a
-        "combine" action is already in effect, it is possible to use
-        <code class="ph codeph">chunk="combine"</code> when <code class="ph codeph">split</code> is
-        otherwise in effect.
-      </p>
-      <p class="p">
-        Assume the following map, where <code class="ph codeph">chunk="split"</code> on the root
-        element means that all topic documents within this map structure are split by default, but a
-        branch within the map sets <code class="ph codeph">chunk="combine"</code>.
+        While <code class="keyword markupname xmlatt">@chunk</code> attributes are ignored when
+        <span style="color:red;" class="ph"><code class="ph codeph">chunk="combine"</code></span> is
+        already in effect, it is possible to use <code class="ph codeph">chunk="combine"</code> when
+        <code class="ph codeph">chunk="split"</code> is in effect.
       </p>
       <figure class="fig fignone" id="chunkedge__fig_htr_jyd_1gb">
-        <figcaption>
-          <span class="fig--title-label">Figure 1. </span>Map with default "split" action, that also
-          uses "combine"
-        </figcaption>
+        <figcaption><span class="fig--title-label">Figure 1. </span>Source DITA map</figcaption>
 
-        <pre class="pre codeblock"><code>&lt;map chunk="split"&gt;
+        <p class="p">
+          Consider the following DITA map, where
+          <code class="ph codeph">chunk="split"</code>
+          <span style="color:red;" class="ph">is specified</span> on the root element.
+          <span style="color:red;" class="ph">The effect of this operation</span> is that all topic
+          documents within <span style="color:red;" class="ph">the</span> map structure are split by
+          default.
+          <span style="color:red;" class="ph"
+            >However, a map branch also specifies
+            <code class="ph codeph">chunk="combine"</code>:</span
+          >
+        </p>
+        <pre class="pre codeblock"><code>&lt;map <strong class="ph b">chunk="split"</strong>&gt;
   &lt;title&gt;Split most, but not one branch&lt;/title&gt;
-  &lt;topicref href="splitme.dita"&gt;...&lt;/topicref&gt;
-  &lt;topicref href="exception.dita" chunk="combine"&gt;...&lt;/topicref&gt;
-  &lt;topicref href="splitmetoo.dita"&gt;...&lt;/topicref&gt;
-&lt;/topicref&gt;</code></pre>
+  &lt;topicref href="splitme.dita"&gt;
+    &lt;!-- More topic references --&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="exception.dita" <strong class="ph b">chunk="combine"</strong>&gt;
+    &lt;!-- More topic references --&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="splitmetoo.dita"&gt;
+    &lt;!-- More topic references --&gt;
+  &lt;/topicref&gt;<span style="color:red;" class="ph">
+&lt;/map&gt;</span></code></pre>
+        <p class="p">
+          <span style="color:red;" class="ph">Assume also</span> that no other
+          <code class="keyword markupname xmlatt">@chunk</code> attributes are specified in the map.
+        </p>
       </figure>
-      <div class="p">
-        Assume as well that no other
-        <code class="keyword markupname xmlatt">@chunk</code> attributes are specified in this map.
+      <figure class="fig fignone">
+        <figcaption>
+          <span class="fig--title-label">Figure 2. </span>Evaluation of
+          <code class="keyword markupname xmlatt">@chunk</code> attributes in the map
+        </figcaption>
+      </figure>
+      <p class="p">
         The following points are true when <code class="keyword markupname xmlatt">@chunk</code> is
         evaluated:
-        <ol class="ol" id="chunkedge__ol_p3y_wng_thb">
-          <li class="li">
-            The document <span class="ph filepath">splitme.dita</span> is treated as multiple split
-            documents when it contains more than one topic. The same is true for any other document
-            within that branch.
-          </li>
-          <li class="li">
-            The second branch (beginning with <span class="ph filepath">exception.dita</span>) is
-            treated as a single DITA document, combining all topic documents within that branch.
-          </li>
-          <li class="li">
-            The document <span class="ph filepath">splitmetoo.dita</span> is treated as multiple
-            split documents when it contains more than one topic. The same is true for any other
-            document within that branch.
-          </li>
-        </ol>
-      </div>
+      </p>
+      <ul class="ul" id="chunkedge__ol_p3y_wng_thb">
+        <li class="li">
+          The document <span class="ph filepath">splitme.dita</span> is
+          <span style="color:red;" class="ph">rendered</span> as
+          <span style="color:red;" class="ph">one result document for each topic.</span>. The same
+          is true for any other <span style="color:red;" class="ph">topic</span> document within the
+          map branch.
+        </li>
+        <li class="li">
+          The second <span style="color:red;" class="ph">map</span> branch<span
+            style="color:red;"
+            class="ph"
+            >, where the outermost
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements references
+            <span class="ph filepath">exception.dita</span>, </span
+          >is <span style="color:red;" class="ph">rendered</span> as a single
+          <span style="color:red;" class="ph">result</span> document
+          <span style="color:red;" class="ph">that combines all topic documents</span> within
+          <span style="color:red;" class="ph">the map</span> branch.
+        </li>
+        <li class="li">
+          The document <span class="ph filepath">splitmetoo.dita</span> is
+          <span style="color:red;" class="ph">rendered</span> as
+          <span style="color:red;" class="ph">one result document for each topic.</span>. The same
+          is true for any other <span style="color:red;" class="ph">topic</span> document within the
+          map branch.
+        </li>
+      </ul>
     </div>
     <nav role="navigation" class="related-links">
       <div class="familylinks">

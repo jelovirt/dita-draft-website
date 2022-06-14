@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -49,16 +49,6 @@ index: '../../toc.html'
                 >Processing controlled attribute values</a
               >
             </li>
-            <li>
-              <a href="../../archSpec/base/extending-a-subject-scheme.html"
-                >Extending subject schemes</a
-              >
-            </li>
-            <li>
-              <a href="../../archSpec/base/scaling-controlled-values-to-define-a-taxonomy.html"
-                >Scaling a list of controlled values to define a taxonomy</a
-              >
-            </li>
             <li><a href="../../archSpec/base/classification-maps.html">Classification maps</a></li>
             <li>
               <a href="../../archSpec/base/examples-subjectScheme-maps.html"
@@ -67,7 +57,7 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li><a href="../../archSpec/base/chunking.html">Chunking</a></li>
       </ul>
     </li>
@@ -127,11 +117,11 @@ index: '../../toc.html'
         meaning of a value:
         <ul class="ul">
           <li class="li">
-            A <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with a
+            A <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> (or a
+            <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with a
             <code class="keyword markupname xmlatt">@title-role</code> of
-            <code class="ph codeph">navigation</code> (e.g. the
-            <code class="keyword markupname xmlelement">&lt;navtitle&gt;</code> element) can provide
-            a more readable value name.
+            <code class="ph codeph">navigation</code>) can provide a more readable name for the
+            controlled value.
           </li>
           <li class="li">
             The <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element can
@@ -166,10 +156,6 @@ index: '../../toc.html'
             >
             a detailed explanation of the subject.
           </li>
-          <li class="li">
-            Authoring tools <dfn class="term RFC-2119">MAY</dfn> produce a help file, PDF, or other
-            readable catalog to help authors better understand the controlled values.
-          </li>
         </ul>
       </div>
       <div class="example" id="controlled-values-for-attributes__example">
@@ -178,8 +164,8 @@ index: '../../toc.html'
         </h2>
 
         <p class="p">
-          The following code fragment illustrates how a subject definition can provide a richer
-          level of information about a controlled value:
+          The following code sample illustrates how a subject definition can provide a richer level
+          of information about a controlled value:
         </p>
         <pre
           class="pre codeblock"
@@ -193,7 +179,8 @@ index: '../../toc.html'
   &lt;subjectdef keys="iso" href="iso-terminology.dita"&gt;
     &lt;topicmeta&gt;
       &lt;navtitle&gt;ISO keywords&lt;/navtitle&gt;
-      &lt;shortdesc&gt;The normative terminology used by some other OASIS technical committees&lt;/shortdesc&gt;
+      &lt;shortdesc&gt;The normative terminology used by some other OASIS technical committees
+      &lt;/shortdesc&gt;
     &lt;/topicmeta&gt;
   &lt;/subjectdef&gt;
 &lt;/subjectdef&gt;</code></pre>
@@ -203,8 +190,10 @@ index: '../../toc.html'
           additional information that a processor might display to users as they select attribute
           values or classify content. The resources referenced by the
           <code class="keyword markupname xmlatt">@href</code> attributes provide even more detailed
-          information; a processor might render expandable links as part of a user interface that
-          implements a progressive disclosure strategy.
+          information. A processor might render expandable links as part of a user interface that
+          implements a progressive disclosure strategy, or an authoring tool might include the
+          navigation title and short description in a window where the user selects a controlled
+          value.
         </p>
       </div>
     </div>

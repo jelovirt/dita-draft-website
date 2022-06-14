@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -72,7 +72,7 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          Processors should ignore an
+          Processors <dfn class="term RFC-2119">SHOULD</dfn> ignore an
           <code class="keyword markupname xmlelement">&lt;index-see&gt;</code> element if its parent
           <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> element contains any
           <code class="keyword markupname xmlelement">&lt;indexterm&gt;</code> children.
@@ -118,7 +118,17 @@ index: '../../toc.html'
           <pre class="pre codeblock"><code>&lt;indexterm&gt;Carassius auratus
   &lt;index-see&gt;goldfish&lt;/index-see&gt;
 &lt;/indexterm&gt;</code></pre>
-          <p class="p">This markup will generate an index entry without a page reference.</p>
+          <p class="p">
+            This markup will generate an index entry without a page reference. It might look like
+            the following:
+          </p>
+          <br /><img
+            class="image"
+            src="../images/index-see.jpg"
+            height="84"
+            width="480"
+            alt="This screen capture shows a portion of a generated index. The reader is instructed to look in the index for the vernacular term goldfish, rather than the Latin Carassius auatus. The edges of the screen capture are tattered, to indicate that the image is part of a larger document."
+          /><br />
         </figure>
         <figure class="fig fignone">
           <figcaption>

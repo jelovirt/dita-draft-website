@@ -2,9 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'Example: Using chunk to combine all documents into one'
-description: 'Where a publishing system typically would render each topic document as an independent
-  result document, the chunk attribute can be used to render all content as a
-  single document.'
+description: 'When a processor would typically render each topic document as
+  an independent result document, the chunk attribute
+  can be used to render all content as a single
+  document.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li>
@@ -33,7 +34,7 @@ index: '../../toc.html'
             >Subject scheme maps and their usage</a
           >
         </li>
-        <li><a href="../../archSpec/base/map-processing.html">Map cascading</a></li>
+        <li><a href="../../archSpec/base/map-cascading.html">Metadata cascading</a></li>
         <li>
           <a href="../../archSpec/base/chunking.html">Chunking</a>
           <ul class="nav nav-list">
@@ -67,17 +68,17 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-branch.html"
-                    >Example: Using chunk to render a single document from one branch</a
+                    >Example: Using chunk to render a single document from one or more branches</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-group.html"
-                    >Example: Using chunk to combine a group of topics</a
+                    >Example: Using chunk to combine groups of topics</a
                   >
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-nested-topics.html"
-                    >Example: Using chunk to combine nested documents</a
+                    >Example: How chunk="combine" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -87,7 +88,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-split-nested.html"
-                    >Example: Using chunk to split nested documents</a
+                    >Example: How chunk="split" effects the map hierarchy</a
                   >
                 </li>
                 <li>
@@ -97,7 +98,7 @@ index: '../../toc.html'
                 </li>
                 <li>
                   <a href="../../archSpec/base/example-chunk-combine-within-split.html"
-                    >Example: Combining topics within a split context</a
+                    >Example: Using chunk="combine" when the root map specifies chunk="split"</a
                   >
                 </li>
                 <li>
@@ -146,107 +147,116 @@ index: '../../toc.html'
 
     <div class="body conbody">
       <p class="shortdesc">
-        Where a publishing system typically would render each topic document as an independent
-        result document, the <code class="keyword markupname xmlatt">@chunk</code> attribute can be
-        used to render all content as a single document.
-      </p>
-      <p class="p">
-        Consider the following source documents, with root map
-        <span class="ph filepath">input.ditamap</span>:
+        When a processor would typically render each topic document as an independent result
+        document, the <code class="keyword markupname xmlatt">@chunk</code> attribute can be used to
+        render all content as a single document.
       </p>
       <figure class="fig fignone">
         <figcaption>
-          <span class="fig--title-label">Figure 1. </span>Input map without chunking
+          <span class="fig--title-label">Figure 1. </span>Root map and the topics that it references
         </figcaption>
 
-        <pre class="pre codeblock"><code>input.ditamap:
-&lt;map&gt;
+        <p class="p">Consider the following DITA map:</p>
+        <pre class="pre codeblock"><code>&lt;map&gt;
   &lt;title&gt;Lesson plan&lt;/title&gt;
   &lt;topicref href="background.dita"&gt;
-    &lt;!-- more background topics --&gt;
+    &lt;!-- More <span style="color:red;" class="ph">topic references to</span> background topics --&gt;
   &lt;/topicref&gt;
   &lt;topicref href="goals.dita"&gt;
-    &lt;!-- more goal topics --&gt;
+    &lt;!-- More <span style="color:red;" class="ph">topic references to</span> goal topics --&gt;
   &lt;/topicref&gt;
-  &lt;!-- more topics --&gt;
+  &lt;!-- More <span style="color:red;" class="ph">topic references</span> --&gt;
 &lt;/map&gt;
-
-background.dita:
+</code></pre>
+        <p class="p">
+          The following code samples show the content of
+          <span class="ph filepath">background.dita</span> and
+          <span class="ph filepath">goals.dita</span>:
+        </p>
+        <pre
+          class="pre codeblock"
+        ><code><strong class="ph b">&lt;!-- Content of background.dita --&gt;</strong>
 &lt;topic id="background"&gt;
   &lt;title&gt;Prerequisite concepts&lt;/title&gt;
-  &lt;shortdesc&gt;This information is necessary before starting&lt;/shortdesc&gt;
-  &lt;body&gt;&lt;!-- ...background content... --&gt;&lt;/body&gt;
-&lt;/topic&gt;
-
-goals.dita:
+  &lt;shortdesc&gt;This information is necessary before starting ...&lt;/shortdesc&gt;
+  &lt;body&gt; &lt;!-- ... --&gt; &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+        <pre
+          class="pre codeblock"
+        ><code><strong class="ph b">&lt;!-- Content of goals.dita --&gt;</strong>
 &lt;topic id="goals"&gt;
-  &lt;title&gt;Lesson gals&lt;/title&gt;
-  &lt;shortdesc&gt;After you complete the lesson, ...&lt;/shortdesc&gt;
-  &lt;body&gt;&lt;!-- ...goal content... --&gt;&lt;/body&gt;
+  &lt;title&gt;Lesson <span style="color:red;" class="ph">goals</span>&lt;/title&gt;
+  &lt;shortdesc&gt;After you complete the lesson ...&lt;/shortdesc&gt;
+  &lt;body&gt; &lt;!-- ... --&gt; &lt;/body&gt;
 &lt;/topic&gt;</code></pre>
       </figure>
       <p class="p">
-        For many systems or output formats, each document in the map is rendered as an independent
-        document. For example, rendering this map as HTML5 might result in
+        For many systems or output formats, each document in the map is
+        <span style="color:red;" class="ph">typically</span> rendered as an independent document.
+        For example, rendering this map as HTML5 might result in
         <span class="ph filepath">background.html</span> and
-        <span class="ph filepath">goals.html</span> (along with other HTML5 files). In such cases,
-        if output requirements demand only a single result document, adding
-        <code class="ph codeph">chunk="combine"</code> to the root map element instructs a processor
-        to render one document that combines all topics.
+        <span class="ph filepath">goals.html</span>, in addition to other HTML5 files.
       </p>
       <figure class="fig fignone">
         <figcaption>
           <span class="fig--title-label">Figure 2. </span>Root map with chunking specified
         </figcaption>
 
-        <pre class="pre codeblock"><code>input.ditamap:
-&lt;map <strong class="ph b">chunk="combine"</strong>&gt;
+        <p class="p">
+          If the output requirements demand only a single result document, specifying
+          <code class="ph codeph">chunk="combine"</code> on the root map element instructs a
+          processor to render a single document that combines all topics:
+        </p>
+        <pre class="pre codeblock"><code>&lt;map <strong class="ph b">chunk="combine"</strong>&gt;
   &lt;title&gt;Lesson plan&lt;/title&gt;
   &lt;topicref href="background.dita"&gt;
-    &lt;!-- more background topics --&gt;
+    &lt;!-- More <span style="color:red;" class="ph">topic references to</span> background topics --&gt;
   &lt;/topicref&gt;
   &lt;topicref href="goals.dita"&gt;
-    &lt;!-- more goal topics --&gt;
+    &lt;!-- More <span style="color:red;" class="ph">topic references to</span> goal topics --&gt;
   &lt;/topicref&gt;
-  &lt;!-- more topics --&gt;
+  &lt;!-- More <span style="color:red;" class="ph">topic references</span> --&gt;
 &lt;/map&gt;</code></pre>
       </figure>
-      <p class="p">
-        The result of evaluating this
-        <code class="keyword markupname xmlatt">@chunk</code> attribute is equivalent to the
-        following map and topic document; content from all topics within the map is combined into a
-        single result, with a topic order and topic nesting structure that match the original map
-        hierarchy.
-      </p>
       <figure class="fig fignone" id="chunkcombineexample__fig_fkg_dhd_1gb">
         <figcaption>
-          <span class="fig--title-label">Figure 3. </span>Equivalent source content
+          <span class="fig--title-label">Figure 3. </span>Equivalent content of source documents
+          after evaluation
         </figcaption>
 
-        <pre class="pre codeblock"><code>input.ditamap:
+        <p class="p">
+          The result of evaluating the
+          <code class="keyword markupname xmlatt">@chunk</code> attribute is equivalent to the
+          following map and topic documents:
+        </p>
+        <pre class="pre codeblock"><code><strong class="ph b">&lt;!-- Root map --&gt;</strong>
 &lt;map&gt;
   &lt;title&gt;Lesson plan&lt;/title&gt;
-  &lt;topicref href="input.dita"/&gt;
-&lt;/map&gt;
-
-input.dita:
-&lt;dita&gt;
+  &lt;topicref href="combinedTopics.dita"/&gt;
+&lt;/map&gt;</code></pre>
+        <pre class="pre codeblock"><code>&lt;dita&gt;
   <strong class="ph b">&lt;!-- original content of background.dita --&gt;</strong>
   &lt;topic id="background"&gt;
     &lt;title&gt;Prerequisite concepts&lt;/title&gt;
     &lt;shortdesc&gt;This information is necessary before starting&lt;/shortdesc&gt;
-    &lt;body&gt;&lt;!-- ...background content... --&gt;&lt;/body&gt;
-    &lt;!-- more background topics --&gt;
+    &lt;body&gt; &lt;!-- ... --&gt; &lt;/body&gt;
+      &lt;!-- More background topics --&gt;
   &lt;/topic&gt;
   <strong class="ph b">&lt;!-- original content of goals.dita --&gt;</strong>
   &lt;topic id="goals"&gt;
-    &lt;title&gt;Lesson gals&lt;/title&gt;
-    &lt;shortdesc&gt;After you complete the lesson, ...&lt;/shortdesc&gt;
-    &lt;body&gt;&lt;!-- ...goal content... --&gt;&lt;/body&gt;
-    &lt;!-- more goal topics --&gt;
+    &lt;title&gt;Lesson <span style="color:red;" class="ph">goals</span>&lt;/title&gt;
+    &lt;shortdesc&gt;After you complete the lesson ...&lt;/shortdesc&gt;
+    &lt;body&gt; &lt;!-- ... --&gt; &lt;/body&gt;
+    &lt;!-- More goal topics --&gt;
   &lt;/topic&gt;
-  &lt;!-- more topics --&gt;
+  &lt;!-- More topics --&gt;
 &lt;/dita&gt;</code></pre>
+        <p class="p">
+          <span style="color:red;" class="ph">The</span> content from all topics within the map is
+          combined into a single result <span style="color:red;" class="ph">document</span>, with a
+          topic order and topic nesting structure that
+          <span style="color:red;" class="ph">matches</span> the original map hierarchy:
+        </p>
       </figure>
     </div>
     <nav role="navigation" class="related-links">

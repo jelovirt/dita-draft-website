@@ -2,7 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'searchtitle'
-description: 'A search title is a title that is displayed by search tools.'
+description: 'A search title is an alternative title that is displayed by
+  search tools.'
 index: '../../toc.html'
 ---
 
@@ -16,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -54,27 +55,33 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">A search title is a title that is displayed by search tools.</p>
+      <p class="shortdesc">
+        A search title is an alternative title that is displayed by search tools.
+      </p>
       <section class="section" id="searchtitle__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
           A search title is useful when the topic has a title that makes sense in the context of a
           single information set, but might be too general in a list of search results. For example,
-          a topic title of "Markup example" might make sense as part of a guide to DITA, but when
-          found among thousands of unrelated topics, a search title of "DITA markup example" is more
-          useful.
+          a topic title of <q class="q">Markup example</q> makes sense as part of a guide about
+          DITA, but when found among thousands of unrelated topics, a search title of
+          <q class="q">DITA markup example</q> is more useful.
+        </p>
+        <p class="p">
+          The <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code> element is a
+          convenience element. It is equivalent to a
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element with
+          <code class="keyword markupname xmlatt">@title-role</code> set to
+          <span class="keyword">search</span>.
         </p>
       </section>
       <section class="section" id="searchtitle__processing-expectations">
         <h2 class="title sectiontitle">Processing expectations</h2>
 
         <p class="p">
-          The <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code> element is a
-          specialization of <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> with
-          the <code class="keyword markupname xmlatt">@title-role</code> set to
-          <code class="ph codeph">search</code>. Processing is dictated by the rules for
-          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>.
+          Processing expectations are dictated by the rules for the
+          <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code> element.
         </p>
       </section>
       <section class="section" id="searchtitle__specialization-hierachy">
@@ -83,7 +90,7 @@ index: '../../toc.html'
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;searchtitle&gt;</code> element is
           specialized from <code class="keyword markupname xmlelement">&lt;titlealt&gt;</code>. It
-          is defined in the alternativeTitle-domain module.
+          is defined in the alternative-titles domain module.
         </p>
       </section>
       <section class="section" id="searchtitle__attributes">
@@ -125,7 +132,7 @@ index: '../../toc.html'
             In the following code sample, the title "Programming Example" is useful in a set of
             information about XSLT basics; however, the same title is not helpful among a set of
             search results from the entire Internet. In the latter case, a title of "Example of
-            basic programming in XSLT" will be more useful:
+            basic programming in XSLT" is more useful:
           </p>
           <pre class="pre codeblock"><code>&lt;topic id="programming-example"&gt;
   &lt;title&gt;Programming example&lt;/title&gt;
@@ -139,7 +146,7 @@ index: '../../toc.html'
         </figure>
         <figure class="fig fignone">
           <figcaption>
-            <span class="fig--title-label">Figure 2. </span>Search title in a map
+            <span class="fig--title-label">Figure 2. </span>Search title used in a map
           </figcaption>
 
           <p class="p">
@@ -165,8 +172,8 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/alternativeTitles-d.html"
-            title="The alternative title elements are used to describe alternative titles for resources for use in specific use cases."
-            >Alternative titles domain elements</a
+            title="The alternative title elements are designed to provide alternative titles for resources. The elements in the alternative-titles domain are specialized from the titlealt element."
+            >Alternative-titles domain elements</a
           >
         </div>
       </div>

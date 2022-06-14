@@ -4,8 +4,8 @@ layout: base
 title: 'Example: Key scopes and omnibus publications'
 description:
   'Key scopes enable you to create omnibus publications that include multiple submaps that
-  define the same key names for common items, such as product names or common
-  topic clusters.'
+  define the same key names for common items, such as product names or common topic
+  clusters.'
 index: '../../toc.html'
 ---
 
@@ -19,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -114,9 +114,19 @@ index: '../../toc.html'
                     >Example: How key scopes affect key precedence</a
                   >
                 </li>
+                <li>
+                  <a href="../../archSpec/base/example-scoped-key-name-conflicts.html"
+                    >Example: How key scopes with the same name interact</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
+        </li>
+        <li>
+          <a href="../../archSpec/base/context-hooks-for-user-assistance.html"
+            >Context hooks for user assistance</a
+          >
         </li>
       </ul>
     </li>
@@ -154,10 +164,7 @@ index: '../../toc.html'
     <div class="body conbody">
       <p class="shortdesc">
         Key scopes enable you to create omnibus publications that include multiple submaps that
-        define the same
-        <span class="ph"
-          >key names for common items, such as product names or common topic clusters.</span
-        >
+        define the same key names for common items, such as product names or common topic clusters.
       </p>
       <p class="p">
         In this scenario, a training organization wants to produce a deliverable that includes all
@@ -176,12 +183,11 @@ index: '../../toc.html'
 &lt;/map&gt;</code></pre>
       <p class="p">
         Each of the submaps contain
-        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that
-        <span class="ph">refer to</span> resources using the
-        <code class="keyword markupname xmlatt">@keyref</code> attribute. Each submap uses common
-        keys for standard parts of the course materials, including "prerequisites," "overview",
-        "assessment", and "summary", and their key definitions <span class="ph">bind</span> the key
-        names to course-specific resources. For example:
+        <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that refer to
+        resources using the <code class="keyword markupname xmlatt">@keyref</code> attribute. Each
+        submap uses common keys for standard parts of the course materials, including
+        "prerequisites," "overview", "assessment", and "summary", and their key definitions bind the
+        key names to course-specific resources. For example:
       </p>
       <pre class="pre codeblock"><code>&lt;map xml:lang="en"&gt;
   &lt;title&gt;Training course #1&lt;/title&gt;

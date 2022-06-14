@@ -2,8 +2,9 @@
 # Generated from DITA source
 layout: base
 title: 'media-track'
-description: 'Media track settings specify the location of supplemental text-based
-  data for the referenced media, for example, subtitles or descriptions.'
+description: 'Media track settings
+  specify the location of supplemental, text-based data for the
+  referenced media, for example, subtitles or descriptions.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -56,8 +57,8 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        Media track settings specify the location of supplemental text-based data for the referenced
-        media, for example, subtitles or descriptions.
+        Media track settings specify the location of supplemental, text-based data for the
+        referenced media, for example, subtitles or descriptions.
       </p>
       <section class="section" id="media-track__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
@@ -79,7 +80,7 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Attributes</h2>
 
         <div class="div">
-          <p class="p">
+          <p style="color:red;" class="p">
             The following attributes are available on this element:
             <span class="ph"
               ><a
@@ -88,26 +89,30 @@ index: '../../toc.html'
                 title="Universal attributes include: audience, base, class, conaction, conkeyref, conref, conrefend, deliveryTarget, dir, id, importance, otherprops, outputclass, platform, product, props, rev, status, translate, and xml:lang"
                 >universal attributes</a
               ></span
-            >
-            and the attributes defined below.
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-format"
+              >format (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-href"
+              >href (link-relationship attributes)</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-keyref"
+              >keyref</a
+            >,
+            <a
+              class="xref"
+              href="../../common/reuse-w-lwdita/../../langRef/attributes/commonAttributes.html#common-atts__attr-scope"
+              >scope (link-relationship attributes)</a
+            >, and the attributes defined below.
           </p>
           <dl class="dl">
-            <dt class="dt dlterm" id="media-track__d1416e50">
-              <code class="keyword markupname xmlatt">@format</code>
-            </dt>
-            <dd class="dd">Specifies the format of the resource being addressed.</dd>
-
-            <dt class="dt dlterm" id="media-track__d1416e60">
-              <code class="keyword markupname xmlatt">@href</code>
-            </dt>
-            <dd class="dd">Specifies the URI of the track resource.</dd>
-
-            <dt class="dt dlterm" id="media-track__d1416e70">
-              <code class="keyword markupname xmlatt">@keyref</code>
-            </dt>
-            <dd class="dd">Specifies a key reference to the track resource.</dd>
-
-            <dt class="dt dlterm" id="media-track__d1416e80">
+            <dt class="dt dlterm" id="media-track__d1415e87">
               <code class="keyword markupname xmlatt">@kind</code>
             </dt>
             <dd class="dd">
@@ -174,34 +179,23 @@ index: '../../toc.html'
               </dl>
             </dd>
 
-            <dt class="dt dlterm" id="media-track__d1416e159">
-              <code class="keyword markupname xmlatt">@scope</code>
-            </dt>
-            <dd class="dd">
-              The <code class="keyword markupname xmlatt">@scope</code> attribute describes the
-              closeness of the relationship between the current document and the target resource.
-              Resources in the same information unit are considered
-              <code class="ph codeph">"local"</code>; resources in the same system as the
-              referencing content but not part of the same information unit are considered
-              <code class="ph codeph">"peer"</code>; and resources outside the system, such as Web
-              pages, are considered <code class="ph codeph">"external"</code>.
-            </dd>
-
-            <dt class="dt dlterm" id="media-track__d1416e182">
+            <dt class="dt dlterm" id="media-track__d1415e166">
               <code class="keyword markupname xmlatt">@srclang</code>
             </dt>
             <dd class="dd">Specifies the language of the track resource.</dd>
           </dl>
+          <p style="color:red;" class="p attr-exception" id="media-track__d1415e175">
+            For this element, the <code class="keyword markupname xmlatt">@href</code> attribute
+            specifies the URI of the track resource.
+          </p>
         </div>
       </section>
       <div class="example" id="media-track__example">
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          See
-          <a class="xref" href="video.html" title="A video is a recording of moving visual images."
-            >video</a
-          >.
+          See <a class="xref" href="video.html#video__example">Examples</a> in the
+          <code class="keyword markupname xmlelement">&lt;video&gt;</code> topic.
         </p>
       </div>
     </div>

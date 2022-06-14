@@ -1,10 +1,10 @@
 ---
 # Generated from DITA source
 layout: base
-title: 'Branch filtering: Multiple condition sets for a branch'
+title: 'Branch filtering: Multiple referenced DITAVAL documents for a branch'
 description: 'Using multiple ditavalref elements as the children of a map
-  or map branch indicates that the map or map branch will be conditionally processed using the
-  rules that are specified in the referenced DITAVAL documents.'
+  or map branch indicates that the map or map branch will be independently filtered using the
+  rules that are specified in each referenced DITAVAL document.'
 index: '../../toc.html'
 ---
 
@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -30,7 +30,7 @@ index: '../../toc.html'
         <li><a href="../../archSpec/base/navigation.html">Navigation</a></li>
         <li><a href="../../archSpec/base/indexes.html">Indexes</a></li>
         <li><a href="../../archSpec/base/conref.html">Content reference (conref)</a></li>
-        <li><a href="../../archSpec/base/condproc.html">Conditional processing (profiling)</a></li>
+        <li><a href="../../archSpec/base/condproc.html">Conditional processing</a></li>
         <li>
           <a href="../../archSpec/base/branch-filtering.html">Branch filtering</a>
           <ul class="nav nav-list">
@@ -40,13 +40,18 @@ index: '../../toc.html'
               >
             </li>
             <li>
+              <a href="../../archSpec/base/branch-filtering-interactions.html"
+                >How filtering rules interact</a
+              >
+            </li>
+            <li>
               <a href="../../archSpec/base/branch-filtering-single-set.html"
-                >Branch filtering: Single condition set for a branch</a
+                >Branch filtering: Single referenced DITAVAL document for a branch</a
               >
             </li>
             <li class="active">
               <a href="../../archSpec/base/branch-filtering-multiple-sets.html"
-                >Branch filtering: Multiple condition sets for a branch</a
+                >Branch filtering: Multiple referenced DITAVAL documents for a branch</a
               >
             </li>
             <li>
@@ -66,8 +71,12 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
-        <li><a href="../../archSpec/base/translation.html">Translation and localization</a></li>
         <li><a href="../../archSpec/base/sort-as-processing.html">Sorting</a></li>
+        <li>
+          <a href="../../archSpec/base/determining-effective-attribute-values.html"
+            >Determining effective attribute values</a
+          >
+        </li>
       </ul>
     </li>
     <li>
@@ -97,15 +106,15 @@ index: '../../toc.html'
 <main role="main" class="col-lg-9">
   <article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">
-      Branch filtering: Multiple condition sets for a branch
+      Branch filtering: Multiple referenced DITAVAL documents for a branch
     </h1>
 
     <div class="body conbody">
       <p class="shortdesc">
         Using multiple
         <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements as the
-        children of a map or map branch indicates that the map or map branch will be conditionally
-        processed using the rules that are specified in the referenced DITAVAL documents.
+        children of a map or map branch indicates that the map or map branch will be independently
+        filtered using the rules that are specified in each referenced DITAVAL document.
       </p>
       <p class="p">
         When multiple <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> elements

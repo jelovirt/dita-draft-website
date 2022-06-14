@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -168,9 +168,7 @@ index: '../../toc.html'
             <p class="p">
               The parameter entity provides a layer of abstraction when setting up content models;
               it can be redefined in a document-type shell in order to create domain extensions
-              <span style="color:red;" class="ph"
-                >or implement element configuration (constraint and expansion).</span
-              >
+              <span class="ph">or implement element configuration (constraint and expansion).</span>
             </p>
             <p class="p">
               Element name entities for a single vocabulary module typically are grouped together at
@@ -190,8 +188,7 @@ index: '../../toc.html'
               <p class="p">For example:</p>
               <pre class="pre codeblock"><code>&lt;!ENTITY % topichead.content
   "((%topicmeta;)?, 
-    (%anchor; | 
-     %data.elements.incl; | 
+    (%data.elements.incl; | 
      %navref; | 
      %topicref;)*)
 "&gt;</code></pre>
@@ -219,7 +216,7 @@ index: '../../toc.html'
               Consistent use and naming of the
               <code class="ph codeph"><var class="keyword varname">tagname</var>.content</code>
               parameter entity enables the use of
-              <span style="color:red;" class="ph"
+              <span class="ph"
                 >element-configuration modules (constraint and expansion) to redefine the content
                 model.</span
               >
@@ -312,8 +309,7 @@ index: '../../toc.html'
 &lt;!--                    LONG NAME: Topichead                       --&gt;
 &lt;!ENTITY % topichead.content
                        "((%topicmeta;)?,
-                         (%anchor; |
-                          %data.elements.incl; |
+                         (%data.elements.incl; |
                           %navref; |
                           %topicref;)*)"
 &gt;

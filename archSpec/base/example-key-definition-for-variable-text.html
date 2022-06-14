@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -145,6 +145,11 @@ index: '../../toc.html'
             </li>
           </ul>
         </li>
+        <li>
+          <a href="../../archSpec/base/context-hooks-for-user-assistance.html"
+            >Context hooks for user assistance</a
+          >
+        </li>
       </ul>
     </li>
     <li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li>
@@ -202,7 +207,10 @@ index: '../../toc.html'
       <div class="p">
         A topic can reference the "product-name" key by using the following markup:
         <pre class="pre codeblock"><code>&lt;topic id="topicid"&gt;
-  &lt;p&gt;&lt;keyword keyref="product-name"/&gt; is a product designed to ...&lt;/p&gt;
+  &lt;title&gt;...&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;keyword keyref="product-name"/&gt; is a product designed to ...&lt;/p&gt;
+  &lt;/body&gt;
 &lt;/topic&gt;</code></pre>
       </div>
       <p class="p">

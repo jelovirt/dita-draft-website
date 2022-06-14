@@ -2,11 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'abstract'
-description: 'The abstract element occurs between the topic title and the
-		topic body. It is presented as the initial content of a topic. The
-			abstract can contain paragraph-level content as well as one or
-		more shortdesc elements which can be used for providing link
-		previews or summaries.'
+description: 'An abstract summarizes the content of the topic; it appears
+  at the start of the topic. It can contain multiple short
+  descriptions, as well as block-level content such as paragraphs,
+  lists, and tables. '
 index: '../../toc.html'
 ---
 
@@ -20,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -58,57 +57,58 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element occurs
-        between the topic title and the topic body. It is presented as the initial content of a
-        topic. The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> can contain
-        paragraph-level content as well as one or more
-        <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements which can be
-        used for providing link previews or summaries.
-      </p>
+      <div class="abstract">
+        <span class="shortdesc"
+          >An abstract summarizes the content of the topic; it appears at the start of the topic. It
+          can contain multiple short descriptions, as well as block-level content such as
+          paragraphs, lists, and tables.
+        </span>
+      </div>
       <section class="section" id="abstract__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
+        <div style="color:red;" class="div">
+          <p class="p">
+            The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element is
+            designed for use in the following circumstances:
+          </p>
+          <ul class="ul">
+            <li class="li">
+              The initial paragraph of a topic contains lists, tables, or other block-level elements
+              that are not permitted in the content model of
+              <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code>.
+            </li>
+            <li class="li">
+              Only a portion of the content of the initial paragraph is suitable for a link preview
+              or hover text.
+            </li>
+            <li class="li">
+              A topic needs to contain multiple short descriptions, to facilitate conditional
+              processing.
+            </li>
+          </ul>
+        </div>
+
         <p class="p">
-          Use the <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element when
-          the initial paragraph of a topic is unsuitable for use as a link preview or for summaries,
-          because, for example, it contains lists or tables, or because only a portion of the
-          paragraph is suitable. Note that when the initial paragraph is suitable as a summary, that
-          content should be placed in a
+          When the initial paragraph is suitable as a link preview, simply place the content in a
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element rather than
-          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element. The
-          <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element allows for a
-          wider range of content in your initial paragraph, such as lists and tables, and allows you
-          to identify portions of the
-          <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> content as useful for
-          previews or summaries by embedding the
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element within
-          <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>.
+          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element.
         </p>
+      </section>
+      <section class="section" id="abstract__rendering-expectations">
+        <h2 class="title sectiontitle">Rendering expectations</h2>
+
         <p class="p">
           When a contained
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> occurs within
-          phrase-level content, it is treated as phrase-level content and should not create a
-          separate paragraph on output of the topic. When the contained
+          phrase-level content, processors treat it as phrase-level content and do not create a
+          separate paragraph when the topic is rendered. When the contained
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> occurs as a peer to
-          paragraph-level content, it is treated as block-level content and should create a separate
-          paragraph on output of the topic. When multiple
+          paragraph-level content, processors treat it as block-level content and create a separate
+          paragraph when the topic is rendered. When multiple
           <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements are included
-          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>, they are meant
-          to be concatenated when used for link previews or or link summaries (separated by spaces).
-        </p>
-      </section>
-      <section class="section" id="abstract__processing-expectations">
-        <h2 class="title sectiontitle">Processing expectations</h2>
-
-        <p class="p" id="abstract__1.2.1">
-          When a <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element occurs
-          in a DITA map, it overrides the short description provided in the topic for the purpose of
-          generating map-based link previews. It does not replace the
-          <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> in the rendered topic
-          itself. This means that generated map-based links to this topic will use the short
-          description from the map for purposes any link previews provided with the link, while the
-          rendered topic continues to use the short description inside the topic.
+          in an <code class="keyword markupname xmlelement">&lt;abstract&gt;</code>, they are
+          concatenated when used for link previews or link summaries (separated by spaces).
         </p>
       </section>
       <section class="section" id="abstract__attributes">
@@ -127,81 +127,81 @@ index: '../../toc.html'
         </p>
       </section>
       <div class="example" id="abstract__example">
-        <h2 class="title sectiontitle">
-          Example: <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with
-          phrase-level short description
-        </h2>
-        <pre
-          class="pre codeblock"
-          id="abstract__example-code"
-        ><code>&lt;abstract&gt;The abstract is being used to provide more complex content. 
-	&lt;shortdesc&gt;The short description must be directly contained by the abstract.&lt;/shortdesc&gt;
-The abstract can put text around the shortdesc.
-&lt;/abstract&gt;</code></pre>
-        <dl class="dl">
-          <dt class="dt dlterm">Topic output</dt>
-          <dd class="dd">
-            The abstract is being used to provide more complex content. The short description must
-            be directly contained by the abstract. The abstract can put text around the short
-            description.
-          </dd>
+        <h2 class="title sectiontitle">Examples</h2>
 
-          <dt class="dt dlterm">Preview/summary output</dt>
-          <dd class="dd">The short description must be directly contained by the abstract.</dd>
-        </dl>
-      </div>
-      <div class="example" id="abstract__example2">
-        <h2 class="title sectiontitle">
-          Example: <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with
-          block-level short description
-        </h2>
-        <pre
-          class="pre codeblock"
-        ><code>&lt;abstract&gt;&lt;p&gt;The abstract is being used to provide more complex content.&lt;/p&gt; 
-	&lt;shortdesc&gt;The short description must be directly contained by the abstract.&lt;/shortdesc&gt;
-&lt;p&gt;The abstract can put text around the short description.&lt;/p&gt;
-&lt;/abstract&gt;</code></pre>
-        <dl class="dl">
-          <dt class="dt dlterm">Topic output</dt>
-          <dd class="dd">
-            <p class="p">The abstract is being used to provide more complex content.</p>
-            <p class="p">The short description must be directly contained by the abstract.</p>
-            <p class="p">The abstract can put text around the short description.</p>
-          </dd>
+        <p class="p">
+          This section contains examples of how the
+          <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element can be used.
+        </p>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 1. </span
+            ><code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with phrase-level
+            short description
+          </figcaption>
 
-          <dt class="dt dlterm">Preview/summary output</dt>
-          <dd class="dd">The short description must be directly contained by the abstract.</dd>
-        </dl>
-      </div>
-      <div class="example" id="abstract__example3">
-        <h2 class="title sectiontitle">
-          Example: <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with multiple
-          short descriptions
-        </h2>
-        <pre
-          class="pre codeblock"
-        ><code>&lt;abstract&gt;The abstract is being used to provide more complex content. 
-	&lt;shortdesc&gt;The short description must be directly contained by the abstract.&lt;/shortdesc&gt;
-	&lt;p&gt;The abstract can put text around the short description.&lt;/p&gt;
-	&lt;shortdesc&gt;There can be more than one short description.&lt;/shortdesc&gt;
+          <p class="p">
+            The following code sample shows an
+            <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element that
+            contains phrase-level content, in addition to a short description:
+          </p>
+          <pre class="pre codeblock"><code>&lt;abstract&gt;
+  &lt;shortdesc&gt;Use the wonderful Widget to automatically vacuum your house.
+  &lt;/shortdesc&gt; It requires a 1800 lithium ion battery.
 &lt;/abstract&gt;</code></pre>
-        <dl class="dl">
-          <dt class="dt dlterm">Topic output</dt>
-          <dd class="dd">
-            <p class="p">
-              The abstract is being used to provide more complex content. The short description must
-              be directly contained by the abstract.
-            </p>
-            <p class="p">The abstract can put text around the short description.</p>
-            <p class="p">There can be more than one short description.</p>
-          </dd>
+          <p class="p">
+            While the complete content of the
+            <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element is rendered
+            as the first paragraph of the topic, only the content of the
+            <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> element is used for
+            a link preview and hover text.
+          </p>
+        </figure>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 2. </span
+            ><code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with block-level
+            short description
+          </figcaption>
 
-          <dt class="dt dlterm">Preview/summary output</dt>
-          <dd class="dd">
-            The short description must be directly contained by the abstract. There can be more than
-            one short description.
-          </dd>
-        </dl>
+          <p class="p">
+            The following code sample shows an
+            <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element that
+            contains block-level content, in addition to a short description:
+          </p>
+          <pre class="pre codeblock"><code>&lt;abstract&gt;
+  &lt;shortdesc&gt;You have many options for arranging lodging in Brussels: 
+      hotels, bed and breakfasts, youth hostels, and flats. You can select
+      from a wide price range.&lt;/shortdesc&gt;
+  &lt;p&gt;The following table explains the symbols that are used to indicate the price
+     categories of the lodging options:&lt;/p&gt;
+  &lt;simpletable&gt;
+    &lt;! -- ... --&gt;
+  &lt;/simpletable&gt;
+&lt;/abstract&gt;</code></pre>
+        </figure>
+        <figure class="fig fignone">
+          <figcaption>
+            <span class="fig--title-label">Figure 3. </span
+            ><code class="keyword markupname xmlelement">&lt;abstract&gt;</code> with multiple short
+            descriptions
+          </figcaption>
+
+          <p class="p">
+            The following code sample shows an
+            <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element that
+            contains multiple short descriptions, which will be filtered when the topic is
+            processed:
+          </p>
+          <pre class="pre codeblock"><code>&lt;abstract&gt;
+  &lt;shortdesc platform="free-version"&gt;The free version of the platform
+      provides a single e-mail list, storage for up to one gigabyte of
+      files, and will support up to 100 users.&lt;/shortdesc&gt;
+  &lt;shortdesc platform="premium-version"&gt;The premium version of the platform
+      provides multiple e-mails lists, storage for up to 30 gigabytes of
+      files, and will support up to 400 users.&lt;/shortdesc&gt;
+&lt;/abstract&gt;</code></pre>
+        </figure>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -211,7 +211,7 @@ The abstract can put text around the shortdesc.
           <a
             class="link"
             href="../../langRef/containers/basic-topic-elements.html"
-            title="The generic topic structure is used for untyped topics."
+            title="The basic topic elements provide the structural framework for a topic: title, short description, prolog, body, and related links."
             >Basic topic elements</a
           >
         </div>
@@ -223,7 +223,7 @@ The abstract can put text around the shortdesc.
             <a
               class="link"
               href="../../langRef/base/shortdesc.html"
-              title="A short description describes the purpose or main point of a topic."
+              title="A short description is a sentence or group of sentences that describes the purpose or main point of the topic."
               >shortdesc</a
             >
           </li>

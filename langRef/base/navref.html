@@ -2,10 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'navref'
-description:
-  'A navigation reference is a reference to another map which is preserved as a transcluding
-  link in the result deliverable rather than resolved when the deliverable is produced. Output
-  formats that support such linking can integrate the referenced resource when displaying the
+description: 'A navigation reference is a reference to another map that is
+  preserved as a transcluding link in the result deliverable, rather than
+  resolved when the deliverable is produced. Output formats that support
+  such linking can integrate the referenced resource when displaying the
   referencing map to an end user. '
 index: '../../toc.html'
 ---
@@ -20,8 +20,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -59,33 +59,22 @@ index: '../../toc.html'
 
     <div class="body refbody">
       <p class="shortdesc">
-        A navigation reference is a reference to another map which is preserved as a transcluding
-        link in the result deliverable rather than resolved when the deliverable is produced. Output
-        formats that support such linking can integrate the referenced resource when displaying the
-        referencing map to an end user.
+        A navigation reference is a reference to another map that is preserved as a transcluding
+        link in the result deliverable, rather than resolved when the deliverable is produced.
+        Output formats that support such linking can integrate the referenced resource when
+        displaying the referencing map to an end user.
       </p>
       <section class="section" id="navref__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
           The <code class="keyword markupname xmlelement">&lt;navref&gt;</code> element is intended
-          as a reference to a navigation resource that can be resolved at rendering time. It allows
-          for maps to be published into a help system where the referenced navigation is published
-          independently (or may not be avilable at all). If available, the referenced navigation can
-          then be resolved at render time within a help system.
+          as a reference to a navigation resource that can be resolved at rendering time. It enables
+          DITA maps to be published into a
+          <span style="color:red;" class="ph">web-based information system</span> where the
+          referenced navigation is published independently (or might not be available at all). If
+          available, the referenced navigation can then be resolved at rendering time.
         </p>
-        <div class="p">
-          In order to include another map directly without depending on the output format or help
-          system, use a <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element
-          with the <code class="keyword markupname xmlatt">@format</code> attribute set to
-          <code class="ph codeph">ditamap</code>. The effect is similar to using a
-          <code class="keyword markupname xmlatt">@conref</code> attribute. For example, the
-          following markup represents a literal inclusion of the map
-          <span class="ph filepath">other.ditamap</span>:
-          <pre
-            class="pre codeblock"
-          ><code>&lt;topicref href="other.ditamap" format="ditamap"/&gt;</code></pre>
-        </div>
       </section>
       <section class="section" id="navref__attributes">
         <h2 class="title sectiontitle">Attributes</h2>
@@ -120,9 +109,10 @@ index: '../../toc.html'
         <p class="p">
           In the following code sample, the map titled "MyComponent tasks" references the maps
           <span class="ph filepath">othermap2.ditamap</span> and
-          <span class="ph filepath">othermap3.ditamap</span>.
+          <span class="ph filepath">othermap3.ditamap</span>:
         </p>
-        <pre class="pre codeblock"><code>&lt;map title="MyComponent tasks"&gt;
+        <pre class="pre codeblock"><code>&lt;map&gt;
+ &lt;title&gt;MyComponent tasks&lt;/title&gt;
  &lt;navref mapref="../com.example.plugin.xml.doc/othermap1.ditamap"/&gt;
  &lt;navref mapref="../com.example.plugin.xml.doc/othermap2.ditamap"/&gt;
 &lt;/map&gt;</code></pre>
@@ -135,7 +125,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/basic-map-elements.html"
-            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The topicmeta element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside topicmeta are also available inside the topic prolog."
+            title="DITA maps are built from a few core elements that are used for referencing and organizing topics. In addition, the topicmeta element can be used to specify metadata for the map, individual topics, or groups of topics."
             >Basic map elements</a
           >
         </div>

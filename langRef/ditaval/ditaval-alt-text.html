@@ -2,8 +2,10 @@
 # Generated from DITA source
 layout: base
 title: 'alt-text'
-description: 'The alt-text element in a DITAVAL document provides alternate
-  text for an image used for flagging.'
+description: 'The alt-text element in a DITAVAL
+  document specifies alternate text for an image that is used to flag
+  content. If an image is not specified, the text is used to mark the
+  flagged content.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +19,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -57,41 +59,37 @@ index: '../../toc.html'
     <div class="body refbody">
       <p class="shortdesc">
         The <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element in a DITAVAL
-        document provides alternate text for an image used for flagging.
+        document specifies alternate text for an image that is used to flag content. If an image is
+        not specified, the text is used to mark the flagged content.
       </p>
       <section class="section" id="ditaval-alt-text__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
         <p class="p">
-          If alternate text is specified but the containing element does not reference an image,
-          applications can render the text itself as a way to flag content.
-        </p>
-        <p class="p">
-          <span class="ph"
-            >When no alternate text is specified for a revision flag, the default alternate text for
-            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> start of change is
-            typically a localized translation of "Start of change", and the default alternate text
-            for <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> end of change is
-            typically a localized translation of "End of change".
-          </span>
+          If no alternate text is specified, processors can provide default alternate text to
+          indicate the start and end point of the flagged content.
         </p>
       </section>
-      <section class="section" id="ditaval-alt-text__attributes">
-        <h2 class="title sectiontitle">Attributes</h2>
 
-        <p class="p">This element does not define any attributes.</p>
-      </section>
       <div class="example" id="ditaval-alt-text__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          See
-          <a
-            class="xref"
-            href="ditaval-val.html"
-            title="The val element is the root element of a DITAVAL document."
-            >val</a
-          >.
+          The following code sample shows a DITAVAL document that is used to render icons before
+          content that is specific to particular audiences. The
+          <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element provides
+          alternate text for the icons:
         </p>
+        <pre class="pre codeblock"><code>&lt;val&gt;
+  &lt;prop action="flag" att="audience" val="novice"&gt;
+    &lt;startflag imageref="novice-icon.gif"&gt;
+      <strong class="ph b">&lt;alt-text&gt;Novice&lt;/alt-text&gt;</strong>
+    &lt;/startflag&gt;
+  &lt;/prop&gt;
+  &lt;prop action="flag" att="audience" val="expert"&gt;
+    &lt;startflag imageref="expert-icon.gif"&gt;
+      <strong class="ph b">&lt;alt-text&gt;Expert&lt;/alt-text&gt;</strong>
+    &lt;/startflag&gt;
+&lt;/val&gt;</code></pre>
       </div>
     </div>
     <nav role="navigation" class="related-links">
@@ -101,7 +99,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/ditaval-elements.html"
-            title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval."
+            title="A DITAVAL document identifies content that is filtered and flagged at rendering time. The DITAVAL document has an extension of .ditaval."
             >DITAVAL elements</a
           >
         </div>

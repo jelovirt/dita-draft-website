@@ -18,8 +18,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -61,6 +61,19 @@ index: '../../toc.html'
         specifies a graphic. The graphic might represent a hazard, a hazardous situation, a result
         of not avoiding a hazard, or any combination of these messages.
       </p>
+      <section class="section" id="hazardsymbol__usage-information">
+        <h2 class="title sectiontitle">Usage information</h2>
+
+        <p class="p">
+          When a <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> element is
+          directly contained by
+          <code class="keyword markupname xmlelement">&lt;messagepanel&gt;</code>, the
+          <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> is assumed to be
+          associated with the
+          <code class="keyword markupname xmlelement">&lt;typeofhazard&gt;</code> element.
+          Otherwise, the image is associated with the containing element.
+        </p>
+      </section>
       <section class="section" id="hazardsymbol__rendering-expectations">
         <h2 class="title sectiontitle">Rendering expectations</h2>
 
@@ -88,18 +101,6 @@ index: '../../toc.html'
           </ul>
         </div>
       </section>
-      <section class="section" id="hazardsymbol__usage-information">
-        <h2 class="title sectiontitle">Usage information</h2>
-
-        <p class="p">
-          When a <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> element is
-          directly contained by
-          <code class="keyword markupname xmlelement">&lt;messagepanel&gt;</code>, the
-          <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> is assumed to be
-          associated with the
-          <code class="keyword markupname xmlelement">&lt;typeofhazard&gt;</code> element.
-        </p>
-      </section>
       <section class="section" id="hazardsymbol__specialization-hierarchy">
         <h2 class="title sectiontitle">Specialization hierarchy</h2>
 
@@ -122,14 +123,16 @@ index: '../../toc.html'
               >universal attributes</a
             ></span
           >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
-            ><code class="keyword markupname xmlatt">@keyref</code></a
-          >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
-            ><code class="keyword markupname xmlatt">@format</code></a
-          >,
-          <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-href"
-            ><code class="keyword markupname xmlatt">@href</code></a
+          <span style="color:red;" class="ph"
+            ><a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-format"
+              ><code class="keyword markupname xmlatt">@format</code></a
+            >,
+            <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-href"
+              ><code class="keyword markupname xmlatt">@href</code></a
+            >,
+            <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-keyref"
+              ><code class="keyword markupname xmlatt">@keyref</code></a
+            ></span
           >,
           <a class="xref" href="../attributes/commonAttributes.html#common-atts__attr-scope"
             ><code class="keyword markupname xmlatt">@scope</code></a
@@ -139,33 +142,37 @@ index: '../../toc.html'
           For this element, <code class="keyword markupname xmlatt">@href</code> specifies an image.
         </p>
         <dl class="dl">
-          <dt class="dt dlterm" id="hazardsymbol__d1313e721">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e688">
             <code class="keyword markupname xmlatt">@height</code>
           </dt>
           <dd class="dd">
             Specifies the vertical dimension for the resulting display.
-            <span class="ph"
-              >The value of this attribute is a real number (expressed in decimal notation)
-              optionally followed by a unit of measure from the set of pc, pt, px, in, cm, mm, em
-              (picas, points, pixels, inches, centimeters, millimeters, and ems respectively). The
-              default unit is px (pixels). Possible values include: "5", "5in", and "10.5cm".</span
+            <span style="color:red;" class="ph"
+              >The value of this attribute is a real number expressed in decimal notation,
+              optionally followed by a unit of measure. The following units of measurement are
+              supported: cm, em, in, mm, pc, pt, and px (centimeters, ems, inches, millimeters,
+              picas, points, and pixels, respectively). The default unit is px (pixels). Possible
+              values include:<span class="keyword">5</span>, <span class="keyword">5in</span>, and
+              <span class="keyword">10.5cm</span>.</span
             >
           </dd>
 
-          <dt class="dt dlterm" id="hazardsymbol__d1313e733">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e700">
             <code class="keyword markupname xmlatt">@width</code>
           </dt>
           <dd class="dd">
             Specifies the horizontal dimension for the resulting display.
-            <span class="ph"
-              >The value of this attribute is a real number (expressed in decimal notation)
-              optionally followed by a unit of measure from the set of pc, pt, px, in, cm, mm, em
-              (picas, points, pixels, inches, centimeters, millimeters, and ems respectively). The
-              default unit is px (pixels). Possible values include: "5", "5in", and "10.5cm".</span
+            <span style="color:red;" class="ph"
+              >The value of this attribute is a real number expressed in decimal notation,
+              optionally followed by a unit of measure. The following units of measurement are
+              supported: cm, em, in, mm, pc, pt, and px (centimeters, ems, inches, millimeters,
+              picas, points, and pixels, respectively). The default unit is px (pixels). Possible
+              values include:<span class="keyword">5</span>, <span class="keyword">5in</span>, and
+              <span class="keyword">10.5cm</span>.</span
             >
           </dd>
 
-          <dt class="dt dlterm" id="hazardsymbol__d1313e745">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e712">
             <code class="keyword markupname xmlatt">@align</code>
           </dt>
           <dd class="dd">
@@ -175,7 +182,7 @@ index: '../../toc.html'
             <span class="keyword">center</span>.
           </dd>
 
-          <dt class="dt dlterm" id="hazardsymbol__d1313e768">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e735">
             <code class="keyword markupname xmlatt">@scale</code>
           </dt>
           <dd class="dd">
@@ -192,7 +199,7 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="hazardsymbol__d1313e790">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e757">
             <code class="keyword markupname xmlatt">@scalefit</code>
           </dt>
           <dd class="dd">
@@ -220,7 +227,7 @@ index: '../../toc.html'
             </p>
           </dd>
 
-          <dt class="dt dlterm" id="hazardsymbol__d1313e828">
+          <dt class="dt dlterm" id="hazardsymbol__d1318e795">
             <code class="keyword markupname xmlatt">@placement</code>
           </dt>
           <dd class="dd">
@@ -239,35 +246,16 @@ index: '../../toc.html'
       <div class="example" id="hazardsymbol__example">
         <h2 class="title sectiontitle">Example</h2>
         <p class="p">
-          The following code sample defines a hazard statement with a signal word of "DANGER." The
-          <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> element is
-          explicitly associated with the
-          <code class="keyword markupname xmlelement">&lt;typeofhazard&gt;</code> element.
+          The following code sample defines a hazard statement that specifies an image that
+          illustrates the type of hazard:
         </p>
         <pre class="pre codeblock"><code>&lt;hazardstatement type="danger"&gt;
   &lt;messagepanel&gt;
     &lt;typeofhazard&gt;
-    <strong class="ph b">&lt;hazardsymbol keyref="hazard-rotatingblade"/&gt;</strong>
-    Rotating blade&lt;/typeofhazard&gt;
+      <strong class="ph b">&lt;hazardsymbol keyref="hazard-rotatingblade"/&gt;</strong>
+      Rotating blade&lt;/typeofhazard&gt;
     &lt;consequence&gt;Moving parts can crush and cut.&lt;/consequence&gt;
     &lt;howtoavoid&gt;Follow lockout procedure before servicing.&lt;/howtoavoid&gt;
-  &lt;/messagepanel&gt;
-&lt;/hazardstatement&gt;</code></pre>
-        <p class="p">
-          In the following code sample, the
-          <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> is contained by
-          the <code class="keyword markupname xmlelement">&lt;messagepanel&gt;</code> element. By
-          default, this markup also associates the
-          <code class="keyword markupname xmlelement">&lt;hazardsymbol&gt;</code> element with the
-          <code class="keyword markupname xmlelement">&lt;typeofhazard&gt;</code> element. This
-          markup can be useful when migrating hazard statements from earlier versions to DITA 2.0.
-        </p>
-        <pre class="pre codeblock"><code>&lt;hazardstatement type="danger"&gt;
-  &lt;messagepanel&gt;
-    &lt;typeofhazard&gt;Rotating blade&lt;/typeofhazard&gt;
-    &lt;consequence&gt;Moving parts can crush and cut.&lt;/consequence&gt;
-    &lt;howtoavoid&gt;Follow lockout procedure before servicing.&lt;/howtoavoid&gt;
-    <strong class="ph b">&lt;hazardsymbol keyref="hazard-rotatingblade"/&gt;</strong>
   &lt;/messagepanel&gt;
 &lt;/hazardstatement&gt;</code></pre>
       </div>
@@ -279,7 +267,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/hazard-d.html"
-            title="The hazard statement domain contains the hazardstatement element, which can be used to provide information about product safety hazards. The domain can be included in any topic type or map. Hazard statements are used to inform readers about potential hazards, consequences, and avoidance strategies."
+            title="The hazardstatement domain adds markup to support hazard statements. It is based on the regulations of ANSI Z535 and ISO 3864. The domain enables authors to provide all the information necessary for a hazard statement: a signal word, description of the hazard and its consequences, how to avoid the hazard, and one or more images."
             >Hazard-statement domain elements</a
           >
         </div>

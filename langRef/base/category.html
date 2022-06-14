@@ -2,8 +2,8 @@
 # Generated from DITA source
 layout: base
 title: 'category'
-description: 'A category element specifies any category by which a topic might
-  be classified for retrieval or navigation.'
+description: 'A category is a group of things that have
+  shared characteristics.'
 index: '../../toc.html'
 ---
 
@@ -17,8 +17,8 @@ index: '../../toc.html'
     </li>
     <li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li>
     <li>
-      <a href="../../archSpec/base/determining-effective-attribute-values.html"
-        >Determining effective attribute values</a
+      <a href="../../archSpec/base/accessibility-and-translation.html"
+        >Accessibility and translation</a
       >
     </li>
     <li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li>
@@ -55,25 +55,17 @@ index: '../../toc.html'
     </h1>
 
     <div class="body refbody">
-      <p class="shortdesc">
-        A <code class="keyword markupname xmlelement">&lt;category&gt;</code> element specifies any
-        category by which a topic might be classified for retrieval or navigation.
+      <p style="color:red;" class="shortdesc">
+        A category is a group of things that have shared characteristics.
       </p>
       <section class="section" id="category__usage-information">
         <h2 class="title sectiontitle">Usage information</h2>
 
         <p class="p">
-          Topics can belong to multiple categories. Such classifications are likely to come from an
-          enumerated or hierarchical set.
-          <span class="ph"
-            >For example, the categories could be used to group topics in a generated navigation
-            bar.</span
-          >
-        </p>
-        <p class="p">
-          This element is equivalent to both the
-          <code class="keyword markupname xmlelement">&lt;Coverage&gt;</code> element and the
-          <code class="keyword markupname xmlelement">&lt;Subject&gt;</code> element in Dublin Core.
+          A category can be used to classify content for navigation or retrieval. Such
+          classifications are likely to come from an enumerated or hierarchical set. A processor
+          might sort topics based on the associated categories and create a type of generated
+          navigation.
         </p>
       </section>
       <section class="section" id="category__attributes">
@@ -95,16 +87,15 @@ index: '../../toc.html'
         <h2 class="title sectiontitle">Example</h2>
 
         <p class="p">
-          The following code sample shows how a topic is associated with three categories.
+          The following code sample shows that a topic is associated with three categories:
         </p>
-        <pre class="pre codeblock"><code>
- &lt;prolog&gt;
+        <pre class="pre codeblock"><code>&lt;prolog&gt;
   &lt;metadata&gt;
    <strong class="ph b">&lt;category&gt;History&lt;/category&gt;</strong>
    <strong class="ph b">&lt;category&gt;Non-fiction&lt;/category&gt;</strong>
-   <strong class="ph b">&lt;category&gt;Exciting&lt;/category&gt;</strong>
+   <strong class="ph b">&lt;category&gt;Editors' choice&lt;/category&gt;</strong>
   &lt;/metadata&gt;
- &lt;/prolog&gt;
+&lt;/prolog&gt;
 </code></pre>
       </div>
     </div>
@@ -115,7 +106,7 @@ index: '../../toc.html'
           <a
             class="link"
             href="../../langRef/containers/prolog-elements.html"
-            title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's topicmeta element."
+            title="The prolog elements represent metadata that is associated with a document. Most of these elements are valid in both topics and maps."
             >Prolog (metadata) elements</a
           >
         </div>
