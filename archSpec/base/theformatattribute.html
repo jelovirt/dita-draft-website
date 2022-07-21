@@ -1,23 +1,22 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'The format attribute'
 description: 'The format attribute identifies the format of
     the referenced resource. '
 index: '../../toc.html'
-src: 'archSpec/base/theformatattribute.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/id.html">ID attribute</a></li><li><a href="../../archSpec/base/dita-linking.html">DITA linking</a><ul class="nav nav-list"><li class="active"><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></li><li><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></li><li><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></li><li><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></li></ul></li><li><a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a></li><li><a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a></li><li><a href="../../archSpec/base/context-hooks-for-user-assistance.html">Context hooks for user assistance</a></li></ul></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/id.html">ID attribute</a></li><li><a href="../../archSpec/base/dita-linking.html">DITA linking</a><ul class="nav nav-list"><li class="active"><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></li><li><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></li><li><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></li><li><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></li></ul></li><li><a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a></li><li><a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a></li><li><a href="../../archSpec/base/context-hooks-for-user-assistance.html">Context hooks for user assistance</a></li></ul></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">The <code class="keyword markupname xmlatt">@format</code> attribute</h1>
 
       
 <div class="body conbody"><p class="shortdesc">The <code class="keyword markupname xmlatt">@format</code> attribute identifies the format of
-    the <span class="ph">referenced resource</span>. </p>
+    the <span style="color:red;" class="ph">referenced resource</span>. </p>
     <p class="p">The following values are explicitly supported: </p>
     <dl class="dl">
       
-        <dt class="dt dlterm" id="dita"><span class="keyword">dita</span></dt>
+        <dt class="dt dlterm"><span class="keyword">dita</span></dt>
         <dd class="dd">Indicates that the target is a DITA topic or an element in a
           DITA topic. Unless otherwise specified, when
             <code class="keyword markupname xmlatt">@format</code> is set to <span class="keyword">dita</span>, the
@@ -25,7 +24,7 @@ src: 'archSpec/base/theformatattribute.dita'
             <span class="keyword">topic</span>.</dd>
       
       
-        <dt class="dt dlterm" id="ditamap"><span class="keyword">ditamap</span></dt>
+        <dt class="dt dlterm"><span class="keyword">ditamap</span></dt>
         <dd class="dd">Indicates that the target is a DITA map. References to submaps
           can occur at any point in a map.</dd>
         <dd class="dd ddexpand">
@@ -77,7 +76,7 @@ src: 'archSpec/base/theformatattribute.dita'
       attribute, the following precedence rules apply:</p>
     <ol class="ol">
       <li class="li">If the <code class="keyword markupname xmlatt">@format</code> attribute is specified on a containing element within the
-        map or within the related-links section of <span class="ph">a topic</span>, the value
+        map or within the related-links section of <span style="color:red;" class="ph">a topic</span>, the value
         cascades from the closest containing element.</li>
       <li class="li">If a value for the <code class="keyword markupname xmlatt">@format</code> attribute does not
         cascade, the processing default is used. The processing default for

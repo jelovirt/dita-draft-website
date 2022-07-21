@@ -1,6 +1,6 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'ux-window'
 description: 'A UX window specification is a collection of metadata for a
     window or viewport in which a user assistance topic or web page can be
@@ -8,10 +8,9 @@ description: 'A UX window specification is a collection of metadata for a
       resourceid element that is associated with a
     topic or topicref element.'
 index: '../../toc.html'
-src: 'langRef/base/ux-window.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;ux-window&gt;</code></h1>
   
   
@@ -50,7 +49,7 @@ src: 'langRef/base/ux-window.dita'
         
         
           <dt class="dt dlterm" id="ux-window__uxatt-height"><code class="keyword markupname xmlatt">@height</code></dt>
-          <dd class="dd">Specifies the height of the window. <span class="ph">The value of this attribute
+          <dd class="dd">Specifies the height of the window. <span style="color:red;" class="ph">The value of this attribute
           is a real number expressed in decimal notation, optionally
           followed by a unit of measure. The following units of measurement
           are supported: cm, em, in, mm, pc, pt, and px (centimeters, ems,
@@ -90,13 +89,13 @@ src: 'langRef/base/ux-window.dita'
             calling window or the entire target display. The default value
             is <span class="keyword">no</span>. The following are allowable values: <dl class="dl">
               
-                <dt class="dt dlterm" id="no">no</dt>
+                <dt class="dt dlterm">no</dt>
                 <dd class="dd">The window dimensions specified on this element are
                   absolute positions; they are not relative to the calling
                   window.</dd>
               
               
-                <dt class="dt dlterm" id="yes">yes</dt>
+                <dt class="dt dlterm">yes</dt>
                 <dd class="dd">The window dimensions specified on this element are
                   relative to the calling window.</dd>
               
@@ -114,7 +113,7 @@ src: 'langRef/base/ux-window.dita'
         
         
           <dt class="dt dlterm" id="ux-window__uxatt-width"><code class="keyword markupname xmlatt">@width</code></dt>
-          <dd class="dd">Specifies the width of the window. <span class="ph">The value of this attribute
+          <dd class="dd">Specifies the width of the window. <span style="color:red;" class="ph">The value of this attribute
           is a real number expressed in decimal notation, optionally
           followed by a unit of measure. The following units of measurement
           are supported: cm, em, in, mm, pc, pt, and px (centimeters, ems,
@@ -124,7 +123,7 @@ src: 'langRef/base/ux-window.dita'
             <span class="keyword">10.5cm</span>.</span></dd>
         
         
-                                        <dt class="dt dlterm" id="-dita-use-conref-target"><span class="keyword">-dita-use-conref-target</span></dt>
+                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
                                         <dd class="dd">See <a class="xref" href="../../common/../archSpec/base/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
                                 
       </dl>

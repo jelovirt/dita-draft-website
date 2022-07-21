@@ -1,14 +1,13 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'entry'
 description: 'A table entry represents a single cell in a table that is
     based on the OASIS Exchange Table Model.'
 index: '../../toc.html'
-src: 'langRef/base/entry.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;entry&gt;</code></h1>
   
   
@@ -28,7 +27,7 @@ src: 'langRef/base/entry.dita'
         
         
                                         <dt class="dt dlterm" id="entry__d1318e908"><code class="keyword markupname xmlatt">@headers</code></dt>
-          <dd class="dd"><span class="ph">Specifies which entries in the current
+          <dd class="dd"><span style="color:red;" class="ph">Specifies which entries in the current
               table provide headers for this cell. </span> The
               <code class="keyword markupname xmlatt">@headers</code> attribute contains an unordered set
             of unique, space-separated tokens, each of which is an ID
@@ -55,16 +54,16 @@ src: 'langRef/base/entry.dita'
           <dd class="dd">Specifies whether the contents of the entry are rotated. The
             following values are valid:<dl class="dl">
               
-                <dt class="dt dlterm" id="0">0</dt>
+                <dt class="dt dlterm">0</dt>
                 <dd class="dd">Indicates that no rotation occurs.</dd>
               
               
-                <dt class="dt dlterm" id="1">1</dt>
+                <dt class="dt dlterm">1</dt>
                 <dd class="dd">Indicates that the contents of the cell are rotated 90
                   degrees counterclockwise.</dd>
               
               
-                                        <dt class="dt dlterm" id="-dita-use-conref-target"><span class="keyword">-dita-use-conref-target</span></dt>
+                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
                                         <dd class="dd">See <a class="xref" href="../../common/../archSpec/base/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
                                 
             </dl></dd>
@@ -75,27 +74,27 @@ src: 'langRef/base/entry.dita'
             entry is a header for other table entries. The following values
             are valid:<dl class="dl">
               
-                <dt class="dt dlterm" id="col"><span class="keyword">col</span></dt>
+                <dt class="dt dlterm"><span class="keyword">col</span></dt>
                 <dd class="dd">Indicates that the current entry is a header for all
                   cells in the column.</dd>
               
               
-                <dt class="dt dlterm" id="colgroup"><span class="keyword">colgroup</span></dt>
+                <dt class="dt dlterm"><span class="keyword">colgroup</span></dt>
                 <dd class="dd">Indicates that the current entry is a header for all
                   cells in the columns that are spanned by this entry.</dd>
               
               
-                <dt class="dt dlterm" id="row"><span class="keyword">row</span></dt>
+                <dt class="dt dlterm"><span class="keyword">row</span></dt>
                 <dd class="dd">Indicates that the current entry is a header for all
                   cells in the row.</dd>
               
               
-                <dt class="dt dlterm" id="rowgroup"><span class="keyword">rowgroup</span></dt>
+                <dt class="dt dlterm"><span class="keyword">rowgroup</span></dt>
                 <dd class="dd">Indicates that the current entry is a header for all
                   cells in the rows that are spanned by this entry.</dd>
               
               
-                                        <dt class="dt dlterm" id="-dita-use-conref-target"><span class="keyword">-dita-use-conref-target</span></dt>
+                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
                                         <dd class="dd">See <a class="xref" href="../../common/../archSpec/base/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
                                 
             </dl></dd>

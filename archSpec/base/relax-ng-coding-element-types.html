@@ -1,14 +1,13 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'RELAX NG: Coding requirements for element-type declarations'
 description: 'This topic covers general coding requirements for element types in structural and
     element-domain vocabulary modules.'
 index: '../../toc.html'
-src: 'archSpec/base/relax-ng-coding-element-types.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element-type declarations</a></li><li><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html">RELAX NG: Coding requirements for element-configuration modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element-type declarations</a></li><li><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html">RELAX NG: Coding requirements for element-configuration modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
  <h1 class="title topictitle1" id="ariaid-title1">RELAX NG: Coding requirements for element-type declarations</h1>
  
  <div class="body conbody"><p class="shortdesc">This topic covers general coding requirements for element types in structural and
@@ -33,7 +32,7 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
       <p class="p">The element type patterns are organized into the following sections:</p>
       <dl class="dl">
         
-          <dt class="dt dlterm" id="element-type-name-patterns">Element type name patterns</dt>
+          <dt class="dt dlterm">Element type name patterns</dt>
           <dd class="dd">
             <p class="p">For each element type that is declared in the vocabulary module, there is a pattern
               whose name is the element type name and whose content is a reference to the
@@ -57,19 +56,19 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="common-content-model-patterns">Common content-model patterns</dt>
+          <dt class="dt dlterm">Common content-model patterns</dt>
           <dd class="dd">Structural and element-domain modules can include a section that defines the patterns
             that contribute to the content models of the element types that are defined in the
             module.</dd>
         
         
-          <dt class="dt dlterm" id="common-attribute-sets">Common attribute sets</dt>
+          <dt class="dt dlterm">Common attribute sets</dt>
           <dd class="dd">Structural and element-domain modules can include a section that defines patterns for
             attribute sets that are common to one or more of the element types that are defined in
             the module.</dd>
         
         
-          <dt class="dt dlterm" id="element-type-declarations">Element type declarations</dt>
+          <dt class="dt dlterm">Element type declarations</dt>
           <dd class="dd">
             <p class="p">For each element type that is declared in the vocabulary module, the following set of
               patterns are used to define the content model and attributes for the element type.
@@ -77,20 +76,20 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
               element.</p>
             <dl class="dl">
               
-                <dt class="dt dlterm" id="tagname.content"><code class="ph codeph"><var class="keyword varname">tagname</var>.content</code></dt>
+                <dt class="dt dlterm"><code class="ph codeph"><var class="keyword varname">tagname</var>.content</code></dt>
                 <dd class="dd">Defines the complete content model for the element <var class="keyword varname">tagname</var>.
-                  The content model pattern can be overridden in <span class="ph">element-configuration
+                  The content model pattern can be overridden in <span style="color:red;" class="ph">element-configuration
                     modules (constraint and expansion)</span>.</dd>
               
               
-                <dt class="dt dlterm" id="tagname.attributes"><code class="ph codeph"><var class="keyword varname">tagname</var>.attributes</code></dt>
+                <dt class="dt dlterm"><code class="ph codeph"><var class="keyword varname">tagname</var>.attributes</code></dt>
                 <dd class="dd">Defines the complete attribute list for the element <var class="keyword varname">tagname</var>,
                   except for <code class="keyword markupname xmlatt">@class</code>. The attribute list declaration can be
-                  overridden in <span class="ph">element-configuration modules (constraint and
+                  overridden in <span style="color:red;" class="ph">element-configuration modules (constraint and
                     expansion)</span>.</dd>
               
               
-                <dt class="dt dlterm" id="tagname.element"><code class="ph codeph"><var class="keyword varname">tagname</var>.element</code></dt>
+                <dt class="dt dlterm"><code class="ph codeph"><var class="keyword varname">tagname</var>.element</code></dt>
                 <dd class="dd">Provides the actual element-type definition. It contains an
                     <code class="keyword markupname xmlelement">&lt;element&gt;</code> element whose <code class="keyword markupname xmlatt">@name</code> value is
                   the element type name and whose content is a reference to the
@@ -99,7 +98,7 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
                   patterns.</dd>
               
               
-                <dt class="dt dlterm" id="tagname.attlist"><code class="ph codeph"><var class="keyword varname">tagname</var>.attlist</code></dt>
+                <dt class="dt dlterm"><code class="ph codeph"><var class="keyword varname">tagname</var>.attlist</code></dt>
                 <dd class="dd">An additional attribute-list pattern with a <code class="keyword markupname xmlatt">@combine</code> attribute
                   set to the value <span class="keyword">interleave</span>. This pattern contains only a
                   reference to the <code class="ph codeph"><var class="keyword varname">tagname</var>.attributes</code>
@@ -149,7 +148,7 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="idelements-pattern-contribution">idElements pattern contribution</dt>
+          <dt class="dt dlterm">idElements pattern contribution</dt>
           <dd class="dd">
             <p class="p">Element types that declare the <code class="keyword markupname xmlatt">@id</code> attribute as type "ID", including
               all topic and map element types, provide a declaration for the
@@ -157,7 +156,7 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
                 <span class="keyword">any</span> pattern override in document-type shells and avoid errors
               from RELAX NG parsers. The declaration is specified with a <code class="keyword markupname xmlatt">@combine</code>
               attribute set to the value <span class="keyword">choice</span>.</p>
-            <div class="div">
+            <div style="color:red;" class="div">
               <p class="p"> For example:</p>
               <pre class="pre codeblock"><code>&lt;div&gt;
   &lt;a:documentation&gt;LONG NAME: Map&lt;/a:documentation&gt;
@@ -170,7 +169,7 @@ src: 'archSpec/base/relax-ng-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="specialization-attribute-declarations">Specialization attribute declarations</dt>
+          <dt class="dt dlterm">Specialization attribute declarations</dt>
           <dd class="dd">
             <p class="p">A vocabulary module must define a <code class="keyword markupname xmlatt">@class</code> attribute for every
               specialized element. This is done in a section at the end of each module that includes

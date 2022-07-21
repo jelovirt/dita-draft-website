@@ -1,6 +1,6 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'prop'
 description: 'The prop element in a DITAVAL
     document specifies filtering or flagging actions that occur when
@@ -10,23 +10,22 @@ description: 'The prop element in a DITAVAL
       otherprops, platform, and
       product.'
 index: '../../toc.html'
-src: 'langRef/ditaval/ditaval-prop.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;prop&gt;</code></h1>
   
 
 <div class="body refbody"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element in a DITAVAL
     document specifies filtering or flagging actions that occur when
     rendering. The actions target the <code class="keyword markupname xmlatt">@props</code> attribute or
-    specializations of <code class="keyword markupname xmlatt">@props</code>, <span class="ph">including</span>
+    specializations of <code class="keyword markupname xmlatt">@props</code>, <span style="color:red;" class="ph">including</span>
     <code class="keyword markupname xmlatt">@audience</code>, <code class="keyword markupname xmlatt">@deliveryTarget</code>,
       <code class="keyword markupname xmlatt">@otherprops</code>, <code class="keyword markupname xmlatt">@platform</code>, and
       <code class="keyword markupname xmlatt">@product</code>.</p>
 <section class="section" id="ditaval-prop__usage-information"><h2 class="title sectiontitle">Usage information</h2>
       
-      <p class="p">The following table lists the functions <span class="ph">that
+      <p class="p">The following table lists the functions <span style="color:red;" class="ph">that
           are performed</span> by the <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element
         in a DITAVAL document:</p>
       <table class="simpletable"><colgroup><col style="width:33.33333333333333%"><col style="width:66.66666666666666%"></colgroup><thead><tr class="sthead">
@@ -34,7 +33,7 @@ src: 'langRef/ditaval/ditaval-prop.dita'
           <th class="stentry" scope="col" id="ditaval-prop__usage-information__stentry__2">Result</th>
         </tr></thead><tbody><tr class="strow">
           <td class="stentry" headers="ditaval-prop__usage-information__stentry__1"> A <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element that specifies
-            both an <code class="keyword markupname xmlatt">@att</code> and <span class="ph">a</span>
+            both an <code class="keyword markupname xmlatt">@att</code> and <span style="color:red;" class="ph">a</span>
             <code class="keyword markupname xmlatt">@val</code> attribute</td>
           <td class="stentry" headers="ditaval-prop__usage-information__stentry__2">Specifies an action (exclude, flag, include, or pass
             through) for the attribute or attribute group with the
@@ -57,8 +56,8 @@ src: 'langRef/ditaval/ditaval-prop.dita'
       <div class="div">
                 <div class="p" id="ditaval-prop__d1383e63">For the
             <code class="keyword markupname xmlatt">@color</code> and <code class="keyword markupname xmlatt">@backcolor</code>
-          attributes on <code class="keyword markupname xmlelement">&lt;prop&gt;</code> and
-            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors <dfn class="term RFC-2119">SHOULD</dfn> support <span class="ph">at least</span> the following values:<ul class="ul">
+          attributes on <code style="color:red;" class="keyword markupname xmlelement">&lt;prop&gt;</code> and
+            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors <dfn class="term RFC-2119">SHOULD</dfn> support <span style="color:red;" class="ph">at least</span> the following values:<ul class="ul">
             <li class="li">The color names listed under the heading "&lt;color&gt;" in
                 <a class="xref" href="http://www.w3.org/TR/2006/REC-xsl11-20061205/#datatype" target="_blank" rel="external noopener">the XSL version 1.1
               specification</a></li>
@@ -102,14 +101,14 @@ src: 'langRef/ditaval/ditaval-prop.dita'
               <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element, and
             the element already specifies one or more values for the
               <code class="keyword markupname xmlatt">@outputclass</code> attribute, processors treat the
-            element as if <span class="ph">the tokens for the
+            element as if <span style="color:red;" class="ph">the tokens for the
                 <code class="keyword markupname xmlatt">@outputclass</code> attribute that were provided
               in the DITAVAL document</span> are specified first.</li>
           <li class="li">If two or more DITAVAL properties apply
               <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element,
             processors treat the element as if each value was specified for
             the <code class="keyword markupname xmlatt">@outputclass</code> attribute. The order of the
-              <span class="ph"> tokens for the
+              <span style="color:red;" class="ph"> tokens for the
                 <code class="keyword markupname xmlatt">@outputclass</code> attribute that were provided
               in the DITAVAL document</span> is undefined.</li>
         </ul>
@@ -127,23 +126,23 @@ src: 'langRef/ditaval/ditaval-prop.dita'
               supported:</p>
             <dl class="dl">
               
-                <dt class="dt dlterm" id="exclude">exclude</dt>
+                <dt class="dt dlterm">exclude</dt>
                 <dd class="dd">Indicates that the content is excluded from the output,
                   if all values for the specified attribute are
                   excluded.</dd>
               
               
-                <dt class="dt dlterm" id="flag">flag</dt>
+                <dt class="dt dlterm">flag</dt>
                 <dd class="dd">Indicates that the content is included in the output
                   and flagged, if the content has not been excluded.</dd>
               
               
-                <dt class="dt dlterm" id="include">include</dt>
+                <dt class="dt dlterm">include</dt>
                 <dd class="dd">Indicates that the content is included in the output.
                   This is the default behavior, unless otherwise set.</dd>
               
               
-                <dt class="dt dlterm" id="passthrough">passthrough</dt>
+                <dt class="dt dlterm">passthrough</dt>
                 <dd class="dd">Indicates that the content is included in the output
                   and that the attribute value is preserved. This enables
                   further processing by a runtime engine.</dd>
@@ -166,14 +165,14 @@ src: 'langRef/ditaval/ditaval-prop.dita'
         
         
           <dt class="dt dlterm" id="ditaval-prop__attr-val"><code class="keyword markupname xmlatt">@val</code></dt>
-          <dd class="dd">Specifies the attribute value <span class="ph">that is
+          <dd class="dd">Specifies the attribute value <span style="color:red;" class="ph">that is
               targeted</span>. If the <code class="keyword markupname xmlatt">@val</code> attribute is
             absent, then the <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element declares
             a default behavior for any value in the specified
             attribute.</dd>
         
       </dl>
-      <p class="p">The following
+      <p style="color:red;" class="p">The following
         attributes are only applicable when the <code class="keyword markupname xmlatt">@action</code>
         attribute is set to <span class="keyword">flag</span>. If the
           <code class="keyword markupname xmlatt">@action</code> attribute is not set to
@@ -183,14 +182,14 @@ src: 'langRef/ditaval/ditaval-prop.dita'
         
           <dt class="dt dlterm" id="ditaval-prop__d1314e1054"><code class="keyword markupname xmlatt">@backcolor</code></dt>
           <dd class="dd">Specifies the background color for flagged text. Colors can
-            be entered by name or <span class="ph">hex</span> code. When
+            be entered by name or <span style="color:red;" class="ph">hex</span> code. When
             images are flagged, the background color is rendered as a thick
             border.</dd>
         
         
           <dt class="dt dlterm" id="ditaval-prop__d1314e1071"><code class="keyword markupname xmlatt">@color</code></dt>
           <dd class="dd">Specifies the color for flagged text. Colors can be entered
-            by name or <span class="ph">hex</span> code. When images are
+            by name or <span style="color:red;" class="ph">hex</span> code. When images are
             flagged, the color is rendered as a thin border.</dd>
         
         
@@ -222,8 +221,8 @@ src: 'langRef/ditaval/ditaval-prop.dita'
         specifies:</p>
       <ol class="ol">
         <li class="li">Sets a default action of <span class="keyword">exclude</span>. With the
-          exception of the other conditions <span class="ph">that
-            are</span> specified in the <span class="ph">above</span> DITAVAL
+          exception of the other conditions <span style="color:red;" class="ph">that
+            are</span> specified in the <span style="color:red;" class="ph">above</span> DITAVAL
           document, the content of any element that specifies a
           conditional-processing attribute is excluded from the rendered
           output.</li>
@@ -240,7 +239,7 @@ src: 'langRef/ditaval/ditaval-prop.dita'
             <code class="keyword markupname xmlatt">@product</code> attribute is included in the rendered
           output.</li>
       </ol>
-      <div class="div">
+      <div style="color:red;" class="div">
         <p class="p">When a DITA map is processed using the above DITAVAL document,
           the following DITA elements are excluded:</p>
         <ol class="ol">

@@ -1,6 +1,6 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'map'
 description: 'A DITA map is the
     mechanism for aggregating topic references and defining a context for
@@ -8,10 +8,9 @@ description: 'A DITA map is the
       resources. These references are organized into
       hierarchies, groups, and tables.'
 index: '../../toc.html'
-src: 'langRef/base/map.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;map&gt;</code></h1>
   
 
@@ -29,22 +28,22 @@ src: 'langRef/base/map.dita'
           described in a map:</p>
         <dl class="dl">
           
-            <dt class="dt dlterm" id="hierarchical">Hierarchical</dt>
+            <dt class="dt dlterm">Hierarchical</dt>
             <dd class="dd">Nested topics create a hierarchical relationship. The topic that does the nesting is
               the parent, and the topics that are nested are the children.</dd>
           
           
-            <dt class="dt dlterm" id="ordered">Ordered</dt>
+            <dt class="dt dlterm">Ordered</dt>
             <dd class="dd">Child topics can be labeled as having an ordered relationship, which means they are
               referenced in a definite sequence.</dd>
           
           
-            <dt class="dt dlterm" id="family">Family</dt>
+            <dt class="dt dlterm">Family</dt>
             <dd class="dd">Child topics can be labeled as having a family relationship, which means they all
               refer to each other.</dd>
           
         </dl>
-        <p class="p">In addition, a DITA map can contain relationship
+        <p style="color:red;" class="p">In addition, a DITA map can contain relationship
           tables. Relationship tables can define relationships between
           resources that are not directly related based on their location
           in the navigation structure.</p>
@@ -69,9 +68,9 @@ src: 'langRef/base/map.dita'
         (TOC), aggregate topics into a PDF document, or create links
         between topics in the output.</p>
     </section>
-    <section class="section" id="map__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
+    <section class="section" style="color:red;" id="map__processing-expectations"><h2 class="title sectiontitle" style="color:red;">Processing expectations</h2>
       
-      <p class="p">See <a class="xref" href="../../archSpec/base/dita-map-processing.html" title="Introduction to this chapter to be written later, when content is more stable.">DITA map processing</a>.</p>
+      <p style="color:red;" class="p">See <a class="xref" href="../../archSpec/base/dita-map-processing.html" title="Introduction to this chapter to be written later, when content is more stable.">DITA map processing</a>.</p>
     </section>
     <section class="section" id="map__attributes"><h2 class="title sectiontitle">Attributes</h2>
       
@@ -88,9 +87,9 @@ src: 'langRef/base/map.dita'
         a hierarchical relationship. The file
           <span class="ph filepath">widget.dita</span> is the parent topic, and the
         other topics are its children. The hierarchy could be used to
-        generate a PDF, a navigation pane in a <span class="ph">web-based
+        generate a PDF, a navigation pane in a <span style="color:red;" class="ph">web-based
           information system</span>, a summary of the topics, or related
-        links between the parent topic and its children.</p><pre class="pre codeblock"><code>&lt;map id="widget-setup"&gt;
+        links between the parent topic and its children.</p><pre style="color:red;" class="pre codeblock"><code>&lt;map id="widget-setup"&gt;
   &lt;title&gt;Widget set up&lt;/title&gt;
   &lt;topicref href="widget.dita"&gt;
     &lt;topicref href="widget-installation.dita"/&gt;

@@ -1,21 +1,20 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'The href attribute'
 description: 'The href attribute specifies the URI of the
     resource that is addressed. The referenced resource
       can be   another DITA topic or map, an element inside a DITA
     topic or map, or a non-DITA resource.'
 index: '../../toc.html'
-src: 'archSpec/base/thehrefattribute.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/id.html">ID attribute</a></li><li><a href="../../archSpec/base/dita-linking.html">DITA linking</a><ul class="nav nav-list"><li><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></li><li class="active"><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></li><li><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></li><li><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></li></ul></li><li><a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a></li><li><a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a></li><li><a href="../../archSpec/base/context-hooks-for-user-assistance.html">Context hooks for user assistance</a></li></ul></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a><ul class="nav nav-list"><li><a href="../../archSpec/base/id.html">ID attribute</a></li><li><a href="../../archSpec/base/dita-linking.html">DITA linking</a><ul class="nav nav-list"><li><a href="../../archSpec/base/theformatattribute.html">The format attribute</a></li><li class="active"><a href="../../archSpec/base/thehrefattribute.html">The href attribute</a></li><li><a href="../../archSpec/base/thescopeattribute.html">The scope attribute</a></li><li><a href="../../archSpec/base/thetypeattribute.html">The type attribute</a></li></ul></li><li><a href="../../archSpec/base/uri-based-addressing.html">URI-based (direct) addressing</a></li><li><a href="../../archSpec/base/key-based-addressing.html">Indirect key-based addressing</a></li><li><a href="../../archSpec/base/context-hooks-for-user-assistance.html">Context hooks for user assistance</a></li></ul></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
  <h1 class="title topictitle1" id="ariaid-title1">The <code class="keyword markupname xmlatt">@href</code> attribute</h1>
  
  
  <div class="body conbody"><p class="shortdesc">The <code class="keyword markupname xmlatt">@href</code> attribute specifies the URI of the
-    resource that is addressed. <span class="ph">The referenced resource
+    resource that is addressed. <span style="color:red;" class="ph">The referenced resource
       can be  </span> another DITA topic or map, an element inside a DITA
     topic or map, or a non-DITA resource.</p>
     <p class="p">The value of the <code class="keyword markupname xmlatt">@href</code> attribute <dfn class="term RFC-2119">MUST</dfn> be a valid URI reference [<a class="xref" href="http://www.ietf.org/rfc/rfc3986.txt" target="_blank" rel="external noopener">RFC 3986</a>]. If the value of the
@@ -25,7 +24,7 @@ src: 'archSpec/base/thehrefattribute.dita'
       recover from this error condition by attempting to convert the value
       to a valid URI reference. </p>
     <p class="p">The value of the <code class="keyword markupname xmlatt">@href</code>
-      <span class="ph">attribute</span> can optionally contain a fragment
+      <span style="color:red;" class="ph">attribute</span> can optionally contain a fragment
       identifier.</p>
     <p class="p">When an <code class="keyword markupname xmlatt">@href</code> attribute references a DITA resource
       using a URI without a fragment identifier, the URI resolves to the
@@ -59,7 +58,7 @@ src: 'archSpec/base/thehrefattribute.dita'
         includes the reference, then <var class="keyword varname">topicID</var> can be
         replaced by a period.</li>
       <li class="li"><var class="keyword varname">elementID</var> is the value of the
-          <code class="keyword markupname xmlatt">@id</code> attribute of the <span class="ph">non-topic</span> element within a DITA topic.</li>
+          <code class="keyword markupname xmlatt">@id</code> attribute of the <span style="color:red;" class="ph">non-topic</span> element within a DITA topic.</li>
       <li class="li"><var class="keyword varname">mapElementID</var> is the value of the
           <code class="keyword markupname xmlatt">@id</code> attribute of the element within a DITA map
         document.</li>

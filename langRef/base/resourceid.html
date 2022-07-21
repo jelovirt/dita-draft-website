@@ -1,15 +1,14 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'resourceid'
 description: 'A resource ID is an identifier that is designed for applications
     that need to use their own identifier scheme, such as context-sensitive
     help systems and databases.'
 index: '../../toc.html'
-src: 'langRef/base/resourceid.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;resourceid&gt;</code></h1>
 
   
@@ -99,14 +98,14 @@ src: 'langRef/base/resourceid.dita'
             While applications can define their own values, the following
             values are defined by OASIS:<dl class="dl">
               
-                <dt class="dt dlterm" id="context-sensitive-help">context-sensitive-help</dt>
+                <dt class="dt dlterm">context-sensitive-help</dt>
                 <dd class="dd">Specifies that the value of the <code class="keyword markupname xmlatt">@appid</code>
                   attribute is used to connect the associated resource with
                   applications that use the associated resource as context
                   sensitive help.</dd>
               
               
-                <dt class="dt dlterm" id="deliverable-anchor">deliverable-anchor</dt>
+                <dt class="dt dlterm">deliverable-anchor</dt>
                 <dd class="dd">Specifies that the value of the <code class="keyword markupname xmlatt">@appid</code>
                   attribute is used to construct anchors for the associated
                     resource.<p class="p">When <code class="keyword markupname xmlatt">@app-role</code> is set to
@@ -131,29 +130,29 @@ src: 'langRef/base/resourceid.dita'
               map. The following values are valid:</p>
             <dl class="dl">
               
-                <dt class="dt dlterm" id="map-only">map-only</dt>
+                <dt class="dt dlterm">map-only</dt>
                 <dd class="dd">Use IDs from the map only.</dd>
               
               
-                <dt class="dt dlterm" id="map-takes-priority">map-takes-priority</dt>
+                <dt class="dt dlterm">map-takes-priority</dt>
                 <dd class="dd">Use the IDs from the map, if they exist. Otherwise, use
                   IDs from the topic.</dd>
               
               
-                <dt class="dt dlterm" id="topic-and-map">topic-and-map</dt>
+                <dt class="dt dlterm">topic-and-map</dt>
                 <dd class="dd">Use IDs from both the topic and map.</dd>
               
               
-                <dt class="dt dlterm" id="topic-only">topic-only</dt>
+                <dt class="dt dlterm">topic-only</dt>
                 <dd class="dd">Use IDs from the topic only.</dd>
               
               
-                <dt class="dt dlterm" id="topic-takes-priority">topic-takes-priority</dt>
+                <dt class="dt dlterm">topic-takes-priority</dt>
                 <dd class="dd">Use the IDs from the topic, if they exist. Otherwise,
                   use IDs from the map.</dd>
               
               
-                                        <dt class="dt dlterm" id="-dita-use-conref-target"><span class="keyword">-dita-use-conref-target</span></dt>
+                                        <dt class="dt dlterm"><span class="keyword">-dita-use-conref-target</span></dt>
                                         <dd class="dd">See <a class="xref" href="../../common/../archSpec/base/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and can also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of -dita-use-conref-target, the resulting value for those attributes is also pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information. </dd>
                                 
             </dl>

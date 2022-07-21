@@ -1,6 +1,6 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'revprop'
 description: 'The revprop element in a DITAVAL
     document identifies a value of the rev attribute for
@@ -8,10 +8,9 @@ description: 'The revprop element in a DITAVAL
     used for both filtering and flagging, the rev
     attribute can only be used for flagging. '
 index: '../../toc.html'
-src: 'langRef/ditaval/ditaval-revprop.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;revprop&gt;</code></h1>
   
   
@@ -22,7 +21,7 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
     attribute can only be used for flagging. </p>
     <section class="section" id="ditaval-revprop__usage-information"><h2 class="title sectiontitle">Usage information</h2>
       
-      <p class="p"><span class="ph">Neither the <code class="keyword markupname xmlelement">&lt;reprop&gt;</code>
+      <p class="p"><span style="color:red;" class="ph">Neither the <code class="keyword markupname xmlelement">&lt;reprop&gt;</code>
           element or the <code class="keyword markupname xmlatt">@rev</code> attribute are</span> designed
         to be used for version control.</p>
       
@@ -36,8 +35,8 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
       <div class="div">
                 <div class="p" id="ditaval-revprop__d1383e63">For the
             <code class="keyword markupname xmlatt">@color</code> and <code class="keyword markupname xmlatt">@backcolor</code>
-          attributes on <code class="keyword markupname xmlelement">&lt;prop&gt;</code> and
-            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors <dfn class="term RFC-2119">SHOULD</dfn> support <span class="ph">at least</span> the following values:<ul class="ul">
+          attributes on <code style="color:red;" class="keyword markupname xmlelement">&lt;prop&gt;</code> and
+            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>, processors <dfn class="term RFC-2119">SHOULD</dfn> support <span style="color:red;" class="ph">at least</span> the following values:<ul class="ul">
             <li class="li">The color names listed under the heading "&lt;color&gt;" in
                 <a class="xref" href="http://www.w3.org/TR/2006/REC-xsl11-20061205/#datatype" target="_blank" rel="external noopener">the XSL version 1.1
               specification</a></li>
@@ -76,14 +75,14 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
               <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element, and
             the element already specifies one or more values for the
               <code class="keyword markupname xmlatt">@outputclass</code> attribute, processors treat the
-            element as if <span class="ph">the tokens for the
+            element as if <span style="color:red;" class="ph">the tokens for the
                 <code class="keyword markupname xmlatt">@outputclass</code> attribute that were provided
               in the DITAVAL document</span> are specified first.</li>
           <li class="li">If two or more DITAVAL properties apply
               <code class="keyword markupname xmlatt">@outputclass</code> flags to the same element,
             processors treat the element as if each value was specified for
             the <code class="keyword markupname xmlatt">@outputclass</code> attribute. The order of the
-              <span class="ph"> tokens for the
+              <span style="color:red;" class="ph"> tokens for the
                 <code class="keyword markupname xmlatt">@outputclass</code> attribute that were provided
               in the DITAVAL document</span> is undefined.</li>
         </ul>
@@ -102,18 +101,18 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
               supported:</p>
             <dl class="dl">
               
-                <dt class="dt dlterm" id="flag">flag</dt>
+                <dt class="dt dlterm">flag</dt>
                 <dd class="dd">Indicates that the content is included in the output
                   and flagged, if the content has not been excluded.</dd>
               
               
-                <dt class="dt dlterm" id="include">include</dt>
+                <dt class="dt dlterm">include</dt>
                 <dd class="dd">Indicates that the content is included in the output
                   and not flagged. This is the default behavior, unless
                   otherwise set.</dd>
               
               
-                <dt class="dt dlterm" id="passthrough">passthrough</dt>
+                <dt class="dt dlterm">passthrough</dt>
                 <dd class="dd">Indicates that the content is included in the output
                   and that the attribute value is preserved. This enables
                   further processing by a runtime engine. The attribute
@@ -133,7 +132,7 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
             attribute.</dd>
         
       </dl>
-      <p class="p">The following
+      <p style="color:red;" class="p">The following
         attributes are only applicable when the <code class="keyword markupname xmlatt">@action</code>
         attribute is set to <span class="keyword">flag</span>. If the
           <code class="keyword markupname xmlatt">@action</code> attribute is not set to
@@ -143,7 +142,7 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
         
           <dt class="dt dlterm" id="ditaval-revprop__d1314e1054"><code class="keyword markupname xmlatt">@backcolor</code></dt>
           <dd class="dd">Specifies the background color for flagged text. Colors can
-            be entered by name or <span class="ph">hex</span> code. When
+            be entered by name or <span style="color:red;" class="ph">hex</span> code. When
             images are flagged, the background color is rendered as a thick
             border.</dd>
         
@@ -155,7 +154,7 @@ src: 'langRef/ditaval/ditaval-revprop.dita'
         
           <dt class="dt dlterm" id="ditaval-revprop__d1314e1071"><code class="keyword markupname xmlatt">@color</code></dt>
           <dd class="dd">Specifies the color for flagged text. Colors can be entered
-            by name or <span class="ph">hex</span> code. When images are
+            by name or <span style="color:red;" class="ph">hex</span> code. When images are
             flagged, the color is rendered as a thin border.</dd>
         
         

@@ -1,14 +1,13 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'DTD: Coding requirements for element-type declarations'
 description: 'This topic covers general coding requirements for defining element types in both
     structural and element-domain vocabulary modules.'
 index: '../../toc.html'
-src: 'archSpec/base/dtd-coding-element-types.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a></li><li><a href="../../archSpec/base/dtd-coding-doctype-shell.html">DTD: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/dtd-coding-element-types.html">DTD: Coding requirements for element-type declarations</a></li><li><a href="../../archSpec/base/dtd-coding-structural-modules.html">DTD: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/dtd-coding-element-domains.html">DTD: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-attribute-domains.html">DTD: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html">DTD: Coding requirements for element-configuration modules</a></li></ul></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/dtd-coding-overview.html">DTD: Use of entities</a></li><li><a href="../../archSpec/base/dtd-coding-doctype-shell.html">DTD: Coding requirements for document-type shells</a></li><li class="active"><a href="../../archSpec/base/dtd-coding-element-types.html">DTD: Coding requirements for element-type declarations</a></li><li><a href="../../archSpec/base/dtd-coding-structural-modules.html">DTD: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/dtd-coding-element-domains.html">DTD: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-attribute-domains.html">DTD: Coding requirements for attribute domain modules</a></li><li><a href="../../archSpec/base/dtd-coding-requirements-for-element-configuration-modules.html">DTD: Coding requirements for element-configuration modules</a></li></ul></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1">DTD: Coding requirements for element-type declarations</h1>
   
   
@@ -43,7 +42,7 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
         module.</p>
       <dl class="dl">
         
-          <dt class="dt dlterm" id="element-name-entities">Element name entities</dt>
+          <dt class="dt dlterm">Element name entities</dt>
           <dd class="dd">
             <p class="p">For each element type, there is a parameter entity with a name that matches the
               element-type name. The default value is the element-type name. </p>
@@ -52,13 +51,13 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
               <pre class="pre codeblock"><code>&lt;!ENTITY % topichead "topichead"&gt;</code></pre>
             </div>
             <p class="p">The parameter entity provides a layer of abstraction when setting up content models;
-              it can be redefined in a document-type shell in order to create domain extensions <span class="ph">or implement element configuration (constraint and expansion).</span></p>
+              it can be redefined in a document-type shell in order to create domain extensions <span style="color:red;" class="ph">or implement element configuration (constraint and expansion).</span></p>
             <p class="p">Element name entities for a single vocabulary module typically are grouped together
               at the top of the vocabulary module. They can occur in any order.</p>
           </dd>
         
         
-          <dt class="dt dlterm" id="content-model-parameter-entity">Content-model parameter entity</dt>
+          <dt class="dt dlterm">Content-model parameter entity</dt>
           <dd class="dd">
             <p class="p">For each element type, there is a parameter entity that defines the content model.
               The name of the parameter entity is
@@ -76,7 +75,7 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="attribute-list-parameter-entity">Attribute-list parameter entity</dt>
+          <dt class="dt dlterm">Attribute-list parameter entity</dt>
           <dd class="dd">
             <p class="p">For each element type, there is a parameter entity that declares the attributes that
               are available on the element. The name of the parameter entity is
@@ -92,12 +91,12 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
 &gt;</code></pre>
             </div>
             <p class="p">Consistent use and naming of the <code class="ph codeph"><var class="keyword varname">tagname</var>.content</code>
-              parameter entity enables the use of <span class="ph">element-configuration modules
+              parameter entity enables the use of <span style="color:red;" class="ph">element-configuration modules
                 (constraint and expansion) to redefine the content model.</span></p>
           </dd>
         
         
-          <dt class="dt dlterm" id="element-declaration">Element declaration</dt>
+          <dt class="dt dlterm">Element declaration</dt>
           <dd class="dd">
             <p class="p">For each element type, there is an element declaration that consists of a reference
               to the content-model parameter entity.</p>
@@ -108,7 +107,7 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="attribute-list-declaration">Attribute list declaration</dt>
+          <dt class="dt dlterm">Attribute list declaration</dt>
           <dd class="dd">
             <p class="p">For each element type, there is an attribute list declaration that consists of a
               reference to the attribute-list parameter entity.</p>
@@ -119,7 +118,7 @@ src: 'archSpec/base/dtd-coding-element-types.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="specialization-attribute-declarations">Specialization attribute declarations</dt>
+          <dt class="dt dlterm">Specialization attribute declarations</dt>
           <dd class="dd">
             <p class="p">A vocabulary module defines a <code class="keyword markupname xmlatt">@class</code> attribute for every element that
               is declared in the module. The value of the attribute is constructed according to the

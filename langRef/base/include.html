@@ -1,16 +1,15 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'include'
 description: 'Included content is a reference to non-DITA content outside the current document that
         will be rendered at the location of the reference. The resource is specified using either a
         URI or a key reference. Processing expectations for the referenced data can also be
         specified.'
 index: '../../toc.html'
-src: 'langRef/base/include.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;include&gt;</code></h1>
     
     
@@ -21,7 +20,7 @@ src: 'langRef/base/include.dita'
         <section class="section" id="include__usage-information"><h2 class="title sectiontitle">Usage information</h2>
             
             <p class="p">The <code class="keyword markupname xmlelement">&lt;include&gt;</code> element is intended as
-        a <span class="ph">base for specialization</span> and for the
+        a <span style="color:red;" class="ph">base for specialization</span> and for the
         following use cases:</p>
             <ul class="ul">
                 <li class="li">The transclusion of non-DITA XML within <code class="keyword markupname xmlelement">&lt;foreign&gt;</code> element
@@ -32,7 +31,7 @@ src: 'langRef/base/include.dita'
                 <li class="li">The transclusion of plain-text prose within DITA elements using
                         <code class="ph codeph">parse="text"</code></li>
             </ul>
-      <p class="p">In addition, processors can support additional
+      <p style="color:red;" class="p">In addition, processors can support additional
         values for the <code class="keyword markupname xmlatt">@parse</code> attribute.</p>
             <p class="p">For example, the <code class="keyword markupname xmlelement">&lt;include&gt;</code> element can
                 be specialized to an element such as <code class="keyword markupname xmlelement">&lt;coderef&gt;</code> as a way to
@@ -107,7 +106,7 @@ are presented instead.</p>
                 <p class="p">In the following code sample, the
             <code class="keyword markupname xmlelement">&lt;include&gt;</code> element specifies a
           proprietary <code class="keyword markupname xmlatt">@parse</code> value that instructs a
-          processor how to render a <span class="ph">comma-separated</span>
+          processor how to render a <span style="color:red;" class="ph">comma-separated</span>
           data set within the figure:</p>
                 <pre class="pre codeblock"><code>&lt;fig&gt;
   &lt;title&gt;Data Table&lt;/title&gt;

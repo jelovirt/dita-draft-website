@@ -1,15 +1,14 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'video'
 description: 'A video is a recording
     of moving visual
     images.'
 index: '../../toc.html'
-src: 'langRef/base/video.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;video&gt;</code></h1>
   
   
@@ -23,7 +22,7 @@ src: 'langRef/base/video.dita'
             <code class="keyword markupname xmlelement">&lt;video&gt;</code> element.</p>
         <p class="p">A video resource can be referenced by <code class="keyword markupname xmlatt">@href</code>, <code class="keyword markupname xmlatt">@keyref</code>, and
           nested <code class="keyword markupname xmlelement">&lt;media-source&gt;</code> elements.</p>
-        <p class="p"><span class="ph">Playback behaviors</span> such as auto-playing,
+        <p class="p"><span style="color:red;" class="ph">Playback behaviors</span> such as auto-playing,
           looping, and muting are determined by attributes. When not
           specified, the default behavior is determined by the user agent
           that is used to present the media.</p>
@@ -71,7 +70,7 @@ src: 'langRef/base/video.dita'
         
           <dt class="dt dlterm" id="video__d1505e177"><code class="keyword markupname xmlatt">@height</code></dt>
           <dd class="dd">Indicates the vertical dimension for the resulting display.
-              <span class="ph">The value of this attribute
+              <span style="color:red;" class="ph">The value of this attribute
           is a real number expressed in decimal notation, optionally
           followed by a unit of measure. The following units of measurement
           are supported: cm, em, in, mm, pc, pt, and px (centimeters, ems,
@@ -112,7 +111,7 @@ src: 'langRef/base/video.dita'
         
           <dt class="dt dlterm" id="video__d1505e269"><code class="keyword markupname xmlatt">@width</code></dt>
           <dd class="dd">Indicates the horizontal dimension for the resulting display.
-              <span class="ph">The value of this attribute
+              <span style="color:red;" class="ph">The value of this attribute
           is a real number expressed in decimal notation, optionally
           followed by a unit of measure. The following units of measurement
           are supported: cm, em, in, mm, pc, pt, and px (centimeters, ems,
@@ -122,7 +121,7 @@ src: 'langRef/base/video.dita'
             <span class="keyword">10.5cm</span>.</span></dd>
         
       </dl>
-      <div class="p attr-exception" id="video__d1505e279">For this
+      <div class="p attr-exception" style="color:red;" id="video__d1505e279">For this
         element: <ul class="ul" id="video__d1505e283">
           <li class="li">The <code class="keyword markupname xmlatt">@format</code> attribute specifies the MIME type for the resource. This
             attribute enables processors to avoid loading unsupported resources. If
@@ -153,7 +152,7 @@ src: 'langRef/base/video.dita'
         
         <p class="p">In the following code sample, the video resource is addressed using a key reference:</p>
         <pre class="pre codeblock"><code>&lt;video keyref="video"/&gt;</code></pre>
-        <p class="p">The URI and the MIME type do not need to be
+        <p style="color:red;" class="p">The URI and the MIME type do not need to be
           specified on the <code class="keyword markupname xmlelement">&lt;video&gt;</code> element, since
           they are specified on the key definition:</p>
         <pre class="pre codeblock"><code>&lt;keydef keys="video" href="video.mp4" format="video/mp4"/&gt;</code></pre>

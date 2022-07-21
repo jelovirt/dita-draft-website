@@ -1,19 +1,18 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'enumerationdef'
 description: 'An enumeration definition is a binding of an
     attribute to a set of controlled values. The set of controlled values
     can be limited to a specific element or it could be empty.'
 index: '../../toc.html'
-src: 'langRef/base/enumerationdef.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code></h1>
   
 
-<div class="body refbody"><p class="shortdesc">An enumeration definition is a binding of an
+<div class="body refbody"><p style="color:red;" class="shortdesc">An enumeration definition is a binding of an
     attribute to a set of controlled values. The set of controlled values
     can be limited to a specific element or it could be empty.</p>
         <section class="section" id="enumerationdef__usage-information"><h2 class="title sectiontitle">Usage information</h2>
@@ -21,7 +20,7 @@ src: 'langRef/base/enumerationdef.dita'
             <p class="p">An enumeration definition can accomplish the following goals:</p>
             <dl class="dl">
                 
-                    <dt class="dt dlterm" id="bind-a-set-of-controlled-values-to-an-attribute">Bind a set of controlled values to an attribute</dt>
+                    <dt class="dt dlterm">Bind a set of controlled values to an attribute</dt>
                     <dd class="dd">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code>
             element contains only an <code class="keyword markupname xmlelement">&lt;attributedef&gt;</code>
             and a <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code> element, the set of
@@ -30,11 +29,11 @@ src: 'langRef/base/enumerationdef.dita'
               <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> contains only
               <code class="ph codeph">&lt;attributedef name="value"/&gt;</code>, the
               <code class="keyword markupname xmlatt">@value</code> attribute is limited to the specified
-            enumeration for all elements <span class="ph">that can
+            enumeration for all elements <span style="color:red;" class="ph">that can
               specify the <code class="keyword markupname xmlatt">@value</code> attribute.</span></dd>
                 
                 
-                    <dt class="dt dlterm" id="limit-a-set-of-controlled-values-to-a-specific-element-and-attribute-pair">Limit a set of controlled values to a specific element and attribute
+                    <dt class="dt dlterm">Limit a set of controlled values to a specific element and attribute
                         pair</dt>
                     <dd class="dd">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element contains an
                             <code class="keyword markupname xmlelement">&lt;attributedef&gt;</code>, a
@@ -51,16 +50,16 @@ src: 'langRef/base/enumerationdef.dita'
                             affected.</p></dd>
                 
         
-          <dt class="dt dlterm" id="specify-the-default-value-for-an-attribute-or-element-and-attribute-pair">Specify the default value for an attribute or element and
+          <dt class="dt dlterm">Specify the default value for an attribute or element and
             attribute pair</dt>
           <dd class="dd">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element
-            contains a <code class="keyword markupname xmlelement">&lt;defaultSubject&gt;</code> element, <span class="ph">processors operate as if the value specified
+            contains a <code class="keyword markupname xmlelement">&lt;defaultSubject&gt;</code> element, <span style="color:red;" class="ph">processors operate as if the value specified
               by the <code class="keyword markupname xmlelement">&lt;defaultSubject&gt;</code> element is
               explicitly set in the DITA source</span>
-            <span class="ph">and the XML grammar does not set a default
+            <span style="color:red;" class="ph">and the XML grammar does not set a default
               value for the attribute.</span><div class="div">
               <p class="p">For example, given the following
-                  <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element, <span class="ph">if no value is set for the
+                  <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element, <span style="color:red;" class="ph">if no value is set for the
                     <code class="keyword markupname xmlatt">@audience</code> attribute on
                     <code class="keyword markupname xmlelement">&lt;draft-comment&gt;</code> in the DITA
                   source, processors operate as if the @audience attribute
@@ -80,8 +79,8 @@ src: 'langRef/base/enumerationdef.dita'
 
         
                 
-                    <dt class="dt dlterm" id="specify-that-an-attribute-is-not-valid.">Specify that an attribute is not valid.</dt>
-                    <dd class="dd"><p class="p">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element <span class="ph">contains a <code class="keyword markupname xmlatt">@subjectdef</code> element that does not
+                    <dt class="dt dlterm">Specify that an attribute is not valid.</dt>
+                    <dd class="dd"><p class="p">When the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code> element <span style="color:red;" class="ph">contains a <code class="keyword markupname xmlatt">@subjectdef</code> element that does not
                 reference a subject</span>, no value is valid for the attribute.</p><p class="p"></p>For example, the following code sample specifies that no tokens
             are valid for the <code class="keyword markupname xmlatt">@props</code> attribute:<pre class="pre codeblock"><code>&lt;subjectScheme&gt;
   &lt;!-- ... --&gt;
@@ -101,7 +100,7 @@ src: 'langRef/base/enumerationdef.dita'
                     <code class="keyword markupname xmlelement">&lt;topicref&gt;</code>. It is defined in the subject scheme
                 module.</p>
         </section>
-    <section class="section" id="enumerationdef__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
+    <section class="section" style="color:red;" id="enumerationdef__processing-expectations"><h2 class="title sectiontitle">Processing expectations</h2>
       
       <p class="p">See <a class="xref" href="../../archSpec/base/determining-effective-attribute-values.html" title="Topic to be moved to more appropriate location: how to determine effective attribute values.">Determining effective attribute values</a></p>
       
@@ -149,7 +148,7 @@ src: 'langRef/base/enumerationdef.dita'
     &lt;!-- 3. Binding for @props --&gt;
     &lt;enumerationdef&gt;
         &lt;attributedef name="props"/&gt;
-        <span class="ph">&lt;subjectdef/&gt;</span>
+        <span style="color:red;" class="ph">&lt;subjectdef/&gt;</span>
     &lt;/enumerationdef&gt;
 
 &lt;/subjectScheme&gt;</code></pre>
@@ -169,7 +168,7 @@ src: 'langRef/base/enumerationdef.dita'
           This means that the only valid value for
             <code class="keyword markupname xmlatt">@otherprops</code> is
           <span class="keyword">examples</span>.</li>
-        <li class="li">The enumeration for the <code class="keyword markupname xmlatt">@props</code>
+        <li style="color:red;" class="li">The enumeration for the <code class="keyword markupname xmlatt">@props</code>
           attribute contains a <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code> element
           that does not reference a subject. That means that no values are
           valid for the <code class="keyword markupname xmlatt">@props</code> attribute.</li>

@@ -1,16 +1,15 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'fn'
 description: 'A footnote is ancillary
     information that typically is rendered in the footer of a page or at
     the end of an online article. Such content is usually inappropriate for
     inline inclusion.'
 index: '../../toc.html'
-src: 'langRef/base/fn.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1"><code class="keyword markupname xmlelement">&lt;fn&gt;</code></h1>
   
 
@@ -25,12 +24,12 @@ src: 'langRef/base/fn.dita'
       <div class="div">
         <dl class="dl">
           
-            <dt class="dt dlterm" id="single-use-footnote">Single-use footnote</dt>
+            <dt class="dt dlterm">Single-use footnote</dt>
             <dd class="dd">This is produced by a <code class="keyword markupname xmlelement">&lt;fn&gt;</code> element that does not specify a
               value for the <code class="keyword markupname xmlatt">@id</code> attribute.</dd>
           
           
-            <dt class="dt dlterm" id="use-by-reference-footnote">Use-by-reference footnote</dt>
+            <dt class="dt dlterm">Use-by-reference footnote</dt>
             <dd class="dd">This is produced by a <code class="keyword markupname xmlelement">&lt;fn&gt;</code> element that specifies a value for
               the <code class="keyword markupname xmlatt">@id</code> attribute. It must be used in conjunction with an
                 <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element with <code class="keyword markupname xmlatt">@type</code> set to
@@ -48,7 +47,7 @@ src: 'langRef/base/fn.dita'
       <div class="div">
         <dl class="dl">
           
-            <dt class="dt dlterm" id="single-use-footnote">Single-use footnote</dt>
+            <dt class="dt dlterm">Single-use footnote</dt>
             <dd class="dd">When rendered, a superscript symbol (numeral or character) is produced at the
               location of the <code class="keyword markupname xmlelement">&lt;fn&gt;</code> element. The superscript symbol is
               hyperlinked to the content of the footnote, which is placed at the bottom of a PDF
@@ -57,7 +56,7 @@ src: 'langRef/base/fn.dita'
               value is specified, footnotes are typically numbered.</dd>
           
           
-            <dt class="dt dlterm" id="use-by-reference-footnote">Use-by-reference footnote</dt>
+            <dt class="dt dlterm">Use-by-reference footnote</dt>
             <dd class="dd">Nothing is rendered at the location of the <code class="keyword markupname xmlelement">&lt;fn&gt;</code> element. The
               content of a use-by-reference footnote is only rendered when it is referenced by an
                 <code class="keyword markupname xmlelement">&lt;xref&gt;</code> with the <code class="keyword markupname xmlatt">@type</code> attribute set to
@@ -84,7 +83,7 @@ src: 'langRef/base/fn.dita'
       <dl class="dl">
         
           <dt class="dt dlterm" id="fn__d1444e178"><a id="fn__d1444e176"></a><code class="keyword markupname xmlatt">@callout</code></dt>
-          <dd class="dd">Specifies the character <span class="ph">or character
+          <dd class="dd">Specifies the character <span style="color:red;" class="ph">or character
               string</span> that is used for the footnote link</dd>
         
       </dl>

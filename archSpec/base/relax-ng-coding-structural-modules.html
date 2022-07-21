@@ -1,14 +1,13 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'RELAX NG: Coding requirements for structural modules'
 description: 'A structural vocabulary module defines a new topic or map type as a specialization of a
     topic or map type.'
 index: '../../toc.html'
-src: 'archSpec/base/relax-ng-coding-structural-modules.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element-type declarations</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html">RELAX NG: Coding requirements for element-configuration modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a><ul class="nav nav-list"><li><a href="../../archSpec/base/recognizedconstraintmechanisms.html">Recognized XML-document grammar mechanisms</a></li><li><a href="../../archSpec/base/using-relax-ng.html">Normative versions of DITA grammar files</a></li><li><a href="../../archSpec/base/dtd-requirements.html">DTD coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-requirements.html">RELAX NG coding requirements</a><ul class="nav nav-list"><li><a href="../../archSpec/base/relax-ng-coding-overview.html">RELAX NG: Overview of coding requirements</a></li><li><a href="../../archSpec/base/relax-ng-coding-doctype-shell.html">RELAX NG: Coding requirements for document-type shells</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-types.html">RELAX NG: Coding requirements for element-type declarations</a></li><li class="active"><a href="../../archSpec/base/relax-ng-coding-structural-modules.html">RELAX NG: Coding requirements for structural modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-element-domains.html">RELAX NG: Coding requirements for element-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-attribute-domains.html">RELAX NG: Coding requirements for attribute-domain modules</a></li><li><a href="../../archSpec/base/relax-ng-coding-requirements-for-element-configuration-modules.html">RELAX NG: Coding requirements for element-configuration modules</a></li></ul></li></ul></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
   <h1 class="title topictitle1" id="ariaid-title1">RELAX NG: Coding requirements for structural modules</h1>
   
   
@@ -43,7 +42,7 @@ src: 'archSpec/base/relax-ng-coding-structural-modules.dita'
     </section>
     <section class="section" id="relax-ng-structural-module-coding-requirements__topic-nesting"><h2 class="title sectiontitle">Controlling nesting in topic types</h2>
       
-      <p class="p"><span class="ph">A structural module that defines a new topic
+      <p class="p"><span style="color:red;" class="ph">A structural module that defines a new topic
           type</span> typically defines an <code class="ph codeph">info-types</code> style
         pattern to specify default topic nesting. Document-type shells then
         can control how topics are allowed to nest by redefining the
@@ -52,7 +51,7 @@ src: 'archSpec/base/relax-ng-coding-structural-modules.dita'
         nesting.</p>
       <dl class="dl">
         
-          <dt class="dt dlterm" id="pattern-name">Pattern name</dt>
+          <dt class="dt dlterm">Pattern name</dt>
           <dd class="dd">
             <p class="p">The pattern name is the topic element name plus the suffix
                 <code class="ph codeph">-info-types</code>.</p>
@@ -61,7 +60,7 @@ src: 'archSpec/base/relax-ng-coding-structural-modules.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="pattern-value">Pattern value</dt>
+          <dt class="dt dlterm">Pattern value</dt>
           <dd class="dd">
             <p class="p">To set up default topic-nesting rules, set the pattern to the desired topic elements.
               The default topic nesting is used when a document-type shell does not set up different
@@ -100,7 +99,7 @@ src: 'archSpec/base/relax-ng-coding-structural-modules.dita'
           </dd>
         
         
-          <dt class="dt dlterm" id="content-model-of-the-root-element">Content model of the root element</dt>
+          <dt class="dt dlterm">Content model of the root element</dt>
           <dd class="dd">
             <p class="p">In the declaration of the root element of a topic type, the last position in the
               content model is the <code class="ph codeph"><var class="keyword varname">topictype</var>-info-types</code>

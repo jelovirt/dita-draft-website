@@ -1,21 +1,20 @@
 ---
 # Generated from DITA source
-layout: 'base'
+layout: base
 title: 'Handling accessibility in content and in processors'
 description: 'Accessibility requirements vary depending on how content is
     rendered. Making content accessible is work that involves both content
     authors and the processors that render DITA content.'
 index: '../../toc.html'
-src: 'archSpec/base/accessibility-contentvsprocessor.dita'
 ---
 
-<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a><ul class="nav nav-list"><li><a href="../../archSpec/base/accessibility.html">Accessibility</a><ul class="nav nav-list"><li class="active"><a href="../../archSpec/base/accessibility-contentvsprocessor.html">Handling accessibility in content and in processors</a></li><li><a href="../../archSpec/base/accessiblemarkup.html">Accessible content</a></li><li><a href="../../archSpec/base/accessibletablemarkup.html">Accessible tables</a></li><li><a href="../../archSpec/base/examples-of-dita-markup-for-accessibility.html">Examples of DITA markup for accessibility</a></li></ul></li><li><a href="../../archSpec/base/translation.html">Translation and localization</a></li></ul></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<nav role="toc" class="col-lg-3"><ul><li><a href="../../introduction/dita-release-overview.html">Introduction</a></li><li><a href="../../archSpec/base/dita-terminology.html">DITA terminology, notation, and conventions</a></li><li><a href="../../archSpec/base/introduction-to-dita.html">Overview of DITA</a></li><li><a href="../../archSpec/base/accessibility-and-translation.html">Accessibility and translation</a><ul class="nav nav-list"><li><a href="../../archSpec/base/accessibility.html">Accessibility</a><ul class="nav nav-list"><li class="active"><a href="../../archSpec/base/accessibility-contentvsprocessor.html">Handling accessibility in content and in processors</a></li><li><a href="../../archSpec/base/accessiblemarkup.html">Accessible content</a></li><li><a href="../../archSpec/base/accessibletablemarkup.html">Accessible tables</a></li><li><a href="../../archSpec/base/examples-of-dita-markup-for-accessibility.html">Examples of DITA markup for accessibility</a></li></ul></li><li><a href="../../archSpec/base/translation.html">Translation and localization</a></li></ul></li><li><a href="../../archSpec/base/dita-map-processing.html">DITA map processing</a></li><li><a href="../../archSpec/base/ditaaddressing.html">DITA addressing</a></li><li><a href="../../archSpec/base/behaviors.html">DITA processing</a></li><li><a href="../../archSpec/base/configuration-specialization-and-constraints.html">Configuration, specialization, generalization, constraints, and expansion  </a></li><li><a href="../../archSpec/base/coding-requirements.html">Coding practices for DITA grammar files</a></li><li><a href="../../langRef/langRef-base.html">Element reference</a></li><li><a href="../../conformance/conformance.html">Conformance</a></li><li><a href="../../acknowledgments/acknowledgments.html">Acknowledgments</a></li><li><a href="../../non-normative/aggregated-RFC-2119-statements.html">Aggregated RFC-2119 statements</a></li><li><a href="../../non-normative/non-normative-information.html">Non-normative information</a></li><li><a href="../../non-normative/revision-history.html">Revision history</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
     <h1 class="title topictitle1" id="ariaid-title1">Handling accessibility in content and in processors</h1>
     
     <div class="body conbody"><p class="shortdesc">Accessibility requirements vary depending on how content is
     rendered. Making content accessible is work that involves both content
     authors and the processors that render DITA content.</p>
-        <p class="p"><span class="ph">The foundation for accessible content is
+        <p class="p"><span style="color:red;" class="ph">The foundation for accessible content is
         the</span> Web Content Accessibility Guidelines (WCAG) from W3C.
       While content formats and content authors might have unique or
       additional accessibility needs, the rules outlined in the WCAG
@@ -24,7 +23,7 @@ src: 'archSpec/base/accessibility-contentvsprocessor.dita'
         <p class="p">The guidelines fall into several categories:</p>
     <dl class="dl">
       
-        <dt class="dt dlterm" id="general-content-guidelines">General content guidelines</dt>
+        <dt class="dt dlterm">General content guidelines</dt>
         <dd class="dd">
           <p class="p">Many accessibility guidelines and best practices apply to all
             content. Such guidelines are generally outside the scope of
@@ -43,20 +42,20 @@ src: 'archSpec/base/accessibility-contentvsprocessor.dita'
         </dd>
       
       
-        <dt class="dt dlterm" id="markup-guidelines">Markup guidelines</dt>
+        <dt class="dt dlterm">Markup guidelines</dt>
         <dd class="dd">
-          <p class="p">Other accessibility guidelines require <span class="ph">the</span> use of specific DITA markup. Such guidelines are
+          <p class="p">Other accessibility guidelines require <span style="color:red;" class="ph">the</span> use of specific DITA markup. Such guidelines are
             addressed in this specification.</p>
           <p class="p">For example, a requirement that images specify alternate text
-            requires <span class="ph">the</span> use of the
-              <code class="keyword markupname xmlelement">&lt;alt&gt;</code> element within <span class="ph">the <code class="keyword markupname xmlelement">&lt;image&gt;</code>
+            requires <span style="color:red;" class="ph">the</span> use of the
+              <code class="keyword markupname xmlelement">&lt;alt&gt;</code> element within <span style="color:red;" class="ph">the <code class="keyword markupname xmlelement">&lt;image&gt;</code>
               element</span>. However, a guideline that the alternate text be
               <em class="ph i">meaningful</em> is not something that can be enforced by
             DITA markup.</p>
         </dd>
       
       
-        <dt class="dt dlterm" id="guidelines-that-require-enablement-by-dita-processors">Guidelines that require enablement by DITA processors</dt>
+        <dt class="dt dlterm">Guidelines that require enablement by DITA processors</dt>
         <dd class="dd">
           <p class="p">Some accessibility guidelines require processors to take
             advantage of specific DITA markup.</p>
@@ -71,10 +70,10 @@ src: 'archSpec/base/accessibility-contentvsprocessor.dita'
         </dd>
       
       
-        <dt class="dt dlterm" id="processor-requirements-outside-the-scope-of-dita-markup">Processor requirements outside the scope of DITA markup</dt>
+        <dt class="dt dlterm">Processor requirements outside the scope of DITA markup</dt>
         <dd class="dd">Processors have many other accessibility concerns that are
           outside the scope of this specification.<p class="p">For example, WCAG has
-            a requirement for contrast ratios when rendering <span class="ph">substantive</span> content. That requirement is
+            a requirement for contrast ratios when rendering <span style="color:red;" class="ph">substantive</span> content. That requirement is
             unrelated to the source content. Such requirements apply to
             rendering mechanisms such as the CSS that is used to style DITA
             content in a browser.</p><p class="p">As another example, a DITA
