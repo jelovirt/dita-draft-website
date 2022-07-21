@@ -36,12 +36,9 @@ jobs:
           fi
           unzip -q dita-ot-$DITA_OT_VERSION.zip
           echo "DITA_HOME=$PWD/dita-ot-$DITA_OT_VERSION" >> $GITHUB_ENV
-      - uses: actions/checkout@v3
-        with:
-          repository: 'dita-ot/org.dita-ot.html'
-          path: 'dita-ot-${{ env.DITA_OT_VERSION }}/plugins/org.dita-ot.html'
       - name: Install plug-ins
         run: |
+          cp -r dita-draft-website/_plugin $DITA_HOME/plugins/org.dita-ot.html
           $DITA_HOME/bin/dita install
       - name: Run DITA-OT
         run: |
