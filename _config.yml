@@ -22,6 +22,8 @@ version: '3.3.4'
 
 # Exclude directories and/or files from the conversion
 exclude:
+  - .github
+  - .cache
   - Gemfile*
   - images/dita-ot_input-output.graffle
   - LICENSE
