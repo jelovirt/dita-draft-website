@@ -9,9 +9,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: actions/checkout@v3
-      with:
-        path: dita-draft-website
     - name: Set up JDK 1.8
       uses: actions/setup-java@v3
       with:
@@ -24,6 +21,7 @@ runs:
           dita-ot-${{ env.DITA_OT_VERSION }}.zip
         key: ${{ runner.os }}-${{ env.DITA_OT_VERSION }}
     - name: Set up DITA-OT
+      shell: bash
       run: |
         set -e
         if [ -f "dita-ot-$DITA_OT_VERSION.zip" ]; then
@@ -34,10 +32,12 @@ runs:
         unzip -q dita-ot-$DITA_OT_VERSION.zip
         echo "DITA_HOME=$PWD/dita-ot-$DITA_OT_VERSION" >> $GITHUB_ENV
     - name: Install plug-ins
+      shell: bash
       run: |
         cp -r dita-draft-website/_plugin $DITA_HOME/plugins/org.dita-ot.html
         $DITA_HOME/bin/dita install
     - name: Run DITA-OT
+      shell: bash
       run: |
         $DITA_HOME/bin/dita \
           -i ${{ inputs.MAP }} \
@@ -46,6 +46,7 @@ runs:
           --filter=${{ inputs.FILTER }} \
           -v
     - name: Commit changes
+      shell: bash
       run: |
         if [ $(git status -s | wc -l) != 0 ]; then
           git config user.email "ditaotbot@gmail.com"

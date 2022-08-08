@@ -9,11 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          path: dita-draft-website
+      - uses: actions/checkout@v3
+        with:
           repository: 'oasis-tcs/dita-lwdita'
           ref: 'spec'
           path: lwdita
       - name: Deploy online
-        uses: ./.github/actions/publish
+        uses: ./dita-draft-website/.github/actions/publish
         with:
           MAP: lwdita/Spec/lwdita.ditamap
           FILTER: lwdita/Spec/resources/lwdita.ditaval
